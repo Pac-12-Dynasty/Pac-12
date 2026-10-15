@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Standings | Pac 12 Dynasty</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    th[data-type] { cursor: pointer; user-select: none; white-space: nowrap; }
+    th[data-type]:hover { background: #13315c; }
+    th[data-dir="asc"]::after { content: " ▲"; font-size: 0.75em; }
+    th[data-dir="desc"]::after { content: " ▼"; font-size: 0.75em; }
+  </style>
 </head>
 <body>
   <header>
@@ -13,30 +19,28 @@
   </header>
   <nav>
     <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
     <a href="standings.html">Standings</a>
   </nav>
   <main>
     <div class="card">
       <h2>Week 6</h2>
+      <p>Click any column header to sort. Click again to reverse.</p>
       <div class="table-wrap">
-        <table>
-          <tr><th>Rank</th><th>Team</th><th>Record</th><th>P/F</th><th>P/A</th></tr>
-          <tr><td>1</td><td>Gotham General Hospital</td><td>4-1</td><td>761.22</td><td>626.44</td></tr>
-          <tr><td>2</td><td>Baby Back Gibbs</td><td>4-1</td><td>739.48</td><td>701.76</td></tr>
-          <tr><td>3</td><td>Joe Buck Yourself</td><td>4-1</td><td>679.38</td><td>544.76</td></tr>
-          <tr><td>4</td><td>Fannin The Flames</td><td>3-2</td><td>720.72</td><td>666.00</td></tr>
-          <tr><td>5</td><td>Olave's Medical Team</td><td>3-2</td><td>651.44</td><td>653.92</td></tr>
-          <tr><td>6</td><td>Team NestaV024</td><td>3-2</td><td>638.98</td><td>621.22</td></tr>
-          <tr><td>7</td><td>Bijan's Minions</td><td>2-3</td><td>687.98</td><td>627.46</td></tr>
-          <tr><td>8</td><td>Why So Serious?</td><td>2-3</td><td>662.54</td><td>722.22</td></tr>
-          <tr><td>9</td><td>BBBRandyn</td><td>3-2</td><td>647.78</td><td>707.00</td></tr>
-          <tr><td>10</td><td>Skatteboner</td><td>1-4</td><td>605.32</td><td>696.80</td></tr>
-          <tr><td>11</td><td>Goed's Plan</td><td>1-4</td><td>590.32</td><td>650.68</td></tr>
-          <tr><td>12</td><td>J Love's number 1 Fan</td><td>1-4</td><td>507.76</td><td>674.82</td></tr>
-        </table>
-      </div>
-    </div>
-  </main>
-  <footer>Pac 12 Dynasty Fantasy Football League</footer>
-</body>
-</html>
+        <table class="sortable">
+          <thead>
+            <tr>
+              <th data-type="num">Rank</th>
+              <th data-type="text">Team</th>
+              <th data-type="record">Record</th>
+              <th data-type="num">P/F</th>
+              <th data-type="num">P/A</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td><a href="gotham-general-hospital.html">Gotham General Hospital</a></td><td>4-1</td><td>761.22</td><td>626.44</td></tr>
+            <tr><td>2</td><td><a href="baby-back-gibbs.html">Baby Back Gibbs</a></td><td>4-1</td><td>739.48</td><td>701.76</td></tr>
+            <tr><td>3</td><td><a href="joe-buck-yourself.html">Joe Buck Yourself</a></td><td>4-1</td><td>679.38</td><td>544.76</td></tr>
+            <tr><td>4</td><td><a href="fannin-the-flames.html">Fannin The Flames</a></td><td>3-2</td><td>720.72</td><td>666.00</td></tr>
+            <tr><td>5</td><td><a href="olaves-medical-team.html">Olave's Medical Team</a></td><td>3-2</td><td>651.44</td><td>653.92</td></tr>
+            <tr><td>6</td><td><a href="team-nestav024.html">Team NestaV024</a></td><td>3-2</td><td>638.98</td><td>621.22</td></tr>
