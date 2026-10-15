@@ -37,15 +37,19 @@
   rows.forEach(function (row) {
     row.addEventListener("click", function () {
       if (!selected) {
-        if (isEmpty(row)) { say("Pick a player first.", true); return; }
         selected = row;
         row.classList.add("selected");
-        say("Selected " + name(row) + ". Now click the spot to move him to.");
+        if (isEmpty(row)) {
+          say("Selected an empty " + slot(row) + " spot. Now click the player to move here.");
+        } else {
+          say("Selected " + name(row) + ". Now click the spot to move him to.");
+        }
         return;
       }
       if (selected === row) { clear(); say(""); return; }
 
       var a = selected, b = row;
+      if (isEmpty(a) && isEmpty(b)) { clear(); say("Both spots are empty, so there's nothing to swap.", true); return; }
       if (!fits(a, slot(b))) { say(name(a) + " (" + pos(a) + ") can't play " + slot(b) + ".", true); return; }
       if (!fits(b, slot(a))) { say(name(b) + " (" + pos(b) + ") can't play " + slot(a) + ".", true); return; }
 
