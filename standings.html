@@ -25,7 +25,7 @@
   <main>
     <div class="card">
       <h2>Week 6</h2>
-      <p>Click any column header to sort. Click again to reverse.</p>
+      <p>Click any column header to sort. Click again to reverse. <strong id="sort-label">Ranked by league standings.</strong></p>
       <div class="table-wrap">
         <table class="sortable">
           <thead>
@@ -58,37 +58,68 @@
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
 
   <script>
-    document.querySelectorAll("table.sortable").forEach(function (table) {
-      var headers = table.querySelectorAll("th[data-type]");
-      headers.forEach(function (th, col) {
-        th.addEventListener("click", function () {
-          var type = th.dataset.type;
-          var prev = th.dataset.dir;
-          var firstDir = (type === "text" || col === 0) ? "asc" : "desc";
-          var dir = prev ? (prev === "asc" ? "desc" : "asc") : firstDir;
+    var table = document.querySelector("table.sortable");
+    var body = table.tBodies[0];
+    var headers = table.querySelectorAll("th[data-type]");
+    var label = document.getElementById("sort-label");
 
-          headers.forEach(function (h) { delete h.dataset.dir; });
-          th.dataset.dir = dir;
+    // Save each team's official league rank so it can be restored
+    Array.from(body.rows).forEach(function (row) {
+      row.dataset.rank = row.cells[0].textContent.trim();
+    });
 
-          function value(row) {
-            var text = row.cells[col].textContent.trim();
-            if (type === "num") return parseFloat(text);
-            if (type === "record") {
-              var parts = text.split("-").map(Number);
-              return parts[0] / (parts[0] + parts[1]);
+    function value(row, col, type) {
+      var text = row.cells[col].textContent.trim();
+      if (col === 0) return parseFloat(row.dataset.rank);
+      if (type === "num") return parseFloat(text);
+      if (type === "record") {
+        var parts = text.split("-").map(Number);
+        return parts[0] / (parts[0] + parts[1]);
+      }
+      return text.toLowerCase();
+    }
+
+    function compare(a, b, col, type, dir) {
+      var x = value(a, col, type), y = value(b, col, type);
+      var result = x < y ? -1 : x > y ? 1 : 0;
+      // Same record: break the tie with points for
+      if (result === 0 && type === "record") {
+        result = value(a, 3, "num") - value(b, 3, "num");
+      }
+      return dir === "asc" ? result : -result;
+    }
+
+    headers.forEach(function (th, col) {
+      th.addEventListener("click", function () {
+        var type = th.dataset.type;
+        var bestDir = (type === "text" || col === 0) ? "asc" : "desc";
+        var prev = th.dataset.dir;
+        var dir = prev ? (prev === "asc" ? "desc" : "asc") : bestDir;
+
+        headers.forEach(function (h) { delete h.dataset.dir; });
+        th.dataset.dir = dir;
+
+        var rows = Array.from(body.rows);
+
+        if (col === 0 || type === "text") {
+          // Rank and Team sorts show the official league rank
+          rows.forEach(function (row) { row.cells[0].textContent = row.dataset.rank; });
+          label.textContent = "Ranked by league standings.";
+        } else {
+          // Re-rank teams by the chosen stat, best first, ties share a rank
+          var best = rows.slice().sort(function (a, b) { return compare(a, b, col, type, bestDir); });
+          best.forEach(function (row, i) {
+            var rank = i + 1;
+            if (i > 0 && compare(best[i - 1], row, col, type, bestDir) === 0) {
+              rank = best[i - 1].cells[0].textContent;
             }
-            return text.toLowerCase();
-          }
-
-          var body = table.tBodies[0];
-          var rows = Array.from(body.rows);
-          rows.sort(function (a, b) {
-            var x = value(a), y = value(b);
-            var result = x < y ? -1 : x > y ? 1 : 0;
-            return dir === "asc" ? result : -result;
+            row.cells[0].textContent = rank;
           });
-          rows.forEach(function (row) { body.appendChild(row); });
-        });
+          label.textContent = "Ranked by " + th.textContent.trim() + ".";
+        }
+
+        rows.sort(function (a, b) { return compare(a, b, col, type, dir); });
+        rows.forEach(function (row) { body.appendChild(row); });
       });
     });
   </script>
