@@ -41,3 +41,10 @@ th { background: #0b2545; color: #fff; }
 tr:nth-child(even) td { background: #f8f9fb; }
 
 footer { text-align: center; padding: 1.5rem; color: #6b7785; font-size: 0.9rem; }
+
+/* Roster swapping */
+tr.player { cursor: pointer; }
+tr.player:hover td { background: #fff8e1; }
+tr.player.selected td { background: #eebf3a; color: #0b2545; }
+.roster-msg { min-height: 1.5em; font-weight: 600; color: #13315c; margin: 0; }
+.roster-msg.bad { color: #b42318; }
