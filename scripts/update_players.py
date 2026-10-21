@@ -34,6 +34,7 @@ for pid in sorted(ids):
         "team": p.get("team") or "",
         "birth_date": p.get("birth_date") or "",
         "age": p.get("age"),
+        "rank": p.get("search_rank"),
     }
 
 os.makedirs("data", exist_ok=True)
