@@ -54,6 +54,11 @@
     return p.age ? String(p.age) : "";
   }
 
+  function rankText(p) {
+    var r = p.rank;
+    return r && r < 9999999 ? "#" + r : "";
+  }
+
   function cell(text) {
     var td = document.createElement("td");
     td.textContent = text;
@@ -70,8 +75,10 @@
       tr.appendChild(cell(""));
       tr.appendChild(cell(""));
       tr.appendChild(cell(""));
+      tr.appendChild(cell(""));
     } else if (!p) {
       tr.appendChild(cell("Player " + pid));
+      tr.appendChild(cell(""));
       tr.appendChild(cell(""));
       tr.appendChild(cell(""));
       tr.appendChild(cell(""));
@@ -80,6 +87,7 @@
       tr.appendChild(cell(p.pos));
       tr.appendChild(cell(NFL[p.team] || p.team || "FA"));
       tr.appendChild(cell(age(p)));
+      tr.appendChild(cell(rankText(p)));
     }
     tbody.appendChild(tr);
   }
@@ -136,6 +144,13 @@
     statsRow.appendChild(cell(record));
     statsRow.appendChild(cell(points(s.fpts, s.fpts_decimal).toFixed(2)));
     statsRow.appendChild(cell(points(s.fpts_against, s.fpts_against_decimal).toFixed(2)));
+
+    // Add a Rank column to every roster table
+    document.querySelectorAll("thead tr").forEach(function (tr) {
+      var th = document.createElement("th");
+      th.textContent = "Rank";
+      tr.appendChild(th);
+    });
 
     // Starters, in the league's lineup order
     var slots = (league.roster_positions || []).filter(function (p) {
