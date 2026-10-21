@@ -59,6 +59,18 @@
     return r && r < 9999999 ? "#" + r : "";
   }
 
+  var INJ = { Questionable: "Q", Doubtful: "D", Out: "OUT", IR: "IR", PUP: "PUP", Sus: "SUS", NA: "NA", DNR: "DNR", COV: "COV" };
+
+  function injuryBadge(p) {
+    if (!p.injury) return null;
+    var level = { Questionable: "low", Doubtful: "mid", NA: "info" }[p.injury] || "high";
+    var span = document.createElement("span");
+    span.className = "inj " + level;
+    span.textContent = INJ[p.injury] || p.injury;
+    span.title = p.injury + (p.injury_part ? " (" + p.injury_part + ")" : "");
+    return span;
+  }
+
   function cell(text) {
     var td = document.createElement("td");
     td.textContent = text;
@@ -83,7 +95,10 @@
       tr.appendChild(cell(""));
       tr.appendChild(cell(""));
     } else {
-      tr.appendChild(cell(p.name));
+      var nameCell = cell(p.name);
+      var badge = injuryBadge(p);
+      if (badge) nameCell.appendChild(badge);
+      tr.appendChild(nameCell);
       tr.appendChild(cell(p.pos));
       tr.appendChild(cell(NFL[p.team] || p.team || "FA"));
       tr.appendChild(cell(age(p)));
