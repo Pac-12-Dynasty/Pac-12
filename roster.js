@@ -1,5 +1,5 @@
 // Lets visitors swap players between roster spots.
-// Each player's position, NFL team, age, and rank move with them.
+// Each player's position, NFL team, age, rank, and injury move with them.
 // The Slot column (QB, RB, BN, IR, TAXI) stays in place.
 (function () {
   var eligible = {
@@ -12,10 +12,10 @@
   var selected = null;
 
   function slot(row) { return row.cells[0].textContent.trim().toUpperCase(); }
-  function name(row) { return row.cells[1].textContent.trim(); }
+  function name(row) { return row.cells[1].firstChild ? row.cells[1].firstChild.textContent.trim() : ""; }
   function pos(row) { return row.cells[2].textContent.trim().toUpperCase(); }
-    function isEmpty(row) { var n = name(row); return n === "" || n === "Player Name" || n === "Empty"; }
-  
+  function isEmpty(row) { var n = name(row); return n === "" || n === "Player Name" || n === "Empty"; }
+
   function fits(row, targetSlot) {
     if (isEmpty(row)) return true;
     var allowed = eligible[targetSlot];
