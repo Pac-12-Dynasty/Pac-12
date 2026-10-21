@@ -53,11 +53,12 @@
     }
     return p.age ? String(p.age) : "";
   }
-
+  
   function rankText(p) {
-    var r = p.rank;
-    return r && r < 9999999 ? "#" + r : "";
+    if (!p.rank) return "";
+    return "#" + p.rank + (p.pos_rank ? " (" + p.pos_rank + ")" : "");
   }
+
 
   var INJ = { Questionable: "Q", Doubtful: "D", Out: "OUT", IR: "IR", PUP: "PUP", Sus: "SUS", NA: "NA", DNR: "DNR", COV: "COV" };
 
@@ -198,7 +199,13 @@
     fill("bench", "BN", bench, benchSlots);
     fill("ir", "IR", reserve.slice().sort(byPosition(players)), irSlots);
     fill("taxi", "TAXI", taxi.slice().sort(byPosition(players)), taxiSlots);
-
+    
+    // Ranking source disclaimer
+    var note = document.createElement("p");
+    note.className = "status";
+    note.innerHTML = 'Player ranks are 1QB dynasty rankings from <a href="https://github.com/dynastyprocess/data" target="_blank" rel="noopener">DynastyProcess</a>, based on FantasyPros dynasty expert consensus and updated weekly. Kickers and defenses are not ranked. Ranks are for reference only and are not official league values.';
+    document.querySelector("main").appendChild(note);
+    
     statusEl.textContent = "Live from Sleeper. Last loaded " + new Date().toLocaleString() + ".";
 
     // Turn on lineup swapping now that the rows exist
