@@ -14,8 +14,8 @@
   function slot(row) { return row.cells[0].textContent.trim().toUpperCase(); }
   function name(row) { return row.cells[1].textContent.trim(); }
   function pos(row) { return row.cells[2].textContent.trim().toUpperCase(); }
-  function isEmpty(row) { var n = name(row); return n === "" || n === "Player Name"; }
-
+    function isEmpty(row) { var n = name(row); return n === "" || n === "Player Name" || n === "Empty"; }
+  
   function fits(row, targetSlot) {
     if (isEmpty(row)) return true;
     var allowed = eligible[targetSlot];
