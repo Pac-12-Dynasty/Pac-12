@@ -48,3 +48,10 @@ tr.player:hover td { background: #fff8e1; }
 tr.player.selected td { background: #eebf3a; color: #0b2545; }
 .roster-msg { min-height: 1.5em; font-weight: 600; color: #13315c; margin: 0; }
 .roster-msg.bad { color: #b42318; }
+
+/* Injury badges, by severity */
+.inj { display: inline-block; margin-left: 0.4rem; padding: 0 0.35rem; border-radius: 4px; font-size: 0.75em; font-weight: 700; }
+.inj.low  { background: #fef7c3; color: #854d0e; }
+.inj.mid  { background: #ffead5; color: #c2410c; }
+.inj.high { background: #fdecea; color: #b42318; }
+.inj.info { background: #eef0f3; color: #52606d; }
