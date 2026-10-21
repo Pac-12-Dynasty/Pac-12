@@ -10,12 +10,13 @@
     th[data-type]:hover { background: #13315c; }
     th[data-dir="asc"]::after { content: " ▲"; font-size: 0.75em; }
     th[data-dir="desc"]::after { content: " ▼"; font-size: 0.75em; }
+    .status { color: #6b7785; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <header>
     <h1>League Standings</h1>
-    <p>Updated Weekly</p>
+    <p>Updates automatically from Sleeper</p>
   </header>
   <nav>
     <a href="index.html">Home</a>
@@ -24,8 +25,9 @@
   </nav>
   <main>
     <div class="card">
-      <h2>Week 7</h2>
+      <h2 id="week-title">Standings</h2>
       <p>Click any column header to sort. Click again to reverse. <strong id="sort-label">Ranked by league standings.</strong></p>
+      <p id="status" class="status">Loading standings from Sleeper...</p>
       <div class="table-wrap">
         <table class="sortable">
           <thead>
@@ -37,20 +39,7 @@
               <th data-type="num">P/A</th>
             </tr>
           </thead>
-          <tbody>
-            <tr><td>1</td><td><a href="lamar-jackson-fan-club.html">Lamar Jackson Fan Club</a></td><td>5-1</td><td>920.76</td><td>756.76</td></tr>
-            <tr><td>2</td><td><a href="baby-back-gibbs.html">Baby Back Gibbs</a></td><td>5-1</td><td>875.06</td><td>830.96</td></tr>
-            <tr><td>3</td><td><a href="joe-buck-yourself.html">Joe Buck Yourself</a></td><td>5-1</td><td>806.40</td><td>624.72</td></tr>
-            <tr><td>4</td><td><a href="olaves-medical-team.html">Olave's Medical Team</a></td><td>4-2</td><td>756.40</td><td>718.00</td></tr>
-            <tr><td>5</td><td><a href="fannin-the-flames.html">Fannin The Flames</a></td><td>3-3</td><td>851.04</td><td>825.54</td></tr>
-            <tr><td>6</td><td><a href="why-so-serious.html">Why So Serious?</a></td><td>3-3</td><td>778.54</td><td>832.20</td></tr>
-            <tr><td>7</td><td><a href="mia-kalifa.html">Mia KALIFa</a></td><td>3-3</td><td>703.06</td><td>726.18</td></tr>
-            <tr><td>8</td><td><a href="bijans-minions.html">Bijan's Minions</a></td><td>2-4</td><td>767.94</td><td>754.44</td></tr>
-            <tr><td>9</td><td><a href="bbbrandyn.html">BBBRandyn</a></td><td>2-4</td><td>739.68</td><td>837.16</td></tr>
-            <tr><td>10</td><td><a href="goeds-plan.html">Goed's Plan</a></td><td>2-4</td><td>720.48</td><td>742.68</td></tr>
-            <tr><td>11</td><td><a href="skatteboner.html">Skatteboner</a></td><td>1-5</td><td>716.46</td><td>812.80</td></tr>
-            <tr><td>12</td><td><a href="j-loves-number-1-fan.html">J Love's number 1 Fan</a></td><td>1-4</td><td>636.96</td><td>810.40</td></tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
     </div>
@@ -58,14 +47,83 @@
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
 
   <script>
+    var LEAGUE_ID = "1315706586127171584";
+    var API = "https://api.sleeper.app/v1";
+
     var table = document.querySelector("table.sortable");
     var body = table.tBodies[0];
     var headers = table.querySelectorAll("th[data-type]");
     var label = document.getElementById("sort-label");
+    var statusEl = document.getElementById("status");
 
-    // Save each team's official league rank so it can be restored
-    Array.from(body.rows).forEach(function (row) {
-      row.dataset.rank = row.cells[0].textContent.trim();
+    // Turns a team name into its page filename, e.g. "Olave's Medical Team" -> "olaves-medical-team.html"
+    function pageFor(name) {
+      return name.toLowerCase()
+        .replace(/['’]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "") + ".html";
+    }
+
+    function points(whole, decimal) {
+      return (whole || 0) + (decimal || 0) / 100;
+    }
+
+    function getJSON(url) {
+      return fetch(url).then(function (res) {
+        if (!res.ok) throw new Error("Sleeper returned " + res.status);
+        return res.json();
+      });
+    }
+
+    Promise.all([
+      getJSON(API + "/league/" + LEAGUE_ID + "/rosters"),
+      getJSON(API + "/league/" + LEAGUE_ID + "/users"),
+      getJSON(API + "/state/nfl").catch(function () { return null; })
+    ]).then(function (results) {
+      var rosters = results[0], users = results[1], state = results[2];
+
+      var userById = {};
+      users.forEach(function (u) { userById[u.user_id] = u; });
+
+      var teams = rosters.map(function (r) {
+        var u = userById[r.owner_id] || {};
+        var name = (u.metadata && u.metadata.team_name) || u.display_name || ("Team " + r.roster_id);
+        var s = r.settings || {};
+        return {
+          name: name,
+          wins: s.wins || 0,
+          losses: s.losses || 0,
+          ties: s.ties || 0,
+          pf: points(s.fpts, s.fpts_decimal),
+          pa: points(s.fpts_against, s.fpts_against_decimal)
+        };
+      });
+
+      // Official order: most wins, then most points for
+      teams.sort(function (a, b) { return (b.wins - a.wins) || (b.pf - a.pf); });
+
+      teams.forEach(function (t, i) {
+        var record = t.wins + "-" + t.losses + (t.ties ? "-" + t.ties : "");
+        var tr = document.createElement("tr");
+        tr.innerHTML =
+          "<td>" + (i + 1) + "</td>" +
+          "<td><a></a></td>" +
+          "<td>" + record + "</td>" +
+          "<td>" + t.pf.toFixed(2) + "</td>" +
+          "<td>" + t.pa.toFixed(2) + "</td>";
+        var link = tr.cells[1].firstChild;
+        link.href = pageFor(t.name);
+        link.textContent = t.name;
+        tr.dataset.rank = String(i + 1);
+        body.appendChild(tr);
+      });
+
+      if (state && state.week) {
+        document.getElementById("week-title").textContent = "Week " + state.week;
+      }
+      statusEl.textContent = "Live from Sleeper. Last loaded " + new Date().toLocaleString() + ".";
+    }).catch(function (err) {
+      statusEl.textContent = "Couldn't load standings from Sleeper right now. Try refreshing in a minute. (" + err.message + ")";
     });
 
     function value(row, col, type) {
@@ -74,7 +132,8 @@
       if (type === "num") return parseFloat(text);
       if (type === "record") {
         var parts = text.split("-").map(Number);
-        return parts[0] / (parts[0] + parts[1]);
+        var games = parts[0] + parts[1] + (parts[2] || 0);
+        return games ? (parts[0] + (parts[2] || 0) / 2) / games : 0;
       }
       return text.toLowerCase();
     }
@@ -91,6 +150,8 @@
 
     headers.forEach(function (th, col) {
       th.addEventListener("click", function () {
+        var rows = Array.from(body.rows);
+        if (!rows.length) return;
         var type = th.dataset.type;
         var bestDir = (type === "text" || col === 0) ? "asc" : "desc";
         var prev = th.dataset.dir;
@@ -99,14 +160,10 @@
         headers.forEach(function (h) { delete h.dataset.dir; });
         th.dataset.dir = dir;
 
-        var rows = Array.from(body.rows);
-
         if (col === 0 || type === "text") {
-          // Rank and Team sorts show the official league rank
           rows.forEach(function (row) { row.cells[0].textContent = row.dataset.rank; });
           label.textContent = "Ranked by league standings.";
         } else {
-          // Re-rank teams by the chosen stat, best first, ties share a rank
           var best = rows.slice().sort(function (a, b) { return compare(a, b, col, type, bestDir); });
           best.forEach(function (row, i) {
             var rank = i + 1;
