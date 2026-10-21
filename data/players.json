@@ -1,0 +1,2228 @@
+{
+ "10213": {
+  "age": 25,
+  "birth_date": "2001-03-08",
+  "name": "Tre Tucker",
+  "pos": "WR",
+  "team": "LV"
+ },
+ "10219": {
+  "age": 27,
+  "birth_date": "1999-09-26",
+  "name": "Chris Rodriguez",
+  "pos": "RB",
+  "team": "JAX"
+ },
+ "10222": {
+  "age": 26,
+  "birth_date": "2000-04-28",
+  "name": "Jayden Reed",
+  "pos": "WR",
+  "team": "GB"
+ },
+ "10229": {
+  "age": 26,
+  "birth_date": "2000-04-22",
+  "name": "Rashee Rice",
+  "pos": "WR",
+  "team": "KC"
+ },
+ "10232": {
+  "age": 26,
+  "birth_date": "2000-02-23",
+  "name": "Michael Wilson",
+  "pos": "WR",
+  "team": "ARI"
+ },
+ "10235": {
+  "age": 25,
+  "birth_date": "2001-01-31",
+  "name": "Roschon Johnson",
+  "pos": "RB",
+  "team": "CHI"
+ },
+ "10236": {
+  "age": 27,
+  "birth_date": "1999-10-18",
+  "name": "Dalton Kincaid",
+  "pos": "TE",
+  "team": "BUF"
+ },
+ "10859": {
+  "age": 25,
+  "birth_date": "2001-01-12",
+  "name": "Sam LaPorta",
+  "pos": "TE",
+  "team": "DET"
+ },
+ "11435": {
+  "age": 27,
+  "birth_date": "1999-05-08",
+  "name": "Emanuel Wilson",
+  "pos": "RB",
+  "team": "SEA"
+ },
+ "11533": {
+  "age": 31,
+  "birth_date": "1995-03-14",
+  "name": "Brandon Aubrey",
+  "pos": "K",
+  "team": "DAL"
+ },
+ "11539": {
+  "age": 27,
+  "birth_date": "1999-03-03",
+  "name": "Jake Bates",
+  "pos": "K",
+  "team": "DET"
+ },
+ "11559": {
+  "age": 26,
+  "birth_date": "2000-05-08",
+  "name": "Michael Penix",
+  "pos": "QB",
+  "team": "ATL"
+ },
+ "11560": {
+  "age": 24,
+  "birth_date": "2001-11-18",
+  "name": "Caleb Williams",
+  "pos": "QB",
+  "team": "CHI"
+ },
+ "11563": {
+  "age": 26,
+  "birth_date": "2000-02-25",
+  "name": "Bo Nix",
+  "pos": "QB",
+  "team": "DEN"
+ },
+ "11564": {
+  "age": 24,
+  "birth_date": "2002-08-30",
+  "name": "Drake Maye",
+  "pos": "QB",
+  "team": "NE"
+ },
+ "11565": {
+  "age": 23,
+  "birth_date": "2003-01-20",
+  "name": "J.J. McCarthy",
+  "pos": "QB",
+  "team": "NYG"
+ },
+ "11566": {
+  "age": 25,
+  "birth_date": "2000-12-18",
+  "name": "Jayden Daniels",
+  "pos": "QB",
+  "team": "WAS"
+ },
+ "11576": {
+  "age": 22,
+  "birth_date": "2004-01-20",
+  "name": "Braelon Allen",
+  "pos": "RB",
+  "team": "NYJ"
+ },
+ "11581": {
+  "age": 25,
+  "birth_date": "2001-01-05",
+  "name": "MarShawn Lloyd",
+  "pos": "RB",
+  "team": "GB"
+ },
+ "11583": {
+  "age": 23,
+  "birth_date": "2003-07-21",
+  "name": "Jonathon Brooks",
+  "pos": "RB",
+  "team": "CAR"
+ },
+ "11584": {
+  "age": 24,
+  "birth_date": "2002-08-19",
+  "name": "Bucky Irving",
+  "pos": "RB",
+  "team": "TB"
+ },
+ "11586": {
+  "age": 25,
+  "birth_date": "2000-11-25",
+  "name": "Blake Corum",
+  "pos": "RB",
+  "team": "LAR"
+ },
+ "11589": {
+  "age": 24,
+  "birth_date": "2002-07-23",
+  "name": "Trey Benson",
+  "pos": "RB",
+  "team": "ARI"
+ },
+ "11597": {
+  "age": 25,
+  "birth_date": "2001-02-26",
+  "name": "Theo Johnson",
+  "pos": "TE",
+  "team": "NYG"
+ },
+ "11603": {
+  "age": 24,
+  "birth_date": "2002-05-03",
+  "name": "AJ Barner",
+  "pos": "TE",
+  "team": "SEA"
+ },
+ "11604": {
+  "age": 23,
+  "birth_date": "2002-12-13",
+  "name": "Brock Bowers",
+  "pos": "TE",
+  "team": "LV"
+ },
+ "11610": {
+  "age": 25,
+  "birth_date": "2001-01-04",
+  "name": "Malik Washington",
+  "pos": "WR",
+  "team": "MIA"
+ },
+ "11620": {
+  "age": 24,
+  "birth_date": "2002-06-03",
+  "name": "Rome Odunze",
+  "pos": "WR",
+  "team": "CHI"
+ },
+ "11624": {
+  "age": 23,
+  "birth_date": "2003-04-27",
+  "name": "Xavier Worthy",
+  "pos": "WR",
+  "team": "KC"
+ },
+ "11625": {
+  "age": 24,
+  "birth_date": "2002-10-08",
+  "name": "Adonai Mitchell",
+  "pos": "WR",
+  "team": "NYJ"
+ },
+ "11626": {
+  "age": 25,
+  "birth_date": "2001-01-29",
+  "name": "Xavier Legette",
+  "pos": "WR",
+  "team": "CAR"
+ },
+ "11627": {
+  "age": 23,
+  "birth_date": "2003-02-06",
+  "name": "Troy Franklin",
+  "pos": "WR",
+  "team": "DEN"
+ },
+ "11628": {
+  "age": 24,
+  "birth_date": "2002-08-11",
+  "name": "Marvin Harrison",
+  "pos": "WR",
+  "team": "HOU"
+ },
+ "11630": {
+  "age": 25,
+  "birth_date": "2001-06-19",
+  "name": "Roman Wilson",
+  "pos": "WR",
+  "team": "PIT"
+ },
+ "11631": {
+  "age": 24,
+  "birth_date": "2002-10-08",
+  "name": "Brian Thomas",
+  "pos": "WR",
+  "team": "JAX"
+ },
+ "11632": {
+  "age": 23,
+  "birth_date": "2003-07-28",
+  "name": "Malik Nabers",
+  "pos": "WR",
+  "team": "NYG"
+ },
+ "11635": {
+  "age": 24,
+  "birth_date": "2001-11-11",
+  "name": "Ladd McConkey",
+  "pos": "WR",
+  "team": "LAC"
+ },
+ "11637": {
+  "age": 23,
+  "birth_date": "2003-05-17",
+  "name": "Keon Coleman",
+  "pos": "WR",
+  "team": "BUF"
+ },
+ "11638": {
+  "age": 26,
+  "birth_date": "2000-09-09",
+  "name": "Ricky Pearsall",
+  "pos": "WR",
+  "team": "SF"
+ },
+ "11646": {
+  "age": 24,
+  "birth_date": "2001-10-30",
+  "name": "Jalen Coker",
+  "pos": "WR",
+  "team": "CAR"
+ },
+ "11647": {
+  "age": 25,
+  "birth_date": "2001-08-28",
+  "name": "Kimani Vidal",
+  "pos": "RB",
+  "team": "LAC"
+ },
+ "11655": {
+  "age": 26,
+  "birth_date": "1999-11-23",
+  "name": "Tyrone Tracy",
+  "pos": "RB",
+  "team": "NYG"
+ },
+ "1166": {
+  "age": 38,
+  "birth_date": "1988-08-19",
+  "name": "Kirk Cousins",
+  "pos": "QB",
+  "team": "LV"
+ },
+ "11783": {
+  "age": 26,
+  "birth_date": "1999-10-27",
+  "name": "Ryan Flournoy",
+  "pos": "WR",
+  "team": "DAL"
+ },
+ "11786": {
+  "age": 23,
+  "birth_date": "2003-08-17",
+  "name": "Cam Little",
+  "pos": "K",
+  "team": "JAX"
+ },
+ "11792": {
+  "age": 25,
+  "birth_date": "2001-01-09",
+  "name": "Will Reichard",
+  "pos": "K",
+  "team": "MIN"
+ },
+ "11834": {
+  "age": 28,
+  "birth_date": "1997-12-12",
+  "name": "Devaughn Vele",
+  "pos": "WR",
+  "team": "NO"
+ },
+ "12048": {
+  "age": 26,
+  "birth_date": "1999-12-16",
+  "name": "George Holani",
+  "pos": "RB",
+  "team": "SEA"
+ },
+ "12185": {
+  "age": 27,
+  "birth_date": "1999-05-19",
+  "name": "Spencer Shrader",
+  "pos": "K",
+  "team": "IND"
+ },
+ "12467": {
+  "age": 22,
+  "birth_date": "2004-03-29",
+  "name": "Jordan James",
+  "pos": "RB",
+  "team": "SF"
+ },
+ "12469": {
+  "age": 22,
+  "birth_date": "2004-09-14",
+  "name": "Dylan Sampson",
+  "pos": "RB",
+  "team": "CLE"
+ },
+ "12474": {
+  "age": 25,
+  "birth_date": "2000-12-29",
+  "name": "Woody Marks",
+  "pos": "RB",
+  "team": "HOU"
+ },
+ "12481": {
+  "age": 24,
+  "birth_date": "2002-02-05",
+  "name": "Cam Skattebo",
+  "pos": "RB",
+  "team": "NYG"
+ },
+ "12483": {
+  "age": 23,
+  "birth_date": "2002-12-18",
+  "name": "Jack Bech",
+  "pos": "WR",
+  "team": "LV"
+ },
+ "12484": {
+  "age": 23,
+  "birth_date": "2002-12-15",
+  "name": "Jayden Higgins",
+  "pos": "WR",
+  "team": "HOU"
+ },
+ "12485": {
+  "age": 24,
+  "birth_date": "2002-05-18",
+  "name": "Tez Johnson",
+  "pos": "WR",
+  "team": "TB"
+ },
+ "12487": {
+  "age": 23,
+  "birth_date": "2003-03-07",
+  "name": "Terrance Ferguson",
+  "pos": "TE",
+  "team": "LAR"
+ },
+ "12489": {
+  "age": 25,
+  "birth_date": "2001-02-04",
+  "name": "RJ Harvey",
+  "pos": "RB",
+  "team": "DEN"
+ },
+ "12490": {
+  "age": 23,
+  "birth_date": "2003-02-14",
+  "name": "Bhayshul Tuten",
+  "pos": "RB",
+  "team": "JAX"
+ },
+ "12492": {
+  "age": 23,
+  "birth_date": "2002-12-10",
+  "name": "Pat Bryant",
+  "pos": "WR",
+  "team": "DEN"
+ },
+ "12495": {
+  "age": 22,
+  "birth_date": "2004-01-15",
+  "name": "Ollie Gordon",
+  "pos": "RB",
+  "team": "MIA"
+ },
+ "12497": {
+  "age": 23,
+  "birth_date": "2002-11-29",
+  "name": "Tory Horton",
+  "pos": "WR",
+  "team": "SEA"
+ },
+ "12498": {
+  "age": 22,
+  "birth_date": "2004-05-08",
+  "name": "Mason Taylor",
+  "pos": "TE",
+  "team": "NYJ"
+ },
+ "12499": {
+  "age": 23,
+  "birth_date": "2003-06-03",
+  "name": "Elic Ayomanor",
+  "pos": "WR",
+  "team": "TEN"
+ },
+ "12501": {
+  "age": 23,
+  "birth_date": "2003-08-01",
+  "name": "Matthew Golden",
+  "pos": "WR",
+  "team": "GB"
+ },
+ "12502": {
+  "age": 24,
+  "birth_date": "2002-09-06",
+  "name": "Gunnar Helm",
+  "pos": "TE",
+  "team": "TEN"
+ },
+ "12504": {
+  "age": 23,
+  "birth_date": "2003-08-14",
+  "name": "Kaleb Johnson",
+  "pos": "RB",
+  "team": "GB"
+ },
+ "12506": {
+  "age": 22,
+  "birth_date": "2004-07-20",
+  "name": "Harold Fannin",
+  "pos": "TE",
+  "team": "CLE"
+ },
+ "12507": {
+  "age": 23,
+  "birth_date": "2003-03-16",
+  "name": "Omarion Hampton",
+  "pos": "RB",
+  "team": "LAC"
+ },
+ "12508": {
+  "age": 23,
+  "birth_date": "2003-05-13",
+  "name": "Jaxson Dart",
+  "pos": "QB",
+  "team": "NYG"
+ },
+ "12509": {
+  "age": 24,
+  "birth_date": "2002-02-28",
+  "name": "Tre' Harris",
+  "pos": "WR",
+  "team": "LAC"
+ },
+ "12510": {
+  "age": 23,
+  "birth_date": "2002-12-13",
+  "name": "Jalen Milroe",
+  "pos": "QB",
+  "team": "SEA"
+ },
+ "12512": {
+  "age": 22,
+  "birth_date": "2003-10-29",
+  "name": "Quinshon Judkins",
+  "pos": "RB",
+  "team": "CLE"
+ },
+ "12514": {
+  "age": 24,
+  "birth_date": "2002-10-14",
+  "name": "Emeka Egbuka",
+  "pos": "WR",
+  "team": "TB"
+ },
+ "12517": {
+  "age": 22,
+  "birth_date": "2004-04-09",
+  "name": "Colston Loveland",
+  "pos": "TE",
+  "team": "CHI"
+ },
+ "12518": {
+  "age": 24,
+  "birth_date": "2002-05-24",
+  "name": "Tyler Warren",
+  "pos": "TE",
+  "team": "IND"
+ },
+ "12519": {
+  "age": 22,
+  "birth_date": "2003-12-12",
+  "name": "Luther Burden",
+  "pos": "WR",
+  "team": "CHI"
+ },
+ "12521": {
+  "age": 23,
+  "birth_date": "2003-04-05",
+  "name": "Elijah Arroyo",
+  "pos": "TE",
+  "team": "SEA"
+ },
+ "12522": {
+  "age": 24,
+  "birth_date": "2002-05-25",
+  "name": "Cam Ward",
+  "pos": "QB",
+  "team": "TEN"
+ },
+ "12524": {
+  "age": 24,
+  "birth_date": "2002-02-07",
+  "name": "Shedeur Sanders",
+  "pos": "QB",
+  "team": "CLE"
+ },
+ "12526": {
+  "age": 23,
+  "birth_date": "2003-04-05",
+  "name": "Tetairoa McMillan",
+  "pos": "WR",
+  "team": "CAR"
+ },
+ "12527": {
+  "age": 22,
+  "birth_date": "2003-12-02",
+  "name": "Ashton Jeanty",
+  "pos": "RB",
+  "team": "LV"
+ },
+ "12529": {
+  "age": 23,
+  "birth_date": "2002-10-22",
+  "name": "TreVeyon Henderson",
+  "pos": "RB",
+  "team": "NE"
+ },
+ "12530": {
+  "age": 23,
+  "birth_date": "2003-05-18",
+  "name": "Travis Hunter",
+  "pos": "DB",
+  "team": "JAX"
+ },
+ "12533": {
+  "age": 25,
+  "birth_date": "2001-04-12",
+  "name": "Jacory Croskey-Merritt",
+  "pos": "RB",
+  "team": "WAS"
+ },
+ "12534": {
+  "age": 24,
+  "birth_date": "2002-06-06",
+  "name": "Kyle Monangai",
+  "pos": "RB",
+  "team": "CHI"
+ },
+ "12535": {
+  "age": 24,
+  "birth_date": "2002-02-20",
+  "name": "Isaac TeSlaa",
+  "pos": "WR",
+  "team": "DET"
+ },
+ "12536": {
+  "age": 24,
+  "birth_date": "2002-09-04",
+  "name": "Jaylin Noel",
+  "pos": "WR",
+  "team": "HOU"
+ },
+ "12540": {
+  "age": 24,
+  "birth_date": "2001-12-14",
+  "name": "Chimere Dike",
+  "pos": "WR",
+  "team": "TEN"
+ },
+ "12545": {
+  "age": 27,
+  "birth_date": "1999-09-28",
+  "name": "Tyler Shough",
+  "pos": "QB",
+  "team": "NO"
+ },
+ "12641": {
+  "age": 24,
+  "birth_date": "2002-05-01",
+  "name": "Jaylin Lane",
+  "pos": "WR",
+  "team": "WAS"
+ },
+ "12670": {
+  "age": 25,
+  "birth_date": "2001-10-16",
+  "name": "KeAndre Lambert-Smith",
+  "pos": "WR",
+  "team": "LAC"
+ },
+ "12711": {
+  "age": 25,
+  "birth_date": "2001-08-04",
+  "name": "Tyler Loop",
+  "pos": "K",
+  "team": "BAL"
+ },
+ "12718": {
+  "age": 23,
+  "birth_date": "2002-10-24",
+  "name": "Konata Mumpfield",
+  "pos": "WR",
+  "team": "LAR"
+ },
+ "13150": {
+  "age": 24,
+  "birth_date": "2001-11-22",
+  "name": "Darius Cooper",
+  "pos": "WR",
+  "team": "PHI"
+ },
+ "13268": {
+  "age": 23,
+  "birth_date": "2003-05-28",
+  "name": "Elijah Sarratt",
+  "pos": "WR",
+  "team": "BAL"
+ },
+ "13269": {
+  "age": 23,
+  "birth_date": "2003-10-01",
+  "name": "Fernando Mendoza",
+  "pos": "QB",
+  "team": "LV"
+ },
+ "13270": {
+  "age": 24,
+  "birth_date": "2002-01-04",
+  "name": "CJ Daniels",
+  "pos": "WR",
+  "team": "LAR"
+ },
+ "13272": {
+  "age": 23,
+  "birth_date": "2002-11-19",
+  "name": "Carson Beck",
+  "pos": "QB",
+  "team": "ARI"
+ },
+ "13274": {
+  "age": 22,
+  "birth_date": "2003-12-02",
+  "name": "Germie Bernard",
+  "pos": "WR",
+  "team": "PIT"
+ },
+ "13275": {
+  "age": 23,
+  "birth_date": "2002-12-21",
+  "name": "Ty Simpson",
+  "pos": "QB",
+  "team": "LAR"
+ },
+ "13276": {
+  "age": 22,
+  "birth_date": "2003-12-14",
+  "name": "Omar Cooper",
+  "pos": "WR",
+  "team": "NYJ"
+ },
+ "13277": {
+  "age": 22,
+  "birth_date": "2004-07-09",
+  "name": "CJ Donaldson",
+  "pos": "RB",
+  "team": "NO"
+ },
+ "13278": {
+  "age": 23,
+  "birth_date": "2003-07-08",
+  "name": "Max Klare",
+  "pos": "TE",
+  "team": "LAR"
+ },
+ "13279": {
+  "age": 21,
+  "birth_date": "2005-01-19",
+  "name": "Carnell Tate",
+  "pos": "WR",
+  "team": "TEN"
+ },
+ "13281": {
+  "age": 22,
+  "birth_date": "2004-08-12",
+  "name": "Jordyn Tyson",
+  "pos": "WR",
+  "team": "NO"
+ },
+ "13282": {
+  "age": 22,
+  "birth_date": "2004-03-26",
+  "name": "Jack Endries",
+  "pos": "TE",
+  "team": "CIN"
+ },
+ "13285": {
+  "age": 23,
+  "birth_date": "2003-08-26",
+  "name": "Malachi Fields",
+  "pos": "WR",
+  "team": "NYG"
+ },
+ "13286": {
+  "age": 23,
+  "birth_date": "2003-10-09",
+  "name": "Jadarian Price",
+  "pos": "RB",
+  "team": "SEA"
+ },
+ "13287": {
+  "age": 21,
+  "birth_date": "2005-05-31",
+  "name": "Jeremiyah Love",
+  "pos": "RB",
+  "team": "ARI"
+ },
+ "13288": {
+  "age": 22,
+  "birth_date": "2004-01-06",
+  "name": "Nicholas Singleton",
+  "pos": "RB",
+  "team": "TEN"
+ },
+ "13289": {
+  "age": 22,
+  "birth_date": "2004-03-08",
+  "name": "Drew Allar",
+  "pos": "QB",
+  "team": "PIT"
+ },
+ "13293": {
+  "age": 22,
+  "birth_date": "2004-05-05",
+  "name": "Ja'Kobi Lane",
+  "pos": "WR",
+  "team": "BAL"
+ },
+ "13294": {
+  "age": 22,
+  "birth_date": "2004-06-02",
+  "name": "Makai Lemon",
+  "pos": "WR",
+  "team": "PHI"
+ },
+ "13296": {
+  "age": 23,
+  "birth_date": "2003-09-09",
+  "name": "Caleb Douglas",
+  "pos": "WR",
+  "team": "MIA"
+ },
+ "13298": {
+  "age": 22,
+  "birth_date": "2004-09-23",
+  "name": "KC Concepcion",
+  "pos": "WR",
+  "team": "CLE"
+ },
+ "13301": {
+  "age": 22,
+  "birth_date": "2004-07-14",
+  "name": "Antonio Williams",
+  "pos": "WR",
+  "team": "WAS"
+ },
+ "13302": {
+  "age": 22,
+  "birth_date": "2004-07-14",
+  "name": "Adam Randall",
+  "pos": "RB",
+  "team": "BAL"
+ },
+ "13303": {
+  "age": 23,
+  "birth_date": "2003-10-10",
+  "name": "Cade Klubnik",
+  "pos": "QB",
+  "team": "NYJ"
+ },
+ "13305": {
+  "age": 23,
+  "birth_date": "2003-07-03",
+  "name": "Mike Washington",
+  "pos": "RB",
+  "team": "LV"
+ },
+ "13311": {
+  "age": 22,
+  "birth_date": "2004-06-07",
+  "name": "Chris Bell",
+  "pos": "WR",
+  "team": "MIA"
+ },
+ "13317": {
+  "age": 22,
+  "birth_date": "2004-07-02",
+  "name": "Ted Hurst",
+  "pos": "WR",
+  "team": "TB"
+ },
+ "13319": {
+  "age": 23,
+  "birth_date": "2003-08-04",
+  "name": "Oscar Delp",
+  "pos": "TE",
+  "team": "NO"
+ },
+ "13320": {
+  "age": 22,
+  "birth_date": "2004-03-29",
+  "name": "Zachariah Branch",
+  "pos": "WR",
+  "team": "ATL"
+ },
+ "13324": {
+  "age": 24,
+  "birth_date": "2002-03-09",
+  "name": "Matt Hibner",
+  "pos": "TE",
+  "team": "BAL"
+ },
+ "13330": {
+  "age": 21,
+  "birth_date": "2005-03-04",
+  "name": "Kenyon Sadiq",
+  "pos": "TE",
+  "team": "NYJ"
+ },
+ "13333": {
+  "age": 23,
+  "birth_date": "2003-01-08",
+  "name": "Deion Burks",
+  "pos": "WR",
+  "team": "IND"
+ },
+ "13337": {
+  "age": 23,
+  "birth_date": "2003-10-10",
+  "name": "Emmett Johnson",
+  "pos": "RB",
+  "team": "KC"
+ },
+ "13345": {
+  "age": 23,
+  "birth_date": "2003-08-20",
+  "name": "Jonah Coleman",
+  "pos": "RB",
+  "team": "DEN"
+ },
+ "13346": {
+  "age": 22,
+  "birth_date": "2003-12-06",
+  "name": "Denzel Boston",
+  "pos": "WR",
+  "team": "CLE"
+ },
+ "13347": {
+  "age": 23,
+  "birth_date": "2003-10-09",
+  "name": "Demond Claiborne",
+  "pos": "RB",
+  "team": "MIN"
+ },
+ "13348": {
+  "age": 24,
+  "birth_date": "2002-03-15",
+  "name": "J'Mari Taylor",
+  "pos": "RB",
+  "team": "JAX"
+ },
+ "13349": {
+  "age": 23,
+  "birth_date": "2003-04-15",
+  "name": "Eli Stowers",
+  "pos": "TE",
+  "team": "PHI"
+ },
+ "13353": {
+  "age": 23,
+  "birth_date": "2003-09-22",
+  "name": "Chris Brazzell",
+  "pos": "WR",
+  "team": "CAR"
+ },
+ "13380": {
+  "age": 23,
+  "birth_date": "2003-07-25",
+  "name": "Brenen Thompson",
+  "pos": "WR",
+  "team": "LAC"
+ },
+ "13402": {
+  "age": 24,
+  "birth_date": "2002-07-05",
+  "name": "Skyler Bell",
+  "pos": "WR",
+  "team": "BUF"
+ },
+ "13403": {
+  "age": null,
+  "birth_date": "",
+  "name": "Jam Miller",
+  "pos": "RB",
+  "team": "ATL"
+ },
+ "13404": {
+  "age": 24,
+  "birth_date": "2002-02-07",
+  "name": "Garrett Nussmeier",
+  "pos": "QB",
+  "team": "KC"
+ },
+ "13405": {
+  "age": 23,
+  "birth_date": "2003-01-08",
+  "name": "Kaytron Allen",
+  "pos": "RB",
+  "team": "MIA"
+ },
+ "13411": {
+  "age": 22,
+  "birth_date": "2004-02-14",
+  "name": "Zavion Thomas",
+  "pos": "WR",
+  "team": "CHI"
+ },
+ "13413": {
+  "age": 23,
+  "birth_date": "2003-02-11",
+  "name": "Cyrus Allen",
+  "pos": "WR",
+  "team": "KC"
+ },
+ "13414": {
+  "age": 25,
+  "birth_date": "2001-10-17",
+  "name": "Kaelon Black",
+  "pos": "RB",
+  "team": "SF"
+ },
+ "13416": {
+  "age": 24,
+  "birth_date": "2002-08-16",
+  "name": "Roman Hemby",
+  "pos": "RB",
+  "team": "LV"
+ },
+ "13417": {
+  "age": 23,
+  "birth_date": "2002-12-18",
+  "name": "De'Zhaun Stribling",
+  "pos": "WR",
+  "team": "SF"
+ },
+ "13420": {
+  "age": 24,
+  "birth_date": "2002-08-20",
+  "name": "Bryce Lance",
+  "pos": "WR",
+  "team": "NO"
+ },
+ "13423": {
+  "age": 23,
+  "birth_date": "2003-06-28",
+  "name": "Eli Heidenreich",
+  "pos": "RB",
+  "team": "PIT"
+ },
+ "13424": {
+  "age": 24,
+  "birth_date": "2001-10-23",
+  "name": "Seth McGowan",
+  "pos": "RB",
+  "team": "IND"
+ },
+ "13545": {
+  "age": 23,
+  "birth_date": "2003-06-12",
+  "name": "Trey Smack",
+  "pos": "K",
+  "team": "GB"
+ },
+ "1373": {
+  "age": 36,
+  "birth_date": "1990-10-10",
+  "name": "Geno Smith",
+  "pos": "QB",
+  "team": "NYJ"
+ },
+ "1466": {
+  "age": 37,
+  "birth_date": "1989-10-05",
+  "name": "Travis Kelce",
+  "pos": "TE",
+  "team": "KC"
+ },
+ "1479": {
+  "age": 34,
+  "birth_date": "1992-04-27",
+  "name": "Keenan Allen",
+  "pos": "WR",
+  "team": "IND"
+ },
+ "1945": {
+  "age": 35,
+  "birth_date": "1991-03-16",
+  "name": "Chris Boswell",
+  "pos": "K",
+  "team": "PIT"
+ },
+ "2133": {
+  "age": 33,
+  "birth_date": "1992-12-24",
+  "name": "Davante Adams",
+  "pos": "WR",
+  "team": "LAR"
+ },
+ "2216": {
+  "age": 33,
+  "birth_date": "1993-08-21",
+  "name": "Mike Evans",
+  "pos": "WR",
+  "team": "SF"
+ },
+ "2306": {
+  "age": 32,
+  "birth_date": "1994-01-06",
+  "name": "Jameis Winston",
+  "pos": "QB",
+  "team": "NYG"
+ },
+ "2449": {
+  "age": 32,
+  "birth_date": "1993-11-29",
+  "name": "Stefon Diggs",
+  "pos": "WR",
+  "team": "WAS"
+ },
+ "2505": {
+  "age": 34,
+  "birth_date": "1992-09-13",
+  "name": "Darren Waller",
+  "pos": "TE",
+  "team": "CAR"
+ },
+ "2747": {
+  "age": 35,
+  "birth_date": "1991-05-12",
+  "name": "Jason Myers",
+  "pos": "K",
+  "team": "SEA"
+ },
+ "3163": {
+  "age": 32,
+  "birth_date": "1994-10-14",
+  "name": "Jared Goff",
+  "pos": "QB",
+  "team": "DET"
+ },
+ "3198": {
+  "age": 32,
+  "birth_date": "1994-01-04",
+  "name": "Derrick Henry",
+  "pos": "RB",
+  "team": "BAL"
+ },
+ "3214": {
+  "age": 31,
+  "birth_date": "1994-12-07",
+  "name": "Hunter Henry",
+  "pos": "TE",
+  "team": "NE"
+ },
+ "3257": {
+  "age": 33,
+  "birth_date": "1992-12-11",
+  "name": "Jacoby Brissett",
+  "pos": "QB",
+  "team": "ARI"
+ },
+ "3271": {
+  "age": 33,
+  "birth_date": "1993-01-01",
+  "name": "Tyler Higbee",
+  "pos": "TE",
+  "team": "LAR"
+ },
+ "3294": {
+  "age": 33,
+  "birth_date": "1993-07-29",
+  "name": "Dak Prescott",
+  "pos": "QB",
+  "team": "DAL"
+ },
+ "3321": {
+  "age": 31,
+  "birth_date": "1994-03-01",
+  "name": "Tyreek Hill",
+  "pos": "WR",
+  "team": ""
+ },
+ "3451": {
+  "age": 32,
+  "birth_date": "1994-01-29",
+  "name": "Ka'imi Fairbairn",
+  "pos": "K",
+  "team": "HOU"
+ },
+ "3634": {
+  "age": 32,
+  "birth_date": "1994-08-08",
+  "name": "Kalif Raymond",
+  "pos": "WR",
+  "team": "CHI"
+ },
+ "4017": {
+  "age": 31,
+  "birth_date": "1995-09-14",
+  "name": "Deshaun Watson",
+  "pos": "QB",
+  "team": "CLE"
+ },
+ "4033": {
+  "age": 30,
+  "birth_date": "1996-07-10",
+  "name": "David Njoku",
+  "pos": "TE",
+  "team": "LAC"
+ },
+ "4034": {
+  "age": 30,
+  "birth_date": "1996-06-07",
+  "name": "Christian McCaffrey",
+  "pos": "RB",
+  "team": "SF"
+ },
+ "4035": {
+  "age": 31,
+  "birth_date": "1995-07-25",
+  "name": "Alvin Kamara",
+  "pos": "RB",
+  "team": "NO"
+ },
+ "4037": {
+  "age": 30,
+  "birth_date": "1996-02-27",
+  "name": "Chris Godwin",
+  "pos": "WR",
+  "team": "TB"
+ },
+ "4039": {
+  "age": 33,
+  "birth_date": "1993-06-15",
+  "name": "Cooper Kupp",
+  "pos": "WR",
+  "team": "SEA"
+ },
+ "4046": {
+  "age": 31,
+  "birth_date": "1995-09-17",
+  "name": "Patrick Mahomes",
+  "pos": "QB",
+  "team": "KC"
+ },
+ "4137": {
+  "age": 31,
+  "birth_date": "1995-05-05",
+  "name": "James Conner",
+  "pos": "RB",
+  "team": "ARI"
+ },
+ "4147": {
+  "age": 31,
+  "birth_date": "1995-09-16",
+  "name": "Samaje Perine",
+  "pos": "RB",
+  "team": "CIN"
+ },
+ "4177": {
+  "age": 33,
+  "birth_date": "1993-09-16",
+  "name": "Mack Hollins",
+  "pos": "WR",
+  "team": "NE"
+ },
+ "4195": {
+  "age": 31,
+  "birth_date": "1995-01-21",
+  "name": "Jake Elliott",
+  "pos": "K",
+  "team": "PHI"
+ },
+ "4199": {
+  "age": 31,
+  "birth_date": "1994-12-02",
+  "name": "Aaron Jones",
+  "pos": "RB",
+  "team": "MIN"
+ },
+ "421": {
+  "age": 38,
+  "birth_date": "1988-02-07",
+  "name": "Matthew Stafford",
+  "pos": "QB",
+  "team": "LAR"
+ },
+ "4217": {
+  "age": 33,
+  "birth_date": "1993-10-09",
+  "name": "George Kittle",
+  "pos": "TE",
+  "team": "SF"
+ },
+ "4227": {
+  "age": 31,
+  "birth_date": "1995-07-14",
+  "name": "Harrison Butker",
+  "pos": "K",
+  "team": "KC"
+ },
+ "4454": {
+  "age": 31,
+  "birth_date": "1995-08-04",
+  "name": "Kendrick Bourne",
+  "pos": "WR",
+  "team": "ARI"
+ },
+ "4663": {
+  "age": 31,
+  "birth_date": "1995-05-17",
+  "name": "Austin Ekeler",
+  "pos": "RB",
+  "team": "WAS"
+ },
+ "4866": {
+  "age": 29,
+  "birth_date": "1997-02-09",
+  "name": "Saquon Barkley",
+  "pos": "RB",
+  "team": "PHI"
+ },
+ "4881": {
+  "age": 29,
+  "birth_date": "1997-01-07",
+  "name": "Lamar Jackson",
+  "pos": "QB",
+  "team": "BAL"
+ },
+ "4892": {
+  "age": 31,
+  "birth_date": "1995-04-14",
+  "name": "Baker Mayfield",
+  "pos": "QB",
+  "team": "TB"
+ },
+ "4943": {
+  "age": 29,
+  "birth_date": "1997-06-05",
+  "name": "Sam Darnold",
+  "pos": "QB",
+  "team": "SEA"
+ },
+ "4983": {
+  "age": 29,
+  "birth_date": "1997-04-14",
+  "name": "DJ Moore",
+  "pos": "WR",
+  "team": "BUF"
+ },
+ "4984": {
+  "age": 30,
+  "birth_date": "1996-05-21",
+  "name": "Josh Allen",
+  "pos": "QB",
+  "team": "BUF"
+ },
+ "4993": {
+  "age": 31,
+  "birth_date": "1995-10-03",
+  "name": "Mike Gesicki",
+  "pos": "TE",
+  "team": "CIN"
+ },
+ "5001": {
+  "age": 30,
+  "birth_date": "1996-07-11",
+  "name": "Dalton Schultz",
+  "pos": "TE",
+  "team": "HOU"
+ },
+ "5012": {
+  "age": 31,
+  "birth_date": "1995-09-06",
+  "name": "Mark Andrews",
+  "pos": "TE",
+  "team": "BAL"
+ },
+ "5022": {
+  "age": 31,
+  "birth_date": "1995-01-03",
+  "name": "Dallas Goedert",
+  "pos": "TE",
+  "team": "PHI"
+ },
+ "5045": {
+  "age": 31,
+  "birth_date": "1995-10-10",
+  "name": "Courtland Sutton",
+  "pos": "WR",
+  "team": "DEN"
+ },
+ "5095": {
+  "age": 31,
+  "birth_date": "1995-01-23",
+  "name": "Daniel Carlson",
+  "pos": "K",
+  "team": "NO"
+ },
+ "5189": {
+  "age": 31,
+  "birth_date": "1995-09-13",
+  "name": "Eddy Pineiro",
+  "pos": "K",
+  "team": "SF"
+ },
+ "5844": {
+  "age": 29,
+  "birth_date": "1997-07-03",
+  "name": "T.J. Hockenson",
+  "pos": "TE",
+  "team": "MIN"
+ },
+ "5846": {
+  "age": 28,
+  "birth_date": "1997-12-14",
+  "name": "DK Metcalf",
+  "pos": "WR",
+  "team": "PIT"
+ },
+ "5849": {
+  "age": 29,
+  "birth_date": "1997-08-07",
+  "name": "Kyler Murray",
+  "pos": "QB",
+  "team": "MIN"
+ },
+ "5850": {
+  "age": 28,
+  "birth_date": "1998-02-11",
+  "name": "Josh Jacobs",
+  "pos": "RB",
+  "team": "GB"
+ },
+ "5859": {
+  "age": 29,
+  "birth_date": "1997-06-30",
+  "name": "A.J. Brown",
+  "pos": "WR",
+  "team": "NE"
+ },
+ "5870": {
+  "age": 29,
+  "birth_date": "1997-05-27",
+  "name": "Daniel Jones",
+  "pos": "QB",
+  "team": "IND"
+ },
+ "5872": {
+  "age": 30,
+  "birth_date": "1996-01-15",
+  "name": "Deebo Samuel",
+  "pos": "WR",
+  "team": "SF"
+ },
+ "5892": {
+  "age": 29,
+  "birth_date": "1997-06-07",
+  "name": "David Montgomery",
+  "pos": "RB",
+  "team": "HOU"
+ },
+ "5927": {
+  "age": 31,
+  "birth_date": "1995-09-15",
+  "name": "Terry McLaurin",
+  "pos": "WR",
+  "team": "WAS"
+ },
+ "5947": {
+  "age": 29,
+  "birth_date": "1996-11-09",
+  "name": "Jakobi Meyers",
+  "pos": "WR",
+  "team": "JAX"
+ },
+ "5967": {
+  "age": 29,
+  "birth_date": "1997-04-30",
+  "name": "Tony Pollard",
+  "pos": "RB",
+  "team": "TEN"
+ },
+ "5995": {
+  "age": 28,
+  "birth_date": "1997-11-14",
+  "name": "Justice Hill",
+  "pos": "RB",
+  "team": "BAL"
+ },
+ "6083": {
+  "age": 32,
+  "birth_date": "1994-03-15",
+  "name": "Matt Gay",
+  "pos": "K",
+  "team": "LV"
+ },
+ "6650": {
+  "age": 30,
+  "birth_date": "1996-04-09",
+  "name": "Chase McLaughlin",
+  "pos": "K",
+  "team": "TB"
+ },
+ "6770": {
+  "age": 29,
+  "birth_date": "1996-12-10",
+  "name": "Joe Burrow",
+  "pos": "QB",
+  "team": "CIN"
+ },
+ "6783": {
+  "age": 27,
+  "birth_date": "1999-04-24",
+  "name": "Jerry Jeudy",
+  "pos": "WR",
+  "team": "CLE"
+ },
+ "6786": {
+  "age": 27,
+  "birth_date": "1999-04-08",
+  "name": "CeeDee Lamb",
+  "pos": "WR",
+  "team": "DAL"
+ },
+ "6790": {
+  "age": 27,
+  "birth_date": "1999-01-14",
+  "name": "D'Andre Swift",
+  "pos": "RB",
+  "team": "CHI"
+ },
+ "6794": {
+  "age": 27,
+  "birth_date": "1999-06-16",
+  "name": "Justin Jefferson",
+  "pos": "WR",
+  "team": "MIN"
+ },
+ "6797": {
+  "age": 28,
+  "birth_date": "1998-03-10",
+  "name": "Justin Herbert",
+  "pos": "QB",
+  "team": "LAC"
+ },
+ "6801": {
+  "age": 27,
+  "birth_date": "1999-01-18",
+  "name": "Tee Higgins",
+  "pos": "WR",
+  "team": "CIN"
+ },
+ "6804": {
+  "age": 27,
+  "birth_date": "1998-11-02",
+  "name": "Jordan Love",
+  "pos": "QB",
+  "team": "GB"
+ },
+ "6806": {
+  "age": 27,
+  "birth_date": "1998-12-17",
+  "name": "J.K. Dobbins",
+  "pos": "RB",
+  "team": "DEN"
+ },
+ "6813": {
+  "age": 27,
+  "birth_date": "1999-01-19",
+  "name": "Jonathan Taylor",
+  "pos": "RB",
+  "team": "IND"
+ },
+ "6819": {
+  "age": 29,
+  "birth_date": "1997-10-05",
+  "name": "Michael Pittman",
+  "pos": "WR",
+  "team": "PIT"
+ },
+ "6904": {
+  "age": 28,
+  "birth_date": "1998-08-07",
+  "name": "Jalen Hurts",
+  "pos": "QB",
+  "team": "PHI"
+ },
+ "7002": {
+  "age": 30,
+  "birth_date": "1996-09-13",
+  "name": "Juwan Johnson",
+  "pos": "TE",
+  "team": "NO"
+ },
+ "7021": {
+  "age": 28,
+  "birth_date": "1998-06-14",
+  "name": "Rico Dowdle",
+  "pos": "RB",
+  "team": "PIT"
+ },
+ "7049": {
+  "age": 29,
+  "birth_date": "1997-07-10",
+  "name": "Jauan Jennings",
+  "pos": "WR",
+  "team": "MIN"
+ },
+ "7523": {
+  "age": 27,
+  "birth_date": "1999-10-06",
+  "name": "Trevor Lawrence",
+  "pos": "QB",
+  "team": "JAX"
+ },
+ "7525": {
+  "age": 27,
+  "birth_date": "1998-11-14",
+  "name": "DeVonta Smith",
+  "pos": "WR",
+  "team": "PHI"
+ },
+ "7526": {
+  "age": 27,
+  "birth_date": "1998-11-25",
+  "name": "Jaylen Waddle",
+  "pos": "WR",
+  "team": "DEN"
+ },
+ "7543": {
+  "age": 27,
+  "birth_date": "1999-01-26",
+  "name": "Travis Etienne",
+  "pos": "RB",
+  "team": "NO"
+ },
+ "7547": {
+  "age": 26,
+  "birth_date": "1999-10-24",
+  "name": "Amon-Ra St. Brown",
+  "pos": "WR",
+  "team": "DET"
+ },
+ "7553": {
+  "age": 26,
+  "birth_date": "2000-10-06",
+  "name": "Kyle Pitts",
+  "pos": "TE",
+  "team": "ATL"
+ },
+ "7564": {
+  "age": 26,
+  "birth_date": "2000-03-01",
+  "name": "Ja'Marr Chase",
+  "pos": "WR",
+  "team": "CIN"
+ },
+ "7567": {
+  "age": 27,
+  "birth_date": "1999-03-14",
+  "name": "Kenny Gainwell",
+  "pos": "RB",
+  "team": "TB"
+ },
+ "7569": {
+  "age": 27,
+  "birth_date": "1999-03-19",
+  "name": "Nico Collins",
+  "pos": "WR",
+  "team": "HOU"
+ },
+ "7571": {
+  "age": 26,
+  "birth_date": "1999-11-29",
+  "name": "Rashod Bateman",
+  "pos": "WR",
+  "team": "BAL"
+ },
+ "7588": {
+  "age": 26,
+  "birth_date": "2000-04-25",
+  "name": "Javonte Williams",
+  "pos": "RB",
+  "team": "DAL"
+ },
+ "7594": {
+  "age": 27,
+  "birth_date": "1999-06-11",
+  "name": "Chuba Hubbard",
+  "pos": "RB",
+  "team": "CAR"
+ },
+ "7600": {
+  "age": 27,
+  "birth_date": "1998-10-25",
+  "name": "Pat Freiermuth",
+  "pos": "TE",
+  "team": "PIT"
+ },
+ "7611": {
+  "age": 28,
+  "birth_date": "1998-02-23",
+  "name": "Rhamondre Stevenson",
+  "pos": "RB",
+  "team": "NE"
+ },
+ "7839": {
+  "age": 27,
+  "birth_date": "1999-07-21",
+  "name": "Evan McPherson",
+  "pos": "K",
+  "team": "CIN"
+ },
+ "8110": {
+  "age": 27,
+  "birth_date": "1999-01-18",
+  "name": "Jake Ferguson",
+  "pos": "TE",
+  "team": "DAL"
+ },
+ "8111": {
+  "age": 27,
+  "birth_date": "1999-04-15",
+  "name": "Cade Otton",
+  "pos": "TE",
+  "team": "TB"
+ },
+ "8112": {
+  "age": 25,
+  "birth_date": "2001-07-24",
+  "name": "Drake London",
+  "pos": "WR",
+  "team": "ATL"
+ },
+ "8121": {
+  "age": 26,
+  "birth_date": "2000-04-13",
+  "name": "Romeo Doubs",
+  "pos": "WR",
+  "team": "NE"
+ },
+ "8126": {
+  "age": 25,
+  "birth_date": "2001-01-05",
+  "name": "Wan'Dale Robinson",
+  "pos": "WR",
+  "team": "TEN"
+ },
+ "8129": {
+  "age": 26,
+  "birth_date": "2000-02-19",
+  "name": "Dameon Pierce",
+  "pos": "RB",
+  "team": "PHI"
+ },
+ "8130": {
+  "age": 26,
+  "birth_date": "1999-11-22",
+  "name": "Trey McBride",
+  "pos": "TE",
+  "team": "ARI"
+ },
+ "8131": {
+  "age": 26,
+  "birth_date": "2000-04-18",
+  "name": "Isaiah Likely",
+  "pos": "TE",
+  "team": "NYG"
+ },
+ "8132": {
+  "age": 26,
+  "birth_date": "2000-04-15",
+  "name": "Tyler Allgeier",
+  "pos": "RB",
+  "team": "ARI"
+ },
+ "8134": {
+  "age": 26,
+  "birth_date": "2000-02-03",
+  "name": "Khalil Shakir",
+  "pos": "WR",
+  "team": "BUF"
+ },
+ "8136": {
+  "age": 27,
+  "birth_date": "1999-01-12",
+  "name": "Rachaad White",
+  "pos": "RB",
+  "team": "WAS"
+ },
+ "8137": {
+  "age": 25,
+  "birth_date": "2001-03-04",
+  "name": "George Pickens",
+  "pos": "WR",
+  "team": "DAL"
+ },
+ "8138": {
+  "age": 27,
+  "birth_date": "1999-09-25",
+  "name": "James Cook",
+  "pos": "RB",
+  "team": "BUF"
+ },
+ "8142": {
+  "age": 26,
+  "birth_date": "2000-05-02",
+  "name": "Alec Pierce",
+  "pos": "WR",
+  "team": "IND"
+ },
+ "8144": {
+  "age": 26,
+  "birth_date": "2000-06-27",
+  "name": "Chris Olave",
+  "pos": "WR",
+  "team": "NO"
+ },
+ "8146": {
+  "age": 26,
+  "birth_date": "2000-07-22",
+  "name": "Garrett Wilson",
+  "pos": "WR",
+  "team": "NYJ"
+ },
+ "8148": {
+  "age": 25,
+  "birth_date": "2001-03-26",
+  "name": "Jameson Williams",
+  "pos": "WR",
+  "team": "DET"
+ },
+ "8150": {
+  "age": 26,
+  "birth_date": "2000-08-26",
+  "name": "Kyren Williams",
+  "pos": "RB",
+  "team": "LAR"
+ },
+ "8151": {
+  "age": 26,
+  "birth_date": "2000-10-20",
+  "name": "Kenneth Walker",
+  "pos": "RB",
+  "team": "KC"
+ },
+ "8154": {
+  "age": 27,
+  "birth_date": "1999-03-22",
+  "name": "Brian Robinson",
+  "pos": "RB",
+  "team": "ATL"
+ },
+ "8155": {
+  "age": 25,
+  "birth_date": "2001-05-31",
+  "name": "Breece Hall",
+  "pos": "RB",
+  "team": "NYJ"
+ },
+ "8161": {
+  "age": 27,
+  "birth_date": "1999-05-25",
+  "name": "Malik Willis",
+  "pos": "QB",
+  "team": "MIA"
+ },
+ "8167": {
+  "age": 27,
+  "birth_date": "1999-05-12",
+  "name": "Christian Watson",
+  "pos": "WR",
+  "team": "GB"
+ },
+ "8183": {
+  "age": 26,
+  "birth_date": "1999-12-27",
+  "name": "Brock Purdy",
+  "pos": "QB",
+  "team": "SF"
+ },
+ "8188": {
+  "age": 26,
+  "birth_date": "2000-08-07",
+  "name": "Tyquan Thornton",
+  "pos": "WR",
+  "team": "KC"
+ },
+ "8205": {
+  "age": 27,
+  "birth_date": "1999-03-02",
+  "name": "Isiah Pacheco",
+  "pos": "RB",
+  "team": "DET"
+ },
+ "8228": {
+  "age": 27,
+  "birth_date": "1998-11-01",
+  "name": "Jaylen Warren",
+  "pos": "RB",
+  "team": "PIT"
+ },
+ "8259": {
+  "age": 26,
+  "birth_date": "2000-05-06",
+  "name": "Cameron Dicker",
+  "pos": "K",
+  "team": "LAC"
+ },
+ "8408": {
+  "age": 27,
+  "birth_date": "1999-05-24",
+  "name": "Jordan Mason",
+  "pos": "RB",
+  "team": "MIN"
+ },
+ "8676": {
+  "age": 28,
+  "birth_date": "1998-08-31",
+  "name": "Rashid Shaheed",
+  "pos": "WR",
+  "team": "SEA"
+ },
+ "9221": {
+  "age": 24,
+  "birth_date": "2002-03-20",
+  "name": "Jahmyr Gibbs",
+  "pos": "RB",
+  "team": "DET"
+ },
+ "9224": {
+  "age": 26,
+  "birth_date": "2000-03-21",
+  "name": "Chase Brown",
+  "pos": "RB",
+  "team": "CIN"
+ },
+ "9225": {
+  "age": 24,
+  "birth_date": "2002-08-30",
+  "name": "Tank Bigsby",
+  "pos": "RB",
+  "team": "PHI"
+ },
+ "9226": {
+  "age": 25,
+  "birth_date": "2001-10-13",
+  "name": "De'Von Achane",
+  "pos": "RB",
+  "team": "MIA"
+ },
+ "9228": {
+  "age": 25,
+  "birth_date": "2001-07-25",
+  "name": "Bryce Young",
+  "pos": "QB",
+  "team": "CAR"
+ },
+ "9229": {
+  "age": 24,
+  "birth_date": "2002-05-22",
+  "name": "Anthony Richardson",
+  "pos": "QB",
+  "team": "IND"
+ },
+ "9480": {
+  "age": 25,
+  "birth_date": "2000-12-27",
+  "name": "Brenton Strange",
+  "pos": "TE",
+  "team": "JAX"
+ },
+ "9482": {
+  "age": 25,
+  "birth_date": "2001-07-06",
+  "name": "Michael Mayer",
+  "pos": "TE",
+  "team": "LV"
+ },
+ "9484": {
+  "age": 25,
+  "birth_date": "2000-11-03",
+  "name": "Tucker Kraft",
+  "pos": "TE",
+  "team": "GB"
+ },
+ "9486": {
+  "age": 25,
+  "birth_date": "2001-06-16",
+  "name": "Dontayvion Wicks",
+  "pos": "WR",
+  "team": "PHI"
+ },
+ "9487": {
+  "age": 24,
+  "birth_date": "2002-03-21",
+  "name": "Parker Washington",
+  "pos": "WR",
+  "team": "JAX"
+ },
+ "9488": {
+  "age": 24,
+  "birth_date": "2002-02-14",
+  "name": "Jaxon Smith-Njigba",
+  "pos": "WR",
+  "team": "SEA"
+ },
+ "9493": {
+  "age": 25,
+  "birth_date": "2001-05-29",
+  "name": "Puka Nacua",
+  "pos": "WR",
+  "team": "LAR"
+ },
+ "9500": {
+  "age": 25,
+  "birth_date": "2001-08-12",
+  "name": "Josh Downs",
+  "pos": "WR",
+  "team": "IND"
+ },
+ "9501": {
+  "age": 25,
+  "birth_date": "2000-12-08",
+  "name": "DeMario Douglas",
+  "pos": "WR",
+  "team": "NE"
+ },
+ "9502": {
+  "age": 26,
+  "birth_date": "1999-10-29",
+  "name": "Tank Dell",
+  "pos": "WR",
+  "team": "HOU"
+ },
+ "9504": {
+  "age": 24,
+  "birth_date": "2002-05-07",
+  "name": "Kayshon Boutte",
+  "pos": "WR",
+  "team": "HOU"
+ },
+ "9508": {
+  "age": 25,
+  "birth_date": "2001-06-15",
+  "name": "Tyjae Spears",
+  "pos": "RB",
+  "team": "TEN"
+ },
+ "9509": {
+  "age": 24,
+  "birth_date": "2002-01-30",
+  "name": "Bijan Robinson",
+  "pos": "RB",
+  "team": "ATL"
+ },
+ "9511": {
+  "age": 24,
+  "birth_date": "2002-01-17",
+  "name": "Keaton Mitchell",
+  "pos": "RB",
+  "team": "LAC"
+ },
+ "96": {
+  "age": 42,
+  "birth_date": "1983-12-02",
+  "name": "Aaron Rodgers",
+  "pos": "QB",
+  "team": "PIT"
+ },
+ "9753": {
+  "age": 25,
+  "birth_date": "2001-01-08",
+  "name": "Zach Charbonnet",
+  "pos": "RB",
+  "team": "SEA"
+ },
+ "9754": {
+  "age": 25,
+  "birth_date": "2001-09-06",
+  "name": "Quentin Johnston",
+  "pos": "WR",
+  "team": "LAC"
+ },
+ "9756": {
+  "age": 24,
+  "birth_date": "2002-01-27",
+  "name": "Jordan Addison",
+  "pos": "WR",
+  "team": "MIN"
+ },
+ "9757": {
+  "age": 24,
+  "birth_date": "2002-06-11",
+  "name": "Kendre Miller",
+  "pos": "RB",
+  "team": "NO"
+ },
+ "9758": {
+  "age": 25,
+  "birth_date": "2001-10-03",
+  "name": "C.J. Stroud",
+  "pos": "QB",
+  "team": "HOU"
+ },
+ "9997": {
+  "age": 26,
+  "birth_date": "2000-09-11",
+  "name": "Zay Flowers",
+  "pos": "WR",
+  "team": "BAL"
+ },
+ "BAL": {
+  "age": null,
+  "birth_date": "",
+  "name": "Baltimore Ravens",
+  "pos": "DEF",
+  "team": "BAL"
+ },
+ "BUF": {
+  "age": null,
+  "birth_date": "",
+  "name": "Buffalo Bills",
+  "pos": "DEF",
+  "team": "BUF"
+ },
+ "CHI": {
+  "age": null,
+  "birth_date": "",
+  "name": "Chicago Bears",
+  "pos": "DEF",
+  "team": "CHI"
+ },
+ "CIN": {
+  "age": null,
+  "birth_date": "",
+  "name": "Cincinnati Bengals",
+  "pos": "DEF",
+  "team": "CIN"
+ },
+ "CLE": {
+  "age": null,
+  "birth_date": "",
+  "name": "Cleveland Browns",
+  "pos": "DEF",
+  "team": "CLE"
+ },
+ "DAL": {
+  "age": null,
+  "birth_date": "",
+  "name": "Dallas Cowboys",
+  "pos": "DEF",
+  "team": "DAL"
+ },
+ "DEN": {
+  "age": null,
+  "birth_date": "",
+  "name": "Denver Broncos",
+  "pos": "DEF",
+  "team": "DEN"
+ },
+ "DET": {
+  "age": null,
+  "birth_date": "",
+  "name": "Detroit Lions",
+  "pos": "DEF",
+  "team": "DET"
+ },
+ "HOU": {
+  "age": null,
+  "birth_date": "",
+  "name": "Houston Texans",
+  "pos": "DEF",
+  "team": "HOU"
+ },
+ "IND": {
+  "age": null,
+  "birth_date": "",
+  "name": "Indianapolis Colts",
+  "pos": "DEF",
+  "team": "IND"
+ },
+ "JAX": {
+  "age": null,
+  "birth_date": "",
+  "name": "Jacksonville Jaguars",
+  "pos": "DEF",
+  "team": "JAX"
+ },
+ "KC": {
+  "age": null,
+  "birth_date": "",
+  "name": "Kansas City Chiefs",
+  "pos": "DEF",
+  "team": "KC"
+ },
+ "LAR": {
+  "age": null,
+  "birth_date": "",
+  "name": "Los Angeles Rams",
+  "pos": "DEF",
+  "team": "LAR"
+ },
+ "LV": {
+  "age": null,
+  "birth_date": "",
+  "name": "Las Vegas Raiders",
+  "pos": "DEF",
+  "team": "LV"
+ },
+ "MIN": {
+  "age": null,
+  "birth_date": "",
+  "name": "Minnesota Vikings",
+  "pos": "DEF",
+  "team": "MIN"
+ },
+ "NE": {
+  "age": null,
+  "birth_date": "",
+  "name": "New England Patriots",
+  "pos": "DEF",
+  "team": "NE"
+ },
+ "NYJ": {
+  "age": null,
+  "birth_date": "",
+  "name": "New York Jets",
+  "pos": "DEF",
+  "team": "NYJ"
+ },
+ "PHI": {
+  "age": null,
+  "birth_date": "",
+  "name": "Philadelphia Eagles",
+  "pos": "DEF",
+  "team": "PHI"
+ },
+ "PIT": {
+  "age": null,
+  "birth_date": "",
+  "name": "Pittsburgh Steelers",
+  "pos": "DEF",
+  "team": "PIT"
+ },
+ "SF": {
+  "age": null,
+  "birth_date": "",
+  "name": "San Francisco 49ers",
+  "pos": "DEF",
+  "team": "SF"
+ }
+}
