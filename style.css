@@ -55,3 +55,12 @@ tr.player.selected td { background: #eebf3a; color: #0b2545; }
 .inj.mid  { background: #ffead5; color: #c2410c; }
 .inj.high { background: #fdecea; color: #b42318; }
 .inj.info { background: #eef0f3; color: #52606d; }
+/* Login */
+.nav-auth { display: inline-flex; align-items: center; gap: 0.5rem; }
+.nav-auth button { background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; font: inherit; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer; }
+.nav-auth button:hover { background: #eebf3a; color: #0b2545; border-color: #eebf3a; }
+.form-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 0.5rem; }
+.form-row input { flex: 1 1 220px; padding: 0.6rem 0.75rem; border: 1px solid #c5ccd6; border-radius: 6px; font: inherit; }
+.form-row button { padding: 0.6rem 1rem; border: none; border-radius: 6px; background: #0b2545; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+.form-row button:hover { background: #13315c; }
+.form-msg { color: #6b7785; font-size: 0.9rem; min-height: 1.4em; }
