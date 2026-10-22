@@ -19,7 +19,7 @@
   <main>
     <div class="card" id="signed-out" hidden>
       <h2>Log In</h2>
-      <p>Enter the email the commissioner invited. We'll send you a login link, no password needed.</p>
+      <p>Enter your email and we'll send you a login link, no password needed. New here? The same link creates your account.</p>
       <form id="login-form" class="form-row">
         <input type="email" id="email" placeholder="you@example.com" required>
         <button type="submit">Email me a link</button>
@@ -30,6 +30,7 @@
     <div class="card" id="signed-in" hidden>
       <h2>You're Logged In</h2>
       <p>Signed in as <strong id="me-email"></strong>.</p>
+      <p id="member-status" class="form-msg"></p>
       <form id="name-form" class="form-row">
         <input type="text" id="display-name" placeholder="Name shown on the site" maxlength="40">
         <button type="submit">Save name</button>
@@ -59,6 +60,15 @@
           });
       }
 
+      window.addEventListener("pac12-profile", function (e) {
+        var status = document.getElementById("member-status");
+        if (!status) return;
+        var p = e.detail.profile;
+        status.textContent = !p ? "" : e.detail.member
+          ? "Approved league member. You can see members-only sections."
+          : "Waiting for the commissioner to approve you as a league member.";
+      });
+
       sb.auth.getSession().then(function (res) { show(res.data.session); });
       sb.auth.onAuthStateChange(function (event, session) { show(session); });
 
@@ -68,12 +78,10 @@
         msg.textContent = "Sending...";
         sb.auth.signInWithOtp({
           email: document.getElementById("email").value.trim(),
-          options: { shouldCreateUser: false, emailRedirectTo: new URL("login.html", location.href).href }
+          options: { emailRedirectTo: new URL("login.html", location.href).href }
         }).then(function (res) {
           if (res.error) {
-            msg.textContent = /signup|not allowed|not found/i.test(res.error.message)
-              ? "That email isn't on the league list. Ask the commissioner for an invite."
-              : "Couldn't send the link: " + res.error.message;
+            msg.textContent = "Couldn't send the link: " + res.error.message;
           } else {
             msg.textContent = "Check your email for the login link.";
           }
