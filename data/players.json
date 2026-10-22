@@ -302,8 +302,8 @@
  "11604": {
   "age": 23,
   "birth_date": "2002-12-13",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hamstring",
   "name": "Brock Bowers",
   "pos": "TE",
   "pos_rank": "TE1",
@@ -984,7 +984,7 @@
   "value": 8340
  },
  "12529": {
-  "age": 23,
+  "age": 24,
   "birth_date": "2002-10-22",
   "injury": "",
   "injury_part": "",
@@ -1178,8 +1178,8 @@
  "13272": {
   "age": 23,
   "birth_date": "2002-11-19",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Back",
   "name": "Carson Beck",
   "pos": "QB",
   "pos_rank": "QB40",
@@ -1430,8 +1430,8 @@
  "13305": {
   "age": 23,
   "birth_date": "2003-07-03",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Foot",
   "name": "Mike Washington Jr.",
   "pos": "RB",
   "pos_rank": "RB46",
@@ -1790,8 +1790,8 @@
  "1466": {
   "age": 37,
   "birth_date": "1989-10-05",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Travis Kelce",
   "pos": "TE",
   "pos_rank": "TE20",
@@ -1970,7 +1970,7 @@
  "3321": {
   "age": 31,
   "birth_date": "1994-03-01",
-  "injury": "Questionable",
+  "injury": "",
   "injury_part": "Knee - ACL",
   "name": "Tyreek Hill",
   "pos": "WR",
@@ -2194,18 +2194,6 @@
   "rank": 382,
   "team": "ARI",
   "value": 3
- },
- "4663": {
-  "age": 31,
-  "birth_date": "1995-05-17",
-  "injury": "",
-  "injury_part": "",
-  "name": "Austin Ekeler",
-  "pos": "RB",
-  "pos_rank": "",
-  "rank": null,
-  "team": "WAS",
-  "value": null
  },
  "4866": {
   "age": 29,
@@ -2738,8 +2726,8 @@
  "7526": {
   "age": 27,
   "birth_date": "1998-11-25",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Chest",
   "name": "Jaylen Waddle",
   "pos": "WR",
   "pos_rank": "WR18",
@@ -2939,6 +2927,18 @@
   "team": "NE",
   "value": 509
  },
+ "8122": {
+  "age": 25,
+  "birth_date": "2001-04-11",
+  "injury": "",
+  "injury_part": "",
+  "name": "Zonovan Knight",
+  "pos": "RB",
+  "pos_rank": "",
+  "rank": null,
+  "team": "ARI",
+  "value": null
+ },
  "8126": {
   "age": 25,
   "birth_date": "2001-01-05",
@@ -3122,8 +3122,8 @@
  "8154": {
   "age": 27,
   "birth_date": "1999-03-22",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hamstring",
   "name": "Brian Robinson Jr.",
   "pos": "RB",
   "pos_rank": "RB57",
@@ -3242,8 +3242,8 @@
  "8676": {
   "age": 28,
   "birth_date": "1998-08-31",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hip",
   "name": "Rashid Shaheed",
   "pos": "WR",
   "pos_rank": "WR68",
