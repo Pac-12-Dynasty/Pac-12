@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in | Pac 12 Dynasty</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Owner Login</h1>
+    <p>For Pac 12 Dynasty owners</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="standings.html">Standings</a>
+  </nav>
+  <main>
+    <div class="card" id="signed-out" hidden>
+      <h2>Log In</h2>
+      <p>Enter the email the commissioner invited. We'll send you a login link, no password needed.</p>
+      <form id="login-form" class="form-row">
+        <input type="email" id="email" placeholder="you@example.com" required>
+        <button type="submit">Email me a link</button>
+      </form>
+      <p id="login-msg" class="form-msg"></p>
+    </div>
+
+    <div class="card" id="signed-in" hidden>
+      <h2>You're Logged In</h2>
+      <p>Signed in as <strong id="me-email"></strong>.</p>
+      <form id="name-form" class="form-row">
+        <input type="text" id="display-name" placeholder="Name shown on the site" maxlength="40">
+        <button type="submit">Save name</button>
+      </form>
+      <p id="name-msg" class="form-msg"></p>
+    </div>
+
+    <p id="loading" class="form-msg">Loading...</p>
+  </main>
+  <footer>Pac 12 Dynasty Fantasy Football League</footer>
+  <script src="auth.js"></script>
+  <script>
+    function start() {
+      var sb = window.pac12.sb;
+      var outCard = document.getElementById("signed-out");
+      var inCard = document.getElementById("signed-in");
+
+      function show(session) {
+        document.getElementById("loading").hidden = true;
+        outCard.hidden = !!session;
+        inCard.hidden = !session;
+        if (!session) return;
+        document.getElementById("me-email").textContent = session.user.email;
+        sb.from("profiles").select("display_name").eq("id", session.user.id).maybeSingle()
+          .then(function (res) {
+            if (res.data && res.data.display_name) document.getElementById("display-name").value = res.data.display_name;
+          });
+      }
+
+      sb.auth.getSession().then(function (res) { show(res.data.session); });
+      sb.auth.onAuthStateChange(function (event, session) { show(session); });
+
+      document.getElementById("login-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var msg = document.getElementById("login-msg");
+        msg.textContent = "Sending...";
+        sb.auth.signInWithOtp({
+          email: document.getElementById("email").value.trim(),
+          options: { shouldCreateUser: false, emailRedirectTo: new URL("login.html", location.href).href }
+        }).then(function (res) {
+          if (res.error) {
+            msg.textContent = /signup|not allowed|not found/i.test(res.error.message)
+              ? "That email isn't on the league list. Ask the commissioner for an invite."
+              : "Couldn't send the link: " + res.error.message;
+          } else {
+            msg.textContent = "Check your email for the login link.";
+          }
+        });
+      });
+
+      document.getElementById("name-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var msg = document.getElementById("name-msg");
+        sb.auth.getSession().then(function (res) {
+          var session = res.data.session;
+          if (!session) return;
+          return sb.from("profiles")
+            .update({ display_name: document.getElementById("display-name").value.trim() || null })
+            .eq("id", session.user.id)
+            .then(function (r) {
+              msg.textContent = r.error ? "Couldn't save: " + r.error.message : "Saved.";
+            });
+        });
+      });
+    }
+    if (window.pac12 && window.pac12.sb) start();
+    else window.addEventListener("pac12-auth-ready", start);
+  </script>
+</body>
+</html>
