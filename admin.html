@@ -31,7 +31,7 @@
       <div class="table-wrap">
         <table id="owners" class="admin-table" hidden>
           <thead>
-            <tr><th>Email</th><th>Name</th><th>Member</th><th>Sleeper team</th><th></th></tr>
+            <tr><th>Email</th><th>Name</th><th>Member</th><th>Can post news</th><th>Sleeper team</th><th></th></tr>
           </thead>
           <tbody></tbody>
         </table>
@@ -77,7 +77,7 @@
       var sb = window.pac12.sb;
       statusEl.textContent = "Loading accounts...";
       Promise.all([
-        sb.from("profiles").select("id, email, display_name, is_member, is_admin, sleeper_user_id").order("created_at"),
+        sb.from("profiles").select("id, email, display_name, is_member, is_admin, can_post, sleeper_user_id").order("created_at"),
         getJSON(API + "/league/" + LEAGUE_ID + "/users")
       ]).then(function (results) {
         var res = results[0], users = results[1];
@@ -100,6 +100,11 @@
           member.checked = p.is_member || p.is_admin;
           member.disabled = p.is_admin;
           if (!p.is_member && !p.is_admin) pending++;
+
+          var poster = document.createElement("input");
+          poster.type = "checkbox";
+          poster.checked = p.can_post || p.is_admin;
+          poster.disabled = p.is_admin;
 
           var select = document.createElement("select");
           var none = document.createElement("option");
@@ -124,7 +129,8 @@
             sb.rpc("admin_set_profile", {
               target: p.id,
               member: member.checked || p.is_admin,
-              sleeper_id: select.value
+              sleeper_id: select.value,
+              poster: poster.checked || p.is_admin
             }).then(function (r) {
               if (!r.error) { msg.textContent = "Saved"; return; }
               msg.textContent = /duplicate|unique/i.test(r.error.message)
@@ -140,6 +146,7 @@
           tr.appendChild(td(p.email + (p.is_admin ? " (admin)" : "")));
           tr.appendChild(td(p.display_name || ""));
           tr.appendChild(td(member));
+          tr.appendChild(td(poster));
           tr.appendChild(td(select));
           tr.appendChild(td(actions));
           body.appendChild(tr);
