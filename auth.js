@@ -80,6 +80,12 @@
         .then(function (res) {
           var p = res.data || {};
           who.textContent = (p.display_name || session.user.email) + (p.is_admin ? " (admin)" : "");
+          if (p.is_admin) {
+            var admin = document.createElement("a");
+            admin.href = "admin.html";
+            admin.textContent = "Admin";
+            slot.insertBefore(admin, who);
+          }
           applyAccess(res.data, session);
         });
     }
@@ -88,11 +94,3 @@
     sb.auth.onAuthStateChange(function (event, session) { render(session); });
   });
 })();
-
-    who.textContent = (p.display_name || session.user.email) + (p.is_admin ? " (admin)" : "");
-          if (p.is_admin) {
-            var admin = document.createElement("a");
-            admin.href = "admin.html";
-            admin.textContent = "Admin";
-            slot.insertBefore(admin, who);
-          }
