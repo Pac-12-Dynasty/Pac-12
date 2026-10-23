@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin | Pac 12 Dynasty</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-table select, .admin-table button { font: inherit; padding: 0.35rem 0.5rem; border-radius: 6px; border: 1px solid #c5ccd6; }
+    .admin-table button { background: #0b2545; color: #fff; border: none; font-weight: 600; cursor: pointer; }
+    .admin-table button:hover { background: #13315c; }
+    .admin-table input[type="checkbox"] { width: 18px; height: 18px; }
+    .row-msg { font-size: 0.85rem; color: #6b7785; }
+    .pending { font-weight: 700; color: #b54708; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Admin</h1>
+    <p>Approve owners and link them to their Sleeper teams</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="standings.html">Standings</a>
+  </nav>
+  <main>
+    <div class="card">
+      <h2>Accounts</h2>
+      <p id="admin-status" class="form-msg">Checking access...</p>
+      <div class="table-wrap">
+        <table id="owners" class="admin-table" hidden>
+          <thead>
+            <tr><th>Email</th><th>Name</th><th>Member</th><th>Sleeper team</th><th></th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <footer>Pac 12 Dynasty Fantasy Football League</footer>
+  <script src="auth.js"></script>
+  <script>
+    var LEAGUE_ID = "1315706586127171584";
+    var API = "https://api.sleeper.app/v1";
+    var statusEl = document.getElementById("admin-status");
+    var table = document.getElementById("owners");
+    var loaded = false;
+
+    function getJSON(url) {
+      return fetch(url).then(function (res) {
+        if (!res.ok) throw new Error("Sleeper returned " + res.status);
+        return res.json();
+      });
+    }
+
+    function td(content) {
+      var cell = document.createElement("td");
+      if (content instanceof Node) cell.appendChild(content);
+      else cell.textContent = content == null ? "" : content;
+      return cell;
+    }
+
+    window.addEventListener("pac12-profile", function (e) {
+      if (loaded) return;
+      var p = e.detail.profile;
+      if (!p || !p.is_admin) {
+        table.hidden = true;
+        statusEl.textContent = p ? "This page is for the league admin only." : "Log in as the admin to use this page.";
+        return;
+      }
+      loaded = true;
+      load();
+    });
+
+    function load() {
+      var sb = window.pac12.sb;
+      statusEl.textContent = "Loading accounts...";
+      Promise.all([
+        sb.from("profiles").select("id, email, display_name, is_member, is_admin, sleeper_user_id").order("created_at"),
+        getJSON(API + "/league/" + LEAGUE_ID + "/users")
+      ]).then(function (results) {
+        var res = results[0], users = results[1];
+        if (res.error) throw new Error(res.error.message);
+
+        // Sleeper teams for the dropdown
+        var teams = users.map(function (u) {
+          return { id: u.user_id, name: (u.metadata && u.metadata.team_name) || u.display_name, owner: u.display_name };
+        }).sort(function (a, b) { return a.name.localeCompare(b.name); });
+
+        var body = table.tBodies[0];
+        body.innerHTML = "";
+        var pending = 0;
+
+        res.data.forEach(function (p) {
+          var tr = document.createElement("tr");
+
+          var member = document.createElement("input");
+          member.type = "checkbox";
+          member.checked = p.is_member || p.is_admin;
+          member.disabled = p.is_admin;
+          if (!p.is_member && !p.is_admin) pending++;
+
+          var select = document.createElement("select");
+          var none = document.createElement("option");
+          none.value = "";
+          none.textContent = "Not linked";
+          select.appendChild(none);
+          teams.forEach(function (t) {
+            var opt = document.createElement("option");
+            opt.value = t.id;
+            opt.textContent = t.name + " (" + t.owner + ")";
+            if (t.id === p.sleeper_user_id) opt.selected = true;
+            select.appendChild(opt);
+          });
+
+          var msg = document.createElement("span");
+          msg.className = "row-msg";
+          var save = document.createElement("button");
+          save.type = "button";
+          save.textContent = "Save";
+          save.onclick = function () {
+            msg.textContent = "Saving...";
+            sb.rpc("admin_set_profile", {
+              target: p.id,
+              member: member.checked || p.is_admin,
+              sleeper_id: select.value
+            }).then(function (r) {
+              if (!r.error) { msg.textContent = "Saved"; return; }
+              msg.textContent = /duplicate|unique/i.test(r.error.message)
+                ? "That team is already linked to another account."
+                : "Error: " + r.error.message;
+            });
+          };
+          var actions = document.createElement("span");
+          actions.appendChild(save);
+          actions.appendChild(document.createTextNode(" "));
+          actions.appendChild(msg);
+
+          tr.appendChild(td(p.email + (p.is_admin ? " (admin)" : "")));
+          tr.appendChild(td(p.display_name || ""));
+          tr.appendChild(td(member));
+          tr.appendChild(td(select));
+          tr.appendChild(td(actions));
+          body.appendChild(tr);
+        });
+
+        table.hidden = false;
+        statusEl.innerHTML = "";
+        statusEl.appendChild(document.createTextNode(res.data.length + " account(s). "));
+        if (pending) {
+          var span = document.createElement("span");
+          span.className = "pending";
+          span.textContent = pending + " waiting for approval.";
+          statusEl.appendChild(span);
+        } else {
+          statusEl.appendChild(document.createTextNode("Everyone is approved."));
+        }
+      }).catch(function (err) {
+        statusEl.textContent = "Couldn't load accounts: " + err.message;
+      });
+    }
+  </script>
+</body>
+</html>
