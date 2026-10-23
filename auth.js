@@ -54,7 +54,15 @@
     var nav = document.querySelector("nav");
     var slot = document.createElement("span");
     slot.className = "nav-auth";
-    if (nav) nav.appendChild(slot);
+    if (nav) {
+      nav.appendChild(slot);
+      if (!nav.querySelector('a[href="news.html"]')) {
+        var news = document.createElement("a");
+        news.href = "news.html";
+        news.textContent = "News";
+        nav.insertBefore(news, slot);
+      }
+    }
 
     var renderCount = 0;
 
@@ -79,7 +87,7 @@
       out.onclick = function () { sb.auth.signOut(); };
       slot.appendChild(out);
 
-      sb.from("profiles").select("display_name, is_admin, is_member").eq("id", session.user.id).maybeSingle()
+      sb.from("profiles").select("id, display_name, is_admin, is_member, can_post").eq("id", session.user.id).maybeSingle()
         .then(function (res) {
           if (thisRender !== renderCount) return; // a newer login state already redrew the nav
           var p = res.data || {};
