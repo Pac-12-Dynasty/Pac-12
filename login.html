@@ -17,25 +17,51 @@
     <a href="standings.html">Standings</a>
   </nav>
   <main>
-    <div class="card" id="signed-out" hidden>
-      <h2>Log In</h2>
-      <p>Enter your email and we'll send you a login link, no password needed. New here? The same link creates your account.</p>
-      <form id="login-form" class="form-row">
-        <input type="email" id="email" placeholder="you@example.com" required>
-        <button type="submit">Email me a link</button>
-      </form>
-      <p id="login-msg" class="form-msg"></p>
+    <div id="signed-out" hidden>
+      <div class="card">
+        <h2>Log In</h2>
+        <p>Already set a password? Log in here.</p>
+        <form id="password-form" class="form-row">
+          <input type="email" id="pw-email" placeholder="you@example.com" autocomplete="email" required>
+          <input type="password" id="pw-password" placeholder="Password" autocomplete="current-password" required>
+          <button type="submit">Log in</button>
+        </form>
+        <p id="pw-msg" class="form-msg"></p>
+      </div>
+
+      <div class="card">
+        <h2>First Time or Forgot Password?</h2>
+        <p>We'll email you a one-time login link. After you're in, you can set a password so you won't need the link again.</p>
+        <form id="link-form" class="form-row">
+          <input type="email" id="link-email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit">Email me a link</button>
+        </form>
+        <p id="link-msg" class="form-msg"></p>
+      </div>
     </div>
 
-    <div class="card" id="signed-in" hidden>
-      <h2>You're Logged In</h2>
-      <p>Signed in as <strong id="me-email"></strong>.</p>
-      <p id="member-status" class="form-msg"></p>
-      <form id="name-form" class="form-row">
-        <input type="text" id="display-name" placeholder="Name shown on the site" maxlength="40">
-        <button type="submit">Save name</button>
-      </form>
-      <p id="name-msg" class="form-msg"></p>
+    <div id="signed-in" hidden>
+      <div class="card">
+        <h2>You're Logged In</h2>
+        <p>Signed in as <strong id="me-email"></strong>.</p>
+        <p id="member-status" class="form-msg"></p>
+        <form id="name-form" class="form-row">
+          <input type="text" id="display-name" placeholder="Name shown on the site" maxlength="40">
+          <button type="submit">Save name</button>
+        </form>
+        <p id="name-msg" class="form-msg"></p>
+      </div>
+
+      <div class="card">
+        <h2>Set Your Password</h2>
+        <p>Set a password to log in with your email and password from now on. You can change it here anytime.</p>
+        <form id="set-pw-form" class="form-row">
+          <input type="password" id="new-pw" placeholder="New password (8+ characters)" autocomplete="new-password" minlength="8" required>
+          <input type="password" id="confirm-pw" placeholder="Confirm password" autocomplete="new-password" minlength="8" required>
+          <button type="submit">Save password</button>
+        </form>
+        <p id="set-pw-msg" class="form-msg"></p>
+      </div>
     </div>
 
     <p id="loading" class="form-msg">Loading...</p>
@@ -45,13 +71,13 @@
   <script>
     function start() {
       var sb = window.pac12.sb;
-      var outCard = document.getElementById("signed-out");
-      var inCard = document.getElementById("signed-in");
+      var outView = document.getElementById("signed-out");
+      var inView = document.getElementById("signed-in");
 
       function show(session) {
         document.getElementById("loading").hidden = true;
-        outCard.hidden = !!session;
-        inCard.hidden = !session;
+        outView.hidden = !!session;
+        inView.hidden = !session;
         if (!session) return;
         document.getElementById("me-email").textContent = session.user.email;
         sb.from("profiles").select("display_name").eq("id", session.user.id).maybeSingle()
@@ -62,7 +88,6 @@
 
       window.addEventListener("pac12-profile", function (e) {
         var status = document.getElementById("member-status");
-        if (!status) return;
         var p = e.detail.profile;
         status.textContent = !p ? "" : e.detail.member
           ? "Approved league member. You can see members-only sections."
@@ -72,22 +97,37 @@
       sb.auth.getSession().then(function (res) { show(res.data.session); });
       sb.auth.onAuthStateChange(function (event, session) { show(session); });
 
-      document.getElementById("login-form").addEventListener("submit", function (e) {
+      // Log in with email and password
+      document.getElementById("password-form").addEventListener("submit", function (e) {
         e.preventDefault();
-        var msg = document.getElementById("login-msg");
-        msg.textContent = "Sending...";
-        sb.auth.signInWithOtp({
-          email: document.getElementById("email").value.trim(),
-          options: { emailRedirectTo: new URL("login.html", location.href).href }
+        var msg = document.getElementById("pw-msg");
+        msg.textContent = "Logging in...";
+        sb.auth.signInWithPassword({
+          email: document.getElementById("pw-email").value.trim(),
+          password: document.getElementById("pw-password").value
         }).then(function (res) {
-          if (res.error) {
-            msg.textContent = "Couldn't send the link: " + res.error.message;
-          } else {
-            msg.textContent = "Check your email for the login link.";
-          }
+          msg.textContent = res.error
+            ? "Email or password didn't match. If you haven't set a password yet, use the email link below."
+            : "";
         });
       });
 
+      // One-time email link (first login or forgot password)
+      document.getElementById("link-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var msg = document.getElementById("link-msg");
+        msg.textContent = "Sending...";
+        sb.auth.signInWithOtp({
+          email: document.getElementById("link-email").value.trim(),
+          options: { emailRedirectTo: new URL("login.html", location.href).href }
+        }).then(function (res) {
+          msg.textContent = res.error
+            ? "Couldn't send the link: " + res.error.message
+            : "Check your email for the login link.";
+        });
+      });
+
+      // Display name
       document.getElementById("name-form").addEventListener("submit", function (e) {
         e.preventDefault();
         var msg = document.getElementById("name-msg");
@@ -100,6 +140,26 @@
             .then(function (r) {
               msg.textContent = r.error ? "Couldn't save: " + r.error.message : "Saved.";
             });
+        });
+      });
+
+      // Set or change password
+      document.getElementById("set-pw-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var msg = document.getElementById("set-pw-msg");
+        var pw = document.getElementById("new-pw").value;
+        if (pw !== document.getElementById("confirm-pw").value) {
+          msg.textContent = "Passwords don't match.";
+          return;
+        }
+        msg.textContent = "Saving...";
+        sb.auth.updateUser({ password: pw }).then(function (res) {
+          if (res.error) {
+            msg.textContent = "Couldn't save password: " + res.error.message;
+          } else {
+            msg.textContent = "Password saved. Next time, log in with your email and password.";
+            document.getElementById("set-pw-form").reset();
+          }
         });
       });
     }
