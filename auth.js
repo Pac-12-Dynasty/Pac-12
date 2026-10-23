@@ -56,7 +56,10 @@
     slot.className = "nav-auth";
     if (nav) nav.appendChild(slot);
 
+    var renderCount = 0;
+
     function render(session) {
+      var thisRender = ++renderCount;
       slot.innerHTML = "";
       if (!session) {
         var login = document.createElement("a");
@@ -78,6 +81,7 @@
 
       sb.from("profiles").select("display_name, is_admin, is_member").eq("id", session.user.id).maybeSingle()
         .then(function (res) {
+          if (thisRender !== renderCount) return; // a newer login state already redrew the nav
           var p = res.data || {};
           who.textContent = (p.display_name || session.user.email) + (p.is_admin ? " (admin)" : "");
           if (p.is_admin) {
