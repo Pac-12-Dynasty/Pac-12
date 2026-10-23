@@ -6,110 +6,268 @@
   <title>News | Pac 12 Dynasty</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .post-meta { color: #6b7785; font-size: 0.85rem; margin: -0.25rem 0 0.75rem; }
-    .post-body { white-space: pre-wrap; margin: 0; }
-    .post-actions { margin-top: 0.75rem; }
-    .post-actions button { font: inherit; font-size: 0.85rem; background: none; border: 1px solid #c5ccd6; color: #b42318; padding: 0.25rem 0.6rem; border-radius: 6px; cursor: pointer; }
-    #compose textarea { width: 100%; min-height: 160px; padding: 0.6rem 0.75rem; border: 1px solid #c5ccd6; border-radius: 6px; font: inherit; resize: vertical; }
-    #compose input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid #c5ccd6; border-radius: 6px; font: inherit; margin-bottom: 0.5rem; }
-    #compose button { margin-top: 0.5rem; padding: 0.6rem 1rem; border: none; border-radius: 6px; background: #0b2545; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
-    #compose button:hover { background: #13315c; }
+    :root { --red: #c8102e; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; }
+    main.news { max-width: 1140px; }
+
+    /* Section bar, like a sports site's channel header */
+    .news-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 8px 8px 0 0; border-bottom: 4px solid var(--red); }
+    .news-bar h2 { margin: 0; font-size: 1.1rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+    .tabs button { background: none; border: none; color: #d1d5db; font: inherit; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; padding: 0.35rem 0.6rem; border-radius: 4px; cursor: pointer; }
+    .tabs button:hover { color: #fff; }
+    .tabs button.active { background: var(--red); color: #fff; }
+
+    .news-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 1.25rem; background: #fff; padding: 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    @media (max-width: 860px) { .news-layout { grid-template-columns: 1fr; } }
+
+    .kicker { display: inline-block; color: var(--red); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.35rem; }
+    .byline { color: var(--muted); font-size: 0.8rem; margin-top: 0.5rem; }
+    .story { cursor: pointer; }
+    .story:hover h3, .story:hover h1 { text-decoration: underline; text-decoration-thickness: 2px; }
+
+    /* Lead story */
+    .lead { padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
+    .lead h1 { margin: 0; font-size: clamp(1.6rem, 3.5vw, 2.4rem); line-height: 1.1; font-weight: 900; color: var(--ink); letter-spacing: -0.01em; }
+    .lead p.excerpt { font-size: 1.05rem; color: #374151; margin: 0.75rem 0 0; }
+
+    /* Story grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem 1.25rem; padding-top: 1.25rem; }
+    .grid .story { border-top: 3px solid var(--ink); padding-top: 0.6rem; }
+    .grid h3 { margin: 0; font-size: 1.1rem; line-height: 1.25; font-weight: 800; color: var(--ink); }
+    .grid p.excerpt { font-size: 0.9rem; color: #4b5563; margin: 0.4rem 0 0; }
+
+    /* Sidebar */
+    .sidebar h2 { margin: 0 0 0.5rem; font-size: 0.85rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); border-bottom: 3px solid var(--red); padding-bottom: 0.35rem; }
+    .latest { list-style: none; margin: 0; padding: 0; }
+    .latest li { padding: 0.6rem 0; border-bottom: 1px solid var(--line); cursor: pointer; }
+    .latest li:hover .hl { text-decoration: underline; }
+    .latest .time { display: block; color: var(--red); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; }
+    .latest .hl { font-weight: 700; color: var(--ink); line-height: 1.3; }
+
+    /* Full article */
+    .article { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); max-width: 760px; margin: 0 auto; }
+    .article h1 { margin: 0; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; font-weight: 900; color: var(--ink); }
+    .article .body { white-space: pre-wrap; font-size: 1.1rem; line-height: 1.7; color: #1f2937; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+    .back { display: inline-block; margin-bottom: 1rem; font-weight: 700; color: var(--red); background: none; border: none; font: inherit; cursor: pointer; padding: 0; }
+    .del { margin-top: 1.25rem; font: inherit; font-size: 0.85rem; background: none; border: 1px solid #c5ccd6; color: #b42318; padding: 0.3rem 0.7rem; border-radius: 6px; cursor: pointer; }
+
+    /* Composer */
+    #compose { margin-bottom: 1.25rem; }
+    #compose summary { cursor: pointer; font-weight: 800; color: var(--ink); }
+    #compose .fields { display: grid; gap: 0.5rem; margin-top: 0.75rem; }
+    #compose input, #compose select, #compose textarea { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid #c5ccd6; border-radius: 6px; font: inherit; }
+    #compose textarea { min-height: 180px; resize: vertical; }
+    #compose button { justify-self: start; padding: 0.6rem 1.2rem; border: none; border-radius: 6px; background: var(--red); color: #fff; font: inherit; font-weight: 800; cursor: pointer; }
+    .empty { color: var(--muted); padding: 1rem 0; }
   </style>
 </head>
 <body>
   <header>
     <h1>League News</h1>
-    <p>Updates from around the league</p>
+    <p>Trades, rumors, and recaps from around the Pac 12 Dynasty</p>
   </header>
   <nav>
     <a href="index.html">Home</a>
     <a href="teams.html">Teams</a>
     <a href="standings.html">Standings</a>
   </nav>
-  <main>
-    <div class="card" id="compose" hidden>
-      <h2>New Post</h2>
-      <form id="post-form">
+  <main class="news">
+    <details class="card" id="compose" hidden>
+      <summary>Write a story</summary>
+      <form id="post-form" class="fields">
+        <select id="post-category">
+          <option>News</option>
+          <option>Trades</option>
+          <option>Rumors</option>
+          <option>Recaps</option>
+          <option>Announcements</option>
+        </select>
         <input type="text" id="post-title" placeholder="Headline" maxlength="150" required>
-        <textarea id="post-body" placeholder="What's the news?" maxlength="10000" required></textarea>
+        <textarea id="post-body" placeholder="Write the story. The first couple of sentences become the preview." maxlength="10000" required></textarea>
         <button type="submit">Publish</button>
       </form>
       <p id="post-msg" class="form-msg"></p>
-    </div>
-    <p id="news-status" class="form-msg">Loading news...</p>
-    <div id="posts"></div>
+    </details>
+
+    <section id="front">
+      <div class="news-bar">
+        <h2>Pac 12 Dynasty News</h2>
+        <div class="tabs" id="tabs"></div>
+      </div>
+      <div class="news-layout">
+        <div>
+          <p id="news-status" class="empty">Loading news...</p>
+          <div id="lead"></div>
+          <div class="grid" id="grid"></div>
+        </div>
+        <aside class="sidebar">
+          <h2>Latest Headlines</h2>
+          <ul class="latest" id="latest"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="article-view" hidden></section>
   </main>
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
   <script src="auth.js"></script>
   <script>
-    var me = null;      // the logged-in profile, if any
+    var CATEGORIES = ["All", "News", "Trades", "Rumors", "Recaps", "Announcements"];
+    var me = null;
     var posts = [];
+    var filter = "All";
+
+    function el(tag, cls, text) {
+      var node = document.createElement(tag);
+      if (cls) node.className = cls;
+      if (text != null) node.textContent = text;
+      return node;
+    }
+
+    function ago(iso) {
+      var mins = Math.round((Date.now() - new Date(iso).getTime()) / 60000);
+      if (mins < 1) return "Just now";
+      if (mins < 60) return mins + "m ago";
+      var hrs = Math.round(mins / 60);
+      if (hrs < 24) return hrs + "h ago";
+      var days = Math.round(hrs / 24);
+      if (days < 7) return days + "d ago";
+      return new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+    }
+
+    function excerpt(text, max) {
+      var clean = text.replace(/\s+/g, " ").trim();
+      return clean.length > max ? clean.slice(0, max).replace(/\s+\S*$/, "") + "..." : clean;
+    }
+
+    function byline(post) {
+      return (post.author_name ? "By " + post.author_name + " · " : "") + ago(post.created_at);
+    }
 
     function canManage(post) {
       return me && (me.is_admin || post.author_id === me.id);
     }
 
-    function loadPosts() {
-      var statusEl = document.getElementById("news-status");
-      window.pac12.sb.from("news_posts").select("id, title, body, author_id, author_name, created_at")
-        .order("created_at", { ascending: false })
-        .then(function (res) {
-          if (res.error) { statusEl.textContent = "Couldn't load news: " + res.error.message; return; }
-          posts = res.data;
-          render();
-          statusEl.textContent = posts.length ? "" : "No news yet. Check back soon.";
-        });
+    function open(post) { location.hash = "story-" + post.id; }
+
+    // ---------- Front page ----------
+    function renderTabs() {
+      var tabs = document.getElementById("tabs");
+      tabs.innerHTML = "";
+      CATEGORIES.forEach(function (c) {
+        var b = el("button", c === filter ? "active" : "", c);
+        b.type = "button";
+        b.onclick = function () { filter = c; renderFront(); };
+        tabs.appendChild(b);
+      });
     }
 
-    function render() {
-      var list = document.getElementById("posts");
-      list.innerHTML = "";
-      posts.forEach(function (post) {
-        var card = document.createElement("article");
-        card.className = "card";
+    function renderFront() {
+      renderTabs();
+      var shown = posts.filter(function (p) { return filter === "All" || p.category === filter; });
+      var lead = document.getElementById("lead");
+      var grid = document.getElementById("grid");
+      var statusEl = document.getElementById("news-status");
+      lead.innerHTML = "";
+      grid.innerHTML = "";
 
-        var h2 = document.createElement("h2");
-        h2.textContent = post.title;
-        var meta = document.createElement("p");
-        meta.className = "post-meta";
-        meta.textContent = new Date(post.created_at).toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" }) +
-          (post.author_name ? " · " + post.author_name : "");
-        var body = document.createElement("p");
-        body.className = "post-body";
-        body.textContent = post.body;
+      if (!shown.length) {
+        statusEl.hidden = false;
+        statusEl.textContent = posts.length ? "No " + filter.toLowerCase() + " stories yet." : "No news yet. Check back soon.";
+      } else {
+        statusEl.hidden = true;
+        var top = shown[0];
+        var leadStory = el("article", "story lead");
+        leadStory.appendChild(el("span", "kicker", top.category || "News"));
+        leadStory.appendChild(el("h1", "", top.title));
+        leadStory.appendChild(el("p", "excerpt", excerpt(top.body, 260)));
+        leadStory.appendChild(el("div", "byline", byline(top)));
+        leadStory.onclick = function () { open(top); };
+        lead.appendChild(leadStory);
 
-        card.appendChild(h2);
-        card.appendChild(meta);
-        card.appendChild(body);
+        shown.slice(1).forEach(function (p) {
+          var card = el("article", "story");
+          card.appendChild(el("span", "kicker", p.category || "News"));
+          card.appendChild(el("h3", "", p.title));
+          card.appendChild(el("p", "excerpt", excerpt(p.body, 120)));
+          card.appendChild(el("div", "byline", byline(p)));
+          card.onclick = function () { open(p); };
+          grid.appendChild(card);
+        });
+      }
 
-        if (canManage(post)) {
-          var actions = document.createElement("div");
-          actions.className = "post-actions";
-          var del = document.createElement("button");
-          del.type = "button";
-          del.textContent = "Delete";
-          del.onclick = function () {
-            if (!confirm("Delete \"" + post.title + "\"?")) return;
-            window.pac12.sb.from("news_posts").delete().eq("id", post.id).then(function (res) {
-              if (res.error) alert("Couldn't delete: " + res.error.message);
-              else loadPosts();
-            });
-          };
-          actions.appendChild(del);
-          card.appendChild(actions);
-        }
-        list.appendChild(card);
+      var latest = document.getElementById("latest");
+      latest.innerHTML = "";
+      posts.slice(0, 8).forEach(function (p) {
+        var li = el("li");
+        li.appendChild(el("span", "time", ago(p.created_at) + " · " + (p.category || "News")));
+        li.appendChild(el("span", "hl", p.title));
+        li.onclick = function () { open(p); };
+        latest.appendChild(li);
       });
+      if (!posts.length) latest.appendChild(el("li", "empty", "Nothing yet."));
+    }
+
+    // ---------- Full article ----------
+    function renderArticle(post) {
+      var view = document.getElementById("article-view");
+      view.innerHTML = "";
+      var box = el("article", "article");
+      var back = el("button", "back", "← All news");
+      back.type = "button";
+      back.onclick = function () { history.pushState("", document.title, location.pathname); route(); };
+      box.appendChild(back);
+      box.appendChild(el("span", "kicker", post.category || "News"));
+      box.appendChild(el("h1", "", post.title));
+      box.appendChild(el("div", "byline", byline(post)));
+      box.appendChild(el("div", "body", post.body));
+      if (canManage(post)) {
+        var del = el("button", "del", "Delete story");
+        del.type = "button";
+        del.onclick = function () {
+          if (!confirm("Delete \"" + post.title + "\"?")) return;
+          window.pac12.sb.from("news_posts").delete().eq("id", post.id).then(function (res) {
+            if (res.error) { alert("Couldn't delete: " + res.error.message); return; }
+            history.pushState("", document.title, location.pathname);
+            loadPosts();
+          });
+        };
+        box.appendChild(del);
+      }
+      view.appendChild(box);
+      window.scrollTo(0, 0);
+    }
+
+    function route() {
+      var match = location.hash.match(/^#story-(\d+)$/);
+      var post = match && posts.filter(function (p) { return String(p.id) === match[1]; })[0];
+      document.getElementById("front").hidden = !!post;
+      document.getElementById("article-view").hidden = !post;
+      if (post) renderArticle(post);
+      else renderFront();
+    }
+
+    function loadPosts() {
+      window.pac12.sb.from("news_posts").select("id, title, body, category, author_id, author_name, created_at")
+        .order("created_at", { ascending: false })
+        .then(function (res) {
+          if (res.error) {
+            document.getElementById("news-status").textContent = "Couldn't load news: " + res.error.message;
+            return;
+          }
+          posts = res.data;
+          route();
+        });
     }
 
     function start() {
       loadPosts();
+      window.addEventListener("hashchange", route);
 
-      // Show the post box and delete buttons for people allowed to use them
       window.addEventListener("pac12-profile", function (e) {
         me = e.detail.profile;
         document.getElementById("compose").hidden = !(me && (me.can_post || me.is_admin));
-        render();
+        route();
       });
 
       document.getElementById("post-form").addEventListener("submit", function (e) {
@@ -117,6 +275,7 @@
         var msg = document.getElementById("post-msg");
         msg.textContent = "Publishing...";
         window.pac12.sb.from("news_posts").insert({
+          category: document.getElementById("post-category").value,
           title: document.getElementById("post-title").value.trim(),
           body: document.getElementById("post-body").value.trim()
         }).then(function (res) {
