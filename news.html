@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News | Pac 12 Dynasty</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .post-meta { color: #6b7785; font-size: 0.85rem; margin: -0.25rem 0 0.75rem; }
+    .post-body { white-space: pre-wrap; margin: 0; }
+    .post-actions { margin-top: 0.75rem; }
+    .post-actions button { font: inherit; font-size: 0.85rem; background: none; border: 1px solid #c5ccd6; color: #b42318; padding: 0.25rem 0.6rem; border-radius: 6px; cursor: pointer; }
+    #compose textarea { width: 100%; min-height: 160px; padding: 0.6rem 0.75rem; border: 1px solid #c5ccd6; border-radius: 6px; font: inherit; resize: vertical; }
+    #compose input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid #c5ccd6; border-radius: 6px; font: inherit; margin-bottom: 0.5rem; }
+    #compose button { margin-top: 0.5rem; padding: 0.6rem 1rem; border: none; border-radius: 6px; background: #0b2545; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+    #compose button:hover { background: #13315c; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>League News</h1>
+    <p>Updates from around the league</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="standings.html">Standings</a>
+  </nav>
+  <main>
+    <div class="card" id="compose" hidden>
+      <h2>New Post</h2>
+      <form id="post-form">
+        <input type="text" id="post-title" placeholder="Headline" maxlength="150" required>
+        <textarea id="post-body" placeholder="What's the news?" maxlength="10000" required></textarea>
+        <button type="submit">Publish</button>
+      </form>
+      <p id="post-msg" class="form-msg"></p>
+    </div>
+    <p id="news-status" class="form-msg">Loading news...</p>
+    <div id="posts"></div>
+  </main>
+  <footer>Pac 12 Dynasty Fantasy Football League</footer>
+  <script src="auth.js"></script>
+  <script>
+    var me = null;      // the logged-in profile, if any
+    var posts = [];
+
+    function canManage(post) {
+      return me && (me.is_admin || post.author_id === me.id);
+    }
+
+    function loadPosts() {
+      var statusEl = document.getElementById("news-status");
+      window.pac12.sb.from("news_posts").select("id, title, body, author_id, author_name, created_at")
+        .order("created_at", { ascending: false })
+        .then(function (res) {
+          if (res.error) { statusEl.textContent = "Couldn't load news: " + res.error.message; return; }
+          posts = res.data;
+          render();
+          statusEl.textContent = posts.length ? "" : "No news yet. Check back soon.";
+        });
+    }
+
+    function render() {
+      var list = document.getElementById("posts");
+      list.innerHTML = "";
+      posts.forEach(function (post) {
+        var card = document.createElement("article");
+        card.className = "card";
+
+        var h2 = document.createElement("h2");
+        h2.textContent = post.title;
+        var meta = document.createElement("p");
+        meta.className = "post-meta";
+        meta.textContent = new Date(post.created_at).toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" }) +
+          (post.author_name ? " · " + post.author_name : "");
+        var body = document.createElement("p");
+        body.className = "post-body";
+        body.textContent = post.body;
+
+        card.appendChild(h2);
+        card.appendChild(meta);
+        card.appendChild(body);
+
+        if (canManage(post)) {
+          var actions = document.createElement("div");
+          actions.className = "post-actions";
+          var del = document.createElement("button");
+          del.type = "button";
+          del.textContent = "Delete";
+          del.onclick = function () {
+            if (!confirm("Delete \"" + post.title + "\"?")) return;
+            window.pac12.sb.from("news_posts").delete().eq("id", post.id).then(function (res) {
+              if (res.error) alert("Couldn't delete: " + res.error.message);
+              else loadPosts();
+            });
+          };
+          actions.appendChild(del);
+          card.appendChild(actions);
+        }
+        list.appendChild(card);
+      });
+    }
+
+    function start() {
+      loadPosts();
+
+      // Show the post box and delete buttons for people allowed to use them
+      window.addEventListener("pac12-profile", function (e) {
+        me = e.detail.profile;
+        document.getElementById("compose").hidden = !(me && (me.can_post || me.is_admin));
+        render();
+      });
+
+      document.getElementById("post-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var msg = document.getElementById("post-msg");
+        msg.textContent = "Publishing...";
+        window.pac12.sb.from("news_posts").insert({
+          title: document.getElementById("post-title").value.trim(),
+          body: document.getElementById("post-body").value.trim()
+        }).then(function (res) {
+          if (res.error) { msg.textContent = "Couldn't publish: " + res.error.message; return; }
+          msg.textContent = "Published.";
+          document.getElementById("post-form").reset();
+          loadPosts();
+        });
+      });
+    }
+
+    if (window.pac12 && window.pac12.sb) start();
+    else window.addEventListener("pac12-auth-ready", start);
+  </script>
+</body>
+</html>
