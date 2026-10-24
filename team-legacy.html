@@ -61,14 +61,14 @@
       <div class="section-bar"><h2>Season by Season</h2></div>
       <div class="section-body"><div class="table-wrap"><table class="sortable" id="seasons"></table></div></div>
 
+      <div class="section-bar"><h2>1st Round Picks</h2></div>
+      <div class="section-body"><div class="table-wrap"><table id="picks"></table></div></div>
+
       <div class="section-bar"><h2>Head-to-Head vs Every Owner</h2></div>
       <div class="section-body">
         <div class="table-wrap"><table class="sortable" id="h2h"></table></div>
         <p class="muted">Rivalry score = weighted games × (0.5 + 0.5 × balance). Playoff games count more each round. <a href="legacy.html">See how it works</a>.</p>
       </div>
-
-      <div class="section-bar"><h2>1st Round Picks</h2></div>
-      <div class="section-body"><div class="table-wrap"><table id="picks"></table></div></div>
     </div>
   </main>
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
@@ -211,20 +211,23 @@
       ], (data.rivalries || []).filter(function (r) { return r.owner === uid; }), 1, "desc");
 
       // 1st round picks
+      // Rookie drafts only, oldest year first, then 1.01 through 1.12
       var picks = [];
       (data.drafts || []).forEach(function (d) {
+        if (d.type === "Startup") return;
         d.picks.forEach(function (p) { if (p.owner === uid) picks.push({ d: d, p: p }); });
       });
+      picks.sort(function (a, b) { return (a.d.season - b.d.season) || (a.p.pick - b.p.pick); });
       var t = document.getElementById("picks");
       var head = el("tr");
-      ["Draft", "Pick", "Player", "Pos", "Value now"].forEach(function (h) { head.appendChild(el("th", "", h)); });
+      ["Year", "Pick", "Player", "Pos", "Value now"].forEach(function (h) { head.appendChild(el("th", "", h)); });
       t.appendChild(head);
       if (!picks.length) {
-        var tr0 = el("tr"); var td0 = el("td", "muted", "No 1st round picks yet."); td0.colSpan = 5; tr0.appendChild(td0); t.appendChild(tr0);
+        var tr0 = el("tr"); var td0 = el("td", "muted", "No rookie draft 1st round picks yet."); td0.colSpan = 5; tr0.appendChild(td0); t.appendChild(tr0);
       }
       picks.forEach(function (x) {
         var tr = el("tr");
-        tr.appendChild(el("td", "", x.d.season + " " + x.d.type));
+        tr.appendChild(el("td", "", String(x.d.season)));
         tr.appendChild(el("td", "", "1." + String(x.p.pick).padStart(2, "0")));
         tr.appendChild(el("td", "", x.p.player || ""));
         tr.appendChild(el("td", "", x.p.pos || ""));
