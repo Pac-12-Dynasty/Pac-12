@@ -61,14 +61,14 @@
       <div class="section-bar"><h2>Season by Season</h2></div>
       <div class="section-body"><div class="table-wrap"><table class="sortable" id="seasons"></table></div></div>
 
-      <div class="section-bar"><h2>1st Round Picks</h2></div>
-      <div class="section-body"><div class="table-wrap"><table id="picks"></table></div></div>
-
       <div class="section-bar"><h2>Head-to-Head vs Every Owner</h2></div>
       <div class="section-body">
         <div class="table-wrap"><table class="sortable" id="h2h"></table></div>
         <p class="muted">Rivalry score = weighted games × (0.5 + 0.5 × balance). Playoff games count more each round. <a href="legacy.html">See how it works</a>.</p>
       </div>
+
+      <div class="section-bar"><h2>1st Round Picks</h2></div>
+      <div class="section-body"><div class="table-wrap"><table id="picks"></table></div></div>
     </div>
   </main>
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
@@ -217,7 +217,10 @@
         if (d.type === "Startup") return;
         d.picks.forEach(function (p) { if (p.owner === uid) picks.push({ d: d, p: p }); });
       });
-      picks.sort(function (a, b) { return (a.d.season - b.d.season) || (a.p.pick - b.p.pick); });
+      // Year always comes first; pick number only orders picks within the same year
+      picks.sort(function (a, b) {
+        return (Number(a.d.season) - Number(b.d.season)) || (Number(a.p.pick) - Number(b.p.pick));
+      });
       var t = document.getElementById("picks");
       var head = el("tr");
       ["Year", "Pick", "Player", "Pos", "Value now"].forEach(function (h) { head.appendChild(el("th", "", h)); });
