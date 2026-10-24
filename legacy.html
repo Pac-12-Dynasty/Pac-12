@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legacy | Pac 12 Dynasty</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root { --red: #c8102e; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; --gold: #eebf3a; }
+    main.legacy { max-width: 1140px; }
+    .section-bar { background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 8px 8px 0 0; border-bottom: 4px solid var(--red); }
+    .section-bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+    .section-body { background: #fff; padding: 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 1.5rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+
+    /* Champions wall */
+    .trophies { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+    .trophy { border: 1px solid var(--line); border-top: 5px solid var(--gold); border-radius: 8px; padding: 1rem; text-align: center; }
+    .trophy .yr { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; color: var(--red); }
+    .trophy .champ { font-size: 1.3rem; font-weight: 900; color: var(--ink); margin: 0.25rem 0; }
+    .trophy .icon { font-size: 2rem; }
+
+    /* Rivals */
+    .rival-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+    .rival-card { border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem 1rem; }
+    .rival-card h3 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--ink); }
+    .rival-row { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.35rem 0; border-top: 1px solid var(--line); font-size: 0.92rem; }
+    .rival-row .tag { color: var(--red); font-weight: 800; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.35rem; }
+
+    /* Tables */
+    table.sortable th { cursor: pointer; user-select: none; white-space: nowrap; }
+    table.sortable th[data-dir="asc"]::after { content: " ▲"; font-size: 0.75em; }
+    table.sortable th[data-dir="desc"]::after { content: " ▼"; font-size: 0.75em; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; }
+    .toolbar select { font: inherit; padding: 0.35rem 0.5rem; border-radius: 6px; border: 1px solid #c5ccd6; }
+    .download { display: inline-block; background: var(--red); color: #fff !important; text-decoration: none !important; font-weight: 800; padding: 0.4rem 0.9rem; border-radius: 6px; }
+    details.formula { margin-top: 0.75rem; }
+    details.formula summary { cursor: pointer; font-weight: 700; }
+
+    /* Records */
+    .records { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+    .record { border-left: 5px solid var(--red); background: #f9fafb; padding: 0.8rem 1rem; border-radius: 6px; }
+    .record .label { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .record .big { font-size: 1.5rem; font-weight: 900; color: var(--ink); }
+
+    .draft-year { margin: 1rem 0 0.4rem; font-size: 1rem; color: var(--ink); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>League Legacy</h1>
+    <p>Champions, all-time records, rivalries, and draft history</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="standings.html">Standings</a>
+  </nav>
+  <main class="legacy">
+    <p id="legacy-status" class="muted">Loading league history...</p>
+
+    <div id="legacy" hidden>
+      <div class="section-bar"><h2>Champions</h2></div>
+      <div class="section-body"><div class="trophies" id="champions"></div></div>
+
+      <div class="section-bar"><h2>All-Time Standings</h2></div>
+      <div class="section-body">
+        <p class="muted">Regular season record. Click a column to sort.</p>
+        <div class="table-wrap"><table class="sortable" id="alltime"></table></div>
+      </div>
+
+      <div class="section-bar"><h2>Top Rivals</h2></div>
+      <div class="section-body"><div class="rival-grid" id="rivals"></div></div>
+
+      <div class="section-bar"><h2>Rivalry Spreadsheet</h2></div>
+      <div class="section-body">
+        <div class="toolbar">
+          <label>Owner <select id="rival-filter"><option value="">All owners</option></select></label>
+          <a class="download" href="data/rivalries.csv" download>Download spreadsheet (CSV)</a>
+        </div>
+        <div class="table-wrap"><table class="sortable" id="rivalry-table"></table></div>
+        <details class="formula">
+          <summary>How rivalry scores work</summary>
+          <p>Every head-to-head game counts. Regular season games count 1. Playoff games count more each round: round 1 counts 2, round 2 counts 3, and so on up to the title game.</p>
+          <p>Balance measures how even the series is, using the same weights: 1 means dead even, 0 means one owner won every time.</p>
+          <p><strong>Rivalry score = weighted games × (0.5 + 0.5 × balance).</strong> Each owner's top 2 scores are their rivals, with ties going to whoever they've played more.</p>
+        </details>
+      </div>
+
+      <div class="section-bar"><h2>League Records</h2></div>
+      <div class="section-body"><div class="records" id="records"></div></div>
+
+      <div class="section-bar"><h2>Draft History: 1st Round</h2></div>
+      <div class="section-body" id="drafts"></div>
+
+      <p class="muted" id="generated"></p>
+    </div>
+  </main>
+  <footer>Pac 12 Dynasty Fantasy Football League</footer>
+  <script src="auth.js"></script>
+  <script>
+    var data;
+
+    function el(tag, cls, text) {
+      var node = document.createElement(tag);
+      if (cls) node.className = cls;
+      if (text != null) node.textContent = text;
+      return node;
+    }
+
+    function slug(name) {
+      return String(name || "").toLowerCase().replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    }
+
+    function owner(uid) { return (data.owners || {})[uid] || { team: "Unknown", name: "" }; }
+
+    function teamLink(uid) {
+      var o = owner(uid);
+      var a = el("a", "", o.team || o.name);
+      a.href = "team-legacy.html?owner=" + encodeURIComponent(uid);
+      return a;
+    }
+
+    function record(w, l, t) { return w + "-" + l + (t ? "-" + t : ""); }
+
+    function pct(w, l, t) {
+      var n = w + l + t;
+      return n ? ((w + t / 2) / n) : 0;
+    }
+
+    // Builds a sortable table: cols = [{label, value(row), show(row)?, num}]
+    function table(target, cols, rows, sortIndex, sortDir) {
+      target.innerHTML = "";
+      var head = el("tr");
+      cols.forEach(function (c) { head.appendChild(el("th", "", c.label)); });
+      var thead = el("thead"); thead.appendChild(head); target.appendChild(thead);
+      var tbody = el("tbody"); target.appendChild(tbody);
+
+      function draw(rowsNow) {
+        tbody.innerHTML = "";
+        rowsNow.forEach(function (r) {
+          var tr = el("tr");
+          cols.forEach(function (c) {
+            var td = el("td");
+            var shown = c.show ? c.show(r) : c.value(r);
+            if (shown instanceof Node) td.appendChild(shown); else td.textContent = shown;
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+      }
+
+      var ths = head.querySelectorAll("th");
+      function sortBy(i, dir) {
+        ths.forEach(function (th) { delete th.dataset.dir; });
+        ths[i].dataset.dir = dir;
+        var sorted = rows.slice().sort(function (a, b) {
+          var x = cols[i].value(a), y = cols[i].value(b);
+          if (!cols[i].num) { x = String(x).toLowerCase(); y = String(y).toLowerCase(); }
+          var r = x < y ? -1 : x > y ? 1 : 0;
+          return dir === "asc" ? r : -r;
+        });
+        draw(sorted);
+      }
+      ths.forEach(function (th, i) {
+        th.addEventListener("click", function () {
+          var dir = th.dataset.dir ? (th.dataset.dir === "asc" ? "desc" : "asc") : (cols[i].num ? "desc" : "asc");
+          sortBy(i, dir);
+        });
+      });
+      sortBy(sortIndex || 0, sortDir || "desc");
+    }
+
+    function renderChampions() {
+      var box = document.getElementById("champions");
+      if (!data.champions.length) {
+        box.appendChild(el("p", "muted", "No champion yet. The first trophy goes up after the " + Math.max.apply(null, data.seasons) + " title game."));
+        return;
+      }
+      data.champions.forEach(function (c) {
+        var t = el("div", "trophy");
+        t.appendChild(el("div", "icon", "🏆"));
+        t.appendChild(el("div", "yr", c.season + " CHAMPION"));
+        var champ = el("div", "champ"); champ.appendChild(teamLink(c.champion)); t.appendChild(champ);
+        t.appendChild(el("div", "muted", owner(c.champion).name));
+        var ru = el("div", "muted", "Runner-up: "); ru.appendChild(teamLink(c.runner_up)); t.appendChild(ru);
+        box.appendChild(t);
+      });
+    }
+
+    function renderAllTime() {
+      var rows = Object.keys(data.owners).map(function (k) { return data.owners[k]; });
+      table(document.getElementById("alltime"), [
+        { label: "Team", value: function (o) { return o.team; }, show: function (o) { return teamLink(o.id); } },
+        { label: "Owner", value: function (o) { return o.name; } },
+        { label: "Seasons", value: function (o) { return o.seasons.length; }, num: true },
+        { label: "Record", value: function (o) { return pct(o.w, o.l, o.t); }, show: function (o) { return record(o.w, o.l, o.t); }, num: true },
+        { label: "Win %", value: function (o) { return pct(o.w, o.l, o.t); }, show: function (o) { return (pct(o.w, o.l, o.t) * 100).toFixed(1) + "%"; }, num: true },
+        { label: "P/F", value: function (o) { return o.pf; }, show: function (o) { return o.pf.toFixed(2); }, num: true },
+        { label: "P/A", value: function (o) { return o.pa; }, show: function (o) { return o.pa.toFixed(2); }, num: true },
+        { label: "Playoffs", value: function (o) { return o.playoffs; }, num: true },
+        { label: "Playoff W-L", value: function (o) { return o.pw - o.pl; }, show: function (o) { return record(o.pw, o.pl, 0); }, num: true },
+        { label: "Titles", value: function (o) { return o.titles; }, num: true },
+        { label: "Runner-ups", value: function (o) { return o.runner_up; }, num: true },
+        { label: "#1 Picks", value: function (o) { return (o.first_overall || []).length; }, num: true }
+      ], rows, 4, "desc");
+    }
+
+    function renderRivals() {
+      var box = document.getElementById("rivals");
+      Object.keys(data.owners).map(function (k) { return data.owners[k]; })
+        .sort(function (a, b) { return a.team.localeCompare(b.team); })
+        .forEach(function (o) {
+          var card = el("div", "rival-card");
+          var h = el("h3"); h.appendChild(teamLink(o.id)); card.appendChild(h);
+          var list = data.rivals[o.id] || [];
+          if (!list.length) card.appendChild(el("p", "muted", "No head-to-head games yet."));
+          list.forEach(function (r, i) {
+            var row = el("div", "rival-row");
+            var left = el("span"); left.appendChild(el("span", "tag", "Rival " + (i + 1))); left.appendChild(teamLink(r.opponent));
+            row.appendChild(left);
+            row.appendChild(el("span", "muted", record(r.wins, r.losses, r.ties) + " · " + r.score.toFixed(2)));
+            card.appendChild(row);
+          });
+          box.appendChild(card);
+        });
+    }
+
+    function renderRivalryTable() {
+      var filter = document.getElementById("rival-filter");
+      Object.keys(data.owners).map(function (k) { return data.owners[k]; })
+        .sort(function (a, b) { return a.team.localeCompare(b.team); })
+        .forEach(function (o) {
+          var opt = el("option", "", o.team);
+          opt.value = o.id;
+          filter.appendChild(opt);
+        });
+      function draw() {
+        var rows = data.rivalries.filter(function (r) { return !filter.value || r.owner === filter.value; });
+        table(document.getElementById("rivalry-table"), [
+          { label: "Team", value: function (r) { return owner(r.owner).team; }, show: function (r) { return teamLink(r.owner); } },
+          { label: "Opponent", value: function (r) { return owner(r.opponent).team; }, show: function (r) { return teamLink(r.opponent); } },
+          { label: "Rival rank", value: function (r) { return -r.rank; }, show: function (r) { return r.rank; }, num: true },
+          { label: "Score", value: function (r) { return r.score; }, show: function (r) { return r.score.toFixed(2); }, num: true },
+          { label: "Games", value: function (r) { return r.games; }, num: true },
+          { label: "Record", value: function (r) { return pct(r.wins, r.losses, r.ties); }, show: function (r) { return record(r.wins, r.losses, r.ties); }, num: true },
+          { label: "Playoff games", value: function (r) { return r.playoff_meetings; }, num: true },
+          { label: "Weighted games", value: function (r) { return r.weighted_games; }, num: true },
+          { label: "Weighted W-L", value: function (r) { return r.weighted_wins - r.weighted_losses; }, show: function (r) { return r.weighted_wins + "-" + r.weighted_losses; }, num: true },
+          { label: "Balance", value: function (r) { return r.balance; }, show: function (r) { return r.balance.toFixed(3); }, num: true }
+        ], rows, 3, "desc");
+      }
+      filter.addEventListener("change", draw);
+      draw();
+    }
+
+    function renderRecords() {
+      var box = document.getElementById("records");
+      var r = data.records || {};
+      function card(label, big, uid, detail) {
+        var c = el("div", "record");
+        c.appendChild(el("div", "label", label));
+        c.appendChild(el("div", "big", big));
+        var who = el("div"); who.appendChild(teamLink(uid)); c.appendChild(who);
+        c.appendChild(el("div", "muted", detail));
+        box.appendChild(c);
+      }
+      if (r.high_score) card("Highest score", r.high_score.points.toFixed(2), r.high_score.owner, r.high_score.season + " Week " + r.high_score.week);
+      if (r.blowout) {
+        card("Biggest blowout", "+" + r.blowout.margin.toFixed(2), r.blowout.winner, "over " + owner(r.blowout.loser).team + ", " + r.blowout.season + " Week " + r.blowout.week);
+      }
+      if (r.win_streak) card("Longest win streak", r.win_streak.games + " games", r.win_streak.owner, "through " + r.win_streak.through);
+      if (r.best_season) card("Best season", r.best_season.record, r.best_season.owner, r.best_season.season + ", " + r.best_season.pf.toFixed(2) + " P/F");
+      if (!box.children.length) box.appendChild(el("p", "muted", "Records fill in once games are played."));
+    }
+
+    function renderDrafts() {
+      var box = document.getElementById("drafts");
+      if (!data.drafts.length) { box.appendChild(el("p", "muted", "No drafts recorded yet.")); return; }
+      data.drafts.forEach(function (d) {
+        box.appendChild(el("h3", "draft-year", d.season + " " + d.type + " Draft"));
+        var t = el("table");
+        var wrap = el("div", "table-wrap"); wrap.appendChild(t); box.appendChild(wrap);
+        var head = el("tr");
+        ["Pick", "Team", "Player", "Pos", "Value now"].forEach(function (h) { head.appendChild(el("th", "", h)); });
+        t.appendChild(head);
+        d.picks.forEach(function (p) {
+          var tr = el("tr");
+          tr.appendChild(el("td", "", "1." + String(p.pick).padStart(2, "0")));
+          var team = el("td"); team.appendChild(teamLink(p.owner)); tr.appendChild(team);
+          tr.appendChild(el("td", "", p.player || ""));
+          tr.appendChild(el("td", "", p.pos || ""));
+          tr.appendChild(el("td", "", p.rank ? "#" + p.rank + (p.pos_rank ? " (" + p.pos_rank + ")" : "") : ""));
+          t.appendChild(tr);
+        });
+      });
+    }
+
+    fetch("data/legacy.json", { cache: "no-cache" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("The league history hasn't been built yet. Run the Update player data workflow once.");
+        return res.json();
+      })
+      .then(function (json) {
+        data = json;
+        renderChampions();
+        renderAllTime();
+        renderRivals();
+        renderRivalryTable();
+        renderRecords();
+        renderDrafts();
+        document.getElementById("generated").textContent =
+          "Seasons: " + data.seasons.join(", ") + ". Updated " + new Date(data.generated).toLocaleString() + ".";
+        document.getElementById("legacy-status").hidden = true;
+        document.getElementById("legacy").hidden = false;
+      })
+      .catch(function (err) {
+        document.getElementById("legacy-status").textContent = err.message;
+      });
+  </script>
+</body>
+</html>
