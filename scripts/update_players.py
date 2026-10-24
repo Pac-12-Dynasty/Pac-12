@@ -48,6 +48,39 @@ try:
 except Exception as err:
     print(f"Dynasty ranks unavailable: {err}")
 
+# Sleeper gives the league a new ID each season; follow renewals to the newest one
+def current_league(base_id):
+    state = get(f"{API}/state/nfl")
+    target = int(state.get("league_season") or state.get("season"))
+    league = get(f"{API}/league/{base_id}")
+    season = int(league["season"])
+    users = sorted(get(f"{API}/league/{base_id}/users"), key=lambda u: not u.get("is_owner"))[:4]
+    league_id = base_id
+    while season < target:
+        nxt = season + 1
+        found = None
+        for u in users:
+            try:
+                for l in get(f"{API}/user/{u['user_id']}/leagues/nfl/{nxt}") or []:
+                    if l.get("previous_league_id") == league_id:
+                        found = l
+                        break
+            except Exception:
+                continue
+            if found:
+                break
+        if not found:
+            break
+        league_id, season = found["league_id"], nxt
+    return league_id
+
+
+try:
+    LEAGUE_ID = current_league(LEAGUE_ID)
+except Exception as err:
+    print(f"Couldn't check for a newer league, using the original: {err}")
+print(f"Using league {LEAGUE_ID}")
+
 rosters = get(f"{API}/league/{LEAGUE_ID}/rosters")
 ids = set()
 for r in rosters:
