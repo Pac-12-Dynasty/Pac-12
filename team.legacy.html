@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Legacy | Pac 12 Dynasty</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root { --red: #c8102e; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; --gold: #eebf3a; }
+    main.legacy { max-width: 1140px; }
+    .section-bar { background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 8px 8px 0 0; border-bottom: 4px solid var(--red); }
+    .section-bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+    .section-body { background: #fff; padding: 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 1.5rem; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .crumbs { margin-bottom: 1rem; font-weight: 700; }
+
+    .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .tile { background: #fff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); padding: 1rem; border-top: 5px solid var(--ink); text-align: center; }
+    .tile.gold { border-top-color: var(--gold); }
+    .tile.red { border-top-color: var(--red); }
+    .tile .big { font-size: 2rem; font-weight: 900; color: var(--ink); line-height: 1.1; }
+    .tile .label { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 0.25rem; }
+
+    .case { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .case h3 { margin: 0 0 0.5rem; font-size: 0.85rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); }
+    .case ul { margin: 0; padding-left: 1.1rem; }
+
+    .rival { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.5rem 0; border-top: 1px solid var(--line); }
+    .rival .tag { color: var(--red); font-weight: 800; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.35rem; }
+
+    table.sortable th { cursor: pointer; user-select: none; white-space: nowrap; }
+    table.sortable th[data-dir="asc"]::after { content: " ▲"; font-size: 0.75em; }
+    table.sortable th[data-dir="desc"]::after { content: " ▼"; font-size: 0.75em; }
+    .finish-Champion { font-weight: 800; color: #854d0e; }
+    .finish-Runner-up { font-weight: 700; color: #13315c; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">Team Legacy</h1>
+    <p id="subtitle">Loading...</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="standings.html">Standings</a>
+  </nav>
+  <main class="legacy">
+    <p class="crumbs"><a id="team-link" href="teams.html">← Team page</a> · <a href="legacy.html">League legacy</a></p>
+    <p id="status" class="muted">Loading league history...</p>
+
+    <div id="content" hidden>
+      <div class="tiles" id="tiles"></div>
+
+      <div class="section-bar"><h2>Trophy Case</h2></div>
+      <div class="section-body"><div class="case" id="case"></div></div>
+
+      <div class="section-bar"><h2>Top Rivals</h2></div>
+      <div class="section-body" id="rivals"></div>
+
+      <div class="section-bar"><h2>Season by Season</h2></div>
+      <div class="section-body"><div class="table-wrap"><table class="sortable" id="seasons"></table></div></div>
+
+      <div class="section-bar"><h2>Head-to-Head vs Every Owner</h2></div>
+      <div class="section-body">
+        <div class="table-wrap"><table class="sortable" id="h2h"></table></div>
+        <p class="muted">Rivalry score = weighted games × (0.5 + 0.5 × balance). Playoff games count more each round. <a href="legacy.html">See how it works</a>.</p>
+      </div>
+
+      <div class="section-bar"><h2>1st Round Picks</h2></div>
+      <div class="section-body"><div class="table-wrap"><table id="picks"></table></div></div>
+    </div>
+  </main>
+  <footer>Pac 12 Dynasty Fantasy Football League</footer>
+  <script src="auth.js"></script>
+  <script>
+    var data, me, uid = new URLSearchParams(location.search).get("owner");
+
+    function el(tag, cls, text) {
+      var node = document.createElement(tag);
+      if (cls) node.className = cls;
+      if (text != null) node.textContent = text;
+      return node;
+    }
+    function slug(name) {
+      return String(name || "").toLowerCase().replace(/['’]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    }
+    function owner(id) { return (data.owners || {})[id] || { team: "Unknown", name: "" }; }
+    function legacyLink(id) {
+      var a = el("a", "", owner(id).team || owner(id).name);
+      a.href = "team-legacy.html?owner=" + encodeURIComponent(id);
+      return a;
+    }
+    function record(w, l, t) { return w + "-" + l + (t ? "-" + t : ""); }
+    function pct(w, l, t) { var n = w + l + t; return n ? (w + t / 2) / n : 0; }
+
+    function table(target, cols, rows, sortIndex, sortDir) {
+      target.innerHTML = "";
+      var head = el("tr");
+      cols.forEach(function (c) { head.appendChild(el("th", "", c.label)); });
+      var thead = el("thead"); thead.appendChild(head); target.appendChild(thead);
+      var tbody = el("tbody"); target.appendChild(tbody);
+      var ths = head.querySelectorAll("th");
+      function sortBy(i, dir) {
+        ths.forEach(function (th) { delete th.dataset.dir; });
+        ths[i].dataset.dir = dir;
+        tbody.innerHTML = "";
+        rows.slice().sort(function (a, b) {
+          var x = cols[i].value(a), y = cols[i].value(b);
+          if (!cols[i].num) { x = String(x).toLowerCase(); y = String(y).toLowerCase(); }
+          var r = x < y ? -1 : x > y ? 1 : 0;
+          return dir === "asc" ? r : -r;
+        }).forEach(function (r) {
+          var tr = el("tr");
+          cols.forEach(function (c) {
+            var td = el("td");
+            var shown = c.show ? c.show(r) : c.value(r);
+            if (shown instanceof Node) td.appendChild(shown); else td.textContent = shown;
+            if (c.cls) td.className = c.cls(r);
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+      }
+      ths.forEach(function (th, i) {
+        th.addEventListener("click", function () {
+          sortBy(i, th.dataset.dir ? (th.dataset.dir === "asc" ? "desc" : "asc") : (cols[i].num ? "desc" : "asc"));
+        });
+      });
+      if (!rows.length) {
+        var tr = el("tr"); var td = el("td", "muted", "Nothing yet."); td.colSpan = cols.length; tr.appendChild(td); tbody.appendChild(tr);
+        return;
+      }
+      sortBy(sortIndex || 0, sortDir || "desc");
+    }
+
+    function render() {
+      document.title = me.team + " Legacy | Pac 12 Dynasty";
+      document.getElementById("title").textContent = me.team;
+      document.getElementById("subtitle").textContent = "Owner: " + me.name + " · " + me.seasons.length + " season" + (me.seasons.length === 1 ? "" : "s") + " in the league";
+      document.getElementById("team-link").href = slug(me.team) + ".html";
+      document.getElementById("team-link").textContent = "← " + me.team + " team page";
+
+      // Stat tiles
+      var tiles = document.getElementById("tiles");
+      [
+        [me.titles, "Championships", "gold"],
+        [me.runner_up, "Runner-ups", "gold"],
+        [me.first_overall.length, "#1 Overall Picks", "red"],
+        [me.playoffs, "Playoff Trips", ""],
+        [record(me.w, me.l, me.t), "All-Time Record", ""],
+        [(pct(me.w, me.l, me.t) * 100).toFixed(1) + "%", "Win %", ""],
+        [record(me.pw, me.pl, 0), "Playoff Record", ""]
+      ].forEach(function (t) {
+        var tile = el("div", "tile " + t[2]);
+        tile.appendChild(el("div", "big", String(t[0])));
+        tile.appendChild(el("div", "label", t[1]));
+        tiles.appendChild(tile);
+      });
+
+      // Trophy case
+      var box = document.getElementById("case");
+      function list(title, items, empty) {
+        var col = el("div");
+        col.appendChild(el("h3", "", title));
+        if (!items.length) { col.appendChild(el("p", "muted", empty)); }
+        else {
+          var ul = el("ul");
+          items.forEach(function (i) { ul.appendChild(el("li", "", i)); });
+          col.appendChild(ul);
+        }
+        box.appendChild(col);
+      }
+      list("🏆 Championships", data.champions.filter(function (c) { return c.champion === uid; })
+        .map(function (c) { return c.season + " champion, beat " + owner(c.runner_up).team; }), "No titles yet.");
+      list("🥈 Runner-ups", data.champions.filter(function (c) { return c.runner_up === uid; })
+        .map(function (c) { return c.season + ", lost to " + owner(c.champion).team; }), "No title game losses.");
+      list("#1 Overall Picks", me.first_overall.map(function (p) { return p.season + " " + p.type + " Draft: " + (p.player || "Unknown"); }),
+        "Hasn't picked first overall.");
+
+      // Rivals
+      var rv = document.getElementById("rivals");
+      var mine = (data.rivals || {})[uid] || [];
+      if (!mine.length) rv.appendChild(el("p", "muted", "No head-to-head games yet."));
+      mine.forEach(function (r, i) {
+        var row = el("div", "rival");
+        var left = el("span"); left.appendChild(el("span", "tag", "Rival " + (i + 1))); left.appendChild(legacyLink(r.opponent));
+        row.appendChild(left);
+        row.appendChild(el("span", "muted", record(r.wins, r.losses, r.ties) + " · score " + r.score.toFixed(2)));
+        rv.appendChild(row);
+      });
+
+      // Season by season
+      table(document.getElementById("seasons"), [
+        { label: "Season", value: function (s) { return s.season; }, num: true },
+        { label: "Record", value: function (s) { return pct(s.w, s.l, s.t); }, show: function (s) { return record(s.w, s.l, s.t); }, num: true },
+        { label: "P/F", value: function (s) { return s.pf; }, show: function (s) { return s.pf.toFixed(2); }, num: true },
+        { label: "P/A", value: function (s) { return s.pa; }, show: function (s) { return s.pa.toFixed(2); }, num: true },
+        { label: "Finish", value: function (s) { return s.finish || "-"; }, cls: function (s) { return s.finish ? "finish-" + s.finish : ""; } }
+      ], me.by_season || [], 0, "desc");
+
+      // Head-to-head
+      table(document.getElementById("h2h"), [
+        { label: "Opponent", value: function (r) { return owner(r.opponent).team; }, show: function (r) { return legacyLink(r.opponent); } },
+        { label: "Rival rank", value: function (r) { return -r.rank; }, show: function (r) { return r.rank; }, num: true },
+        { label: "Score", value: function (r) { return r.score; }, show: function (r) { return r.score.toFixed(2); }, num: true },
+        { label: "Games", value: function (r) { return r.games; }, num: true },
+        { label: "Record", value: function (r) { return pct(r.wins, r.losses, r.ties); }, show: function (r) { return record(r.wins, r.losses, r.ties); }, num: true },
+        { label: "Playoff games", value: function (r) { return r.playoff_meetings; }, num: true },
+        { label: "Balance", value: function (r) { return r.balance; }, show: function (r) { return r.balance.toFixed(3); }, num: true }
+      ], (data.rivalries || []).filter(function (r) { return r.owner === uid; }), 1, "desc");
+
+      // 1st round picks
+      var picks = [];
+      (data.drafts || []).forEach(function (d) {
+        d.picks.forEach(function (p) { if (p.owner === uid) picks.push({ d: d, p: p }); });
+      });
+      var t = document.getElementById("picks");
+      var head = el("tr");
+      ["Draft", "Pick", "Player", "Pos", "Value now"].forEach(function (h) { head.appendChild(el("th", "", h)); });
+      t.appendChild(head);
+      if (!picks.length) {
+        var tr0 = el("tr"); var td0 = el("td", "muted", "No 1st round picks yet."); td0.colSpan = 5; tr0.appendChild(td0); t.appendChild(tr0);
+      }
+      picks.forEach(function (x) {
+        var tr = el("tr");
+        tr.appendChild(el("td", "", x.d.season + " " + x.d.type));
+        tr.appendChild(el("td", "", "1." + String(x.p.pick).padStart(2, "0")));
+        tr.appendChild(el("td", "", x.p.player || ""));
+        tr.appendChild(el("td", "", x.p.pos || ""));
+        tr.appendChild(el("td", "", x.p.rank ? "#" + x.p.rank + (x.p.pos_rank ? " (" + x.p.pos_rank + ")" : "") : ""));
+        t.appendChild(tr);
+      });
+
+      document.getElementById("status").hidden = true;
+      document.getElementById("content").hidden = false;
+    }
+
+    fetch("data/legacy.json", { cache: "no-cache" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("The league history hasn't been built yet.");
+        return res.json();
+      })
+      .then(function (json) {
+        data = json;
+        me = (data.owners || {})[uid];
+        if (!me) throw new Error("Couldn't find that team. Open it from a team page or the Legacy page.");
+        render();
+      })
+      .catch(function (err) {
+        document.getElementById("subtitle").textContent = "";
+        document.getElementById("status").textContent = err.message;
+      });
+  </script>
+</body>
+</html>
