@@ -154,10 +154,11 @@
     getJSON(API + "/league/" + LEAGUE_ID + "/rosters"),
     getJSON(API + "/league/" + LEAGUE_ID + "/users"),
     getJSON("data/players.json").catch(function () { return {}; }),
-    getJSON(API + "/league/" + LEAGUE_ID + "/traded_picks").catch(function () { return []; })
+    getJSON(API + "/league/" + LEAGUE_ID + "/traded_picks").catch(function () { return []; }),
+    getJSON("data/legacy.json").catch(function () { return null; })
     ]);
   }).then(function (results) {
-    var league = results[0], rosters = results[1], users = results[2], players = results[3], traded = results[4];
+    var league = results[0], rosters = results[1], users = results[2], players = results[3], traded = results[4], legacy = results[5];
 
     var userById = {};
     users.forEach(function (u) { userById[u.user_id] = u; });
@@ -199,6 +200,48 @@
     statsRow.appendChild(cell(record));
     statsRow.appendChild(cell(points(s.fpts, s.fpts_decimal).toFixed(2)));
     statsRow.appendChild(cell(points(s.fpts_against, s.fpts_against_decimal).toFixed(2)));
+
+    // Legacy card: all-time record, titles, and top 2 rivals (follows the owner)
+    var hist = legacy && legacy.owners && roster.owner_id ? legacy.owners[roster.owner_id] : null;
+    if (hist) {
+      var lc = document.createElement("div");
+      lc.className = "card";
+      var lh = document.createElement("h2");
+      lh.textContent = "Legacy";
+      lc.appendChild(lh);
+      var games = hist.w + hist.l + hist.t;
+      var winPct = games ? ((hist.w + hist.t / 2) / games * 100).toFixed(1) + "%" : "-";
+      var summary = document.createElement("p");
+      summary.textContent = "All-time: " + hist.w + "-" + hist.l + (hist.t ? "-" + hist.t : "") + " (" + winPct + ") over " +
+        hist.seasons.length + " season" + (hist.seasons.length === 1 ? "" : "s") + ".";
+      lc.appendChild(summary);
+      var honors = document.createElement("p");
+      honors.textContent = "Championships: " + hist.titles + " · Runner-ups: " + hist.runner_up +
+        " · #1 overall picks: " + (hist.first_overall || []).length + " · Playoff trips: " + hist.playoffs;
+      lc.appendChild(honors);
+      var rv = (legacy.rivals || {})[roster.owner_id] || [];
+      rv.forEach(function (r, i) {
+        var opp = legacy.owners[r.opponent] || {};
+        var line = document.createElement("p");
+        var strong = document.createElement("strong");
+        strong.textContent = "Rival " + (i + 1) + ": ";
+        line.appendChild(strong);
+        var link = document.createElement("a");
+        link.href = slug(opp.team || "") + ".html";
+        link.textContent = opp.team || "Unknown";
+        line.appendChild(link);
+        line.appendChild(document.createTextNode(" (" + r.wins + "-" + r.losses + (r.ties ? "-" + r.ties : "") + ", score " + r.score.toFixed(2) + ")"));
+        lc.appendChild(line);
+      });
+      var more = document.createElement("p");
+      var ml = document.createElement("a");
+      ml.href = "team-legacy.html?owner=" + encodeURIComponent(roster.owner_id);
+      ml.textContent = "View " + name + "'s full legacy →";
+      more.appendChild(ml);
+      lc.appendChild(more);
+      var firstCard = document.querySelector("main .card");
+      firstCard.parentNode.insertBefore(lc, firstCard.nextSibling);
+    }
 
     // Add a Rank column to every roster table
     document.querySelectorAll("thead tr").forEach(function (tr) {
