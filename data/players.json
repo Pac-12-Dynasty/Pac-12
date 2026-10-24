@@ -38,7 +38,7 @@
  "10229": {
   "age": 26,
   "birth_date": "2000-04-22",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Hamstring",
   "name": "Rashee Rice",
   "pos": "WR",
@@ -242,8 +242,8 @@
  "11584": {
   "age": 24,
   "birth_date": "2002-08-19",
-  "injury": "Questionable",
-  "injury_part": "Illness",
+  "injury": "",
+  "injury_part": "",
   "name": "Bucky Irving",
   "pos": "RB",
   "pos_rank": "RB17",
@@ -278,7 +278,7 @@
  "11597": {
   "age": 25,
   "birth_date": "2001-02-26",
-  "injury": "Questionable",
+  "injury": "Doubtful",
   "injury_part": "Neck",
   "name": "Theo Johnson",
   "pos": "TE",
@@ -350,8 +350,8 @@
  "11625": {
   "age": 24,
   "birth_date": "2002-10-08",
-  "injury": "Questionable",
-  "injury_part": "Finger",
+  "injury": "",
+  "injury_part": "",
   "name": "Adonai Mitchell",
   "pos": "WR",
   "pos_rank": "WR61",
@@ -758,8 +758,8 @@
  "12501": {
   "age": 23,
   "birth_date": "2003-08-01",
-  "injury": "Questionable",
-  "injury_part": "Shoulder",
+  "injury": "",
+  "injury_part": "",
   "name": "Matthew Golden",
   "pos": "WR",
   "pos_rank": "WR34",
@@ -854,8 +854,8 @@
  "12512": {
   "age": 22,
   "birth_date": "2003-10-29",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Quinshon Judkins",
   "pos": "RB",
   "pos_rank": "RB19",
@@ -866,7 +866,7 @@
  "12514": {
   "age": 24,
   "birth_date": "2002-10-14",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Concussion",
   "name": "Emeka Egbuka",
   "pos": "WR",
@@ -890,7 +890,7 @@
  "12518": {
   "age": 24,
   "birth_date": "2002-05-24",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Groin",
   "name": "Tyler Warren",
   "pos": "TE",
@@ -1104,7 +1104,7 @@
   "value": null
  },
  "12718": {
-  "age": 23,
+  "age": 24,
   "birth_date": "2002-10-24",
   "injury": "",
   "injury_part": "",
@@ -1298,7 +1298,7 @@
  "13287": {
   "age": 21,
   "birth_date": "2005-05-31",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Ankle",
   "name": "Jeremiyah Love",
   "pos": "RB",
@@ -1358,8 +1358,8 @@
  "13296": {
   "age": 23,
   "birth_date": "2003-09-09",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Caleb Douglas",
   "pos": "WR",
   "pos_rank": "WR72",
@@ -1370,8 +1370,8 @@
  "13298": {
   "age": 22,
   "birth_date": "2004-09-23",
-  "injury": "Questionable",
-  "injury_part": "Quadriceps",
+  "injury": "",
+  "injury_part": "",
   "name": "KC Concepcion Jr.",
   "pos": "WR",
   "pos_rank": "WR33",
@@ -1538,8 +1538,8 @@
  "13346": {
   "age": 22,
   "birth_date": "2003-12-06",
-  "injury": "Questionable",
-  "injury_part": "Foot",
+  "injury": "",
+  "injury_part": "",
   "name": "Denzel Boston",
   "pos": "WR",
   "pos_rank": "WR32",
@@ -1778,8 +1778,8 @@
  "1466": {
   "age": 37,
   "birth_date": "1989-10-05",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Travis Kelce",
   "pos": "TE",
   "pos_rank": "TE20",
@@ -1826,7 +1826,7 @@
  "2216": {
   "age": 33,
   "birth_date": "1993-08-21",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Achilles",
   "name": "Mike Evans",
   "pos": "WR",
@@ -2018,8 +2018,8 @@
  "4035": {
   "age": 31,
   "birth_date": "1995-07-25",
-  "injury": "Questionable",
-  "injury_part": "Back",
+  "injury": "",
+  "injury_part": "",
   "name": "Alvin Kamara",
   "pos": "RB",
   "pos_rank": "RB58",
@@ -2258,8 +2258,8 @@
  "5001": {
   "age": 30,
   "birth_date": "1996-07-11",
-  "injury": "Questionable",
-  "injury_part": "Quadriceps",
+  "injury": "",
+  "injury_part": "",
   "name": "Dalton Schultz",
   "pos": "TE",
   "pos_rank": "TE26",
@@ -2330,8 +2330,8 @@
  "5844": {
   "age": 29,
   "birth_date": "1997-07-03",
-  "injury": "Questionable",
-  "injury_part": "Concussion",
+  "injury": "",
+  "injury_part": "",
   "name": "T.J. Hockenson",
   "pos": "TE",
   "pos_rank": "TE24",
@@ -2414,7 +2414,7 @@
  "5892": {
   "age": 29,
   "birth_date": "1997-06-07",
-  "injury": "Doubtful",
+  "injury": "Out",
   "injury_part": "Groin",
   "name": "David Montgomery",
   "pos": "RB",
@@ -2702,8 +2702,8 @@
  "7526": {
   "age": 27,
   "birth_date": "1998-11-25",
-  "injury": "Questionable",
-  "injury_part": "Chest",
+  "injury": "",
+  "injury_part": "",
   "name": "Jaylen Waddle",
   "pos": "WR",
   "pos_rank": "WR21",
@@ -2724,7 +2724,7 @@
   "value": 2594
  },
  "7547": {
-  "age": 26,
+  "age": 27,
   "birth_date": "1999-10-24",
   "injury": "",
   "injury_part": "",
@@ -3002,8 +3002,8 @@
  "8137": {
   "age": 25,
   "birth_date": "2001-03-04",
-  "injury": "Questionable",
-  "injury_part": "Shoulder",
+  "injury": "",
+  "injury_part": "",
   "name": "George Pickens",
   "pos": "WR",
   "pos_rank": "WR16",
@@ -3098,7 +3098,7 @@
  "8154": {
   "age": 27,
   "birth_date": "1999-03-22",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Hamstring",
   "name": "Brian Robinson Jr.",
   "pos": "RB",
@@ -3134,8 +3134,8 @@
  "8167": {
   "age": 27,
   "birth_date": "1999-05-12",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Christian Watson",
   "pos": "WR",
   "pos_rank": "WR23",
@@ -3434,8 +3434,8 @@
  "9508": {
   "age": 25,
   "birth_date": "2001-06-15",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Knee",
   "name": "Tyjae Spears",
   "pos": "RB",
   "pos_rank": "RB49",
@@ -3482,7 +3482,7 @@
  "9753": {
   "age": 25,
   "birth_date": "2001-01-08",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Knee - ACL",
   "name": "Zach Charbonnet",
   "pos": "RB",
