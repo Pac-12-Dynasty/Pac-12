@@ -41,7 +41,6 @@
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
   <script src="auth.js"></script>
   <script>
-    var LEAGUE_ID = "1315706586127171584";
     var API = "https://api.sleeper.app/v1";
     var statusEl = document.getElementById("admin-status");
     var table = document.getElementById("owners");
@@ -78,7 +77,7 @@
       statusEl.textContent = "Loading accounts...";
       Promise.all([
         sb.from("profiles").select("id, email, display_name, is_member, is_admin, can_post, sleeper_user_id").order("created_at"),
-        getJSON(API + "/league/" + LEAGUE_ID + "/users")
+        window.pac12.leagueId().then(function (id) { return getJSON(API + "/league/" + id + "/users"); })
       ]).then(function (results) {
         var res = results[0], users = results[1];
         if (res.error) throw new Error(res.error.message);
