@@ -8,6 +8,68 @@
 
   window.pac12 = window.pac12 || {};
 
+  // ---- Current Sleeper league ----
+  // Sleeper gives a dynasty league a new ID every season. Starting from the
+  // original league, this follows each season's renewal to the newest one.
+  var BASE_LEAGUE_ID = "1315706586127171584";
+  var SLEEPER = "https://api.sleeper.app/v1";
+  var leaguePromise = null;
+
+  function sleeperJSON(url) {
+    return fetch(url).then(function (res) {
+      if (!res.ok) throw new Error("Sleeper returned " + res.status);
+      return res.json();
+    });
+  }
+
+  function findCurrentLeague() {
+    return Promise.all([
+      sleeperJSON(SLEEPER + "/state/nfl"),
+      sleeperJSON(SLEEPER + "/league/" + BASE_LEAGUE_ID),
+      sleeperJSON(SLEEPER + "/league/" + BASE_LEAGUE_ID + "/users")
+    ]).then(function (r) {
+      var target = Number(r[0].league_season || r[0].season);
+      var id = BASE_LEAGUE_ID;
+      var season = Number(r[1].season);
+      var userIds = r[2].slice().sort(function (a, b) { return (b.is_owner ? 1 : 0) - (a.is_owner ? 1 : 0); })
+        .map(function (u) { return u.user_id; }).slice(0, 4);
+
+      function step() {
+        if (season >= target) return id;
+        var next = season + 1;
+        function tryUser(i) {
+          if (i >= userIds.length) return id; // league hasn't renewed yet
+          return sleeperJSON(SLEEPER + "/user/" + userIds[i] + "/leagues/nfl/" + next).then(function (leagues) {
+            var found = (leagues || []).filter(function (l) { return l.previous_league_id === id; })[0];
+            if (!found) return tryUser(i + 1);
+            id = found.league_id;
+            season = next;
+            return step();
+          }, function () { return tryUser(i + 1); });
+        }
+        return tryUser(0);
+      }
+      return step();
+    });
+  }
+
+  // Use window.pac12.leagueId().then(function (id) { ... }) anywhere on the site
+  window.pac12.leagueId = function () {
+    if (leaguePromise) return leaguePromise;
+    try {
+      var cached = JSON.parse(localStorage.getItem("pac12-league") || "null");
+      if (cached && cached.base === BASE_LEAGUE_ID && Date.now() - cached.at < 6 * 3600 * 1000) {
+        leaguePromise = Promise.resolve(cached.id);
+        return leaguePromise;
+      }
+    } catch (e) {}
+    leaguePromise = findCurrentLeague().then(function (id) {
+      try { localStorage.setItem("pac12-league", JSON.stringify({ base: BASE_LEAGUE_ID, id: id, at: Date.now() })); } catch (e) {}
+      return id;
+    }, function () { return BASE_LEAGUE_ID; });
+    return leaguePromise;
+  };
+
   function loadLib(done) {
     if (window.supabase && window.supabase.createClient) return done();
     var s = document.createElement("script");
