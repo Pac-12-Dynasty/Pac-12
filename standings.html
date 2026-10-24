@@ -46,8 +46,9 @@
   </main>
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
 
+  <script src="auth.js"></script>
   <script>
-    var LEAGUE_ID = "1315706586127171584";
+    var BASE_LEAGUE_ID = "1315706586127171584";
     var API = "https://api.sleeper.app/v1";
 
     var table = document.querySelector("table.sortable");
@@ -75,11 +76,15 @@
       });
     }
 
-    Promise.all([
-      getJSON(API + "/league/" + LEAGUE_ID + "/rosters"),
-      getJSON(API + "/league/" + LEAGUE_ID + "/users"),
-      getJSON(API + "/state/nfl").catch(function () { return null; })
-    ]).then(function (results) {
+    var findLeague = window.pac12 && window.pac12.leagueId ? window.pac12.leagueId() : Promise.resolve(BASE_LEAGUE_ID);
+
+    findLeague.then(function (LEAGUE_ID) {
+      return Promise.all([
+        getJSON(API + "/league/" + LEAGUE_ID + "/rosters"),
+        getJSON(API + "/league/" + LEAGUE_ID + "/users"),
+        getJSON(API + "/state/nfl").catch(function () { return null; })
+      ]);
+    }).then(function (results) {
       var rosters = results[0], users = results[1], state = results[2];
 
       var userById = {};
@@ -99,8 +104,12 @@
         };
       });
 
-      // Official order: most wins, then most points for
-      teams.sort(function (a, b) { return (b.wins - a.wins) || (b.pf - a.pf); });
+      // Official order: best record (ties count as half a win), then most points for
+      function winPct(t) {
+        var games = t.wins + t.losses + t.ties;
+        return games ? (t.wins + t.ties / 2) / games : 0;
+      }
+      teams.sort(function (a, b) { return (winPct(b) - winPct(a)) || (b.pf - a.pf); });
 
       teams.forEach(function (t, i) {
         var record = t.wins + "-" + t.losses + (t.ties ? "-" + t.ties : "");
@@ -180,6 +189,5 @@
       });
     });
   </script>
-  <script src="auth.js"></script>
 </body>
 </html>
