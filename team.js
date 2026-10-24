@@ -2,7 +2,7 @@
 // Every team page uses this same file. It figures out which team to show
 // from the page's filename, e.g. olaves-medical-team.html -> "Olave's Medical Team".
 (function () {
-  var LEAGUE_ID = "1315706586127171584";
+  var BASE_LEAGUE_ID = "1315706586127171584";
   var API = "https://api.sleeper.app/v1";
 
   var NFL = {
@@ -53,12 +53,11 @@
     }
     return p.age ? String(p.age) : "";
   }
-  
+
   function rankText(p) {
     if (!p.rank) return "";
     return "#" + p.rank + (p.pos_rank ? " (" + p.pos_rank + ")" : "");
   }
-
 
   var INJ = { Questionable: "Q", Doubtful: "D", Out: "OUT", IR: "IR", PUP: "PUP", Sus: "SUS", NA: "NA", DNR: "DNR", COV: "COV" };
 
@@ -70,6 +69,37 @@
     span.textContent = INJ[p.injury] || p.injury;
     span.title = p.injury + (p.injury_part ? " (" + p.injury_part + ")" : "");
     return span;
+  }
+
+  function ordinal(n) {
+    var s = ["th", "st", "nd", "rd"], v = n % 100;
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
+  }
+
+  // Works out which future picks a roster owns, including ones gained or traded away
+  function picksFor(rosterId, league, rosters, traded) {
+    var rounds = 4;   // rookie draft rounds per season
+    var season = Number(league.season);
+    var first = league.status === "pre_draft" || league.status === "drafting" ? season : season + 1;
+    var seasons = [first, first + 1, first + 2];
+
+    var current = {};
+    (traded || []).forEach(function (t) {
+      current[t.season + "-" + t.round + "-" + t.roster_id] = t.owner_id;
+    });
+
+    var owned = [], away = [];
+    seasons.forEach(function (yr) {
+      for (var rd = 1; rd <= rounds; rd++) {
+        rosters.forEach(function (r) {
+          var key = yr + "-" + rd + "-" + r.roster_id;
+          var owner = current.hasOwnProperty(key) ? current[key] : r.roster_id;
+          if (owner === rosterId) owned.push({ season: yr, round: rd, from: r.roster_id });
+          else if (r.roster_id === rosterId) away.push({ season: yr, round: rd, to: owner });
+        });
+      }
+    });
+    return { owned: owned, away: away };
   }
 
   function cell(text) {
@@ -116,21 +146,30 @@
     };
   }
 
-  Promise.all([
+  var findLeague = window.pac12 && window.pac12.leagueId ? window.pac12.leagueId() : Promise.resolve(BASE_LEAGUE_ID);
+
+  findLeague.then(function (LEAGUE_ID) {
+    return Promise.all([
     getJSON(API + "/league/" + LEAGUE_ID),
     getJSON(API + "/league/" + LEAGUE_ID + "/rosters"),
     getJSON(API + "/league/" + LEAGUE_ID + "/users"),
-    getJSON("data/players.json").catch(function () { return {}; })
-  ]).then(function (results) {
-    var league = results[0], rosters = results[1], users = results[2], players = results[3];
+    getJSON("data/players.json").catch(function () { return {}; }),
+    getJSON(API + "/league/" + LEAGUE_ID + "/traded_picks").catch(function () { return []; })
+    ]);
+  }).then(function (results) {
+    var league = results[0], rosters = results[1], users = results[2], players = results[3], traded = results[4];
 
     var userById = {};
     users.forEach(function (u) { userById[u.user_id] = u; });
 
-    // Standings order: most wins, then most points for
+    // Standings order: best record (ties count as half a win), then most points for
+    function pct(st) {
+      var g = (st.wins || 0) + (st.losses || 0) + (st.ties || 0);
+      return g ? ((st.wins || 0) + (st.ties || 0) / 2) / g : 0;
+    }
     var ranked = rosters.slice().sort(function (a, b) {
       var sa = a.settings || {}, sb = b.settings || {};
-      return ((sb.wins || 0) - (sa.wins || 0)) ||
+      return (pct(sb) - pct(sa)) ||
              (points(sb.fpts, sb.fpts_decimal) - points(sa.fpts, sa.fpts_decimal));
     });
 
@@ -199,13 +238,52 @@
     fill("bench", "BN", bench, benchSlots);
     fill("ir", "IR", reserve.slice().sort(byPosition(players)), irSlots);
     fill("taxi", "TAXI", taxi.slice().sort(byPosition(players)), taxiSlots);
-    
+
+    // Draft picks, from Sleeper's traded pick records
+    var nameByRoster = {};
+    rosters.forEach(function (r) { nameByRoster[r.roster_id] = teamName(userById[r.owner_id], r); });
+    var picks = picksFor(roster.roster_id, league, rosters, traded);
+
+    var pickCard = document.createElement("div");
+    pickCard.className = "card";
+    var pickTitle = document.createElement("h2");
+    pickTitle.textContent = "Draft Picks";
+    pickCard.appendChild(pickTitle);
+
+    var list = document.createElement("ul");
+    list.className = "pick-list";
+    picks.owned.forEach(function (p) {
+      var li = document.createElement("li");
+      li.textContent = p.season + " " + ordinal(p.round) + " Round Pick" +
+        (p.from === roster.roster_id ? "" : " (" + nameByRoster[p.from] + ")");
+      list.appendChild(li);
+    });
+    if (!picks.owned.length) {
+      var none = document.createElement("li");
+      none.textContent = "No picks in the next three drafts.";
+      list.appendChild(none);
+    }
+    pickCard.appendChild(list);
+
+    if (picks.away.length) {
+      var awayNote = document.createElement("p");
+      awayNote.className = "status";
+      awayNote.textContent = "Traded away: " + picks.away.map(function (p) {
+        return p.season + " " + ordinal(p.round) + " Round Pick (to " + nameByRoster[p.to] + ")";
+      }).join(", ") + ".";
+      pickCard.appendChild(awayNote);
+    }
+
+    var cards = document.querySelectorAll("main .card");
+    var notesCard = cards[cards.length - 1];
+    notesCard.parentNode.insertBefore(pickCard, notesCard);
+
     // Ranking source disclaimer
     var note = document.createElement("p");
     note.className = "status";
     note.innerHTML = 'Player ranks are 1QB dynasty rankings from <a href="https://github.com/dynastyprocess/data" target="_blank" rel="noopener">DynastyProcess</a>, based on FantasyPros dynasty expert consensus and updated weekly. Kickers and defenses are not ranked. Ranks are for reference only and are not official league values.';
     document.querySelector("main").appendChild(note);
-    
+
     statusEl.textContent = "Live from Sleeper. Last loaded " + new Date().toLocaleString() + ".";
 
     // Turn on lineup swapping now that the rows exist
