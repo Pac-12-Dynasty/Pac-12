@@ -89,6 +89,13 @@ for r in rosters:
 
 all_players = get(f"{API}/players/nfl")
 
+# Name and position for every player, so league history can name players who left the league.
+# Saved outside data/ so it isn't committed; the legacy script reads it in the same run.
+os.makedirs("cache", exist_ok=True)
+with open("cache/all_players.json", "w") as f:
+    json.dump({pid: {"name": p.get("full_name") or f"{p.get('first_name', '')} {p.get('last_name', '')}".strip(),
+                     "pos": p.get("position") or ""} for pid, p in all_players.items()}, f)
+
 out = {}
 for pid in sorted(ids):
     p = all_players.get(pid)
