@@ -217,6 +217,7 @@
       lc.appendChild(summary);
       var honors = document.createElement("p");
       honors.textContent = "Championships: " + hist.titles + " · Runner-ups: " + hist.runner_up +
+        " · 3rd place: " + (hist.third || 0) +
         " · #1 overall picks: " + (hist.first_overall || []).length + " · Playoff trips: " + hist.playoffs;
       lc.appendChild(honors);
       var rv = (legacy.rivals || {})[roster.owner_id] || [];
