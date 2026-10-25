@@ -66,6 +66,15 @@ def build():
             player_info = json.load(f)
     except Exception:
         player_info = {}
+    try:
+        with open("cache/all_players.json") as f:
+            every_player = json.load(f)
+    except Exception:
+        every_player = {}
+
+    # Points leaders: fantasy points scored in a team's starting lineup
+    franchise_pts = {}   # owner -> player -> {"points", "games", "seasons"}
+    league_pts = {}      # player -> {"points", "games", "seasons", "owners"}
 
     owners = {}          # user_id -> name info and totals
     pair = {}            # (a, b) with a < b -> head-to-head numbers
@@ -102,6 +111,7 @@ def build():
         except Exception:
             bracket = []
         playoff_round = {}
+        third_pairs = set()
         in_playoffs = set()
         title_game, third_game = None, None
         for g in bracket:
@@ -116,6 +126,8 @@ def build():
                 title_game = g
             if place == 3 and g.get("w"):
                 third_game = g
+            if place == 3 and isinstance(t1, int) and isinstance(t2, int):
+                third_pairs.add(frozenset((t1, t2)))
         if title_game:
             champions.append({
                 "season": yr,
@@ -144,6 +156,24 @@ def build():
             for m in rows:
                 if m.get("matchup_id") is not None:
                     games.setdefault(m["matchup_id"], []).append(m)
+            # Starters' points count toward franchise and league leaders
+            for m in rows:
+                uid = roster_owner.get(m.get("roster_id"))
+                starters = m.get("starters") or []
+                spts = m.get("starters_points") or []
+                if not uid or m.get("matchup_id") is None or not float(m.get("points") or 0):
+                    continue
+                for pid, pts in zip(starters, spts):
+                    if not pid or pid == "0" or pts is None:
+                        continue
+                    fp = franchise_pts.setdefault(uid, {}).setdefault(pid, {"points": 0.0, "games": 0, "seasons": set()})
+                    lp = league_pts.setdefault(pid, {"points": 0.0, "games": 0, "seasons": set(), "owners": set()})
+                    for rec in (fp, lp):
+                        rec["points"] += float(pts)
+                        rec["games"] += 1
+                        rec["seasons"].add(yr)
+                    lp["owners"].add(uid)
+
             for teams in games.values():
                 if len(teams) != 2:
                     continue
@@ -160,9 +190,11 @@ def build():
                 games_log.append({"season": yr, "week": week, "a": ua, "b": ub, "pa": pa_, "pb": pb_,
                                   "playoff": bool(rnd), "postseason": playoff, "round": rnd})
 
+                # Playoff record: round 1, round 2, the title game, and the 3rd place game
+                counts_for_playoff_record = bool(rnd) or (playoff and frozenset((a["roster_id"], b["roster_id"])) in third_pairs)
                 for me, them, mine, theirs, res in ((ua, ub, pa_, pb_, result), (ub, ua, pb_, pa_, -result)):
                     o = owner(me)
-                    if rnd:
+                    if counts_for_playoff_record:
                         o["pw" if res > 0 else "pl"] += 1 if res != 0 else 0
                     elif not playoff:
                         o["w" if res > 0 else ("l" if res < 0 else "t")] += 1
@@ -298,6 +330,31 @@ def build():
         if c.get("third") in owners:
             owners[c["third"]]["third"] += 1
 
+    # ---------- Points leaders ----------
+    POSITIONS = ["QB", "RB", "WR", "TE", "K", "DEF"]
+
+    def player_name(pid):
+        info = every_player.get(pid) or player_info.get(pid) or {}
+        return info.get("name") or pid, info.get("pos") or ""
+
+    def leaderboard(table, overall_n, pos_n, with_owners=False):
+        rows_ = []
+        for pid, rec in table.items():
+            nm, pos = player_name(pid)
+            row = {"player": nm, "pos": pos, "points": round(rec["points"], 2), "games": rec["games"],
+                   "seasons": sorted(rec["seasons"])}
+            if with_owners:
+                row["owners"] = sorted(rec["owners"])
+            rows_.append(row)
+        rows_.sort(key=lambda r: -r["points"])
+        out = {"overall": rows_[:overall_n]}
+        for pos in POSITIONS:
+            out[pos] = [r for r in rows_ if r["pos"] == pos][:pos_n]
+        return out
+
+    franchise_leaders = {uid: leaderboard(tbl, 10, 5) for uid, tbl in franchise_pts.items()}
+    league_leaders = leaderboard(league_pts, 25, 10, with_owners=True)
+
     os.makedirs("data", exist_ok=True)
     with open("data/legacy.json", "w") as f:
         json.dump({
@@ -309,6 +366,8 @@ def build():
             "rivalries": rows,
             "drafts": sorted(drafts, key=lambda d: (-d["season"], d["type"])),
             "records": records,
+            "franchise_leaders": franchise_leaders,
+            "league_leaders": league_leaders,
         }, f, indent=1)
 
     name = lambda uid: owners.get(uid, {}).get("name") or uid
