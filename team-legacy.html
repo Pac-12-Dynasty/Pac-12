@@ -213,8 +213,17 @@
         .map(function (c) { return c.season + ", lost to " + owner(c.champion).team; }), "No title game losses.");
       list("🥉 3rd Place", data.champions.filter(function (c) { return c.third === uid; })
         .map(function (c) { return c.season + " 3rd place"; }), "No 3rd place finishes.");
-      list("#1 Overall Picks", me.first_overall.map(function (p) { return p.season + " " + p.type + " Draft: " + (p.player || "Unknown"); }),
-        "Hasn't picked first overall.");
+      // #1 overall picks: just the total and the years
+      var firstCol = el("div");
+      firstCol.appendChild(el("h3", "", "#1 Overall Picks"));
+      var firsts = (me.first_overall || []).map(function (p) { return Number(p.season); }).sort(function (a, b) { return b - a; });
+      if (!firsts.length) {
+        firstCol.appendChild(el("p", "muted", "Hasn't picked first overall."));
+      } else {
+        firstCol.appendChild(el("p", "", "Total: " + firsts.length));
+        firstCol.appendChild(el("p", "", firsts.join(", ")));
+      }
+      box.appendChild(firstCol);
 
       // Rivals
       var rv = document.getElementById("rivals");
