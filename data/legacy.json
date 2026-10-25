@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25T10:23+00:00",
+ "generated": "2026-10-25T18:33+00:00",
  "seasons": [
   2023,
   2024,
@@ -22,11 +22,12 @@
    "t": 0,
    "pf": 6014.74,
    "pa": 5519.46,
-   "pw": 2,
-   "pl": 5,
+   "pw": 0,
+   "pl": 3,
    "playoffs": 3,
    "titles": 0,
    "runner_up": 0,
+   "third": 0,
    "first_overall": [],
    "by_season": [
     {
@@ -82,11 +83,12 @@
    "t": 0,
    "pf": 6287.02,
    "pa": 5380.82,
-   "pw": 6,
+   "pw": 4,
    "pl": 4,
    "playoffs": 4,
    "titles": 0,
    "runner_up": 2,
+   "third": 1,
    "first_overall": [],
    "by_season": [
     {
@@ -96,7 +98,7 @@
      "t": 0,
      "pf": 1882.1,
      "pa": 1615.76,
-     "finish": "Playoffs"
+     "finish": "3rd place"
     },
     {
      "season": 2024,
@@ -143,10 +145,11 @@
    "pf": 5836.36,
    "pa": 5803.42,
    "pw": 0,
-   "pl": 4,
+   "pl": 2,
    "playoffs": 2,
    "titles": 0,
    "runner_up": 0,
+   "third": 0,
    "first_overall": [],
    "by_season": [
     {
@@ -207,6 +210,7 @@
    "playoffs": 2,
    "titles": 1,
    "runner_up": 0,
+   "third": 0,
    "first_overall": [],
    "by_season": [
     {
@@ -262,11 +266,12 @@
    "t": 0,
    "pf": 5944.82,
    "pa": 5940.62,
-   "pw": 3,
-   "pl": 3,
+   "pw": 1,
+   "pl": 2,
    "playoffs": 3,
    "titles": 0,
    "runner_up": 0,
+   "third": 1,
    "first_overall": [],
    "by_season": [
     {
@@ -294,7 +299,7 @@
      "t": 0,
      "pf": 1823.0,
      "pa": 1651.58,
-     "finish": "Playoffs"
+     "finish": "3rd place"
     },
     {
      "season": 2026,
@@ -327,6 +332,7 @@
    "playoffs": 0,
    "titles": 0,
    "runner_up": 0,
+   "third": 0,
    "first_overall": [],
    "by_season": [
     {
@@ -382,11 +388,12 @@
    "t": 0,
    "pf": 5657.42,
    "pa": 5355.66,
-   "pw": 3,
+   "pw": 2,
    "pl": 2,
    "playoffs": 3,
    "titles": 0,
    "runner_up": 1,
+   "third": 0,
    "first_overall": [],
    "by_season": [
     {
@@ -443,10 +450,11 @@
    "pf": 5405.36,
    "pa": 5914.58,
    "pw": 0,
-   "pl": 3,
+   "pl": 1,
    "playoffs": 1,
    "titles": 0,
    "runner_up": 0,
+   "third": 0,
    "first_overall": [
     {
      "season": 2026,
@@ -513,6 +521,7 @@
    "playoffs": 1,
    "titles": 1,
    "runner_up": 0,
+   "third": 0,
    "first_overall": [],
    "by_season": [
     {
@@ -573,6 +582,7 @@
    "playoffs": 1,
    "titles": 1,
    "runner_up": 0,
+   "third": 0,
    "first_overall": [
     {
      "season": 2023,
@@ -633,11 +643,12 @@
    "t": 0,
    "pf": 4942.88,
    "pa": 5057.14,
-   "pw": 2,
-   "pl": 2,
+   "pw": 1,
+   "pl": 1,
    "playoffs": 1,
    "titles": 0,
    "runner_up": 0,
+   "third": 1,
    "first_overall": [],
    "by_season": [
     {
@@ -656,7 +667,7 @@
      "t": 0,
      "pf": 1666.4,
      "pa": 1574.78,
-     "finish": "Playoffs"
+     "finish": "3rd place"
     },
     {
      "season": 2025,
@@ -684,11 +695,12 @@
    "t": 0,
    "pf": 5090.76,
    "pa": 5864.08,
-   "pw": 2,
-   "pl": 2,
+   "pw": 1,
+   "pl": 1,
    "playoffs": 1,
    "titles": 0,
    "runner_up": 0,
+   "third": 0,
    "first_overall": [
     {
      "season": 2024,
@@ -757,6 +769,7 @@
    "playoffs": 0,
    "titles": 0,
    "runner_up": 0,
+   "third": 0,
    "first_overall": [],
    "by_season": [
     {
@@ -775,33 +788,36 @@
   {
    "season": 2025,
    "champion": "858765508143628288",
-   "runner_up": "745458998371008512"
+   "runner_up": "745458998371008512",
+   "third": "733192747346997248"
   },
   {
    "season": 2024,
    "champion": "915765963616985088",
-   "runner_up": "745458998371008512"
+   "runner_up": "745458998371008512",
+   "third": "853109226401288192"
   },
   {
    "season": 2023,
    "champion": "731283214563422208",
-   "runner_up": "909255939126161408"
+   "runner_up": "909255939126161408",
+   "third": "745458998371008512"
   }
  ],
  "rivals": {
   "861417814836256768": [
    {
-    "opponent": "733192747346997248",
-    "score": 12.0,
-    "wins": 3,
-    "losses": 3,
-    "ties": 0
-   },
-   {
     "opponent": "861422415547318272",
     "score": 6.5,
     "wins": 4,
     "losses": 2,
+    "ties": 0
+   },
+   {
+    "opponent": "733192747346997248",
+    "score": 6.0,
+    "wins": 3,
+    "losses": 3,
     "ties": 0
    }
   ],
@@ -830,10 +846,10 @@
     "ties": 0
    },
    {
-    "opponent": "861417814836256768",
-    "score": 6.5,
-    "wins": 3,
-    "losses": 2,
+    "opponent": "853109226401288192",
+    "score": 5.0,
+    "wins": 2,
+    "losses": 4,
     "ties": 0
    }
   ],
@@ -855,17 +871,17 @@
   ],
   "733192747346997248": [
    {
-    "opponent": "861417814836256768",
-    "score": 12.0,
-    "wins": 3,
-    "losses": 3,
-    "ties": 0
-   },
-   {
     "opponent": "745458998371008512",
     "score": 6.5,
     "wins": 3,
     "losses": 2,
+    "ties": 0
+   },
+   {
+    "opponent": "861417814836256768",
+    "score": 6.0,
+    "wins": 3,
+    "losses": 3,
     "ties": 0
    }
   ],
@@ -903,14 +919,14 @@
   ],
   "861421486488031232": [
    {
-    "opponent": "745458998371008512",
-    "score": 8.5,
-    "wins": 2,
-    "losses": 5,
+    "opponent": "861422415547318272",
+    "score": 6.5,
+    "wins": 3,
+    "losses": 4,
     "ties": 0
    },
    {
-    "opponent": "861422415547318272",
+    "opponent": "858765508143628288",
     "score": 6.5,
     "wins": 3,
     "losses": 4,
@@ -951,33 +967,33 @@
   ],
   "853109226401288192": [
    {
-    "opponent": "861422415547318272",
-    "score": 10.5,
-    "wins": 3,
+    "opponent": "995982448825720832",
+    "score": 5.0,
+    "wins": 4,
     "losses": 2,
     "ties": 0
    },
    {
-    "opponent": "995982448825720832",
-    "score": 5.0,
-    "wins": 4,
+    "opponent": "861422415547318272",
+    "score": 4.5,
+    "wins": 3,
     "losses": 2,
     "ties": 0
    }
   ],
   "861422415547318272": [
    {
-    "opponent": "853109226401288192",
-    "score": 10.5,
-    "wins": 2,
-    "losses": 3,
-    "ties": 0
-   },
-   {
     "opponent": "861421486488031232",
     "score": 6.5,
     "wins": 4,
     "losses": 3,
+    "ties": 0
+   },
+   {
+    "opponent": "915765963616985088",
+    "score": 6.5,
+    "wins": 3,
+    "losses": 4,
     "ties": 0
    }
   ],
@@ -1012,7 +1028,7 @@
    "weighted_losses": 3.0,
    "balance": 0.857,
    "score": 6.5,
-   "rank": 2
+   "rank": 1
   },
   {
    "owner": "861422415547318272",
@@ -1027,7 +1043,7 @@
    "weighted_losses": 4.0,
    "balance": 0.857,
    "score": 6.5,
-   "rank": 4
+   "rank": 3
   },
   {
    "owner": "745458998371008512",
@@ -1036,13 +1052,13 @@
    "wins": 5,
    "losses": 2,
    "ties": 0,
-   "playoff_meetings": 2,
-   "weighted_games": 13.0,
-   "weighted_wins": 11.0,
+   "playoff_meetings": 0,
+   "weighted_games": 7.0,
+   "weighted_wins": 5.0,
    "weighted_losses": 2.0,
-   "balance": 0.308,
-   "score": 8.5,
-   "rank": 3
+   "balance": 0.571,
+   "score": 5.5,
+   "rank": 5
   },
   {
    "owner": "861421486488031232",
@@ -1051,13 +1067,13 @@
    "wins": 2,
    "losses": 5,
    "ties": 0,
-   "playoff_meetings": 2,
-   "weighted_games": 13.0,
+   "playoff_meetings": 0,
+   "weighted_games": 7.0,
    "weighted_wins": 2.0,
-   "weighted_losses": 11.0,
-   "balance": 0.308,
-   "score": 8.5,
-   "rank": 1
+   "weighted_losses": 5.0,
+   "balance": 0.571,
+   "score": 5.5,
+   "rank": 3
   },
   {
    "owner": "853109226401288192",
@@ -1072,7 +1088,7 @@
    "weighted_losses": 2.0,
    "balance": 0.667,
    "score": 5.0,
-   "rank": 2
+   "rank": 1
   },
   {
    "owner": "995982448825720832",
@@ -1087,7 +1103,7 @@
    "weighted_losses": 4.0,
    "balance": 0.667,
    "score": 5.0,
-   "rank": 3
+   "rank": 2
   },
   {
    "owner": "733192747346997248",
@@ -1342,7 +1358,7 @@
    "weighted_losses": 4.0,
    "balance": 0.857,
    "score": 6.5,
-   "rank": 2
+   "rank": 1
   },
   {
    "owner": "861422415547318272",
@@ -1357,7 +1373,7 @@
    "weighted_losses": 3.0,
    "balance": 0.857,
    "score": 6.5,
-   "rank": 2
+   "rank": 1
   },
   {
    "owner": "861417814836256768",
@@ -1426,13 +1442,13 @@
    "wins": 3,
    "losses": 1,
    "ties": 0,
-   "playoff_meetings": 1,
-   "weighted_games": 6.0,
-   "weighted_wins": 5.0,
+   "playoff_meetings": 0,
+   "weighted_games": 4.0,
+   "weighted_wins": 3.0,
    "weighted_losses": 1.0,
-   "balance": 0.333,
-   "score": 4.0,
-   "rank": 5
+   "balance": 0.5,
+   "score": 3.0,
+   "rank": 6
   },
   {
    "owner": "995982448825720832",
@@ -1441,13 +1457,13 @@
    "wins": 1,
    "losses": 3,
    "ties": 0,
-   "playoff_meetings": 1,
-   "weighted_games": 6.0,
+   "playoff_meetings": 0,
+   "weighted_games": 4.0,
    "weighted_wins": 1.0,
-   "weighted_losses": 5.0,
-   "balance": 0.333,
-   "score": 4.0,
-   "rank": 6
+   "weighted_losses": 3.0,
+   "balance": 0.5,
+   "score": 3.0,
+   "rank": 8
   },
   {
    "owner": "858765508143628288",
@@ -1627,7 +1643,7 @@
    "weighted_losses": 2.0,
    "balance": 1.0,
    "score": 4.0,
-   "rank": 7
+   "rank": 6
   },
   {
    "owner": "733192747346997248",
@@ -1726,13 +1742,13 @@
    "wins": 2,
    "losses": 3,
    "ties": 0,
-   "playoff_meetings": 1,
-   "weighted_games": 7.0,
-   "weighted_wins": 4.0,
+   "playoff_meetings": 0,
+   "weighted_games": 5.0,
+   "weighted_wins": 2.0,
    "weighted_losses": 3.0,
-   "balance": 0.857,
-   "score": 6.5,
-   "rank": 3
+   "balance": 0.8,
+   "score": 4.5,
+   "rank": 4
   },
   {
    "owner": "995982448825720832",
@@ -1741,13 +1757,13 @@
    "wins": 3,
    "losses": 2,
    "ties": 0,
-   "playoff_meetings": 1,
-   "weighted_games": 7.0,
+   "playoff_meetings": 0,
+   "weighted_games": 5.0,
    "weighted_wins": 3.0,
-   "weighted_losses": 4.0,
-   "balance": 0.857,
-   "score": 6.5,
-   "rank": 2
+   "weighted_losses": 2.0,
+   "balance": 0.8,
+   "score": 4.5,
+   "rank": 5
   },
   {
    "owner": "733192747346997248",
@@ -1762,7 +1778,7 @@
    "weighted_losses": 4.0,
    "balance": 0.857,
    "score": 6.5,
-   "rank": 2
+   "rank": 1
   },
   {
    "owner": "745458998371008512",
@@ -1777,7 +1793,7 @@
    "weighted_losses": 3.0,
    "balance": 0.857,
    "score": 6.5,
-   "rank": 5
+   "rank": 4
   },
   {
    "owner": "858765508143628288",
@@ -1807,7 +1823,7 @@
    "weighted_losses": 4.0,
    "balance": 0.857,
    "score": 6.5,
-   "rank": 3
+   "rank": 2
   },
   {
    "owner": "731283214563422208",
@@ -1876,13 +1892,13 @@
    "wins": 3,
    "losses": 2,
    "ties": 0,
-   "playoff_meetings": 2,
-   "weighted_games": 11.0,
-   "weighted_wins": 6.0,
-   "weighted_losses": 5.0,
-   "balance": 0.909,
-   "score": 10.5,
-   "rank": 1
+   "playoff_meetings": 0,
+   "weighted_games": 5.0,
+   "weighted_wins": 3.0,
+   "weighted_losses": 2.0,
+   "balance": 0.8,
+   "score": 4.5,
+   "rank": 2
   },
   {
    "owner": "861422415547318272",
@@ -1891,13 +1907,13 @@
    "wins": 2,
    "losses": 3,
    "ties": 0,
-   "playoff_meetings": 2,
-   "weighted_games": 11.0,
-   "weighted_wins": 5.0,
-   "weighted_losses": 6.0,
-   "balance": 0.909,
-   "score": 10.5,
-   "rank": 1
+   "playoff_meetings": 0,
+   "weighted_games": 5.0,
+   "weighted_wins": 2.0,
+   "weighted_losses": 3.0,
+   "balance": 0.8,
+   "score": 4.5,
+   "rank": 5
   },
   {
    "owner": "861417814836256768",
@@ -2062,7 +2078,7 @@
    "weighted_losses": 4.0,
    "balance": 0.857,
    "score": 6.5,
-   "rank": 3
+   "rank": 2
   },
   {
    "owner": "915765963616985088",
@@ -2287,7 +2303,7 @@
    "weighted_losses": 3.0,
    "balance": 1.0,
    "score": 6.0,
-   "rank": 4
+   "rank": 3
   },
   {
    "owner": "745458998371008512",
@@ -2302,7 +2318,7 @@
    "weighted_losses": 4.0,
    "balance": 0.889,
    "score": 8.5,
-   "rank": 4
+   "rank": 3
   },
   {
    "owner": "909255939126161408",
@@ -2347,7 +2363,7 @@
    "weighted_losses": 2.0,
    "balance": 1.0,
    "score": 4.0,
-   "rank": 8
+   "rank": 7
   },
   {
    "owner": "733192747346997248",
@@ -2446,13 +2462,13 @@
    "wins": 3,
    "losses": 3,
    "ties": 0,
-   "playoff_meetings": 3,
-   "weighted_games": 14.0,
-   "weighted_wins": 9.0,
-   "weighted_losses": 5.0,
-   "balance": 0.714,
-   "score": 12.0,
-   "rank": 1
+   "playoff_meetings": 0,
+   "weighted_games": 6.0,
+   "weighted_wins": 3.0,
+   "weighted_losses": 3.0,
+   "balance": 1.0,
+   "score": 6.0,
+   "rank": 2
   },
   {
    "owner": "861417814836256768",
@@ -2461,13 +2477,13 @@
    "wins": 3,
    "losses": 3,
    "ties": 0,
-   "playoff_meetings": 3,
-   "weighted_games": 14.0,
-   "weighted_wins": 5.0,
-   "weighted_losses": 9.0,
-   "balance": 0.714,
-   "score": 12.0,
-   "rank": 1
+   "playoff_meetings": 0,
+   "weighted_games": 6.0,
+   "weighted_wins": 3.0,
+   "weighted_losses": 3.0,
+   "balance": 1.0,
+   "score": 6.0,
+   "rank": 2
   },
   {
    "owner": "731283214563422208",
@@ -2527,7 +2543,7 @@
    "weighted_losses": 4.0,
    "balance": 0.667,
    "score": 5.0,
-   "rank": 4
+   "rank": 3
   },
   {
    "owner": "858765508143628288",
@@ -2647,7 +2663,7 @@
    "weighted_losses": 2.0,
    "balance": 1.0,
    "score": 4.0,
-   "rank": 6
+   "rank": 5
   },
   {
    "owner": "745458998371008512",
@@ -2797,7 +2813,7 @@
    "weighted_losses": 4.0,
    "balance": 0.667,
    "score": 5.0,
-   "rank": 5
+   "rank": 4
   },
   {
    "owner": "731283214563422208",
@@ -2887,7 +2903,7 @@
    "weighted_losses": 4.0,
    "balance": 0.667,
    "score": 5.0,
-   "rank": 5
+   "rank": 4
   },
   {
    "owner": "733192747346997248",
