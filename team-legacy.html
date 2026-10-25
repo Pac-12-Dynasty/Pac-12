@@ -38,6 +38,20 @@
     details.fold[open] > summary::after { content: "Hide ▴"; }
     details.fold:not([open]) > summary { border-radius: 8px; }
     details.fold > .section-body { margin-bottom: 0; }
+    /* Points leaders */
+    .leader-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.75rem; }
+    .leader-card { border: 1px solid #e5e7eb; border-top: 4px solid #111827; border-radius: 8px; padding: 0.75rem; }
+    .leader-card.overall { border-top-color: #eebf3a; grid-column: span 2; }
+    .leader-label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #c8102e; }
+    .leader-name { font-size: 1.1rem; font-weight: 900; color: #111827; line-height: 1.2; margin-top: 0.2rem; }
+    .leader-card.overall .leader-name { font-size: 1.4rem; }
+    .leader-points { font-weight: 700; }
+    .leader-fold { margin-top: 1rem; }
+    .leader-fold > summary { cursor: pointer; font-weight: 800; }
+    .leader-tabs { display: flex; flex-wrap: wrap; gap: 0.25rem; margin: 0.75rem 0; }
+    .leader-tabs button { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 0.3rem 0.7rem; border-radius: 4px; border: 1px solid #c5ccd6; background: #fff; cursor: pointer; }
+    .leader-tabs button.active { background: #c8102e; border-color: #c8102e; color: #fff; }
+    @media (max-width: 500px) { .leader-card.overall { grid-column: auto; } }
     .finish-Champion { font-weight: 800; color: #854d0e; }
     .finish-Runner-up { font-weight: 700; color: #13315c; }
     .finish-3rd { font-weight: 700; color: #7c4a1e; }
@@ -66,6 +80,12 @@
       <div class="section-bar"><h2>Top Rivals</h2></div>
       <div class="section-body" id="rivals"></div>
 
+      <div class="section-bar"><h2>Franchise Leaders</h2></div>
+      <div class="section-body">
+        <p class="muted">Fantasy points scored in this team's starting lineup, counting every season the player was on the team.</p>
+        <div id="franchise-leaders"></div>
+      </div>
+
       <details class="fold">
         <summary class="section-bar"><h2>Season by Season</h2></summary>
         <div class="section-body"><div class="table-wrap"><table class="sortable" id="seasons"></table></div></div>
@@ -87,6 +107,7 @@
   </main>
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
   <script src="auth.js"></script>
+  <script src="leaders.js"></script>
   <script>
     var data, me, uid = new URLSearchParams(location.search).get("owner");
 
@@ -206,6 +227,9 @@
         row.appendChild(el("span", "muted", record(r.wins, r.losses, r.ties) + " · score " + r.score.toFixed(2)));
         rv.appendChild(row);
       });
+
+      // Franchise leaders
+      window.renderLeaders(document.getElementById("franchise-leaders"), (data.franchise_leaders || {})[uid]);
 
       // Season by season
       table(document.getElementById("seasons"), [
