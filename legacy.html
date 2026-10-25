@@ -65,6 +65,13 @@
     .leader-tabs button { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 0.3rem 0.7rem; border-radius: 4px; border: 1px solid #c5ccd6; background: #fff; cursor: pointer; }
     .leader-tabs button.active { background: #c8102e; border-color: #c8102e; color: #fff; }
     @media (max-width: 500px) { .leader-card.overall { grid-column: auto; } }
+    .fl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+    .fl-card { border: 1px solid #e5e7eb; border-top: 4px solid #c8102e; border-radius: 8px; padding: 0.9rem 1rem; }
+    .fl-card h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+    .fl-top { font-size: 1.15rem; font-weight: 900; color: #111827; }
+    .fl-list { list-style: none; margin: 0.5rem 0 0; padding: 0; font-size: 0.9rem; }
+    .fl-list li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.25rem 0; border-top: 1px solid #e5e7eb; }
+    .fl-pos { font-weight: 800; color: #c8102e; min-width: 2.6rem; }
     .draft-year { margin: 1rem 0 0.4rem; font-size: 1rem; color: var(--ink); }
   </style>
 </head>
@@ -113,6 +120,12 @@
 
       <div class="section-bar"><h2>League Records</h2></div>
       <div class="section-body"><div class="records" id="records"></div></div>
+
+      <div class="section-bar"><h2>Franchise Points Leaders</h2></div>
+      <div class="section-body">
+        <p class="muted">Each team's top scorers: fantasy points scored in that team's starting lineup, counting every season the player was on the team.</p>
+        <div class="fl-grid" id="franchise-leaders"></div>
+      </div>
 
       <div class="section-bar"><h2>League Points Leaders</h2></div>
       <div class="section-body">
@@ -322,6 +335,40 @@
       if (!box.children.length) box.appendChild(el("p", "muted", "Records fill in once games are played."));
     }
 
+    function renderFranchiseLeaders() {
+      var box = document.getElementById("franchise-leaders");
+      var all = data.franchise_leaders || {};
+      var ids = Object.keys(data.owners).sort(function (a, b) { return owner(a).team.localeCompare(owner(b).team); });
+      ids.forEach(function (id) {
+        var fl = all[id];
+        var card = el("div", "fl-card");
+        var h = el("h3"); h.appendChild(teamLink(id)); card.appendChild(h);
+        if (!fl || !fl.overall || !fl.overall.length) {
+          card.appendChild(el("p", "muted", "No points recorded yet."));
+          box.appendChild(card);
+          return;
+        }
+        var top = fl.overall[0];
+        card.appendChild(el("div", "muted", "Overall leader"));
+        card.appendChild(el("div", "fl-top", top.player + " (" + top.pos + ")"));
+        card.appendChild(el("div", "", top.points.toFixed(2) + " pts"));
+        var ul = el("ul", "fl-list");
+        ["QB", "RB", "WR", "TE", "K", "DEF"].forEach(function (pos) {
+          var p = (fl[pos] || [])[0];
+          var li = el("li");
+          var left = el("span"); left.appendChild(el("span", "fl-pos", pos)); left.appendChild(document.createTextNode(" " + (p ? p.player : "None yet")));
+          li.appendChild(left);
+          li.appendChild(el("span", "muted", p ? p.points.toFixed(2) : ""));
+          ul.appendChild(li);
+        });
+        card.appendChild(ul);
+        var more = el("a", "", "Full franchise leaderboard →");
+        more.href = "team-legacy.html?owner=" + encodeURIComponent(id);
+        var pmore = el("p"); pmore.appendChild(more); card.appendChild(pmore);
+        box.appendChild(card);
+      });
+    }
+
     function renderDrafts() {
       var box = document.getElementById("drafts");
       if (!data.drafts.length) { box.appendChild(el("p", "muted", "No drafts recorded yet.")); return; }
@@ -356,6 +403,7 @@
         renderRivals();
         renderRivalryTable();
         renderRecords();
+        renderFranchiseLeaders();
         window.renderLeaders(document.getElementById("league-leaders"), data.league_leaders, {
           teamsFor: function (r) { return (r.owners || []).map(function (id) { return owner(id).team; }).join(", "); }
         });
