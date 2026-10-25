@@ -43,6 +43,14 @@
     .record .label { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
     .record .big { font-size: 1.5rem; font-weight: 900; color: var(--ink); }
 
+    details.fold { margin-bottom: 1.5rem; }
+    details.fold > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+    details.fold > summary::-webkit-details-marker { display: none; }
+    details.fold > summary::after { content: "Show ▾"; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.05em; color: #d1d5db; }
+    details.fold[open] > summary::after { content: "Hide ▴"; }
+    details.fold:not([open]) > summary { border-radius: 8px; }
+    details.fold > .section-body { margin-bottom: 0; }
+
     .draft-year { margin: 1rem 0 0.4rem; font-size: 1rem; color: var(--ink); }
   </style>
 </head>
@@ -72,8 +80,9 @@
       <div class="section-bar"><h2>Top Rivals</h2></div>
       <div class="section-body"><div class="rival-grid" id="rivals"></div></div>
 
-      <div class="section-bar"><h2>Rivalry Spreadsheet</h2></div>
-      <div class="section-body">
+      <details class="fold">
+        <summary class="section-bar"><h2>Rivalry Spreadsheet</h2></summary>
+        <div class="section-body">
         <div class="toolbar">
           <label>Owner <select id="rival-filter"><option value="">All owners</option></select></label>
           <a class="download" href="data/rivalries.csv" download>Download spreadsheet (CSV)</a>
@@ -85,13 +94,16 @@
           <p>Balance measures how even the series is, using the same weights: 1 means dead even, 0 means one owner won every time.</p>
           <p><strong>Rivalry score = weighted games × (0.5 + 0.5 × balance).</strong> Each owner's top 2 scores are their rivals, with ties going to whoever they've played more.</p>
         </details>
-      </div>
+        </div>
+      </details>
 
       <div class="section-bar"><h2>League Records</h2></div>
       <div class="section-body"><div class="records" id="records"></div></div>
 
-      <div class="section-bar"><h2>Draft History: 1st Round</h2></div>
-      <div class="section-body" id="drafts"></div>
+      <details class="fold">
+        <summary class="section-bar"><h2>Draft History: 1st Round</h2></summary>
+        <div class="section-body" id="drafts"></div>
+      </details>
 
       <p class="muted" id="generated"></p>
     </div>
