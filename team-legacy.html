@@ -31,8 +31,16 @@
     table.sortable th { cursor: pointer; user-select: none; white-space: nowrap; }
     table.sortable th[data-dir="asc"]::after { content: " ▲"; font-size: 0.75em; }
     table.sortable th[data-dir="desc"]::after { content: " ▼"; font-size: 0.75em; }
+    details.fold { margin-bottom: 1.5rem; }
+    details.fold > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
+    details.fold > summary::-webkit-details-marker { display: none; }
+    details.fold > summary::after { content: "Show ▾"; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.05em; color: #d1d5db; }
+    details.fold[open] > summary::after { content: "Hide ▴"; }
+    details.fold:not([open]) > summary { border-radius: 8px; }
+    details.fold > .section-body { margin-bottom: 0; }
     .finish-Champion { font-weight: 800; color: #854d0e; }
     .finish-Runner-up { font-weight: 700; color: #13315c; }
+    .finish-3rd { font-weight: 700; color: #7c4a1e; }
   </style>
 </head>
 <body>
@@ -58,17 +66,23 @@
       <div class="section-bar"><h2>Top Rivals</h2></div>
       <div class="section-body" id="rivals"></div>
 
-      <div class="section-bar"><h2>Season by Season</h2></div>
-      <div class="section-body"><div class="table-wrap"><table class="sortable" id="seasons"></table></div></div>
+      <details class="fold">
+        <summary class="section-bar"><h2>Season by Season</h2></summary>
+        <div class="section-body"><div class="table-wrap"><table class="sortable" id="seasons"></table></div></div>
+      </details>
 
-      <div class="section-bar"><h2>Head-to-Head vs Every Owner</h2></div>
-      <div class="section-body">
-        <div class="table-wrap"><table class="sortable" id="h2h"></table></div>
-        <p class="muted">Rivalry score = weighted games × (0.5 + 0.5 × balance). Playoff games count more each round. <a href="legacy.html">See how it works</a>.</p>
-      </div>
+      <details class="fold">
+        <summary class="section-bar"><h2>Head-to-Head vs Every Owner</h2></summary>
+        <div class="section-body">
+          <div class="table-wrap"><table class="sortable" id="h2h"></table></div>
+          <p class="muted">Rivalry score = weighted games × (0.5 + 0.5 × balance). Playoff games count more each round. <a href="legacy.html">See how it works</a>.</p>
+        </div>
+      </details>
 
-      <div class="section-bar"><h2>1st Round Picks</h2></div>
-      <div class="section-body"><div class="table-wrap"><table id="picks"></table></div></div>
+      <details class="fold">
+        <summary class="section-bar"><h2>1st Round Picks</h2></summary>
+        <div class="section-body"><div class="table-wrap"><table id="picks"></table></div></div>
+      </details>
     </div>
   </main>
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
@@ -146,6 +160,7 @@
       [
         [me.titles, "Championships", "gold"],
         [me.runner_up, "Runner-ups", "gold"],
+        [me.third || 0, "3rd Place Finishes", "gold"],
         [me.first_overall.length, "#1 Overall Picks", "red"],
         [me.playoffs, "Playoff Trips", ""],
         [record(me.w, me.l, me.t), "All-Time Record", ""],
@@ -175,6 +190,8 @@
         .map(function (c) { return c.season + " champion, beat " + owner(c.runner_up).team; }), "No titles yet.");
       list("🥈 Runner-ups", data.champions.filter(function (c) { return c.runner_up === uid; })
         .map(function (c) { return c.season + ", lost to " + owner(c.champion).team; }), "No title game losses.");
+      list("🥉 3rd Place", data.champions.filter(function (c) { return c.third === uid; })
+        .map(function (c) { return c.season + " 3rd place"; }), "No 3rd place finishes.");
       list("#1 Overall Picks", me.first_overall.map(function (p) { return p.season + " " + p.type + " Draft: " + (p.player || "Unknown"); }),
         "Hasn't picked first overall.");
 
@@ -196,7 +213,7 @@
         { label: "Record", value: function (s) { return pct(s.w, s.l, s.t); }, show: function (s) { return record(s.w, s.l, s.t); }, num: true },
         { label: "P/F", value: function (s) { return s.pf; }, show: function (s) { return s.pf.toFixed(2); }, num: true },
         { label: "P/A", value: function (s) { return s.pa; }, show: function (s) { return s.pa.toFixed(2); }, num: true },
-        { label: "Finish", value: function (s) { return s.finish || "-"; }, cls: function (s) { return s.finish ? "finish-" + s.finish : ""; } }
+        { label: "Finish", value: function (s) { return s.finish || "-"; }, cls: function (s) { return s.finish ? "finish-" + s.finish.split(" ")[0] : ""; } }
       ], me.by_season || [], 0, "desc");
 
       // Head-to-head
@@ -217,9 +234,9 @@
         if (d.type === "Startup") return;
         d.picks.forEach(function (p) { if (p.owner === uid) picks.push({ d: d, p: p }); });
       });
-      // Year always comes first; pick number only orders picks within the same year
+      // Newest year first; within a year, picks go 1.01 through 1.12
       picks.sort(function (a, b) {
-        return (Number(a.d.season) - Number(b.d.season)) || (Number(a.p.pick) - Number(b.p.pick));
+        return (Number(b.d.season) - Number(a.d.season)) || (Number(a.p.pick) - Number(b.p.pick));
       });
       var t = document.getElementById("picks");
       var head = el("tr");
