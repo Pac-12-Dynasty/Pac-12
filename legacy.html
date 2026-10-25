@@ -184,6 +184,7 @@
         var champ = el("div", "champ"); champ.appendChild(teamLink(c.champion)); t.appendChild(champ);
         t.appendChild(el("div", "muted", owner(c.champion).name));
         var ru = el("div", "muted", "Runner-up: "); ru.appendChild(teamLink(c.runner_up)); t.appendChild(ru);
+        if (c.third) { var th = el("div", "muted", "3rd place: "); th.appendChild(teamLink(c.third)); t.appendChild(th); }
         box.appendChild(t);
       });
     }
@@ -202,6 +203,7 @@
         { label: "Playoff W-L", value: function (o) { return o.pw - o.pl; }, show: function (o) { return record(o.pw, o.pl, 0); }, num: true },
         { label: "Titles", value: function (o) { return o.titles; }, num: true },
         { label: "Runner-ups", value: function (o) { return o.runner_up; }, num: true },
+        { label: "3rd Place", value: function (o) { return o.third || 0; }, num: true },
         { label: "#1 Picks", value: function (o) { return (o.first_overall || []).length; }, num: true }
       ], rows, 4, "desc");
     }
@@ -235,12 +237,25 @@
           opt.value = o.id;
           filter.appendChild(opt);
         });
+      // Each matchup appears once: A vs B and B vs A share one row
+      var byPair = {};
+      data.rivalries.forEach(function (r) { byPair[r.owner + "|" + r.opponent] = r; });
+      function otherSide(r) { return byPair[r.opponent + "|" + r.owner] || {}; }
+
       function draw() {
-        var rows = data.rivalries.filter(function (r) { return !filter.value || r.owner === filter.value; });
+        var rows;
+        if (filter.value) {
+          rows = data.rivalries.filter(function (r) { return r.owner === filter.value; });
+        } else {
+          rows = data.rivalries.filter(function (r) {
+            return owner(r.owner).team.toLowerCase() <= owner(r.opponent).team.toLowerCase();
+          });
+        }
         table(document.getElementById("rivalry-table"), [
           { label: "Team", value: function (r) { return owner(r.owner).team; }, show: function (r) { return teamLink(r.owner); } },
           { label: "Opponent", value: function (r) { return owner(r.opponent).team; }, show: function (r) { return teamLink(r.opponent); } },
-          { label: "Rival rank", value: function (r) { return -r.rank; }, show: function (r) { return r.rank; }, num: true },
+          { label: "Rival rank (team / opp)", value: function (r) { return -Math.min(r.rank, otherSide(r).rank || 99); },
+            show: function (r) { return r.rank + " / " + (otherSide(r).rank || "-"); }, num: true },
           { label: "Score", value: function (r) { return r.score; }, show: function (r) { return r.score.toFixed(2); }, num: true },
           { label: "Games", value: function (r) { return r.games; }, num: true },
           { label: "Record", value: function (r) { return pct(r.wins, r.losses, r.ties); }, show: function (r) { return record(r.wins, r.losses, r.ties); }, num: true },
