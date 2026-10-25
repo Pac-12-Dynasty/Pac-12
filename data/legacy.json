@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25T18:46+00:00",
+ "generated": "2026-10-25T19:13+00:00",
  "seasons": [
   2023,
   2024,
@@ -23,7 +23,7 @@
    "pf": 6014.74,
    "pa": 5519.46,
    "pw": 0,
-   "pl": 3,
+   "pl": 5,
    "playoffs": 3,
    "titles": 0,
    "runner_up": 0,
@@ -83,7 +83,7 @@
    "t": 0,
    "pf": 6287.02,
    "pa": 5380.82,
-   "pw": 4,
+   "pw": 6,
    "pl": 4,
    "playoffs": 4,
    "titles": 0,
@@ -266,7 +266,7 @@
    "t": 0,
    "pf": 5944.82,
    "pa": 5940.62,
-   "pw": 1,
+   "pw": 3,
    "pl": 2,
    "playoffs": 3,
    "titles": 0,
@@ -450,7 +450,7 @@
    "pf": 5405.36,
    "pa": 5914.58,
    "pw": 0,
-   "pl": 1,
+   "pl": 3,
    "playoffs": 1,
    "titles": 0,
    "runner_up": 0,
@@ -643,8 +643,8 @@
    "t": 0,
    "pf": 4942.88,
    "pa": 5057.14,
-   "pw": 1,
-   "pl": 1,
+   "pw": 2,
+   "pl": 2,
    "playoffs": 1,
    "titles": 0,
    "runner_up": 0,
@@ -695,8 +695,8 @@
    "t": 0,
    "pf": 5090.76,
    "pa": 5864.08,
-   "pw": 1,
-   "pl": 1,
+   "pw": 2,
+   "pl": 2,
    "playoffs": 1,
    "titles": 0,
    "runner_up": 0,
@@ -3611,5 +3611,6632 @@
    "record": "12-1",
    "pf": 1828.74
   }
+ },
+ "franchise_leaders": {
+  "861417814836256768": {
+   "overall": [
+    {
+     "player": "Jahmyr Gibbs",
+     "pos": "RB",
+     "points": 932.3,
+     "games": 46,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jaxon Smith-Njigba",
+     "pos": "WR",
+     "points": 654.96,
+     "games": 35,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Alvin Kamara",
+     "pos": "RB",
+     "points": 613.8,
+     "games": 38,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Garrett Wilson",
+     "pos": "WR",
+     "points": 590.2,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Sam LaPorta",
+     "pos": "TE",
+     "points": 517.3,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "C.J. Stroud",
+     "pos": "QB",
+     "points": 489.04,
+     "games": 30,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Kenneth Walker III",
+     "pos": "RB",
+     "points": 380.0,
+     "games": 27,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Chris Boswell",
+     "pos": "K",
+     "points": 355.0,
+     "games": 35,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Houston Texans",
+     "pos": "DEF",
+     "points": 245.0,
+     "games": 28,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jayden Reed",
+     "pos": "WR",
+     "points": 218.1,
+     "games": 21,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "C.J. Stroud",
+     "pos": "QB",
+     "points": 489.04,
+     "games": 30,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Aaron Rodgers",
+     "pos": "QB",
+     "points": 101.34,
+     "games": 8,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Anthony Richardson Sr.",
+     "pos": "QB",
+     "points": 79.18,
+     "games": 6,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Jordan Love",
+     "pos": "QB",
+     "points": 71.76,
+     "games": 4,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Jacoby Brissett",
+     "pos": "QB",
+     "points": 38.32,
+     "games": 2,
+     "seasons": [
+      2025
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "Jahmyr Gibbs",
+     "pos": "RB",
+     "points": 932.3,
+     "games": 46,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Alvin Kamara",
+     "pos": "RB",
+     "points": 613.8,
+     "games": 38,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Kenneth Walker III",
+     "pos": "RB",
+     "points": 380.0,
+     "games": 27,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Austin Ekeler",
+     "pos": "RB",
+     "points": 157.9,
+     "games": 11,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Najee Harris",
+     "pos": "RB",
+     "points": 130.0,
+     "games": 13,
+     "seasons": [
+      2023,
+      2024
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "Jaxon Smith-Njigba",
+     "pos": "WR",
+     "points": 654.96,
+     "games": 35,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Garrett Wilson",
+     "pos": "WR",
+     "points": 590.2,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jayden Reed",
+     "pos": "WR",
+     "points": 218.1,
+     "games": 21,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Wan'Dale Robinson",
+     "pos": "WR",
+     "points": 177.4,
+     "games": 16,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Marvin Harrison Jr.",
+     "pos": "WR",
+     "points": 171.7,
+     "games": 18,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Sam LaPorta",
+     "pos": "TE",
+     "points": 517.3,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Isaiah Likely",
+     "pos": "TE",
+     "points": 58.4,
+     "games": 6,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Taysom Hill",
+     "pos": "TE",
+     "points": 43.72,
+     "games": 2,
+     "seasons": [
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Luke Musgrave",
+     "pos": "TE",
+     "points": 14.1,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Brock Wright",
+     "pos": "TE",
+     "points": 5.9,
+     "games": 1,
+     "seasons": [
+      2025
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Chris Boswell",
+     "pos": "K",
+     "points": 355.0,
+     "games": 35,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Blake Grupe",
+     "pos": "K",
+     "points": 72.0,
+     "games": 9,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Wil Lutz",
+     "pos": "K",
+     "points": 11.0,
+     "games": 2,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Anders Carlson",
+     "pos": "K",
+     "points": 10.0,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Matt Gay",
+     "pos": "K",
+     "points": 9.0,
+     "games": 1,
+     "seasons": [
+      2025
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "Houston Texans",
+     "pos": "DEF",
+     "points": 245.0,
+     "games": 28,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jacksonville Jaguars",
+     "pos": "DEF",
+     "points": 78.0,
+     "games": 8,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Seattle Seahawks",
+     "pos": "DEF",
+     "points": 39.0,
+     "games": 5,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Green Bay Packers",
+     "pos": "DEF",
+     "points": 39.0,
+     "games": 5,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "New Orleans Saints",
+     "pos": "DEF",
+     "points": 20.0,
+     "games": 2,
+     "seasons": [
+      2024
+     ]
+    }
+   ]
+  },
+  "745458998371008512": {
+   "overall": [
+    {
+     "player": "Josh Allen",
+     "pos": "QB",
+     "points": 1184.78,
+     "games": 52,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Amon-Ra St. Brown",
+     "pos": "WR",
+     "points": 983.78,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "A.J. Brown",
+     "pos": "WR",
+     "points": 692.1,
+     "games": 42,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "De'Von Achane",
+     "pos": "RB",
+     "points": 663.4,
+     "games": 38,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Travis Etienne Jr.",
+     "pos": "RB",
+     "points": 500.7,
+     "games": 34,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Brandon Aubrey",
+     "pos": "K",
+     "points": 499.6,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tony Pollard",
+     "pos": "RB",
+     "points": 417.5,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Joe Mixon",
+     "pos": "RB",
+     "points": 390.0,
+     "games": 22,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Kyle Pitts Sr.",
+     "pos": "TE",
+     "points": 302.8,
+     "games": 35,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Brian Thomas Jr.",
+     "pos": "WR",
+     "points": 269.5,
+     "games": 20,
+     "seasons": [
+      2024,
+      2025
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Josh Allen",
+     "pos": "QB",
+     "points": 1184.78,
+     "games": 52,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Bo Nix",
+     "pos": "QB",
+     "points": 59.38,
+     "games": 2,
+     "seasons": [
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Sam Howell",
+     "pos": "QB",
+     "points": 19.18,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "De'Von Achane",
+     "pos": "RB",
+     "points": 663.4,
+     "games": 38,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Travis Etienne Jr.",
+     "pos": "RB",
+     "points": 500.7,
+     "games": 34,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tony Pollard",
+     "pos": "RB",
+     "points": 417.5,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Joe Mixon",
+     "pos": "RB",
+     "points": 390.0,
+     "games": 22,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Bhayshul Tuten",
+     "pos": "RB",
+     "points": 88.4,
+     "games": 6,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "Amon-Ra St. Brown",
+     "pos": "WR",
+     "points": 983.78,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "A.J. Brown",
+     "pos": "WR",
+     "points": 692.1,
+     "games": 42,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Brian Thomas Jr.",
+     "pos": "WR",
+     "points": 269.5,
+     "games": 20,
+     "seasons": [
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Khalil Shakir",
+     "pos": "WR",
+     "points": 250.6,
+     "games": 23,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Christian Kirk",
+     "pos": "WR",
+     "points": 202.96,
+     "games": 17,
+     "seasons": [
+      2023,
+      2024
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Kyle Pitts Sr.",
+     "pos": "TE",
+     "points": 302.8,
+     "games": 35,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tyler Warren",
+     "pos": "TE",
+     "points": 237.8,
+     "games": 19,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Luke Schoonmaker",
+     "pos": "TE",
+     "points": 14.5,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Tyler Conklin",
+     "pos": "TE",
+     "points": 3.8,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Brandon Aubrey",
+     "pos": "K",
+     "points": 499.6,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Brandon McManus",
+     "pos": "K",
+     "points": 33.0,
+     "games": 4,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Cairo Santos",
+     "pos": "K",
+     "points": 6.0,
+     "games": 1,
+     "seasons": [
+      2025
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "New York Jets",
+     "pos": "DEF",
+     "points": 245.0,
+     "games": 32,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Los Angeles Rams",
+     "pos": "DEF",
+     "points": 93.0,
+     "games": 14,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Las Vegas Raiders",
+     "pos": "DEF",
+     "points": 29.0,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Arizona Cardinals",
+     "pos": "DEF",
+     "points": 15.0,
+     "games": 3,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "San Francisco 49ers",
+     "pos": "DEF",
+     "points": 11.0,
+     "games": 3,
+     "seasons": [
+      2025
+     ]
+    }
+   ]
+  },
+  "995982448825720832": {
+   "overall": [
+    {
+     "player": "Bijan Robinson",
+     "pos": "RB",
+     "points": 922.1,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Trey McBride",
+     "pos": "TE",
+     "points": 697.2,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Justin Herbert",
+     "pos": "QB",
+     "points": 641.06,
+     "games": 38,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Breece Hall",
+     "pos": "RB",
+     "points": 634.46,
+     "games": 47,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "DJ Moore",
+     "pos": "WR",
+     "points": 576.18,
+     "games": 42,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tee Higgins",
+     "pos": "WR",
+     "points": 539.3,
+     "games": 39,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Courtland Sutton",
+     "pos": "WR",
+     "points": 471.6,
+     "games": 36,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Chase Brown",
+     "pos": "RB",
+     "points": 450.3,
+     "games": 29,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Evan Engram",
+     "pos": "TE",
+     "points": 229.8,
+     "games": 20,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Isiah Pacheco",
+     "pos": "RB",
+     "points": 211.5,
+     "games": 15,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Justin Herbert",
+     "pos": "QB",
+     "points": 641.06,
+     "games": 38,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Kyler Murray",
+     "pos": "QB",
+     "points": 193.76,
+     "games": 12,
+     "seasons": [
+      2023,
+      2024,
+      2026
+     ]
+    },
+    {
+     "player": "Jaxson Dart",
+     "pos": "QB",
+     "points": 27.4,
+     "games": 2,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Zach Wilson",
+     "pos": "QB",
+     "points": 8.56,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "Bijan Robinson",
+     "pos": "RB",
+     "points": 922.1,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Breece Hall",
+     "pos": "RB",
+     "points": 634.46,
+     "games": 47,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Chase Brown",
+     "pos": "RB",
+     "points": 450.3,
+     "games": 29,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Isiah Pacheco",
+     "pos": "RB",
+     "points": 211.5,
+     "games": 15,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Kenny Gainwell",
+     "pos": "RB",
+     "points": 26.1,
+     "games": 3,
+     "seasons": [
+      2025,
+      2026
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "DJ Moore",
+     "pos": "WR",
+     "points": 576.18,
+     "games": 42,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tee Higgins",
+     "pos": "WR",
+     "points": 539.3,
+     "games": 39,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Courtland Sutton",
+     "pos": "WR",
+     "points": 471.6,
+     "games": 36,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Parker Washington",
+     "pos": "WR",
+     "points": 91.9,
+     "games": 6,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Quentin Johnston",
+     "pos": "WR",
+     "points": 83.6,
+     "games": 13,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Trey McBride",
+     "pos": "TE",
+     "points": 697.2,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Evan Engram",
+     "pos": "TE",
+     "points": 229.8,
+     "games": 20,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Theo Johnson",
+     "pos": "TE",
+     "points": 19.5,
+     "games": 2,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Jordan Akins",
+     "pos": "TE",
+     "points": 2.0,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Chase McLaughlin",
+     "pos": "K",
+     "points": 169.0,
+     "games": 18,
+     "seasons": [
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Greg Joseph",
+     "pos": "K",
+     "points": 90.0,
+     "games": 14,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Jason Sanders",
+     "pos": "K",
+     "points": 79.0,
+     "games": 7,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Harrison Butker",
+     "pos": "K",
+     "points": 65.0,
+     "games": 8,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Spencer Shrader",
+     "pos": "K",
+     "points": 46.0,
+     "games": 3,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "Los Angeles Rams",
+     "pos": "DEF",
+     "points": 165.0,
+     "games": 20,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Los Angeles Chargers",
+     "pos": "DEF",
+     "points": 82.0,
+     "games": 7,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Tampa Bay Buccaneers",
+     "pos": "DEF",
+     "points": 45.0,
+     "games": 5,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Atlanta Falcons",
+     "pos": "DEF",
+     "points": 30.0,
+     "games": 5,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "New York Giants",
+     "pos": "DEF",
+     "points": 20.0,
+     "games": 4,
+     "seasons": [
+      2023,
+      2024
+     ]
+    }
+   ]
+  },
+  "858765508143628288": {
+   "overall": [
+    {
+     "player": "Patrick Mahomes",
+     "pos": "QB",
+     "points": 900.18,
+     "games": 48,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "George Pickens",
+     "pos": "WR",
+     "points": 688.1,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "George Kittle",
+     "pos": "TE",
+     "points": 617.3,
+     "games": 42,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Deebo Samuel Sr.",
+     "pos": "WR",
+     "points": 453.0,
+     "games": 32,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Aaron Jones Sr.",
+     "pos": "RB",
+     "points": 416.7,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "DeAndre Hopkins",
+     "pos": "WR",
+     "points": 318.8,
+     "games": 29,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Philadelphia Eagles",
+     "pos": "DEF",
+     "points": 288.0,
+     "games": 39,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "David Montgomery",
+     "pos": "RB",
+     "points": 251.82,
+     "games": 21,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "DK Metcalf",
+     "pos": "WR",
+     "points": 239.6,
+     "games": 20,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Kenneth Walker III",
+     "pos": "RB",
+     "points": 217.4,
+     "games": 13,
+     "seasons": [
+      2025,
+      2026
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Patrick Mahomes",
+     "pos": "QB",
+     "points": 900.18,
+     "games": 48,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Kirk Cousins",
+     "pos": "QB",
+     "points": 26.72,
+     "games": 2,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Michael Penix Jr.",
+     "pos": "QB",
+     "points": 25.38,
+     "games": 2,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Spencer Rattler",
+     "pos": "QB",
+     "points": 12.42,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Will Levis",
+     "pos": "QB",
+     "points": 5.96,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "Aaron Jones Sr.",
+     "pos": "RB",
+     "points": 416.7,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "David Montgomery",
+     "pos": "RB",
+     "points": 251.82,
+     "games": 21,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Kenneth Walker III",
+     "pos": "RB",
+     "points": 217.4,
+     "games": 13,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Raheem Mostert",
+     "pos": "RB",
+     "points": 128.5,
+     "games": 14,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Tyler Allgeier",
+     "pos": "RB",
+     "points": 51.2,
+     "games": 8,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "George Pickens",
+     "pos": "WR",
+     "points": 688.1,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Deebo Samuel Sr.",
+     "pos": "WR",
+     "points": 453.0,
+     "games": 32,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "DeAndre Hopkins",
+     "pos": "WR",
+     "points": 318.8,
+     "games": 29,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "DK Metcalf",
+     "pos": "WR",
+     "points": 239.6,
+     "games": 20,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Nico Collins",
+     "pos": "WR",
+     "points": 208.5,
+     "games": 12,
+     "seasons": [
+      2025,
+      2026
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "George Kittle",
+     "pos": "TE",
+     "points": 617.3,
+     "games": 42,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Hunter Henry",
+     "pos": "TE",
+     "points": 55.1,
+     "games": 5,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Mike Gesicki",
+     "pos": "TE",
+     "points": 35.8,
+     "games": 4,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Will Dissly",
+     "pos": "TE",
+     "points": 18.0,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Colby Parkinson",
+     "pos": "TE",
+     "points": 11.3,
+     "games": 1,
+     "seasons": [
+      2025
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Daniel Carlson",
+     "pos": "K",
+     "points": 147.0,
+     "games": 24,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Evan McPherson",
+     "pos": "K",
+     "points": 98.0,
+     "games": 11,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jason Myers",
+     "pos": "K",
+     "points": 93.0,
+     "games": 11,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Jake Moody",
+     "pos": "K",
+     "points": 35.0,
+     "games": 7,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Harrison Butker",
+     "pos": "K",
+     "points": 11.0,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "Philadelphia Eagles",
+     "pos": "DEF",
+     "points": 288.0,
+     "games": 39,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tampa Bay Buccaneers",
+     "pos": "DEF",
+     "points": 51.0,
+     "games": 7,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Detroit Lions",
+     "pos": "DEF",
+     "points": 38.0,
+     "games": 8,
+     "seasons": [
+      2025,
+      2026
+     ]
+    }
+   ]
+  },
+  "733192747346997248": {
+   "overall": [
+    {
+     "player": "Puka Nacua",
+     "pos": "WR",
+     "points": 873.4,
+     "games": 44,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Davante Adams",
+     "pos": "WR",
+     "points": 765.7,
+     "games": 47,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "D'Andre Swift",
+     "pos": "RB",
+     "points": 681.6,
+     "games": 49,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Travis Kelce",
+     "pos": "TE",
+     "points": 635.3,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Christian McCaffrey",
+     "pos": "RB",
+     "points": 574.7,
+     "games": 26,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Baker Mayfield",
+     "pos": "QB",
+     "points": 568.04,
+     "games": 32,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Chris Godwin Jr.",
+     "pos": "WR",
+     "points": 389.0,
+     "games": 28,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Minnesota Vikings",
+     "pos": "DEF",
+     "points": 372.0,
+     "games": 37,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Rico Dowdle",
+     "pos": "RB",
+     "points": 292.4,
+     "games": 21,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "J.K. Dobbins",
+     "pos": "RB",
+     "points": 277.0,
+     "games": 22,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Baker Mayfield",
+     "pos": "QB",
+     "points": 568.04,
+     "games": 32,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Geno Smith",
+     "pos": "QB",
+     "points": 119.94,
+     "games": 10,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Caleb Williams",
+     "pos": "QB",
+     "points": 111.84,
+     "games": 6,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Kirk Cousins",
+     "pos": "QB",
+     "points": 77.06,
+     "games": 4,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Deshaun Watson",
+     "pos": "QB",
+     "points": 32.76,
+     "games": 2,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "D'Andre Swift",
+     "pos": "RB",
+     "points": 681.6,
+     "games": 49,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Christian McCaffrey",
+     "pos": "RB",
+     "points": 574.7,
+     "games": 26,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Rico Dowdle",
+     "pos": "RB",
+     "points": 292.4,
+     "games": 21,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "J.K. Dobbins",
+     "pos": "RB",
+     "points": 277.0,
+     "games": 22,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jordan Mason",
+     "pos": "RB",
+     "points": 138.7,
+     "games": 12,
+     "seasons": [
+      2024,
+      2025
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "Puka Nacua",
+     "pos": "WR",
+     "points": 873.4,
+     "games": 44,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Davante Adams",
+     "pos": "WR",
+     "points": 765.7,
+     "games": 47,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Chris Godwin Jr.",
+     "pos": "WR",
+     "points": 389.0,
+     "games": 28,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Ja'Marr Chase",
+     "pos": "WR",
+     "points": 256.82,
+     "games": 16,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Allen Lazard",
+     "pos": "WR",
+     "points": 57.4,
+     "games": 4,
+     "seasons": [
+      2024
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Travis Kelce",
+     "pos": "TE",
+     "points": 635.3,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Harold Fannin Jr.",
+     "pos": "TE",
+     "points": 88.0,
+     "games": 10,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Logan Thomas",
+     "pos": "TE",
+     "points": 9.0,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Brenton Strange",
+     "pos": "TE",
+     "points": 2.1,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Noah Fant",
+     "pos": "TE",
+     "points": 0.0,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Jake Bates",
+     "pos": "K",
+     "points": 230.0,
+     "games": 26,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Dustin Hopkins",
+     "pos": "K",
+     "points": 103.0,
+     "games": 14,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Austin Seibert",
+     "pos": "K",
+     "points": 58.0,
+     "games": 5,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Chris Boswell",
+     "pos": "K",
+     "points": 45.0,
+     "games": 5,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Brett Maher",
+     "pos": "K",
+     "points": 16.0,
+     "games": 2,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "Minnesota Vikings",
+     "pos": "DEF",
+     "points": 372.0,
+     "games": 37,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Detroit Lions",
+     "pos": "DEF",
+     "points": 67.0,
+     "games": 10,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "New England Patriots",
+     "pos": "DEF",
+     "points": 27.0,
+     "games": 4,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Los Angeles Chargers",
+     "pos": "DEF",
+     "points": 8.0,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Las Vegas Raiders",
+     "pos": "DEF",
+     "points": 1.0,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ]
+  },
+  "908808510823997440": {
+   "overall": [
+    {
+     "player": "Jonathan Taylor",
+     "pos": "RB",
+     "points": 823.4,
+     "games": 44,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Mike Evans",
+     "pos": "WR",
+     "points": 593.3,
+     "games": 37,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Chuba Hubbard",
+     "pos": "RB",
+     "points": 530.0,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jaylen Waddle",
+     "pos": "WR",
+     "points": 510.72,
+     "games": 44,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jordan Love",
+     "pos": "QB",
+     "points": 404.52,
+     "games": 24,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Matthew Stafford",
+     "pos": "QB",
+     "points": 341.14,
+     "games": 19,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tetairoa McMillan",
+     "pos": "WR",
+     "points": 290.0,
+     "games": 22,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jake Elliott",
+     "pos": "K",
+     "points": 283.0,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Kansas City Chiefs",
+     "pos": "DEF",
+     "points": 263.0,
+     "games": 32,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Mark Andrews",
+     "pos": "TE",
+     "points": 249.1,
+     "games": 25,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Jordan Love",
+     "pos": "QB",
+     "points": 404.52,
+     "games": 24,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Matthew Stafford",
+     "pos": "QB",
+     "points": 341.14,
+     "games": 19,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Trevor Lawrence",
+     "pos": "QB",
+     "points": 169.06,
+     "games": 11,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Brock Purdy",
+     "pos": "QB",
+     "points": 60.18,
+     "games": 3,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "Jonathan Taylor",
+     "pos": "RB",
+     "points": 823.4,
+     "games": 44,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Chuba Hubbard",
+     "pos": "RB",
+     "points": 530.0,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Cam Skattebo",
+     "pos": "RB",
+     "points": 138.1,
+     "games": 11,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Miles Sanders",
+     "pos": "RB",
+     "points": 47.1,
+     "games": 6,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Dameon Pierce",
+     "pos": "RB",
+     "points": 27.2,
+     "games": 6,
+     "seasons": [
+      2023,
+      2024
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "Mike Evans",
+     "pos": "WR",
+     "points": 593.3,
+     "games": 37,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jaylen Waddle",
+     "pos": "WR",
+     "points": 510.72,
+     "games": 44,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tetairoa McMillan",
+     "pos": "WR",
+     "points": 290.0,
+     "games": 22,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Rashee Rice",
+     "pos": "WR",
+     "points": 248.7,
+     "games": 17,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Rome Odunze",
+     "pos": "WR",
+     "points": 225.9,
+     "games": 27,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Mark Andrews",
+     "pos": "TE",
+     "points": 249.1,
+     "games": 25,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tucker Kraft",
+     "pos": "TE",
+     "points": 234.0,
+     "games": 21,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Dalton Schultz",
+     "pos": "TE",
+     "points": 217.9,
+     "games": 23,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Brevin Jordan",
+     "pos": "TE",
+     "points": 15.9,
+     "games": 2,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Jake Elliott",
+     "pos": "K",
+     "points": 283.0,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Jason Myers",
+     "pos": "K",
+     "points": 178.0,
+     "games": 15,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Blake Grupe",
+     "pos": "K",
+     "points": 37.0,
+     "games": 7,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Nick Folk",
+     "pos": "K",
+     "points": 16.0,
+     "games": 2,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "Kansas City Chiefs",
+     "pos": "DEF",
+     "points": 263.0,
+     "games": 32,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Baltimore Ravens",
+     "pos": "DEF",
+     "points": 109.0,
+     "games": 15,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Cincinnati Bengals",
+     "pos": "DEF",
+     "points": 70.0,
+     "games": 10,
+     "seasons": [
+      2023,
+      2024
+     ]
+    }
+   ]
+  },
+  "909255939126161408": {
+   "overall": [
+    {
+     "player": "CeeDee Lamb",
+     "pos": "WR",
+     "points": 904.4,
+     "games": 46,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "DeVonta Smith",
+     "pos": "WR",
+     "points": 597.0,
+     "games": 43,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Josh Jacobs",
+     "pos": "RB",
+     "points": 580.8,
+     "games": 34,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Brock Purdy",
+     "pos": "QB",
+     "points": 470.44,
+     "games": 25,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jordan Addison",
+     "pos": "WR",
+     "points": 442.0,
+     "games": 34,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Rachaad White",
+     "pos": "RB",
+     "points": 427.0,
+     "games": 30,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jake Ferguson",
+     "pos": "TE",
+     "points": 402.4,
+     "games": 37,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Cameron Dicker",
+     "pos": "K",
+     "points": 334.0,
+     "games": 38,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Chris Olave",
+     "pos": "WR",
+     "points": 318.3,
+     "games": 22,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Chicago Bears",
+     "pos": "DEF",
+     "points": 188.0,
+     "games": 24,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Brock Purdy",
+     "pos": "QB",
+     "points": 470.44,
+     "games": 25,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Kirk Cousins",
+     "pos": "QB",
+     "points": 168.62,
+     "games": 11,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Daniel Jones",
+     "pos": "QB",
+     "points": 118.66,
+     "games": 8,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Joshua Dobbs",
+     "pos": "QB",
+     "points": 46.56,
+     "games": 3,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Derek Carr",
+     "pos": "QB",
+     "points": 16.74,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "Josh Jacobs",
+     "pos": "RB",
+     "points": 580.8,
+     "games": 34,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Rachaad White",
+     "pos": "RB",
+     "points": 427.0,
+     "games": 30,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "TreVeyon Henderson",
+     "pos": "RB",
+     "points": 181.7,
+     "games": 14,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Brian Robinson Jr.",
+     "pos": "RB",
+     "points": 162.8,
+     "games": 12,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Devin Singletary",
+     "pos": "RB",
+     "points": 76.8,
+     "games": 8,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "CeeDee Lamb",
+     "pos": "WR",
+     "points": 904.4,
+     "games": 46,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "DeVonta Smith",
+     "pos": "WR",
+     "points": 597.0,
+     "games": 43,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jordan Addison",
+     "pos": "WR",
+     "points": 442.0,
+     "games": 34,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Chris Olave",
+     "pos": "WR",
+     "points": 318.3,
+     "games": 22,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Christian Watson",
+     "pos": "WR",
+     "points": 187.2,
+     "games": 15,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Jake Ferguson",
+     "pos": "TE",
+     "points": 402.4,
+     "games": 37,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Cade Otton",
+     "pos": "TE",
+     "points": 79.6,
+     "games": 9,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Zach Ertz",
+     "pos": "TE",
+     "points": 9.1,
+     "games": 2,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Greg Dulcich",
+     "pos": "TE",
+     "points": 4.2,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Mason Taylor",
+     "pos": "TE",
+     "points": 1.4,
+     "games": 1,
+     "seasons": [
+      2025
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Cameron Dicker",
+     "pos": "K",
+     "points": 334.0,
+     "games": 38,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jason Sanders",
+     "pos": "K",
+     "points": 82.0,
+     "games": 9,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Tyler Loop",
+     "pos": "K",
+     "points": 24.0,
+     "games": 3,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Wil Lutz",
+     "pos": "K",
+     "points": 22.0,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Andy Borregales",
+     "pos": "K",
+     "points": 18.0,
+     "games": 1,
+     "seasons": [
+      2025
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "Chicago Bears",
+     "pos": "DEF",
+     "points": 188.0,
+     "games": 24,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Indianapolis Colts",
+     "pos": "DEF",
+     "points": 165.0,
+     "games": 20,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Miami Dolphins",
+     "pos": "DEF",
+     "points": 79.0,
+     "games": 6,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Green Bay Packers",
+     "pos": "DEF",
+     "points": 19.0,
+     "games": 2,
+     "seasons": [
+      2023
+     ]
+    }
+   ]
+  },
+  "861421486488031232": {
+   "overall": [
+    {
+     "player": "Keenan Allen",
+     "pos": "WR",
+     "points": 516.36,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Stefon Diggs",
+     "pos": "WR",
+     "points": 481.42,
+     "games": 32,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Michael Pittman Jr.",
+     "pos": "WR",
+     "points": 434.5,
+     "games": 37,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jakobi Meyers",
+     "pos": "WR",
+     "points": 419.68,
+     "games": 34,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Pittsburgh Steelers",
+     "pos": "DEF",
+     "points": 414.0,
+     "games": 45,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Dak Prescott",
+     "pos": "QB",
+     "points": 407.82,
+     "games": 20,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Rhamondre Stevenson",
+     "pos": "RB",
+     "points": 355.8,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Drake Maye",
+     "pos": "QB",
+     "points": 346.74,
+     "games": 18,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "David Montgomery",
+     "pos": "RB",
+     "points": 298.32,
+     "games": 19,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Brandon Aiyuk",
+     "pos": "WR",
+     "points": 289.5,
+     "games": 21,
+     "seasons": [
+      2023,
+      2024
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Dak Prescott",
+     "pos": "QB",
+     "points": 407.82,
+     "games": 20,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Drake Maye",
+     "pos": "QB",
+     "points": 346.74,
+     "games": 18,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Justin Fields",
+     "pos": "QB",
+     "points": 182.46,
+     "games": 9,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Russell Wilson",
+     "pos": "QB",
+     "points": 78.88,
+     "games": 5,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Gardner Minshew II",
+     "pos": "QB",
+     "points": 36.68,
+     "games": 2,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "Rhamondre Stevenson",
+     "pos": "RB",
+     "points": 355.8,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "David Montgomery",
+     "pos": "RB",
+     "points": 298.32,
+     "games": 19,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Zach Charbonnet",
+     "pos": "RB",
+     "points": 166.8,
+     "games": 18,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Omarion Hampton",
+     "pos": "RB",
+     "points": 113.5,
+     "games": 7,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Tony Pollard",
+     "pos": "RB",
+     "points": 104.6,
+     "games": 11,
+     "seasons": [
+      2025,
+      2026
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "Keenan Allen",
+     "pos": "WR",
+     "points": 516.36,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Stefon Diggs",
+     "pos": "WR",
+     "points": 481.42,
+     "games": 32,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Michael Pittman Jr.",
+     "pos": "WR",
+     "points": 434.5,
+     "games": 37,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jakobi Meyers",
+     "pos": "WR",
+     "points": 419.68,
+     "games": 34,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Brandon Aiyuk",
+     "pos": "WR",
+     "points": 289.5,
+     "games": 21,
+     "seasons": [
+      2023,
+      2024
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "David Njoku",
+     "pos": "TE",
+     "points": 272.0,
+     "games": 24,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Colston Loveland",
+     "pos": "TE",
+     "points": 159.2,
+     "games": 16,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Pat Freiermuth",
+     "pos": "TE",
+     "points": 152.1,
+     "games": 19,
+     "seasons": [
+      2023,
+      2024,
+      2026
+     ]
+    },
+    {
+     "player": "Gerald Everett",
+     "pos": "TE",
+     "points": 10.8,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Juwan Johnson",
+     "pos": "TE",
+     "points": 4.2,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Ka'imi Fairbairn",
+     "pos": "K",
+     "points": 205.0,
+     "games": 22,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tyler Bass",
+     "pos": "K",
+     "points": 149.0,
+     "games": 18,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Michael Badgley",
+     "pos": "K",
+     "points": 44.0,
+     "games": 9,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Riley Patterson",
+     "pos": "K",
+     "points": 23.0,
+     "games": 4,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Chris Boswell",
+     "pos": "K",
+     "points": 8.0,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "Pittsburgh Steelers",
+     "pos": "DEF",
+     "points": 414.0,
+     "games": 45,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tennessee Titans",
+     "pos": "DEF",
+     "points": 23.0,
+     "games": 2,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Las Vegas Raiders",
+     "pos": "DEF",
+     "points": 14.0,
+     "games": 2,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Green Bay Packers",
+     "pos": "DEF",
+     "points": 9.0,
+     "games": 2,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Cleveland Browns",
+     "pos": "DEF",
+     "points": 9.0,
+     "games": 1,
+     "seasons": [
+      2025
+     ]
+    }
+   ]
+  },
+  "731283214563422208": {
+   "overall": [
+    {
+     "player": "Jalen Hurts",
+     "pos": "QB",
+     "points": 1045.48,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Drake London",
+     "pos": "WR",
+     "points": 598.4,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "James Conner",
+     "pos": "RB",
+     "points": 428.8,
+     "games": 29,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Dallas Goedert",
+     "pos": "TE",
+     "points": 411.1,
+     "games": 37,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Javonte Williams",
+     "pos": "RB",
+     "points": 372.6,
+     "games": 26,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Cooper Kupp",
+     "pos": "WR",
+     "points": 330.1,
+     "games": 22,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Derrick Henry",
+     "pos": "RB",
+     "points": 282.96,
+     "games": 19,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Justin Tucker",
+     "pos": "K",
+     "points": 257.0,
+     "games": 30,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "RJ Harvey",
+     "pos": "RB",
+     "points": 233.7,
+     "games": 21,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tyler Lockett",
+     "pos": "WR",
+     "points": 229.5,
+     "games": 26,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Jalen Hurts",
+     "pos": "QB",
+     "points": 1045.48,
+     "games": 50,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Tyler Shough",
+     "pos": "QB",
+     "points": 36.2,
+     "games": 2,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jared Goff",
+     "pos": "QB",
+     "points": 21.12,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Deshaun Watson",
+     "pos": "QB",
+     "points": 8.4,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "James Conner",
+     "pos": "RB",
+     "points": 428.8,
+     "games": 29,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Javonte Williams",
+     "pos": "RB",
+     "points": 372.6,
+     "games": 26,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Derrick Henry",
+     "pos": "RB",
+     "points": 282.96,
+     "games": 19,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "RJ Harvey",
+     "pos": "RB",
+     "points": 233.7,
+     "games": 21,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Alexander Mattison",
+     "pos": "RB",
+     "points": 191.9,
+     "games": 19,
+     "seasons": [
+      2023,
+      2024
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "Drake London",
+     "pos": "WR",
+     "points": 598.4,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Cooper Kupp",
+     "pos": "WR",
+     "points": 330.1,
+     "games": 22,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Tyler Lockett",
+     "pos": "WR",
+     "points": 229.5,
+     "games": 26,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Terry McLaurin",
+     "pos": "WR",
+     "points": 212.5,
+     "games": 17,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Tank Dell",
+     "pos": "WR",
+     "points": 206.1,
+     "games": 19,
+     "seasons": [
+      2023,
+      2024
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Dallas Goedert",
+     "pos": "TE",
+     "points": 411.1,
+     "games": 37,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Cole Kmet",
+     "pos": "TE",
+     "points": 93.5,
+     "games": 16,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Mike Gesicki",
+     "pos": "TE",
+     "points": 33.1,
+     "games": 3,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Noah Gray",
+     "pos": "TE",
+     "points": 27.3,
+     "games": 3,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Tyler Conklin",
+     "pos": "TE",
+     "points": 6.5,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Justin Tucker",
+     "pos": "K",
+     "points": 257.0,
+     "games": 30,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Will Reichard",
+     "pos": "K",
+     "points": 206.0,
+     "games": 20,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Matt Gay",
+     "pos": "K",
+     "points": 14.0,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Trey Smack",
+     "pos": "K",
+     "points": 12.0,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Nick Folk",
+     "pos": "K",
+     "points": 7.0,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "Buffalo Bills",
+     "pos": "DEF",
+     "points": 228.0,
+     "games": 22,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "New Orleans Saints",
+     "pos": "DEF",
+     "points": 85.0,
+     "games": 9,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "San Francisco 49ers",
+     "pos": "DEF",
+     "points": 51.0,
+     "games": 7,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Dallas Cowboys",
+     "pos": "DEF",
+     "points": 36.0,
+     "games": 2,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Atlanta Falcons",
+     "pos": "DEF",
+     "points": 29.0,
+     "games": 2,
+     "seasons": [
+      2023
+     ]
+    }
+   ]
+  },
+  "915765963616985088": {
+   "overall": [
+    {
+     "player": "Lamar Jackson",
+     "pos": "QB",
+     "points": 975.76,
+     "games": 46,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Zay Flowers",
+     "pos": "WR",
+     "points": 648.9,
+     "games": 49,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Derrick Henry",
+     "pos": "RB",
+     "points": 564.0,
+     "games": 33,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Brock Bowers",
+     "pos": "TE",
+     "points": 483.6,
+     "games": 30,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Justin Jefferson",
+     "pos": "WR",
+     "points": 464.28,
+     "games": 26,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Malik Nabers",
+     "pos": "WR",
+     "points": 400.8,
+     "games": 23,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "James Cook III",
+     "pos": "RB",
+     "points": 310.7,
+     "games": 18,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Denver Broncos",
+     "pos": "DEF",
+     "points": 303.0,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Harrison Butker",
+     "pos": "K",
+     "points": 272.0,
+     "games": 31,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Chris Olave",
+     "pos": "WR",
+     "points": 260.1,
+     "games": 20,
+     "seasons": [
+      2023,
+      2024
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Lamar Jackson",
+     "pos": "QB",
+     "points": 975.76,
+     "games": 46,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Bryce Young",
+     "pos": "QB",
+     "points": 60.84,
+     "games": 4,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jameis Winston",
+     "pos": "QB",
+     "points": 25.74,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Joe Flacco",
+     "pos": "QB",
+     "points": 24.32,
+     "games": 1,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Russell Wilson",
+     "pos": "QB",
+     "points": 15.84,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "Derrick Henry",
+     "pos": "RB",
+     "points": 564.0,
+     "games": 33,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "James Cook III",
+     "pos": "RB",
+     "points": 310.7,
+     "games": 18,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Javonte Williams",
+     "pos": "RB",
+     "points": 161.2,
+     "games": 18,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Kareem Hunt",
+     "pos": "RB",
+     "points": 136.7,
+     "games": 11,
+     "seasons": [
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Raheem Mostert",
+     "pos": "RB",
+     "points": 117.4,
+     "games": 6,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "Zay Flowers",
+     "pos": "WR",
+     "points": 648.9,
+     "games": 49,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Justin Jefferson",
+     "pos": "WR",
+     "points": 464.28,
+     "games": 26,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Malik Nabers",
+     "pos": "WR",
+     "points": 400.8,
+     "games": 23,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Chris Olave",
+     "pos": "WR",
+     "points": 260.1,
+     "games": 20,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Terry McLaurin",
+     "pos": "WR",
+     "points": 236.8,
+     "games": 16,
+     "seasons": [
+      2024,
+      2025
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Brock Bowers",
+     "pos": "TE",
+     "points": 483.6,
+     "games": 30,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "T.J. Hockenson",
+     "pos": "TE",
+     "points": 212.0,
+     "games": 15,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Darren Waller",
+     "pos": "TE",
+     "points": 46.3,
+     "games": 4,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Michael Mayer",
+     "pos": "TE",
+     "points": 27.2,
+     "games": 3,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Hunter Henry",
+     "pos": "TE",
+     "points": 24.9,
+     "games": 5,
+     "seasons": [
+      2023,
+      2024
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Harrison Butker",
+     "pos": "K",
+     "points": 272.0,
+     "games": 31,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Chase McLaughlin",
+     "pos": "K",
+     "points": 109.0,
+     "games": 12,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Brandon McManus",
+     "pos": "K",
+     "points": 55.0,
+     "games": 6,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Jake Moody",
+     "pos": "K",
+     "points": 26.0,
+     "games": 3,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Cairo Santos",
+     "pos": "K",
+     "points": 4.0,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "Denver Broncos",
+     "pos": "DEF",
+     "points": 303.0,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Baltimore Ravens",
+     "pos": "DEF",
+     "points": 81.0,
+     "games": 7,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Los Angeles Chargers",
+     "pos": "DEF",
+     "points": 58.0,
+     "games": 8,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Cleveland Browns",
+     "pos": "DEF",
+     "points": 23.0,
+     "games": 4,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Detroit Lions",
+     "pos": "DEF",
+     "points": 10.0,
+     "games": 1,
+     "seasons": [
+      2024
+     ]
+    }
+   ]
+  },
+  "853109226401288192": {
+   "overall": [
+    {
+     "player": "Saquon Barkley",
+     "pos": "RB",
+     "points": 730.9,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Kyren Williams",
+     "pos": "RB",
+     "points": 659.9,
+     "games": 38,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Tyreek Hill",
+     "pos": "WR",
+     "points": 590.4,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "James Cook III",
+     "pos": "RB",
+     "points": 503.7,
+     "games": 31,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Joe Burrow",
+     "pos": "QB",
+     "points": 355.92,
+     "games": 17,
+     "seasons": [
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Dalton Kincaid",
+     "pos": "TE",
+     "points": 319.8,
+     "games": 35,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Tua Tagovailoa",
+     "pos": "QB",
+     "points": 309.14,
+     "games": 18,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Amari Cooper",
+     "pos": "WR",
+     "points": 277.2,
+     "games": 26,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Jaylen Warren",
+     "pos": "RB",
+     "points": 244.2,
+     "games": 21,
+     "seasons": [
+      2023,
+      2025
+     ]
+    },
+    {
+     "player": "Younghoe Koo",
+     "pos": "K",
+     "points": 210.0,
+     "games": 27,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Joe Burrow",
+     "pos": "QB",
+     "points": 355.92,
+     "games": 17,
+     "seasons": [
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Tua Tagovailoa",
+     "pos": "QB",
+     "points": 309.14,
+     "games": 18,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Jared Goff",
+     "pos": "QB",
+     "points": 182.9,
+     "games": 11,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Mac Jones",
+     "pos": "QB",
+     "points": 7.3,
+     "games": 1,
+     "seasons": [
+      2023
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "Saquon Barkley",
+     "pos": "RB",
+     "points": 730.9,
+     "games": 41,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Kyren Williams",
+     "pos": "RB",
+     "points": 659.9,
+     "games": 38,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "James Cook III",
+     "pos": "RB",
+     "points": 503.7,
+     "games": 31,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Jaylen Warren",
+     "pos": "RB",
+     "points": 244.2,
+     "games": 21,
+     "seasons": [
+      2023,
+      2025
+     ]
+    },
+    {
+     "player": "Tyrone Tracy Jr.",
+     "pos": "RB",
+     "points": 166.7,
+     "games": 14,
+     "seasons": [
+      2024,
+      2025
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "Tyreek Hill",
+     "pos": "WR",
+     "points": 590.4,
+     "games": 33,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Amari Cooper",
+     "pos": "WR",
+     "points": 277.2,
+     "games": 26,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Marquise Brown",
+     "pos": "WR",
+     "points": 157.7,
+     "games": 18,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Justin Jefferson",
+     "pos": "WR",
+     "points": 135.7,
+     "games": 12,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Rashod Bateman",
+     "pos": "WR",
+     "points": 74.7,
+     "games": 8,
+     "seasons": [
+      2024,
+      2025
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Dalton Kincaid",
+     "pos": "TE",
+     "points": 319.8,
+     "games": 35,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "T.J. Hockenson",
+     "pos": "TE",
+     "points": 54.5,
+     "games": 7,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Tyler Higbee",
+     "pos": "TE",
+     "points": 25.4,
+     "games": 5,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Colby Parkinson",
+     "pos": "TE",
+     "points": 14.2,
+     "games": 2,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Jake Tonges",
+     "pos": "TE",
+     "points": 11.8,
+     "games": 1,
+     "seasons": [
+      2025
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Younghoe Koo",
+     "pos": "K",
+     "points": 210.0,
+     "games": 27,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Matt Prater",
+     "pos": "K",
+     "points": 50.0,
+     "games": 8,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Jason Myers",
+     "pos": "K",
+     "points": 41.0,
+     "games": 5,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Eddy Pineiro",
+     "pos": "K",
+     "points": 25.0,
+     "games": 4,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Parker Romo",
+     "pos": "K",
+     "points": 18.0,
+     "games": 1,
+     "seasons": [
+      2025
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "Dallas Cowboys",
+     "pos": "DEF",
+     "points": 162.0,
+     "games": 16,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Cleveland Browns",
+     "pos": "DEF",
+     "points": 85.0,
+     "games": 8,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Green Bay Packers",
+     "pos": "DEF",
+     "points": 70.0,
+     "games": 7,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "New England Patriots",
+     "pos": "DEF",
+     "points": 66.0,
+     "games": 8,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Seattle Seahawks",
+     "pos": "DEF",
+     "points": 46.0,
+     "games": 5,
+     "seasons": [
+      2025
+     ]
+    }
+   ]
+  },
+  "861422415547318272": {
+   "overall": [
+    {
+     "player": "Ja'Marr Chase",
+     "pos": "WR",
+     "points": 747.3,
+     "games": 36,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Bucky Irving",
+     "pos": "RB",
+     "points": 441.3,
+     "games": 31,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Jayden Daniels",
+     "pos": "QB",
+     "points": 421.02,
+     "games": 22,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Nico Collins",
+     "pos": "WR",
+     "points": 394.4,
+     "games": 26,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Christian McCaffrey",
+     "pos": "RB",
+     "points": 375.0,
+     "games": 16,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Ashton Jeanty",
+     "pos": "RB",
+     "points": 333.1,
+     "games": 22,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Calvin Ridley",
+     "pos": "WR",
+     "points": 302.0,
+     "games": 23,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "DK Metcalf",
+     "pos": "WR",
+     "points": 288.6,
+     "games": 24,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "San Francisco 49ers",
+     "pos": "DEF",
+     "points": 229.0,
+     "games": 25,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Evan McPherson",
+     "pos": "K",
+     "points": 203.0,
+     "games": 30,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Jayden Daniels",
+     "pos": "QB",
+     "points": 421.02,
+     "games": 22,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Joe Burrow",
+     "pos": "QB",
+     "points": 172.44,
+     "games": 15,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Sam Darnold",
+     "pos": "QB",
+     "points": 94.54,
+     "games": 8,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Joe Flacco",
+     "pos": "QB",
+     "points": 64.34,
+     "games": 3,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Aaron Rodgers",
+     "pos": "QB",
+     "points": 47.72,
+     "games": 3,
+     "seasons": [
+      2024
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "Bucky Irving",
+     "pos": "RB",
+     "points": 441.3,
+     "games": 31,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Christian McCaffrey",
+     "pos": "RB",
+     "points": 375.0,
+     "games": 16,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Ashton Jeanty",
+     "pos": "RB",
+     "points": 333.1,
+     "games": 22,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Kareem Hunt",
+     "pos": "RB",
+     "points": 100.3,
+     "games": 11,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Omarion Hampton",
+     "pos": "RB",
+     "points": 57.5,
+     "games": 6,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "Ja'Marr Chase",
+     "pos": "WR",
+     "points": 747.3,
+     "games": 36,
+     "seasons": [
+      2024,
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Nico Collins",
+     "pos": "WR",
+     "points": 394.4,
+     "games": 26,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Calvin Ridley",
+     "pos": "WR",
+     "points": 302.0,
+     "games": 23,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "DK Metcalf",
+     "pos": "WR",
+     "points": 288.6,
+     "games": 24,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Rashee Rice",
+     "pos": "WR",
+     "points": 188.1,
+     "games": 12,
+     "seasons": [
+      2025,
+      2026
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Jonnu Smith",
+     "pos": "TE",
+     "points": 189.2,
+     "games": 15,
+     "seasons": [
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Darren Waller",
+     "pos": "TE",
+     "points": 80.4,
+     "games": 13,
+     "seasons": [
+      2023
+     ]
+    },
+    {
+     "player": "Juwan Johnson",
+     "pos": "TE",
+     "points": 64.1,
+     "games": 9,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Zach Ertz",
+     "pos": "TE",
+     "points": 60.2,
+     "games": 7,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Oronde Gadsden",
+     "pos": "TE",
+     "points": 56.8,
+     "games": 8,
+     "seasons": [
+      2025,
+      2026
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Evan McPherson",
+     "pos": "K",
+     "points": 203.0,
+     "games": 30,
+     "seasons": [
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "Cam Little",
+     "pos": "K",
+     "points": 137.0,
+     "games": 16,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Matthew Wright",
+     "pos": "K",
+     "points": 29.0,
+     "games": 2,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Cade York",
+     "pos": "K",
+     "points": 18.0,
+     "games": 3,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Spencer Shrader",
+     "pos": "K",
+     "points": 15.0,
+     "games": 2,
+     "seasons": [
+      2024,
+      2025
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "San Francisco 49ers",
+     "pos": "DEF",
+     "points": 229.0,
+     "games": 25,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Seattle Seahawks",
+     "pos": "DEF",
+     "points": 84.0,
+     "games": 10,
+     "seasons": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "player": "Washington Commanders",
+     "pos": "DEF",
+     "points": 75.0,
+     "games": 12,
+     "seasons": [
+      2024,
+      2025
+     ]
+    },
+    {
+     "player": "New York Giants",
+     "pos": "DEF",
+     "points": 24.0,
+     "games": 9,
+     "seasons": [
+      2025
+     ]
+    }
+   ]
+  },
+  "1416188424762720256": {
+   "overall": [
+    {
+     "player": "Kyren Williams",
+     "pos": "RB",
+     "points": 119.0,
+     "games": 6,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Jaylen Warren",
+     "pos": "RB",
+     "points": 82.2,
+     "games": 5,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Joe Burrow",
+     "pos": "QB",
+     "points": 76.64,
+     "games": 4,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Justin Jefferson",
+     "pos": "WR",
+     "points": 63.7,
+     "games": 4,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Devaughn Vele",
+     "pos": "WR",
+     "points": 62.8,
+     "games": 5,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Dalton Kincaid",
+     "pos": "TE",
+     "points": 60.5,
+     "games": 6,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "T.J. Hockenson",
+     "pos": "TE",
+     "points": 40.2,
+     "games": 3,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Eddy Pineiro",
+     "pos": "K",
+     "points": 36.0,
+     "games": 6,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "New England Patriots",
+     "pos": "DEF",
+     "points": 34.0,
+     "games": 4,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Dontayvion Wicks",
+     "pos": "WR",
+     "points": 33.7,
+     "games": 4,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Joe Burrow",
+     "pos": "QB",
+     "points": 76.64,
+     "games": 4,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Jared Goff",
+     "pos": "QB",
+     "points": 28.94,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Geno Smith",
+     "pos": "QB",
+     "points": 11.98,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "Kyren Williams",
+     "pos": "RB",
+     "points": 119.0,
+     "games": 6,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Jaylen Warren",
+     "pos": "RB",
+     "points": 82.2,
+     "games": 5,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Saquon Barkley",
+     "pos": "RB",
+     "points": 23.0,
+     "games": 4,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Emmett Johnson",
+     "pos": "RB",
+     "points": 4.4,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "Justin Jefferson",
+     "pos": "WR",
+     "points": 63.7,
+     "games": 4,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Devaughn Vele",
+     "pos": "WR",
+     "points": 62.8,
+     "games": 5,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Dontayvion Wicks",
+     "pos": "WR",
+     "points": 33.7,
+     "games": 4,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Malik Washington",
+     "pos": "WR",
+     "points": 12.1,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Rashod Bateman",
+     "pos": "WR",
+     "points": 5.7,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Dalton Kincaid",
+     "pos": "TE",
+     "points": 60.5,
+     "games": 6,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "T.J. Hockenson",
+     "pos": "TE",
+     "points": 40.2,
+     "games": 3,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Cade Otton",
+     "pos": "TE",
+     "points": 1.4,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Eddy Pineiro",
+     "pos": "K",
+     "points": 36.0,
+     "games": 6,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "New England Patriots",
+     "pos": "DEF",
+     "points": 34.0,
+     "games": 4,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Jacksonville Jaguars",
+     "pos": "DEF",
+     "points": 3.0,
+     "games": 2,
+     "seasons": [
+      2026
+     ]
+    }
+   ]
+  }
+ },
+ "league_leaders": {
+  "overall": [
+   {
+    "player": "Josh Allen",
+    "pos": "QB",
+    "points": 1184.78,
+    "games": 52,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "745458998371008512"
+    ]
+   },
+   {
+    "player": "Jalen Hurts",
+    "pos": "QB",
+    "points": 1045.48,
+    "games": 50,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "731283214563422208"
+    ]
+   },
+   {
+    "player": "Ja'Marr Chase",
+    "pos": "WR",
+    "points": 1004.12,
+    "games": 52,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248",
+     "861422415547318272"
+    ]
+   },
+   {
+    "player": "Amon-Ra St. Brown",
+    "pos": "WR",
+    "points": 983.78,
+    "games": 50,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "745458998371008512"
+    ]
+   },
+   {
+    "player": "Lamar Jackson",
+    "pos": "QB",
+    "points": 975.76,
+    "games": 46,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "Christian McCaffrey",
+    "pos": "RB",
+    "points": 949.7,
+    "games": 42,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248",
+     "861422415547318272"
+    ]
+   },
+   {
+    "player": "Jahmyr Gibbs",
+    "pos": "RB",
+    "points": 932.3,
+    "games": 46,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "861417814836256768"
+    ]
+   },
+   {
+    "player": "Bijan Robinson",
+    "pos": "RB",
+    "points": 922.1,
+    "games": 50,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "995982448825720832"
+    ]
+   },
+   {
+    "player": "CeeDee Lamb",
+    "pos": "WR",
+    "points": 904.4,
+    "games": 46,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "909255939126161408"
+    ]
+   },
+   {
+    "player": "Patrick Mahomes",
+    "pos": "QB",
+    "points": 900.18,
+    "games": 48,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "858765508143628288"
+    ]
+   },
+   {
+    "player": "Puka Nacua",
+    "pos": "WR",
+    "points": 873.4,
+    "games": 44,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248"
+    ]
+   },
+   {
+    "player": "Derrick Henry",
+    "pos": "RB",
+    "points": 846.96,
+    "games": 52,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "731283214563422208",
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "Jonathan Taylor",
+    "pos": "RB",
+    "points": 823.4,
+    "games": 44,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "908808510823997440"
+    ]
+   },
+   {
+    "player": "James Cook III",
+    "pos": "RB",
+    "points": 814.4,
+    "games": 49,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "853109226401288192",
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "Kyren Williams",
+    "pos": "RB",
+    "points": 778.9,
+    "games": 44,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "1416188424762720256",
+     "853109226401288192"
+    ]
+   },
+   {
+    "player": "Davante Adams",
+    "pos": "WR",
+    "points": 765.7,
+    "games": 47,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248"
+    ]
+   },
+   {
+    "player": "Saquon Barkley",
+    "pos": "RB",
+    "points": 753.9,
+    "games": 45,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "1416188424762720256",
+     "853109226401288192"
+    ]
+   },
+   {
+    "player": "A.J. Brown",
+    "pos": "WR",
+    "points": 713.9,
+    "games": 44,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "745458998371008512",
+     "861421486488031232"
+    ]
+   },
+   {
+    "player": "Trey McBride",
+    "pos": "TE",
+    "points": 697.2,
+    "games": 41,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "995982448825720832"
+    ]
+   },
+   {
+    "player": "George Pickens",
+    "pos": "WR",
+    "points": 688.1,
+    "games": 50,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "858765508143628288"
+    ]
+   },
+   {
+    "player": "D'Andre Swift",
+    "pos": "RB",
+    "points": 681.6,
+    "games": 49,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248"
+    ]
+   },
+   {
+    "player": "Justin Jefferson",
+    "pos": "WR",
+    "points": 663.68,
+    "games": 42,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "1416188424762720256",
+     "853109226401288192",
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "De'Von Achane",
+    "pos": "RB",
+    "points": 663.4,
+    "games": 38,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "745458998371008512"
+    ]
+   },
+   {
+    "player": "Josh Jacobs",
+    "pos": "RB",
+    "points": 655.0,
+    "games": 39,
+    "seasons": [
+     2023,
+     2024,
+     2025
+    ],
+    "owners": [
+     "909255939126161408",
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "points": 654.96,
+    "games": 35,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "861417814836256768"
+    ]
+   }
+  ],
+  "QB": [
+   {
+    "player": "Josh Allen",
+    "pos": "QB",
+    "points": 1184.78,
+    "games": 52,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "745458998371008512"
+    ]
+   },
+   {
+    "player": "Jalen Hurts",
+    "pos": "QB",
+    "points": 1045.48,
+    "games": 50,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "731283214563422208"
+    ]
+   },
+   {
+    "player": "Lamar Jackson",
+    "pos": "QB",
+    "points": 975.76,
+    "games": 46,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "Patrick Mahomes",
+    "pos": "QB",
+    "points": 900.18,
+    "games": 48,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "858765508143628288"
+    ]
+   },
+   {
+    "player": "Justin Herbert",
+    "pos": "QB",
+    "points": 641.06,
+    "games": 38,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "995982448825720832"
+    ]
+   },
+   {
+    "player": "Joe Burrow",
+    "pos": "QB",
+    "points": 605.0,
+    "games": 36,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "1416188424762720256",
+     "853109226401288192",
+     "861422415547318272"
+    ]
+   },
+   {
+    "player": "Baker Mayfield",
+    "pos": "QB",
+    "points": 574.88,
+    "games": 33,
+    "seasons": [
+     2023,
+     2024,
+     2025
+    ],
+    "owners": [
+     "733192747346997248",
+     "861417814836256768"
+    ]
+   },
+   {
+    "player": "Brock Purdy",
+    "pos": "QB",
+    "points": 530.62,
+    "games": 28,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "908808510823997440",
+     "909255939126161408"
+    ]
+   },
+   {
+    "player": "C.J. Stroud",
+    "pos": "QB",
+    "points": 489.04,
+    "games": 30,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "861417814836256768"
+    ]
+   },
+   {
+    "player": "Jordan Love",
+    "pos": "QB",
+    "points": 476.28,
+    "games": 28,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "861417814836256768",
+     "908808510823997440"
+    ]
+   }
+  ],
+  "RB": [
+   {
+    "player": "Christian McCaffrey",
+    "pos": "RB",
+    "points": 949.7,
+    "games": 42,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248",
+     "861422415547318272"
+    ]
+   },
+   {
+    "player": "Jahmyr Gibbs",
+    "pos": "RB",
+    "points": 932.3,
+    "games": 46,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "861417814836256768"
+    ]
+   },
+   {
+    "player": "Bijan Robinson",
+    "pos": "RB",
+    "points": 922.1,
+    "games": 50,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "995982448825720832"
+    ]
+   },
+   {
+    "player": "Derrick Henry",
+    "pos": "RB",
+    "points": 846.96,
+    "games": 52,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "731283214563422208",
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "Jonathan Taylor",
+    "pos": "RB",
+    "points": 823.4,
+    "games": 44,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "908808510823997440"
+    ]
+   },
+   {
+    "player": "James Cook III",
+    "pos": "RB",
+    "points": 814.4,
+    "games": 49,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "853109226401288192",
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "Kyren Williams",
+    "pos": "RB",
+    "points": 778.9,
+    "games": 44,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "1416188424762720256",
+     "853109226401288192"
+    ]
+   },
+   {
+    "player": "Saquon Barkley",
+    "pos": "RB",
+    "points": 753.9,
+    "games": 45,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "1416188424762720256",
+     "853109226401288192"
+    ]
+   },
+   {
+    "player": "D'Andre Swift",
+    "pos": "RB",
+    "points": 681.6,
+    "games": 49,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248"
+    ]
+   },
+   {
+    "player": "De'Von Achane",
+    "pos": "RB",
+    "points": 663.4,
+    "games": 38,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "745458998371008512"
+    ]
+   }
+  ],
+  "WR": [
+   {
+    "player": "Ja'Marr Chase",
+    "pos": "WR",
+    "points": 1004.12,
+    "games": 52,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248",
+     "861422415547318272"
+    ]
+   },
+   {
+    "player": "Amon-Ra St. Brown",
+    "pos": "WR",
+    "points": 983.78,
+    "games": 50,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "745458998371008512"
+    ]
+   },
+   {
+    "player": "CeeDee Lamb",
+    "pos": "WR",
+    "points": 904.4,
+    "games": 46,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "909255939126161408"
+    ]
+   },
+   {
+    "player": "Puka Nacua",
+    "pos": "WR",
+    "points": 873.4,
+    "games": 44,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248"
+    ]
+   },
+   {
+    "player": "Davante Adams",
+    "pos": "WR",
+    "points": 765.7,
+    "games": 47,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248"
+    ]
+   },
+   {
+    "player": "A.J. Brown",
+    "pos": "WR",
+    "points": 713.9,
+    "games": 44,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "745458998371008512",
+     "861421486488031232"
+    ]
+   },
+   {
+    "player": "George Pickens",
+    "pos": "WR",
+    "points": 688.1,
+    "games": 50,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "858765508143628288"
+    ]
+   },
+   {
+    "player": "Justin Jefferson",
+    "pos": "WR",
+    "points": 663.68,
+    "games": 42,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "1416188424762720256",
+     "853109226401288192",
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "points": 654.96,
+    "games": 35,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "861417814836256768"
+    ]
+   },
+   {
+    "player": "Zay Flowers",
+    "pos": "WR",
+    "points": 648.9,
+    "games": 49,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "915765963616985088"
+    ]
+   }
+  ],
+  "TE": [
+   {
+    "player": "Trey McBride",
+    "pos": "TE",
+    "points": 697.2,
+    "games": 41,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "995982448825720832"
+    ]
+   },
+   {
+    "player": "Travis Kelce",
+    "pos": "TE",
+    "points": 635.3,
+    "games": 50,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248"
+    ]
+   },
+   {
+    "player": "George Kittle",
+    "pos": "TE",
+    "points": 617.3,
+    "games": 42,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "858765508143628288"
+    ]
+   },
+   {
+    "player": "Sam LaPorta",
+    "pos": "TE",
+    "points": 517.3,
+    "games": 41,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "861417814836256768"
+    ]
+   },
+   {
+    "player": "Brock Bowers",
+    "pos": "TE",
+    "points": 483.6,
+    "games": 30,
+    "seasons": [
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "Dallas Goedert",
+    "pos": "TE",
+    "points": 411.1,
+    "games": 37,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "731283214563422208"
+    ]
+   },
+   {
+    "player": "Jake Ferguson",
+    "pos": "TE",
+    "points": 402.4,
+    "games": 37,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "909255939126161408"
+    ]
+   },
+   {
+    "player": "Dalton Kincaid",
+    "pos": "TE",
+    "points": 380.3,
+    "games": 41,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "1416188424762720256",
+     "853109226401288192"
+    ]
+   },
+   {
+    "player": "T.J. Hockenson",
+    "pos": "TE",
+    "points": 306.7,
+    "games": 25,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "1416188424762720256",
+     "853109226401288192",
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "Kyle Pitts Sr.",
+    "pos": "TE",
+    "points": 302.8,
+    "games": 35,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "745458998371008512"
+    ]
+   }
+  ],
+  "K": [
+   {
+    "player": "Brandon Aubrey",
+    "pos": "K",
+    "points": 499.6,
+    "games": 50,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "745458998371008512"
+    ]
+   },
+   {
+    "player": "Chris Boswell",
+    "pos": "K",
+    "points": 411.0,
+    "games": 42,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248",
+     "861417814836256768",
+     "861421486488031232",
+     "995982448825720832"
+    ]
+   },
+   {
+    "player": "Harrison Butker",
+    "pos": "K",
+    "points": 348.0,
+    "games": 40,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "858765508143628288",
+     "915765963616985088",
+     "995982448825720832"
+    ]
+   },
+   {
+    "player": "Cameron Dicker",
+    "pos": "K",
+    "points": 334.0,
+    "games": 38,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "909255939126161408"
+    ]
+   },
+   {
+    "player": "Jason Myers",
+    "pos": "K",
+    "points": 312.0,
+    "games": 31,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "853109226401288192",
+     "858765508143628288",
+     "908808510823997440"
+    ]
+   },
+   {
+    "player": "Evan McPherson",
+    "pos": "K",
+    "points": 301.0,
+    "games": 41,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "858765508143628288",
+     "861422415547318272"
+    ]
+   },
+   {
+    "player": "Jake Elliott",
+    "pos": "K",
+    "points": 283.0,
+    "games": 33,
+    "seasons": [
+     2023,
+     2024,
+     2025
+    ],
+    "owners": [
+     "908808510823997440"
+    ]
+   },
+   {
+    "player": "Chase McLaughlin",
+    "pos": "K",
+    "points": 278.0,
+    "games": 30,
+    "seasons": [
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "915765963616985088",
+     "995982448825720832"
+    ]
+   },
+   {
+    "player": "Justin Tucker",
+    "pos": "K",
+    "points": 257.0,
+    "games": 30,
+    "seasons": [
+     2023,
+     2024
+    ],
+    "owners": [
+     "731283214563422208"
+    ]
+   },
+   {
+    "player": "Jake Bates",
+    "pos": "K",
+    "points": 230.0,
+    "games": 26,
+    "seasons": [
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248"
+    ]
+   }
+  ],
+  "DEF": [
+   {
+    "player": "Pittsburgh Steelers",
+    "pos": "DEF",
+    "points": 414.0,
+    "games": 45,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "861421486488031232"
+    ]
+   },
+   {
+    "player": "Minnesota Vikings",
+    "pos": "DEF",
+    "points": 391.0,
+    "games": 38,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "733192747346997248",
+     "995982448825720832"
+    ]
+   },
+   {
+    "player": "Denver Broncos",
+    "pos": "DEF",
+    "points": 303.0,
+    "games": 33,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "915765963616985088"
+    ]
+   },
+   {
+    "player": "San Francisco 49ers",
+    "pos": "DEF",
+    "points": 291.0,
+    "games": 35,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "731283214563422208",
+     "745458998371008512",
+     "861422415547318272"
+    ]
+   },
+   {
+    "player": "Philadelphia Eagles",
+    "pos": "DEF",
+    "points": 288.0,
+    "games": 39,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "858765508143628288"
+    ]
+   },
+   {
+    "player": "Los Angeles Rams",
+    "pos": "DEF",
+    "points": 265.0,
+    "games": 35,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "745458998371008512",
+     "861417814836256768",
+     "995982448825720832"
+    ]
+   },
+   {
+    "player": "Kansas City Chiefs",
+    "pos": "DEF",
+    "points": 263.0,
+    "games": 32,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "908808510823997440"
+    ]
+   },
+   {
+    "player": "New York Jets",
+    "pos": "DEF",
+    "points": 245.0,
+    "games": 32,
+    "seasons": [
+     2023,
+     2024,
+     2025
+    ],
+    "owners": [
+     "745458998371008512"
+    ]
+   },
+   {
+    "player": "Houston Texans",
+    "pos": "DEF",
+    "points": 245.0,
+    "games": 28,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "861417814836256768"
+    ]
+   },
+   {
+    "player": "Buffalo Bills",
+    "pos": "DEF",
+    "points": 228.0,
+    "games": 22,
+    "seasons": [
+     2023,
+     2024,
+     2025,
+     2026
+    ],
+    "owners": [
+     "731283214563422208"
+    ]
+   }
+  ]
  }
 }
