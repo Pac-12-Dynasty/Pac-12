@@ -76,7 +76,7 @@ def build():
         return owners.setdefault(uid, {
             "id": uid, "name": None, "team": None, "seasons": [],
             "w": 0, "l": 0, "t": 0, "pf": 0.0, "pa": 0.0,
-            "pw": 0, "pl": 0, "playoffs": 0, "titles": 0, "runner_up": 0,
+            "pw": 0, "pl": 0, "playoffs": 0, "titles": 0, "runner_up": 0, "third": 0,
             "first_overall": [], "by_season": [],
         })
 
@@ -103,13 +103,26 @@ def build():
             bracket = []
         playoff_round = {}
         in_playoffs = set()
+        title_game, third_game = None, None
         for g in bracket:
-            t1, t2 = g.get("t1"), g.get("t2")
+            t1, t2, place = g.get("t1"), g.get("t2"), g.get("p")
             if isinstance(t1, int) and isinstance(t2, int):
-                playoff_round[frozenset((t1, t2))] = g.get("r") or 1
                 in_playoffs.update([t1, t2])
-            if g.get("p") == 1 and g.get("w") and g.get("l"):
-                champions.append({"season": yr, "champion": roster_owner.get(g["w"]), "runner_up": roster_owner.get(g["l"])})
+                # Only games on the path to the title get playoff weight;
+                # 3rd and 5th place games count like regular games
+                if place in (None, 1):
+                    playoff_round[frozenset((t1, t2))] = g.get("r") or 1
+            if place == 1 and g.get("w") and g.get("l"):
+                title_game = g
+            if place == 3 and g.get("w"):
+                third_game = g
+        if title_game:
+            champions.append({
+                "season": yr,
+                "champion": roster_owner.get(title_game["w"]),
+                "runner_up": roster_owner.get(title_game["l"]),
+                "third": roster_owner.get(third_game["w"]) if third_game else None,
+            })
         playoff_owners = set()
         for rid in in_playoffs:
             if rid in roster_owner:
@@ -263,6 +276,7 @@ def build():
         c = champ_of.get(yr, {})
         finish = ("Champion" if c.get("champion") == uid else
                   "Runner-up" if c.get("runner_up") == uid else
+                  "3rd place" if c.get("third") == uid else
                   "Playoffs" if uid in season_playoffs.get(yr, set()) else "")
         owner(uid)["by_season"].append({"season": yr, "w": s["w"], "l": s["l"], "t": s["t"],
                                         "pf": round(s["pf"], 2), "pa": round(s.get("pa", 0), 2), "finish": finish})
@@ -281,6 +295,8 @@ def build():
             owners[c["champion"]]["titles"] += 1
         if c["runner_up"] in owners:
             owners[c["runner_up"]]["runner_up"] += 1
+        if c.get("third") in owners:
+            owners[c["third"]]["third"] += 1
 
     os.makedirs("data", exist_ok=True)
     with open("data/legacy.json", "w") as f:
@@ -298,12 +314,17 @@ def build():
     name = lambda uid: owners.get(uid, {}).get("name") or uid
     with open("data/rivalries.csv", "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["Owner", "Opponent", "Rival rank", "Rivalry score", "Games", "Record (W-L-T)", "Playoff meetings",
-                    "Weighted games", "Weighted wins", "Weighted losses", "Balance"])
-        for r in sorted(rows, key=lambda r: (name(r["owner"]).lower(), r["rank"])):
-            w.writerow([name(r["owner"]), name(r["opponent"]), r["rank"], r["score"], r["games"],
+        w.writerow(["Team", "Opponent", "Rivalry score", "Games", "Record (W-L-T)", "Playoff meetings",
+                    "Weighted games", "Weighted wins", "Weighted losses", "Balance",
+                    "Team's rival rank", "Opponent's rival rank"])
+        rank_of = {(r["owner"], r["opponent"]): r["rank"] for r in rows}
+        team = lambda uid: owners.get(uid, {}).get("team") or name(uid)
+        unique = [r for r in rows if team(r["owner"]).lower() <= team(r["opponent"]).lower()]
+        for r in sorted(unique, key=lambda r: -r["score"]):
+            w.writerow([team(r["owner"]), team(r["opponent"]), r["score"], r["games"],
                         f"{r['wins']}-{r['losses']}-{r['ties']}", r["playoff_meetings"], r["weighted_games"],
-                        r["weighted_wins"], r["weighted_losses"], r["balance"]])
+                        r["weighted_wins"], r["weighted_losses"], r["balance"],
+                        r["rank"], rank_of.get((r["opponent"], r["owner"]), "")])
 
     print(f"Legacy: {len(seasons)} season(s), {len(owners)} owners, {len(games_log)} games, {len(champions)} champion(s)")
 
