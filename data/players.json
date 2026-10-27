@@ -470,8 +470,8 @@
  "11646": {
   "age": 24,
   "birth_date": "2001-10-30",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Shoulder",
   "name": "Jalen Coker",
   "pos": "WR",
   "pos_rank": "WR40",
@@ -516,7 +516,7 @@
   "value": 35
  },
  "11783": {
-  "age": 26,
+  "age": 27,
   "birth_date": "1999-10-27",
   "injury": "",
   "injury_part": "",
@@ -758,8 +758,8 @@
  "12501": {
   "age": 23,
   "birth_date": "2003-08-01",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Shoulder",
   "name": "Matthew Golden",
   "pos": "WR",
   "pos_rank": "WR34",
@@ -1574,8 +1574,8 @@
  "13349": {
   "age": 23,
   "birth_date": "2003-04-15",
-  "injury": "IR",
-  "injury_part": "Hamstring",
+  "injury": "",
+  "injury_part": "",
   "name": "Eli Stowers",
   "pos": "TE",
   "pos_rank": "TE17",
@@ -2175,7 +2175,7 @@
   "age": 29,
   "birth_date": "1997-02-09",
   "injury": "Questionable",
-  "injury_part": "Hamstring",
+  "injury_part": "Back",
   "name": "Saquon Barkley",
   "pos": "RB",
   "pos_rank": "RB14",
@@ -2726,8 +2726,8 @@
  "7547": {
   "age": 27,
   "birth_date": "1999-10-24",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Amon-Ra St. Brown",
   "pos": "WR",
   "pos_rank": "WR3",
