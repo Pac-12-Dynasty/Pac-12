@@ -38,7 +38,7 @@
  "10229": {
   "age": 26,
   "birth_date": "2000-04-22",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Hamstring",
   "name": "Rashee Rice",
   "pos": "WR",
@@ -59,23 +59,11 @@
   "team": "ARI",
   "value": 1695
  },
- "10235": {
-  "age": 25,
-  "birth_date": "2001-01-31",
-  "injury": "",
-  "injury_part": "",
-  "name": "Roschon Johnson",
-  "pos": "RB",
-  "pos_rank": "RB100",
-  "rank": 381,
-  "team": "CHI",
-  "value": 3
- },
  "10236": {
   "age": 27,
   "birth_date": "1999-10-18",
-  "injury": "Questionable",
-  "injury_part": "Ribs",
+  "injury": "",
+  "injury_part": "",
   "name": "Dalton Kincaid",
   "pos": "TE",
   "pos_rank": "TE7",
@@ -434,7 +422,7 @@
  "11635": {
   "age": 24,
   "birth_date": "2001-11-11",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Concussion",
   "name": "Ladd McConkey",
   "pos": "WR",
@@ -470,8 +458,8 @@
  "11646": {
   "age": 24,
   "birth_date": "2001-10-30",
-  "injury": "Questionable",
-  "injury_part": "Shoulder",
+  "injury": "",
+  "injury_part": "",
   "name": "Jalen Coker",
   "pos": "WR",
   "pos_rank": "WR40",
@@ -494,7 +482,7 @@
  "11655": {
   "age": 26,
   "birth_date": "1999-11-23",
-  "injury": "Questionable",
+  "injury": "IR",
   "injury_part": "Hamstring",
   "name": "Tyrone Tracy Jr.",
   "pos": "RB",
@@ -782,8 +770,8 @@
  "12504": {
   "age": 23,
   "birth_date": "2003-08-14",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Kaleb Johnson",
   "pos": "RB",
   "pos_rank": "RB60",
@@ -830,7 +818,7 @@
  "12509": {
   "age": 24,
   "birth_date": "2002-02-28",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Hamstring",
   "name": "Tre' Harris",
   "pos": "WR",
@@ -866,7 +854,7 @@
  "12514": {
   "age": 24,
   "birth_date": "2002-10-14",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Concussion",
   "name": "Emeka Egbuka",
   "pos": "WR",
@@ -890,7 +878,7 @@
  "12518": {
   "age": 24,
   "birth_date": "2002-05-24",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Groin",
   "name": "Tyler Warren",
   "pos": "TE",
@@ -1010,7 +998,7 @@
  "12534": {
   "age": 24,
   "birth_date": "2002-06-06",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Toe",
   "name": "Kyle Monangai",
   "pos": "RB",
@@ -1130,8 +1118,8 @@
  "13268": {
   "age": 23,
   "birth_date": "2003-05-28",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Elijah Sarratt",
   "pos": "WR",
   "pos_rank": "WR87",
@@ -1166,7 +1154,7 @@
  "13272": {
   "age": 23,
   "birth_date": "2002-11-19",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Back",
   "name": "Carson Beck",
   "pos": "QB",
@@ -1190,8 +1178,8 @@
  "13275": {
   "age": 23,
   "birth_date": "2002-12-21",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Ty Simpson",
   "pos": "QB",
   "pos_rank": "QB29",
@@ -1226,8 +1214,8 @@
  "13278": {
   "age": 23,
   "birth_date": "2003-07-08",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Max Klare",
   "pos": "TE",
   "pos_rank": "TE28",
@@ -1298,7 +1286,7 @@
  "13287": {
   "age": 21,
   "birth_date": "2005-05-31",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Ankle",
   "name": "Jeremiyah Love",
   "pos": "RB",
@@ -1310,8 +1298,8 @@
  "13288": {
   "age": 22,
   "birth_date": "2004-01-06",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Nicholas Singleton",
   "pos": "RB",
   "pos_rank": "RB52",
@@ -1322,8 +1310,8 @@
  "13289": {
   "age": 22,
   "birth_date": "2004-03-08",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Drew Allar",
   "pos": "QB",
   "pos_rank": "QB49",
@@ -1550,8 +1538,8 @@
  "13347": {
   "age": 23,
   "birth_date": "2003-10-09",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Demond Claiborne",
   "pos": "RB",
   "pos_rank": "RB70",
@@ -1634,8 +1622,8 @@
  "13404": {
   "age": 24,
   "birth_date": "2002-02-07",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Garrett Nussmeier",
   "pos": "QB",
   "pos_rank": "QB63",
@@ -1727,11 +1715,23 @@
   "team": "NO",
   "value": 57
  },
+ "13421": {
+  "age": 22,
+  "birth_date": "2004-02-12",
+  "injury": "",
+  "injury_part": "",
+  "name": "Eli Raridon",
+  "pos": "TE",
+  "pos_rank": "TE29",
+  "rank": 193,
+  "team": "NE",
+  "value": 105
+ },
  "13423": {
   "age": 23,
   "birth_date": "2003-06-28",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Eli Heidenreich",
   "pos": "RB",
   "pos_rank": "RB84",
@@ -1750,18 +1750,6 @@
   "rank": 260,
   "team": "IND",
   "value": 19
- },
- "13545": {
-  "age": 23,
-  "birth_date": "2003-06-12",
-  "injury": "",
-  "injury_part": "",
-  "name": "Trey Smack",
-  "pos": "K",
-  "pos_rank": "",
-  "rank": null,
-  "team": "GB",
-  "value": null
  },
  "1373": {
   "age": 36,
@@ -1946,7 +1934,7 @@
  "3321": {
   "age": 31,
   "birth_date": "1994-03-01",
-  "injury": "",
+  "injury": "Questionable",
   "injury_part": "Knee - ACL",
   "name": "Tyreek Hill",
   "pos": "WR",
@@ -2087,18 +2075,6 @@
   "team": "CIN",
   "value": 5
  },
- "4177": {
-  "age": 33,
-  "birth_date": "1993-09-16",
-  "injury": "IR",
-  "injury_part": "Calf",
-  "name": "Mack Hollins",
-  "pos": "WR",
-  "pos_rank": "WR117",
-  "rank": 284,
-  "team": "NE",
-  "value": 12
- },
  "4195": {
   "age": 31,
   "birth_date": "1995-01-21",
@@ -2186,7 +2162,7 @@
  "4881": {
   "age": 29,
   "birth_date": "1997-01-07",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Ankle",
   "name": "Lamar Jackson",
   "pos": "QB",
@@ -2222,7 +2198,7 @@
  "4983": {
   "age": 29,
   "birth_date": "1997-04-14",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Shoulder - AC Joint",
   "name": "DJ Moore",
   "pos": "WR",
@@ -2302,18 +2278,6 @@
   "rank": 112,
   "team": "DEN",
   "value": 740
- },
- "5095": {
-  "age": 31,
-  "birth_date": "1995-01-23",
-  "injury": "",
-  "injury_part": "",
-  "name": "Daniel Carlson",
-  "pos": "K",
-  "pos_rank": "",
-  "rank": null,
-  "team": "NO",
-  "value": null
  },
  "5189": {
   "age": 31,
@@ -2690,7 +2654,7 @@
  "7525": {
   "age": 27,
   "birth_date": "1998-11-14",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Hamstring",
   "name": "DeVonta Smith",
   "pos": "WR",
@@ -2762,8 +2726,8 @@
  "7567": {
   "age": 27,
   "birth_date": "1999-03-14",
-  "injury": "Questionable",
-  "injury_part": "Hip",
+  "injury": "",
+  "injury_part": "",
   "name": "Kenny Gainwell",
   "pos": "RB",
   "pos_rank": "RB43",
@@ -2882,8 +2846,8 @@
  "8112": {
   "age": 25,
   "birth_date": "2001-07-24",
-  "injury": "Questionable",
-  "injury_part": "Head",
+  "injury": "",
+  "injury_part": "",
   "name": "Drake London",
   "pos": "WR",
   "pos_rank": "WR8",
@@ -2930,8 +2894,8 @@
  "8129": {
   "age": 26,
   "birth_date": "2000-02-19",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Undisclosed",
   "name": "Dameon Pierce",
   "pos": "RB",
   "pos_rank": "RB122",
@@ -3098,7 +3062,7 @@
  "8154": {
   "age": 27,
   "birth_date": "1999-03-22",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Hamstring",
   "name": "Brian Robinson Jr.",
   "pos": "RB",
@@ -3110,7 +3074,7 @@
  "8155": {
   "age": 25,
   "birth_date": "2001-05-31",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Quadriceps",
   "name": "Breece Hall",
   "pos": "RB",
@@ -3179,6 +3143,18 @@
   "team": "DET",
   "value": 37
  },
+ "8210": {
+  "age": 27,
+  "birth_date": "1999-09-08",
+  "injury": "",
+  "injury_part": "",
+  "name": "Chig Okonkwo",
+  "pos": "TE",
+  "pos_rank": "TE22",
+  "rank": 150,
+  "team": "WAS",
+  "value": 294
+ },
  "8228": {
   "age": 27,
   "birth_date": "1998-11-01",
@@ -3218,7 +3194,7 @@
  "8676": {
   "age": 28,
   "birth_date": "1998-08-31",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Knee",
   "name": "Rashid Shaheed",
   "pos": "WR",
@@ -3299,6 +3275,30 @@
   "team": "IND",
   "value": 212
  },
+ "9230": {
+  "age": 26,
+  "birth_date": "2000-04-27",
+  "injury": "",
+  "injury_part": "",
+  "name": "Tanner McKee",
+  "pos": "QB",
+  "pos_rank": "QB58",
+  "rank": 319,
+  "team": "PHI",
+  "value": 7
+ },
+ "9479": {
+  "age": 25,
+  "birth_date": "2001-08-17",
+  "injury": "",
+  "injury_part": "",
+  "name": "Darnell Washington",
+  "pos": "TE",
+  "pos_rank": "TE38",
+  "rank": 254,
+  "team": "PIT",
+  "value": 23
+ },
  "9480": {
   "age": 25,
   "birth_date": "2000-12-27",
@@ -3338,7 +3338,7 @@
  "9486": {
   "age": 25,
   "birth_date": "2001-06-16",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Ankle",
   "name": "Dontayvion Wicks",
   "pos": "WR",
@@ -3434,7 +3434,7 @@
  "9508": {
   "age": 25,
   "birth_date": "2001-06-15",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Knee",
   "name": "Tyjae Spears",
   "pos": "RB",
@@ -3482,7 +3482,7 @@
  "9753": {
   "age": 25,
   "birth_date": "2001-01-08",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Knee - ACL",
   "name": "Zach Charbonnet",
   "pos": "RB",
@@ -3561,18 +3561,6 @@
   "pos_rank": "",
   "rank": null,
   "team": "BAL",
-  "value": null
- },
- "BUF": {
-  "age": null,
-  "birth_date": "",
-  "injury": "",
-  "injury_part": "",
-  "name": "Buffalo Bills",
-  "pos": "DEF",
-  "pos_rank": "",
-  "rank": null,
-  "team": "BUF",
   "value": null
  },
  "CHI": {
@@ -3743,18 +3731,6 @@
   "team": "NE",
   "value": null
  },
- "NYJ": {
-  "age": null,
-  "birth_date": "",
-  "injury": "",
-  "injury_part": "",
-  "name": "New York Jets",
-  "pos": "DEF",
-  "pos_rank": "",
-  "rank": null,
-  "team": "NYJ",
-  "value": null
- },
  "PHI": {
   "age": null,
   "birth_date": "",
@@ -3801,6 +3777,18 @@
   "pos_rank": "",
   "rank": null,
   "team": "SF",
+  "value": null
+ },
+ "TB": {
+  "age": null,
+  "birth_date": "",
+  "injury": "",
+  "injury_part": "",
+  "name": "Tampa Bay Buccaneers",
+  "pos": "DEF",
+  "pos_rank": "",
+  "rank": null,
+  "team": "TB",
   "value": null
  }
 }
