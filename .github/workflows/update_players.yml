@@ -2,7 +2,6 @@ name: Update player data
 
 on:
   schedule:
-    - cron: "0  9 * * *"
     - cron: "0 10 * * *"   # every day at 10:00 UTC
   workflow_dispatch:        # adds a "Run workflow" button
 
@@ -15,6 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 scripts/update_players.py
+      - run: python3 scripts/update_stats.py
       - run: python3 scripts/update_legacy.py
       - name: Save changes
         run: |
