@@ -50,8 +50,8 @@
  "10232": {
   "age": 26,
   "birth_date": "2000-02-23",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ribs",
   "name": "Michael Wilson",
   "pos": "WR",
   "pos_rank": "WR36",
@@ -62,8 +62,8 @@
  "10236": {
   "age": 27,
   "birth_date": "1999-10-18",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Chest",
   "name": "Dalton Kincaid",
   "pos": "TE",
   "pos_rank": "TE7",
@@ -194,8 +194,8 @@
  "11576": {
   "age": 22,
   "birth_date": "2004-01-20",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Braelon Allen",
   "pos": "RB",
   "pos_rank": "RB44",
@@ -290,8 +290,8 @@
  "11604": {
   "age": 23,
   "birth_date": "2002-12-13",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Calf",
   "name": "Brock Bowers",
   "pos": "TE",
   "pos_rank": "TE1",
@@ -302,8 +302,8 @@
  "11610": {
   "age": 25,
   "birth_date": "2001-01-04",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Knee",
   "name": "Malik Washington",
   "pos": "WR",
   "pos_rank": "WR92",
@@ -515,18 +515,6 @@
   "team": "DAL",
   "value": 86
  },
- "11786": {
-  "age": 23,
-  "birth_date": "2003-08-17",
-  "injury": "",
-  "injury_part": "",
-  "name": "Cam Little",
-  "pos": "K",
-  "pos_rank": "",
-  "rank": null,
-  "team": "JAX",
-  "value": null
- },
  "11792": {
   "age": 25,
   "birth_date": "2001-01-09",
@@ -578,8 +566,8 @@
  "12469": {
   "age": 22,
   "birth_date": "2004-09-14",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Knee",
   "name": "Dylan Sampson",
   "pos": "RB",
   "pos_rank": "RB53",
@@ -610,6 +598,18 @@
   "rank": 85,
   "team": "NYG",
   "value": 1587
+ },
+ "12482": {
+  "age": 24,
+  "birth_date": "2001-11-22",
+  "injury": "",
+  "injury_part": "",
+  "name": "Savion Williams",
+  "pos": "WR",
+  "pos_rank": "WR147",
+  "rank": 367,
+  "team": "GB",
+  "value": 4
  },
  "12483": {
   "age": 23,
@@ -767,18 +767,6 @@
   "team": "TEN",
   "value": 123
  },
- "12504": {
-  "age": 23,
-  "birth_date": "2003-08-14",
-  "injury": "",
-  "injury_part": "",
-  "name": "Kaleb Johnson",
-  "pos": "RB",
-  "pos_rank": "RB60",
-  "rank": 225,
-  "team": "GB",
-  "value": 51
- },
  "12506": {
   "age": 22,
   "birth_date": "2004-07-20",
@@ -840,7 +828,7 @@
   "value": 18
  },
  "12512": {
-  "age": 22,
+  "age": 23,
   "birth_date": "2003-10-29",
   "injury": "",
   "injury_part": "",
@@ -898,18 +886,6 @@
   "rank": 39,
   "team": "CHI",
   "value": 4259
- },
- "12521": {
-  "age": 23,
-  "birth_date": "2003-04-05",
-  "injury": "IR",
-  "injury_part": "Shoulder",
-  "name": "Elijah Arroyo",
-  "pos": "TE",
-  "pos_rank": "TE37",
-  "rank": 234,
-  "team": "SEA",
-  "value": 43
  },
  "12522": {
   "age": 24,
@@ -1022,7 +998,7 @@
  "12536": {
   "age": 24,
   "birth_date": "2002-09-04",
-  "injury": "Questionable",
+  "injury": "IR",
   "injury_part": "Toe",
   "name": "Jaylin Noel",
   "pos": "WR",
@@ -1226,8 +1202,8 @@
  "13279": {
   "age": 21,
   "birth_date": "2005-01-19",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Shoulder",
   "name": "Carnell Tate",
   "pos": "WR",
   "pos_rank": "WR17",
@@ -1826,8 +1802,8 @@
  "2449": {
   "age": 32,
   "birth_date": "1993-11-29",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hand",
   "name": "Stefon Diggs",
   "pos": "WR",
   "pos_rank": "WR63",
@@ -2342,8 +2318,8 @@
  "5859": {
   "age": 29,
   "birth_date": "1997-06-30",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "A.J. Brown",
   "pos": "WR",
   "pos_rank": "WR19",
@@ -2390,7 +2366,7 @@
  "5927": {
   "age": 31,
   "birth_date": "1995-09-15",
-  "injury": "Out",
+  "injury": "IR",
   "injury_part": "Knee",
   "name": "Terry McLaurin",
   "pos": "WR",
@@ -2402,8 +2378,8 @@
  "5947": {
   "age": 29,
   "birth_date": "1996-11-09",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hamstring",
   "name": "Jakobi Meyers",
   "pos": "WR",
   "pos_rank": "WR55",
@@ -2627,6 +2603,18 @@
   "team": "PIT",
   "value": 362
  },
+ "7042": {
+  "age": 29,
+  "birth_date": "1997-02-14",
+  "injury": "",
+  "injury_part": "",
+  "name": "Tyler Bass",
+  "pos": "K",
+  "pos_rank": "",
+  "rank": null,
+  "team": "BUF",
+  "value": null
+ },
  "7049": {
   "age": 29,
   "birth_date": "1997-07-10",
@@ -2711,11 +2699,23 @@
   "team": "ATL",
   "value": 1943
  },
+ "7561": {
+  "age": 28,
+  "birth_date": "1998-05-02",
+  "injury": "",
+  "injury_part": "",
+  "name": "Elijah Mitchell",
+  "pos": "RB",
+  "pos_rank": "",
+  "rank": null,
+  "team": "PHI",
+  "value": null
+ },
  "7564": {
   "age": 26,
   "birth_date": "2000-03-01",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Ja'Marr Chase",
   "pos": "WR",
   "pos_rank": "WR1",
@@ -2726,8 +2726,8 @@
  "7567": {
   "age": 27,
   "birth_date": "1999-03-14",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hip",
   "name": "Kenny Gainwell",
   "pos": "RB",
   "pos_rank": "RB43",
@@ -2891,18 +2891,6 @@
   "team": "TEN",
   "value": 809
  },
- "8129": {
-  "age": 26,
-  "birth_date": "2000-02-19",
-  "injury": "Questionable",
-  "injury_part": "Undisclosed",
-  "name": "Dameon Pierce",
-  "pos": "RB",
-  "pos_rank": "RB122",
-  "rank": 467,
-  "team": "PHI",
-  "value": 2
- },
  "8130": {
   "age": 26,
   "birth_date": "1999-11-22",
@@ -2930,8 +2918,8 @@
  "8132": {
   "age": 26,
   "birth_date": "2000-04-15",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Toe",
   "name": "Tyler Allgeier",
   "pos": "RB",
   "pos_rank": "RB46",
@@ -2966,8 +2954,8 @@
  "8137": {
   "age": 25,
   "birth_date": "2001-03-04",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Shoulder",
   "name": "George Pickens",
   "pos": "WR",
   "pos_rank": "WR16",
@@ -3206,8 +3194,8 @@
  "9221": {
   "age": 24,
   "birth_date": "2002-03-20",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Shoulder",
   "name": "Jahmyr Gibbs",
   "pos": "RB",
   "pos_rank": "RB2",
@@ -3408,7 +3396,7 @@
   "value": 23
  },
  "9502": {
-  "age": 26,
+  "age": 27,
   "birth_date": "1999-10-29",
   "injury": "",
   "injury_part": "",
@@ -3789,6 +3777,18 @@
   "pos_rank": "",
   "rank": null,
   "team": "TB",
+  "value": null
+ },
+ "WAS": {
+  "age": null,
+  "birth_date": "",
+  "injury": "",
+  "injury_part": "",
+  "name": "Washington Commanders",
+  "pos": "DEF",
+  "pos_rank": "",
+  "rank": null,
+  "team": "WAS",
   "value": null
  }
 }

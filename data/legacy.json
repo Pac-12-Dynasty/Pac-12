@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T10:40+00:00",
+ "generated": "2026-10-29T09:43+00:00",
  "seasons": [
   2023,
   2024,
@@ -3406,8 +3406,8 @@
      "owner": "861422415547318272",
      "player": "Kaleb Johnson",
      "pos": "RB",
-     "rank": 225,
-     "pos_rank": "RB60"
+     "rank": null,
+     "pos_rank": null
     }
    ]
   },
