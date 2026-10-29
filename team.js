@@ -225,45 +225,70 @@
     getJSON("data/players/" + encodeURIComponent(pid) + ".json").then(function (data) {
       body.innerHTML = "";
       var pos = p.pos || "WR";
+      var rankCols = [
+        ["Pos Rk", function (r) { return r.pos_rank || "-"; }],
+        ["Ovr Rk", function (r) { return r.ovr_rank ? "#" + r.ovr_rank : "-"; }]
+      ];
 
-      var h3 = document.createElement("h3");
-      h3.textContent = data.season + " Game Log";
-      body.appendChild(h3);
+      // Tabs: Game Log and Season Stats
+      var tabs = document.createElement("div");
+      tabs.className = "modal-tabs";
+      var panes = {};
+      function show(name) {
+        Object.keys(panes).forEach(function (k) { panes[k].hidden = k !== name; });
+        tabs.querySelectorAll("button").forEach(function (b) { b.classList.toggle("active", b.dataset.tab === name); });
+      }
+      [["log", data.season + " Game Log"], ["seasons", "Season Stats"]].forEach(function (tab) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.dataset.tab = tab[0];
+        b.textContent = tab[1];
+        b.onclick = function () { show(tab[0]); };
+        tabs.appendChild(b);
+        panes[tab[0]] = document.createElement("div");
+      });
+      body.appendChild(tabs);
+      body.appendChild(panes.log);
+      body.appendChild(panes.seasons);
+
+      // Game log
       if (!data.log.length) {
         var none = document.createElement("p");
         none.className = "status";
         none.textContent = "No games played yet this season.";
-        body.appendChild(none);
+        panes.log.appendChild(none);
       } else {
         var total = data.log.reduce(function (sum, g) { return sum + g.pts; }, 0);
         var sumLine = document.createElement("p");
         sumLine.className = "status";
         sumLine.textContent = total.toFixed(2) + " pts in " + data.log.length + " games (" + (total / data.log.length).toFixed(2) + " per game). Weeks he didn't play are left out.";
-        body.appendChild(sumLine);
-        body.appendChild(statTable([["Wk", function (g) { return String(g.week); }], ["Pts", function (g) { return g.pts.toFixed(2); }]],
-          data.log.slice().reverse(), pos));
+        panes.log.appendChild(sumLine);
+        panes.log.appendChild(statTable([["Wk", function (g) { return String(g.week); }], ["Pts", function (g) { return g.pts.toFixed(2); }]]
+          .concat(rankCols), data.log.slice().reverse(), pos));
       }
 
-      var h3b = document.createElement("h3");
-      h3b.textContent = "Career Stats";
-      body.appendChild(h3b);
+      // Season stats
       if (!data.career.length) {
         var none2 = document.createElement("p");
         none2.className = "status";
         none2.textContent = "No NFL stats on record yet.";
-        body.appendChild(none2);
+        panes.seasons.appendChild(none2);
       } else {
-        body.appendChild(statTable([
+        panes.seasons.appendChild(statTable([
           ["Season", function (c) { return String(c.season); }],
           ["GP", function (c) { return String(c.gp); }],
           ["Pts", function (c) { return c.pts.toFixed(2); }],
-          ["Pts/G", function (c) { return c.gp ? (c.pts / c.gp).toFixed(2) : "0"; }]
+          ["Pts/G", function (c) { return c.gp ? (c.pts / c.gp).toFixed(2) : "0"; }],
+          ["Finish", function (c) { return c.pos_rank || "-"; }],
+          ["Ovr", function (c) { return c.ovr_rank ? "#" + c.ovr_rank : "-"; }]
         ], data.career, pos));
       }
+
       var note = document.createElement("p");
       note.className = "status";
-      note.textContent = "Fantasy points use this league's scoring settings. Regular season only. Updated daily.";
+      note.textContent = "Fantasy points and ranks use this league's scoring settings. Pos Rk is where he finished at his position; Ovr Rk ranks QBs, RBs, WRs, and TEs together. Regular season only. Updated daily.";
       body.appendChild(note);
+      show("log");
     }).catch(function () {
       body.textContent = "Stats for this player aren't available yet. They update once a day.";
     });
