@@ -10,6 +10,7 @@ on:
     - cron: "0 20 * * *"   # 3 PM Eastern (standard time)
     - cron: "0 23 * * *"   # 7 PM Eastern (daylight time)
     - cron: "0 0 * * *"    # 7 PM Eastern (standard time)
+    
   workflow_dispatch:        # adds a "Run workflow" button
 
 permissions:
