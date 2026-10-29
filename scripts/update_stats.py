@@ -71,7 +71,46 @@ def main():
         return {k: stats[k] for k in KEEP if isinstance(stats.get(k), (int, float)) and stats.get(k)}
 
     with open("data/players.json") as f:
-        ids = set(json.load(f).keys())
+        roster_info = json.load(f)
+    ids = set(roster_info.keys())
+    try:
+        with open("cache/all_players.json") as f:
+            every = json.load(f)
+    except Exception:
+        every = {}
+
+    def pos_of(pid):
+        return (every.get(pid) or roster_info.get(pid) or {}).get("pos") or ("DEF" if pid.isalpha() and len(pid) <= 3 else "")
+
+    SKILL = ("QB", "RB", "WR", "TE")
+
+    def rank_all(table):
+        """Scores every player in a stats table and returns pid -> (position rank, overall rank).
+        Overall rank covers QB, RB, WR, and TE; kickers and defenses only get a position rank."""
+        scored = []
+        for pid, stats in table.items():
+            if not isinstance(stats, dict):
+                continue
+            pid = pid[5:] if pid.startswith("TEAM_") else pid
+            pos = pos_of(pid)
+            if not pos:
+                continue
+            scored.append((pid, pos, score(stats)))
+        scored.sort(key=lambda x: -x[2])
+        ranks, pos_place, pos_last, ovr_place, ovr_last = {}, {}, {}, 0, None
+        pos_count, ovr_count = {}, 0
+        for pid, pos, pts in scored:
+            pos_count[pos] = pos_count.get(pos, 0) + 1
+            if pos_last.get(pos) != pts:
+                pos_place[pos], pos_last[pos] = pos_count[pos], pts
+            ovr = None
+            if pos in SKILL:
+                ovr_count += 1
+                if ovr_last != pts:
+                    ovr_place, ovr_last = ovr_count, pts
+                ovr = ovr_place
+            ranks[pid] = (pos + str(pos_place[pos]), ovr)
+        return ranks
 
     # Weeks that are finished this season
     if league.get("status") == "complete" or str(state.get("season")) != str(season):
@@ -86,10 +125,13 @@ def main():
         except Exception as err:
             print(f"Week {week} stats unavailable: {err}")
             continue
+        week_ranks = rank_all(weekly)
         for pid in ids:
             stats = weekly.get(pid) or weekly.get("TEAM_" + pid)
             if stats and (stats.get("gp") or any(isinstance(v, (int, float)) and v for v in stats.values())):
-                logs[pid].append({"week": week, "pts": score(stats), "stats": trim(stats)})
+                pos_rk, ovr_rk = week_ranks.get(pid, (None, None))
+                logs[pid].append({"week": week, "pts": score(stats), "pos_rank": pos_rk, "ovr_rank": ovr_rk,
+                                  "stats": trim(stats)})
 
     career = {pid: [] for pid in ids}
     for yr in range(season - CAREER_YEARS, season + 1):
@@ -98,10 +140,13 @@ def main():
         except Exception as err:
             print(f"{yr} season stats unavailable: {err}")
             continue
+        season_ranks = rank_all(totals)
         for pid in ids:
             stats = totals.get(pid) or totals.get("TEAM_" + pid)
             if stats and stats.get("gp"):
-                career[pid].append({"season": yr, "gp": stats.get("gp"), "pts": score(stats), "stats": trim(stats)})
+                pos_rk, ovr_rk = season_ranks.get(pid, (None, None))
+                career[pid].append({"season": yr, "gp": stats.get("gp"), "pts": score(stats),
+                                    "pos_rank": pos_rk, "ovr_rank": ovr_rk, "stats": trim(stats)})
 
     shutil.rmtree("data/players", ignore_errors=True)
     os.makedirs("data/players", exist_ok=True)
