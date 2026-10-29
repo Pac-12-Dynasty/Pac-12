@@ -551,6 +551,18 @@
   "team": "IND",
   "value": null
  },
+ "12457": {
+  "age": 22,
+  "birth_date": "2004-01-08",
+  "injury": "",
+  "injury_part": "",
+  "name": "Jaydon Blue",
+  "pos": "RB",
+  "pos_rank": "RB68",
+  "rank": 252,
+  "team": "PHI",
+  "value": 26
+ },
  "12467": {
   "age": 22,
   "birth_date": "2004-03-29",
@@ -611,18 +623,6 @@
   "team": "GB",
   "value": 4
  },
- "12483": {
-  "age": 23,
-  "birth_date": "2002-12-18",
-  "injury": "IR",
-  "injury_part": "Forearm",
-  "name": "Jack Bech",
-  "pos": "WR",
-  "pos_rank": "WR100",
-  "rank": 235,
-  "team": "LV",
-  "value": 43
- },
  "12484": {
   "age": 23,
   "birth_date": "2002-12-15",
@@ -682,18 +682,6 @@
   "rank": 74,
   "team": "JAX",
   "value": 1907
- },
- "12492": {
-  "age": 23,
-  "birth_date": "2002-12-10",
-  "injury": "IR",
-  "injury_part": "Ankle",
-  "name": "Pat Bryant",
-  "pos": "WR",
-  "pos_rank": "WR64",
-  "rank": 154,
-  "team": "DEN",
-  "value": 272
  },
  "12495": {
   "age": 22,
@@ -1174,18 +1162,6 @@
   "rank": 103,
   "team": "NYJ",
   "value": 897
- },
- "13277": {
-  "age": 22,
-  "birth_date": "2004-07-09",
-  "injury": "Out",
-  "injury_part": "Shoulder",
-  "name": "CJ Donaldson",
-  "pos": "RB",
-  "pos_rank": "RB107",
-  "rank": 405,
-  "team": "NO",
-  "value": 3
  },
  "13278": {
   "age": 23,
