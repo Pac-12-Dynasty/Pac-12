@@ -926,8 +926,8 @@
  "12529": {
   "age": 24,
   "birth_date": "2002-10-22",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "TreVeyon Henderson",
   "pos": "RB",
   "pos_rank": "RB18",
@@ -1703,17 +1703,17 @@
   "team": "IND",
   "value": 19
  },
- "1373": {
-  "age": 36,
-  "birth_date": "1990-10-10",
+ "13968": {
+  "age": 22,
+  "birth_date": "2003-12-09",
   "injury": "",
   "injury_part": "",
-  "name": "Geno Smith",
-  "pos": "QB",
-  "pos_rank": "QB34",
-  "rank": 219,
-  "team": "NYJ",
-  "value": 58
+  "name": "Drew Stevens",
+  "pos": "K",
+  "pos_rank": "",
+  "rank": null,
+  "team": "WAS",
+  "value": null
  },
  "1466": {
   "age": 37,
