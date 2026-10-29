@@ -81,3 +81,6 @@ body.pac12-member [data-members-only] { display: block; }
 .modal-close:hover { color: #0b2545; }
 .modal .status { color: #6b7785; font-size: 0.9rem; }
 tr.player[data-pid] td:nth-child(2) { text-decoration: underline; text-decoration-color: #c5ccd6; text-underline-offset: 3px; }
+.modal-tabs { display: flex; gap: 0.35rem; margin: 1rem 0 0.75rem; border-bottom: 2px solid #e3e7eb; }
+.modal-tabs button { font: inherit; font-weight: 700; background: none; border: none; border-bottom: 3px solid transparent; margin-bottom: -2px; padding: 0.45rem 0.8rem; cursor: pointer; color: #52606d; }
+.modal-tabs button.active { color: #0b2545; border-bottom-color: #eebf3a; }
