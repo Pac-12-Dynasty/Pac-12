@@ -578,8 +578,8 @@
  "12469": {
   "age": 22,
   "birth_date": "2004-09-14",
-  "injury": "Questionable",
-  "injury_part": "Knee",
+  "injury": "",
+  "injury_part": "",
   "name": "Dylan Sampson",
   "pos": "RB",
   "pos_rank": "RB53",
@@ -2654,8 +2654,8 @@
  "7547": {
   "age": 27,
   "birth_date": "1999-10-24",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Amon-Ra St. Brown",
   "pos": "WR",
   "pos_rank": "WR3",
@@ -3170,8 +3170,8 @@
  "9221": {
   "age": 24,
   "birth_date": "2002-03-20",
-  "injury": "Questionable",
-  "injury_part": "Shoulder",
+  "injury": "",
+  "injury_part": "",
   "name": "Jahmyr Gibbs",
   "pos": "RB",
   "pos_rank": "RB2",
