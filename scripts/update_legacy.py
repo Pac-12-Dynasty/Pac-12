@@ -74,6 +74,7 @@ def build():
 
     # Points leaders: fantasy points scored in a team's starting lineup
     franchise_pts = {}   # owner -> player -> {"points", "games", "seasons"}
+    slot_seen = {}       # player -> {slot: count}, a backup way to know a player's position
     league_pts = {}      # player -> {"points", "games", "seasons", "owners"}
 
     owners = {}          # user_id -> name info and totals
@@ -163,9 +164,14 @@ def build():
                 spts = m.get("starters_points") or []
                 if not uid or m.get("matchup_id") is None or not float(m.get("points") or 0):
                     continue
-                for pid, pts in zip(starters, spts):
+                lineup_slots = [s for s in (league.get("roster_positions") or []) if s not in ("BN", "IR", "TAXI")]
+                for i, (pid, pts) in enumerate(zip(starters, spts)):
                     if not pid or pid == "0" or pts is None:
                         continue
+                    slot = lineup_slots[i] if i < len(lineup_slots) else ""
+                    if slot in ("QB", "RB", "WR", "TE", "K", "DEF"):
+                        seen = slot_seen.setdefault(pid, {})
+                        seen[slot] = seen.get(slot, 0) + 1
                     fp = franchise_pts.setdefault(uid, {}).setdefault(pid, {"points": 0.0, "games": 0, "seasons": set()})
                     lp = league_pts.setdefault(pid, {"points": 0.0, "games": 0, "seasons": set(), "owners": set()})
                     for rec in (fp, lp):
@@ -335,9 +341,16 @@ def build():
 
     def player_name(pid):
         info = every_player.get(pid) or player_info.get(pid) or {}
-        return info.get("name") or pid, info.get("pos") or ""
+        pos = info.get("pos") or ""
+        if pos not in POSITIONS:
+            # Fall back to the fixed lineup slot the player filled most often
+            seen = slot_seen.get(pid) or {}
+            pos = max(seen, key=seen.get) if seen else pos
+        if pos not in POSITIONS and len(pid) <= 3 and pid.isalpha():
+            pos = "DEF"  # team defenses use the team abbreviation as their ID
+        return info.get("name") or pid, pos
 
-    def leaderboard(table, overall_n, pos_n, with_owners=False):
+    def leaderboard(table, overall_n, pos_n=None, with_owners=False):
         rows_ = []
         for pid, rec in table.items():
             nm, pos = player_name(pid)
@@ -349,10 +362,13 @@ def build():
         rows_.sort(key=lambda r: -r["points"])
         out = {"overall": rows_[:overall_n]}
         for pos in POSITIONS:
-            out[pos] = [r for r in rows_ if r["pos"] == pos][:pos_n]
+            by_pos = [r for r in rows_ if r["pos"] == pos]
+            out[pos] = by_pos[:pos_n] if pos_n else by_pos
         return out
 
-    franchise_leaders = {uid: leaderboard(tbl, 10, 5) for uid, tbl in franchise_pts.items()}
+    # Franchise lists keep every player at each position, so anyone who ever started
+    # for a team (including in a FLEX slot) appears under their real position
+    franchise_leaders = {uid: leaderboard(tbl, 25) for uid, tbl in franchise_pts.items()}
     league_leaders = leaderboard(league_pts, 25, 10, with_owners=True)
 
     os.makedirs("data", exist_ok=True)
