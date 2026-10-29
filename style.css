@@ -71,3 +71,13 @@ tr.player.selected td { background: #eebf3a; color: #0b2545; }
 body.pac12-member [data-members-only] { display: block; }
 .members-notice { color: #52606d; font-style: italic; }
 .members-notice:empty { display: none; }
+
+/* Player card */
+.modal-overlay { position: fixed; inset: 0; background: rgba(17,24,39,0.55); display: flex; align-items: flex-start; justify-content: center; padding: 4vh 1rem; z-index: 50; overflow-y: auto; }
+.modal { position: relative; background: #fff; border-radius: 12px; width: 100%; max-width: 760px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+.modal h2 { margin: 0 2rem 0.25rem 0; color: #0b2545; }
+.modal h3 { margin: 1.25rem 0 0.5rem; color: #0b2545; border-bottom: 3px solid #eebf3a; display: inline-block; padding-bottom: 0.2rem; }
+.modal-close { position: absolute; top: 0.75rem; right: 0.9rem; background: none; border: none; font-size: 1.8rem; line-height: 1; cursor: pointer; color: #52606d; }
+.modal-close:hover { color: #0b2545; }
+.modal .status { color: #6b7785; font-size: 0.9rem; }
+tr.player[data-pid] td:nth-child(2) { text-decoration: underline; text-decoration-color: #c5ccd6; text-underline-offset: 3px; }
