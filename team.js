@@ -126,6 +126,8 @@
       tr.appendChild(cell(""));
       tr.appendChild(cell(""));
     } else {
+      tr.dataset.pid = pid;
+      tr.title = "See game log and career stats";
       var nameCell = cell(p.name);
       var badge = injuryBadge(p);
       if (badge) nameCell.appendChild(badge);
@@ -136,6 +138,135 @@
       tr.appendChild(cell(rankText(p)));
     }
     tbody.appendChild(tr);
+  }
+
+  // ---------- Player card: game log and career stats ----------
+  var COLS = {
+    QB: [["Cmp/Att", function (s) { return (s.pass_cmp || 0) + "/" + (s.pass_att || 0); }], ["Pass Yd", "pass_yd"], ["Pass TD", "pass_td"], ["INT", "pass_int"], ["Rush Yd", "rush_yd"], ["Rush TD", "rush_td"]],
+    RB: [["Att", "rush_att"], ["Rush Yd", "rush_yd"], ["Rush TD", "rush_td"], ["Rec", "rec"], ["Rec Yd", "rec_yd"], ["Rec TD", "rec_td"]],
+    WR: [["Tgt", "rec_tgt"], ["Rec", "rec"], ["Rec Yd", "rec_yd"], ["Rec TD", "rec_td"], ["Rush Yd", "rush_yd"]],
+    TE: [["Tgt", "rec_tgt"], ["Rec", "rec"], ["Rec Yd", "rec_yd"], ["Rec TD", "rec_td"]],
+    K: [["FG", function (s) { return (s.fgm || 0) + "/" + (s.fga || 0); }], ["XP", "xpm"]],
+    DEF: [["Sacks", "sack"], ["INT", "int"], ["Fum Rec", "fum_rec"], ["TD", "def_td"], ["Pts Allowed", "pts_allow"]]
+  };
+
+  // Offensive snap share: snaps played / team snaps
+  function snapPct(s) {
+    s = s || {};
+    return s.off_snp && s.tm_off_snp ? Math.round(s.off_snp / s.tm_off_snp * 100) + "%" : "-";
+  }
+  ["QB", "RB", "WR", "TE"].forEach(function (pos) { COLS[pos].unshift(["Snap %", snapPct]); });
+
+  function statValue(col, s) {
+    var v = typeof col[1] === "function" ? col[1](s || {}) : (s || {})[col[1]];
+    if (typeof v === "string") return v;
+    return v == null || v === "" ? "0" : String(Math.round(v * 10) / 10);
+  }
+
+  function statTable(firstCols, rows, pos) {
+    var cols = COLS[pos] || COLS.WR;
+    var wrap = document.createElement("div");
+    wrap.className = "table-wrap";
+    var t = document.createElement("table");
+    var head = document.createElement("tr");
+    firstCols.map(function (c) { return c[0]; }).concat(cols.map(function (c) { return c[0]; })).forEach(function (h) {
+      var th = document.createElement("th");
+      th.textContent = h;
+      head.appendChild(th);
+    });
+    t.appendChild(head);
+    rows.forEach(function (r) {
+      var tr = document.createElement("tr");
+      firstCols.forEach(function (c) { tr.appendChild(cell(c[1](r))); });
+      cols.forEach(function (c) { tr.appendChild(cell(statValue(c, r.stats))); });
+      t.appendChild(tr);
+    });
+    wrap.appendChild(t);
+    return wrap;
+  }
+
+  function openPlayer(pid, p) {
+    var old = document.getElementById("player-modal");
+    if (old) old.remove();
+    var overlay = document.createElement("div");
+    overlay.id = "player-modal";
+    overlay.className = "modal-overlay";
+    var box = document.createElement("div");
+    box.className = "modal";
+    overlay.appendChild(box);
+
+    var close = document.createElement("button");
+    close.type = "button";
+    close.className = "modal-close";
+    close.setAttribute("aria-label", "Close");
+    close.textContent = "×";
+    box.appendChild(close);
+
+    var h = document.createElement("h2");
+    h.textContent = p.name || "Player";
+    box.appendChild(h);
+    var meta = document.createElement("p");
+    meta.className = "status";
+    meta.textContent = [p.pos, NFL[p.team] || p.team || "FA", p.birth_date || p.age ? "Age " + age(p) : "", rankText(p),
+      p.injury ? p.injury + (p.injury_part ? " (" + p.injury_part + ")" : "") : ""].filter(Boolean).join(" · ");
+    box.appendChild(meta);
+
+    var body = document.createElement("div");
+    body.textContent = "Loading stats...";
+    box.appendChild(body);
+
+    function shut() { overlay.remove(); document.removeEventListener("keydown", onKey); }
+    function onKey(e) { if (e.key === "Escape") shut(); }
+    close.onclick = shut;
+    overlay.addEventListener("click", function (e) { if (e.target === overlay) shut(); });
+    document.addEventListener("keydown", onKey);
+    document.body.appendChild(overlay);
+
+    getJSON("data/players/" + encodeURIComponent(pid) + ".json").then(function (data) {
+      body.innerHTML = "";
+      var pos = p.pos || "WR";
+
+      var h3 = document.createElement("h3");
+      h3.textContent = data.season + " Game Log";
+      body.appendChild(h3);
+      if (!data.log.length) {
+        var none = document.createElement("p");
+        none.className = "status";
+        none.textContent = "No games played yet this season.";
+        body.appendChild(none);
+      } else {
+        var total = data.log.reduce(function (sum, g) { return sum + g.pts; }, 0);
+        var sumLine = document.createElement("p");
+        sumLine.className = "status";
+        sumLine.textContent = total.toFixed(2) + " pts in " + data.log.length + " games (" + (total / data.log.length).toFixed(2) + " per game). Weeks he didn't play are left out.";
+        body.appendChild(sumLine);
+        body.appendChild(statTable([["Wk", function (g) { return String(g.week); }], ["Pts", function (g) { return g.pts.toFixed(2); }]],
+          data.log.slice().reverse(), pos));
+      }
+
+      var h3b = document.createElement("h3");
+      h3b.textContent = "Career Stats";
+      body.appendChild(h3b);
+      if (!data.career.length) {
+        var none2 = document.createElement("p");
+        none2.className = "status";
+        none2.textContent = "No NFL stats on record yet.";
+        body.appendChild(none2);
+      } else {
+        body.appendChild(statTable([
+          ["Season", function (c) { return String(c.season); }],
+          ["GP", function (c) { return String(c.gp); }],
+          ["Pts", function (c) { return c.pts.toFixed(2); }],
+          ["Pts/G", function (c) { return c.gp ? (c.pts / c.gp).toFixed(2) : "0"; }]
+        ], data.career, pos));
+      }
+      var note = document.createElement("p");
+      note.className = "status";
+      note.textContent = "Fantasy points use this league's scoring settings. Regular season only. Updated daily.";
+      body.appendChild(note);
+    }).catch(function () {
+      body.textContent = "Stats for this player aren't available yet. They update once a day.";
+    });
   }
 
   function byPosition(players) {
@@ -330,10 +461,16 @@
 
     statusEl.textContent = "Live from Sleeper. Last loaded " + new Date().toLocaleString() + ".";
 
-    // Turn on lineup swapping now that the rows exist
-    var swap = document.createElement("script");
-    swap.src = "roster.js";
-    document.body.appendChild(swap);
+    // Click a player to see his game log and career stats
+    document.querySelectorAll("p").forEach(function (para) {
+      if (/swap them/.test(para.textContent)) para.textContent = "Click a player to see his game log and career stats.";
+    });
+    var oldMsg = document.getElementById("roster-msg");
+    if (oldMsg) oldMsg.remove();
+    document.querySelectorAll("tr.player").forEach(function (row) {
+      if (!row.dataset.pid) { row.style.cursor = "default"; return; }
+      row.addEventListener("click", function () { openPlayer(row.dataset.pid, players[row.dataset.pid] || {}); });
+    });
   }).catch(function (err) {
     statusEl.textContent = "Couldn't load this team from Sleeper right now. Try refreshing in a minute. (" + err.message + ")";
   });
