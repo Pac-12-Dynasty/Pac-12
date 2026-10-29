@@ -1,8 +1,15 @@
 name: Update player data
 
 on:
-  schedule:
-    - cron: "0 10 * * *"   # every day at 10:00 UTC
+   schedule:
+    - cron: "0 9 * * *"    # 5 AM Eastern (daylight time)
+    - cron: "0 10 * * *"   # 5 AM Eastern (standard time)
+    - cron: "0 16 * * *"   # 12 PM Eastern (daylight time)
+    - cron: "0 17 * * *"   # 12 PM Eastern (standard time)
+    - cron: "0 19 * * *"   # 3 PM Eastern (daylight time)
+    - cron: "0 20 * * *"   # 3 PM Eastern (standard time)
+    - cron: "0 23 * * *"   # 7 PM Eastern (daylight time)
+    - cron: "0 0 * * *"    # 7 PM Eastern (standard time)
   workflow_dispatch:        # adds a "Run workflow" button
 
 permissions:
