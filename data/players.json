@@ -302,8 +302,8 @@
  "11610": {
   "age": 25,
   "birth_date": "2001-01-04",
-  "injury": "Questionable",
-  "injury_part": "Knee",
+  "injury": "",
+  "injury_part": "",
   "name": "Malik Washington",
   "pos": "WR",
   "pos_rank": "WR87",
@@ -422,8 +422,8 @@
  "11635": {
   "age": 24,
   "birth_date": "2001-11-11",
-  "injury": "Questionable",
-  "injury_part": "Concussion",
+  "injury": "",
+  "injury_part": "",
   "name": "Ladd McConkey",
   "pos": "WR",
   "pos_rank": "WR20",
@@ -854,8 +854,8 @@
  "12517": {
   "age": 22,
   "birth_date": "2004-04-09",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Neck",
   "name": "Colston Loveland",
   "pos": "TE",
   "pos_rank": "TE3",
@@ -1190,7 +1190,7 @@
  "13279": {
   "age": 21,
   "birth_date": "2005-01-19",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Shoulder",
   "name": "Carnell Tate",
   "pos": "WR",
@@ -2126,8 +2126,8 @@
  "4866": {
   "age": 29,
   "birth_date": "1997-02-09",
-  "injury": "Questionable",
-  "injury_part": "Back",
+  "injury": "",
+  "injury_part": "",
   "name": "Saquon Barkley",
   "pos": "RB",
   "pos_rank": "RB15",
@@ -2642,7 +2642,7 @@
  "7525": {
   "age": 27,
   "birth_date": "1998-11-14",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Hamstring",
   "name": "DeVonta Smith",
   "pos": "WR",
@@ -3326,7 +3326,7 @@
  "9486": {
   "age": 25,
   "birth_date": "2001-06-16",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Ankle",
   "name": "Dontayvion Wicks",
   "pos": "WR",
@@ -3422,7 +3422,7 @@
  "9508": {
   "age": 25,
   "birth_date": "2001-06-15",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Knee",
   "name": "Tyjae Spears",
   "pos": "RB",
