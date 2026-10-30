@@ -842,8 +842,8 @@
  "12514": {
   "age": 24,
   "birth_date": "2002-10-14",
-  "injury": "Questionable",
-  "injury_part": "Concussion",
+  "injury": "Out",
+  "injury_part": "Foot",
   "name": "Emeka Egbuka",
   "pos": "WR",
   "pos_rank": "WR13",
@@ -866,8 +866,8 @@
  "12518": {
   "age": 24,
   "birth_date": "2002-05-24",
-  "injury": "Questionable",
-  "injury_part": "Groin",
+  "injury": "",
+  "injury_part": "",
   "name": "Tyler Warren",
   "pos": "TE",
   "pos_rank": "TE4",
