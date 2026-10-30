@@ -50,8 +50,8 @@
  "10232": {
   "age": 26,
   "birth_date": "2000-02-23",
-  "injury": "Questionable",
-  "injury_part": "Ribs",
+  "injury": "",
+  "injury_part": "",
   "name": "Michael Wilson",
   "pos": "WR",
   "pos_rank": "WR35",
@@ -674,7 +674,7 @@
  "12489": {
   "age": 25,
   "birth_date": "2001-02-04",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Knee",
   "name": "RJ Harvey",
   "pos": "RB",
@@ -806,8 +806,8 @@
  "12509": {
   "age": 24,
   "birth_date": "2002-02-28",
-  "injury": "Questionable",
-  "injury_part": "Hamstring",
+  "injury": "",
+  "injury_part": "",
   "name": "Tre' Harris",
   "pos": "WR",
   "pos_rank": "WR62",
@@ -1139,6 +1139,18 @@
   "team": "ARI",
   "value": 31
  },
+ "13273": {
+  "age": 23,
+  "birth_date": "2003-09-15",
+  "injury": "",
+  "injury_part": "",
+  "name": "Josh Cuevas",
+  "pos": "TE",
+  "pos_rank": "TE70",
+  "rank": 407,
+  "team": "BAL",
+  "value": 3
+ },
  "13274": {
   "age": 22,
   "birth_date": "2003-12-02",
@@ -1250,8 +1262,8 @@
  "13287": {
   "age": 21,
   "birth_date": "2005-05-31",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Jeremiyah Love",
   "pos": "RB",
   "pos_rank": "RB5",
@@ -1550,7 +1562,7 @@
  "13380": {
   "age": 23,
   "birth_date": "2003-07-25",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Quadriceps",
   "name": "Brenen Thompson",
   "pos": "WR",
@@ -2795,6 +2807,18 @@
   "team": "PIT",
   "value": 70
  },
+ "7607": {
+  "age": 27,
+  "birth_date": "1999-05-07",
+  "injury": "",
+  "injury_part": "",
+  "name": "Michael Carter",
+  "pos": "RB",
+  "pos_rank": "RB133",
+  "rank": 506,
+  "team": "TEN",
+  "value": 1
+ },
  "7611": {
   "age": 28,
   "birth_date": "1998-02-23",
@@ -2918,8 +2942,8 @@
  "8132": {
   "age": 26,
   "birth_date": "2000-04-15",
-  "injury": "Questionable",
-  "injury_part": "Toe",
+  "injury": "",
+  "injury_part": "",
   "name": "Tyler Allgeier",
   "pos": "RB",
   "pos_rank": "RB42",
