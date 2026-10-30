@@ -38,8 +38,8 @@
  "10229": {
   "age": 26,
   "birth_date": "2000-04-22",
-  "injury": "Questionable",
-  "injury_part": "Hamstring",
+  "injury": "",
+  "injury_part": "",
   "name": "Rashee Rice",
   "pos": "WR",
   "pos_rank": "WR26",
@@ -1742,8 +1742,8 @@
  "1466": {
   "age": 37,
   "birth_date": "1989-10-05",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Travis Kelce",
   "pos": "TE",
   "pos_rank": "TE20",
@@ -2066,8 +2066,8 @@
  "4199": {
   "age": 31,
   "birth_date": "1994-12-02",
-  "injury": "Questionable",
-  "injury_part": "Undisclosed",
+  "injury": "",
+  "injury_part": "",
   "name": "Aaron Jones Sr.",
   "pos": "RB",
   "pos_rank": "RB48",
@@ -2138,8 +2138,8 @@
  "4881": {
   "age": 29,
   "birth_date": "1997-01-07",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Lamar Jackson",
   "pos": "QB",
   "pos_rank": "QB3",
@@ -3050,7 +3050,7 @@
  "8154": {
   "age": 27,
   "birth_date": "1999-03-22",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Hamstring",
   "name": "Brian Robinson Jr.",
   "pos": "RB",
