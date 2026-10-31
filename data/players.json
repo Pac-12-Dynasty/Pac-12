@@ -674,7 +674,7 @@
  "12489": {
   "age": 25,
   "birth_date": "2001-02-04",
-  "injury": "Out",
+  "injury": "IR",
   "injury_part": "Knee",
   "name": "RJ Harvey",
   "pos": "RB",
@@ -3206,7 +3206,7 @@
  "8676": {
   "age": 28,
   "birth_date": "1998-08-31",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Knee",
   "name": "Rashid Shaheed",
   "pos": "WR",
@@ -3494,8 +3494,8 @@
  "9753": {
   "age": 25,
   "birth_date": "2001-01-08",
-  "injury": "Questionable",
-  "injury_part": "Knee - ACL",
+  "injury": "",
+  "injury_part": "",
   "name": "Zach Charbonnet",
   "pos": "RB",
   "pos_rank": "RB35",
