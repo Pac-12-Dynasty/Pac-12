@@ -695,6 +695,18 @@
   "team": "JAX",
   "value": 2124
  },
+ "12492": {
+  "age": 23,
+  "birth_date": "2002-12-10",
+  "injury": "IR",
+  "injury_part": "Ankle",
+  "name": "Pat Bryant",
+  "pos": "WR",
+  "pos_rank": "WR66",
+  "rank": 155,
+  "team": "DEN",
+  "value": 292
+ },
  "12495": {
   "age": 22,
   "birth_date": "2004-01-15",
@@ -938,8 +950,8 @@
  "12529": {
   "age": 24,
   "birth_date": "2002-10-22",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "Out",
+  "injury_part": "Illness",
   "name": "TreVeyon Henderson",
   "pos": "RB",
   "pos_rank": "RB19",
@@ -974,8 +986,8 @@
  "12534": {
   "age": 24,
   "birth_date": "2002-06-06",
-  "injury": "Questionable",
-  "injury_part": "Toe",
+  "injury": "Out",
+  "injury_part": "Thumb",
   "name": "Kyle Monangai",
   "pos": "RB",
   "pos_rank": "RB27",
@@ -1570,18 +1582,6 @@
   "rank": 269,
   "team": "LAC",
   "value": 17
- },
- "13394": {
-  "age": 23,
-  "birth_date": "2003-03-18",
-  "injury": "",
-  "injury_part": "",
-  "name": "Josh Cameron",
-  "pos": "WR",
-  "pos_rank": "WR133",
-  "rank": 337,
-  "team": "JAX",
-  "value": 5
  },
  "13402": {
   "age": 24,
@@ -2330,7 +2330,7 @@
  "5859": {
   "age": 29,
   "birth_date": "1997-06-30",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Ankle",
   "name": "A.J. Brown",
   "pos": "WR",
