@@ -8,6 +8,18 @@
 
   window.pac12 = window.pac12 || {};
 
+  // ---- Visitor counts (GoatCounter) ----
+  // Change GOATCOUNTER_CODE to the code you picked when signing up at goatcounter.com
+  var GOATCOUNTER_CODE = "pac12fantasy";
+  (function () {
+    if (!GOATCOUNTER_CODE || location.hostname === "localhost") return;
+    var gc = document.createElement("script");
+    gc.async = true;
+    gc.src = "https://gc.zgo.at/count.js";
+    gc.setAttribute("data-goatcounter", "https://" + GOATCOUNTER_CODE + ".goatcounter.com/count");
+    document.head.appendChild(gc);
+  })();
+
   // ---- Current Sleeper league ----
   // Sleeper gives a dynasty league a new ID every season. Starting from the
   // original league, this follows each season's renewal to the newest one.
