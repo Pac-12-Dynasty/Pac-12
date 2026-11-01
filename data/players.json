@@ -62,8 +62,8 @@
  "10236": {
   "age": 27,
   "birth_date": "1999-10-18",
-  "injury": "Questionable",
-  "injury_part": "Chest",
+  "injury": "",
+  "injury_part": "",
   "name": "Dalton Kincaid",
   "pos": "TE",
   "pos_rank": "TE7",
@@ -695,6 +695,18 @@
   "team": "JAX",
   "value": 2124
  },
+ "12491": {
+  "age": 24,
+  "birth_date": "2002-01-21",
+  "injury": "",
+  "injury_part": "",
+  "name": "Corey Kiner",
+  "pos": "RB",
+  "pos_rank": "RB102",
+  "rank": 384,
+  "team": "NE",
+  "value": 3
+ },
  "12492": {
   "age": 23,
   "birth_date": "2002-12-10",
@@ -1043,6 +1055,18 @@
   "team": "NO",
   "value": 920
  },
+ "12547": {
+  "age": 23,
+  "birth_date": "2002-11-13",
+  "injury": "",
+  "injury_part": "",
+  "name": "Kyle Williams",
+  "pos": "WR",
+  "pos_rank": "WR92",
+  "rank": 222,
+  "team": "NE",
+  "value": 58
+ },
  "12641": {
   "age": 24,
   "birth_date": "2002-05-01",
@@ -1079,18 +1103,6 @@
   "team": "BAL",
   "value": null
  },
- "12718": {
-  "age": 24,
-  "birth_date": "2002-10-24",
-  "injury": "",
-  "injury_part": "",
-  "name": "Konata Mumpfield",
-  "pos": "WR",
-  "pos_rank": "WR109",
-  "rank": 260,
-  "team": "LAR",
-  "value": 21
- },
  "13150": {
   "age": 24,
   "birth_date": "2001-11-22",
@@ -1106,8 +1118,8 @@
  "13268": {
   "age": 23,
   "birth_date": "2003-05-28",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Elijah Sarratt",
   "pos": "WR",
   "pos_rank": "WR94",
@@ -1142,8 +1154,8 @@
  "13272": {
   "age": 23,
   "birth_date": "2002-11-19",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Carson Beck",
   "pos": "QB",
   "pos_rank": "QB40",
@@ -1298,8 +1310,8 @@
  "13289": {
   "age": 22,
   "birth_date": "2004-03-08",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Drew Allar",
   "pos": "QB",
   "pos_rank": "QB53",
@@ -1526,8 +1538,8 @@
  "13347": {
   "age": 23,
   "birth_date": "2003-10-09",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Demond Claiborne",
   "pos": "RB",
   "pos_rank": "RB69",
@@ -1586,8 +1598,8 @@
  "13402": {
   "age": 24,
   "birth_date": "2002-07-05",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Skyler Bell",
   "pos": "WR",
   "pos_rank": "WR93",
@@ -1718,8 +1730,8 @@
  "13423": {
   "age": 23,
   "birth_date": "2003-06-28",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Eli Heidenreich",
   "pos": "RB",
   "pos_rank": "RB90",
@@ -2186,8 +2198,8 @@
  "4983": {
   "age": 29,
   "birth_date": "1997-04-14",
-  "injury": "Questionable",
-  "injury_part": "Shoulder - AC Joint",
+  "injury": "",
+  "injury_part": "",
   "name": "DJ Moore",
   "pos": "WR",
   "pos_rank": "WR32",
@@ -2390,8 +2402,8 @@
  "5947": {
   "age": 29,
   "birth_date": "1996-11-09",
-  "injury": "Questionable",
-  "injury_part": "Hamstring",
+  "injury": "",
+  "injury_part": "",
   "name": "Jakobi Meyers",
   "pos": "WR",
   "pos_rank": "WR51",
@@ -2711,18 +2723,6 @@
   "team": "ATL",
   "value": 2065
  },
- "7561": {
-  "age": 28,
-  "birth_date": "1998-05-02",
-  "injury": "",
-  "injury_part": "",
-  "name": "Elijah Mitchell",
-  "pos": "RB",
-  "pos_rank": "",
-  "rank": null,
-  "team": "PHI",
-  "value": null
- },
  "7564": {
   "age": 26,
   "birth_date": "2000-03-01",
@@ -2738,8 +2738,8 @@
  "7567": {
   "age": 27,
   "birth_date": "1999-03-14",
-  "injury": "Questionable",
-  "injury_part": "Hip",
+  "injury": "",
+  "injury_part": "",
   "name": "Kenny Gainwell",
   "pos": "RB",
   "pos_rank": "RB43",
@@ -2978,8 +2978,8 @@
  "8137": {
   "age": 25,
   "birth_date": "2001-03-04",
-  "injury": "Questionable",
-  "injury_part": "Shoulder",
+  "injury": "",
+  "injury_part": "",
   "name": "George Pickens",
   "pos": "WR",
   "pos_rank": "WR16",
@@ -3086,7 +3086,7 @@
  "8155": {
   "age": 25,
   "birth_date": "2001-05-31",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Quadriceps",
   "name": "Breece Hall",
   "pos": "RB",
