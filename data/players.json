@@ -1190,8 +1190,8 @@
  "13275": {
   "age": 23,
   "birth_date": "2002-12-21",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Ty Simpson",
   "pos": "QB",
   "pos_rank": "QB29",
@@ -2138,8 +2138,8 @@
  "4454": {
   "age": 31,
   "birth_date": "1995-08-04",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Leg",
   "name": "Kendrick Bourne",
   "pos": "WR",
   "pos_rank": "WR144",
@@ -2894,8 +2894,8 @@
  "8122": {
   "age": 25,
   "birth_date": "2001-04-11",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Undisclosed",
   "name": "Zonovan Knight",
   "pos": "RB",
   "pos_rank": "RB105",
