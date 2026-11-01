@@ -24,8 +24,7 @@ jobs:
       - run: python3 scripts/update_stats.py
       - run: python3 scripts/update_legacy.py
       - run: python3 scripts/update_trades.py
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: python3 scripts/update_analyzer.py
       - name: Save changes
         run: |
           git config user.name "github-actions[bot]"
