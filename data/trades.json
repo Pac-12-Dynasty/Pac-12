@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T20:24+00:00",
+ "generated": "2026-11-01T23:26+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
@@ -74,7 +74,8 @@
        "was_basis": "2026 Wk 1-7",
        "now_pos_rank": "RB40",
        "now_rank": 166,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 6547
       }
      ],
      "picks": [],
@@ -92,19 +93,22 @@
        "was_basis": "2026 Wk 1-7",
        "now_pos_rank": "TE2",
        "now_rank": 37,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 2046
       }
      ],
      "picks": [
       {
        "season": 2027,
        "round": 2,
-       "original_owner": "861417814836256768"
+       "original_owner": "861417814836256768",
+       "was_value": 241
       },
       {
        "season": 2028,
        "round": 3,
-       "original_owner": "861417814836256768"
+       "original_owner": "861417814836256768",
+       "was_value": 31
       }
      ],
      "faab": 0
@@ -129,7 +133,8 @@
        "was_basis": "2026 Wk 1-7",
        "now_pos_rank": "WR71",
        "now_rank": 179,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 3243
       },
       {
        "id": "13414",
@@ -140,19 +145,22 @@
        "was_basis": "2026 Wk 1-7",
        "now_pos_rank": "RB54",
        "now_rank": 213,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 80
       }
      ],
      "picks": [
       {
        "season": 2027,
        "round": 3,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 42
       },
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "861421486488031232"
+       "original_owner": "861421486488031232",
+       "was_value": 2197
       }
      ],
      "faab": 0
@@ -169,14 +177,16 @@
        "was_basis": "2026 Wk 1-7",
        "now_pos_rank": "TE1",
        "now_rank": 19,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 5659
       }
      ],
      "picks": [
       {
        "season": 2027,
        "round": 2,
-       "original_owner": "995982448825720832"
+       "original_owner": "995982448825720832",
+       "was_value": 241
       }
      ],
      "faab": 0
@@ -201,7 +211,8 @@
        "was_basis": "2026 Wk 1-4",
        "now_pos_rank": "QB26",
        "now_rank": 80,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 459
       }
      ],
      "picks": [],
@@ -214,7 +225,8 @@
       {
        "season": 2027,
        "round": 4,
-       "original_owner": "861417814836256768"
+       "original_owner": "861417814836256768",
+       "was_value": 13
       }
      ],
      "faab": 0
@@ -234,7 +246,8 @@
       {
        "season": 2028,
        "round": 2,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 170
       }
      ],
      "faab": 0
@@ -251,7 +264,8 @@
        "was_basis": "2025 finish",
        "now_pos_rank": "RB39",
        "now_rank": 164,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 759
       }
      ],
      "picks": [],
@@ -277,7 +291,8 @@
        "was_basis": "2025 finish",
        "now_pos_rank": "RB15",
        "now_rank": 59,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1469
       },
       {
        "id": "13402",
@@ -288,14 +303,16 @@
        "was_basis": "2025 finish",
        "now_pos_rank": "WR183",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 104
       }
      ],
      "picks": [
       {
        "season": 2027,
        "round": 4,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 10
       }
      ],
      "faab": 0
@@ -312,7 +329,8 @@
        "was_basis": "2025 finish",
        "now_pos_rank": "WR98",
        "now_rank": 250,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 370
       },
       {
        "id": "13414",
@@ -323,7 +341,8 @@
        "was_basis": "2025 finish",
        "now_pos_rank": "RB54",
        "now_rank": 213,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 29
       },
       {
        "id": "7611",
@@ -334,14 +353,16 @@
        "was_basis": "2025 finish",
        "now_pos_rank": "RB17",
        "now_rank": 61,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 515
       }
      ],
      "picks": [
       {
        "season": 2027,
        "round": 3,
-       "original_owner": "745458998371008512"
+       "original_owner": "745458998371008512",
+       "was_value": 39
       }
      ],
      "faab": 0
@@ -366,7 +387,8 @@
        "was_basis": "2025 finish",
        "now_pos_rank": "RB87",
        "now_rank": 330,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 716
       },
       {
        "id": "12519",
@@ -377,19 +399,22 @@
        "was_basis": "2025 finish",
        "now_pos_rank": "WR18",
        "now_rank": 53,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 4350
       }
      ],
      "picks": [
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 2207
       },
       {
        "season": 2027,
        "round": 2,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 239
       }
      ],
      "faab": 0
@@ -406,7 +431,8 @@
        "was_basis": "2025 finish",
        "now_pos_rank": "RB31",
        "now_rank": 126,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 6798
       }
      ],
      "picks": [],
@@ -427,7 +453,8 @@
       {
        "season": 2026,
        "round": 3,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 54
       }
      ],
      "faab": 0
@@ -439,12 +466,14 @@
       {
        "season": 2026,
        "round": 4,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 15
       },
       {
        "season": 2028,
        "round": 3,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 31
       }
      ],
      "faab": 0
@@ -464,7 +493,8 @@
       {
        "season": 2026,
        "round": 1,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 2904
       }
      ],
      "faab": 0
@@ -476,12 +506,14 @@
       {
        "season": 2026,
        "round": 2,
-       "original_owner": "745458998371008512"
+       "original_owner": "745458998371008512",
+       "was_value": 315
       },
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "861421486488031232"
+       "original_owner": "861421486488031232",
+       "was_value": 2179
       }
      ],
      "faab": 0
@@ -506,7 +538,8 @@
        "was_basis": "2025 Wk 1-9",
        "now_pos_rank": "WR31",
        "now_rank": 90,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 920
       },
       {
        "id": "7611",
@@ -517,7 +550,8 @@
        "was_basis": "2025 Wk 1-9",
        "now_pos_rank": "RB17",
        "now_rank": 61,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 465
       }
      ],
      "picks": [],
@@ -535,7 +569,8 @@
        "was_basis": "2025 Wk 1-9",
        "now_pos_rank": "RB16",
        "now_rank": 60,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 788
       },
       {
        "id": "9504",
@@ -546,14 +581,16 @@
        "was_basis": "2025 Wk 1-9",
        "now_pos_rank": "WR79",
        "now_rank": 197,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 270
       }
      ],
      "picks": [
       {
        "season": 2026,
        "round": 2,
-       "original_owner": "745458998371008512"
+       "original_owner": "745458998371008512",
+       "was_value": 288
       }
      ],
      "faab": 0
@@ -578,7 +615,8 @@
        "was_basis": "2025 Wk 1-8",
        "now_pos_rank": "RB122",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 79
       },
       {
        "id": "5927",
@@ -589,19 +627,22 @@
        "was_basis": "2025 Wk 1-8",
        "now_pos_rank": "WR61",
        "now_rank": 154,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 2094
       }
      ],
      "picks": [
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "853109226401288192"
+       "original_owner": "853109226401288192",
+       "was_value": 1705
       },
       {
        "season": 2026,
        "round": 4,
-       "original_owner": "731283214563422208"
+       "original_owner": "731283214563422208",
+       "was_value": 15
       }
      ],
      "faab": 0
@@ -618,14 +659,16 @@
        "was_basis": "2025 Wk 1-8",
        "now_pos_rank": "RB39",
        "now_rank": 164,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 4635
       }
      ],
      "picks": [
       {
        "season": 2028,
        "round": 2,
-       "original_owner": "909255939126161408"
+       "original_owner": "909255939126161408",
+       "was_value": 331
       }
      ],
      "faab": 0
@@ -650,7 +693,8 @@
        "was_basis": "2025 Wk 1-7",
        "now_pos_rank": "TE60",
        "now_rank": 287,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 180
       },
       {
        "id": "7569",
@@ -661,7 +705,8 @@
        "was_basis": "2025 Wk 1-7",
        "now_pos_rank": "WR28",
        "now_rank": 78,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 6719
       }
      ],
      "picks": [],
@@ -679,14 +724,16 @@
        "was_basis": "2025 Wk 1-7",
        "now_pos_rank": "WR18",
        "now_rank": 53,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1547
       }
      ],
      "picks": [
       {
        "season": 2026,
        "round": 1,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 2456
       }
      ],
      "faab": 0
@@ -711,14 +758,16 @@
        "was_basis": "2025 Wk 1-7",
        "now_pos_rank": "WR42",
        "now_rank": 118,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1013
       }
      ],
      "picks": [
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 1728
       }
      ],
      "faab": 0
@@ -735,7 +784,8 @@
        "was_basis": "2025 Wk 1-7",
        "now_pos_rank": "WR22",
        "now_rank": 66,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 2269
       },
       {
        "id": "8151",
@@ -746,7 +796,8 @@
        "was_basis": "2025 Wk 1-7",
        "now_pos_rank": "RB2",
        "now_rank": 6,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 2829
       }
      ],
      "picks": [],
@@ -772,14 +823,16 @@
        "was_basis": "2025 Wk 1-4",
        "now_pos_rank": "WR69",
        "now_rank": 174,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 5213
       }
      ],
      "picks": [
       {
        "season": 2026,
        "round": 2,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 302
       }
      ],
      "faab": 0
@@ -796,7 +849,8 @@
        "was_basis": "2025 Wk 1-4",
        "now_pos_rank": "WR71",
        "now_rank": 179,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 5753
       }
      ],
      "picks": [],
@@ -822,7 +876,8 @@
        "was_basis": "2025 Wk 1-2",
        "now_pos_rank": "WR30",
        "now_rank": 85,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 5606
       },
       {
        "id": "8138",
@@ -833,24 +888,28 @@
        "was_basis": "2025 Wk 1-2",
        "now_pos_rank": "RB13",
        "now_rank": 35,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 4131
       }
      ],
      "picks": [
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "853109226401288192"
+       "original_owner": "853109226401288192",
+       "was_value": 1810
       },
       {
        "season": 2027,
        "round": 2,
-       "original_owner": "853109226401288192"
+       "original_owner": "853109226401288192",
+       "was_value": 244
       },
       {
        "season": 2028,
        "round": 2,
-       "original_owner": "853109226401288192"
+       "original_owner": "853109226401288192",
+       "was_value": 383
       }
      ],
      "faab": 0
@@ -867,7 +926,8 @@
        "was_basis": "2025 Wk 1-2",
        "now_pos_rank": "QB5",
        "now_rank": 14,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1013
       },
       {
        "id": "5844",
@@ -878,7 +938,8 @@
        "was_basis": "2025 Wk 1-2",
        "now_pos_rank": "TE16",
        "now_rank": 110,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 2429
       },
       {
        "id": "6794",
@@ -889,29 +950,34 @@
        "was_basis": "2025 Wk 1-2",
        "now_pos_rank": "WR29",
        "now_rank": 84,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 9831
       }
      ],
      "picks": [
       {
        "season": 2026,
        "round": 1,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 2565
       },
       {
        "season": 2026,
        "round": 3,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 64
       },
       {
        "season": 2027,
        "round": 3,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 49
       },
       {
        "season": 2028,
        "round": 2,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 383
       }
      ],
      "faab": 0
@@ -931,7 +997,8 @@
       {
        "season": 2026,
        "round": 3,
-       "original_owner": "861421486488031232"
+       "original_owner": "861421486488031232",
+       "was_value": 38
       }
      ],
      "faab": 0
@@ -943,12 +1010,14 @@
       {
        "season": 2025,
        "round": 3,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 49
       },
       {
        "season": 2025,
        "round": 4,
-       "original_owner": "909255939126161408"
+       "original_owner": "909255939126161408",
+       "was_value": 13
       }
      ],
      "faab": 0
@@ -968,7 +1037,8 @@
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "853109226401288192"
+       "original_owner": "853109226401288192",
+       "was_value": 299
       }
      ],
      "faab": 0
@@ -985,7 +1055,8 @@
        "was_basis": "2024 finish",
        "now_pos_rank": "QB38",
        "now_rank": 233,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 745
       }
      ],
      "picks": [],
@@ -1006,12 +1077,14 @@
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 299
       },
       {
        "season": 2026,
        "round": 3,
-       "original_owner": "731283214563422208"
+       "original_owner": "731283214563422208",
+       "was_value": 38
       }
      ],
      "faab": 0
@@ -1028,7 +1101,8 @@
        "was_basis": "2024 finish",
        "now_pos_rank": "RB80",
        "now_rank": 316,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 607
       }
      ],
      "picks": [],
@@ -1054,7 +1128,8 @@
        "was_basis": "2024 finish",
        "now_pos_rank": "WR27",
        "now_rank": 76,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 3175
       }
      ],
      "picks": [],
@@ -1067,12 +1142,14 @@
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 2874
       },
       {
        "season": 2026,
        "round": 2,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 227
       }
      ],
      "faab": 0
@@ -1092,7 +1169,8 @@
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "861417814836256768"
+       "original_owner": "861417814836256768",
+       "was_value": 2874
       }
      ],
      "faab": 0
@@ -1109,14 +1187,16 @@
        "was_basis": "2024 finish",
        "now_pos_rank": "QB26",
        "now_rank": 80,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 260
       }
      ],
      "picks": [
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "745458998371008512"
+       "original_owner": "745458998371008512",
+       "was_value": 2874
       }
      ],
      "faab": 0
@@ -1141,19 +1221,22 @@
        "was_basis": "2024 finish",
        "now_pos_rank": "WR65",
        "now_rank": 162,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 497
       }
      ],
      "picks": [
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 299
       },
       {
        "season": 2026,
        "round": 3,
-       "original_owner": "731283214563422208"
+       "original_owner": "731283214563422208",
+       "was_value": 38
       }
      ],
      "faab": 0
@@ -1165,7 +1248,8 @@
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "733192747346997248"
+       "original_owner": "733192747346997248",
+       "was_value": 2874
       }
      ],
      "faab": 0
@@ -1190,24 +1274,28 @@
        "was_basis": "2024 finish",
        "now_pos_rank": "WR45",
        "now_rank": 124,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 400
       }
      ],
      "picks": [
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 2931
       },
       {
        "season": 2026,
        "round": 1,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 2206
       },
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "733192747346997248"
+       "original_owner": "733192747346997248",
+       "was_value": 2931
       }
      ],
      "faab": 0
@@ -1219,12 +1307,14 @@
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 2931
       },
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 329
       }
      ],
      "faab": 0
@@ -1249,7 +1339,8 @@
        "was_basis": "2024 Wk 1-9",
        "now_pos_rank": "RB37",
        "now_rank": 155,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 2504
       }
      ],
      "picks": [],
@@ -1267,7 +1358,8 @@
        "was_basis": "2024 Wk 1-9",
        "now_pos_rank": "RB122",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 461
       },
       {
        "id": "4993",
@@ -1278,7 +1370,8 @@
        "was_basis": "2024 Wk 1-9",
        "now_pos_rank": "TE20",
        "now_rank": 121,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 36
       },
       {
        "id": "5937",
@@ -1289,14 +1382,16 @@
        "was_basis": "2024 Wk 1-9",
        "now_pos_rank": "WR183",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1625
       }
      ],
      "picks": [
       {
        "season": 2026,
        "round": 1,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 1746
       }
      ],
      "faab": 0
@@ -1321,14 +1416,16 @@
        "was_basis": "2024 Wk 1-9",
        "now_pos_rank": "RB8",
        "now_rank": 18,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1020
       }
      ],
      "picks": [
       {
        "season": 2025,
        "round": 3,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 47
       }
      ],
      "faab": 0
@@ -1345,19 +1442,22 @@
        "was_basis": "2024 Wk 1-9",
        "now_pos_rank": "QB5",
        "now_rank": 14,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 899
       }
      ],
      "picks": [
       {
        "season": 2025,
        "round": 3,
-       "original_owner": "731283214563422208"
+       "original_owner": "731283214563422208",
+       "was_value": 47
       },
       {
        "season": 2026,
        "round": 4,
-       "original_owner": "731283214563422208"
+       "original_owner": "731283214563422208",
+       "was_value": 9
       }
      ],
      "faab": 0
@@ -1382,7 +1482,8 @@
        "was_basis": "2024 Wk 1-7",
        "now_pos_rank": "WR83",
        "now_rank": 204,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 8783
       }
      ],
      "picks": [],
@@ -1400,14 +1501,16 @@
        "was_basis": "2024 Wk 1-7",
        "now_pos_rank": "RB87",
        "now_rank": 330,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 3725
       }
      ],
      "picks": [
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "861417814836256768"
+       "original_owner": "861417814836256768",
+       "was_value": 2410
       }
      ],
      "faab": 0
@@ -1427,7 +1530,8 @@
       {
        "season": 2025,
        "round": 3,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 46
       }
      ],
      "faab": 0
@@ -1444,7 +1548,8 @@
        "was_basis": "2024 Wk 1-5",
        "now_pos_rank": "RB122",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 340
       }
      ],
      "picks": [],
@@ -1470,7 +1575,8 @@
        "was_basis": "2024 Wk 1-5",
        "now_pos_rank": "WR6",
        "now_rank": 26,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 6276
       }
      ],
      "picks": [],
@@ -1488,7 +1594,8 @@
        "was_basis": "2024 Wk 1-5",
        "now_pos_rank": "RB32",
        "now_rank": 138,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 2031
       }
      ],
      "picks": [],
@@ -1509,17 +1616,20 @@
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 275
       },
       {
        "season": 2025,
        "round": 4,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 12
       },
       {
        "season": 2026,
        "round": 2,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 199
       }
      ],
      "faab": 0
@@ -1536,7 +1646,8 @@
        "was_basis": "2024 Wk 1-2",
        "now_pos_rank": "RB10",
        "now_rank": 29,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1898
       },
       {
        "id": "5927",
@@ -1547,7 +1658,8 @@
        "was_basis": "2024 Wk 1-2",
        "now_pos_rank": "WR61",
        "now_rank": 154,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1521
       }
      ],
      "picks": [],
@@ -1573,7 +1685,8 @@
        "was_basis": "2024 Wk 1-2",
        "now_pos_rank": "QB7",
        "now_rank": 20,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 3587
       }
      ],
      "picks": [],
@@ -1591,7 +1704,8 @@
        "was_basis": "2024 Wk 1-2",
        "now_pos_rank": "QB21",
        "now_rank": 64,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1610
       }
      ],
      "picks": [],
@@ -1617,14 +1731,16 @@
        "was_basis": "2023 finish",
        "now_pos_rank": "RB4",
        "now_rank": 10,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 8108
       }
      ],
      "picks": [
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "861422415547318272"
+       "original_owner": "861422415547318272",
+       "was_value": 253
       }
      ],
      "faab": 0
@@ -1641,14 +1757,16 @@
        "was_basis": "2023 finish",
        "now_pos_rank": "WR17",
        "now_rank": 52,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 10065
       }
      ],
      "picks": [
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "733192747346997248"
+       "original_owner": "733192747346997248",
+       "was_value": 2293
       }
      ],
      "faab": 0
@@ -1668,22 +1786,26 @@
       {
        "season": 2024,
        "round": 3,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 539
       },
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "915765963616985088"
+       "original_owner": "915765963616985088",
+       "was_value": 1782
       },
       {
        "season": 2024,
        "round": 2,
-       "original_owner": "745458998371008512"
+       "original_owner": "745458998371008512",
+       "was_value": 1016
       },
       {
        "season": 2024,
        "round": 4,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 296
       }
      ],
      "faab": 0
@@ -1695,7 +1817,8 @@
       {
        "season": 2024,
        "round": 1,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 2253
       }
      ],
      "faab": 0
@@ -1720,7 +1843,8 @@
        "was_basis": "2023 Wk 1-8",
        "now_pos_rank": "RB122",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 688
       }
      ],
      "picks": [],
@@ -1733,17 +1857,20 @@
       {
        "season": 2024,
        "round": 2,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 284
       },
       {
        "season": 2024,
        "round": 4,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 12
       },
       {
        "season": 2025,
        "round": 3,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 35
       }
      ],
      "faab": 0
@@ -1768,14 +1895,16 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "RB56",
        "now_rank": 217,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 2429
       }
      ],
      "picks": [
       {
        "season": 2024,
        "round": 3,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 41
       }
      ],
      "faab": 0
@@ -1792,7 +1921,8 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "QB3",
        "now_rank": 8,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 727
       }
      ],
      "picks": [],
@@ -1818,14 +1948,16 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "WR183",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 132
       }
      ],
      "picks": [
       {
        "season": 2024,
        "round": 2,
-       "original_owner": "908808510823997440"
+       "original_owner": "908808510823997440",
+       "was_value": 258
       }
      ],
      "faab": 0
@@ -1842,19 +1974,22 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "QB2",
        "now_rank": 5,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 457
       }
      ],
      "picks": [
       {
        "season": 2024,
        "round": 3,
-       "original_owner": "861417814836256768"
+       "original_owner": "861417814836256768",
+       "was_value": 41
       },
       {
        "season": 2025,
        "round": 4,
-       "original_owner": "861417814836256768"
+       "original_owner": "861417814836256768",
+       "was_value": 8
       }
      ],
      "faab": 0
@@ -1879,7 +2014,8 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "WR123",
        "now_rank": 308,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 250
       }
      ],
      "picks": [],
@@ -1897,14 +2033,16 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "WR79",
        "now_rank": 197,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 33
       }
      ],
      "picks": [
       {
        "season": 2024,
        "round": 4,
-       "original_owner": "861417814836256768"
+       "original_owner": "861417814836256768",
+       "was_value": 10
       }
      ],
      "faab": 0
@@ -1929,7 +2067,8 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "RB122",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1938
       }
      ],
      "picks": [],
@@ -1947,14 +2086,16 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "RB122",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 97
       }
      ],
      "picks": [
       {
        "season": 2024,
        "round": 2,
-       "original_owner": "745458998371008512"
+       "original_owner": "745458998371008512",
+       "was_value": 258
       }
      ],
      "faab": 0
@@ -1979,14 +2120,16 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "WR183",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 912
       }
      ],
      "picks": [
       {
        "season": 2024,
        "round": 2,
-       "original_owner": "909255939126161408"
+       "original_owner": "909255939126161408",
+       "was_value": 258
       }
      ],
      "faab": 0
@@ -2003,7 +2146,8 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "RB122",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 74
       }
      ],
      "picks": [],
@@ -2029,7 +2173,8 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "RB80",
        "now_rank": 316,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1536
       },
       {
        "id": "9758",
@@ -2040,7 +2185,8 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "QB8",
        "now_rank": 21,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1810
       }
      ],
      "picks": [],
@@ -2058,7 +2204,8 @@
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "RB122",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 752
       }
      ],
      "picks": [],
@@ -2084,7 +2231,8 @@
        "was_basis": "2023 Wk 1-3",
        "now_pos_rank": "WR183",
        "now_rank": 458,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1727
       },
       {
        "id": "8132",
@@ -2095,7 +2243,8 @@
        "was_basis": "2023 Wk 1-3",
        "now_pos_rank": "RB36",
        "now_rank": 152,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 484
       }
      ],
      "picks": [],
@@ -2113,14 +2262,16 @@
        "was_basis": "2023 Wk 1-3",
        "now_pos_rank": "RB32",
        "now_rank": 138,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 1315
       }
      ],
      "picks": [
       {
        "season": 2024,
        "round": 3,
-       "original_owner": "858765508143628288"
+       "original_owner": "858765508143628288",
+       "was_value": 45
       }
      ],
      "faab": 0
@@ -2145,7 +2296,8 @@
        "was_basis": "2023 Wk 1-1",
        "now_pos_rank": "WR104",
        "now_rank": 261,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 8824
       }
      ],
      "picks": [],
@@ -2163,7 +2315,8 @@
        "was_basis": "2023 Wk 1-1",
        "now_pos_rank": "WR109",
        "now_rank": 281,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 2372
       },
       {
        "id": "7596",
@@ -2174,14 +2327,16 @@
        "was_basis": "2023 Wk 1-1",
        "now_pos_rank": "WR155",
        "now_rank": 377,
-       "now_basis": "2026 so far"
+       "now_basis": "2026 so far",
+       "was_value": 987
       }
      ],
      "picks": [
       {
        "season": 2024,
        "round": 4,
-       "original_owner": "745458998371008512"
+       "original_owner": "745458998371008512",
+       "was_value": 10
       }
      ],
      "faab": 0
