@@ -1,0 +1,40 @@
+// Trade Analyzer settings. Change these numbers to tune how trades are graded.
+window.ANALYZER_SETTINGS = {
+  // Grade cutoffs, by how much value a team gains (in percent, after team fit).
+  // At least A -> A, at least B -> B, at least C -> C (fair), at least D -> D, below D -> F
+  grades: { A: 15, B: 5, C: -5, D: -15 },
+
+  // If BOTH teams gain at least this much after team fit, both get an A (a strong deal for both)
+  winWin: 8,
+
+  // "Stud tax": higher means one great player beats several good ones by more.
+  // 1 = straight sum. 1.25 means two equal players are worth about 1.74 of one.
+  studPower: 1.25,
+
+  // Boost or cut from this season's league-scored finish at his position
+  production: [
+    { upTo: 5, change: 0.10 },
+    { upTo: 12, change: 0.05 },
+    { upTo: 24, change: 0 },
+    { upTo: 36, change: -0.05 },
+    { upTo: 999, change: -0.10 }
+  ],
+
+  // Value cut for injury status
+  injury: { Out: -0.08, IR: -0.08, PUP: -0.08, Sus: -0.05, Doubtful: -0.04 },
+
+  // When a position's value shifts from long term toward win now: starts at "peak", fully by "cliff"
+  ages: {
+    QB: { peak: 26, cliff: 34 },
+    RB: { peak: 23, cliff: 28 },
+    WR: { peak: 24, cliff: 30 },
+    TE: { peak: 25, cliff: 31 }
+  },
+
+  // How each team window weighs win-now value and long-term value
+  window: {
+    Contender: { now: 1.15, future: 0.9 },
+    Middle: { now: 1, future: 1 },
+    Rebuilder: { now: 0.85, future: 1.15 }
+  }
+};
