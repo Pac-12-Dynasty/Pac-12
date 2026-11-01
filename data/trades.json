@@ -1,0 +1,1957 @@
+{
+ "generated": "2026-11-01T18:43+00:00",
+ "owners": {
+  "861417814836256768": {
+   "name": "Souders32",
+   "team": "Baby Back Gibbs"
+  },
+  "745458998371008512": {
+   "name": "bstaker",
+   "team": "Why So Serious?"
+  },
+  "995982448825720832": {
+   "name": "blum15",
+   "team": "Bijan\u2019s minions "
+  },
+  "858765508143628288": {
+   "name": "BrockWelsh",
+   "team": "Joe Buck Yourself"
+  },
+  "733192747346997248": {
+   "name": "zsouders",
+   "team": "Fannin the Flames"
+  },
+  "908808510823997440": {
+   "name": "jtroup7",
+   "team": "Skatteboner"
+  },
+  "909255939126161408": {
+   "name": "Soudersisaac",
+   "team": "Olave\u2019s Medical Team"
+  },
+  "861421486488031232": {
+   "name": "hoagieman50",
+   "team": "J. Love\u2019s number 1 Fan"
+  },
+  "731283214563422208": {
+   "name": "GRWisniewski",
+   "team": "Goed's Plan"
+  },
+  "915765963616985088": {
+   "name": "SweetSyrup69",
+   "team": "Lamar Jackson Fan Club"
+  },
+  "853109226401288192": {
+   "name": "j1do",
+   "team": "Time to tank"
+  },
+  "861422415547318272": {
+   "name": "BBBrandyn",
+   "team": "BBBrandyn"
+  },
+  "1416188424762720256": {
+   "name": "NestaV024",
+   "team": "Mia KALIFa "
+  }
+ },
+ "trades": [
+  {
+   "id": "1421675777753149440",
+   "season": 2026,
+   "week": 8,
+   "date": "2026-10-30T01:48+00:00",
+   "sides": [
+    {
+     "owner": "861417814836256768",
+     "players": [
+      {
+       "id": "8155",
+       "name": "Breece Hall",
+       "pos": "RB",
+       "rank": 19,
+       "pos_rank": "RB8",
+       "value": 6380
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "995982448825720832",
+     "players": [
+      {
+       "id": "8131",
+       "name": "Isaiah Likely",
+       "pos": "TE",
+       "rank": 85,
+       "pos_rank": "TE10",
+       "value": 1558
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 2,
+       "original_owner": "861417814836256768"
+      },
+      {
+       "season": 2028,
+       "round": 3,
+       "original_owner": "861417814836256768"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1421585121974161408",
+   "season": 2026,
+   "week": 8,
+   "date": "2026-10-29T18:01+00:00",
+   "sides": [
+    {
+     "owner": "995982448825720832",
+     "players": [
+      {
+       "id": "10229",
+       "name": "Rashee Rice",
+       "pos": "WR",
+       "rank": 49,
+       "pos_rank": "WR26",
+       "value": 3471
+      },
+      {
+       "id": "13414",
+       "name": "Kaelon Black",
+       "pos": "RB",
+       "rank": 199,
+       "pos_rank": "RB57",
+       "value": 85
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 3,
+       "original_owner": "861422415547318272"
+      },
+      {
+       "season": 2027,
+       "round": 1,
+       "original_owner": "861421486488031232"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "8130",
+       "name": "Trey McBride",
+       "pos": "TE",
+       "rank": 24,
+       "pos_rank": "TE2",
+       "value": 5740
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 2,
+       "original_owner": "995982448825720832"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1415894610848366592",
+   "season": 2026,
+   "week": 5,
+   "date": "2026-10-14T11:59+00:00",
+   "sides": [
+    {
+     "owner": "861417814836256768",
+     "players": [
+      {
+       "id": "4943",
+       "name": "Sam Darnold",
+       "pos": "QB",
+       "rank": 131,
+       "pos_rank": "QB21",
+       "value": 456
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 4,
+       "original_owner": "861417814836256768"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1401711528289300480",
+   "season": 2026,
+   "week": 1,
+   "date": "2026-09-06T06:12+00:00",
+   "sides": [
+    {
+     "owner": "915765963616985088",
+     "players": [],
+     "picks": [
+      {
+       "season": 2028,
+       "round": 2,
+       "original_owner": "861422415547318272"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "5850",
+       "name": "Josh Jacobs",
+       "pos": "RB",
+       "rank": 104,
+       "pos_rank": "RB28",
+       "value": 870
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1397859421522010112",
+   "season": 2026,
+   "week": 1,
+   "date": "2026-08-26T06:22+00:00",
+   "sides": [
+    {
+     "owner": "745458998371008512",
+     "players": [
+      {
+       "id": "12490",
+       "name": "Bhayshul Tuten",
+       "pos": "RB",
+       "rank": 70,
+       "pos_rank": "RB20",
+       "value": 2124
+      },
+      {
+       "id": "13402",
+       "name": "Skyler Bell",
+       "pos": "WR",
+       "rank": 223,
+       "pos_rank": "WR93",
+       "value": 57
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 4,
+       "original_owner": "861422415547318272"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "13311",
+       "name": "Chris Bell",
+       "pos": "WR",
+       "rank": 114,
+       "pos_rank": "WR52",
+       "value": 638
+      },
+      {
+       "id": "13414",
+       "name": "Kaelon Black",
+       "pos": "RB",
+       "rank": 199,
+       "pos_rank": "RB57",
+       "value": 85
+      },
+      {
+       "id": "7611",
+       "name": "Rhamondre Stevenson",
+       "pos": "RB",
+       "rank": 120,
+       "pos_rank": "RB34",
+       "value": 594
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 3,
+       "original_owner": "745458998371008512"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1368784978531319808",
+   "season": 2026,
+   "week": 1,
+   "date": "2026-06-07T06:11+00:00",
+   "sides": [
+    {
+     "owner": "861421486488031232",
+     "players": [
+      {
+       "id": "11583",
+       "name": "Jonathon Brooks",
+       "pos": "RB",
+       "rank": 115,
+       "pos_rank": "RB31",
+       "value": 635
+      },
+      {
+       "id": "12519",
+       "name": "Luther Burden III",
+       "pos": "WR",
+       "rank": 32,
+       "pos_rank": "WR17",
+       "value": 4812
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 1,
+       "original_owner": "861422415547318272"
+      },
+      {
+       "season": 2027,
+       "round": 2,
+       "original_owner": "861422415547318272"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "12507",
+       "name": "Omarion Hampton",
+       "pos": "RB",
+       "rank": 51,
+       "pos_rank": "RB13",
+       "value": 3359
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1357902485271908352",
+   "season": 2026,
+   "week": 1,
+   "date": "2026-05-06T23:59+00:00",
+   "sides": [
+    {
+     "owner": "915765963616985088",
+     "players": [],
+     "picks": [
+      {
+       "season": 2026,
+       "round": 3,
+       "original_owner": "915765963616985088"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "1416188424762720256",
+     "players": [],
+     "picks": [
+      {
+       "season": 2026,
+       "round": 4,
+       "original_owner": "915765963616985088"
+      },
+      {
+       "season": 2028,
+       "round": 3,
+       "original_owner": "915765963616985088"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1355624406012932096",
+   "season": 2026,
+   "week": 1,
+   "date": "2026-05-02T00:30+00:00",
+   "sides": [
+    {
+     "owner": "861421486488031232",
+     "players": [],
+     "picks": [
+      {
+       "season": 2026,
+       "round": 1,
+       "original_owner": "861422415547318272"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [],
+     "picks": [
+      {
+       "season": 2026,
+       "round": 2,
+       "original_owner": "745458998371008512"
+      },
+      {
+       "season": 2027,
+       "round": 1,
+       "original_owner": "861421486488031232"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1292293262471626752",
+   "season": 2025,
+   "week": 10,
+   "date": "2025-11-06T22:51+00:00",
+   "sides": [
+    {
+     "owner": "745458998371008512",
+     "players": [
+      {
+       "id": "2449",
+       "name": "Stefon Diggs",
+       "pos": "WR",
+       "rank": 150,
+       "pos_rank": "WR63",
+       "value": 317
+      },
+      {
+       "id": "7611",
+       "name": "Rhamondre Stevenson",
+       "pos": "RB",
+       "rank": 120,
+       "pos_rank": "RB34",
+       "value": 594
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "861421486488031232",
+     "players": [
+      {
+       "id": "5967",
+       "name": "Tony Pollard",
+       "pos": "RB",
+       "rank": 145,
+       "pos_rank": "RB39",
+       "value": 354
+      },
+      {
+       "id": "9504",
+       "name": "Kayshon Boutte",
+       "pos": "WR",
+       "rank": 180,
+       "pos_rank": "WR76",
+       "value": 159
+      }
+     ],
+     "picks": [
+      {
+       "season": 2026,
+       "round": 2,
+       "original_owner": "745458998371008512"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1291599455543361536",
+   "season": 2025,
+   "week": 9,
+   "date": "2025-11-05T01:16+00:00",
+   "sides": [
+    {
+     "owner": "909255939126161408",
+     "players": [
+      {
+       "id": "12457",
+       "name": "Jaydon Blue",
+       "pos": "RB",
+       "rank": 252,
+       "pos_rank": "RB68",
+       "value": 29
+      },
+      {
+       "id": "5927",
+       "name": "Terry McLaurin",
+       "pos": "WR",
+       "rank": 93,
+       "pos_rank": "WR42",
+       "value": 1231
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 1,
+       "original_owner": "853109226401288192"
+      },
+      {
+       "season": 2026,
+       "round": 4,
+       "original_owner": "731283214563422208"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "915765963616985088",
+     "players": [
+      {
+       "id": "5850",
+       "name": "Josh Jacobs",
+       "pos": "RB",
+       "rank": 104,
+       "pos_rank": "RB28",
+       "value": 870
+      }
+     ],
+     "picks": [
+      {
+       "season": 2028,
+       "round": 2,
+       "original_owner": "909255939126161408"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1288177836510699520",
+   "season": 2025,
+   "week": 8,
+   "date": "2025-10-26T14:33+00:00",
+   "sides": [
+    {
+     "owner": "858765508143628288",
+     "players": [
+      {
+       "id": "4144",
+       "name": "Jonnu Smith",
+       "pos": "TE",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      },
+      {
+       "id": "7569",
+       "name": "Nico Collins",
+       "pos": "WR",
+       "rank": 22,
+       "pos_rank": "WR12",
+       "value": 5918
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "12519",
+       "name": "Luther Burden III",
+       "pos": "WR",
+       "rank": 32,
+       "pos_rank": "WR17",
+       "value": 4812
+      }
+     ],
+     "picks": [
+      {
+       "season": 2026,
+       "round": 1,
+       "original_owner": "861422415547318272"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1287126986719784960",
+   "season": 2025,
+   "week": 8,
+   "date": "2025-10-25T06:24+00:00",
+   "sides": [
+    {
+     "owner": "861417814836256768",
+     "players": [
+      {
+       "id": "5872",
+       "name": "Deebo Samuel Sr.",
+       "pos": "WR",
+       "rank": 163,
+       "pos_rank": "WR69",
+       "value": 230
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 1,
+       "original_owner": "858765508143628288"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "858765508143628288",
+     "players": [
+      {
+       "id": "8148",
+       "name": "Jameson Williams",
+       "pos": "WR",
+       "rank": 54,
+       "pos_rank": "WR27",
+       "value": 3065
+      },
+      {
+       "id": "8151",
+       "name": "Kenneth Walker III",
+       "pos": "RB",
+       "rank": 9,
+       "pos_rank": "RB3",
+       "value": 8108
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1280461308679958528",
+   "season": 2025,
+   "week": 5,
+   "date": "2025-10-05T13:55+00:00",
+   "sides": [
+    {
+     "owner": "908808510823997440",
+     "players": [
+      {
+       "id": "11635",
+       "name": "Ladd McConkey",
+       "pos": "WR",
+       "rank": 36,
+       "pos_rank": "WR20",
+       "value": 4401
+      }
+     ],
+     "picks": [
+      {
+       "season": 2026,
+       "round": 2,
+       "original_owner": "861422415547318272"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "10229",
+       "name": "Rashee Rice",
+       "pos": "WR",
+       "rank": 49,
+       "pos_rank": "WR26",
+       "value": 3471
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1274207814302072832",
+   "season": 2025,
+   "week": 3,
+   "date": "2025-09-19T06:23+00:00",
+   "sides": [
+    {
+     "owner": "915765963616985088",
+     "players": [
+      {
+       "id": "12514",
+       "name": "Emeka Egbuka",
+       "pos": "WR",
+       "rank": 23,
+       "pos_rank": "WR13",
+       "value": 5890
+      },
+      {
+       "id": "8138",
+       "name": "James Cook III",
+       "pos": "RB",
+       "rank": 14,
+       "pos_rank": "RB6",
+       "value": 7295
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 1,
+       "original_owner": "853109226401288192"
+      },
+      {
+       "season": 2027,
+       "round": 2,
+       "original_owner": "853109226401288192"
+      },
+      {
+       "season": 2028,
+       "round": 2,
+       "original_owner": "853109226401288192"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "853109226401288192",
+     "players": [
+      {
+       "id": "3163",
+       "name": "Jared Goff",
+       "pos": "QB",
+       "rank": 96,
+       "pos_rank": "QB16",
+       "value": 1113
+      },
+      {
+       "id": "5844",
+       "name": "T.J. Hockenson",
+       "pos": "TE",
+       "rank": 167,
+       "pos_rank": "TE24",
+       "value": 215
+      },
+      {
+       "id": "6794",
+       "name": "Justin Jefferson",
+       "pos": "WR",
+       "rank": 8,
+       "pos_rank": "WR6",
+       "value": 8949
+      }
+     ],
+     "picks": [
+      {
+       "season": 2026,
+       "round": 1,
+       "original_owner": "915765963616985088"
+      },
+      {
+       "season": 2026,
+       "round": 3,
+       "original_owner": "915765963616985088"
+      },
+      {
+       "season": 2027,
+       "round": 3,
+       "original_owner": "915765963616985088"
+      },
+      {
+       "season": 2028,
+       "round": 2,
+       "original_owner": "915765963616985088"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1228055514659692544",
+   "season": 2025,
+   "week": 1,
+   "date": "2025-05-13T16:52+00:00",
+   "sides": [
+    {
+     "owner": "909255939126161408",
+     "players": [],
+     "picks": [
+      {
+       "season": 2026,
+       "round": 3,
+       "original_owner": "861421486488031232"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861421486488031232",
+     "players": [],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 3,
+       "original_owner": "861422415547318272"
+      },
+      {
+       "season": 2025,
+       "round": 4,
+       "original_owner": "909255939126161408"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1227843994239651840",
+   "season": 2025,
+   "week": 1,
+   "date": "2025-05-13T13:06+00:00",
+   "sides": [
+    {
+     "owner": "915765963616985088",
+     "players": [],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 2,
+       "original_owner": "853109226401288192"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "853109226401288192",
+     "players": [
+      {
+       "id": "11565",
+       "name": "J.J. McCarthy",
+       "pos": "QB",
+       "rank": 211,
+       "pos_rank": "QB32",
+       "value": 71
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1227646077285453824",
+   "season": 2025,
+   "week": 1,
+   "date": "2025-05-12T13:24+00:00",
+   "sides": [
+    {
+     "owner": "861417814836256768",
+     "players": [],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 2,
+       "original_owner": "915765963616985088"
+      },
+      {
+       "season": 2026,
+       "round": 3,
+       "original_owner": "731283214563422208"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "858765508143628288",
+     "players": [
+      {
+       "id": "7528",
+       "name": "Najee Harris",
+       "pos": "RB",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1227614298889535488",
+   "season": 2025,
+   "week": 1,
+   "date": "2025-05-12T11:18+00:00",
+   "sides": [
+    {
+     "owner": "858765508143628288",
+     "players": [
+      {
+       "id": "5846",
+       "name": "DK Metcalf",
+       "pos": "WR",
+       "rank": 72,
+       "pos_rank": "WR34",
+       "value": 2104
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 1,
+       "original_owner": "915765963616985088"
+      },
+      {
+       "season": 2026,
+       "round": 2,
+       "original_owner": "858765508143628288"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1227403840911855616",
+   "season": 2025,
+   "week": 1,
+   "date": "2025-05-11T21:23+00:00",
+   "sides": [
+    {
+     "owner": "745458998371008512",
+     "players": [],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 1,
+       "original_owner": "861417814836256768"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "4943",
+       "name": "Sam Darnold",
+       "pos": "QB",
+       "rank": 131,
+       "pos_rank": "QB21",
+       "value": 456
+      }
+     ],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 1,
+       "original_owner": "745458998371008512"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1227350927816536064",
+   "season": 2025,
+   "week": 1,
+   "date": "2025-05-11T17:50+00:00",
+   "sides": [
+    {
+     "owner": "858765508143628288",
+     "players": [
+      {
+       "id": "4039",
+       "name": "Cooper Kupp",
+       "pos": "WR",
+       "rank": 263,
+       "pos_rank": "WR110",
+       "value": 19
+      }
+     ],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 2,
+       "original_owner": "915765963616985088"
+      },
+      {
+       "season": 2026,
+       "round": 3,
+       "original_owner": "731283214563422208"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "731283214563422208",
+     "players": [],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 1,
+       "original_owner": "733192747346997248"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1223048379370582016",
+   "season": 2025,
+   "week": 1,
+   "date": "2025-05-01T06:13+00:00",
+   "sides": [
+    {
+     "owner": "858765508143628288",
+     "players": [
+      {
+       "id": "8121",
+       "name": "Romeo Doubs",
+       "pos": "WR",
+       "rank": 130,
+       "pos_rank": "WR59",
+       "value": 472
+      }
+     ],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 1,
+       "original_owner": "861422415547318272"
+      },
+      {
+       "season": 2026,
+       "round": 1,
+       "original_owner": "861422415547318272"
+      },
+      {
+       "season": 2025,
+       "round": 1,
+       "original_owner": "733192747346997248"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 1,
+       "original_owner": "858765508143628288"
+      },
+      {
+       "season": 2025,
+       "round": 2,
+       "original_owner": "858765508143628288"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1160310178739314688",
+   "season": 2024,
+   "week": 10,
+   "date": "2024-11-09T07:17+00:00",
+   "sides": [
+    {
+     "owner": "858765508143628288",
+     "players": [
+      {
+       "id": "5892",
+       "name": "David Montgomery",
+       "pos": "RB",
+       "rank": 116,
+       "pos_rank": "RB32",
+       "value": 626
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "861421486488031232",
+     "players": [
+      {
+       "id": "4988",
+       "name": "Nick Chubb",
+       "pos": "RB",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      },
+      {
+       "id": "4993",
+       "name": "Mike Gesicki",
+       "pos": "TE",
+       "rank": 295,
+       "pos_rank": "TE46",
+       "value": 10
+      },
+      {
+       "id": "5937",
+       "name": "Diontae Johnson",
+       "pos": "WR",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [
+      {
+       "season": 2026,
+       "round": 1,
+       "original_owner": "858765508143628288"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1159972044063371264",
+   "season": 2024,
+   "week": 10,
+   "date": "2024-11-08T07:17+00:00",
+   "sides": [
+    {
+     "owner": "731283214563422208",
+     "players": [
+      {
+       "id": "7588",
+       "name": "Javonte Williams",
+       "pos": "RB",
+       "rank": 60,
+       "pos_rank": "RB16",
+       "value": 2738
+      }
+     ],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 3,
+       "original_owner": "915765963616985088"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "915765963616985088",
+     "players": [
+      {
+       "id": "3163",
+       "name": "Jared Goff",
+       "pos": "QB",
+       "rank": 96,
+       "pos_rank": "QB16",
+       "value": 1113
+      }
+     ],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 3,
+       "original_owner": "731283214563422208"
+      },
+      {
+       "season": 2026,
+       "round": 4,
+       "original_owner": "731283214563422208"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1154952866424045568",
+   "season": 2024,
+   "week": 8,
+   "date": "2024-10-25T06:17+00:00",
+   "sides": [
+    {
+     "owner": "861417814836256768",
+     "players": [
+      {
+       "id": "11628",
+       "name": "Marvin Harrison Jr.",
+       "pos": "WR",
+       "rank": 88,
+       "pos_rank": "WR40",
+       "value": 1462
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "11583",
+       "name": "Jonathon Brooks",
+       "pos": "RB",
+       "rank": 115,
+       "pos_rank": "RB31",
+       "value": 635
+      }
+     ],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 1,
+       "original_owner": "861417814836256768"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1150145586017120256",
+   "season": 2024,
+   "week": 6,
+   "date": "2024-10-12T06:17+00:00",
+   "sides": [
+    {
+     "owner": "909255939126161408",
+     "players": [],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 3,
+       "original_owner": "861422415547318272"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "6845",
+       "name": "Zack Moss",
+       "pos": "RB",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1150136748182323200",
+   "season": 2024,
+   "week": 6,
+   "date": "2024-10-12T06:17+00:00",
+   "sides": [
+    {
+     "owner": "909255939126161408",
+     "players": [
+      {
+       "id": "8144",
+       "name": "Chris Olave",
+       "pos": "WR",
+       "rank": 17,
+       "pos_rank": "WR9",
+       "value": 6656
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "915765963616985088",
+     "players": [
+      {
+       "id": "8154",
+       "name": "Brian Robinson Jr.",
+       "pos": "RB",
+       "rank": 192,
+       "pos_rank": "RB53",
+       "value": 115
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1144401645145817088",
+   "season": 2024,
+   "week": 3,
+   "date": "2024-09-26T06:17+00:00",
+   "sides": [
+    {
+     "owner": "731283214563422208",
+     "players": [],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 2,
+       "original_owner": "915765963616985088"
+      },
+      {
+       "season": 2025,
+       "round": 4,
+       "original_owner": "915765963616985088"
+      },
+      {
+       "season": 2026,
+       "round": 2,
+       "original_owner": "915765963616985088"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "915765963616985088",
+     "players": [
+      {
+       "id": "3198",
+       "name": "Derrick Henry",
+       "pos": "RB",
+       "rank": 75,
+       "pos_rank": "RB22",
+       "value": 1929
+      },
+      {
+       "id": "5927",
+       "name": "Terry McLaurin",
+       "pos": "WR",
+       "rank": 93,
+       "pos_rank": "WR42",
+       "value": 1231
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1142089967146012672",
+   "season": 2024,
+   "week": 3,
+   "date": "2024-09-21T06:17+00:00",
+   "sides": [
+    {
+     "owner": "853109226401288192",
+     "players": [
+      {
+       "id": "6770",
+       "name": "Joe Burrow",
+       "pos": "QB",
+       "rank": 41,
+       "pos_rank": "QB5",
+       "value": 4063
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "11566",
+       "name": "Jayden Daniels",
+       "pos": "QB",
+       "rank": 50,
+       "pos_rank": "QB7",
+       "value": 3367
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1128796858282872832",
+   "season": 2024,
+   "week": 1,
+   "date": "2024-08-14T06:14+00:00",
+   "sides": [
+    {
+     "owner": "733192747346997248",
+     "players": [
+      {
+       "id": "4034",
+       "name": "Christian McCaffrey",
+       "pos": "RB",
+       "rank": 27,
+       "pos_rank": "RB9",
+       "value": 5225
+      }
+     ],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 2,
+       "original_owner": "861422415547318272"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "7564",
+       "name": "Ja'Marr Chase",
+       "pos": "WR",
+       "rank": 1,
+       "pos_rank": "WR1",
+       "value": 10113
+      }
+     ],
+     "picks": [
+      {
+       "season": 2025,
+       "round": 1,
+       "original_owner": "733192747346997248"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1074492167416045568",
+   "season": 2024,
+   "week": 1,
+   "date": "2024-03-17T06:11+00:00",
+   "sides": [
+    {
+     "owner": "858765508143628288",
+     "players": [],
+     "picks": [
+      {
+       "season": 2024,
+       "round": 3,
+       "original_owner": "915765963616985088"
+      },
+      {
+       "season": 2025,
+       "round": 1,
+       "original_owner": "915765963616985088"
+      },
+      {
+       "season": 2024,
+       "round": 2,
+       "original_owner": "745458998371008512"
+      },
+      {
+       "season": 2024,
+       "round": 4,
+       "original_owner": "858765508143628288"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "915765963616985088",
+     "players": [],
+     "picks": [
+      {
+       "season": 2024,
+       "round": 1,
+       "original_owner": "858765508143628288"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1025575297443299328",
+   "season": 2023,
+   "week": 9,
+   "date": "2023-11-03T06:14+00:00",
+   "sides": [
+    {
+     "owner": "858765508143628288",
+     "players": [
+      {
+       "id": "2749",
+       "name": "Raheem Mostert",
+       "pos": "RB",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "915765963616985088",
+     "players": [],
+     "picks": [
+      {
+       "season": 2024,
+       "round": 2,
+       "original_owner": "858765508143628288"
+      },
+      {
+       "season": 2024,
+       "round": 4,
+       "original_owner": "858765508143628288"
+      },
+      {
+       "season": 2025,
+       "round": 3,
+       "original_owner": "858765508143628288"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1025125379574501376",
+   "season": 2023,
+   "week": 8,
+   "date": "2023-11-02T06:14+00:00",
+   "sides": [
+    {
+     "owner": "908808510823997440",
+     "players": [
+      {
+       "id": "8129",
+       "name": "Dameon Pierce",
+       "pos": "RB",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [
+      {
+       "season": 2024,
+       "round": 3,
+       "original_owner": "858765508143628288"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "909255939126161408",
+     "players": [
+      {
+       "id": "8183",
+       "name": "Brock Purdy",
+       "pos": "QB",
+       "rank": 57,
+       "pos_rank": "QB9",
+       "value": 3008
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1025123794039500800",
+   "season": 2023,
+   "week": 8,
+   "date": "2023-11-02T06:14+00:00",
+   "sides": [
+    {
+     "owner": "861417814836256768",
+     "players": [
+      {
+       "id": "1689",
+       "name": "Adam Thielen",
+       "pos": "WR",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [
+      {
+       "season": 2024,
+       "round": 2,
+       "original_owner": "908808510823997440"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "908808510823997440",
+     "players": [
+      {
+       "id": "6804",
+       "name": "Jordan Love",
+       "pos": "QB",
+       "rank": 89,
+       "pos_rank": "QB15",
+       "value": 1388
+      }
+     ],
+     "picks": [
+      {
+       "season": 2024,
+       "round": 3,
+       "original_owner": "861417814836256768"
+      },
+      {
+       "season": 2025,
+       "round": 4,
+       "original_owner": "861417814836256768"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1024925885927120896",
+   "season": 2023,
+   "week": 8,
+   "date": "2023-11-01T06:14+00:00",
+   "sides": [
+    {
+     "owner": "861417814836256768",
+     "players": [
+      {
+       "id": "2197",
+       "name": "Brandin Cooks",
+       "pos": "WR",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "915765963616985088",
+     "players": [
+      {
+       "id": "9504",
+       "name": "Kayshon Boutte",
+       "pos": "WR",
+       "rank": 180,
+       "pos_rank": "WR76",
+       "value": 159
+      }
+     ],
+     "picks": [
+      {
+       "season": 2024,
+       "round": 4,
+       "original_owner": "861417814836256768"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1024920865161183232",
+   "season": 2023,
+   "week": 8,
+   "date": "2023-11-01T06:14+00:00",
+   "sides": [
+    {
+     "owner": "745458998371008512",
+     "players": [
+      {
+       "id": "4018",
+       "name": "Joe Mixon",
+       "pos": "RB",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "915765963616985088",
+     "players": [
+      {
+       "id": "5248",
+       "name": "Gus Edwards",
+       "pos": "RB",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [
+      {
+       "season": 2024,
+       "round": 2,
+       "original_owner": "745458998371008512"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1024468870394363904",
+   "season": 2023,
+   "week": 8,
+   "date": "2023-10-31T06:14+00:00",
+   "sides": [
+    {
+     "owner": "745458998371008512",
+     "players": [
+      {
+       "id": "6943",
+       "name": "Gabe Davis",
+       "pos": "WR",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [
+      {
+       "season": 2024,
+       "round": 2,
+       "original_owner": "909255939126161408"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "909255939126161408",
+     "players": [
+      {
+       "id": "6845",
+       "name": "Zack Moss",
+       "pos": "RB",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1024460810816835584",
+   "season": 2023,
+   "week": 8,
+   "date": "2023-10-31T06:14+00:00",
+   "sides": [
+    {
+     "owner": "861417814836256768",
+     "players": [
+      {
+       "id": "7528",
+       "name": "Najee Harris",
+       "pos": "RB",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      },
+      {
+       "id": "9758",
+       "name": "C.J. Stroud",
+       "pos": "QB",
+       "rank": 78,
+       "pos_rank": "QB11",
+       "value": 1828
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "853109226401288192",
+     "players": [
+      {
+       "id": "8143",
+       "name": "Jerome Ford",
+       "pos": "RB",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1012786187687305216",
+   "season": 2023,
+   "week": 4,
+   "date": "2023-09-29T06:14+00:00",
+   "sides": [
+    {
+     "owner": "858765508143628288",
+     "players": [
+      {
+       "id": "5937",
+       "name": "Diontae Johnson",
+       "pos": "WR",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      },
+      {
+       "id": "8132",
+       "name": "Tyler Allgeier",
+       "pos": "RB",
+       "rank": 159,
+       "pos_rank": "RB42",
+       "value": 257
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "909255939126161408",
+     "players": [
+      {
+       "id": "8154",
+       "name": "Brian Robinson Jr.",
+       "pos": "RB",
+       "rank": 192,
+       "pos_rank": "RB53",
+       "value": 115
+      }
+     ],
+     "picks": [
+      {
+       "season": 2024,
+       "round": 3,
+       "original_owner": "858765508143628288"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
+  {
+   "id": "1008431299062812672",
+   "season": 2023,
+   "week": 2,
+   "date": "2023-09-17T06:14+00:00",
+   "sides": [
+    {
+     "owner": "745458998371008512",
+     "players": [
+      {
+       "id": "5859",
+       "name": "A.J. Brown",
+       "pos": "WR",
+       "rank": 35,
+       "pos_rank": "WR19",
+       "value": 4453
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    },
+    {
+     "owner": "861421486488031232",
+     "players": [
+      {
+       "id": "6819",
+       "name": "Michael Pittman Jr.",
+       "pos": "WR",
+       "rank": 92,
+       "pos_rank": "WR41",
+       "value": 1318
+      },
+      {
+       "id": "7596",
+       "name": "Elijah Moore",
+       "pos": "WR",
+       "rank": null,
+       "pos_rank": null,
+       "value": null
+      }
+     ],
+     "picks": [
+      {
+       "season": 2024,
+       "round": 4,
+       "original_owner": "745458998371008512"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  }
+ ]
+}

@@ -2162,8 +2162,8 @@
  "4881": {
   "age": 29,
   "birth_date": "1997-01-07",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hand",
   "name": "Lamar Jackson",
   "pos": "QB",
   "pos_rank": "QB3",
@@ -2846,8 +2846,8 @@
  "8110": {
   "age": 27,
   "birth_date": "1999-01-18",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Jake Ferguson",
   "pos": "TE",
   "pos_rank": "TE14",
@@ -2870,8 +2870,8 @@
  "8112": {
   "age": 25,
   "birth_date": "2001-07-24",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Head",
   "name": "Drake London",
   "pos": "WR",
   "pos_rank": "WR8",
