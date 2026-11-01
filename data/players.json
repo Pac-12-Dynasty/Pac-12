@@ -1622,8 +1622,8 @@
  "13404": {
   "age": 24,
   "birth_date": "2002-02-07",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Garrett Nussmeier",
   "pos": "QB",
   "pos_rank": "QB62",
@@ -2138,8 +2138,8 @@
  "4454": {
   "age": 31,
   "birth_date": "1995-08-04",
-  "injury": "Questionable",
-  "injury_part": "Leg",
+  "injury": "Out",
+  "injury_part": "Ankle",
   "name": "Kendrick Bourne",
   "pos": "WR",
   "pos_rank": "WR144",
@@ -2678,8 +2678,8 @@
  "7526": {
   "age": 27,
   "birth_date": "1998-11-25",
-  "injury": "Questionable",
-  "injury_part": "Undisclosed",
+  "injury": "",
+  "injury_part": "",
   "name": "Jaylen Waddle",
   "pos": "WR",
   "pos_rank": "WR23",
@@ -2846,7 +2846,7 @@
  "8110": {
   "age": 27,
   "birth_date": "1999-01-18",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Ankle",
   "name": "Jake Ferguson",
   "pos": "TE",
@@ -2894,8 +2894,8 @@
  "8122": {
   "age": 25,
   "birth_date": "2001-04-11",
-  "injury": "Questionable",
-  "injury_part": "Undisclosed",
+  "injury": "Out",
+  "injury_part": "Concussion",
   "name": "Zonovan Knight",
   "pos": "RB",
   "pos_rank": "RB105",
