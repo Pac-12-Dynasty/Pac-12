@@ -118,12 +118,13 @@
     slot.className = "nav-auth";
     if (nav) {
       nav.appendChild(slot);
-      if (!nav.querySelector('a[href="news.html"]')) {
-        var news = document.createElement("a");
-        news.href = "news.html";
-        news.textContent = "News";
-        nav.insertBefore(news, slot);
-      }
+      [["news.html", "News"], ["trades.html", "Trades"], ["legacy.html", "Legacy"]].forEach(function (link) {
+        if (nav.querySelector('a[href="' + link[0] + '"]')) return;
+        var a = document.createElement("a");
+        a.href = link[0];
+        a.textContent = link[1];
+        nav.insertBefore(a, slot);
+      });
     }
 
     var renderCount = 0;
