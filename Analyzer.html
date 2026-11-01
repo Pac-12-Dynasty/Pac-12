@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trade Analyzer | Pac 12 Dynasty</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root { --red: #c8102e; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; }
+    main.analyzer { max-width: 1140px; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .bar { background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 8px 8px 0 0; border-bottom: 4px solid var(--red); }
+    .bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+    .panel { background: #fff; padding: 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 1.5rem; }
+
+    .sides { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 760px) { .sides { grid-template-columns: 1fr; } }
+    .side select { width: 100%; font: inherit; font-weight: 700; padding: 0.5rem; border-radius: 6px; border: 1px solid #c5ccd6; margin-bottom: 0.4rem; }
+    .side .window { font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); margin-bottom: 0.6rem; }
+    .side h3 { margin: 0.75rem 0 0.35rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); }
+    .assets { max-height: 340px; overflow-y: auto; border: 1px solid var(--line); border-radius: 6px; }
+    .asset { display: flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--line); cursor: pointer; font-size: 0.92rem; }
+    .asset:last-child { border-bottom: none; }
+    .asset:hover { background: #fff8e1; }
+    .asset input { width: 18px; height: 18px; flex: none; }
+    .asset .name { flex: 1; }
+    .asset .sub { color: var(--muted); font-size: 0.8rem; }
+    .asset .val { font-weight: 700; white-space: nowrap; }
+    .asset.on { background: #fdf3d3; }
+
+    .result { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 760px) { .result { grid-template-columns: 1fr; } }
+    .verdict { border: 1px solid var(--line); border-radius: 8px; padding: 1rem; }
+    .verdict .top { display: flex; align-items: center; gap: 1rem; }
+    .grade { width: 72px; height: 72px; flex: none; border-radius: 12px; display: grid; place-items: center; font-size: 2.4rem; font-weight: 900; color: #fff; }
+    .g-A { background: #0f6e56; } .g-B { background: #4c9a6a; } .g-C { background: #8a8f98; } .g-D { background: #d97706; } .g-F { background: #b42318; }
+    .verdict h3 { margin: 0; font-size: 1.1rem; color: var(--ink); }
+    .verdict .summary { margin: 0.2rem 0 0; font-weight: 700; }
+    .verdict ul { margin: 0.75rem 0 0; padding-left: 1.1rem; font-size: 0.92rem; }
+    .verdict li { margin: 0.3rem 0; }
+    .empty { color: var(--muted); padding: 1rem 0; }
+    details.how { margin-top: 1rem; }
+    details.how summary { cursor: pointer; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Trade Analyzer</h1>
+    <p>Build a trade and see how it grades for both teams</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="standings.html">Standings</a>
+  </nav>
+  <main class="analyzer">
+    <p id="status" class="muted">Loading league data...</p>
+
+    <div id="app" hidden>
+      <div class="bar"><h2>Build a Trade</h2></div>
+      <div class="panel">
+        <div class="sides">
+          <div class="side" id="side-a"></div>
+          <div class="side" id="side-b"></div>
+        </div>
+      </div>
+
+      <div class="bar"><h2>Grades</h2></div>
+      <div class="panel">
+        <div id="result"><p class="empty">Pick two teams and check what each side sends to see the grades.</p></div>
+        <details class="how">
+          <summary>How grades work</summary>
+          <p class="muted">Each player starts from his DynastyProcess dynasty value, adjusted for how he's scoring in this league this season and any injury. Draft picks use DynastyProcess pick values, with next year's picks projected from the original team's current standing. Playoff teams pick 7 through 12 in reverse order of the standings. The six non-playoff teams go through the draft lottery, so their picks are valued as the average of every pick they could land, weighted by their lottery odds.</p>
+          <p class="muted">Value is split into win-now and long-term based on age and position. Contenders weigh win-now value more, and rebuilders weigh long-term value more, so the same trade can grade differently for each team.</p>
+          <p class="muted">A "stud tax" means one great player is worth more than several good ones adding up to the same total. The grade comes from how much value each team gains after all of that: A is a steal (or a strong deal for both teams), C is fair, and F is a massive overpay or undersell.</p>
+        </details>
+      </div>
+      <p class="muted" id="updated"></p>
+    </div>
+  </main>
+  <footer>Pac 12 Dynasty Fantasy Football League</footer>
+  <script src="auth.js"></script>
+  <script src="analyzer-settings.js"></script>
+  <script>
+    var S = window.ANALYZER_SETTINGS;
+    var D;                       // analyzer data
+    var picked = { a: {}, b: {} };  // side -> asset id -> true
+    var teamOf = { a: null, b: null };
+
+    function el(tag, cls, text) {
+      var n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text != null) n.textContent = text;
+      return n;
+    }
+    function fmt(v) { return Math.round(v).toLocaleString(); }
+    function pct(x) { return (x >= 0 ? "+" : "") + Math.round(x * 100) + "%"; }
+
+    // ---------- Valuing one asset ----------
+    function prodChange(posRank) {
+      var m = /(\d+)$/.exec(posRank || "");
+      if (!m) return 0;
+      var n = Number(m[1]);
+      for (var i = 0; i < S.production.length; i++) if (n <= S.production[i].upTo) return S.production[i].change;
+      return 0;
+    }
+    function nowShare(p) {
+      var a = S.ages[p.pos];
+      if (!a) return 0.9;              // kickers and defenses are all about now
+      if (!p.age) return 0.5;
+      var s = 0.25 + 0.6 * (p.age - a.peak) / (a.cliff - a.peak);
+      return Math.max(0.15, Math.min(0.9, s));
+    }
+    // Returns { now, future } market value for an asset id
+    function split(id) {
+      if (D.players[id]) {
+        var p = D.players[id];
+        var base = p.value * (1 + (S.injury[p.injury] || 0));
+        var share = nowShare(p);
+        return { now: base * share * (1 + prodChange(p.season_pos_rank)), future: base * (1 - share) };
+      }
+      var pk = D.pickById[id];
+      return { now: 0, future: pk ? pk.value : 0 };
+    }
+    function fitValue(id, uid) {
+      var w = S.window[(D.teams[uid] || {}).window] || S.window.Middle;
+      var sp = split(id);
+      return sp.now * w.now + sp.future * w.future;
+    }
+    function marketValue(id) { var sp = split(id); return sp.now + sp.future; }
+
+    // "Stud tax": combine a package so one great asset beats several good ones
+    function combine(values) {
+      var p = S.studPower;
+      var sum = values.reduce(function (s, v) { return s + Math.pow(Math.max(v, 0), p); }, 0);
+      return Math.pow(sum, 1 / p);
+    }
+
+    function letter(gain) {
+      var g = gain * 100;
+      if (g >= S.grades.A) return "A";
+      if (g >= S.grades.B) return "B";
+      if (g >= S.grades.C) return "C";
+      if (g >= S.grades.D) return "D";
+      return "F";
+    }
+    function gainOf(got, gave) { return gave > 0 ? (got - gave) / gave : (got > 0 ? 1 : 0); }
+
+    // ---------- Building each side ----------
+    function assetRow(side, id, title, sub, value) {
+      var row = el("label", "asset");
+      var box = el("input"); box.type = "checkbox"; box.checked = !!picked[side][id];
+      row.classList.toggle("on", box.checked);
+      box.onchange = function () {
+        if (box.checked) picked[side][id] = true; else delete picked[side][id];
+        row.classList.toggle("on", box.checked);
+        grade();
+      };
+      row.appendChild(box);
+      var name = el("span", "name", title);
+      if (sub) { name.appendChild(document.createElement("br")); name.appendChild(el("span", "sub", sub)); }
+      row.appendChild(name);
+      row.appendChild(el("span", "val", fmt(value)));
+      return row;
+    }
+
+    function drawSide(side) {
+      var box = document.getElementById("side-" + side);
+      box.innerHTML = "";
+      var select = el("select");
+      var blank = el("option", "", side === "a" ? "Choose Team A" : "Choose Team B"); blank.value = "";
+      select.appendChild(blank);
+      Object.keys(D.teams).sort(function (x, y) { return D.teams[x].team.localeCompare(D.teams[y].team); }).forEach(function (uid) {
+        var o = el("option", "", D.teams[uid].team); o.value = uid;
+        if (uid === teamOf[side]) o.selected = true;
+        select.appendChild(o);
+      });
+      select.onchange = function () {
+        teamOf[side] = select.value || null;
+        picked[side] = {};
+        drawSide(side);
+        grade();
+      };
+      box.appendChild(select);
+      var uid = teamOf[side];
+      if (!uid) { box.appendChild(el("p", "empty", "Pick a team to see its players and picks.")); return; }
+      var t = D.teams[uid];
+      box.appendChild(el("div", "window", t.window + " · " + t.record + " · #" + t.standing + " in standings"));
+      box.appendChild(el("h3", "", "Sends players"));
+      var list = el("div", "assets");
+      Object.keys(D.players).filter(function (id) { return D.players[id].owner === uid; })
+        .sort(function (x, y) { return marketValue(y) - marketValue(x); })
+        .forEach(function (id) {
+          var p = D.players[id];
+          var bits = [p.pos, p.nfl, p.age ? "Age " + p.age : "", p.season_pos_rank ? "This season " + p.season_pos_rank : "", p.injury].filter(Boolean);
+          list.appendChild(assetRow(side, id, p.name, bits.join(" · "), marketValue(id)));
+        });
+      box.appendChild(list);
+      box.appendChild(el("h3", "", "Sends picks"));
+      var plist = el("div", "assets");
+      D.picks.filter(function (pk) { return pk.owner === uid; })
+        .sort(function (x, y) { return (x.season - y.season) || (x.round - y.round) || (y.value - x.value); })
+        .forEach(function (pk) {
+          var from = pk.original_owner !== uid ? "From " + D.teams[pk.original_owner].team : "Own pick";
+          plist.appendChild(assetRow(side, pk.id, pk.label, from + (pk.note ? " · " + pk.note : ""), pk.value));
+        });
+      box.appendChild(plist);
+    }
+
+    // ---------- Grading ----------
+    function grade() {
+      var out = document.getElementById("result");
+      out.innerHTML = "";
+      var a = teamOf.a, b = teamOf.b;
+      var aGives = Object.keys(picked.a), bGives = Object.keys(picked.b);
+      if (!a || !b) { out.appendChild(el("p", "empty", "Pick two teams to start.")); return; }
+      if (a === b) { out.appendChild(el("p", "empty", "Pick two different teams.")); return; }
+      if (!aGives.length && !bGives.length) { out.appendChild(el("p", "empty", "Check what each team sends to see the grades.")); return; }
+
+      function view(me, gets, gives) {
+        var gotFit = combine(gets.map(function (id) { return fitValue(id, me); }));
+        var gaveFit = combine(gives.map(function (id) { return fitValue(id, me); }));
+        var gotMkt = combine(gets.map(marketValue));
+        var gaveMkt = combine(gives.map(marketValue));
+        var nowIn = gets.reduce(function (s, id) { return s + split(id).now; }, 0);
+        var nowOut = gives.reduce(function (s, id) { return s + split(id).now; }, 0);
+        var futIn = gets.reduce(function (s, id) { return s + split(id).future; }, 0);
+        var futOut = gives.reduce(function (s, id) { return s + split(id).future; }, 0);
+        return { me: me, gets: gets, gives: gives, fitGain: gainOf(gotFit, gaveFit), mktGain: gainOf(gotMkt, gaveMkt),
+                 gotMkt: gotMkt, gaveMkt: gaveMkt, nowNet: nowIn - nowOut, futNet: futIn - futOut };
+      }
+      var va = view(a, bGives, aGives), vb = view(b, aGives, bGives);
+      va.grade = letter(va.fitGain); vb.grade = letter(vb.fitGain);
+      var winWin = va.fitGain * 100 >= S.winWin && vb.fitGain * 100 >= S.winWin;
+      if (winWin) { va.grade = "A"; vb.grade = "A"; }
+
+      var wrap = el("div", "result");
+      [va, vb].forEach(function (v) {
+        var t = D.teams[v.me];
+        var card = el("div", "verdict");
+        var top = el("div", "top");
+        top.appendChild(el("div", "grade g-" + v.grade, v.grade));
+        var head = el("div");
+        head.appendChild(el("h3", "", t.team));
+        var words = { A: winWin ? "Strong deal for both teams" : "Steal", B: "Good deal", C: "Fair deal", D: "Overpay", F: "Massive overpay" };
+        head.appendChild(el("p", "summary", words[v.grade] + " (" + pct(v.fitGain) + " for a " + t.window.toLowerCase() + ")"));
+        top.appendChild(head);
+        card.appendChild(top);
+
+        var ul = el("ul");
+        ul.appendChild(el("li", "", "Market value: gives " + fmt(v.gaveMkt) + ", gets " + fmt(v.gotMkt) + " (" + pct(v.mktGain) + ")."));
+        ul.appendChild(el("li", "", "Win now: " + (v.nowNet >= 0 ? "+" : "") + fmt(v.nowNet) + " · Long term: " + (v.futNet >= 0 ? "+" : "") + fmt(v.futNet) + "."));
+        if (t.window === "Contender" && v.nowNet > 0) ul.appendChild(el("li", "", "Adds win-now value, which fits a contender."));
+        if (t.window === "Contender" && v.nowNet < 0) ul.appendChild(el("li", "", "Gives up win-now value while contending."));
+        if (t.window === "Rebuilder" && v.futNet > 0) ul.appendChild(el("li", "", "Adds long-term value, which fits a rebuild."));
+        if (t.window === "Rebuilder" && v.futNet < 0) ul.appendChild(el("li", "", "Gives up long-term value while rebuilding."));
+        if (v.gets.length < v.gives.length && v.gets.length) ul.appendChild(el("li", "", "Consolidates " + v.gives.length + " assets into " + v.gets.length + ", which the stud tax rewards."));
+        if (v.gets.length > v.gives.length && v.gives.length) ul.appendChild(el("li", "", "Splits " + v.gives.length + " asset" + (v.gives.length === 1 ? "" : "s") + " into " + v.gets.length + ", which the stud tax penalizes."));
+
+        var td = (D.tendencies || {})[v.me];
+        if (td && td.trades) {
+          var bits = [];
+          var posIn = {};
+          v.gets.forEach(function (id) { if (D.players[id]) posIn[D.players[id].pos] = 1; });
+          Object.keys(posIn).forEach(function (pos) {
+            if (td.pos_in[pos]) bits.push("has traded for " + td.pos_in[pos] + " " + pos + (td.pos_in[pos] === 1 ? "" : "s") + " before");
+          });
+          if (td.picks_out > td.picks_in + 1) bits.push("usually sells picks (" + td.picks_out + " out, " + td.picks_in + " in)");
+          if (td.picks_in > td.picks_out + 1) bits.push("usually collects picks (" + td.picks_in + " in, " + td.picks_out + " out)");
+          if (bits.length) ul.appendChild(el("li", "", "Owner history: " + bits.join("; ") + "."));
+        }
+        card.appendChild(ul);
+        wrap.appendChild(card);
+      });
+      out.appendChild(wrap);
+    }
+
+    fetch("data/analyzer.json", { cache: "no-cache" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("The analyzer data hasn't been built yet. Run the Update player data workflow once.");
+        return res.json();
+      })
+      .then(function (json) {
+        D = json;
+        D.pickById = {};
+        D.picks.forEach(function (pk) { D.pickById[pk.id] = pk; });
+        drawSide("a");
+        drawSide("b");
+        document.getElementById("updated").textContent = "Values updated " + new Date(D.generated).toLocaleString() + ".";
+        document.getElementById("status").hidden = true;
+        document.getElementById("app").hidden = false;
+      })
+      .catch(function (err) { document.getElementById("status").textContent = err.message; });
+  </script>
+</body>
+</html>
