@@ -6,6 +6,7 @@
 import csv
 import io
 import json
+import math
 import os
 import urllib.request
 from datetime import datetime, timezone
@@ -18,6 +19,69 @@ ROUNDS = 4
 # Draft lottery for the 6 non-playoff teams. Seed = finish in the standings (12 = worst).
 # Balls per seed; they draw for picks 1 through 6, and every round uses the same order.
 LOTTERY_BALLS = {12: 35, 11: 27, 10: 20, 9: 10, 8: 6, 7: 3}
+
+# League market: how much this league has paid for each kind of asset compared to
+# market value, learned from past trades. SHRINK pulls small samples back toward
+# market (higher = trust league history less), and the result is capped at LIMITS.
+SHRINK = 4
+LIMITS = (0.8, 1.25)
+STUD_POWER = 1.25
+
+
+def category(asset):
+    if "round" in asset:
+        return "1st" if asset["round"] == 1 else ("2nd" if asset["round"] == 2 else "3rd+")
+    return asset.get("pos") or "?"
+
+
+def league_market(history):
+    """Learns, per asset type, whether this league pays above or below market value."""
+    def combine(vals):
+        return sum(max(v, 0) ** STUD_POWER for v in vals) ** (1 / STUD_POWER)
+
+    sums = {}
+    for tr in history:
+        sides = tr.get("sides", [])
+        if len(sides) != 2:
+            continue
+        assets = [sd.get("players", []) + sd.get("picks", []) for sd in sides]
+        if any(not a for a in assets):
+            continue
+        if any(x.get("was_value") in (None, 0) for a in assets for x in a):
+            continue   # only trades where every piece has a market value
+        totals = [combine([x["was_value"] for x in a]) for a in assets]
+        for me, other in ((0, 1), (1, 0)):
+            # What this side paid relative to what it got; above 1 = paid over market
+            lr = math.log(totals[other] / totals[me])
+            got = sum(x["was_value"] for x in assets[me])
+            for x in assets[me]:
+                w = x["was_value"] / got
+                c = sums.setdefault(category(x), {"lr": 0.0, "w": 0.0, "trades": set()})
+                c["lr"] += w * lr
+                c["w"] += w
+                c["trades"].add(tr.get("id"))
+    out = {}
+    for cat, c in sums.items():
+        avg = c["lr"] / c["w"] if c["w"] else 0
+        factor = math.exp(avg * c["w"] / (c["w"] + SHRINK))
+        out[cat] = {"factor": round(min(LIMITS[1], max(LIMITS[0], factor)), 3), "trades": len(c["trades"])}
+    return out
+
+
+def compact_trades(history):
+    """Past trades with market values at the time, for showing comparable deals."""
+    out = []
+    for tr in history:
+        sides = []
+        for sd in tr.get("sides", []):
+            items = [{"name": p.get("name"), "pos": p.get("pos"), "was_value": p.get("was_value")} for p in sd.get("players", [])]
+            items += [{"name": f"{pk['season']} Round {pk['round']}", "pos": "PICK", "round": pk["round"],
+                       "was_value": pk.get("was_value")} for pk in sd.get("picks", [])]
+            if sd.get("faab"):
+                items.append({"name": f"${sd['faab']} FAAB", "pos": "FAAB", "was_value": None})
+            sides.append({"owner": sd.get("owner"), "gets": items})
+        out.append({"date": tr.get("date"), "season": tr.get("season"), "sides": sides})
+    return out
 
 
 def lottery_odds(balls):
@@ -275,6 +339,7 @@ def main():
             "generated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
             "season": season, "next_draft": next_draft,
             "teams": teams, "players": players, "picks": picks, "tendencies": tendencies,
+            "league_market": league_market(history), "history": compact_trades(history),
         }, f)
     print(f"Analyzer data: {len(teams)} teams, {len(players)} players, {len(picks)} picks")
 
