@@ -82,7 +82,16 @@
   <script src="auth.js"></script>
   <script src="analyzer-settings.js"></script>
   <script>
-    var S = window.ANALYZER_SETTINGS;
+    // Defaults, used if analyzer-settings.js is missing or leaves something out
+    var DEFAULTS = {
+      grades: { A: 15, B: 5, C: -5, D: -15 }, winWin: 8, studPower: 1.25,
+      production: [{ upTo: 5, change: 0.10 }, { upTo: 12, change: 0.05 }, { upTo: 24, change: 0 }, { upTo: 36, change: -0.05 }, { upTo: 999, change: -0.10 }],
+      injury: { Out: -0.08, IR: -0.08, PUP: -0.08, Sus: -0.05, Doubtful: -0.04 },
+      ages: { QB: { peak: 26, cliff: 34 }, RB: { peak: 23, cliff: 28 }, WR: { peak: 24, cliff: 30 }, TE: { peak: 25, cliff: 31 } },
+      window: { Contender: { now: 1.15, future: 0.9 }, Middle: { now: 1, future: 1 }, Rebuilder: { now: 0.85, future: 1.15 } }
+    };
+    var S = Object.assign({}, DEFAULTS, window.ANALYZER_SETTINGS || {});
+    if (!window.ANALYZER_SETTINGS) console.warn("analyzer-settings.js didn't load, so default settings are being used.");
     var D;                       // analyzer data
     var picked = { a: {}, b: {} };  // side -> asset id -> true
     var teamOf = { a: null, b: null };
@@ -243,7 +252,7 @@
         var head = el("div");
         head.appendChild(el("h3", "", t.team));
         var words = { A: winWin ? "Strong deal for both teams" : "Steal", B: "Good deal", C: "Fair deal", D: "Overpay", F: "Massive overpay" };
-        head.appendChild(el("p", "summary", words[v.grade] + " (" + pct(v.fitGain) + " for a " + t.window.toLowerCase() + ")"));
+        head.appendChild(el("p", "summary", words[v.grade] + " for a " + t.window.toLowerCase()));
         top.appendChild(head);
         card.appendChild(top);
 
@@ -284,6 +293,10 @@
         D = json;
         D.pickById = {};
         D.picks.forEach(function (pk) { D.pickById[pk.id] = pk; });
+        window.addEventListener("error", function (e) {
+          document.getElementById("status").hidden = false;
+          document.getElementById("status").textContent = "Something went wrong: " + e.message;
+        });
         drawSide("a");
         drawSide("b");
         document.getElementById("updated").textContent = "Values updated " + new Date(D.generated).toLocaleString() + ".";
