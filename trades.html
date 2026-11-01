@@ -23,7 +23,6 @@
     .side ul { list-style: none; margin: 0; padding: 0; }
     .side li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.3rem 0; border-top: 1px solid var(--line); font-size: 0.95rem; }
     .side li .tag { color: var(--muted); font-size: 0.82rem; white-space: nowrap; }
-    .value-now { margin-top: 0.4rem; font-size: 0.82rem; color: var(--muted); }
   </style>
 </head>
 <body>
@@ -47,7 +46,6 @@
     <div class="feed">
       <p id="summary" class="muted">Loading trades...</p>
       <div id="list"></div>
-      <p class="muted">"Value now" adds up each player's current dynasty value from DynastyProcess, for players still on a league roster. Draft picks aren't valued yet.</p>
     </div>
   </main>
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
@@ -92,13 +90,11 @@
           var col = el("div", "side");
           var h = el("h3"); h.appendChild(teamLink(s.owner)); h.appendChild(el("span", "", " receives")); col.appendChild(h);
           var ul = el("ul");
-          var value = 0;
           s.players.forEach(function (p) {
             var li = el("li");
             li.appendChild(el("span", "", p.name + (p.pos ? " (" + p.pos + ")" : "")));
             li.appendChild(el("span", "tag", p.rank ? "Now #" + p.rank + (p.pos_rank ? " · " + p.pos_rank : "") : ""));
             ul.appendChild(li);
-            value += p.value || 0;
           });
           s.picks.slice().sort(function (a, b) { return (a.season - b.season) || (a.round - b.round); }).forEach(function (pk) {
             var li = el("li");
@@ -113,7 +109,6 @@
           }
           if (!ul.children.length) ul.appendChild(el("li", "muted", "Nothing"));
           col.appendChild(ul);
-          if (value) col.appendChild(el("div", "value-now", "Value now: " + value.toLocaleString()));
           sides.appendChild(col);
         });
         card.appendChild(sides);
