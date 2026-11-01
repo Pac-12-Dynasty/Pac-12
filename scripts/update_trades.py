@@ -5,8 +5,11 @@
 #   "Was" = his rank that season through the week before the trade
 #           (for offseason trades, his finish the season before)
 #   "Now" = his rank this season so far
+import csv
+import io
 import json
 import os
+import re
 import urllib.request
 from datetime import datetime, timezone
 
@@ -16,10 +19,122 @@ MAX_ROUND = 18
 SKILL = ("QB", "RB", "WR", "TE")
 
 
-def get(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "pac12-dynasty-site"})
+def fetch(url, headers=None):
+    h = {"User-Agent": "pac12-dynasty-site"}
+    h.update(headers or {})
+    req = urllib.request.Request(url, headers=h)
     with urllib.request.urlopen(req, timeout=120) as res:
-        return json.loads(res.read().decode("utf-8"))
+        return res.read().decode("utf-8")
+
+
+def get(url):
+    return json.loads(fetch(url))
+
+
+# ---------- Market value at the time of a trade ----------
+# DynastyProcess updates its value files weekly on GitHub, and GitHub keeps every
+# past version, so we can look up what any player or pick was worth on a past date.
+DP_REPO = "dynastyprocess/data"
+
+
+class PastValues:
+    def __init__(self):
+        self.commits = None
+        self.snapshots = {}
+        self.id_map = {}
+        token = os.environ.get("GITHUB_TOKEN")
+        self.headers = {"Authorization": f"Bearer {token}"} if token else {}
+        try:
+            text = fetch(f"https://raw.githubusercontent.com/{DP_REPO}/master/files/db_playerids.csv")
+            self.id_map = {r["fantasypros_id"]: r["sleeper_id"] for r in csv.DictReader(io.StringIO(text))
+                           if r.get("fantasypros_id") and r.get("sleeper_id") not in (None, "", "NA")}
+        except Exception as err:
+            print(f"Player ID map unavailable: {err}")
+
+    def _load_commits(self):
+        out, page = [], 1
+        while page <= 10:
+            rows = json.loads(fetch(f"https://api.github.com/repos/{DP_REPO}/commits?path=files/values-players.csv"
+                                    f"&since=2022-06-01T00:00:00Z&per_page=100&page={page}", self.headers))
+            if not rows:
+                break
+            out += [(r["commit"]["committer"]["date"], r["sha"]) for r in rows]
+            page += 1
+        self.commits = sorted(out)
+
+    def _snapshot(self, sha):
+        if sha in self.snapshots:
+            return self.snapshots[sha]
+        players, curve = {}, []
+        for r in csv.DictReader(io.StringIO(fetch(f"https://raw.githubusercontent.com/{DP_REPO}/{sha}/files/values-players.csv"))):
+            try:
+                v = float(r.get("value_1qb") or 0)
+            except ValueError:
+                continue
+            sid = self.id_map.get(r.get("fp_id"))
+            if sid:
+                players[sid] = v
+            try:
+                curve.append((float(r["ecr_1qb"]), v))
+            except (KeyError, TypeError, ValueError):
+                pass
+        curve.sort()
+
+        def value_at(ecr):
+            if not curve:
+                return 0
+            for (e1, v1), (e2, v2) in zip(curve, curve[1:]):
+                if e1 <= ecr <= e2:
+                    return v1 + (v2 - v1) * ((ecr - e1) / (e2 - e1) if e2 > e1 else 0)
+            return curve[0][1] if ecr < curve[0][0] else curve[-1][1]
+
+        picks = {}   # (season or None, round) -> list of values
+        try:
+            text = fetch(f"https://raw.githubusercontent.com/{DP_REPO}/{sha}/files/values-picks.csv")
+            for r in csv.DictReader(io.StringIO(text)):
+                name = r.get("player", "")
+                yr = re.match(r"(\d{4})", name)
+                rd = re.search(r"(\d)\.\d\d|(\d)(?:st|nd|rd|th)", name)
+                if not yr or not rd:
+                    continue
+                try:
+                    v = value_at(float(r["ecr_1qb"]))
+                except (KeyError, TypeError, ValueError):
+                    continue
+                rnd = int(rd.group(1) or rd.group(2))
+                picks.setdefault((int(yr.group(1)), rnd), []).append(v)
+                picks.setdefault((None, rnd), []).append(v)
+        except Exception:
+            pass
+        self.snapshots[sha] = (players, picks)
+        return self.snapshots[sha]
+
+    def _at(self, date_iso):
+        if self.commits is None:
+            try:
+                self._load_commits()
+            except Exception as err:
+                print(f"Value history unavailable: {err}")
+                self.commits = []
+        before = [sha for d, sha in self.commits if d <= date_iso]
+        return self._snapshot(before[-1]) if before else None
+
+    def player(self, date_iso, pid):
+        try:
+            snap = self._at(date_iso)
+            return round(snap[0].get(pid)) if snap and snap[0].get(pid) else None
+        except Exception:
+            return None
+
+    def pick(self, date_iso, season, rnd):
+        try:
+            snap = self._at(date_iso)
+            if not snap:
+                return None
+            vals = snap[1].get((season, rnd)) or snap[1].get((None, rnd))
+            return round(sum(vals) / len(vals)) if vals else None
+        except Exception:
+            return None
 
 
 def current_league(base_id, state):
@@ -156,6 +271,7 @@ def main():
 
     # "Was" ranks never change, so reuse any already saved
     known = {}
+    known_val = {}
     try:
         with open("data/trades.json") as f:
             for t in json.load(f).get("trades", []):
@@ -163,6 +279,11 @@ def main():
                     for p in sd.get("players", []):
                         if p.get("was_basis"):
                             known[(t["id"], p["id"])] = (p.get("was_pos_rank"), p.get("was_rank"), p["was_basis"])
+                        if p.get("was_value") is not None:
+                            known_val[(t["id"], p["id"])] = p["was_value"]
+                    for pk in sd.get("picks", []):
+                        if pk.get("was_value") is not None:
+                            known_val[(t["id"], f"{pk['season']}-{pk['round']}-{pk.get('original_owner')}")] = pk["was_value"]
     except Exception:
         pass
 
@@ -178,6 +299,7 @@ def main():
 
     owners = {}
     trades = []
+    past = PastValues()
 
     for league in reversed(seasons):
         lid, yr = league["league_id"], int(league["season"])
@@ -216,6 +338,10 @@ def main():
                     r = ranks.season_total(yr - 1, scoring).get(pid, (None, None))
                     return r[0], r[1], f"{yr - 1} finish"
 
+                created = t.get("status_updated") or t.get("created") or 0
+                date_iso = datetime.fromtimestamp(created / 1000, timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ") if created else ""
+                tid = t.get("transaction_id")
+
                 sides = {}
                 def side(rid):
                     return sides.setdefault(rid, {"owner": roster_owner.get(rid), "players": [], "picks": [], "faab": 0})
@@ -230,16 +356,18 @@ def main():
                         "id": pid, "name": info.get("name") or pid, "pos": info.get("pos") or "",
                         "was_pos_rank": was_pos, "was_rank": was_ovr, "was_basis": basis,
                         "now_pos_rank": now_pos, "now_rank": now_ovr, "now_basis": now_basis,
+                        "was_value": known_val[(tid, pid)] if (tid, pid) in known_val else (past.player(date_iso, pid) if date_iso else None),
                     })
                 for pk in t.get("draft_picks") or []:
+                    orig = roster_owner.get(pk.get("roster_id"))
+                    key = (tid, f"{int(pk.get('season'))}-{pk.get('round')}-{orig}")
                     side(pk["owner_id"])["picks"].append({
-                        "season": int(pk.get("season")), "round": pk.get("round"),
-                        "original_owner": roster_owner.get(pk.get("roster_id")),
+                        "season": int(pk.get("season")), "round": pk.get("round"), "original_owner": orig,
+                        "was_value": known_val[key] if key in known_val else (past.pick(date_iso, int(pk.get("season")), pk.get("round")) if date_iso else None),
                     })
                 for w in t.get("waiver_budget") or []:
                     side(w["receiver"])["faab"] += w.get("amount") or 0
 
-                created = t.get("status_updated") or t.get("created") or 0
                 trades.append({
                     "id": t.get("transaction_id"),
                     "season": yr,
