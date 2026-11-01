@@ -1,5 +1,6 @@
 {
- "generated": "2026-11-01T18:58+00:00",
+ "generated": "2026-11-01T19:26+00:00",
+ "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
    "name": "Souders32",
@@ -68,11 +69,12 @@
        "id": "8155",
        "name": "Breece Hall",
        "pos": "RB",
-       "rank": 19,
-       "pos_rank": "RB8",
-       "value": 6380,
-       "was_rank": 19,
-       "was_pos_rank": "RB8"
+       "was_pos_rank": "RB39",
+       "was_rank": 164,
+       "was_basis": "2026 Wk 1-7",
+       "now_pos_rank": "RB40",
+       "now_rank": 166,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -85,11 +87,12 @@
        "id": "8131",
        "name": "Isaiah Likely",
        "pos": "TE",
-       "rank": 85,
-       "pos_rank": "TE10",
-       "value": 1558,
-       "was_rank": 71,
-       "was_pos_rank": "TE9"
+       "was_pos_rank": "TE2",
+       "was_rank": 35,
+       "was_basis": "2026 Wk 1-7",
+       "now_pos_rank": "TE2",
+       "now_rank": 37,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -121,21 +124,23 @@
        "id": "10229",
        "name": "Rashee Rice",
        "pos": "WR",
-       "rank": 49,
-       "pos_rank": "WR26",
-       "value": 3471,
-       "was_rank": 53,
-       "was_pos_rank": "WR26"
+       "was_pos_rank": "WR71",
+       "was_rank": 178,
+       "was_basis": "2026 Wk 1-7",
+       "now_pos_rank": "WR71",
+       "now_rank": 179,
+       "now_basis": "2026 so far"
       },
       {
        "id": "13414",
        "name": "Kaelon Black",
        "pos": "RB",
-       "rank": 199,
-       "pos_rank": "RB57",
-       "value": 85,
-       "was_rank": 206,
-       "was_pos_rank": "RB57"
+       "was_pos_rank": "RB53",
+       "was_rank": 212,
+       "was_basis": "2026 Wk 1-7",
+       "now_pos_rank": "RB54",
+       "now_rank": 213,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -159,11 +164,12 @@
        "id": "8130",
        "name": "Trey McBride",
        "pos": "TE",
-       "rank": 24,
-       "pos_rank": "TE2",
-       "value": 5740,
-       "was_rank": 24,
-       "was_pos_rank": "TE2"
+       "was_pos_rank": "TE1",
+       "was_rank": 15,
+       "was_basis": "2026 Wk 1-7",
+       "now_pos_rank": "TE1",
+       "now_rank": 19,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -190,11 +196,12 @@
        "id": "4943",
        "name": "Sam Darnold",
        "pos": "QB",
-       "rank": 131,
-       "pos_rank": "QB21",
-       "value": 456,
-       "was_rank": 136,
-       "was_pos_rank": "QB24"
+       "was_pos_rank": "QB26",
+       "was_rank": 102,
+       "was_basis": "2026 Wk 1-4",
+       "now_pos_rank": "QB26",
+       "now_rank": 80,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -239,11 +246,12 @@
        "id": "5850",
        "name": "Josh Jacobs",
        "pos": "RB",
-       "rank": 104,
-       "pos_rank": "RB28",
-       "value": 870,
-       "was_rank": 109,
-       "was_pos_rank": "RB28"
+       "was_pos_rank": "RB13",
+       "was_rank": 34,
+       "was_basis": "2025 finish",
+       "now_pos_rank": "RB39",
+       "now_rank": 164,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -264,21 +272,23 @@
        "id": "12490",
        "name": "Bhayshul Tuten",
        "pos": "RB",
-       "rank": 70,
-       "pos_rank": "RB20",
-       "value": 2124,
-       "was_rank": 86,
-       "was_pos_rank": "RB24"
+       "was_pos_rank": "RB53",
+       "was_rank": 193,
+       "was_basis": "2025 finish",
+       "now_pos_rank": "RB15",
+       "now_rank": 59,
+       "now_basis": "2026 so far"
       },
       {
        "id": "13402",
        "name": "Skyler Bell",
        "pos": "WR",
-       "rank": 223,
-       "pos_rank": "WR93",
-       "value": 57,
-       "was_rank": 191,
-       "was_pos_rank": "WR83"
+       "was_pos_rank": "WR220",
+       "was_rank": 553,
+       "was_basis": "2025 finish",
+       "now_pos_rank": "WR183",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -297,31 +307,34 @@
        "id": "13311",
        "name": "Chris Bell",
        "pos": "WR",
-       "rank": 114,
-       "pos_rank": "WR52",
-       "value": 638,
-       "was_rank": 144,
-       "was_pos_rank": "WR65"
+       "was_pos_rank": "WR220",
+       "was_rank": 553,
+       "was_basis": "2025 finish",
+       "now_pos_rank": "WR98",
+       "now_rank": 250,
+       "now_basis": "2026 so far"
       },
       {
        "id": "13414",
        "name": "Kaelon Black",
        "pos": "RB",
-       "rank": 199,
-       "pos_rank": "RB57",
-       "value": 85,
-       "was_rank": 248,
-       "was_pos_rank": "RB67"
+       "was_pos_rank": "RB138",
+       "was_rank": 553,
+       "was_basis": "2025 finish",
+       "now_pos_rank": "RB54",
+       "now_rank": 213,
+       "now_basis": "2026 so far"
       },
       {
        "id": "7611",
        "name": "Rhamondre Stevenson",
        "pos": "RB",
-       "rank": 120,
-       "pos_rank": "RB34",
-       "value": 594,
-       "was_rank": 127,
-       "was_pos_rank": "RB33"
+       "was_pos_rank": "RB25",
+       "was_rank": 85,
+       "was_basis": "2025 finish",
+       "now_pos_rank": "RB17",
+       "now_rank": 61,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -348,21 +361,23 @@
        "id": "11583",
        "name": "Jonathon Brooks",
        "pos": "RB",
-       "rank": 115,
-       "pos_rank": "RB31",
-       "value": 635,
-       "was_rank": 113,
-       "was_pos_rank": "RB29"
+       "was_pos_rank": "RB138",
+       "was_rank": 553,
+       "was_basis": "2025 finish",
+       "now_pos_rank": "RB87",
+       "now_rank": 330,
+       "now_basis": "2026 so far"
       },
       {
        "id": "12519",
        "name": "Luther Burden III",
        "pos": "WR",
-       "rank": 32,
-       "pos_rank": "WR17",
-       "value": 4812,
-       "was_rank": 40,
-       "was_pos_rank": "WR23"
+       "was_pos_rank": "WR48",
+       "was_rank": 131,
+       "was_basis": "2025 finish",
+       "now_pos_rank": "WR18",
+       "now_rank": 53,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -386,11 +401,12 @@
        "id": "12507",
        "name": "Omarion Hampton",
        "pos": "RB",
-       "rank": 51,
-       "pos_rank": "RB13",
-       "value": 3359,
-       "was_rank": 15,
-       "was_pos_rank": "RB5"
+       "was_pos_rank": "RB35",
+       "was_rank": 121,
+       "was_basis": "2025 finish",
+       "now_pos_rank": "RB31",
+       "now_rank": 126,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -485,21 +501,23 @@
        "id": "2449",
        "name": "Stefon Diggs",
        "pos": "WR",
-       "rank": 150,
-       "pos_rank": "WR63",
-       "value": 317,
-       "was_rank": 101,
-       "was_pos_rank": "WR47"
+       "was_pos_rank": "WR22",
+       "was_rank": 67,
+       "was_basis": "2025 Wk 1-9",
+       "now_pos_rank": "WR31",
+       "now_rank": 90,
+       "now_basis": "2026 so far"
       },
       {
        "id": "7611",
        "name": "Rhamondre Stevenson",
        "pos": "RB",
-       "rank": 120,
-       "pos_rank": "RB34",
-       "value": 594,
-       "was_rank": 132,
-       "was_pos_rank": "RB38"
+       "was_pos_rank": "RB33",
+       "was_rank": 121,
+       "was_basis": "2025 Wk 1-9",
+       "now_pos_rank": "RB17",
+       "now_rank": 61,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -512,21 +530,23 @@
        "id": "5967",
        "name": "Tony Pollard",
        "pos": "RB",
-       "rank": 145,
-       "pos_rank": "RB39",
-       "value": 354,
-       "was_rank": 108,
-       "was_pos_rank": "RB32"
+       "was_pos_rank": "RB24",
+       "was_rank": 98,
+       "was_basis": "2025 Wk 1-9",
+       "now_pos_rank": "RB16",
+       "now_rank": 60,
+       "now_basis": "2026 so far"
       },
       {
        "id": "9504",
        "name": "Kayshon Boutte",
        "pos": "WR",
-       "rank": 180,
-       "pos_rank": "WR76",
-       "value": 159,
-       "was_rank": 159,
-       "was_pos_rank": "WR69"
+       "was_pos_rank": "WR34",
+       "was_rank": 89,
+       "was_basis": "2025 Wk 1-9",
+       "now_pos_rank": "WR79",
+       "now_rank": 197,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -553,21 +573,23 @@
        "id": "12457",
        "name": "Jaydon Blue",
        "pos": "RB",
-       "rank": 252,
-       "pos_rank": "RB68",
-       "value": 29,
-       "was_rank": 210,
-       "was_pos_rank": "RB62"
+       "was_pos_rank": "RB87",
+       "was_rank": 350,
+       "was_basis": "2025 Wk 1-8",
+       "now_pos_rank": "RB122",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       },
       {
        "id": "5927",
        "name": "Terry McLaurin",
        "pos": "WR",
-       "rank": 93,
-       "pos_rank": "WR42",
-       "value": 1231,
-       "was_rank": 73,
-       "was_pos_rank": "WR36"
+       "was_pos_rank": "WR77",
+       "was_rank": 190,
+       "was_basis": "2025 Wk 1-8",
+       "now_pos_rank": "WR61",
+       "now_rank": 154,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -591,11 +613,12 @@
        "id": "5850",
        "name": "Josh Jacobs",
        "pos": "RB",
-       "rank": 104,
-       "pos_rank": "RB28",
-       "value": 870,
-       "was_rank": 38,
-       "was_pos_rank": "RB13"
+       "was_pos_rank": "RB8",
+       "was_rank": 22,
+       "was_basis": "2025 Wk 1-8",
+       "now_pos_rank": "RB39",
+       "now_rank": 164,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -622,21 +645,23 @@
        "id": "4144",
        "name": "Jonnu Smith",
        "pos": "TE",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 182,
-       "was_pos_rank": "TE25"
+       "was_pos_rank": "TE28",
+       "was_rank": 163,
+       "was_basis": "2025 Wk 1-7",
+       "now_pos_rank": "TE60",
+       "now_rank": 287,
+       "now_basis": "2026 so far"
       },
       {
        "id": "7569",
        "name": "Nico Collins",
        "pos": "WR",
-       "rank": 22,
-       "pos_rank": "WR12",
-       "value": 5918,
-       "was_rank": 16,
-       "was_pos_rank": "WR10"
+       "was_pos_rank": "WR33",
+       "was_rank": 86,
+       "was_basis": "2025 Wk 1-7",
+       "now_pos_rank": "WR28",
+       "now_rank": 78,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -649,11 +674,12 @@
        "id": "12519",
        "name": "Luther Burden III",
        "pos": "WR",
-       "rank": 32,
-       "pos_rank": "WR17",
-       "value": 4812,
-       "was_rank": 84,
-       "was_pos_rank": "WR38"
+       "was_pos_rank": "WR76",
+       "was_rank": 186,
+       "was_basis": "2025 Wk 1-7",
+       "now_pos_rank": "WR18",
+       "now_rank": 53,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -680,11 +706,12 @@
        "id": "5872",
        "name": "Deebo Samuel Sr.",
        "pos": "WR",
-       "rank": 163,
-       "pos_rank": "WR69",
-       "value": 230,
-       "was_rank": 105,
-       "was_pos_rank": "WR47"
+       "was_pos_rank": "WR17",
+       "was_rank": 54,
+       "was_basis": "2025 Wk 1-7",
+       "now_pos_rank": "WR42",
+       "now_rank": 118,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -703,21 +730,23 @@
        "id": "8148",
        "name": "Jameson Williams",
        "pos": "WR",
-       "rank": 54,
-       "pos_rank": "WR27",
-       "value": 3065,
-       "was_rank": 69,
-       "was_pos_rank": "WR33"
+       "was_pos_rank": "WR43",
+       "was_rank": 124,
+       "was_basis": "2025 Wk 1-7",
+       "now_pos_rank": "WR22",
+       "now_rank": 66,
+       "now_basis": "2026 so far"
       },
       {
        "id": "8151",
        "name": "Kenneth Walker III",
        "pos": "RB",
-       "rank": 9,
-       "pos_rank": "RB3",
-       "value": 8108,
-       "was_rank": 59,
-       "was_pos_rank": "RB16"
+       "was_pos_rank": "RB24",
+       "was_rank": 90,
+       "was_basis": "2025 Wk 1-7",
+       "now_pos_rank": "RB2",
+       "now_rank": 6,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -738,11 +767,12 @@
        "id": "11635",
        "name": "Ladd McConkey",
        "pos": "WR",
-       "rank": 36,
-       "pos_rank": "WR20",
-       "value": 4401,
-       "was_rank": 31,
-       "was_pos_rank": "WR18"
+       "was_pos_rank": "WR51",
+       "was_rank": 135,
+       "was_basis": "2025 Wk 1-4",
+       "now_pos_rank": "WR69",
+       "now_rank": 174,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -761,11 +791,12 @@
        "id": "10229",
        "name": "Rashee Rice",
        "pos": "WR",
-       "rank": 49,
-       "pos_rank": "WR26",
-       "value": 3471,
-       "was_rank": 26,
-       "was_pos_rank": "WR17"
+       "was_pos_rank": "WR156",
+       "was_rank": 387,
+       "was_basis": "2025 Wk 1-4",
+       "now_pos_rank": "WR71",
+       "now_rank": 179,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -786,21 +817,23 @@
        "id": "12514",
        "name": "Emeka Egbuka",
        "pos": "WR",
-       "rank": 23,
-       "pos_rank": "WR13",
-       "value": 5890,
-       "was_rank": 28,
-       "was_pos_rank": "WR16"
+       "was_pos_rank": "WR13",
+       "was_rank": 32,
+       "was_basis": "2025 Wk 1-2",
+       "now_pos_rank": "WR30",
+       "now_rank": 85,
+       "now_basis": "2026 so far"
       },
       {
        "id": "8138",
        "name": "James Cook III",
        "pos": "RB",
-       "rank": 14,
-       "pos_rank": "RB6",
-       "value": 7295,
-       "was_rank": 44,
-       "was_pos_rank": "RB13"
+       "was_pos_rank": "RB1",
+       "was_rank": 7,
+       "was_basis": "2025 Wk 1-2",
+       "now_pos_rank": "RB13",
+       "now_rank": 35,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -829,31 +862,34 @@
        "id": "3163",
        "name": "Jared Goff",
        "pos": "QB",
-       "rank": 96,
-       "pos_rank": "QB16",
-       "value": 1113,
-       "was_rank": 108,
-       "was_pos_rank": "QB16"
+       "was_pos_rank": "QB6",
+       "was_rank": 13,
+       "was_basis": "2025 Wk 1-2",
+       "now_pos_rank": "QB5",
+       "now_rank": 14,
+       "now_basis": "2026 so far"
       },
       {
        "id": "5844",
        "name": "T.J. Hockenson",
        "pos": "TE",
-       "rank": 167,
-       "pos_rank": "TE24",
-       "value": 215,
-       "was_rank": 69,
-       "was_pos_rank": "TE8"
+       "was_pos_rank": "TE43",
+       "was_rank": 228,
+       "was_basis": "2025 Wk 1-2",
+       "now_pos_rank": "TE16",
+       "now_rank": 110,
+       "now_basis": "2026 so far"
       },
       {
        "id": "6794",
        "name": "Justin Jefferson",
        "pos": "WR",
-       "rank": 8,
-       "pos_rank": "WR6",
-       "value": 8949,
-       "was_rank": 2,
-       "was_pos_rank": "WR2"
+       "was_pos_rank": "WR25",
+       "was_rank": 72,
+       "was_basis": "2025 Wk 1-2",
+       "now_pos_rank": "WR29",
+       "now_rank": 84,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -944,11 +980,12 @@
        "id": "11565",
        "name": "J.J. McCarthy",
        "pos": "QB",
-       "rank": 211,
-       "pos_rank": "QB32",
-       "value": 71,
-       "was_rank": 113,
-       "was_pos_rank": "QB19"
+       "was_pos_rank": "QB74",
+       "was_rank": 540,
+       "was_basis": "2024 finish",
+       "now_pos_rank": "QB38",
+       "now_rank": 233,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -986,11 +1023,12 @@
        "id": "7528",
        "name": "Najee Harris",
        "pos": "RB",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 119,
-       "was_pos_rank": "RB33"
+       "was_pos_rank": "RB20",
+       "was_rank": 69,
+       "was_basis": "2024 finish",
+       "now_pos_rank": "RB80",
+       "now_rank": 316,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1011,11 +1049,12 @@
        "id": "5846",
        "name": "DK Metcalf",
        "pos": "WR",
-       "rank": 72,
-       "pos_rank": "WR34",
-       "value": 2104,
-       "was_rank": 54,
-       "was_pos_rank": "WR28"
+       "was_pos_rank": "WR32",
+       "was_rank": 81,
+       "was_basis": "2024 finish",
+       "now_pos_rank": "WR27",
+       "now_rank": 76,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1065,11 +1104,12 @@
        "id": "4943",
        "name": "Sam Darnold",
        "pos": "QB",
-       "rank": 131,
-       "pos_rank": "QB21",
-       "value": 456,
-       "was_rank": 154,
-       "was_pos_rank": "QB26"
+       "was_pos_rank": "QB9",
+       "was_rank": 16,
+       "was_basis": "2024 finish",
+       "now_pos_rank": "QB26",
+       "now_rank": 80,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1096,11 +1136,12 @@
        "id": "4039",
        "name": "Cooper Kupp",
        "pos": "WR",
-       "rank": 263,
-       "pos_rank": "WR110",
-       "value": 19,
-       "was_rank": 129,
-       "was_pos_rank": "WR56"
+       "was_pos_rank": "WR38",
+       "was_rank": 96,
+       "was_basis": "2024 finish",
+       "now_pos_rank": "WR65",
+       "now_rank": 162,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1144,11 +1185,12 @@
        "id": "8121",
        "name": "Romeo Doubs",
        "pos": "WR",
-       "rank": 130,
-       "pos_rank": "WR59",
-       "value": 472,
-       "was_rank": 141,
-       "was_pos_rank": "WR60"
+       "was_pos_rank": "WR56",
+       "was_rank": 132,
+       "was_basis": "2024 finish",
+       "now_pos_rank": "WR45",
+       "now_rank": 124,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1202,11 +1244,12 @@
        "id": "5892",
        "name": "David Montgomery",
        "pos": "RB",
-       "rank": 116,
-       "pos_rank": "RB32",
-       "value": 626,
-       "was_rank": 59,
-       "was_pos_rank": "RB17"
+       "was_pos_rank": "RB16",
+       "was_rank": 48,
+       "was_basis": "2024 Wk 1-9",
+       "now_pos_rank": "RB37",
+       "now_rank": 155,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1219,31 +1262,34 @@
        "id": "4988",
        "name": "Nick Chubb",
        "pos": "RB",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 132,
-       "was_pos_rank": "RB42"
+       "was_pos_rank": "RB75",
+       "was_rank": 286,
+       "was_basis": "2024 Wk 1-9",
+       "now_pos_rank": "RB122",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       },
       {
        "id": "4993",
        "name": "Mike Gesicki",
        "pos": "TE",
-       "rank": 295,
-       "pos_rank": "TE46",
-       "value": 10,
-       "was_rank": 224,
-       "was_pos_rank": "TE34"
+       "was_pos_rank": "TE13",
+       "was_rank": 130,
+       "was_basis": "2024 Wk 1-9",
+       "now_pos_rank": "TE20",
+       "now_rank": 121,
+       "now_basis": "2026 so far"
       },
       {
        "id": "5937",
        "name": "Diontae Johnson",
        "pos": "WR",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 77,
-       "was_pos_rank": "WR37"
+       "was_pos_rank": "WR35",
+       "was_rank": 101,
+       "was_basis": "2024 Wk 1-9",
+       "now_pos_rank": "WR183",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1270,11 +1316,12 @@
        "id": "7588",
        "name": "Javonte Williams",
        "pos": "RB",
-       "rank": 60,
-       "pos_rank": "RB16",
-       "value": 2738,
-       "was_rank": 98,
-       "was_pos_rank": "RB28"
+       "was_pos_rank": "RB29",
+       "was_rank": 83,
+       "was_basis": "2024 Wk 1-9",
+       "now_pos_rank": "RB8",
+       "now_rank": 18,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1293,11 +1340,12 @@
        "id": "3163",
        "name": "Jared Goff",
        "pos": "QB",
-       "rank": 96,
-       "pos_rank": "QB16",
-       "value": 1113,
-       "was_rank": 106,
-       "was_pos_rank": "QB15"
+       "was_pos_rank": "QB15",
+       "was_rank": 36,
+       "was_basis": "2024 Wk 1-9",
+       "now_pos_rank": "QB5",
+       "now_rank": 14,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1329,11 +1377,12 @@
        "id": "11628",
        "name": "Marvin Harrison Jr.",
        "pos": "WR",
-       "rank": 88,
-       "pos_rank": "WR40",
-       "value": 1462,
-       "was_rank": 7,
-       "was_pos_rank": "WR5"
+       "was_pos_rank": "WR31",
+       "was_rank": 85,
+       "was_basis": "2024 Wk 1-7",
+       "now_pos_rank": "WR83",
+       "now_rank": 204,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1346,11 +1395,12 @@
        "id": "11583",
        "name": "Jonathon Brooks",
        "pos": "RB",
-       "rank": 115,
-       "pos_rank": "RB31",
-       "value": 635,
-       "was_rank": 45,
-       "was_pos_rank": "RB12"
+       "was_pos_rank": "RB113",
+       "was_rank": 442,
+       "was_basis": "2024 Wk 1-7",
+       "now_pos_rank": "RB87",
+       "now_rank": 330,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1389,11 +1439,12 @@
        "id": "6845",
        "name": "Zack Moss",
        "pos": "RB",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 145,
-       "was_pos_rank": "RB47"
+       "was_pos_rank": "RB20",
+       "was_rank": 63,
+       "was_basis": "2024 Wk 1-5",
+       "now_pos_rank": "RB122",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1414,11 +1465,12 @@
        "id": "8144",
        "name": "Chris Olave",
        "pos": "WR",
-       "rank": 17,
-       "pos_rank": "WR9",
-       "value": 6656,
-       "was_rank": 21,
-       "was_pos_rank": "WR13"
+       "was_pos_rank": "WR32",
+       "was_rank": 85,
+       "was_basis": "2024 Wk 1-5",
+       "now_pos_rank": "WR6",
+       "now_rank": 26,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1431,11 +1483,12 @@
        "id": "8154",
        "name": "Brian Robinson Jr.",
        "pos": "RB",
-       "rank": 192,
-       "pos_rank": "RB53",
-       "value": 115,
-       "was_rank": 71,
-       "was_pos_rank": "RB19"
+       "was_pos_rank": "RB9",
+       "was_rank": 33,
+       "was_basis": "2024 Wk 1-5",
+       "now_pos_rank": "RB32",
+       "now_rank": 138,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1478,21 +1531,23 @@
        "id": "3198",
        "name": "Derrick Henry",
        "pos": "RB",
-       "rank": 75,
-       "pos_rank": "RB22",
-       "value": 1929,
-       "was_rank": 72,
-       "was_pos_rank": "RB21"
+       "was_pos_rank": "RB20",
+       "was_rank": 59,
+       "was_basis": "2024 Wk 1-2",
+       "now_pos_rank": "RB10",
+       "now_rank": 29,
+       "now_basis": "2026 so far"
       },
       {
        "id": "5927",
        "name": "Terry McLaurin",
        "pos": "WR",
-       "rank": 93,
-       "pos_rank": "WR42",
-       "value": 1231,
-       "was_rank": 84,
-       "was_pos_rank": "WR40"
+       "was_pos_rank": "WR65",
+       "was_rank": 155,
+       "was_basis": "2024 Wk 1-2",
+       "now_pos_rank": "WR61",
+       "now_rank": 154,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1513,11 +1568,12 @@
        "id": "6770",
        "name": "Joe Burrow",
        "pos": "QB",
-       "rank": 41,
-       "pos_rank": "QB5",
-       "value": 4063,
-       "was_rank": 44,
-       "was_pos_rank": "QB6"
+       "was_pos_rank": "QB14",
+       "was_rank": 68,
+       "was_basis": "2024 Wk 1-2",
+       "now_pos_rank": "QB7",
+       "now_rank": 20,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1530,11 +1586,12 @@
        "id": "11566",
        "name": "Jayden Daniels",
        "pos": "QB",
-       "rank": 50,
-       "pos_rank": "QB7",
-       "value": 3367,
-       "was_rank": 82,
-       "was_pos_rank": "QB12"
+       "was_pos_rank": "QB4",
+       "was_rank": 12,
+       "was_basis": "2024 Wk 1-2",
+       "now_pos_rank": "QB21",
+       "now_rank": 64,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1555,11 +1612,12 @@
        "id": "4034",
        "name": "Christian McCaffrey",
        "pos": "RB",
-       "rank": 27,
-       "pos_rank": "RB9",
-       "value": 5225,
-       "was_rank": 10,
-       "was_pos_rank": "RB4"
+       "was_pos_rank": "RB1",
+       "was_rank": 3,
+       "was_basis": "2023 finish",
+       "now_pos_rank": "RB4",
+       "now_rank": 10,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1578,11 +1636,12 @@
        "id": "7564",
        "name": "Ja'Marr Chase",
        "pos": "WR",
-       "rank": 1,
-       "pos_rank": "WR1",
-       "value": 10113,
-       "was_rank": 1,
-       "was_pos_rank": "WR1"
+       "was_pos_rank": "WR11",
+       "was_rank": 28,
+       "was_basis": "2023 finish",
+       "now_pos_rank": "WR17",
+       "now_rank": 52,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1656,11 +1715,12 @@
        "id": "2749",
        "name": "Raheem Mostert",
        "pos": "RB",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 111,
-       "was_pos_rank": "RB37"
+       "was_pos_rank": "RB3",
+       "was_rank": 9,
+       "was_basis": "2023 Wk 1-8",
+       "now_pos_rank": "RB122",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1703,11 +1763,12 @@
        "id": "8129",
        "name": "Dameon Pierce",
        "pos": "RB",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 56,
-       "was_pos_rank": "RB17"
+       "was_pos_rank": "RB31",
+       "was_rank": 132,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "RB56",
+       "now_rank": 217,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1726,11 +1787,12 @@
        "id": "8183",
        "name": "Brock Purdy",
        "pos": "QB",
-       "rank": 57,
-       "pos_rank": "QB9",
-       "value": 3008,
-       "was_rank": 108,
-       "was_pos_rank": "QB14"
+       "was_pos_rank": "QB9",
+       "was_rank": 22,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "QB3",
+       "now_rank": 8,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1751,11 +1813,12 @@
        "id": "1689",
        "name": "Adam Thielen",
        "pos": "WR",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 170,
-       "was_pos_rank": "WR71"
+       "was_pos_rank": "WR7",
+       "was_rank": 16,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "WR183",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1774,11 +1837,12 @@
        "id": "6804",
        "name": "Jordan Love",
        "pos": "QB",
-       "rank": 89,
-       "pos_rank": "QB15",
-       "value": 1388,
-       "was_rank": 125,
-       "was_pos_rank": "QB19"
+       "was_pos_rank": "QB14",
+       "was_rank": 32,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "QB2",
+       "now_rank": 5,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1810,11 +1874,12 @@
        "id": "2197",
        "name": "Brandin Cooks",
        "pos": "WR",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 149,
-       "was_pos_rank": "WR62"
+       "was_pos_rank": "WR81",
+       "was_rank": 199,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "WR123",
+       "now_rank": 308,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1827,11 +1892,12 @@
        "id": "9504",
        "name": "Kayshon Boutte",
        "pos": "WR",
-       "rank": 180,
-       "pos_rank": "WR76",
-       "value": 159,
-       "was_rank": 224,
-       "was_pos_rank": "WR90"
+       "was_pos_rank": "WR169",
+       "was_rank": 435,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "WR79",
+       "now_rank": 197,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1858,11 +1924,12 @@
        "id": "4018",
        "name": "Joe Mixon",
        "pos": "RB",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 69,
-       "was_pos_rank": "RB23"
+       "was_pos_rank": "RB23",
+       "was_rank": 99,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "RB122",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1875,11 +1942,12 @@
        "id": "5248",
        "name": "Gus Edwards",
        "pos": "RB",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 180,
-       "was_pos_rank": "RB55"
+       "was_pos_rank": "RB26",
+       "was_rank": 111,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "RB122",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1906,11 +1974,12 @@
        "id": "6943",
        "name": "Gabe Davis",
        "pos": "WR",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 97,
-       "was_pos_rank": "WR45"
+       "was_pos_rank": "WR33",
+       "was_rank": 79,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "WR183",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -1929,11 +1998,12 @@
        "id": "6845",
        "name": "Zack Moss",
        "pos": "RB",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 192,
-       "was_pos_rank": "RB61"
+       "was_pos_rank": "RB5",
+       "was_rank": 26,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "RB122",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1954,21 +2024,23 @@
        "id": "7528",
        "name": "Najee Harris",
        "pos": "RB",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 80,
-       "was_pos_rank": "RB27"
+       "was_pos_rank": "RB36",
+       "was_rank": 141,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "RB80",
+       "now_rank": 316,
+       "now_basis": "2026 so far"
       },
       {
        "id": "9758",
        "name": "C.J. Stroud",
        "pos": "QB",
-       "rank": 78,
-       "pos_rank": "QB11",
-       "value": 1828,
-       "was_rank": 74,
-       "was_pos_rank": "QB10"
+       "was_pos_rank": "QB15",
+       "was_rank": 39,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "QB8",
+       "now_rank": 21,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -1981,11 +2053,12 @@
        "id": "8143",
        "name": "Jerome Ford",
        "pos": "RB",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 107,
-       "was_pos_rank": "RB36"
+       "was_pos_rank": "RB18",
+       "was_rank": 70,
+       "was_basis": "2023 Wk 1-7",
+       "now_pos_rank": "RB122",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -2006,21 +2079,23 @@
        "id": "5937",
        "name": "Diontae Johnson",
        "pos": "WR",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 74,
-       "was_pos_rank": "WR36"
+       "was_pos_rank": "WR110",
+       "was_rank": 257,
+       "was_basis": "2023 Wk 1-3",
+       "now_pos_rank": "WR183",
+       "now_rank": 458,
+       "now_basis": "2026 so far"
       },
       {
        "id": "8132",
        "name": "Tyler Allgeier",
        "pos": "RB",
-       "rank": 159,
-       "pos_rank": "RB42",
-       "value": 257,
-       "was_rank": 127,
-       "was_pos_rank": "RB42"
+       "was_pos_rank": "RB22",
+       "was_rank": 94,
+       "was_basis": "2023 Wk 1-3",
+       "now_pos_rank": "RB36",
+       "now_rank": 152,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -2033,11 +2108,12 @@
        "id": "8154",
        "name": "Brian Robinson Jr.",
        "pos": "RB",
-       "rank": 192,
-       "pos_rank": "RB53",
-       "value": 115,
-       "was_rank": 85,
-       "was_pos_rank": "RB29"
+       "was_pos_rank": "RB8",
+       "was_rank": 38,
+       "was_basis": "2023 Wk 1-3",
+       "now_pos_rank": "RB32",
+       "now_rank": 138,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
@@ -2064,11 +2140,12 @@
        "id": "5859",
        "name": "A.J. Brown",
        "pos": "WR",
-       "rank": 35,
-       "pos_rank": "WR19",
-       "value": 4453,
-       "was_rank": 5,
-       "was_pos_rank": "WR4"
+       "was_pos_rank": "WR21",
+       "was_rank": 49,
+       "was_basis": "2023 Wk 1-1",
+       "now_pos_rank": "WR104",
+       "now_rank": 261,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [],
@@ -2081,21 +2158,23 @@
        "id": "6819",
        "name": "Michael Pittman Jr.",
        "pos": "WR",
-       "rank": 92,
-       "pos_rank": "WR41",
-       "value": 1318,
-       "was_rank": 60,
-       "was_pos_rank": "WR31"
+       "was_pos_rank": "WR8",
+       "was_rank": 14,
+       "was_basis": "2023 Wk 1-1",
+       "now_pos_rank": "WR109",
+       "now_rank": 281,
+       "now_basis": "2026 so far"
       },
       {
        "id": "7596",
        "name": "Elijah Moore",
        "pos": "WR",
-       "rank": null,
-       "pos_rank": null,
-       "value": null,
-       "was_rank": 95,
-       "was_pos_rank": "WR42"
+       "was_pos_rank": "WR43",
+       "was_rank": 101,
+       "was_basis": "2023 Wk 1-1",
+       "now_pos_rank": "WR155",
+       "now_rank": 377,
+       "now_basis": "2026 so far"
       }
      ],
      "picks": [
