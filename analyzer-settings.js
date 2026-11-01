@@ -7,6 +7,9 @@ window.ANALYZER_SETTINGS = {
   // If BOTH teams gain at least this much after team fit, both get an A (a strong deal for both)
   winWin: 8,
 
+  // How much to trust this league's trade history (1 = fully, 0 = ignore it and use market values only)
+  leagueWeight: 1,
+
   // "Stud tax": higher means one great player beats several good ones by more.
   // 1 = straight sum. 1.25 means two equal players are worth about 1.74 of one.
   studPower: 1.25,
