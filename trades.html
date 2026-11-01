@@ -46,6 +46,7 @@
     <div class="feed">
       <p id="summary" class="muted">Loading trades...</p>
       <div id="list"></div>
+      <p class="muted">"Was" is the player's dynasty rank the week of the trade; "Now" is his current rank. Both come from DynastyProcess. Players without a rank weren't ranked at the time or aren't on a league roster now.</p>
     </div>
   </main>
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
@@ -93,7 +94,10 @@
           s.players.forEach(function (p) {
             var li = el("li");
             li.appendChild(el("span", "", p.name + (p.pos ? " (" + p.pos + ")" : "")));
-            li.appendChild(el("span", "tag", p.rank ? "Now #" + p.rank + (p.pos_rank ? " · " + p.pos_rank : "") : ""));
+            var tags = [];
+            if (p.was_rank) tags.push("Was #" + p.was_rank + (p.was_pos_rank ? " · " + p.was_pos_rank : ""));
+            if (p.rank) tags.push("Now #" + p.rank + (p.pos_rank ? " · " + p.pos_rank : ""));
+            li.appendChild(el("span", "tag", tags.join(" → ")));
             ul.appendChild(li);
           });
           s.picks.slice().sort(function (a, b) { return (a.season - b.season) || (a.round - b.round); }).forEach(function (pk) {
