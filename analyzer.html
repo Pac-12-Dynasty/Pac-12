@@ -526,7 +526,7 @@
           (x.was_value ? " (" + fmt(x.was_value) + " then)" : "") + " for " + (paid || "nothing") + ". "));
         if (tr.id) {
           var a = el("a", "", "Full trade →");
-          a.href = "trades.html#trade-" + encodeURIComponent(tr.id);
+          a.href = "transactions.html#trade-" + encodeURIComponent(tr.id);
           line.appendChild(a);
         }
         return line;
@@ -740,7 +740,7 @@
       m.biggest.forEach(function (b) {
         var li = el("li");
         var a = el("a", "", b.teams.join(" ↔ "));
-        a.href = "trades.html#trade-" + encodeURIComponent(b.id);
+        a.href = "transactions.html#trade-" + encodeURIComponent(b.id);
         li.appendChild(a);
         li.appendChild(el("span", "", fmt(b.value) + " total"));
         ulB.appendChild(li);
