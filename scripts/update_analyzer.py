@@ -174,6 +174,60 @@ def market_overview(history, owner_names, season, teams, movers):
     }
 
 
+# Grade cutoffs for league trades, matching analyzer-settings.js:
+# gain of at least A -> A, B -> B, C -> C (fair), D -> D, otherwise F (percent of value given)
+GRADE_CUTOFFS = {"A": 15, "B": 5, "C": -5, "D": -15}
+
+
+def letter(gain_pct):
+    for g in ("A", "B", "C", "D"):
+        if gain_pct >= GRADE_CUTOFFS[g]:
+            return g
+    return "F"
+
+
+def trade_grades(history, owner_names, teams):
+    """Grades every league trade with market values from the week it happened."""
+    def name(uid):
+        t = teams.get(uid) or {}
+        o = owner_names.get(uid) or {}
+        return t.get("team") or (o.get("team") if o.get("team") not in (None, "Unknown") else None) or o.get("name") or "A former team"
+
+    def combine(vals):
+        return sum(max(v, 0) ** STUD_POWER for v in vals) ** (1 / STUD_POWER)
+
+    def describe(x):
+        if "round" in x:
+            return f"{x['season']} Round {x['round']}"
+        return f"{x.get('name')} ({x.get('pos')})" if x.get("pos") else x.get("name") or "Unknown"
+
+    stories = []
+    for tr in history:
+        sides = tr.get("sides", [])
+        if len(sides) != 2:
+            continue
+        gets = [sd.get("players", []) + sd.get("picks", []) for sd in sides]
+        unvalued = [describe(x) for g in gets for x in g if not x.get("was_value")]
+        totals = [combine([x.get("was_value") or 0 for x in g]) for g in gets]
+        graded = all(t > 0 for t in totals)
+        side_out = []
+        for i, sd in enumerate(sides):
+            other = 1 - i
+            got, gave = totals[i], totals[other]
+            gain = round((got - gave) / gave * 100) if graded and gave else None
+            side_out.append({
+                "owner": sd.get("owner"), "team": name(sd.get("owner")),
+                "gets": [describe(x) + (f" · {round(x['was_value']):,}" if x.get("was_value") else "") for x in gets[i]]
+                        + ([f"${sd['faab']} FAAB"] if sd.get("faab") else []),
+                "got": round(got), "gave": round(gave),
+                "gain": gain, "grade": letter(gain) if gain is not None else None,
+            })
+        stories.append({"trade_id": tr.get("id"), "date": tr.get("date"), "season": tr.get("season"),
+                        "week": tr.get("week"), "graded": graded, "unvalued": unvalued, "sides": side_out})
+    stories.sort(key=lambda s: s["date"] or "", reverse=True)
+    return stories
+
+
 def compact_trades(history, owner_names=None):
     """Past trades with market values at the time, for showing comparable deals."""
     owner_names = owner_names or {}
@@ -458,7 +512,10 @@ def main():
             "league_market": league_market(history), "history": compact_trades(history, owner_names),
             "market": market_overview(history, owner_names, season, teams, movers),
         }, f)
-    print(f"Analyzer data: {len(teams)} teams, {len(players)} players, {len(picks)} picks")
+    grades = trade_grades(history, owner_names, teams)
+    with open("data/trade_grades.json", "w") as f:
+        json.dump({"generated": datetime.now(timezone.utc).isoformat(timespec="minutes"), "grades": grades}, f)
+    print(f"Analyzer data: {len(teams)} teams, {len(players)} players, {len(picks)} picks; graded {len(grades)} trades")
 
 
 if __name__ == "__main__":
