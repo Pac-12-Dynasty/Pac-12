@@ -68,8 +68,9 @@ def league_market(history):
     return out
 
 
-def compact_trades(history):
+def compact_trades(history, owner_names=None):
     """Past trades with market values at the time, for showing comparable deals."""
+    owner_names = owner_names or {}
     out = []
     for tr in history:
         sides = []
@@ -80,7 +81,12 @@ def compact_trades(history):
                        "was_value": pk.get("was_value")} for pk in sd.get("picks", [])]
             if sd.get("faab"):
                 items.append({"name": f"${sd['faab']} FAAB", "pos": "FAAB", "was_value": None})
-            sides.append({"owner": sd.get("owner"), "gets": items})
+            names = owner_names.get(sd.get("owner")) or {}
+            team = names.get("team")
+            sides.append({"owner": sd.get("owner"),
+                          "team": team if team and team != "Unknown" else None,
+                          "owner_name": names.get("name") if names.get("name") != "Unknown" else None,
+                          "gets": items})
         out.append({"id": tr.get("id"), "date": tr.get("date"), "season": tr.get("season"), "sides": sides})
     return out
 
@@ -311,9 +317,11 @@ def main():
                         "pos_in": {}, "pos_out": {}} for uid in teams}
     try:
         with open("data/trades.json") as f:
-            history = json.load(f).get("trades", [])
+            trade_file = json.load(f)
+        history = trade_file.get("trades", [])
+        owner_names = trade_file.get("owners", {})
     except Exception:
-        history = []
+        history, owner_names = [], {}
     for tr in history:
         sides = tr.get("sides", [])
         for sd in sides:
@@ -340,7 +348,7 @@ def main():
             "generated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
             "season": season, "next_draft": next_draft,
             "teams": teams, "players": players, "picks": picks, "tendencies": tendencies,
-            "league_market": league_market(history), "history": compact_trades(history),
+            "league_market": league_market(history), "history": compact_trades(history, owner_names),
         }, f)
     print(f"Analyzer data: {len(teams)} teams, {len(players)} players, {len(picks)} picks")
 
