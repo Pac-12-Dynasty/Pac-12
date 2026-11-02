@@ -563,18 +563,6 @@
   "team": "IND",
   "value": null
  },
- "12457": {
-  "age": 22,
-  "birth_date": "2004-01-08",
-  "injury": "",
-  "injury_part": "",
-  "name": "Jaydon Blue",
-  "pos": "RB",
-  "pos_rank": "RB68",
-  "rank": 252,
-  "team": "PHI",
-  "value": 29
- },
  "12467": {
   "age": 22,
   "birth_date": "2004-03-29",
@@ -2446,6 +2434,18 @@
   "rank": null,
   "team": "LV",
   "value": null
+ },
+ "6130": {
+  "age": 29,
+  "birth_date": "1997-09-03",
+  "injury": "",
+  "injury_part": "",
+  "name": "Devin Singletary",
+  "pos": "RB",
+  "pos_rank": "RB93",
+  "rank": 347,
+  "team": "NYG",
+  "value": 4
  },
  "6650": {
   "age": 30,
