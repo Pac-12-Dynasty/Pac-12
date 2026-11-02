@@ -512,7 +512,8 @@
       function tradeLine(tr, sd, x) {
         var other = tr.sides.filter(function (o) { return o !== sd; })[0];
         var paid = (other ? other.gets : []).map(function (y) { return y.name + (y.was_value ? " (" + fmt(y.was_value) + ")" : ""); }).join(", ");
-        var team = (D.teams[sd.owner] || {}).team || "A team";
+        // Current team name, then the name from trade history, then the owner's username
+        var team = (D.teams[sd.owner] || {}).team || sd.team || sd.owner_name || "A former team";
         var line = el("p");
         line.appendChild(document.createTextNode(tr.season + ": " + team + " got " + x.name +
           (x.was_value ? " (" + fmt(x.was_value) + " then)" : "") + " for " + (paid || "nothing") + ". "));
@@ -524,11 +525,15 @@
         return line;
       }
 
+      // Same player: match by Sleeper ID, or by name for older saved data
+      function isHim(x) { return x.id ? x.id === id : (x.pos === p.pos && x.name === p.name); }
+      function hasHim(tr) { return tr.sides.some(function (sd) { return sd.gets.some(isHim); }); }
+
       hist.appendChild(el("h3", "", "Trades including " + p.name));
       var involving = [];
       (D.history || []).forEach(function (tr) {
         tr.sides.forEach(function (sd) {
-          sd.gets.forEach(function (x) { if (x.id === id) involving.push({ tr: tr, sd: sd, x: x }); });
+          sd.gets.forEach(function (x) { if (isHim(x)) involving.push({ tr: tr, sd: sd, x: x }); });
         });
       });
       if (!involving.length) hist.appendChild(el("p", "muted", "He hasn't been traded in this league."));
@@ -537,16 +542,17 @@
       hist.appendChild(el("h3", "", "Similar trades"));
       var similar = [];
       (D.history || []).forEach(function (tr) {
+        if (hasHim(tr)) return;   // trades with him are already listed above
         tr.sides.forEach(function (sd) {
           sd.gets.forEach(function (x) {
-            if (x.id === id || x.pos !== p.pos || !x.was_value) return;
+            if (x.pos !== p.pos || !x.was_value) return;
             if (Math.abs(x.was_value - p.value) > p.value * 0.35) return;
             similar.push({ tr: tr, sd: sd, x: x, diff: Math.abs(x.was_value - p.value) });
           });
         });
       });
       similar.sort(function (a, b) { return a.diff - b.diff; });
-      if (!similar.length) hist.appendChild(el("p", "muted", "No past league trades for a " + p.pos + " at this value yet."));
+      if (!similar.length) hist.appendChild(el("p", "muted", "No other past league trades for a " + p.pos + " at this value yet."));
       similar.slice(0, 5).forEach(function (f) { hist.appendChild(tradeLine(f.tr, f.sd, f.x)); });
       hist.appendChild(el("p", "muted", "Values in parentheses are market values at the time of each trade."));
       box.appendChild(hist);
