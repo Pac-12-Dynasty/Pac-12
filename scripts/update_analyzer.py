@@ -68,6 +68,112 @@ def league_market(history):
     return out
 
 
+def market_overview(history, owner_names, season, teams, movers):
+    """Patterns and trends in the league's trade market, rebuilt on every run."""
+    now = datetime.now(timezone.utc)
+
+    def when(tr):
+        try:
+            return datetime.fromisoformat(tr["date"])
+        except Exception:
+            return None
+
+    def name(uid):
+        t = teams.get(uid) or {}
+        o = owner_names.get(uid) or {}
+        return t.get("team") or (o.get("team") if o.get("team") not in (None, "Unknown") else None) or o.get("name") or "A former team"
+
+    def total(tr):
+        return sum((x.get("was_value") or 0) for sd in tr.get("sides", []) for x in sd.get("players", []) + sd.get("picks", []))
+
+    this_season = [t for t in history if t.get("season") == season]
+    last_season = [t for t in history if t.get("season") == season - 1]
+    current_week = max([t.get("week") or 0 for t in this_season] or [0])
+    last_pace = [t for t in last_season if (t.get("week") or 0) <= current_week]
+    last_30 = [t for t in history if when(t) and (now - when(t)).days <= 30]
+    last_year = [t for t in history if when(t) and (now - when(t)).days <= 365]
+
+    # Most active traders this season
+    counts = {}
+    for t in this_season:
+        for sd in t.get("sides", []):
+            counts[sd.get("owner")] = counts.get(sd.get("owner"), 0) + 1
+    active = [{"owner": u, "team": name(u), "trades": c} for u, c in sorted(counts.items(), key=lambda kv: -kv[1])[:3]]
+
+    # What changed hands this season
+    flow = {}
+    for t in this_season:
+        for sd in t.get("sides", []):
+            for x in sd.get("players", []):
+                flow[x.get("pos") or "?"] = flow.get(x.get("pos") or "?", 0) + 1
+            for pk in sd.get("picks", []):
+                k = category(pk) + " round picks" if category(pk) != "3rd+" else "3rd round+ picks"
+                flow[k] = flow.get(k, 0) + 1
+
+    # Price of a 1st round pick, this season vs. last
+    def first_price(trs):
+        vals = [pk["was_value"] for t in trs for sd in t.get("sides", []) for pk in sd.get("picks", [])
+                if pk.get("round") == 1 and pk.get("was_value")]
+        return {"avg": round(sum(vals) / len(vals)) if vals else None, "count": len(vals)}
+
+    # League premium by asset type: all-time vs. the last 12 months
+    all_time = league_market(history)
+    recent = league_market(last_year)
+    premiums = []
+    for cat in ["QB", "RB", "WR", "TE", "1st", "2nd", "3rd+"]:
+        a, r = all_time.get(cat), recent.get(cat)
+        if a or r:
+            premiums.append({"cat": cat, "all_time": a, "recent": r})
+
+    big = sorted([t for t in last_year if total(t) > 0], key=lambda t: -total(t))[:5]
+    biggest = [{"id": t.get("id"), "season": t.get("season"), "date": t.get("date"), "value": round(total(t)),
+                "teams": [name(sd.get("owner")) for sd in t.get("sides", [])]} for t in big]
+
+    # Plain-English market notes
+    notes = []
+    if this_season or last_pace:
+        diff = len(this_season) - len(last_pace)
+        trend = "up" if diff > 0 else ("down" if diff < 0 else "even")
+        notes.append(f"Trade activity is {trend}: {len(this_season)} trades this season vs. {len(last_pace)} "
+                     f"at this point last season.")
+    labels = {"1st": "1st round picks", "2nd": "2nd round picks", "3rd+": "3rd round and later picks"}
+    for pr in premiums:
+        r, a = pr["recent"], pr["all_time"]
+        if r and r["trades"] >= 3 and abs(r["factor"] - 1) >= 0.05:
+            pct = round((r["factor"] - 1) * 100)
+            lab = labels.get(pr["cat"], pr["cat"] + "s")
+            line = f"{lab} are going for {abs(pct)}% {'over' if pct > 0 else 'under'} market over the last year"
+            if a and abs(r["factor"] - a["factor"]) >= 0.05:
+                line += f", {'up' if r['factor'] > a['factor'] else 'down'} from {round((a['factor'] - 1) * 100):+d}% all-time"
+            notes.append(line + ".")
+    fp_now, fp_last = first_price(this_season), first_price(last_season)
+    if fp_now["avg"] and fp_last["avg"]:
+        change = round((fp_now["avg"] - fp_last["avg"]) / fp_last["avg"] * 100)
+        if abs(change) >= 10:
+            notes.append(f"The average 1st round pick traded this season was worth {fp_now['avg']:,}, "
+                         f"{abs(change)}% {'more' if change > 0 else 'less'} than last season.")
+    if active:
+        notes.append(f"Most active trader this season: {active[0]['team']} ({active[0]['trades']} trade"
+                     f"{'' if active[0]['trades'] == 1 else 's'}).")
+    if flow:
+        top = max(flow.items(), key=lambda kv: kv[1])
+        notes.append(f"Most traded this season: {top[0] if 'pick' in top[0] else top[0] + 's'} ({top[1]} moved).")
+    if movers.get("risers"):
+        m = movers["risers"][0]
+        notes.append(f"Biggest riser over the last 4 weeks: {m['name']} (+{m['change']:,}).")
+    if movers.get("fallers"):
+        m = movers["fallers"][0]
+        notes.append(f"Biggest faller over the last 4 weeks: {m['name']} ({m['change']:,}).")
+
+    return {
+        "season": season,
+        "counts": {"this_season": len(this_season), "last_season_same_point": len(last_pace),
+                   "last_season": len(last_season), "last_30_days": len(last_30), "all_time": len(history)},
+        "active": active, "flow": flow, "first_price": {"this_season": fp_now, "last_season": fp_last},
+        "premiums": premiums, "biggest": biggest, "movers": movers, "notes": notes,
+    }
+
+
 def compact_trades(history, owner_names=None):
     """Past trades with market values at the time, for showing comparable deals."""
     owner_names = owner_names or {}
@@ -320,8 +426,9 @@ def main():
             trade_file = json.load(f)
         history = trade_file.get("trades", [])
         owner_names = trade_file.get("owners", {})
+        movers = trade_file.get("movers", {})
     except Exception:
-        history, owner_names = [], {}
+        history, owner_names, movers = [], {}, {}
     for tr in history:
         sides = tr.get("sides", [])
         for sd in sides:
@@ -349,6 +456,7 @@ def main():
             "season": season, "next_draft": next_draft,
             "teams": teams, "players": players, "picks": picks, "tendencies": tendencies,
             "league_market": league_market(history), "history": compact_trades(history, owner_names),
+            "market": market_overview(history, owner_names, season, teams, movers),
         }, f)
     print(f"Analyzer data: {len(teams)} teams, {len(players)} players, {len(picks)} picks")
 
