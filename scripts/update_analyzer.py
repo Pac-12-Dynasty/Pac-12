@@ -11,6 +11,8 @@ import os
 import urllib.request
 from datetime import datetime, timezone
 
+import valuation
+
 BASE_LEAGUE_ID = "1315706586127171584"
 API = "https://api.sleeper.app/v1"
 DP = "https://raw.githubusercontent.com/dynastyprocess/data/master/files"
@@ -222,8 +224,20 @@ def trade_grades(history, owner_names, teams):
                 "got": round(got), "gave": round(gave),
                 "gain": gain, "grade": letter(gain) if gain is not None else None,
             })
+        situational = (tr.get("grades") or {}).get("teams") or {}
+        if situational:
+            graded = all(sd.get("owner") in situational for sd in sides)
+            for so in side_out:
+                g = situational.get(so["owner"])
+                if not g:
+                    continue
+                so.update({"grade": g["grade"], "gain": g["gain"], "window": g.get("window"),
+                           "impact": g.get("impact", []), "gave": g.get("market_given", so["gave"]),
+                           "got": g.get("market_got", so["got"])})
+            unvalued = sorted({n for g in situational.values() for n in g.get("unvalued", []) if n})
         stories.append({"trade_id": tr.get("id"), "date": tr.get("date"), "season": tr.get("season"),
-                        "week": tr.get("week"), "graded": graded, "unvalued": unvalued, "sides": side_out})
+                        "week": tr.get("week"), "graded": graded, "unvalued": unvalued, "sides": side_out,
+                        "method": "team" if situational else "value"})
     stories.sort(key=lambda s: s["date"] or "", reverse=True)
     return stories
 
@@ -442,7 +456,7 @@ def main():
                     v = tiered[tier_year].get((tier, rd))
                     label = f"{yr} {tier} Round {rd}"
                 else:
-                    gy = generic_years[-1] if generic_years else None
+                    gy = yr if yr in generic else (generic_years[-1] if generic_years else None)
                     v = generic.get(gy, {}).get(rd) if gy else None
                     label = f"{yr} Round {rd}"
                 picks.append({
@@ -450,6 +464,19 @@ def main():
                     "owner": roster_owner.get(owner_rid), "original_owner": uid,
                     "label": label, "value": round(v or 0), "note": note,
                 })
+
+    # ---------- Draft class strength ----------
+    firsts = {}
+    for pk in picks:
+        if pk["round"] == 1 and pk["value"]:
+            firsts.setdefault(pk["season"], []).append(pk["value"])
+    avg_all = sum(sum(v) / len(v) for v in firsts.values()) / len(firsts) if firsts else 0
+    classes = {}
+    for yr_, vals in firsts.items():
+        avg = sum(vals) / len(vals)
+        rel = (avg / avg_all - 1) if avg_all else 0
+        classes[yr_] = {"avg_first": round(avg), "vs_average": round(rel * 100),
+                        "label": "Strong" if rel >= 0.08 else ("Weak" if rel <= -0.08 else "Average")}
 
     # ---------- Players ----------
     players = {}
@@ -509,6 +536,9 @@ def main():
             "generated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
             "season": season, "next_draft": next_draft,
             "teams": teams, "players": players, "picks": picks, "tendencies": tendencies,
+            "slots": [s for s in (league.get("roster_positions") or []) if s not in ("BN", "IR", "TAXI")],
+            "classes": classes,
+            "valuation": {"depth_weight": valuation.SETTINGS["depth_weight"]},
             "league_market": league_market(history), "history": compact_trades(history, owner_names),
             "market": market_overview(history, owner_names, season, teams, movers),
         }, f)
