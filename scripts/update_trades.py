@@ -299,6 +299,7 @@ def main():
 
     owners = {}
     trades = []
+    moves = []      # every other transaction: waivers, free agents, commissioner moves
     past = PastValues()
 
     for league in reversed(seasons):
@@ -320,7 +321,28 @@ def main():
             except Exception:
                 continue
             for t in rows:
-                if t.get("type") != "trade" or t.get("status") != "complete":
+                if t.get("status") != "complete":
+                    continue
+                if t.get("type") != "trade":
+                    if t.get("transaction_id") in seen:
+                        continue
+                    seen.add(t.get("transaction_id"))
+                    created = t.get("status_updated") or t.get("created") or 0
+                    def named(pid):
+                        info = every.get(pid) or roster_info.get(pid) or {}
+                        return {"id": pid, "name": info.get("name") or pid, "pos": info.get("pos") or ""}
+                    rid = (t.get("roster_ids") or [None])[0]
+                    moves.append({
+                        "id": t.get("transaction_id"),
+                        "type": t.get("type"),            # waiver, free_agent, or commissioner
+                        "season": yr,
+                        "week": t.get("leg") or rnd,
+                        "date": datetime.fromtimestamp(created / 1000, timezone.utc).isoformat(timespec="minutes") if created else None,
+                        "owner": roster_owner.get(rid),
+                        "adds": [named(pid) for pid in (t.get("adds") or {})],
+                        "drops": [named(pid) for pid in (t.get("drops") or {})],
+                        "bid": (t.get("settings") or {}).get("waiver_bid"),
+                    })
                     continue
                 if t.get("transaction_id") in seen:
                     continue
@@ -398,7 +420,11 @@ def main():
     with open("data/trades.json", "w") as f:
         json.dump({"generated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
                    "now_basis": now_basis, "owners": owners, "trades": trades, "movers": movers}, f, indent=1)
-    print(f"Saved {len(trades)} trades across {len(seasons)} season(s)")
+    moves.sort(key=lambda m: m["date"] or "", reverse=True)
+    with open("data/transactions.json", "w") as f:
+        json.dump({"generated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
+                   "owners": owners, "moves": moves}, f)
+    print(f"Saved {len(trades)} trades and {len(moves)} other transactions across {len(seasons)} season(s)")
 
 
 if __name__ == "__main__":
