@@ -130,7 +130,7 @@
     slot.className = "nav-auth";
     if (nav) {
       nav.appendChild(slot);
-      [["news.html", "News"], ["trades.html", "Trades"], ["analyzer.html", "Analyzer"], ["legacy.html", "Legacy"]].forEach(function (link) {
+      [["news.html", "News"], ["transactions.html", "Transactions"], ["analyzer.html", "Analyzer"], ["legacy.html", "Legacy"]].forEach(function (link) {
         if (nav.querySelector('a[href="' + link[0] + '"]')) return;
         var a = document.createElement("a");
         a.href = link[0];
