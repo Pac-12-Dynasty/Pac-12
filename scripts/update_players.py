@@ -94,7 +94,8 @@ all_players = get(f"{API}/players/nfl")
 os.makedirs("cache", exist_ok=True)
 with open("cache/all_players.json", "w") as f:
     json.dump({pid: {"name": p.get("full_name") or f"{p.get('first_name', '')} {p.get('last_name', '')}".strip(),
-                     "pos": p.get("position") or ""} for pid, p in all_players.items()}, f)
+                     "pos": p.get("position") or "", "birth_date": p.get("birth_date") or ""}
+               for pid, p in all_players.items()}, f)
 
 out = {}
 for pid in sorted(ids):
