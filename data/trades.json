@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T02:09+00:00",
+ "generated": "2026-11-02T03:03+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
@@ -2343,5 +2343,124 @@
     }
    ]
   }
- ]
+ ],
+ "movers": {
+  "days": 28,
+  "risers": [
+   {
+    "id": "12501",
+    "name": "Matthew Golden",
+    "pos": "WR",
+    "value": 3058,
+    "change": 1986
+   },
+   {
+    "id": "8151",
+    "name": "Kenneth Walker III",
+    "pos": "RB",
+    "value": 8108,
+    "change": 1389
+   },
+   {
+    "id": "11584",
+    "name": "Bucky Irving",
+    "pos": "RB",
+    "value": 3094,
+    "change": 955
+   },
+   {
+    "id": "13346",
+    "name": "Denzel Boston",
+    "pos": "WR",
+    "value": 2434,
+    "change": 828
+   },
+   {
+    "id": "11564",
+    "name": "Drake Maye",
+    "pos": "QB",
+    "value": 5502,
+    "change": 768
+   },
+   {
+    "id": "4034",
+    "name": "Christian McCaffrey",
+    "pos": "RB",
+    "value": 5225,
+    "change": 751
+   },
+   {
+    "id": "8150",
+    "name": "Kyren Williams",
+    "pos": "RB",
+    "value": 3673,
+    "change": 615
+   },
+   {
+    "id": "6813",
+    "name": "Jonathan Taylor",
+    "pos": "RB",
+    "value": 6943,
+    "change": 608
+   }
+  ],
+  "fallers": [
+   {
+    "id": "12507",
+    "name": "Omarion Hampton",
+    "pos": "RB",
+    "value": 3359,
+    "change": -2490
+   },
+   {
+    "id": "11628",
+    "name": "Marvin Harrison Jr.",
+    "pos": "WR",
+    "value": 1462,
+    "change": -1866
+   },
+   {
+    "id": "6904",
+    "name": "Jalen Hurts",
+    "pos": "QB",
+    "value": 2890,
+    "change": -1032
+   },
+   {
+    "id": "12508",
+    "name": "Jaxson Dart",
+    "pos": "QB",
+    "value": 832,
+    "change": -1013
+   },
+   {
+    "id": "13287",
+    "name": "Jeremiyah Love",
+    "pos": "RB",
+    "value": 7312,
+    "change": -931
+   },
+   {
+    "id": "13281",
+    "name": "Jordyn Tyson",
+    "pos": "WR",
+    "value": 2712,
+    "change": -825
+   },
+   {
+    "id": "4217",
+    "name": "George Kittle",
+    "pos": "TE",
+    "value": 987,
+    "change": -716
+   },
+   {
+    "id": "7526",
+    "name": "Jaylen Waddle",
+    "pos": "WR",
+    "value": 3960,
+    "change": -653
+   }
+  ]
+ }
 }
