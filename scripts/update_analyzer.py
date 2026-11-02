@@ -74,13 +74,14 @@ def compact_trades(history):
     for tr in history:
         sides = []
         for sd in tr.get("sides", []):
-            items = [{"name": p.get("name"), "pos": p.get("pos"), "was_value": p.get("was_value")} for p in sd.get("players", [])]
+            items = [{"id": p.get("id"), "name": p.get("name"), "pos": p.get("pos"), "was_value": p.get("was_value")}
+                     for p in sd.get("players", [])]
             items += [{"name": f"{pk['season']} Round {pk['round']}", "pos": "PICK", "round": pk["round"],
                        "was_value": pk.get("was_value")} for pk in sd.get("picks", [])]
             if sd.get("faab"):
                 items.append({"name": f"${sd['faab']} FAAB", "pos": "FAAB", "was_value": None})
             sides.append({"owner": sd.get("owner"), "gets": items})
-        out.append({"date": tr.get("date"), "season": tr.get("season"), "sides": sides})
+        out.append({"id": tr.get("id"), "date": tr.get("date"), "season": tr.get("season"), "sides": sides})
     return out
 
 
