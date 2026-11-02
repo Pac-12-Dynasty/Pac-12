@@ -377,10 +377,27 @@ def main():
                 })
 
     trades.sort(key=lambda t: t["date"] or "", reverse=True)
+
+    # Biggest dynasty value risers and fallers among rostered players, last 4 weeks
+    movers = {"days": 28, "risers": [], "fallers": []}
+    try:
+        then = (datetime.now(timezone.utc) - __import__("datetime").timedelta(days=28)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        changes = []
+        for pid, info in roster_info.items():
+            now_v = info.get("value")
+            old_v = past.player(then, pid)
+            if now_v and old_v:
+                changes.append({"id": pid, "name": info.get("name") or pid, "pos": info.get("pos") or "",
+                                "value": now_v, "change": now_v - old_v})
+        changes.sort(key=lambda c: -c["change"])
+        movers["risers"] = [c for c in changes if c["change"] > 0][:8]
+        movers["fallers"] = sorted([c for c in changes if c["change"] < 0], key=lambda c: c["change"])[:8]
+    except Exception as err:
+        print(f"Value movers unavailable: {err}")
     os.makedirs("data", exist_ok=True)
     with open("data/trades.json", "w") as f:
         json.dump({"generated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
-                   "now_basis": now_basis, "owners": owners, "trades": trades}, f, indent=1)
+                   "now_basis": now_basis, "owners": owners, "trades": trades, "movers": movers}, f, indent=1)
     print(f"Saved {len(trades)} trades across {len(seasons)} season(s)")
 
 
