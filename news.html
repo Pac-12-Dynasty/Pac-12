@@ -115,6 +115,7 @@
     var CATEGORIES = ["All", "News", "Trades", "Rumors", "Recaps", "Announcements"];
     var me = null;
     var posts = [];
+    var gradeStories = [];   // automatic trade grades, shown under the Trades tab
     var filter = "All";
 
     function el(tag, cls, text) {
@@ -150,6 +151,35 @@
 
     function open(post) { location.hash = "story-" + post.id; }
 
+    function fmtNum(n) { return Math.round(n).toLocaleString(); }
+
+    function buildGradeStories(list) {
+      gradeStories = list.map(function (g) {
+        var a = g.sides[0], b = g.sides[1];
+        var title = g.graded
+          ? "Trade grades: " + a.team + " (" + a.grade + "), " + b.team + " (" + b.grade + ")"
+          : "Trade: " + a.team + " and " + b.team + " (not graded)";
+        var lines = [];
+        g.sides.forEach(function (sd) { lines.push(sd.team + " receives: " + (sd.gets.length ? sd.gets.join(", ") : "nothing")); });
+        lines.push("");
+        if (g.graded) {
+          g.sides.forEach(function (sd) {
+            lines.push(sd.team + ": " + sd.grade + ". Gave " + fmtNum(sd.gave) + " in market value for " + fmtNum(sd.got) + ".");
+          });
+          if (g.unvalued.length) lines.push("", "No market value at the time, so counted as 0: " + g.unvalued.join(", ") + ".");
+        } else {
+          lines.push("Not graded: one side has no market value from the time of the trade" +
+            (g.unvalued.length ? " (" + g.unvalued.join(", ") + ")" : "") + ".");
+        }
+        lines.push("", "How it's graded: each piece uses its DynastyProcess market value from the week of the trade, with the Trade Analyzer's stud tax. A is a steal, C is fair, and F is a massive overpay. Numbers next to each piece are market values at the time.");
+        return {
+          id: "grade-" + g.trade_id, auto: true, category: "Trades", title: title, body: lines.join("\n"),
+          author_name: "Trade Analyzer", created_at: g.date || new Date(0).toISOString(),
+          link: "transactions.html#trade-" + encodeURIComponent(g.trade_id)
+        };
+      });
+    }
+
     // ---------- Front page ----------
     function renderTabs() {
       var tabs = document.getElementById("tabs");
@@ -165,6 +195,9 @@
     function renderFront() {
       renderTabs();
       var shown = posts.filter(function (p) { return filter === "All" || p.category === filter; });
+      if (filter === "Trades") {
+        shown = shown.concat(gradeStories).sort(function (x, y) { return (y.created_at || "").localeCompare(x.created_at || ""); });
+      }
       var lead = document.getElementById("lead");
       var grid = document.getElementById("grid");
       var statusEl = document.getElementById("news-status");
@@ -221,7 +254,14 @@
       box.appendChild(el("h1", "", post.title));
       box.appendChild(el("div", "byline", byline(post)));
       box.appendChild(el("div", "body", post.body));
-      if (canManage(post)) {
+      if (post.link) {
+        var go = el("p");
+        var a = el("a", "", "View the full transaction →");
+        a.href = post.link;
+        go.appendChild(a);
+        box.appendChild(go);
+      }
+      if (!post.auto && canManage(post)) {
         var del = el("button", "del", "Delete story");
         del.type = "button";
         del.onclick = function () {
@@ -239,8 +279,8 @@
     }
 
     function route() {
-      var match = location.hash.match(/^#story-(\d+)$/);
-      var post = match && posts.filter(function (p) { return String(p.id) === match[1]; })[0];
+      var match = location.hash.match(/^#story-(.+)$/);
+      var post = match && posts.concat(gradeStories).filter(function (p) { return String(p.id) === decodeURIComponent(match[1]); })[0];
       document.getElementById("front").hidden = !!post;
       document.getElementById("article-view").hidden = !post;
       if (post) renderArticle(post);
@@ -261,6 +301,10 @@
     }
 
     function start() {
+      fetch("data/trade_grades.json", { cache: "no-cache" })
+        .then(function (r) { return r.ok ? r.json() : { grades: [] }; })
+        .then(function (d) { buildGradeStories(d.grades || []); route(); })
+        .catch(function () {});
       loadPosts();
       window.addEventListener("hashchange", route);
 
