@@ -68,6 +68,10 @@
     .offer-grades { display: flex; gap: 0.5rem; align-items: center; font-weight: 700; font-size: 0.9rem; }
     .mini { width: 34px; height: 34px; border-radius: 8px; display: grid; place-items: center; font-weight: 900; color: #fff; }
     .offer p { margin: 0.4rem 0 0; font-size: 0.92rem; }
+    .ov-notes { margin: 0 0 1.25rem; padding-left: 1.1rem; }
+    .ov-notes li { margin: 0.35rem 0; }
+    .ov-table th, .ov-table td { white-space: nowrap; }
+    .up { color: #0f6e56; font-weight: 800; } .down { color: #b42318; font-weight: 800; }
     .comps { margin-top: 1rem; }
     .comps h3 { margin: 0 0 0.4rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); }
     .comps p { margin: 0.3rem 0; font-size: 0.92rem; }
@@ -88,6 +92,9 @@
     <p id="status" class="muted">Loading league data...</p>
 
     <div id="app" hidden>
+      <div class="bar"><h2>Market Overview</h2></div>
+      <div class="panel" id="overview"></div>
+
       <div class="bar"><h2>Build a Trade</h2></div>
       <div class="panel">
         <div class="sides">
@@ -665,6 +672,114 @@
       document.getElementById("side-a").scrollIntoView({ behavior: "smooth", block: "start" });
     }
 
+
+    // ---------- Market overview (rebuilt automatically from trade history) ----------
+    function drawOverview() {
+      var box = document.getElementById("overview");
+      var m = D.market;
+      box.innerHTML = "";
+      if (!m) { box.appendChild(el("p", "empty", "The market overview fills in after the next data update.")); return; }
+
+      var fp = m.first_price.this_season;
+      var grid = el("div", "market-grid");
+      [[String(m.counts.this_season), m.season + " trades (" + m.counts.last_season_same_point + " at this point last year)"],
+       [String(m.counts.last_30_days), "Trades in the last 30 days"],
+       [String(m.counts.all_time), "Trades all-time"],
+       [fp.avg ? fmt(fp.avg) : "-", "Avg 1st round pick traded this season"]].forEach(function (s) {
+        var c = el("div", "stat");
+        c.appendChild(el("div", "big", s[0]));
+        c.appendChild(el("div", "label", s[1]));
+        grid.appendChild(c);
+      });
+      box.appendChild(grid);
+
+      if (m.notes.length) {
+        var ul = el("ul", "ov-notes");
+        m.notes.forEach(function (n) { ul.appendChild(el("li", "", n)); });
+        box.appendChild(ul);
+      } else {
+        box.appendChild(el("p", "muted", "Not enough trades yet to spot clear patterns."));
+      }
+
+      var cols = el("div", "market-cols");
+
+      // Prices by asset type: all-time vs last 12 months
+      var colP = el("div"); colP.appendChild(el("h3", "", "League prices vs. market"));
+      var wrap = el("div", "table-wrap");
+      var t = el("table", "ov-table");
+      var head = el("tr");
+      ["Asset", "All-time", "Last 12 months", "Trend"].forEach(function (h) { head.appendChild(el("th", "", h)); });
+      t.appendChild(head);
+      function pctOf(f) { return f ? (f.factor >= 1 ? "+" : "") + Math.round((f.factor - 1) * 100) + "% (" + f.trades + ")" : "-"; }
+      m.premiums.forEach(function (pr) {
+        var tr = el("tr");
+        tr.appendChild(el("td", "", { "1st": "1st round picks", "2nd": "2nd round picks", "3rd+": "3rd+ round picks" }[pr.cat] || pr.cat));
+        tr.appendChild(el("td", "", pctOf(pr.all_time)));
+        tr.appendChild(el("td", "", pctOf(pr.recent)));
+        var trend = el("td", "", "-");
+        if (pr.recent && pr.all_time) {
+          var d = pr.recent.factor - pr.all_time.factor;
+          if (d >= 0.03) { trend.textContent = "▲ Rising"; trend.className = "up"; }
+          else if (d <= -0.03) { trend.textContent = "▼ Falling"; trend.className = "down"; }
+          else trend.textContent = "Steady";
+        }
+        tr.appendChild(trend);
+        t.appendChild(tr);
+      });
+      if (!m.premiums.length) {
+        var tr0 = el("tr"); var td0 = el("td", "muted", "No priced trades yet."); td0.colSpan = 4; tr0.appendChild(td0); t.appendChild(tr0);
+      }
+      wrap.appendChild(t);
+      colP.appendChild(wrap);
+      colP.appendChild(el("p", "muted", "How much more (+) or less (−) than market value this league pays. Trade counts in parentheses."));
+      cols.appendChild(colP);
+
+      // Biggest deals
+      var colB = el("div"); colB.appendChild(el("h3", "", "Biggest deals, last 12 months"));
+      var ulB = el("ul");
+      m.biggest.forEach(function (b) {
+        var li = el("li");
+        var a = el("a", "", b.teams.join(" ↔ "));
+        a.href = "trades.html#trade-" + encodeURIComponent(b.id);
+        li.appendChild(a);
+        li.appendChild(el("span", "", fmt(b.value) + " total"));
+        ulB.appendChild(li);
+      });
+      if (!m.biggest.length) ulB.appendChild(el("li", "muted", "None yet."));
+      colB.appendChild(ulB);
+
+      colB.appendChild(el("h3", "", "Most active this season"));
+      var ulA = el("ul");
+      m.active.forEach(function (a) {
+        var li = el("li"); li.appendChild(el("span", "", a.team)); li.appendChild(el("span", "", a.trades + " trade" + (a.trades === 1 ? "" : "s"))); ulA.appendChild(li);
+      });
+      if (!m.active.length) ulA.appendChild(el("li", "muted", "No trades this season yet."));
+      colB.appendChild(ulA);
+      cols.appendChild(colB);
+
+      // Value movers
+      var colM = el("div"); colM.appendChild(el("h3", "", "Risers, last 4 weeks"));
+      var ulR = el("ul");
+      ((m.movers || {}).risers || []).slice(0, 5).forEach(function (r) {
+        var li = el("li"); li.appendChild(el("span", "", r.name + " (" + r.pos + ")"));
+        var sp = el("span", "up", "+" + fmt(r.change)); li.appendChild(sp); ulR.appendChild(li);
+      });
+      if (!((m.movers || {}).risers || []).length) ulR.appendChild(el("li", "muted", "No data yet."));
+      colM.appendChild(ulR);
+      colM.appendChild(el("h3", "", "Fallers, last 4 weeks"));
+      var ulF = el("ul");
+      ((m.movers || {}).fallers || []).slice(0, 5).forEach(function (r) {
+        var li = el("li"); li.appendChild(el("span", "", r.name + " (" + r.pos + ")"));
+        var sp = el("span", "down", fmt(r.change)); li.appendChild(sp); ulF.appendChild(li);
+      });
+      if (!((m.movers || {}).fallers || []).length) ulF.appendChild(el("li", "muted", "No data yet."));
+      colM.appendChild(ulF);
+      cols.appendChild(colM);
+
+      box.appendChild(cols);
+      box.appendChild(el("p", "muted", "This section rebuilds itself from league trade history and current values every time the data updates."));
+    }
+
     fetch("data/analyzer.json", { cache: "no-cache" })
       .then(function (res) {
         if (!res.ok) throw new Error("The analyzer data hasn't been built yet. Run the Update player data workflow once.");
@@ -682,6 +797,7 @@
         drawSide("b");
         setupMarket();
         setupFinder();
+        drawOverview();
         document.getElementById("updated").textContent = "Values updated " + new Date(D.generated).toLocaleString() + ".";
         document.getElementById("status").hidden = true;
         document.getElementById("app").hidden = false;
