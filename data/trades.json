@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T23:29+00:00",
+ "generated": "2026-11-02T23:53+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
@@ -57,6 +57,41 @@
  },
  "trades": [
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "861417814836256768": {
+      "gain": 67,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Breece Hall",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 2185,
+      "market_got": 6547,
+      "window": "Contender",
+      "unvalued": []
+     },
+     "995982448825720832": {
+      "gain": -59,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Isaiah Likely",
+        "starts": true,
+        "slot": "FLEX"
+       }
+      ],
+      "market_given": 6547,
+      "market_got": 2185,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1421675777753149440",
    "season": 2026,
    "week": 8,
@@ -116,6 +151,46 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "995982448825720832": {
+      "gain": 21,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Rashee Rice",
+        "starts": true,
+        "slot": "FLEX"
+       },
+       {
+        "name": "Kaelon Black",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 6067,
+      "market_got": 8655,
+      "window": "Rebuilder",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": -26,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Trey McBride",
+        "starts": true,
+        "slot": "TE"
+       }
+      ],
+      "market_given": 8655,
+      "market_got": 6067,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1421585121974161408",
    "season": 2026,
    "week": 8,
@@ -194,6 +269,35 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "861417814836256768": {
+      "gain": 53,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Sam Darnold",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 11,
+      "market_got": 459,
+      "window": "Contender",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": -65,
+      "grade": "F",
+      "impact": [],
+      "market_given": 459,
+      "market_got": 11,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1415894610848366592",
    "season": 2026,
    "week": 5,
@@ -234,6 +338,35 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "915765963616985088": {
+      "gain": -40,
+      "grade": "F",
+      "impact": [],
+      "market_given": 759,
+      "market_got": 170,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": 35,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Josh Jacobs",
+        "starts": true,
+        "slot": "FLEX"
+       }
+      ],
+      "market_given": 170,
+      "market_got": 759,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1401711528289300480",
    "season": 2026,
    "week": 1,
@@ -274,6 +407,56 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "745458998371008512": {
+      "gain": 42,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Bhayshul Tuten",
+        "starts": false,
+        "slot": null
+       },
+       {
+        "name": "Skyler Bell",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 953,
+      "market_got": 1583,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": -42,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Chris Bell",
+        "starts": false,
+        "slot": null
+       },
+       {
+        "name": "Kaelon Black",
+        "starts": false,
+        "slot": null
+       },
+       {
+        "name": "Rhamondre Stevenson",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 1583,
+      "market_got": 953,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1397859421522010112",
    "season": 2026,
    "week": 1,
@@ -370,6 +553,46 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "861421486488031232": {
+      "gain": 7,
+      "grade": "B",
+      "impact": [
+       {
+        "name": "Jonathon Brooks",
+        "starts": false,
+        "slot": null
+       },
+       {
+        "name": "Luther Burden III",
+        "starts": true,
+        "slot": "FLEX"
+       }
+      ],
+      "market_given": 6798,
+      "market_got": 7512,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": -8,
+      "grade": "D",
+      "impact": [
+       {
+        "name": "Omarion Hampton",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 7512,
+      "market_got": 6798,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1368784978531319808",
    "season": 2026,
    "week": 1,
@@ -441,6 +664,29 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "915765963616985088": {
+      "gain": 15,
+      "grade": "B",
+      "impact": [],
+      "market_given": 46,
+      "market_got": 54,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "1416188424762720256": {
+      "gain": -15,
+      "grade": "D",
+      "impact": [],
+      "market_given": 54,
+      "market_got": 46,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1357902485271908352",
    "season": 2026,
    "week": 1,
@@ -481,6 +727,29 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "861421486488031232": {
+      "gain": 14,
+      "grade": "B",
+      "impact": [],
+      "market_given": 2494,
+      "market_got": 2904,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": -14,
+      "grade": "D",
+      "impact": [],
+      "market_given": 2904,
+      "market_got": 2494,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1355624406012932096",
    "season": 2026,
    "week": 1,
@@ -521,6 +790,51 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "745458998371008512": {
+      "gain": -11,
+      "grade": "D",
+      "impact": [
+       {
+        "name": "Stefon Diggs",
+        "starts": true,
+        "slot": "FLEX"
+       },
+       {
+        "name": "Rhamondre Stevenson",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 1264,
+      "market_got": 1385,
+      "window": "Contender",
+      "unvalued": []
+     },
+     "861421486488031232": {
+      "gain": 18,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Tony Pollard",
+        "starts": true,
+        "slot": "RB"
+       },
+       {
+        "name": "Kayshon Boutte",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 1385,
+      "market_got": 1264,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1292293262471626752",
    "season": 2025,
    "week": 10,
@@ -598,6 +912,46 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "909255939126161408": {
+      "gain": -29,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Jaydon Blue",
+        "starts": false,
+        "slot": null
+       },
+       {
+        "name": "Terry McLaurin",
+        "starts": true,
+        "slot": "FLEX"
+       }
+      ],
+      "market_given": 4966,
+      "market_got": 3894,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "915765963616985088": {
+      "gain": 19,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Josh Jacobs",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 3894,
+      "market_got": 4966,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1291599455543361536",
    "season": 2025,
    "week": 9,
@@ -676,6 +1030,46 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "858765508143628288": {
+      "gain": -21,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Jonnu Smith",
+        "starts": false,
+        "slot": null
+       },
+       {
+        "name": "Nico Collins",
+        "starts": true,
+        "slot": "WR"
+       }
+      ],
+      "market_given": 7061,
+      "market_got": 6899,
+      "window": "Rebuilder",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": 21,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Luther Burden III",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 6899,
+      "market_got": 7061,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1288177836510699520",
    "season": 2025,
    "week": 8,
@@ -741,6 +1135,46 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "861417814836256768": {
+      "gain": -30,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Deebo Samuel Sr.",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 5098,
+      "market_got": 2741,
+      "window": "Contender",
+      "unvalued": []
+     },
+     "858765508143628288": {
+      "gain": 41,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Jameson Williams",
+        "starts": true,
+        "slot": "FLEX"
+       },
+       {
+        "name": "Kenneth Walker III",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 2741,
+      "market_got": 5098,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1287126986719784960",
    "season": 2025,
    "week": 8,
@@ -806,6 +1240,41 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "908808510823997440": {
+      "gain": 6,
+      "grade": "B",
+      "impact": [
+       {
+        "name": "Ladd McConkey",
+        "starts": true,
+        "slot": "FLEX"
+       }
+      ],
+      "market_given": 5753,
+      "market_got": 5719,
+      "window": "Rebuilder",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": -6,
+      "grade": "D",
+      "impact": [
+       {
+        "name": "Rashee Rice",
+        "starts": true,
+        "slot": "FLEX"
+       }
+      ],
+      "market_given": 5719,
+      "market_got": 5753,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1280461308679958528",
    "season": 2025,
    "week": 5,
@@ -859,6 +1328,56 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "915765963616985088": {
+      "gain": -12,
+      "grade": "D",
+      "impact": [
+       {
+        "name": "Emeka Egbuka",
+        "starts": true,
+        "slot": "FLEX"
+       },
+       {
+        "name": "James Cook III",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 15787,
+      "market_got": 12174,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "853109226401288192": {
+      "gain": 18,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Jared Goff",
+        "starts": false,
+        "slot": null
+       },
+       {
+        "name": "T.J. Hockenson",
+        "starts": true,
+        "slot": "TE"
+       },
+       {
+        "name": "Justin Jefferson",
+        "starts": true,
+        "slot": "WR"
+       }
+      ],
+      "market_given": 12174,
+      "market_got": 15787,
+      "window": "Contender",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1274207814302072832",
    "season": 2025,
    "week": 3,
@@ -985,6 +1504,29 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "909255939126161408": {
+      "gain": -39,
+      "grade": "F",
+      "impact": [],
+      "market_given": 62,
+      "market_got": 38,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "861421486488031232": {
+      "gain": 39,
+      "grade": "A",
+      "impact": [],
+      "market_given": 38,
+      "market_got": 62,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1228055514659692544",
    "season": 2025,
    "week": 1,
@@ -1025,6 +1567,35 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "915765963616985088": {
+      "gain": -45,
+      "grade": "F",
+      "impact": [],
+      "market_given": 745,
+      "market_got": 299,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "853109226401288192": {
+      "gain": 45,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "J.J. McCarthy",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 299,
+      "market_got": 745,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1227843994239651840",
    "season": 2025,
    "week": 1,
@@ -1065,6 +1636,35 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "861417814836256768": {
+      "gain": 15,
+      "grade": "A",
+      "impact": [],
+      "market_given": 607,
+      "market_got": 337,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "858765508143628288": {
+      "gain": -13,
+      "grade": "D",
+      "impact": [
+       {
+        "name": "Najee Harris",
+        "starts": true,
+        "slot": "FLEX"
+       }
+      ],
+      "market_given": 337,
+      "market_got": 607,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1227646077285453824",
    "season": 2025,
    "week": 1,
@@ -1111,6 +1711,35 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "858765508143628288": {
+      "gain": -12,
+      "grade": "D",
+      "impact": [
+       {
+        "name": "DK Metcalf",
+        "starts": true,
+        "slot": "WR"
+       }
+      ],
+      "market_given": 3101,
+      "market_got": 3175,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": 20,
+      "grade": "A",
+      "impact": [],
+      "market_given": 3175,
+      "market_got": 3101,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1227614298889535488",
    "season": 2025,
    "week": 1,
@@ -1157,6 +1786,35 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "745458998371008512": {
+      "gain": -5,
+      "grade": "D",
+      "impact": [],
+      "market_given": 3134,
+      "market_got": 2874,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": 6,
+      "grade": "B",
+      "impact": [
+       {
+        "name": "Sam Darnold",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 2874,
+      "market_got": 3134,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1227403840911855616",
    "season": 2025,
    "week": 1,
@@ -1204,6 +1862,35 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "858765508143628288": {
+      "gain": -85,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Cooper Kupp",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 2874,
+      "market_got": 834,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "731283214563422208": {
+      "gain": 76,
+      "grade": "A",
+      "impact": [],
+      "market_given": 834,
+      "market_got": 2874,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1227350927816536064",
    "season": 2025,
    "week": 1,
@@ -1257,6 +1944,35 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "858765508143628288": {
+      "gain": 7,
+      "grade": "B",
+      "impact": [
+       {
+        "name": "Romeo Doubs",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 5702,
+      "market_got": 6295,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": -7,
+      "grade": "D",
+      "impact": [],
+      "market_given": 6295,
+      "market_got": 5702,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1223048379370582016",
    "season": 2025,
    "week": 1,
@@ -1322,6 +2038,51 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "858765508143628288": {
+      "gain": -39,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "David Montgomery",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 3868,
+      "market_got": 2504,
+      "window": "Rebuilder",
+      "unvalued": []
+     },
+     "861421486488031232": {
+      "gain": 33,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Nick Chubb",
+        "starts": true,
+        "slot": "RB"
+       },
+       {
+        "name": "Mike Gesicki",
+        "starts": false,
+        "slot": null
+       },
+       {
+        "name": "Diontae Johnson",
+        "starts": true,
+        "slot": "FLEX"
+       }
+      ],
+      "market_given": 2504,
+      "market_got": 3868,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1160310178739314688",
    "season": 2024,
    "week": 10,
@@ -1399,6 +2160,41 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "731283214563422208": {
+      "gain": 26,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Javonte Williams",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 973,
+      "market_got": 1048,
+      "window": "Rebuilder",
+      "unvalued": []
+     },
+     "915765963616985088": {
+      "gain": -4,
+      "grade": "C",
+      "impact": [
+       {
+        "name": "Jared Goff",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 1048,
+      "market_got": 973,
+      "window": "Contender",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1159972044063371264",
    "season": 2024,
    "week": 10,
@@ -1465,6 +2261,41 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "861417814836256768": {
+      "gain": 38,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Marvin Harrison Jr.",
+        "starts": true,
+        "slot": "WR"
+       }
+      ],
+      "market_given": 4981,
+      "market_got": 8783,
+      "window": "Contender",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": -42,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Jonathon Brooks",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 8783,
+      "market_got": 4981,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1154952866424045568",
    "season": 2024,
    "week": 8,
@@ -1518,6 +2349,35 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "909255939126161408": {
+      "gain": -20,
+      "grade": "F",
+      "impact": [],
+      "market_given": 340,
+      "market_got": 41,
+      "window": "Rebuilder",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": 80,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Zack Moss",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 41,
+      "market_got": 340,
+      "window": "Contender",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1150145586017120256",
    "season": 2024,
    "week": 6,
@@ -1558,6 +2418,41 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "909255939126161408": {
+      "gain": 73,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Chris Olave",
+        "starts": true,
+        "slot": "FLEX"
+       }
+      ],
+      "market_given": 2031,
+      "market_got": 6276,
+      "window": "Rebuilder",
+      "unvalued": []
+     },
+     "915765963616985088": {
+      "gain": -55,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Brian Robinson Jr.",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 6276,
+      "market_got": 2031,
+      "window": "Contender",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1150136748182323200",
    "season": 2024,
    "week": 6,
@@ -1604,6 +2499,40 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "731283214563422208": {
+      "gain": -63,
+      "grade": "F",
+      "impact": [],
+      "market_given": 3419,
+      "market_got": 403,
+      "window": "Rebuilder",
+      "unvalued": []
+     },
+     "915765963616985088": {
+      "gain": 49,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Derrick Henry",
+        "starts": true,
+        "slot": "RB"
+       },
+       {
+        "name": "Terry McLaurin",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 403,
+      "market_got": 3419,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1144401645145817088",
    "season": 2024,
    "week": 3,
@@ -1668,6 +2597,41 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "853109226401288192": {
+      "gain": 53,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Joe Burrow",
+        "starts": true,
+        "slot": "QB"
+       }
+      ],
+      "market_given": 1610,
+      "market_got": 3587,
+      "window": "Rebuilder",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": -53,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Jayden Daniels",
+        "starts": true,
+        "slot": "QB"
+       }
+      ],
+      "market_given": 3587,
+      "market_got": 1610,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1142089967146012672",
    "season": 2024,
    "week": 3,
@@ -1714,6 +2678,41 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "733192747346997248": {
+      "gain": -28,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Christian McCaffrey",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 12358,
+      "market_got": 8361,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "861422415547318272": {
+      "gain": 23,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Ja'Marr Chase",
+        "starts": true,
+        "slot": "WR"
+       }
+      ],
+      "market_given": 8361,
+      "market_got": 12358,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1128796858282872832",
    "season": 2024,
    "week": 1,
@@ -1774,6 +2773,29 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "858765508143628288": {
+      "gain": 31,
+      "grade": "A",
+      "impact": [],
+      "market_given": 2884,
+      "market_got": 4195,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "915765963616985088": {
+      "gain": -31,
+      "grade": "F",
+      "impact": [],
+      "market_given": 4195,
+      "market_got": 2884,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1074492167416045568",
    "season": 2024,
    "week": 1,
@@ -1826,6 +2848,35 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "858765508143628288": {
+      "gain": -51,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Raheem Mostert",
+        "starts": true,
+        "slot": "FLEX"
+       }
+      ],
+      "market_given": 641,
+      "market_got": 688,
+      "window": "Rebuilder",
+      "unvalued": []
+     },
+     "915765963616985088": {
+      "gain": 17,
+      "grade": "A",
+      "impact": [],
+      "market_given": 688,
+      "market_got": 641,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1025575297443299328",
    "season": 2023,
    "week": 9,
@@ -1878,6 +2929,41 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "908808510823997440": {
+      "gain": 67,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Dameon Pierce",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 727,
+      "market_got": 2507,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "909255939126161408": {
+      "gain": -56,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Brock Purdy",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 2507,
+      "market_got": 727,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1025125379574501376",
    "season": 2023,
    "week": 8,
@@ -1931,6 +3017,41 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "861417814836256768": {
+      "gain": -36,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Adam Thielen",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 501,
+      "market_got": 378,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "908808510823997440": {
+      "gain": 32,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Jordan Love",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 378,
+      "market_got": 501,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1025123794039500800",
    "season": 2023,
    "week": 8,
@@ -1997,6 +3118,41 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "861417814836256768": {
+      "gain": 1,
+      "grade": "C",
+      "impact": [
+       {
+        "name": "Brandin Cooks",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 43,
+      "market_got": 250,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "915765963616985088": {
+      "gain": 1,
+      "grade": "C",
+      "impact": [
+       {
+        "name": "Kayshon Boutte",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 250,
+      "market_got": 43,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1024925885927120896",
    "season": 2023,
    "week": 8,
@@ -2050,6 +3206,41 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "745458998371008512": {
+      "gain": 63,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Joe Mixon",
+        "starts": true,
+        "slot": "FLEX"
+       }
+      ],
+      "market_given": 208,
+      "market_got": 1938,
+      "window": "Contender",
+      "unvalued": []
+     },
+     "915765963616985088": {
+      "gain": -79,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Gus Edwards",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 1938,
+      "market_got": 208,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1024920865161183232",
    "season": 2023,
    "week": 8,
@@ -2103,6 +3294,41 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "745458998371008512": {
+      "gain": 68,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Gabe Davis",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 74,
+      "market_got": 1260,
+      "window": "Contender",
+      "unvalued": []
+     },
+     "909255939126161408": {
+      "gain": -87,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Zack Moss",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 1260,
+      "market_got": 74,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1024468870394363904",
    "season": 2023,
    "week": 8,
@@ -2156,6 +3382,46 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "861417814836256768": {
+      "gain": 57,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Najee Harris",
+        "starts": false,
+        "slot": null
+       },
+       {
+        "name": "C.J. Stroud",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 752,
+      "market_got": 3346,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "853109226401288192": {
+      "gain": -70,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Jerome Ford",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 3346,
+      "market_got": 752,
+      "window": "Middle",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1024460810816835584",
    "season": 2023,
    "week": 8,
@@ -2214,6 +3480,46 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "858765508143628288": {
+      "gain": 27,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "Diontae Johnson",
+        "starts": true,
+        "slot": "WR"
+       },
+       {
+        "name": "Tyler Allgeier",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 1361,
+      "market_got": 2211,
+      "window": "Middle",
+      "unvalued": []
+     },
+     "909255939126161408": {
+      "gain": -22,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Brian Robinson Jr.",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 2211,
+      "market_got": 1361,
+      "window": "Rebuilder",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1012786187687305216",
    "season": 2023,
    "week": 4,
@@ -2279,6 +3585,46 @@
    ]
   },
   {
+   "grades": {
+    "version": 2,
+    "teams": {
+     "745458998371008512": {
+      "gain": 62,
+      "grade": "A",
+      "impact": [
+       {
+        "name": "A.J. Brown",
+        "starts": true,
+        "slot": "WR"
+       }
+      ],
+      "market_given": 3371,
+      "market_got": 8824,
+      "window": "Rebuilder",
+      "unvalued": []
+     },
+     "861421486488031232": {
+      "gain": -66,
+      "grade": "F",
+      "impact": [
+       {
+        "name": "Michael Pittman Jr.",
+        "starts": true,
+        "slot": "FLEX"
+       },
+       {
+        "name": "Elijah Moore",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 8824,
+      "market_got": 3371,
+      "window": "Contender",
+      "unvalued": []
+     }
+    }
+   },
    "id": "1008431299062812672",
    "season": 2023,
    "week": 2,
