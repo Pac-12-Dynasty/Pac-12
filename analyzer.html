@@ -111,7 +111,8 @@
           <p class="muted">Each player starts from his DynastyProcess dynasty value, adjusted for how he's scoring in this league this season and any injury. Draft picks use DynastyProcess pick values, with next year's picks projected from the original team's current standing. Playoff teams pick 7 through 12 in reverse order of the standings. The six non-playoff teams go through the draft lottery, so their picks are valued as the average of every pick they could land, weighted by their lottery odds.</p>
           <p class="muted">Value is split into win-now and long-term based on age and position. Contenders weigh win-now value more, and rebuilders weigh long-term value more, so the same trade can grade differently for each team.</p>
           <p class="muted">Values are also adjusted by league history: past trades show whether this league pays more or less than market for each position and pick round, and that's blended in, more strongly the more trades there are to learn from.</p>
-          <p class="muted">A "stud tax" means one great player is worth more than several good ones adding up to the same total. The grade comes from how much value each team gains after all of that: A is a steal (or a strong deal for both teams), C is fair, and F is a massive overpay or undersell.</p>
+          <p class="muted">Most important, every trade is judged by what it does to each team. The analyzer builds each team's best starting lineup before and after the trade. A player only adds full win-now value if he'd start for that team; bench players count a little as depth. That's why trading from a surplus to fill a hole can be a good deal for both sides.</p>
+          <p class="muted">The grade is how much better or worse each team gets, compared to the value that changed hands: A is a steal or a strong deal for both teams, C is fair, and F is a massive overpay or undersell.</p>
         </details>
       </div>
       <div class="bar"><h2>Market Evaluation</h2></div>
@@ -294,30 +295,80 @@
         .sort(function (x, y) { return (x.season - y.season) || (x.round - y.round) || (y.value - x.value); })
         .forEach(function (pk) {
           var from = pk.original_owner !== uid ? "From " + D.teams[pk.original_owner].team : "Own pick";
-          plist.appendChild(assetRow(side, pk.id, pk.label, from + (pk.note ? " · " + pk.note : ""), pk.value));
+          var cls = (D.classes || {})[pk.season];
+          var clsNote = cls && cls.label !== "Average" ? cls.label + " draft class" : "";
+          plist.appendChild(assetRow(side, pk.id, pk.label, [from, pk.note, clsNote].filter(Boolean).join(" · "), split(pk.id).future));
         });
       box.appendChild(plist);
     }
 
     // ---------- Grading ----------
     // Grades a trade for both teams. aGives/bGives are lists of asset ids.
+    // ---------- Team situation: best lineup before and after a trade ----------
+    var FLEXES = { FLEX: ["RB", "WR", "TE"], WRRB_FLEX: ["RB", "WR"], REC_FLEX: ["WR", "TE"], SUPER_FLEX: ["QB", "RB", "WR", "TE"] };
+    function slotsList() { return (D.slots && D.slots.length) ? D.slots : ["QB", "RB", "RB", "WR", "WR", "TE", "FLEX", "FLEX", "K", "DEF"]; }
+
+    function bestLineup(players) {
+      var pool = players.slice().sort(function (x, y) { return y.now - x.now; });
+      var used = {}, placed = {};
+      var slots = slotsList();
+      slots.filter(function (s) { return !FLEXES[s]; }).forEach(function (slot) {
+        for (var i = 0; i < pool.length; i++) {
+          if (!used[pool[i].id] && pool[i].pos === slot) { used[pool[i].id] = 1; placed[pool[i].id] = slot; break; }
+        }
+      });
+      slots.filter(function (s) { return FLEXES[s]; }).forEach(function (slot) {
+        for (var i = 0; i < pool.length; i++) {
+          if (!used[pool[i].id] && FLEXES[slot].indexOf(pool[i].pos) !== -1) { used[pool[i].id] = 1; placed[pool[i].id] = slot; break; }
+        }
+      });
+      return placed;
+    }
+
+    // A team's strength: starters' win-now value + depth + long-term value, weighted by its window
+    function teamScore(uid, remove, add) {
+      var out = {};
+      remove.forEach(function (id) { out[id] = 1; });
+      var ids = Object.keys(D.players).filter(function (id) { return D.players[id].owner === uid && !out[id]; })
+        .concat(add.filter(function (id) { return D.players[id]; }));
+      var players = ids.map(function (id) { var sp = split(id); return { id: id, pos: D.players[id].pos, now: sp.now, fut: sp.future }; });
+      var pickIds = D.picks.filter(function (pk) { return pk.owner === uid && !out[pk.id]; }).map(function (pk) { return pk.id; })
+        .concat(add.filter(function (id) { return D.pickById[id]; }));
+      var placed = bestLineup(players);
+      var lineupNow = 0, backups = {};
+      players.slice().sort(function (x, y) { return y.now - x.now; }).forEach(function (p) {
+        if (placed[p.id]) lineupNow += p.now;
+        else if (["QB", "RB", "WR", "TE"].indexOf(p.pos) !== -1 && backups[p.pos] == null) backups[p.pos] = p.now;
+      });
+      var depth = ((D.valuation || {}).depth_weight || 0.25) * Object.keys(backups).reduce(function (s, k) { return s + backups[k]; }, 0);
+      var future = players.reduce(function (s, p) { return s + p.fut; }, 0) +
+        pickIds.reduce(function (s, id) { return s + split(id).future; }, 0);
+      var w = S.window[(D.teams[uid] || {}).window] || S.window.Middle;
+      return { score: w.now * (lineupNow + depth) + w.future * future, placed: placed };
+    }
+
+    // Grades a trade for both teams by how much better (or worse) each team gets
     function evaluate(a, aGives, b, bGives) {
       function view(me, gets, gives) {
-        var gotFit = combine(gets.map(function (id) { return fitValue(id, me); }));
-        var gaveFit = combine(gives.map(function (id) { return fitValue(id, me); }));
-        var gotMkt = combine(gets.map(marketValue));
-        var gaveMkt = combine(gives.map(marketValue));
+        var before = teamScore(me, [], []);
+        var after = teamScore(me, gives, gets);
+        var gotMkt = gets.reduce(function (s, id) { return s + marketValue(id); }, 0);
+        var gaveMkt = gives.reduce(function (s, id) { return s + marketValue(id); }, 0);
+        var moved = Math.max(gotMkt, gaveMkt, 1);
         var nowIn = gets.reduce(function (s, id) { return s + split(id).now; }, 0);
         var nowOut = gives.reduce(function (s, id) { return s + split(id).now; }, 0);
         var futIn = gets.reduce(function (s, id) { return s + split(id).future; }, 0);
         var futOut = gives.reduce(function (s, id) { return s + split(id).future; }, 0);
-        return { me: me, gets: gets, gives: gives, fitGain: gainOf(gotFit, gaveFit), mktGain: gainOf(gotMkt, gaveMkt),
-                 gotMkt: gotMkt, gaveMkt: gaveMkt, nowNet: nowIn - nowOut, futNet: futIn - futOut };
+        var impact = gets.filter(function (id) { return D.players[id]; }).map(function (id) {
+          return { id: id, slot: after.placed[id] || null };
+        });
+        var gain = (after.score - before.score) / moved;
+        return { me: me, gets: gets, gives: gives, fitGain: gain, mktGain: gainOf(gotMkt, gaveMkt),
+                 gotMkt: gotMkt, gaveMkt: gaveMkt, nowNet: nowIn - nowOut, futNet: futIn - futOut, impact: impact };
       }
       var va = view(a, bGives, aGives), vb = view(b, aGives, bGives);
       va.grade = letter(va.fitGain); vb.grade = letter(vb.fitGain);
-      var winWin = va.fitGain * 100 >= S.winWin && vb.fitGain * 100 >= S.winWin;
-      if (winWin) { va.grade = "A"; vb.grade = "A"; }
+      var winWin = va.grade === "A" && vb.grade === "A";
       return { a: va, b: vb, winWin: winWin };
     }
 
@@ -352,8 +403,12 @@
         if (t.window === "Contender" && v.nowNet < 0) ul.appendChild(el("li", "", "Gives up win-now value while contending."));
         if (t.window === "Rebuilder" && v.futNet > 0) ul.appendChild(el("li", "", "Adds long-term value, which fits a rebuild."));
         if (t.window === "Rebuilder" && v.futNet < 0) ul.appendChild(el("li", "", "Gives up long-term value while rebuilding."));
-        if (v.gets.length < v.gives.length && v.gets.length) ul.appendChild(el("li", "", "Consolidates " + v.gives.length + " assets into " + v.gets.length + ", which the stud tax rewards."));
-        if (v.gets.length > v.gives.length && v.gives.length) ul.appendChild(el("li", "", "Splits " + v.gives.length + " asset" + (v.gives.length === 1 ? "" : "s") + " into " + v.gets.length + ", which the stud tax penalizes."));
+        v.impact.forEach(function (im) {
+          var nm = D.players[im.id].name;
+          ul.appendChild(el("li", "", im.slot
+            ? nm + " would start at " + (im.slot === "SUPER_FLEX" ? "SFLEX" : im.slot) + ", so he adds full win-now value."
+            : nm + " would be a bench backup here, so he adds depth but limited win-now value."));
+        });
 
         var cats = {};
         v.gets.concat(v.gives).forEach(function (id) { cats[categoryOf(id)] = 1; });
