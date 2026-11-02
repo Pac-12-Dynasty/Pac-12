@@ -43,6 +43,11 @@
 
     .wide-select, .finder-controls select { font: inherit; padding: 0.5rem; border-radius: 6px; border: 1px solid #c5ccd6; }
     .wide-select { width: 100%; max-width: 480px; margin-bottom: 1rem; }
+    .search-wrap { position: relative; max-width: 480px; }
+    .matches { position: absolute; top: calc(100% - 0.9rem); left: 0; right: 0; background: #fff; border: 1px solid #c5ccd6; border-radius: 6px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); z-index: 5; max-height: 320px; overflow-y: auto; }
+    .matches button { display: flex; justify-content: space-between; gap: 0.5rem; width: 100%; text-align: left; font: inherit; background: none; border: none; border-bottom: 1px solid var(--line); padding: 0.5rem 0.7rem; cursor: pointer; }
+    .matches button:hover, .matches button.active { background: #fff8e1; }
+    .matches button span:last-child { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
     .finder-controls { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
     .finder-controls select { flex: 1 1 180px; }
     .finder-controls button, .load-btn { font: inherit; font-weight: 800; padding: 0.5rem 1rem; border: none; border-radius: 6px; background: var(--red); color: #fff; cursor: pointer; }
@@ -104,8 +109,11 @@
       </div>
       <div class="bar"><h2>Market Evaluation</h2></div>
       <div class="panel">
-        <p class="muted">Pick any player to see what he's worth on the market, what that buys, and which teams should value him most.</p>
-        <select id="market-player" class="wide-select"></select>
+        <p class="muted">Search for any player to see what he's worth, what that buys, which teams should value him most, and his trade history.</p>
+        <div class="search-wrap">
+          <input type="search" id="market-search" class="wide-select" placeholder="Search for a player" autocomplete="off">
+          <div id="market-matches" class="matches" hidden></div>
+        </div>
         <div id="market"></div>
       </div>
 
@@ -379,19 +387,60 @@
     }
 
     function setupMarket() {
-      var sel = document.getElementById("market-player");
-      var blank = el("option", "", "Choose a player"); blank.value = ""; sel.appendChild(blank);
-      Object.keys(D.teams).sort(function (x, y) { return D.teams[x].team.localeCompare(D.teams[y].team); }).forEach(function (uid) {
-        var group = document.createElement("optgroup");
-        group.label = D.teams[uid].team;
-        Object.keys(D.players).filter(function (id) { return D.players[id].owner === uid; })
-          .sort(function (x, y) { return marketValue(y) - marketValue(x); })
-          .forEach(function (id) {
-            var o = el("option", "", D.players[id].name + " · " + D.players[id].pos); o.value = id; group.appendChild(o);
-          });
-        sel.appendChild(group);
+      var input = document.getElementById("market-search");
+      var list = document.getElementById("market-matches");
+      var matches = [], active = 0;
+
+      function choose(id) {
+        var p = D.players[id];
+        input.value = p.name;
+        list.hidden = true;
+        drawMarket(id);
+      }
+      function show() {
+        var q = input.value.trim().toLowerCase();
+        list.innerHTML = "";
+        if (!q) { list.hidden = true; return; }
+        matches = Object.keys(D.players).filter(function (id) {
+          return D.players[id].name.toLowerCase().indexOf(q) !== -1;
+        }).sort(function (x, y) {
+          var a = D.players[x].name.toLowerCase().indexOf(q) === 0 ? 0 : 1;
+          var b = D.players[y].name.toLowerCase().indexOf(q) === 0 ? 0 : 1;
+          return (a - b) || (marketValue(y) - marketValue(x));
+        }).slice(0, 8);
+        active = 0;
+        if (!matches.length) {
+          list.appendChild(el("div", "muted", "No players on a league roster match that."));
+          list.firstChild.style.padding = "0.5rem 0.7rem";
+        }
+        matches.forEach(function (id, i) {
+          var p = D.players[id];
+          var b = el("button", i === 0 ? "active" : "");
+          b.type = "button";
+          b.appendChild(el("span", "", p.name + " · " + p.pos));
+          b.appendChild(el("span", "", D.teams[p.owner].team));
+          b.onmousedown = function (e) { e.preventDefault(); choose(id); };
+          list.appendChild(b);
+        });
+        list.hidden = false;
+      }
+      input.addEventListener("input", show);
+      input.addEventListener("focus", show);
+      input.addEventListener("blur", function () { list.hidden = true; });
+      input.addEventListener("keydown", function (e) {
+        var buttons = list.querySelectorAll("button");
+        if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+          e.preventDefault();
+          if (!buttons.length) return;
+          active = (active + (e.key === "ArrowDown" ? 1 : buttons.length - 1)) % buttons.length;
+          buttons.forEach(function (b, i) { b.classList.toggle("active", i === active); });
+        } else if (e.key === "Enter" && matches.length) {
+          e.preventDefault();
+          choose(matches[active]);
+        } else if (e.key === "Escape") {
+          list.hidden = true;
+        }
       });
-      sel.onchange = function () { drawMarket(sel.value); };
     }
 
     function drawMarket(id) {
@@ -458,29 +507,49 @@
 
       box.appendChild(cols);
 
-      // Past league trades for a similar player
-      var comps = el("div", "comps");
-      comps.appendChild(el("h3", "", "Similar league trades"));
-      var found = [];
+      // League trade history: trades that included this player, then similar trades
+      var hist = el("div", "comps");
+      function tradeLine(tr, sd, x) {
+        var other = tr.sides.filter(function (o) { return o !== sd; })[0];
+        var paid = (other ? other.gets : []).map(function (y) { return y.name + (y.was_value ? " (" + fmt(y.was_value) + ")" : ""); }).join(", ");
+        var team = (D.teams[sd.owner] || {}).team || "A team";
+        var line = el("p");
+        line.appendChild(document.createTextNode(tr.season + ": " + team + " got " + x.name +
+          (x.was_value ? " (" + fmt(x.was_value) + " then)" : "") + " for " + (paid || "nothing") + ". "));
+        if (tr.id) {
+          var a = el("a", "", "Full trade →");
+          a.href = "trades.html#trade-" + encodeURIComponent(tr.id);
+          line.appendChild(a);
+        }
+        return line;
+      }
+
+      hist.appendChild(el("h3", "", "Trades including " + p.name));
+      var involving = [];
+      (D.history || []).forEach(function (tr) {
+        tr.sides.forEach(function (sd) {
+          sd.gets.forEach(function (x) { if (x.id === id) involving.push({ tr: tr, sd: sd, x: x }); });
+        });
+      });
+      if (!involving.length) hist.appendChild(el("p", "muted", "He hasn't been traded in this league."));
+      involving.forEach(function (f) { hist.appendChild(tradeLine(f.tr, f.sd, f.x)); });
+
+      hist.appendChild(el("h3", "", "Similar trades"));
+      var similar = [];
       (D.history || []).forEach(function (tr) {
         tr.sides.forEach(function (sd) {
           sd.gets.forEach(function (x) {
-            if (x.pos !== p.pos || !x.was_value) return;
+            if (x.id === id || x.pos !== p.pos || !x.was_value) return;
             if (Math.abs(x.was_value - p.value) > p.value * 0.35) return;
-            var other = tr.sides.filter(function (o) { return o !== sd; })[0];
-            found.push({ tr: tr, sd: sd, x: x, other: other, diff: Math.abs(x.was_value - p.value) });
+            similar.push({ tr: tr, sd: sd, x: x, diff: Math.abs(x.was_value - p.value) });
           });
         });
       });
-      found.sort(function (a, b) { return a.diff - b.diff; });
-      if (!found.length) comps.appendChild(el("p", "muted", "No past league trades for a " + p.pos + " at this value yet."));
-      found.slice(0, 5).forEach(function (f) {
-        var paid = (f.other ? f.other.gets : []).map(function (x) { return x.name + (x.was_value ? " (" + fmt(x.was_value) + ")" : ""); }).join(", ");
-        var team = (D.teams[f.sd.owner] || {}).team || "A team";
-        comps.appendChild(el("p", "", f.tr.season + ": " + team + " got " + f.x.name + " (" + fmt(f.x.was_value) + " then) for " + (paid || "nothing")));
-      });
-      comps.appendChild(el("p", "muted", "Values in parentheses are market values at the time of each trade."));
-      box.appendChild(comps);
+      similar.sort(function (a, b) { return a.diff - b.diff; });
+      if (!similar.length) hist.appendChild(el("p", "muted", "No past league trades for a " + p.pos + " at this value yet."));
+      similar.slice(0, 5).forEach(function (f) { hist.appendChild(tradeLine(f.tr, f.sd, f.x)); });
+      hist.appendChild(el("p", "muted", "Values in parentheses are market values at the time of each trade."));
+      box.appendChild(hist);
     }
 
     // ---------- Trade finder ----------
