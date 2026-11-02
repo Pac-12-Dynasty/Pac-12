@@ -13,6 +13,8 @@ import re
 import urllib.request
 from datetime import datetime, timezone
 
+import valuation
+
 BASE_LEAGUE_ID = "1315706586127171584"
 API = "https://api.sleeper.app/v1"
 MAX_ROUND = 18
@@ -104,6 +106,12 @@ class PastValues:
                 rnd = int(rd.group(1) or rd.group(2))
                 picks.setdefault((int(yr.group(1)), rnd), []).append(v)
                 picks.setdefault((None, rnd), []).append(v)
+                slot = re.search(r"\d\.(\d\d)", name)
+                if slot:                                   # exact slot in the next draft
+                    picks[("slot", rnd, int(slot.group(1)))] = [v]
+                tier = re.search(r"(Early|Mid|Late)", name)
+                if tier:
+                    picks[("tier", int(yr.group(1)), tier.group(1), rnd)] = [v]
         except Exception:
             pass
         self.snapshots[sha] = (players, picks)
@@ -126,13 +134,34 @@ class PastValues:
         except Exception:
             return None
 
-    def pick(self, date_iso, season, rnd):
+    def players_at(self, date_iso):
+        try:
+            snap = self._at(date_iso)
+            return snap[0] if snap else {}
+        except Exception:
+            return {}
+
+    def pick(self, date_iso, season, rnd, standing=None, teams=12, next_draft=None):
+        """A pick's value on a past date. For the next draft, uses the original team's standing then,
+        including lottery odds; later drafts use that class's own early/mid/late or round value."""
         try:
             snap = self._at(date_iso)
             if not snap:
                 return None
-            vals = snap[1].get((season, rnd)) or snap[1].get((None, rnd))
-            return round(sum(vals) / len(vals)) if vals else None
+            vals = snap[1]
+            if standing and season == next_draft and vals.get(("slot", rnd, 1)):
+                odds = valuation.lottery_odds()
+                if standing in odds:
+                    return round(sum(c * (vals.get(("slot", rnd, k + 1)) or [0])[0] for k, c in enumerate(odds[standing])))
+                slot = teams - standing + 1
+                if vals.get(("slot", rnd, slot)):
+                    return round(vals[("slot", rnd, slot)][0])
+            if standing:
+                tier = "Early" if standing > teams * 2 / 3 else ("Late" if standing <= teams / 3 else "Mid")
+                if vals.get(("tier", season, tier, rnd)):
+                    return round(vals[("tier", season, tier, rnd)][0])
+            v = vals.get((season, rnd)) or vals.get((None, rnd))
+            return round(sum(v) / len(v)) if v else None
         except Exception:
             return None
 
@@ -251,6 +280,152 @@ class SleeperRanks:
         return self.ranked[key]
 
 
+GRADE_VERSION = 2
+
+
+class TradeContext:
+    """Looks up what each team looked like when a trade happened: rosters, standings, and draft timing."""
+
+    def __init__(self, seasons):
+        self.by_season = {int(l["season"]): l for l in seasons}
+        self.cache = {}
+
+    def _get(self, key, url, default):
+        if key not in self.cache:
+            try:
+                self.cache[key] = get(url)
+            except Exception:
+                self.cache[key] = default
+        return self.cache[key]
+
+    def matchups(self, lid, week):
+        return self._get(("m", lid, week), f"{API}/league/{lid}/matchups/{week}", []) or []
+
+    def final_standings(self, yr):
+        """roster_id -> standing (1 = best) at the end of a season, from Sleeper's records."""
+        league = self.by_season.get(yr)
+        if not league:
+            return {}
+        rosters = self._get(("r", league["league_id"]), f"{API}/league/{league['league_id']}/rosters", []) or []
+        def key(r):
+            st = r.get("settings") or {}
+            g = (st.get("wins") or 0) + (st.get("losses") or 0) + (st.get("ties") or 0)
+            pct = ((st.get("wins") or 0) + (st.get("ties") or 0) / 2) / g if g else 0
+            return (-pct, -((st.get("fpts") or 0) + (st.get("fpts_decimal") or 0) / 100))
+        return {r["roster_id"]: i + 1 for i, r in enumerate(sorted(rosters, key=key))}
+
+    def standings_through(self, lid, last_week):
+        """roster_id -> (standing, win pct, points for) through a given week."""
+        rec = {}
+        for wk in range(1, last_week + 1):
+            games = {}
+            for m in self.matchups(lid, wk):
+                if m.get("matchup_id") is not None:
+                    games.setdefault(m["matchup_id"], []).append(m)
+            for pair in games.values():
+                if len(pair) != 2:
+                    continue
+                for me, them in (pair, pair[::-1]):
+                    r = rec.setdefault(me["roster_id"], [0, 0, 0.0])
+                    a, b = me.get("points") or 0, them.get("points") or 0
+                    if a > b: r[0] += 1
+                    elif a < b: r[1] += 1
+                    r[2] += a
+        order = sorted(rec, key=lambda k: (-(rec[k][0] / max(rec[k][0] + rec[k][1], 1)), -rec[k][2]))
+        return {rid: (i + 1, rec[rid][0] / max(rec[rid][0] + rec[rid][1], 1), rec[rid][2]) for i, rid in enumerate(order)}
+
+    def draft_start(self, lid):
+        drafts = self._get(("d", lid), f"{API}/league/{lid}/drafts", []) or []
+        times = [d.get("start_time") for d in drafts if d.get("start_time")]
+        return min(times) if times else None
+
+
+def grade_trade(t, league, yr, week, created, roster_owner, ctx, past, ranks, every, scoring):
+    """Grades a trade for each team by how much it changed that team's lineup, depth, and future."""
+    lid = league["league_id"]
+    slots = [p for p in (league.get("roster_positions") or []) if p not in ("BN", "IR", "TAXI")]
+    date_iso = datetime.fromtimestamp(created / 1000, timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    values = past.players_at(date_iso)
+    if not values:
+        return None
+
+    # Draft timing: before this season's rookie draft, the next draft is this season's
+    start = ctx.draft_start(lid)
+    next_draft = yr if (start and created < start) else yr + 1
+    # Standings that decide pick order and each team's window at the time
+    if next_draft == yr or not week or week <= 1:
+        pick_order = ctx.final_standings(yr - 1) if next_draft == yr else {}
+        live = ctx.standings_through(lid, max(0, (week or 1) - 1))
+    else:
+        live = ctx.standings_through(lid, week - 1)
+        pick_order = {rid: v[0] for rid, v in live.items()}
+    teams_n = max(len(roster_owner), 1)
+
+    # Rosters right before the trade
+    roster_week = max(1, (week or 1) - 1)
+    rosters = {m["roster_id"]: set(m.get("players") or []) for m in ctx.matchups(lid, roster_week)}
+    if not rosters:
+        rosters = {m["roster_id"]: set(m.get("players") or []) for m in ctx.matchups(lid, 1)}
+    adds, drops = t.get("adds") or {}, t.get("drops") or {}
+    for pid, rid in drops.items():
+        rosters.setdefault(rid, set()).add(pid)
+    for pid, rid in adds.items():
+        rosters.setdefault(rid, set()).discard(pid)
+
+    # Production ranks at the time
+    if week and week > 1:
+        rank_table = ranks.through_week(yr, week - 1, scoring)
+    else:
+        rank_table = ranks.season_total(yr - 1, scoring)
+
+    when = datetime.fromtimestamp(created / 1000)
+
+    def asset(pid):
+        info = every.get(pid) or {}
+        age = None
+        try:
+            age = (when - datetime.strptime(info.get("birth_date"), "%Y-%m-%d")).days / 365.25
+        except Exception:
+            pass
+        v = values.get(pid) or 0
+        now, fut = valuation.split(v, info.get("pos") or "", age, (rank_table.get(pid) or (None,))[0])
+        return {"id": pid, "pos": info.get("pos") or "", "now": now, "fut": fut, "market": v, "name": info.get("name") or pid}
+
+    def window(rid):
+        if not live or rid not in live:
+            return "Middle"
+        pcts = sorted(v[1] for v in live.values())
+        pfs = sorted(v[2] for v in live.values())
+        n = max(len(pcts) - 1, 1)
+        score = 0.55 * pcts.index(live[rid][1]) / n + 0.45 * pfs.index(live[rid][2]) / n
+        return "Contender" if score >= 0.62 else ("Rebuilder" if score <= 0.38 else "Middle")
+
+    pick_assets = {}
+    for pk in t.get("draft_picks") or []:
+        season = int(pk.get("season"))
+        v = past.pick(date_iso, season, pk.get("round"), pick_order.get(pk.get("roster_id")), teams_n, next_draft) or 0
+        pick_assets.setdefault(pk["previous_owner_id"], []).append(
+            ({"id": f"{season}-{pk.get('round')}-{pk.get('roster_id')}", "now": 0, "fut": v, "market": v}, pk["owner_id"]))
+
+    results = {}
+    for rid in t.get("roster_ids") or []:
+        roster = [asset(pid) for pid in rosters.get(rid, set())]
+        gives = [asset(pid) for pid, to in adds.items() if drops.get(pid) == rid]
+        gets = [asset(pid) for pid, to in adds.items() if to == rid]
+        gives += [a for a, to in pick_assets.get(rid, [])]
+        gets += [a for frm, lst in pick_assets.items() for a, to in lst if to == rid]
+        if not gives and not gets:
+            continue
+        w = window(rid)
+        res = valuation.evaluate_side(roster, [a for a in gives if not a.get("pos")], gives, gets, slots, w)
+        names = {a["id"]: a.get("name") for a in gets}
+        res["impact"] = [{"name": names.get(i["id"]), "starts": i["starts"], "slot": i["slot"]} for i in res["impact"]]
+        res["window"] = w
+        res["unvalued"] = [a.get("name") for a in gives + gets if a.get("pos") and not a["market"]]
+        results[roster_owner.get(rid)] = res
+    return {"version": GRADE_VERSION, "teams": results}
+
+
 def main():
     state = get(f"{API}/state/nfl")
     seasons = all_seasons(current_league(BASE_LEAGUE_ID, state))
@@ -272,9 +447,12 @@ def main():
     # "Was" ranks never change, so reuse any already saved
     known = {}
     known_val = {}
+    known_grade = {}
     try:
         with open("data/trades.json") as f:
             for t in json.load(f).get("trades", []):
+                if (t.get("grades") or {}).get("version") == GRADE_VERSION:
+                    known_grade[t["id"]] = t["grades"]
                 for sd in t.get("sides", []):
                     for p in sd.get("players", []):
                         if p.get("was_basis"):
@@ -301,6 +479,7 @@ def main():
     trades = []
     moves = []      # every other transaction: waivers, free agents, commissioner moves
     past = PastValues()
+    ctx = TradeContext(seasons)
 
     for league in reversed(seasons):
         lid, yr = league["league_id"], int(league["season"])
@@ -390,7 +569,15 @@ def main():
                 for w in t.get("waiver_budget") or []:
                     side(w["receiver"])["faab"] += w.get("amount") or 0
 
+                grades = known_grade.get(tid)
+                if grades is None and created:
+                    try:
+                        grades = grade_trade(t, league, yr, week, created, roster_owner, ctx, past, ranks, every, scoring)
+                    except Exception as err:
+                        print(f"Couldn't grade trade {tid}: {err}")
+                        grades = None
                 trades.append({
+                    "grades": grades,
                     "id": t.get("transaction_id"),
                     "season": yr,
                     "week": week,
