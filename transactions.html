@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transactions | Pac 12 Dynasty</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root { --red: #c8102e; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; }
+    main.tx { max-width: 1000px; }
+    .bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 8px 8px 0 0; border-bottom: 4px solid var(--red); }
+    .bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+    .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .filters select { font: inherit; font-size: 0.9rem; padding: 0.3rem 0.5rem; border-radius: 6px; border: none; }
+    .types { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1rem; }
+    .types button { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: 999px; border: 1px solid #c5ccd6; background: #fff; cursor: pointer; }
+    .types button.active { background: var(--red); border-color: var(--red); color: #fff; }
+    .feed { background: #fff; padding: 1rem 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+
+    .trade, .move { border: 1px solid var(--line); border-radius: 8px; padding: 0.8rem 1rem; margin-bottom: 0.75rem; }
+    .trade { border-left: 5px solid var(--red); }
+    .move { border-left: 5px solid #13315c; }
+    .move.waiver { border-left-color: #b54708; }
+    .move.commissioner { border-left-color: #6b7280; }
+    .head { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
+    .move .head { color: #13315c; }
+    .move.waiver .head { color: #b54708; }
+    .move.commissioner .head { color: #6b7280; }
+    .sides { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .side h3 { margin: 0 0 0.4rem; font-size: 1rem; color: var(--ink); }
+    .side h3 span { color: var(--muted); font-weight: 600; font-size: 0.85rem; }
+    .side ul { list-style: none; margin: 0; padding: 0; }
+    .side li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.3rem 0; border-top: 1px solid var(--line); font-size: 0.95rem; }
+    .side li .tag { color: var(--muted); font-size: 0.82rem; white-space: nowrap; }
+    .move p { margin: 0.2rem 0; }
+    .add { color: #0f6e56; font-weight: 800; }
+    .drop { color: #b42318; font-weight: 800; }
+    .highlight { box-shadow: 0 0 0 3px #eebf3a; }
+    .more { display: block; margin: 0.5rem auto 0; font: inherit; font-weight: 800; padding: 0.5rem 1.2rem; border-radius: 6px; border: none; background: var(--ink); color: #fff; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Transactions</h1>
+    <p>Every trade, waiver claim, and free agent move in Pac 12 Dynasty history</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="standings.html">Standings</a>
+  </nav>
+  <main class="tx">
+    <div class="bar">
+      <h2>Transactions</h2>
+      <div class="filters">
+        <select id="team-filter"><option value="">All teams</option></select>
+        <select id="season-filter"><option value="">All seasons</option></select>
+      </div>
+    </div>
+    <div class="feed">
+      <div class="types" id="types"></div>
+      <p id="summary" class="muted">Loading transactions...</p>
+      <div id="list"></div>
+      <button type="button" class="more" id="more" hidden>Show more</button>
+      <p class="muted" id="rank-note">Trade ranks use Sleeper stats scored with this league's settings, like the game logs. "Was" is where a player ranked that season through the week before the trade (or his finish the season before, for offseason trades). "Now" is where he ranks this season so far. Position rank first, then overall rank among QBs, RBs, WRs, and TEs.</p>
+    </div>
+  </main>
+  <footer>Pac 12 Dynasty Fantasy Football League</footer>
+  <script src="auth.js"></script>
+  <script>
+    var TYPES = [["all", "All"], ["trade", "Trades"], ["waiver", "Waivers"], ["free_agent", "Free agents"], ["commissioner", "Commissioner"]];
+    var LABEL = { trade: "Trade", waiver: "Waiver claim", free_agent: "Free agent", commissioner: "Commissioner move" };
+    var owners = {}, items = [], type = "all", shownCount = 50, focus = linked();
+
+    function linked() {
+      var m = /^#(trade|move)-(.+)$/.exec(location.hash);
+      return m ? decodeURIComponent(m[2]) : null;
+    }
+    function el(tag, cls, text) {
+      var n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text != null) n.textContent = text;
+      return n;
+    }
+    function ordinal(n) {
+      var s = ["th", "st", "nd", "rd"], v = n % 100;
+      return n + (s[(v - 20) % 10] || s[v] || s[0]);
+    }
+    function team(uid) {
+      var o = owners[uid] || {};
+      return (o.team && o.team !== "Unknown" ? o.team : null) || o.name || "A former team";
+    }
+    function teamLink(uid) {
+      var a = el("a", "", team(uid));
+      a.href = "team-legacy.html?owner=" + encodeURIComponent(uid);
+      return a;
+    }
+    function when(x) {
+      var d = x.date ? new Date(x.date).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }) : "";
+      return x.season + " season · " + (x.week ? "Week " + x.week + " · " : "") + d;
+    }
+    function involves(x, uid) {
+      return x.kind === "trade" ? x.sides.some(function (s) { return s.owner === uid; }) : x.owner === uid;
+    }
+
+    function tradeCard(t) {
+      var card = el("article", "trade");
+      card.id = "trade-" + t.id;
+      card.appendChild(el("div", "head", "Trade · " + when(t)));
+      var sides = el("div", "sides");
+      t.sides.forEach(function (s) {
+        var col = el("div", "side");
+        var h = el("h3"); h.appendChild(teamLink(s.owner)); h.appendChild(el("span", "", " receives")); col.appendChild(h);
+        var ul = el("ul");
+        s.players.forEach(function (p) {
+          var li = el("li");
+          li.appendChild(el("span", "", p.name + (p.pos ? " (" + p.pos + ")" : "")));
+          var tags = [];
+          if (p.was_pos_rank) tags.push("Was " + p.was_pos_rank + (p.was_rank ? " · #" + p.was_rank : "") + " (" + p.was_basis + ")");
+          if (p.now_pos_rank) tags.push("Now " + p.now_pos_rank + (p.now_rank ? " · #" + p.now_rank : ""));
+          li.appendChild(el("span", "tag", tags.join(" → ")));
+          ul.appendChild(li);
+        });
+        s.picks.slice().sort(function (a, b) { return (a.season - b.season) || (a.round - b.round); }).forEach(function (pk) {
+          var li = el("li");
+          li.appendChild(el("span", "", pk.season + " " + ordinal(pk.round) + " Round Pick"));
+          li.appendChild(el("span", "tag", pk.original_owner && pk.original_owner !== s.owner ? "(" + team(pk.original_owner) + ")" : ""));
+          ul.appendChild(li);
+        });
+        if (s.faab) { var li = el("li"); li.appendChild(el("span", "", "$" + s.faab + " FAAB")); ul.appendChild(li); }
+        if (!ul.children.length) ul.appendChild(el("li", "muted", "Nothing"));
+        col.appendChild(ul);
+        sides.appendChild(col);
+      });
+      card.appendChild(sides);
+      return card;
+    }
+
+    function moveCard(m) {
+      var card = el("article", "move " + m.type);
+      card.id = "move-" + m.id;
+      card.appendChild(el("div", "head", (LABEL[m.type] || "Move") + " · " + when(m)));
+      var who = el("p"); who.appendChild(teamLink(m.owner)); card.appendChild(who);
+      if (m.adds.length) {
+        var a = el("p"); a.appendChild(el("span", "add", "Added: "));
+        a.appendChild(document.createTextNode(m.adds.map(function (p) { return p.name + (p.pos ? " (" + p.pos + ")" : ""); }).join(", ") +
+          (m.bid ? " · $" + m.bid + " FAAB" : "")));
+        card.appendChild(a);
+      }
+      if (m.drops.length) {
+        var d = el("p"); d.appendChild(el("span", "drop", "Dropped: "));
+        d.appendChild(document.createTextNode(m.drops.map(function (p) { return p.name + (p.pos ? " (" + p.pos + ")" : ""); }).join(", ")));
+        card.appendChild(d);
+      }
+      return card;
+    }
+
+    function drawTypes() {
+      var box = document.getElementById("types");
+      box.innerHTML = "";
+      TYPES.forEach(function (t) {
+        var b = el("button", t[0] === type ? "active" : "", t[1]);
+        b.type = "button";
+        b.onclick = function () { type = t[0]; shownCount = 50; drawTypes(); render(); };
+        box.appendChild(b);
+      });
+    }
+
+    function render() {
+      var tf = document.getElementById("team-filter").value;
+      var sf = document.getElementById("season-filter").value;
+      var list = document.getElementById("list");
+      var summary = document.getElementById("summary");
+      var more = document.getElementById("more");
+      list.innerHTML = "";
+      summary.innerHTML = "";
+      document.querySelector(".filters").style.visibility = focus ? "hidden" : "visible";
+      document.getElementById("types").style.display = focus ? "none" : "";
+
+      var shown;
+      if (focus) {
+        shown = items.filter(function (x) { return String(x.id) === String(focus); });
+        summary.appendChild(document.createTextNode(shown.length ? "Showing one transaction. " : "That transaction wasn't found. "));
+        var back = el("a", "", "Show all transactions");
+        back.href = "transactions.html";
+        back.onclick = function (e) { e.preventDefault(); history.pushState("", document.title, location.pathname); focus = null; render(); };
+        summary.appendChild(back);
+      } else {
+        shown = items.filter(function (x) {
+          return (type === "all" || x.kind === type) && (!sf || String(x.season) === sf) && (!tf || involves(x, tf));
+        });
+        var word = { all: "transaction", trade: "trade", waiver: "waiver claim", free_agent: "free agent move", commissioner: "commissioner move" }[type];
+        summary.textContent = shown.length + " " + word + (shown.length === 1 ? "" : "s") +
+          (tf ? " involving " + team(tf) : "") + (sf ? " in " + sf : "") + ".";
+      }
+
+      shown.slice(0, focus ? shown.length : shownCount).forEach(function (x) {
+        var card = x.kind === "trade" ? tradeCard(x) : moveCard(x);
+        if (focus) card.classList.add("highlight");
+        list.appendChild(card);
+      });
+      more.hidden = focus || shown.length <= shownCount;
+      more.textContent = "Show more (" + Math.max(0, shown.length - shownCount) + " left)";
+      document.getElementById("rank-note").hidden = !(focus ? shown.some(function (x) { return x.kind === "trade"; }) : (type === "all" || type === "trade"));
+      if (focus) window.scrollTo(0, 0);
+    }
+
+    Promise.all([
+      fetch("data/trades.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : { trades: [], owners: {} }; }),
+      fetch("data/transactions.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : { moves: [], owners: {} }; })
+    ]).then(function (res) {
+      owners = Object.assign({}, res[1].owners || {}, res[0].owners || {});
+      (res[0].trades || []).forEach(function (t) { t.kind = "trade"; items.push(t); });
+      (res[1].moves || []).forEach(function (m) { m.kind = m.type; items.push(m); });
+      items.sort(function (a, b) { return (b.date || "").localeCompare(a.date || ""); });
+      if (!items.length) {
+        document.getElementById("summary").textContent = "No transactions yet. They fill in after the Update player data workflow runs.";
+        return;
+      }
+
+      var tfSel = document.getElementById("team-filter");
+      Object.keys(owners).sort(function (a, b) { return team(a).localeCompare(team(b)); }).forEach(function (uid) {
+        var o = el("option", "", team(uid)); o.value = uid; tfSel.appendChild(o);
+      });
+      var sfSel = document.getElementById("season-filter");
+      Array.from(new Set(items.map(function (x) { return x.season; }))).sort().reverse().forEach(function (yr) {
+        var o = el("option", "", String(yr)); o.value = String(yr); sfSel.appendChild(o);
+      });
+      tfSel.addEventListener("change", function () { shownCount = 50; render(); });
+      sfSel.addEventListener("change", function () { shownCount = 50; render(); });
+      document.getElementById("more").onclick = function () { shownCount += 50; render(); };
+      window.addEventListener("hashchange", function () { focus = linked(); render(); });
+      drawTypes();
+      render();
+    }).catch(function (err) { document.getElementById("summary").textContent = "Couldn't load transactions: " + err.message; });
+  </script>
+</body>
+</html>
