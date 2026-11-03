@@ -1082,8 +1082,8 @@
  "12711": {
   "age": 25,
   "birth_date": "2001-08-04",
-  "injury": "Questionable",
-  "injury_part": "Undisclosed",
+  "injury": "IR",
+  "injury_part": "Groin",
   "name": "Tyler Loop",
   "pos": "K",
   "pos_rank": "",
@@ -1274,7 +1274,7 @@
  "13287": {
   "age": 21,
   "birth_date": "2005-05-31",
-  "injury": "Out",
+  "injury": "IR",
   "injury_part": "Ankle",
   "name": "Jeremiyah Love",
   "pos": "RB",
@@ -2126,8 +2126,8 @@
  "4454": {
   "age": 31,
   "birth_date": "1995-08-04",
-  "injury": "Out",
-  "injury_part": "Ankle",
+  "injury": "IR",
+  "injury_part": "Lower Leg",
   "name": "Kendrick Bourne",
   "pos": "WR",
   "pos_rank": "WR144",
