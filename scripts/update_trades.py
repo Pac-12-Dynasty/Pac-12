@@ -280,7 +280,7 @@ class SleeperRanks:
         return self.ranked[key]
 
 
-GRADE_VERSION = 4
+GRADE_VERSION = 5
 
 
 class TradeContext:
@@ -434,7 +434,8 @@ def grade_trade(t, league, yr, week, created, roster_owner, ctx, past, ranks, ev
         results[roster_owner.get(rid)] = res
     if len(results) == 2:
         (ua, ra), (ub, rb) = results.items()
-        ra["grade"], rb["grade"] = valuation.pair_grades(ra["net"], rb["net"])
+        (ra["grade"], ra["score"]), (rb["grade"], rb["score"]) = (valuation.team_grade(ra["net"], rb["net"]),
+                                                                   valuation.team_grade(rb["net"], ra["net"]))
         ra["gap"], rb["gap"] = ra["net"] - rb["net"], rb["net"] - ra["net"]
     return {"version": GRADE_VERSION, "teams": results, "pick_values": pick_values}
 
