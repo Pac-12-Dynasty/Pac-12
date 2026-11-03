@@ -188,7 +188,8 @@ def trade_grades(history, owner_names, teams):
 
     def describe(x):
         if "round" in x:
-            return f"{x['season']} Round {x['round']}"
+            orig = name(x.get("original_owner")) if x.get("original_owner") else None
+            return f"{x['season']} Round {x['round']}" + (f" ({orig})" if orig else "")
         return f"{x.get('name')} ({x.get('pos')})" if x.get("pos") else x.get("name") or "Unknown"
 
     stories = []
@@ -240,7 +241,13 @@ def compact_trades(history, owner_names=None):
         for sd in tr.get("sides", []):
             items = [{"id": p.get("id"), "name": p.get("name"), "pos": p.get("pos"), "was_value": p.get("was_value")}
                      for p in sd.get("players", [])]
-            items += [{"name": f"{pk['season']} Round {pk['round']}", "pos": "PICK", "round": pk["round"],
+            def orig_name(uid):
+                o = owner_names.get(uid) or {}
+                t = o.get("team") if o.get("team") not in (None, "Unknown") else None
+                return t or o.get("name")
+            items += [{"name": f"{pk.get('season')} Round {pk.get('round')}" +
+                               (f" ({orig_name(pk.get('original_owner'))})" if orig_name(pk.get("original_owner")) else ""),
+                       "pos": "PICK", "round": pk.get("round"),
                        "was_value": pk.get("was_value")} for pk in sd.get("picks", [])]
             if sd.get("faab"):
                 items.append({"name": f"${sd['faab']} FAAB", "pos": "FAAB", "was_value": None})
@@ -413,7 +420,35 @@ def main():
         # Older starting lineups lean contender, so younger lowers the score
         score = 0.45 * pct_rank(wins, t["win_pct"]) + 0.35 * pct_rank(pfs, t["pf"]) + 0.20 * (1 - age_score)
         t["contender_score"] = round(score, 2)
-        t["window"] = "Contender" if score >= 0.62 else ("Rebuilder" if score <= 0.38 else "Middle")
+
+    # Window: where each team stands in the playoff race (last season's finish before 3 games)
+    playoff_teams = (league.get("settings") or {}).get("playoff_teams") or 6
+    games_played = max([(r.get("settings") or {}).get("wins", 0) + (r.get("settings") or {}).get("losses", 0)
+                        + (r.get("settings") or {}).get("ties", 0) for r in rosters] or [0])
+    prev_final = {}
+    if games_played < 3 and league.get("previous_league_id"):
+        try:
+            prev = get(f"{API}/league/{league['previous_league_id']}/rosters")
+            prev_order = sorted(prev, key=lambda r: (
+                -(((r.get("settings") or {}).get("wins") or 0) / max(((r.get("settings") or {}).get("wins") or 0) + ((r.get("settings") or {}).get("losses") or 0), 1)),
+                -(((r.get("settings") or {}).get("fpts") or 0))))
+            prev_final = {r.get("owner_id"): i + 1 for i, r in enumerate(prev_order)}
+        except Exception:
+            prev_final = {}
+    wins_of = {}
+    for r in rosters:
+        st = r.get("settings") or {}
+        if r.get("owner_id"):
+            wins_of[r["owner_id"]] = (st.get("wins") or 0) + (st.get("ties") or 0) / 2
+    cutoff_uid = order[min(playoff_teams, len(order)) - 1] if order else None
+    for uid in order:
+        t = teams[uid]
+        if games_played >= 3 and cutoff_uid:
+            t["window"] = valuation.window_in_season(t["standing"], wins_of[cutoff_uid] - wins_of.get(uid, 0), playoff_teams)
+        elif uid in prev_final:
+            t["window"] = valuation.window_from_final(prev_final[uid], playoff_teams)
+        else:
+            t["window"] = "Middle"
 
     roster_owner = {t["roster_id"]: uid for uid, t in teams.items()}
 
