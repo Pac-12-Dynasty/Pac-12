@@ -191,7 +191,11 @@
       CATEGORIES.forEach(function (c) {
         var b = el("button", c === filter ? "active" : "", c);
         b.type = "button";
-        b.onclick = function () { filter = c; renderFront(); };
+        b.onclick = function () {
+          filter = c;
+          if (/^#section-/.test(location.hash)) history.replaceState("", document.title, location.pathname);
+          renderFront();
+        };
         tabs.appendChild(b);
       });
     }
@@ -252,9 +256,14 @@
       var box = el("article", "article");
       var back = el("button", "back", "← All news");
       back.type = "button";
-      back.onclick = function () { history.pushState("", document.title, location.pathname); route(); };
+      back.onclick = function () { history.pushState("", document.title, location.pathname); filter = "All"; route(); };
       box.appendChild(back);
-      box.appendChild(el("span", "kicker", post.category || "News"));
+      // The category label links back to that tab of the news page
+      var cat = post.category || "News";
+      var kick = el("a", "kicker", cat);
+      kick.href = "news.html#section-" + encodeURIComponent(cat);
+      kick.style.textDecoration = "none";
+      box.appendChild(kick);
       box.appendChild(el("h1", "", post.title));
       box.appendChild(el("div", "byline", byline(post)));
       box.appendChild(el("div", "body", post.body));
@@ -283,6 +292,12 @@
     }
 
     function route() {
+      // news.html#section-Trades opens the front page on that tab
+      var section = location.hash.match(/^#section-(.+)$/);
+      if (section) {
+        var c = decodeURIComponent(section[1]);
+        if (CATEGORIES.indexOf(c) !== -1) filter = c;
+      }
       var match = location.hash.match(/^#story-(.+)$/);
       var post = match && posts.concat(gradeStories).filter(function (p) { return String(p.id) === decodeURIComponent(match[1]); })[0];
       document.getElementById("front").hidden = !!post;
