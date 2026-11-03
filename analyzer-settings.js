@@ -1,7 +1,9 @@
 // Trade Analyzer settings. Change these numbers to tune how trades are graded.
 window.ANALYZER_SETTINGS = {
-  // Grades come from how far apart the two teams' gains are, in value points.
-  // At least "big" apart: A for the winner, F for the loser. At least "small": B and D. Closer: C and C.
+  // Each team's grade score = own * (how much better its team got) + gap * (how it did vs. the other side)
+  blend: { own: 0.75, gap: 0.25 },
+
+  // Score of at least "big" = A (at most -big = F); at least "small" = B (at most -small = D); otherwise C
   gradeGaps: { big: 2000, small: 1000 },
 
   // How much to trust this league's trade history (1 = fully, 0 = ignore it and use market values only)
