@@ -280,7 +280,7 @@ class SleeperRanks:
         return self.ranked[key]
 
 
-GRADE_VERSION = 3
+GRADE_VERSION = 4
 
 
 class TradeContext:
@@ -332,7 +332,9 @@ class TradeContext:
                     elif a < b: r[1] += 1
                     r[2] += a
         order = sorted(rec, key=lambda k: (-(rec[k][0] / max(rec[k][0] + rec[k][1], 1)), -rec[k][2]))
-        return {rid: (i + 1, rec[rid][0] / max(rec[rid][0] + rec[rid][1], 1), rec[rid][2]) for i, rid in enumerate(order)}
+        # (standing, win pct, points for, wins, games played)
+        return {rid: (i + 1, rec[rid][0] / max(rec[rid][0] + rec[rid][1], 1), rec[rid][2], rec[rid][0], rec[rid][0] + rec[rid][1])
+                for i, rid in enumerate(order)}
 
     def draft_start(self, lid):
         drafts = self._get(("d", lid), f"{API}/league/{lid}/drafts", []) or []
@@ -391,19 +393,26 @@ def grade_trade(t, league, yr, week, created, roster_owner, ctx, past, ranks, ev
         now, fut = valuation.split(v, info.get("pos") or "", age, (rank_table.get(pid) or (None,))[0])
         return {"id": pid, "pos": info.get("pos") or "", "now": now, "fut": fut, "market": v, "name": info.get("name") or pid}
 
+    playoff_teams = (league.get("settings") or {}).get("playoff_teams") or 6
+    last_final = ctx.final_standings(yr - 1)
+
     def window(rid):
-        if not live or rid not in live:
-            return "Middle"
-        pcts = sorted(v[1] for v in live.values())
-        pfs = sorted(v[2] for v in live.values())
-        n = max(len(pcts) - 1, 1)
-        score = 0.55 * pcts.index(live[rid][1]) / n + 0.45 * pfs.index(live[rid][2]) / n
-        return "Contender" if score >= 0.62 else ("Rebuilder" if score <= 0.38 else "Middle")
+        """Where the team stood in the playoff race when the trade happened."""
+        me = live.get(rid)
+        if me and me[4] >= 3:
+            cutoff = sorted(live.values(), key=lambda v: v[0])[min(playoff_teams, len(live)) - 1]
+            return valuation.window_in_season(me[0], cutoff[3] - me[3], playoff_teams)
+        if rid in last_final:
+            return valuation.window_from_final(last_final[rid], playoff_teams)
+        return "Middle"
 
     pick_assets = {}
+    pick_values = {}
     for pk in t.get("draft_picks") or []:
         season = int(pk.get("season"))
+        # Valued by the ORIGINAL owner's standing (roster_id is the team the pick started with)
         v = past.pick(date_iso, season, pk.get("round"), pick_order.get(pk.get("roster_id")), teams_n, next_draft) or 0
+        pick_values[f"{season}-{pk.get('round')}-{roster_owner.get(pk.get('roster_id'))}"] = round(v) if v else None
         pick_assets.setdefault(pk["previous_owner_id"], []).append(
             ({"id": f"{season}-{pk.get('round')}-{pk.get('roster_id')}", "now": 0, "fut": v, "market": v}, pk["owner_id"]))
 
@@ -427,7 +436,7 @@ def grade_trade(t, league, yr, week, created, roster_owner, ctx, past, ranks, ev
         (ua, ra), (ub, rb) = results.items()
         ra["grade"], rb["grade"] = valuation.pair_grades(ra["net"], rb["net"])
         ra["gap"], rb["gap"] = ra["net"] - rb["net"], rb["net"] - ra["net"]
-    return {"version": GRADE_VERSION, "teams": results}
+    return {"version": GRADE_VERSION, "teams": results, "pick_values": pick_values}
 
 
 def main():
@@ -464,7 +473,7 @@ def main():
                         if p.get("was_value") is not None:
                             known_val[(t["id"], p["id"])] = p["was_value"]
                     for pk in sd.get("picks", []):
-                        if pk.get("was_value") is not None:
+                        if pk.get("was_value") is not None and pk.get("value_basis") == "original_owner":
                             known_val[(t["id"], f"{pk['season']}-{pk['round']}-{pk.get('original_owner')}")] = pk["was_value"]
     except Exception:
         pass
@@ -580,6 +589,12 @@ def main():
                     except Exception as err:
                         print(f"Couldn't grade trade {tid}: {err}")
                         grades = None
+                pv = (grades or {}).get("pick_values") or {}
+                for sd in sides.values():
+                    for pk in sd["picks"]:
+                        k = f"{pk['season']}-{pk['round']}-{pk['original_owner']}"
+                        if k in pv:
+                            pk["was_value"], pk["value_basis"] = pv[k], "original_owner"
                 trades.append({
                     "grades": grades,
                     "id": t.get("transaction_id"),
