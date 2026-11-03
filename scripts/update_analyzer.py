@@ -176,18 +176,6 @@ def market_overview(history, owner_names, season, teams, movers):
     }
 
 
-# Grade cutoffs for league trades, matching analyzer-settings.js:
-# gain of at least A -> A, B -> B, C -> C (fair), D -> D, otherwise F (percent of value given)
-GRADE_CUTOFFS = {"A": 15, "B": 5, "C": -5, "D": -15}
-
-
-def letter(gain_pct):
-    for g in ("A", "B", "C", "D"):
-        if gain_pct >= GRADE_CUTOFFS[g]:
-            return g
-    return "F"
-
-
 def trade_grades(history, owner_names, teams):
     """Grades every league trade with market values from the week it happened."""
     def name(uid):
@@ -213,16 +201,17 @@ def trade_grades(history, owner_names, teams):
         totals = [combine([x.get("was_value") or 0 for x in g]) for g in gets]
         graded = all(t > 0 for t in totals)
         side_out = []
+        fallback = valuation.pair_grades(totals[0] - totals[1], totals[1] - totals[0]) if graded else (None, None)
         for i, sd in enumerate(sides):
             other = 1 - i
             got, gave = totals[i], totals[other]
-            gain = round((got - gave) / gave * 100) if graded and gave else None
+            gain = round(got - gave) if graded else None
             side_out.append({
                 "owner": sd.get("owner"), "team": name(sd.get("owner")),
                 "gets": [describe(x) + (f" · {round(x['was_value']):,}" if x.get("was_value") else "") for x in gets[i]]
                         + ([f"${sd['faab']} FAAB"] if sd.get("faab") else []),
                 "got": round(got), "gave": round(gave),
-                "gain": gain, "grade": letter(gain) if gain is not None else None,
+                "gain": gain, "grade": fallback[i],
             })
         situational = (tr.get("grades") or {}).get("teams") or {}
         if situational:
@@ -231,7 +220,7 @@ def trade_grades(history, owner_names, teams):
                 g = situational.get(so["owner"])
                 if not g:
                     continue
-                so.update({"grade": g["grade"], "gain": g["gain"], "window": g.get("window"),
+                so.update({"grade": g.get("grade"), "gain": g.get("net"), "window": g.get("window"),
                            "impact": g.get("impact", []), "gave": g.get("market_given", so["gave"]),
                            "got": g.get("market_got", so["got"])})
             unvalued = sorted({n for g in situational.values() for n in g.get("unvalued", []) if n})
