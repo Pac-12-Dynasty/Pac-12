@@ -112,7 +112,7 @@
           <p class="muted">Value is split into win-now and long-term based on age and position. Contenders weigh win-now value more, and rebuilders weigh long-term value more, so the same trade can grade differently for each team.</p>
           <p class="muted">Values are also adjusted by league history: past trades show whether this league pays more or less than market for each position and pick round, and that's blended in, more strongly the more trades there are to learn from.</p>
           <p class="muted">Most important, every trade is judged by what it does to each team. The analyzer builds each team's best starting lineup before and after the trade. A player only adds full win-now value if he'd start for that team; bench players count a little as depth. That's why trading from a surplus to fill a hole can be a good deal for both sides.</p>
-          <p class="muted">Each team's change in value is measured in points. The grade comes from how far apart the two teams' gains are: 2,000 or more apart is an A for the winner and an F for the loser, 1,000 or more is a B and a D, and anything closer is a C for both.</p>
+          <p class="muted">Each team's change in value is measured in points, and each team gets its own grade, mostly from how much better its team got, with a small part from how it did against the other side. A score of 2,000 or more is an A, 1,000 or more is a B, within 1,000 either way is a C, and below that is a D or F. Both teams can get an A when a trade helps both.</p>
         </details>
       </div>
       <div class="bar"><h2>Market Evaluation</h2></div>
@@ -149,7 +149,7 @@
   <script>
     // Defaults, used if analyzer-settings.js is missing or leaves something out
     var DEFAULTS = {
-      gradeGaps: { big: 2000, small: 1000 }, studPower: 1.25, leagueWeight: 1,
+      blend: { own: 0.75, gap: 0.25 }, gradeGaps: { big: 2000, small: 1000 }, studPower: 1.25, leagueWeight: 1,
       production: [{ upTo: 5, change: 0.10 }, { upTo: 12, change: 0.05 }, { upTo: 24, change: 0 }, { upTo: 36, change: -0.05 }, { upTo: 999, change: -0.10 }],
       injury: { Out: -0.08, IR: -0.08, PUP: -0.08, Sus: -0.05, Doubtful: -0.04 },
       ages: { QB: { peak: 26, cliff: 34 }, RB: { peak: 23, cliff: 28 }, WR: { peak: 24, cliff: 30 }, TE: { peak: 25, cliff: 31 } },
@@ -229,14 +229,17 @@
       return Math.pow(sum, 1 / p);
     }
 
-    // Grades for both teams from how far apart their gains are, in value points:
-    // 2,000+ apart = A and F, 1,000+ = B and D, closer = C and C
-    function pairGrades(netA, netB) {
+    // Each team's grade: mostly how much better its own team got, a little of how it did
+    // against the other side. Score of 2,000+ = A, 1,000+ = B, -1,000 to 1,000 = C, then D and F.
+    function teamGrade(netMe, netOther) {
+      var b = S.blend || { own: 0.75, gap: 0.25 };
       var gaps = S.gradeGaps || { big: 2000, small: 1000 };
-      var gap = netA - netB;
-      if (Math.abs(gap) >= gaps.big) return gap > 0 ? ["A", "F"] : ["F", "A"];
-      if (Math.abs(gap) >= gaps.small) return gap > 0 ? ["B", "D"] : ["D", "B"];
-      return ["C", "C"];
+      var score = b.own * netMe + b.gap * (netMe - netOther);
+      if (score >= gaps.big) return "A";
+      if (score >= gaps.small) return "B";
+      if (score > -gaps.small) return "C";
+      if (score > -gaps.big) return "D";
+      return "F";
     }
     function gainOf(got, gave) { return gave > 0 ? (got - gave) / gave : (got > 0 ? 1 : 0); }
 
@@ -368,8 +371,8 @@
                  gotMkt: gotMkt, gaveMkt: gaveMkt, nowNet: nowIn - nowOut, futNet: futIn - futOut, impact: impact };
       }
       var va = view(a, bGives, aGives), vb = view(b, aGives, bGives);
-      var g = pairGrades(va.net, vb.net);
-      va.grade = g[0]; vb.grade = g[1];
+      va.grade = teamGrade(va.net, vb.net);
+      vb.grade = teamGrade(vb.net, va.net);
       var winWin = va.net > 0 && vb.net > 0;     // both teams get better
       return { a: va, b: vb, winWin: winWin };
     }
@@ -393,7 +396,7 @@
         top.appendChild(el("div", "grade g-" + v.grade, v.grade));
         var head = el("div");
         head.appendChild(el("h3", "", t.team));
-        var words = { A: "Won the trade big", B: "Won the trade", C: "Even trade", D: "Lost the trade", F: "Lost the trade big" };
+        var words = { A: "Major upgrade", B: "Upgrade", C: "Neutral", D: "Setback", F: "Major setback" };
         head.appendChild(el("p", "summary", words[v.grade] + " · " + t.window));
         top.appendChild(head);
         card.appendChild(top);
