@@ -176,9 +176,6 @@
           lines.push("Not graded: one side has no market value from the time of the trade" +
             (g.unvalued.length ? " (" + g.unvalued.join(", ") + ")" : "") + ".");
         }
-        lines.push("", g.method === "team"
-          ? "How it's graded: by how much the trade changed each team at the time, using each team's best starting lineup before and after, its depth, its long-term value, and whether it was contending or rebuilding. Picks use the original team's standing then, including lottery odds, and that draft class's value. A is a steal or a strong deal for both teams, C is fair, and F is a massive overpay. Numbers next to each piece are market values at the time."
-          : "How it's graded: by market value from the week of the trade. A is a steal, C is fair, and F is a massive overpay. Numbers next to each piece are market values at the time.");
         return {
           id: "grade-" + g.trade_id, auto: true, category: "Trades", title: title, body: lines.join("\n"),
           author_name: "Trade Analyzer", created_at: g.date || new Date(0).toISOString(),
