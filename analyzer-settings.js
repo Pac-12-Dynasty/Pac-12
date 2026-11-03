@@ -33,8 +33,8 @@ window.ANALYZER_SETTINGS = {
 
   // How each team window weighs win-now value and long-term value
   window: {
-    Contender: { now: 1.15, future: 0.9 },
+    Contender: { now: 1.15, future: 0.75 },
     Middle: { now: 1, future: 1 },
-    Rebuilder: { now: 0.85, future: 1.15 }
+    Rebuilder: { now: 0.5, future: 1.15 }
   }
 };
