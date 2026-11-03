@@ -9,7 +9,11 @@ SETTINGS = {
     "injury": {"Out": -0.08, "IR": -0.08, "PUP": -0.08, "Sus": -0.05, "Doubtful": -0.04},
     # Value shifts from long term toward win now between "peak" and "cliff" ages
     "ages": {"QB": (26, 34), "RB": (23, 28), "WR": (24, 30), "TE": (25, 31)},
-    "window": {"Contender": (1.15, 0.9), "Middle": (1.0, 1.0), "Rebuilder": (0.85, 1.15)},
+    # How each team window weighs (win-now value, long-term value). A rebuilder's lineup
+    # getting better doesn't win it anything this year, so win-now counts at half.
+    "window": {"Contender": (1.15, 0.75), "Middle": (1.0, 1.0), "Rebuilder": (0.5, 1.15)},
+    # In the playoff race: within this many games of the last playoff spot
+    "hunt_games": 1.5,
     # Bench players count this much of their win-now value (depth and injury insurance)
     "depth_weight": 0.25,
     # Grades come from the difference between what each team gained, in value points:
@@ -33,6 +37,20 @@ def lottery_odds(balls=LOTTERY_BALLS):
         for slot, s in enumerate(order):
             odds[s][slot] += p
     return odds
+
+
+def window_in_season(standing, games_back, playoff_teams=6):
+    """Contender if in a playoff spot, Middle if within reach of one, Rebuilder if out of the race."""
+    if standing <= playoff_teams:
+        return "Contender"
+    return "Middle" if games_back <= SETTINGS["hunt_games"] else "Rebuilder"
+
+
+def window_from_final(standing, playoff_teams=6):
+    """Before games are played, last season's finish sets the window."""
+    if standing <= playoff_teams:
+        return "Contender"
+    return "Middle" if standing <= playoff_teams + 3 else "Rebuilder"
 
 
 def prod_change(pos_rank):
