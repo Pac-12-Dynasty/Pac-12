@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T10:43+00:00",
+ "generated": "2026-11-03T17:03+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
@@ -58,11 +58,10 @@
  "trades": [
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "861417814836256768": {
-      "gain": 67,
-      "grade": "A",
+      "net": 4370,
       "impact": [
        {
         "name": "Breece Hall",
@@ -73,11 +72,12 @@
       "market_given": 2185,
       "market_got": 6547,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 8203
      },
      "995982448825720832": {
-      "gain": -59,
-      "grade": "F",
+      "net": -3833,
       "impact": [
        {
         "name": "Isaiah Likely",
@@ -88,7 +88,9 @@
       "market_given": 6547,
       "market_got": 2185,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -8203
      }
     }
    },
@@ -152,11 +154,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "995982448825720832": {
-      "gain": 21,
-      "grade": "A",
+      "net": 1827,
       "impact": [
        {
         "name": "Rashee Rice",
@@ -172,11 +173,12 @@
       "market_given": 6067,
       "market_got": 8655,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 4101
      },
      "861422415547318272": {
-      "gain": -26,
-      "grade": "F",
+      "net": -2274,
       "impact": [
        {
         "name": "Trey McBride",
@@ -187,7 +189,9 @@
       "market_given": 8655,
       "market_got": 6067,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -4101
      }
     }
    },
@@ -270,11 +274,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "861417814836256768": {
-      "gain": 53,
-      "grade": "A",
+      "net": 242,
       "impact": [
        {
         "name": "Sam Darnold",
@@ -285,16 +288,19 @@
       "market_given": 11,
       "market_got": 459,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 538
      },
      "861422415547318272": {
-      "gain": -65,
-      "grade": "F",
+      "net": -296,
       "impact": [],
       "market_given": 459,
       "market_got": 11,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -538
      }
     }
    },
@@ -339,20 +345,20 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "915765963616985088": {
-      "gain": -40,
-      "grade": "F",
+      "net": -300,
       "impact": [],
       "market_given": 759,
       "market_got": 170,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -565
      },
      "861422415547318272": {
-      "gain": 35,
-      "grade": "A",
+      "net": 265,
       "impact": [
        {
         "name": "Josh Jacobs",
@@ -363,7 +369,9 @@
       "market_given": 170,
       "market_got": 759,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 565
      }
     }
    },
@@ -408,11 +416,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "745458998371008512": {
-      "gain": 42,
-      "grade": "A",
+      "net": 668,
       "impact": [
        {
         "name": "Bhayshul Tuten",
@@ -428,11 +435,12 @@
       "market_given": 953,
       "market_got": 1583,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "B",
+      "gap": 1336
      },
      "861422415547318272": {
-      "gain": -42,
-      "grade": "F",
+      "net": -668,
       "impact": [
        {
         "name": "Chris Bell",
@@ -453,7 +461,9 @@
       "market_given": 1583,
       "market_got": 953,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "D",
+      "gap": -1336
      }
     }
    },
@@ -554,11 +564,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "861421486488031232": {
-      "gain": 7,
-      "grade": "B",
+      "net": 506,
       "impact": [
        {
         "name": "Jonathon Brooks",
@@ -574,11 +583,12 @@
       "market_given": 6798,
       "market_got": 7512,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "B",
+      "gap": 1080
      },
      "861422415547318272": {
-      "gain": -8,
-      "grade": "D",
+      "net": -574,
       "impact": [
        {
         "name": "Omarion Hampton",
@@ -589,7 +599,9 @@
       "market_given": 7512,
       "market_got": 6798,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "D",
+      "gap": -1080
      }
     }
    },
@@ -665,25 +677,27 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "915765963616985088": {
-      "gain": 15,
-      "grade": "B",
+      "net": 8,
       "impact": [],
       "market_given": 46,
       "market_got": 54,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 16
      },
      "1416188424762720256": {
-      "gain": -15,
-      "grade": "D",
+      "net": -8,
       "impact": [],
       "market_given": 54,
       "market_got": 46,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -16
      }
     }
    },
@@ -728,25 +742,27 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "861421486488031232": {
-      "gain": 14,
-      "grade": "B",
+      "net": 410,
       "impact": [],
       "market_given": 2494,
       "market_got": 2904,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 820
      },
      "861422415547318272": {
-      "gain": -14,
-      "grade": "D",
+      "net": -410,
       "impact": [],
       "market_given": 2904,
       "market_got": 2494,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -820
      }
     }
    },
@@ -791,11 +807,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "745458998371008512": {
-      "gain": -11,
-      "grade": "D",
+      "net": -151,
       "impact": [
        {
         "name": "Stefon Diggs",
@@ -811,11 +826,12 @@
       "market_given": 1264,
       "market_got": 1385,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -406
      },
      "861421486488031232": {
-      "gain": 18,
-      "grade": "A",
+      "net": 255,
       "impact": [
        {
         "name": "Tony Pollard",
@@ -831,7 +847,9 @@
       "market_given": 1385,
       "market_got": 1264,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 406
      }
     }
    },
@@ -913,11 +931,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "909255939126161408": {
-      "gain": -29,
-      "grade": "F",
+      "net": -1454,
       "impact": [
        {
         "name": "Jaydon Blue",
@@ -933,11 +950,12 @@
       "market_given": 4966,
       "market_got": 3894,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -2421
      },
      "915765963616985088": {
-      "gain": 19,
-      "grade": "A",
+      "net": 967,
       "impact": [
        {
         "name": "Josh Jacobs",
@@ -948,7 +966,9 @@
       "market_given": 3894,
       "market_got": 4966,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 2421
      }
     }
    },
@@ -1031,11 +1051,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "858765508143628288": {
-      "gain": -21,
-      "grade": "F",
+      "net": -1457,
       "impact": [
        {
         "name": "Jonnu Smith",
@@ -1051,11 +1070,12 @@
       "market_given": 7061,
       "market_got": 6899,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -2924
      },
      "861422415547318272": {
-      "gain": 21,
-      "grade": "A",
+      "net": 1467,
       "impact": [
        {
         "name": "Luther Burden III",
@@ -1066,7 +1086,9 @@
       "market_given": 6899,
       "market_got": 7061,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 2924
      }
     }
    },
@@ -1136,11 +1158,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "861417814836256768": {
-      "gain": -30,
-      "grade": "F",
+      "net": -1551,
       "impact": [
        {
         "name": "Deebo Samuel Sr.",
@@ -1151,11 +1172,12 @@
       "market_given": 5098,
       "market_got": 2741,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -3623
      },
      "858765508143628288": {
-      "gain": 41,
-      "grade": "A",
+      "net": 2072,
       "impact": [
        {
         "name": "Jameson Williams",
@@ -1171,7 +1193,9 @@
       "market_given": 2741,
       "market_got": 5098,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 3623
      }
     }
    },
@@ -1241,11 +1265,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "908808510823997440": {
-      "gain": 6,
-      "grade": "B",
+      "net": 355,
       "impact": [
        {
         "name": "Ladd McConkey",
@@ -1256,11 +1279,12 @@
       "market_given": 5753,
       "market_got": 5719,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 710
      },
      "861422415547318272": {
-      "gain": -6,
-      "grade": "D",
+      "net": -355,
       "impact": [
        {
         "name": "Rashee Rice",
@@ -1271,7 +1295,9 @@
       "market_given": 5719,
       "market_got": 5753,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -710
      }
     }
    },
@@ -1329,11 +1355,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "915765963616985088": {
-      "gain": -12,
-      "grade": "D",
+      "net": -1897,
       "impact": [
        {
         "name": "Emeka Egbuka",
@@ -1349,11 +1374,12 @@
       "market_given": 15787,
       "market_got": 12174,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -4680
      },
      "853109226401288192": {
-      "gain": 18,
-      "grade": "A",
+      "net": 2783,
       "impact": [
        {
         "name": "Jared Goff",
@@ -1374,7 +1400,9 @@
       "market_given": 12174,
       "market_got": 15787,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 4680
      }
     }
    },
@@ -1505,25 +1533,27 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "909255939126161408": {
-      "gain": -39,
-      "grade": "F",
+      "net": -24,
       "impact": [],
       "market_given": 62,
       "market_got": 38,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -48
      },
      "861421486488031232": {
-      "gain": 39,
-      "grade": "A",
+      "net": 24,
       "impact": [],
       "market_given": 38,
       "market_got": 62,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 48
      }
     }
    },
@@ -1568,20 +1598,20 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "915765963616985088": {
-      "gain": -45,
-      "grade": "F",
+      "net": -334,
       "impact": [],
       "market_given": 745,
       "market_got": 299,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -668
      },
      "853109226401288192": {
-      "gain": 45,
-      "grade": "A",
+      "net": 334,
       "impact": [
        {
         "name": "J.J. McCarthy",
@@ -1592,7 +1622,9 @@
       "market_given": 299,
       "market_got": 745,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 668
      }
     }
    },
@@ -1637,20 +1669,20 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "861417814836256768": {
-      "gain": 15,
-      "grade": "A",
+      "net": 92,
       "impact": [],
       "market_given": 607,
       "market_got": 337,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 171
      },
      "858765508143628288": {
-      "gain": -13,
-      "grade": "D",
+      "net": -79,
       "impact": [
        {
         "name": "Najee Harris",
@@ -1661,7 +1693,9 @@
       "market_given": 337,
       "market_got": 607,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -171
      }
     }
    },
@@ -1712,11 +1746,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "858765508143628288": {
-      "gain": -12,
-      "grade": "D",
+      "net": -369,
       "impact": [
        {
         "name": "DK Metcalf",
@@ -1727,16 +1760,19 @@
       "market_given": 3101,
       "market_got": 3175,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "D",
+      "gap": -1017
      },
      "861422415547318272": {
-      "gain": 20,
-      "grade": "A",
+      "net": 648,
       "impact": [],
       "market_given": 3175,
       "market_got": 3101,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "B",
+      "gap": 1017
      }
     }
    },
@@ -1787,20 +1823,20 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "745458998371008512": {
-      "gain": -5,
-      "grade": "D",
+      "net": -157,
       "impact": [],
       "market_given": 3134,
       "market_got": 2874,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -341
      },
      "861422415547318272": {
-      "gain": 6,
-      "grade": "B",
+      "net": 184,
       "impact": [
        {
         "name": "Sam Darnold",
@@ -1811,7 +1847,9 @@
       "market_given": 2874,
       "market_got": 3134,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 341
      }
     }
    },
@@ -1863,11 +1901,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "858765508143628288": {
-      "gain": -85,
-      "grade": "F",
+      "net": -2434,
       "impact": [
        {
         "name": "Cooper Kupp",
@@ -1878,16 +1915,19 @@
       "market_given": 2874,
       "market_got": 834,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -4620
      },
      "731283214563422208": {
-      "gain": 76,
-      "grade": "A",
+      "net": 2186,
       "impact": [],
       "market_given": 834,
       "market_got": 2874,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 4620
      }
     }
    },
@@ -1945,11 +1985,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "858765508143628288": {
-      "gain": 7,
-      "grade": "B",
+      "net": 451,
       "impact": [
        {
         "name": "Romeo Doubs",
@@ -1960,16 +1999,19 @@
       "market_given": 5702,
       "market_got": 6295,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 902
      },
      "861422415547318272": {
-      "gain": -7,
-      "grade": "D",
+      "net": -451,
       "impact": [],
       "market_given": 6295,
       "market_got": 5702,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -902
      }
     }
    },
@@ -2039,11 +2081,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "858765508143628288": {
-      "gain": -39,
-      "grade": "F",
+      "net": -1506,
       "impact": [
        {
         "name": "David Montgomery",
@@ -2054,11 +2095,12 @@
       "market_given": 3868,
       "market_got": 2504,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -2792
      },
      "861421486488031232": {
-      "gain": 33,
-      "grade": "A",
+      "net": 1286,
       "impact": [
        {
         "name": "Nick Chubb",
@@ -2079,7 +2121,9 @@
       "market_given": 2504,
       "market_got": 3868,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 2792
      }
     }
    },
@@ -2161,11 +2205,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "731283214563422208": {
-      "gain": 26,
-      "grade": "A",
+      "net": 276,
       "impact": [
        {
         "name": "Javonte Williams",
@@ -2176,11 +2219,12 @@
       "market_given": 973,
       "market_got": 1048,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 322
      },
      "915765963616985088": {
-      "gain": -4,
-      "grade": "C",
+      "net": -46,
       "impact": [
        {
         "name": "Jared Goff",
@@ -2191,7 +2235,9 @@
       "market_given": 1048,
       "market_got": 973,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -322
      }
     }
    },
@@ -2262,11 +2308,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "861417814836256768": {
-      "gain": 38,
-      "grade": "A",
+      "net": 3306,
       "impact": [
        {
         "name": "Marvin Harrison Jr.",
@@ -2277,11 +2322,12 @@
       "market_given": 4981,
       "market_got": 8783,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 7030
      },
      "861422415547318272": {
-      "gain": -42,
-      "grade": "F",
+      "net": -3724,
       "impact": [
        {
         "name": "Jonathon Brooks",
@@ -2292,7 +2338,9 @@
       "market_given": 8783,
       "market_got": 4981,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -7030
      }
     }
    },
@@ -2350,20 +2398,20 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "909255939126161408": {
-      "gain": -20,
-      "grade": "F",
+      "net": -67,
       "impact": [],
       "market_given": 340,
       "market_got": 41,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -340
      },
      "861422415547318272": {
-      "gain": 80,
-      "grade": "A",
+      "net": 273,
       "impact": [
        {
         "name": "Zack Moss",
@@ -2374,7 +2422,9 @@
       "market_given": 41,
       "market_got": 340,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 340
      }
     }
    },
@@ -2419,11 +2469,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "909255939126161408": {
-      "gain": 73,
-      "grade": "A",
+      "net": 4573,
       "impact": [
        {
         "name": "Chris Olave",
@@ -2434,11 +2483,12 @@
       "market_given": 2031,
       "market_got": 6276,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 8010
      },
      "915765963616985088": {
-      "gain": -55,
-      "grade": "F",
+      "net": -3437,
       "impact": [
        {
         "name": "Brian Robinson Jr.",
@@ -2449,7 +2499,9 @@
       "market_given": 6276,
       "market_got": 2031,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -8010
      }
     }
    },
@@ -2500,20 +2552,20 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "731283214563422208": {
-      "gain": -63,
-      "grade": "F",
+      "net": -2162,
       "impact": [],
       "market_given": 3419,
       "market_got": 403,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -3851
      },
      "915765963616985088": {
-      "gain": 49,
-      "grade": "A",
+      "net": 1689,
       "impact": [
        {
         "name": "Derrick Henry",
@@ -2529,7 +2581,9 @@
       "market_given": 403,
       "market_got": 3419,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 3851
      }
     }
    },
@@ -2598,11 +2652,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "853109226401288192": {
-      "gain": 53,
-      "grade": "A",
+      "net": 1913,
       "impact": [
        {
         "name": "Joe Burrow",
@@ -2613,11 +2666,12 @@
       "market_given": 1610,
       "market_got": 3587,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 3826
      },
      "861422415547318272": {
-      "gain": -53,
-      "grade": "F",
+      "net": -1913,
       "impact": [
        {
         "name": "Jayden Daniels",
@@ -2628,7 +2682,9 @@
       "market_given": 3587,
       "market_got": 1610,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -3826
      }
     }
    },
@@ -2679,11 +2735,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "733192747346997248": {
-      "gain": -28,
-      "grade": "F",
+      "net": -3438,
       "impact": [
        {
         "name": "Christian McCaffrey",
@@ -2694,11 +2749,12 @@
       "market_given": 12358,
       "market_got": 8361,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -6223
      },
      "861422415547318272": {
-      "gain": 23,
-      "grade": "A",
+      "net": 2785,
       "impact": [
        {
         "name": "Ja'Marr Chase",
@@ -2709,7 +2765,9 @@
       "market_given": 8361,
       "market_got": 12358,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 6223
      }
     }
    },
@@ -2774,25 +2832,27 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "858765508143628288": {
-      "gain": 31,
-      "grade": "A",
+      "net": 1311,
       "impact": [],
       "market_given": 2884,
       "market_got": 4195,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 2622
      },
      "915765963616985088": {
-      "gain": -31,
-      "grade": "F",
+      "net": -1311,
       "impact": [],
       "market_given": 4195,
       "market_got": 2884,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -2622
      }
     }
    },
@@ -2849,11 +2909,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "858765508143628288": {
-      "gain": -51,
-      "grade": "F",
+      "net": -353,
       "impact": [
        {
         "name": "Raheem Mostert",
@@ -2864,16 +2923,19 @@
       "market_given": 641,
       "market_got": 688,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -472
      },
      "915765963616985088": {
-      "gain": 17,
-      "grade": "A",
+      "net": 119,
       "impact": [],
       "market_given": 688,
       "market_got": 641,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 472
      }
     }
    },
@@ -2930,11 +2992,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "908808510823997440": {
-      "gain": 67,
-      "grade": "A",
+      "net": 1679,
       "impact": [
        {
         "name": "Dameon Pierce",
@@ -2945,11 +3006,12 @@
       "market_given": 727,
       "market_got": 2507,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 3082
      },
      "909255939126161408": {
-      "gain": -56,
-      "grade": "F",
+      "net": -1403,
       "impact": [
        {
         "name": "Brock Purdy",
@@ -2960,7 +3022,9 @@
       "market_given": 2507,
       "market_got": 727,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -3082
      }
     }
    },
@@ -3018,11 +3082,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "861417814836256768": {
-      "gain": -36,
-      "grade": "F",
+      "net": -182,
       "impact": [
        {
         "name": "Adam Thielen",
@@ -3033,11 +3096,12 @@
       "market_given": 501,
       "market_got": 378,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -344
      },
      "908808510823997440": {
-      "gain": 32,
-      "grade": "A",
+      "net": 162,
       "impact": [
        {
         "name": "Jordan Love",
@@ -3048,7 +3112,9 @@
       "market_given": 378,
       "market_got": 501,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 344
      }
     }
    },
@@ -3119,11 +3185,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "861417814836256768": {
-      "gain": 1,
-      "grade": "C",
+      "net": 2,
       "impact": [
        {
         "name": "Brandin Cooks",
@@ -3134,11 +3199,12 @@
       "market_given": 43,
       "market_got": 250,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": -1
      },
      "915765963616985088": {
-      "gain": 1,
-      "grade": "C",
+      "net": 3,
       "impact": [
        {
         "name": "Kayshon Boutte",
@@ -3149,7 +3215,9 @@
       "market_given": 250,
       "market_got": 43,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "C",
+      "gap": 1
      }
     }
    },
@@ -3207,11 +3275,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "745458998371008512": {
-      "gain": 63,
-      "grade": "A",
+      "net": 1221,
       "impact": [
        {
         "name": "Joe Mixon",
@@ -3222,11 +3289,12 @@
       "market_given": 208,
       "market_got": 1938,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 2744
      },
      "915765963616985088": {
-      "gain": -79,
-      "grade": "F",
+      "net": -1523,
       "impact": [
        {
         "name": "Gus Edwards",
@@ -3237,7 +3305,9 @@
       "market_given": 1938,
       "market_got": 208,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -2744
      }
     }
    },
@@ -3295,11 +3365,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "745458998371008512": {
-      "gain": 68,
-      "grade": "A",
+      "net": 854,
       "impact": [
        {
         "name": "Gabe Davis",
@@ -3310,11 +3379,12 @@
       "market_given": 74,
       "market_got": 1260,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "B",
+      "gap": 1945
      },
      "909255939126161408": {
-      "gain": -87,
-      "grade": "F",
+      "net": -1091,
       "impact": [
        {
         "name": "Zack Moss",
@@ -3325,7 +3395,9 @@
       "market_given": 1260,
       "market_got": 74,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "D",
+      "gap": -1945
      }
     }
    },
@@ -3383,11 +3455,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "861417814836256768": {
-      "gain": 57,
-      "grade": "A",
+      "net": 1924,
       "impact": [
        {
         "name": "Najee Harris",
@@ -3403,11 +3474,12 @@
       "market_given": 752,
       "market_got": 3346,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 4262
      },
      "853109226401288192": {
-      "gain": -70,
-      "grade": "F",
+      "net": -2338,
       "impact": [
        {
         "name": "Jerome Ford",
@@ -3418,7 +3490,9 @@
       "market_given": 3346,
       "market_got": 752,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -4262
      }
     }
    },
@@ -3481,11 +3555,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "858765508143628288": {
-      "gain": 27,
-      "grade": "A",
+      "net": 597,
       "impact": [
        {
         "name": "Diontae Johnson",
@@ -3501,11 +3574,12 @@
       "market_given": 1361,
       "market_got": 2211,
       "window": "Middle",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "B",
+      "gap": 1079
      },
      "909255939126161408": {
-      "gain": -22,
-      "grade": "F",
+      "net": -482,
       "impact": [
        {
         "name": "Brian Robinson Jr.",
@@ -3516,7 +3590,9 @@
       "market_given": 2211,
       "market_got": 1361,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "D",
+      "gap": -1079
      }
     }
    },
@@ -3586,11 +3662,10 @@
   },
   {
    "grades": {
-    "version": 2,
+    "version": 3,
     "teams": {
      "745458998371008512": {
-      "gain": 62,
-      "grade": "A",
+      "net": 5488,
       "impact": [
        {
         "name": "A.J. Brown",
@@ -3601,11 +3676,12 @@
       "market_given": 3371,
       "market_got": 8824,
       "window": "Rebuilder",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "A",
+      "gap": 11287
      },
      "861421486488031232": {
-      "gain": -66,
-      "grade": "F",
+      "net": -5799,
       "impact": [
        {
         "name": "Michael Pittman Jr.",
@@ -3621,7 +3697,9 @@
       "market_given": 8824,
       "market_got": 3371,
       "window": "Contender",
-      "unvalued": []
+      "unvalued": [],
+      "grade": "F",
+      "gap": -11287
      }
     }
    },
