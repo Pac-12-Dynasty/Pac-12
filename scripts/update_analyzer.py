@@ -1,576 +1,870 @@
-# Builds data/analyzer.json for the Trade Analyzer page:
-#   - every rostered player with dynasty value, age, this season's rank, and injury
-#   - every team's draft picks for the next 3 drafts, with projected slot and value
-#   - each team's profile: contender to rebuilder score
-#   - each owner's trading tendencies from league trade history
-import csv
-import io
-import json
-import math
-import os
-import urllib.request
-from datetime import datetime, timezone
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trade Analyzer | Pac 12 Dynasty</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root { --red: #c8102e; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; }
+    main.analyzer { max-width: 1140px; }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .bar { background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 8px 8px 0 0; border-bottom: 4px solid var(--red); }
+    .bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+    .panel { background: #fff; padding: 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 1.5rem; }
 
-import valuation
+    .sides { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 760px) { .sides { grid-template-columns: 1fr; } }
+    .side select { width: 100%; font: inherit; font-weight: 700; padding: 0.5rem; border-radius: 6px; border: 1px solid #c5ccd6; margin-bottom: 0.4rem; }
+    .side .window { font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); margin-bottom: 0.6rem; }
+    .side h3 { margin: 0.75rem 0 0.35rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); }
+    .assets { max-height: 340px; overflow-y: auto; border: 1px solid var(--line); border-radius: 6px; }
+    .asset { display: flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--line); cursor: pointer; font-size: 0.92rem; }
+    .asset:last-child { border-bottom: none; }
+    .asset:hover { background: #fff8e1; }
+    .asset input { width: 18px; height: 18px; flex: none; }
+    .asset .name { flex: 1; }
+    .asset .sub { color: var(--muted); font-size: 0.8rem; }
+    .asset .val { font-weight: 700; white-space: nowrap; }
+    .asset.on { background: #fdf3d3; }
 
-BASE_LEAGUE_ID = "1315706586127171584"
-API = "https://api.sleeper.app/v1"
-DP = "https://raw.githubusercontent.com/dynastyprocess/data/master/files"
-ROUNDS = 4
+    .result { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 760px) { .result { grid-template-columns: 1fr; } }
+    .verdict { border: 1px solid var(--line); border-radius: 8px; padding: 1rem; }
+    .verdict .top { display: flex; align-items: center; gap: 1rem; }
+    .grade { width: 72px; height: 72px; flex: none; border-radius: 12px; display: grid; place-items: center; font-size: 2.4rem; font-weight: 900; color: #fff; }
+    .g-A { background: #0f6e56; } .g-B { background: #4c9a6a; } .g-C { background: #8a8f98; } .g-D { background: #d97706; } .g-F { background: #b42318; }
+    .verdict h3 { margin: 0; font-size: 1.1rem; color: var(--ink); }
+    .verdict .summary { margin: 0.2rem 0 0; font-weight: 700; }
+    .verdict ul { margin: 0.75rem 0 0; padding-left: 1.1rem; font-size: 0.92rem; }
+    .verdict li { margin: 0.3rem 0; }
+    .empty { color: var(--muted); padding: 1rem 0; }
+    details.how { margin-top: 1rem; }
 
-# Draft lottery for the 6 non-playoff teams. Seed = finish in the standings (12 = worst).
-# Balls per seed; they draw for picks 1 through 6, and every round uses the same order.
-LOTTERY_BALLS = {12: 35, 11: 27, 10: 20, 9: 10, 8: 6, 7: 3}
+    .wide-select, .finder-controls select { font: inherit; padding: 0.5rem; border-radius: 6px; border: 1px solid #c5ccd6; }
+    .wide-select { width: 100%; max-width: 480px; margin-bottom: 1rem; }
+    .search-wrap { position: relative; max-width: 480px; }
+    .matches { position: absolute; top: calc(100% - 0.9rem); left: 0; right: 0; background: #fff; border: 1px solid #c5ccd6; border-radius: 6px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); z-index: 5; max-height: 320px; overflow-y: auto; }
+    .matches button { display: flex; justify-content: space-between; gap: 0.5rem; width: 100%; text-align: left; font: inherit; background: none; border: none; border-bottom: 1px solid var(--line); padding: 0.5rem 0.7rem; cursor: pointer; }
+    .matches button:hover, .matches button.active { background: #fff8e1; }
+    .matches button span:last-child { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+    .finder-controls { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+    .finder-controls select { flex: 1 1 180px; }
+    .finder-controls button, .load-btn { font: inherit; font-weight: 800; padding: 0.5rem 1rem; border: none; border-radius: 6px; background: var(--red); color: #fff; cursor: pointer; }
+    .load-btn { padding: 0.35rem 0.8rem; font-size: 0.85rem; background: var(--ink); }
 
-# League market: how much this league has paid for each kind of asset compared to
-# market value, learned from past trades. SHRINK pulls small samples back toward
-# market (higher = trust league history less), and the result is capped at LIMITS.
-SHRINK = 4
-LIMITS = (0.8, 1.25)
-STUD_POWER = 1.25
+    .market-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; margin-bottom: 1rem; }
+    .stat { border: 1px solid var(--line); border-top: 4px solid var(--ink); border-radius: 8px; padding: 0.7rem; text-align: center; }
+    .stat .big { font-size: 1.35rem; font-weight: 900; color: var(--ink); }
+    .stat .label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .market-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+    .market-cols h3 { margin: 0 0 0.4rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); }
+    .market-cols ul { list-style: none; margin: 0; padding: 0; }
+    .market-cols li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.35rem 0; border-top: 1px solid var(--line); font-size: 0.92rem; }
+    .market-cols li span:last-child { color: var(--muted); white-space: nowrap; }
 
+    .offer { border: 1px solid var(--line); border-left: 5px solid var(--red); border-radius: 8px; padding: 0.8rem 1rem; margin-bottom: 0.75rem; }
+    .offer-top { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; }
+    .offer-grades { display: flex; gap: 0.5rem; align-items: center; font-weight: 700; font-size: 0.9rem; }
+    .mini { width: 34px; height: 34px; border-radius: 8px; display: grid; place-items: center; font-weight: 900; color: #fff; }
+    .offer p { margin: 0.4rem 0 0; font-size: 0.92rem; }
+    .ov-notes { margin: 0 0 1.25rem; padding-left: 1.1rem; }
+    .ov-notes li { margin: 0.35rem 0; }
+    .ov-table th, .ov-table td { white-space: nowrap; }
+    .up { color: #0f6e56; font-weight: 800; } .down { color: #b42318; font-weight: 800; }
+    .comps { margin-top: 1rem; }
+    .comps h3 { margin: 0 0 0.4rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); }
+    .comps p { margin: 0.3rem 0; font-size: 0.92rem; }
+    details.how summary { cursor: pointer; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Trade Analyzer</h1>
+    <p>Build a trade and see how it grades for both teams</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="standings.html">Standings</a>
+  </nav>
+  <main class="analyzer">
+    <p id="status" class="muted">Loading league data...</p>
 
-def category(asset):
-    if "round" in asset:
-        return "1st" if asset["round"] == 1 else ("2nd" if asset["round"] == 2 else "3rd+")
-    return asset.get("pos") or "?"
+    <div id="app" hidden>
+      <div class="bar"><h2>Market Overview</h2></div>
+      <div class="panel" id="overview"></div>
 
+      <div class="bar"><h2>Build a Trade</h2></div>
+      <div class="panel">
+        <div class="sides">
+          <div class="side" id="side-a"></div>
+          <div class="side" id="side-b"></div>
+        </div>
+      </div>
 
-def league_market(history):
-    """Learns, per asset type, whether this league pays above or below market value."""
-    def combine(vals):
-        return sum(max(v, 0) ** STUD_POWER for v in vals) ** (1 / STUD_POWER)
+      <div class="bar"><h2>Grades</h2></div>
+      <div class="panel">
+        <div id="result"><p class="empty">Pick two teams and check what each side sends to see the grades.</p></div>
+        <details class="how">
+          <summary>How grades work</summary>
+          <p class="muted">Each player starts from his DynastyProcess dynasty value, adjusted for how he's scoring in this league this season and any injury. Draft picks use DynastyProcess pick values, with next year's picks projected from the original team's current standing. Playoff teams pick 7 through 12 in reverse order of the standings. The six non-playoff teams go through the draft lottery, so their picks are valued as the average of every pick they could land, weighted by their lottery odds.</p>
+          <p class="muted">Value is split into win-now and long-term based on age and position. Contenders weigh win-now value more, and rebuilders weigh long-term value more, so the same trade can grade differently for each team.</p>
+          <p class="muted">Values are also adjusted by league history: past trades show whether this league pays more or less than market for each position and pick round, and that's blended in, more strongly the more trades there are to learn from.</p>
+          <p class="muted">Most important, every trade is judged by what it does to each team. The analyzer builds each team's best starting lineup before and after the trade. A player only adds full win-now value if he'd start for that team; bench players count a little as depth. That's why trading from a surplus to fill a hole can be a good deal for both sides.</p>
+          <p class="muted">Each team's change in value is measured in points, and each team gets its own grade, mostly from how much better its team got, with a small part from how it did against the other side. A score of 2,000 or more is an A, 1,000 or more is a B, within 1,000 either way is a C, and below that is a D or F. Both teams can get an A when a trade helps both.</p>
+        </details>
+      </div>
+      <div class="bar"><h2>Market Evaluation</h2></div>
+      <div class="panel">
+        <p class="muted">Search for any player to see what he's worth, what that buys, which teams should value him most, and his trade history.</p>
+        <div class="search-wrap">
+          <input type="search" id="market-search" class="wide-select" placeholder="Search for a player" autocomplete="off">
+          <div id="market-matches" class="matches" hidden></div>
+        </div>
+        <div id="market"></div>
+      </div>
 
-    sums = {}
-    for tr in history:
-        sides = tr.get("sides", [])
-        if len(sides) != 2:
-            continue
-        assets = [sd.get("players", []) + sd.get("picks", []) for sd in sides]
-        if any(not a for a in assets):
-            continue
-        if any(x.get("was_value") in (None, 0) for a in assets for x in a):
-            continue   # only trades where every piece has a market value
-        totals = [combine([x["was_value"] for x in a]) for a in assets]
-        for me, other in ((0, 1), (1, 0)):
-            # What this side paid relative to what it got; above 1 = paid over market
-            lr = math.log(totals[other] / totals[me])
-            got = sum(x["was_value"] for x in assets[me])
-            for x in assets[me]:
-                w = x["was_value"] / got
-                c = sums.setdefault(category(x), {"lr": 0.0, "w": 0.0, "trades": set()})
-                c["lr"] += w * lr
-                c["w"] += w
-                c["trades"].add(tr.get("id"))
-    out = {}
-    for cat, c in sums.items():
-        avg = c["lr"] / c["w"] if c["w"] else 0
-        factor = math.exp(avg * c["w"] / (c["w"] + SHRINK))
-        out[cat] = {"factor": round(min(LIMITS[1], max(LIMITS[0], factor)), 3), "trades": len(c["trades"])}
-    return out
+      <div class="bar"><h2>Trade Finder</h2></div>
+      <div class="panel">
+        <p class="muted">Finds trades where both teams come out ahead, using each team's window. Pick your team and whether you're selling or buying.</p>
+        <div class="finder-controls">
+          <select id="finder-team"></select>
+          <select id="finder-mode">
+            <option value="sell">Sell a player</option>
+            <option value="buy">Buy a player</option>
+          </select>
+          <select id="finder-player"></select>
+          <button type="button" id="finder-go">Find trades</button>
+        </div>
+        <div id="finder"></div>
+      </div>
 
+      <p class="muted" id="updated"></p>
+    </div>
+  </main>
+  <footer>Pac 12 Dynasty Fantasy Football League</footer>
+  <script src="auth.js"></script>
+  <script src="analyzer-settings.js"></script>
+  <script>
+    // Defaults, used if analyzer-settings.js is missing or leaves something out
+    var DEFAULTS = {
+      blend: { own: 0.75, gap: 0.25 }, gradeGaps: { big: 2000, small: 1000 }, studPower: 1.25, leagueWeight: 1,
+      production: [{ upTo: 5, change: 0.10 }, { upTo: 12, change: 0.05 }, { upTo: 24, change: 0 }, { upTo: 36, change: -0.05 }, { upTo: 999, change: -0.10 }],
+      injury: { Out: -0.08, IR: -0.08, PUP: -0.08, Sus: -0.05, Doubtful: -0.04 },
+      ages: { QB: { peak: 26, cliff: 34 }, RB: { peak: 23, cliff: 28 }, WR: { peak: 24, cliff: 30 }, TE: { peak: 25, cliff: 31 } },
+      window: { Contender: { now: 1.15, future: 0.75 }, Middle: { now: 1, future: 1 }, Rebuilder: { now: 0.5, future: 1.15 } }
+    };
+    var S = Object.assign({}, DEFAULTS, window.ANALYZER_SETTINGS || {});
+    if (!window.ANALYZER_SETTINGS) console.warn("analyzer-settings.js didn't load, so default settings are being used.");
+    var D;                       // analyzer data
+    var picked = { a: {}, b: {} };  // side -> asset id -> true
+    var teamOf = { a: null, b: null };
 
-def market_overview(history, owner_names, season, teams, movers):
-    """Patterns and trends in the league's trade market, rebuilt on every run."""
-    now = datetime.now(timezone.utc)
+    function el(tag, cls, text) {
+      var n = document.createElement(tag);
+      if (cls) n.className = cls;
+      if (text != null) n.textContent = text;
+      return n;
+    }
+    function fmt(v) { return Math.round(v).toLocaleString(); }
+    function pct(x) { return (x >= 0 ? "+" : "") + Math.round(x * 100) + "%"; }
 
-    def when(tr):
-        try:
-            return datetime.fromisoformat(tr["date"])
-        except Exception:
-            return None
+    // ---------- Valuing one asset ----------
+    function prodChange(posRank) {
+      var m = /(\d+)$/.exec(posRank || "");
+      if (!m) return 0;
+      var n = Number(m[1]);
+      for (var i = 0; i < S.production.length; i++) if (n <= S.production[i].upTo) return S.production[i].change;
+      return 0;
+    }
+    function nowShare(p) {
+      var a = S.ages[p.pos];
+      if (!a) return 0.9;              // kickers and defenses are all about now
+      if (!p.age) return 0.5;
+      var s = 0.25 + 0.6 * (p.age - a.peak) / (a.cliff - a.peak);
+      return Math.max(0.15, Math.min(0.9, s));
+    }
+    // ---------- League market: what this league has paid vs. market, from past trades ----------
+    function pickCategory(round) { return round === 1 ? "1st" : (round === 2 ? "2nd" : "3rd+"); }
+    function categoryOf(id) {
+      if (D.players[id]) return D.players[id].pos;
+      var pk = D.pickById[id];
+      return pk ? pickCategory(pk.round) : "?";
+    }
+    function leagueFactor(cat) {
+      var f = (D.league_market || {})[cat];
+      return f ? Math.pow(f.factor, S.leagueWeight) : 1;
+    }
+    function catLabel(cat) { return { "1st": "1st round picks", "2nd": "2nd round picks", "3rd+": "3rd round and later picks" }[cat] || cat + "s"; }
+    function leagueNote(cat) {
+      var f = (D.league_market || {})[cat];
+      if (!f || f.trades < 3 || Math.abs(f.factor - 1) < 0.04) return "";
+      var p = Math.round((f.factor - 1) * 100);
+      return catLabel(cat) + " have gone for " + Math.abs(p) + "% " + (p > 0 ? "over" : "under") + " market in this league (" + f.trades + " trades)";
+    }
 
-    def name(uid):
-        t = teams.get(uid) or {}
-        o = owner_names.get(uid) or {}
-        return t.get("team") or (o.get("team") if o.get("team") not in (None, "Unknown") else None) or o.get("name") or "A former team"
+    // Returns { now, future } market value for an asset id
+    function split(id) {
+      if (D.players[id]) {
+        var p = D.players[id];
+        var base = p.value * (1 + (S.injury[p.injury] || 0)) * leagueFactor(p.pos);
+        var share = nowShare(p);
+        return { now: base * share * (1 + prodChange(p.season_pos_rank)), future: base * (1 - share) };
+      }
+      var pk = D.pickById[id];
+      return { now: 0, future: pk ? pk.value * leagueFactor(pickCategory(pk.round)) : 0 };
+    }
+    function fitValue(id, uid) {
+      var w = S.window[(D.teams[uid] || {}).window] || S.window.Middle;
+      var sp = split(id);
+      return sp.now * w.now + sp.future * w.future;
+    }
+    function marketValue(id) { var sp = split(id); return sp.now + sp.future; }
 
-    def total(tr):
-        return sum((x.get("was_value") or 0) for sd in tr.get("sides", []) for x in sd.get("players", []) + sd.get("picks", []))
+    // "Stud tax": combine a package so one great asset beats several good ones
+    function combine(values) {
+      var p = S.studPower;
+      var sum = values.reduce(function (s, v) { return s + Math.pow(Math.max(v, 0), p); }, 0);
+      return Math.pow(sum, 1 / p);
+    }
 
-    this_season = [t for t in history if t.get("season") == season]
-    last_season = [t for t in history if t.get("season") == season - 1]
-    current_week = max([t.get("week") or 0 for t in this_season] or [0])
-    last_pace = [t for t in last_season if (t.get("week") or 0) <= current_week]
-    last_30 = [t for t in history if when(t) and (now - when(t)).days <= 30]
-    last_year = [t for t in history if when(t) and (now - when(t)).days <= 365]
+    // Each team's grade: mostly how much better its own team got, a little of how it did
+    // against the other side. Score of 2,000+ = A, 1,000+ = B, -1,000 to 1,000 = C, then D and F.
+    function teamGrade(netMe, netOther) {
+      var b = S.blend || { own: 0.75, gap: 0.25 };
+      var gaps = S.gradeGaps || { big: 2000, small: 1000 };
+      var score = b.own * netMe + b.gap * (netMe - netOther);
+      if (score >= gaps.big) return "A";
+      if (score >= gaps.small) return "B";
+      if (score > -gaps.small) return "C";
+      if (score > -gaps.big) return "D";
+      return "F";
+    }
+    function gainOf(got, gave) { return gave > 0 ? (got - gave) / gave : (got > 0 ? 1 : 0); }
 
-    # Most active traders this season
-    counts = {}
-    for t in this_season:
-        for sd in t.get("sides", []):
-            counts[sd.get("owner")] = counts.get(sd.get("owner"), 0) + 1
-    active = [{"owner": u, "team": name(u), "trades": c} for u, c in sorted(counts.items(), key=lambda kv: -kv[1])[:3]]
+    // ---------- Building each side ----------
+    function assetRow(side, id, title, sub, value) {
+      var row = el("label", "asset");
+      var box = el("input"); box.type = "checkbox"; box.checked = !!picked[side][id];
+      row.classList.toggle("on", box.checked);
+      box.onchange = function () {
+        if (box.checked) picked[side][id] = true; else delete picked[side][id];
+        row.classList.toggle("on", box.checked);
+        grade();
+      };
+      row.appendChild(box);
+      var name = el("span", "name", title);
+      if (sub) { name.appendChild(document.createElement("br")); name.appendChild(el("span", "sub", sub)); }
+      row.appendChild(name);
+      row.appendChild(el("span", "val", fmt(value)));
+      return row;
+    }
 
-    # What changed hands this season
-    flow = {}
-    for t in this_season:
-        for sd in t.get("sides", []):
-            for x in sd.get("players", []):
-                flow[x.get("pos") or "?"] = flow.get(x.get("pos") or "?", 0) + 1
-            for pk in sd.get("picks", []):
-                k = category(pk) + " round picks" if category(pk) != "3rd+" else "3rd round+ picks"
-                flow[k] = flow.get(k, 0) + 1
+    function drawSide(side) {
+      var box = document.getElementById("side-" + side);
+      box.innerHTML = "";
+      var select = el("select");
+      var blank = el("option", "", side === "a" ? "Choose Team A" : "Choose Team B"); blank.value = "";
+      select.appendChild(blank);
+      Object.keys(D.teams).sort(function (x, y) { return D.teams[x].team.localeCompare(D.teams[y].team); }).forEach(function (uid) {
+        var o = el("option", "", D.teams[uid].team); o.value = uid;
+        if (uid === teamOf[side]) o.selected = true;
+        select.appendChild(o);
+      });
+      select.onchange = function () {
+        teamOf[side] = select.value || null;
+        picked[side] = {};
+        drawSide(side);
+        grade();
+      };
+      box.appendChild(select);
+      var uid = teamOf[side];
+      if (!uid) { box.appendChild(el("p", "empty", "Pick a team to see its players and picks.")); return; }
+      var t = D.teams[uid];
+      box.appendChild(el("div", "window", t.window + " · " + t.record + " · #" + t.standing + " in standings"));
+      box.appendChild(el("h3", "", "Sends players"));
+      var list = el("div", "assets");
+      Object.keys(D.players).filter(function (id) { return D.players[id].owner === uid; })
+        .sort(function (x, y) { return marketValue(y) - marketValue(x); })
+        .forEach(function (id) {
+          var p = D.players[id];
+          var bits = [p.pos, p.nfl, p.age ? "Age " + p.age : "", p.season_pos_rank ? "This season " + p.season_pos_rank : "", p.injury].filter(Boolean);
+          list.appendChild(assetRow(side, id, p.name, bits.join(" · "), marketValue(id)));
+        });
+      box.appendChild(list);
+      box.appendChild(el("h3", "", "Sends picks"));
+      var plist = el("div", "assets");
+      D.picks.filter(function (pk) { return pk.owner === uid; })
+        .sort(function (x, y) { return (x.season - y.season) || (x.round - y.round) || (y.value - x.value); })
+        .forEach(function (pk) {
+          var from = pk.original_owner !== uid ? "From " + D.teams[pk.original_owner].team : "Own pick";
+          var cls = (D.classes || {})[pk.season];
+          var clsNote = cls && cls.label !== "Average" ? cls.label + " draft class" : "";
+          plist.appendChild(assetRow(side, pk.id, pk.label, [from, pk.note, clsNote].filter(Boolean).join(" · "), split(pk.id).future));
+        });
+      box.appendChild(plist);
+    }
 
-    # Price of a 1st round pick, this season vs. last
-    def first_price(trs):
-        vals = [pk["was_value"] for t in trs for sd in t.get("sides", []) for pk in sd.get("picks", [])
-                if pk.get("round") == 1 and pk.get("was_value")]
-        return {"avg": round(sum(vals) / len(vals)) if vals else None, "count": len(vals)}
+    // ---------- Grading ----------
+    // Grades a trade for both teams. aGives/bGives are lists of asset ids.
+    // ---------- Team situation: best lineup before and after a trade ----------
+    var FLEXES = { FLEX: ["RB", "WR", "TE"], WRRB_FLEX: ["RB", "WR"], REC_FLEX: ["WR", "TE"], SUPER_FLEX: ["QB", "RB", "WR", "TE"] };
+    function slotsList() { return (D.slots && D.slots.length) ? D.slots : ["QB", "RB", "RB", "WR", "WR", "TE", "FLEX", "FLEX", "K", "DEF"]; }
 
-    # League premium by asset type: all-time vs. the last 12 months
-    all_time = league_market(history)
-    recent = league_market(last_year)
-    premiums = []
-    for cat in ["QB", "RB", "WR", "TE", "1st", "2nd", "3rd+"]:
-        a, r = all_time.get(cat), recent.get(cat)
-        if a or r:
-            premiums.append({"cat": cat, "all_time": a, "recent": r})
+    function bestLineup(players) {
+      var pool = players.slice().sort(function (x, y) { return y.now - x.now; });
+      var used = {}, placed = {};
+      var slots = slotsList();
+      slots.filter(function (s) { return !FLEXES[s]; }).forEach(function (slot) {
+        for (var i = 0; i < pool.length; i++) {
+          if (!used[pool[i].id] && pool[i].pos === slot) { used[pool[i].id] = 1; placed[pool[i].id] = slot; break; }
+        }
+      });
+      slots.filter(function (s) { return FLEXES[s]; }).forEach(function (slot) {
+        for (var i = 0; i < pool.length; i++) {
+          if (!used[pool[i].id] && FLEXES[slot].indexOf(pool[i].pos) !== -1) { used[pool[i].id] = 1; placed[pool[i].id] = slot; break; }
+        }
+      });
+      return placed;
+    }
 
-    big = sorted([t for t in last_year if total(t) > 0], key=lambda t: -total(t))[:5]
-    biggest = [{"id": t.get("id"), "season": t.get("season"), "date": t.get("date"), "value": round(total(t)),
-                "teams": [name(sd.get("owner")) for sd in t.get("sides", [])]} for t in big]
+    // A team's strength: starters' win-now value + depth + long-term value, weighted by its window
+    function teamScore(uid, remove, add) {
+      var out = {};
+      remove.forEach(function (id) { out[id] = 1; });
+      var ids = Object.keys(D.players).filter(function (id) { return D.players[id].owner === uid && !out[id]; })
+        .concat(add.filter(function (id) { return D.players[id]; }));
+      var players = ids.map(function (id) { var sp = split(id); return { id: id, pos: D.players[id].pos, now: sp.now, fut: sp.future }; });
+      var pickIds = D.picks.filter(function (pk) { return pk.owner === uid && !out[pk.id]; }).map(function (pk) { return pk.id; })
+        .concat(add.filter(function (id) { return D.pickById[id]; }));
+      var placed = bestLineup(players);
+      var lineupNow = 0, backups = {};
+      players.slice().sort(function (x, y) { return y.now - x.now; }).forEach(function (p) {
+        if (placed[p.id]) lineupNow += p.now;
+        else if (["QB", "RB", "WR", "TE"].indexOf(p.pos) !== -1 && backups[p.pos] == null) backups[p.pos] = p.now;
+      });
+      var depth = ((D.valuation || {}).depth_weight || 0.25) * Object.keys(backups).reduce(function (s, k) { return s + backups[k]; }, 0);
+      var future = players.reduce(function (s, p) { return s + p.fut; }, 0) +
+        pickIds.reduce(function (s, id) { return s + split(id).future; }, 0);
+      var w = S.window[(D.teams[uid] || {}).window] || S.window.Middle;
+      return { score: w.now * (lineupNow + depth) + w.future * future, placed: placed };
+    }
 
-    # Plain-English market notes
-    notes = []
-    if this_season or last_pace:
-        diff = len(this_season) - len(last_pace)
-        trend = "up" if diff > 0 else ("down" if diff < 0 else "even")
-        notes.append(f"Trade activity is {trend}: {len(this_season)} trades this season vs. {len(last_pace)} "
-                     f"at this point last season.")
-    labels = {"1st": "1st round picks", "2nd": "2nd round picks", "3rd+": "3rd round and later picks"}
-    for pr in premiums:
-        r, a = pr["recent"], pr["all_time"]
-        if r and r["trades"] >= 3 and abs(r["factor"] - 1) >= 0.05:
-            pct = round((r["factor"] - 1) * 100)
-            lab = labels.get(pr["cat"], pr["cat"] + "s")
-            line = f"{lab} are going for {abs(pct)}% {'over' if pct > 0 else 'under'} market over the last year"
-            if a and abs(r["factor"] - a["factor"]) >= 0.05:
-                line += f", {'up' if r['factor'] > a['factor'] else 'down'} from {round((a['factor'] - 1) * 100):+d}% all-time"
-            notes.append(line + ".")
-    fp_now, fp_last = first_price(this_season), first_price(last_season)
-    if fp_now["avg"] and fp_last["avg"]:
-        change = round((fp_now["avg"] - fp_last["avg"]) / fp_last["avg"] * 100)
-        if abs(change) >= 10:
-            notes.append(f"The average 1st round pick traded this season was worth {fp_now['avg']:,}, "
-                         f"{abs(change)}% {'more' if change > 0 else 'less'} than last season.")
-    if active:
-        notes.append(f"Most active trader this season: {active[0]['team']} ({active[0]['trades']} trade"
-                     f"{'' if active[0]['trades'] == 1 else 's'}).")
-    if flow:
-        top = max(flow.items(), key=lambda kv: kv[1])
-        notes.append(f"Most traded this season: {top[0] if 'pick' in top[0] else top[0] + 's'} ({top[1]} moved).")
-    if movers.get("risers"):
-        m = movers["risers"][0]
-        notes.append(f"Biggest riser over the last 4 weeks: {m['name']} (+{m['change']:,}).")
-    if movers.get("fallers"):
-        m = movers["fallers"][0]
-        notes.append(f"Biggest faller over the last 4 weeks: {m['name']} ({m['change']:,}).")
+    // Grades a trade for both teams by how much better (or worse) each team gets
+    function evaluate(a, aGives, b, bGives) {
+      function view(me, gets, gives) {
+        var before = teamScore(me, [], []);
+        var after = teamScore(me, gives, gets);
+        var gotMkt = gets.reduce(function (s, id) { return s + marketValue(id); }, 0);
+        var gaveMkt = gives.reduce(function (s, id) { return s + marketValue(id); }, 0);
+        var moved = Math.max(gotMkt, gaveMkt, 1);
+        var nowIn = gets.reduce(function (s, id) { return s + split(id).now; }, 0);
+        var nowOut = gives.reduce(function (s, id) { return s + split(id).now; }, 0);
+        var futIn = gets.reduce(function (s, id) { return s + split(id).future; }, 0);
+        var futOut = gives.reduce(function (s, id) { return s + split(id).future; }, 0);
+        var impact = gets.filter(function (id) { return D.players[id]; }).map(function (id) {
+          return { id: id, slot: after.placed[id] || null };
+        });
+        var net = after.score - before.score;
+        return { me: me, gets: gets, gives: gives, net: net, mktGain: gainOf(gotMkt, gaveMkt),
+                 gotMkt: gotMkt, gaveMkt: gaveMkt, nowNet: nowIn - nowOut, futNet: futIn - futOut, impact: impact };
+      }
+      var va = view(a, bGives, aGives), vb = view(b, aGives, bGives);
+      va.grade = teamGrade(va.net, vb.net);
+      vb.grade = teamGrade(vb.net, va.net);
+      var winWin = va.net > 0 && vb.net > 0;     // both teams get better
+      return { a: va, b: vb, winWin: winWin };
+    }
 
-    return {
-        "season": season,
-        "counts": {"this_season": len(this_season), "last_season_same_point": len(last_pace),
-                   "last_season": len(last_season), "last_30_days": len(last_30), "all_time": len(history)},
-        "active": active, "flow": flow, "first_price": {"this_season": fp_now, "last_season": fp_last},
-        "premiums": premiums, "biggest": biggest, "movers": movers, "notes": notes,
+    function grade() {
+      var out = document.getElementById("result");
+      out.innerHTML = "";
+      var a = teamOf.a, b = teamOf.b;
+      var aGives = Object.keys(picked.a), bGives = Object.keys(picked.b);
+      if (!a || !b) { out.appendChild(el("p", "empty", "Pick two teams to start.")); return; }
+      if (a === b) { out.appendChild(el("p", "empty", "Pick two different teams.")); return; }
+      if (!aGives.length && !bGives.length) { out.appendChild(el("p", "empty", "Check what each team sends to see the grades.")); return; }
+
+      var ev = evaluate(a, aGives, b, bGives), va = ev.a, vb = ev.b, winWin = ev.winWin;
+
+      var wrap = el("div", "result");
+      [va, vb].forEach(function (v) {
+        var t = D.teams[v.me];
+        var card = el("div", "verdict");
+        var top = el("div", "top");
+        top.appendChild(el("div", "grade g-" + v.grade, v.grade));
+        var head = el("div");
+        head.appendChild(el("h3", "", t.team));
+        var words = { A: "Major upgrade", B: "Upgrade", C: "Neutral", D: "Setback", F: "Major setback" };
+        head.appendChild(el("p", "summary", words[v.grade] + " · " + t.window));
+        top.appendChild(head);
+        card.appendChild(top);
+
+        var ul = el("ul");
+        ul.appendChild(el("li", "", "Team value: " + (v.net >= 0 ? "+" : "") + fmt(v.net) + (winWin ? ". Both teams get better from this trade." : ".")));
+        ul.appendChild(el("li", "", "Market value: gives " + fmt(v.gaveMkt) + ", gets " + fmt(v.gotMkt) + "."));
+        ul.appendChild(el("li", "", "Win now: " + (v.nowNet >= 0 ? "+" : "") + fmt(v.nowNet) + " · Long term: " + (v.futNet >= 0 ? "+" : "") + fmt(v.futNet) + "."));
+        if (t.window === "Contender" && v.nowNet > 0) ul.appendChild(el("li", "", "Adds win-now value, which fits a contender."));
+        if (t.window === "Contender" && v.nowNet < 0) ul.appendChild(el("li", "", "Gives up win-now value while contending."));
+        if (t.window === "Rebuilder" && v.futNet > 0) ul.appendChild(el("li", "", "Adds long-term value, which fits a rebuild."));
+        if (t.window === "Rebuilder" && v.futNet < 0) ul.appendChild(el("li", "", "Gives up long-term value while rebuilding."));
+        v.impact.forEach(function (im) {
+          var nm = D.players[im.id].name;
+          ul.appendChild(el("li", "", im.slot
+            ? nm + " would start at " + (im.slot === "SUPER_FLEX" ? "SFLEX" : im.slot) + ", so he adds full win-now value."
+            : nm + " would be a bench backup here, so he adds depth but limited win-now value."));
+        });
+
+        var cats = {};
+        v.gets.concat(v.gives).forEach(function (id) { cats[categoryOf(id)] = 1; });
+        var notes = Object.keys(cats).map(leagueNote).filter(Boolean);
+        if (notes.length) ul.appendChild(el("li", "", "League history: " + notes.join("; ") + "."));
+
+        var td = (D.tendencies || {})[v.me];
+        if (td && td.trades) {
+          var bits = [];
+          var posIn = {};
+          v.gets.forEach(function (id) { if (D.players[id]) posIn[D.players[id].pos] = 1; });
+          Object.keys(posIn).forEach(function (pos) {
+            if (td.pos_in[pos]) bits.push("has traded for " + td.pos_in[pos] + " " + pos + (td.pos_in[pos] === 1 ? "" : "s") + " before");
+          });
+          if (td.picks_out > td.picks_in + 1) bits.push("usually sells picks (" + td.picks_out + " out, " + td.picks_in + " in)");
+          if (td.picks_in > td.picks_out + 1) bits.push("usually collects picks (" + td.picks_in + " in, " + td.picks_out + " out)");
+          if (bits.length) ul.appendChild(el("li", "", "Owner history: " + bits.join("; ") + "."));
+        }
+        card.appendChild(ul);
+        wrap.appendChild(card);
+      });
+      out.appendChild(wrap);
     }
 
 
-def trade_grades(history, owner_names, teams):
-    """Grades every league trade with market values from the week it happened."""
-    def name(uid):
-        t = teams.get(uid) or {}
-        o = owner_names.get(uid) or {}
-        return t.get("team") or (o.get("team") if o.get("team") not in (None, "Unknown") else None) or o.get("name") or "A former team"
+    // ---------- Market evaluation ----------
+    function tierOf(v) {
+      if (v >= 7000) return "Elite";
+      if (v >= 4000) return "Starter";
+      if (v >= 1500) return "Flex";
+      return "Depth";
+    }
 
-    def combine(vals):
-        return sum(max(v, 0) ** STUD_POWER for v in vals) ** (1 / STUD_POWER)
+    function assetName(id) {
+      if (D.players[id]) return D.players[id].name + " (" + D.players[id].pos + ")";
+      var pk = D.pickById[id];
+      return pk ? pk.label + (pk.original_owner !== pk.owner ? " (from " + D.teams[pk.original_owner].team + ")" : "") : id;
+    }
 
-    def describe(x):
-        if "round" in x:
-            orig = name(x.get("original_owner")) if x.get("original_owner") else None
-            return f"{x['season']} Round {x['round']}" + (f" ({orig})" if orig else "")
-        return f"{x.get('name')} ({x.get('pos')})" if x.get("pos") else x.get("name") or "Unknown"
+    function setupMarket() {
+      var input = document.getElementById("market-search");
+      var list = document.getElementById("market-matches");
+      var matches = [], active = 0;
 
-    stories = []
-    for tr in history:
-        sides = tr.get("sides", [])
-        if len(sides) != 2:
-            continue
-        gets = [sd.get("players", []) + sd.get("picks", []) for sd in sides]
-        unvalued = [describe(x) for g in gets for x in g if not x.get("was_value")]
-        totals = [combine([x.get("was_value") or 0 for x in g]) for g in gets]
-        graded = all(t > 0 for t in totals)
-        side_out = []
-        fallback = valuation.pair_grades(totals[0] - totals[1], totals[1] - totals[0]) if graded else (None, None)
-        for i, sd in enumerate(sides):
-            other = 1 - i
-            got, gave = totals[i], totals[other]
-            gain = round(got - gave) if graded else None
-            side_out.append({
-                "owner": sd.get("owner"), "team": name(sd.get("owner")),
-                "gets": [describe(x) + (f" · {round(x['was_value']):,}" if x.get("was_value") else "") for x in gets[i]]
-                        + ([f"${sd['faab']} FAAB"] if sd.get("faab") else []),
-                "got": round(got), "gave": round(gave),
-                "gain": gain, "grade": fallback[i],
-            })
-        situational = (tr.get("grades") or {}).get("teams") or {}
-        if situational:
-            graded = all(sd.get("owner") in situational for sd in sides)
-            for so in side_out:
-                g = situational.get(so["owner"])
-                if not g:
-                    continue
-                so.update({"grade": g.get("grade"), "gain": g.get("net"), "window": g.get("window"),
-                           "impact": g.get("impact", []), "gave": g.get("market_given", so["gave"]),
-                           "got": g.get("market_got", so["got"])})
-            unvalued = sorted({n for g in situational.values() for n in g.get("unvalued", []) if n})
-        stories.append({"trade_id": tr.get("id"), "date": tr.get("date"), "season": tr.get("season"),
-                        "week": tr.get("week"), "graded": graded, "unvalued": unvalued, "sides": side_out,
-                        "method": "team" if situational else "value"})
-    stories.sort(key=lambda s: s["date"] or "", reverse=True)
-    return stories
-
-
-def compact_trades(history, owner_names=None):
-    """Past trades with market values at the time, for showing comparable deals."""
-    owner_names = owner_names or {}
-    out = []
-    for tr in history:
-        sides = []
-        for sd in tr.get("sides", []):
-            items = [{"id": p.get("id"), "name": p.get("name"), "pos": p.get("pos"), "was_value": p.get("was_value")}
-                     for p in sd.get("players", [])]
-            def orig_name(uid):
-                o = owner_names.get(uid) or {}
-                t = o.get("team") if o.get("team") not in (None, "Unknown") else None
-                return t or o.get("name")
-            items += [{"name": f"{pk.get('season')} Round {pk.get('round')}" +
-                               (f" ({orig_name(pk.get('original_owner'))})" if orig_name(pk.get("original_owner")) else ""),
-                       "pos": "PICK", "round": pk.get("round"),
-                       "was_value": pk.get("was_value")} for pk in sd.get("picks", [])]
-            if sd.get("faab"):
-                items.append({"name": f"${sd['faab']} FAAB", "pos": "FAAB", "was_value": None})
-            names = owner_names.get(sd.get("owner")) or {}
-            team = names.get("team")
-            sides.append({"owner": sd.get("owner"),
-                          "team": team if team and team != "Unknown" else None,
-                          "owner_name": names.get("name") if names.get("name") != "Unknown" else None,
-                          "gets": items})
-        out.append({"id": tr.get("id"), "date": tr.get("date"), "season": tr.get("season"), "sides": sides})
-    return out
-
-
-def lottery_odds(balls):
-    """Exact chance of each seed landing each lottery pick, drawing balls without replacement."""
-    from itertools import permutations
-    seeds = list(balls)
-    odds = {s: [0.0] * len(seeds) for s in seeds}
-    for order in permutations(seeds):
-        p, left = 1.0, sum(balls.values())
-        for s in order:
-            p *= balls[s] / left
-            left -= balls[s]
-        for slot, s in enumerate(order):
-            odds[s][slot] += p
-    return odds   # seed -> [chance of pick 1, pick 2, ...]
-
-
-def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "pac12-dynasty-site"})
-    with urllib.request.urlopen(req, timeout=120) as res:
-        return res.read().decode("utf-8")
-
-
-def get(url):
-    return json.loads(fetch(url))
-
-
-def current_league(base_id, state):
-    target = int(state.get("league_season") or state.get("season"))
-    league = get(f"{API}/league/{base_id}")
-    season = int(league["season"])
-    users = sorted(get(f"{API}/league/{base_id}/users"), key=lambda u: not u.get("is_owner"))[:4]
-    league_id = base_id
-    while season < target:
-        nxt, found = season + 1, None
-        for u in users:
-            try:
-                for l in get(f"{API}/user/{u['user_id']}/leagues/nfl/{nxt}") or []:
-                    if l.get("previous_league_id") == league_id:
-                        found = l
-                        break
-            except Exception:
-                continue
-            if found:
-                break
-        if not found:
-            break
-        league_id, season = found["league_id"], nxt
-    return league_id
-
-
-def age_from(birth):
-    try:
-        b = datetime.strptime(birth, "%Y-%m-%d")
-        return round((datetime.now() - b).days / 365.25, 1)
-    except Exception:
-        return None
-
-
-def pct_rank(values, v, higher_is_better=True):
-    """0 = worst in the league, 1 = best."""
-    if len(values) < 2:
-        return 0.5
-    below = sum(1 for x in values if (x < v if higher_is_better else x > v))
-    return below / (len(values) - 1)
-
-
-def main():
-    state = get(f"{API}/state/nfl")
-    lid = current_league(BASE_LEAGUE_ID, state)
-    league = get(f"{API}/league/{lid}")
-    rosters = get(f"{API}/league/{lid}/rosters")
-    users = {u["user_id"]: u for u in get(f"{API}/league/{lid}/users")}
-    traded = get(f"{API}/league/{lid}/traded_picks") or []
-    season = int(league["season"])
-    pre_draft = league.get("status") in ("pre_draft", "drafting")
-    next_draft = season if pre_draft else season + 1
-
-    with open("data/players.json") as f:
-        pinfo = json.load(f)
-
-    # ---------- Value curve: DynastyProcess rank -> value ----------
-    curve = []
-    for r in csv.DictReader(io.StringIO(fetch(f"{DP}/values-players.csv"))):
-        try:
-            curve.append((float(r["ecr_1qb"]), float(r["value_1qb"])))
-        except (TypeError, ValueError):
-            pass
-    curve.sort()
-
-    def value_at(ecr):
-        if not curve:
-            return 0
-        if ecr <= curve[0][0]:
-            return curve[0][1]
-        for (e1, v1), (e2, v2) in zip(curve, curve[1:]):
-            if e1 <= ecr <= e2:
-                return v1 + (v2 - v1) * ((ecr - e1) / (e2 - e1) if e2 > e1 else 0)
-        return curve[-1][1]
-
-    # ---------- Pick values ----------
-    # DynastyProcess lists: exact slots for the next draft, early/mid/late for the
-    # one after, and a single value per round for the third year.
-    slotted, tiered, generic = {}, {}, {}
-    for r in csv.DictReader(io.StringIO(fetch(f"{DP}/values-picks.csv"))):
-        name = r["player"]
-        try:
-            v = round(value_at(float(r["ecr_1qb"])))
-        except (TypeError, ValueError):
-            continue
-        parts = name.split()
-        if "Pick" in name and "." in parts[-1]:          # "2026 Pick 1.04"
-            rd, slot = parts[-1].split(".")
-            slotted[(int(rd), int(slot))] = v
-        elif parts[1] in ("Early", "Mid", "Late"):       # "2027 Early 1st"
-            tiered.setdefault(int(parts[0]), {})[(parts[1], int(parts[2][0]))] = v
-        else:                                            # "2028 1st"
-            generic.setdefault(int(parts[0]), {})[int(parts[1][0])] = v
-    tier_year = min(tiered) if tiered else None
-    generic_years = sorted(generic)
-
-    # ---------- Team standings and profiles ----------
-    def pts(w, d):
-        return (w or 0) + (d or 0) / 100
-
-    teams = {}
-    for r in rosters:
-        uid = r.get("owner_id")
-        if not uid:
-            continue
-        s = r.get("settings") or {}
-        g = (s.get("wins") or 0) + (s.get("losses") or 0) + (s.get("ties") or 0)
-        u = users.get(uid, {})
-        starters = [p for p in (r.get("starters") or []) if p and p != "0"]
-        ages = [age_from(pinfo.get(p, {}).get("birth_date")) for p in starters]
-        ages = [a for a in ages if a]
-        teams[uid] = {
-            "roster_id": r["roster_id"],
-            "team": (u.get("metadata") or {}).get("team_name") or u.get("display_name") or "Unknown",
-            "owner": u.get("display_name") or "Unknown",
-            "record": f"{s.get('wins') or 0}-{s.get('losses') or 0}" + (f"-{s['ties']}" if s.get("ties") else ""),
-            "win_pct": ((s.get("wins") or 0) + (s.get("ties") or 0) / 2) / g if g else 0.5,
-            "pf": round(pts(s.get("fpts"), s.get("fpts_decimal")), 2),
-            "starter_age": round(sum(ages) / len(ages), 1) if ages else None,
-            "players": r.get("players") or [],
+      function choose(id) {
+        var p = D.players[id];
+        input.value = p.name;
+        list.hidden = true;
+        drawMarket(id);
+      }
+      function show() {
+        var q = input.value.trim().toLowerCase();
+        list.innerHTML = "";
+        if (!q) { list.hidden = true; return; }
+        matches = Object.keys(D.players).filter(function (id) {
+          return D.players[id].name.toLowerCase().indexOf(q) !== -1;
+        }).sort(function (x, y) {
+          var a = D.players[x].name.toLowerCase().indexOf(q) === 0 ? 0 : 1;
+          var b = D.players[y].name.toLowerCase().indexOf(q) === 0 ? 0 : 1;
+          return (a - b) || (marketValue(y) - marketValue(x));
+        }).slice(0, 8);
+        active = 0;
+        if (!matches.length) {
+          list.appendChild(el("div", "muted", "No players on a league roster match that."));
+          list.firstChild.style.padding = "0.5rem 0.7rem";
         }
+        matches.forEach(function (id, i) {
+          var p = D.players[id];
+          var b = el("button", i === 0 ? "active" : "");
+          b.type = "button";
+          b.appendChild(el("span", "", p.name + " · " + p.pos));
+          b.appendChild(el("span", "", D.teams[p.owner].team));
+          b.onmousedown = function (e) { e.preventDefault(); choose(id); };
+          list.appendChild(b);
+        });
+        list.hidden = false;
+      }
+      input.addEventListener("input", show);
+      input.addEventListener("focus", show);
+      input.addEventListener("blur", function () { list.hidden = true; });
+      input.addEventListener("keydown", function (e) {
+        var buttons = list.querySelectorAll("button");
+        if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+          e.preventDefault();
+          if (!buttons.length) return;
+          active = (active + (e.key === "ArrowDown" ? 1 : buttons.length - 1)) % buttons.length;
+          buttons.forEach(function (b, i) { b.classList.toggle("active", i === active); });
+        } else if (e.key === "Enter" && matches.length) {
+          e.preventDefault();
+          choose(matches[active]);
+        } else if (e.key === "Escape") {
+          list.hidden = true;
+        }
+      });
+    }
 
-    # Standings order (record, then points), used to project draft slots
-    order = sorted(teams, key=lambda u: (-teams[u]["win_pct"], -teams[u]["pf"]))
-    n = len(order)
-    wins = [t["win_pct"] for t in teams.values()]
-    pfs = [t["pf"] for t in teams.values()]
-    ages_all = [t["starter_age"] for t in teams.values() if t["starter_age"]]
-    for i, uid in enumerate(order):
-        t = teams[uid]
-        t["standing"] = i + 1
-        t["projected_slot"] = n - i      # worst team picks first
-        age_score = 1 - pct_rank(ages_all, t["starter_age"]) if t["starter_age"] and ages_all else 0.5
-        # Older starting lineups lean contender, so younger lowers the score
-        score = 0.45 * pct_rank(wins, t["win_pct"]) + 0.35 * pct_rank(pfs, t["pf"]) + 0.20 * (1 - age_score)
-        t["contender_score"] = round(score, 2)
+    function drawMarket(id) {
+      var box = document.getElementById("market");
+      box.innerHTML = "";
+      if (!id) return;
+      var p = D.players[id], v = marketValue(id), sp = split(id);
 
-    # Window: where each team stands in the playoff race (last season's finish before 3 games)
-    playoff_teams = (league.get("settings") or {}).get("playoff_teams") or 6
-    games_played = max([(r.get("settings") or {}).get("wins", 0) + (r.get("settings") or {}).get("losses", 0)
-                        + (r.get("settings") or {}).get("ties", 0) for r in rosters] or [0])
-    prev_final = {}
-    if games_played < 3 and league.get("previous_league_id"):
-        try:
-            prev = get(f"{API}/league/{league['previous_league_id']}/rosters")
-            prev_order = sorted(prev, key=lambda r: (
-                -(((r.get("settings") or {}).get("wins") or 0) / max(((r.get("settings") or {}).get("wins") or 0) + ((r.get("settings") or {}).get("losses") or 0), 1)),
-                -(((r.get("settings") or {}).get("fpts") or 0))))
-            prev_final = {r.get("owner_id"): i + 1 for i, r in enumerate(prev_order)}
-        except Exception:
-            prev_final = {}
-    wins_of = {}
-    for r in rosters:
-        st = r.get("settings") or {}
-        if r.get("owner_id"):
-            wins_of[r["owner_id"]] = (st.get("wins") or 0) + (st.get("ties") or 0) / 2
-    cutoff_uid = order[min(playoff_teams, len(order)) - 1] if order else None
-    for uid in order:
-        t = teams[uid]
-        if games_played >= 3 and cutoff_uid:
-            t["window"] = valuation.window_in_season(t["standing"], wins_of[cutoff_uid] - wins_of.get(uid, 0), playoff_teams)
-        elif uid in prev_final:
-            t["window"] = valuation.window_from_final(prev_final[uid], playoff_teams)
-        else:
-            t["window"] = "Middle"
+      var lf = (D.league_market || {})[p.pos];
+      var leagueTile = lf && lf.trades ? ((lf.factor >= 1 ? "+" : "") + Math.round((lf.factor - 1) * 100) + "%") : "-";
+      var grid = el("div", "market-grid");
+      [[fmt(v), "Value in this league"], [leagueTile, "League vs market (" + p.pos + ")"], [tierOf(v), "Tier"], [p.dp_pos_rank || "-", "Dynasty rank"],
+       [p.season_pos_rank || "-", "This season"], [p.age ? String(p.age) : "-", "Age"],
+       [Math.round(sp.now / Math.max(v, 1) * 100) + "% / " + Math.round(sp.future / Math.max(v, 1) * 100) + "%", "Now / Long term"]]
+        .forEach(function (s) {
+          var c = el("div", "stat");
+          c.appendChild(el("div", "big", s[0]));
+          c.appendChild(el("div", "label", s[1]));
+          grid.appendChild(c);
+        });
+      box.appendChild(grid);
 
-    roster_owner = {t["roster_id"]: uid for uid, t in teams.items()}
+      var cols = el("div", "market-cols");
 
-    # ---------- Every team's picks ----------
-    current = {}
-    for t in traded:
-        current[(int(t["season"]), int(t["round"]), t["roster_id"])] = t["owner_id"]
-    odds = lottery_odds(LOTTERY_BALLS)
-    picks = []
-    for yr in (next_draft, next_draft + 1, next_draft + 2):
-        for rd in range(1, ROUNDS + 1):
-            for uid in order:
-                orig_rid = teams[uid]["roster_id"]
-                owner_rid = current.get((yr, rd, orig_rid), orig_rid)
-                slot = teams[uid]["projected_slot"]
-                note = ""
-                if yr == next_draft and teams[uid]["standing"] in odds:
-                    # Lottery team: value is the average over every pick it could land
-                    chances = odds[teams[uid]["standing"]]
-                    v = sum(c * (slotted.get((rd, k + 1)) or 0) for k, c in enumerate(chances))
-                    best = max(range(len(chances)), key=lambda k: chances[k])
-                    label = f"{yr} Round {rd} (lottery)"
-                    note = f"{chances[0] * 100:.1f}% at {rd}.01, most likely {rd}.{best + 1:02d}"
-                elif yr == next_draft:
-                    v = slotted.get((rd, slot))
-                    label = f"{yr} {rd}.{slot:02d} (projected)"
-                elif yr == next_draft + 1 and tier_year:
-                    tier = "Early" if slot <= n / 3 else ("Late" if slot > 2 * n / 3 else "Mid")
-                    v = tiered[tier_year].get((tier, rd))
-                    label = f"{yr} {tier} Round {rd}"
-                else:
-                    gy = yr if yr in generic else (generic_years[-1] if generic_years else None)
-                    v = generic.get(gy, {}).get(rd) if gy else None
-                    label = f"{yr} Round {rd}"
-                picks.append({
-                    "id": f"{yr}-{rd}-{orig_rid}", "season": yr, "round": rd,
-                    "owner": roster_owner.get(owner_rid), "original_owner": uid,
-                    "label": label, "value": round(v or 0), "note": note,
-                })
+      // What he's worth in picks
+      var colA = el("div"); colA.appendChild(el("h3", "", "Worth about"));
+      var ulA = el("ul");
+      var seen = {};
+      D.picks.slice().sort(function (x, y) { return Math.abs(x.value - v) - Math.abs(y.value - v); })
+        .filter(function (pk) { var k = pk.label; if (seen[k]) return false; seen[k] = 1; return true; })
+        .slice(0, 3).forEach(function (pk) {
+          var li = el("li"); li.appendChild(el("span", "", pk.label)); li.appendChild(el("span", "", fmt(pk.value))); ulA.appendChild(li);
+        });
+      colA.appendChild(ulA);
+      cols.appendChild(colA);
 
-    # ---------- Draft class strength ----------
-    firsts = {}
-    for pk in picks:
-        if pk["round"] == 1 and pk["value"]:
-            firsts.setdefault(pk["season"], []).append(pk["value"])
-    avg_all = sum(sum(v) / len(v) for v in firsts.values()) / len(firsts) if firsts else 0
-    classes = {}
-    for yr_, vals in firsts.items():
-        avg = sum(vals) / len(vals)
-        rel = (avg / avg_all - 1) if avg_all else 0
-        classes[yr_] = {"avg_first": round(avg), "vs_average": round(rel * 100),
-                        "label": "Strong" if rel >= 0.08 else ("Weak" if rel <= -0.08 else "Average")}
+      // Similar value players on other teams
+      var colB = el("div"); colB.appendChild(el("h3", "", "Similar value"));
+      var ulB = el("ul");
+      Object.keys(D.players).filter(function (o) { return o !== id && D.players[o].owner !== p.owner; })
+        .sort(function (x, y) { return Math.abs(marketValue(x) - v) - Math.abs(marketValue(y) - v); })
+        .slice(0, 5).forEach(function (o) {
+          var li = el("li");
+          li.appendChild(el("span", "", D.players[o].name + " (" + D.players[o].pos + ")"));
+          li.appendChild(el("span", "", D.teams[D.players[o].owner].team));
+          ulB.appendChild(li);
+        });
+      colB.appendChild(ulB);
+      cols.appendChild(colB);
 
-    # ---------- Players ----------
-    players = {}
-    for uid, t in teams.items():
-        for pid in t["players"]:
-            p = pinfo.get(pid, {})
-            pos_rank = None
-            try:
-                with open(f"data/players/{pid}.json") as f:
-                    car = json.load(f).get("career") or []
-                this = [c for c in car if c.get("season") == season]
-                pos_rank = this[0].get("pos_rank") if this else None
-            except Exception:
-                pass
-            players[pid] = {
-                "name": p.get("name") or pid, "pos": p.get("pos") or "", "nfl": p.get("team") or "",
-                "owner": uid, "age": age_from(p.get("birth_date")) or p.get("age"),
-                "value": p.get("value") or 0, "dp_pos_rank": p.get("pos_rank") or "",
-                "season_pos_rank": pos_rank, "injury": p.get("injury") or "",
-            }
-        del t["players"]
+      // Which teams value him most, given their window
+      var colC = el("div"); colC.appendChild(el("h3", "", "Values him most"));
+      var ulC = el("ul");
+      Object.keys(D.teams).filter(function (uid) { return uid !== p.owner; })
+        .sort(function (x, y) { return fitValue(id, y) - fitValue(id, x); })
+        .slice(0, 5).forEach(function (uid) {
+          var li = el("li");
+          li.appendChild(el("span", "", D.teams[uid].team));
+          li.appendChild(el("span", "", D.teams[uid].window + " · " + fmt(fitValue(id, uid))));
+          ulC.appendChild(li);
+        });
+      colC.appendChild(ulC);
+      cols.appendChild(colC);
 
-    # ---------- Owner tendencies from trade history ----------
-    tendencies = {uid: {"trades": 0, "picks_in": 0, "picks_out": 0, "players_in": 0, "players_out": 0,
-                        "pos_in": {}, "pos_out": {}} for uid in teams}
-    try:
-        with open("data/trades.json") as f:
-            trade_file = json.load(f)
-        history = trade_file.get("trades", [])
-        owner_names = trade_file.get("owners", {})
-        movers = trade_file.get("movers", {})
-    except Exception:
-        history, owner_names, movers = [], {}, {}
-    for tr in history:
-        sides = tr.get("sides", [])
-        for sd in sides:
-            me = sd.get("owner")
-            if me not in tendencies:
-                continue
-            tt = tendencies[me]
-            tt["trades"] += 1
-            tt["picks_in"] += len(sd.get("picks", []))
-            tt["players_in"] += len(sd.get("players", []))
-            for p in sd.get("players", []):
-                tt["pos_in"][p.get("pos") or "?"] = tt["pos_in"].get(p.get("pos") or "?", 0) + 1
-            for other in sides:
-                if other is sd:
-                    continue
-                tt["picks_out"] += len(other.get("picks", []))
-                tt["players_out"] += len(other.get("players", []))
-                for p in other.get("players", []):
-                    tt["pos_out"][p.get("pos") or "?"] = tt["pos_out"].get(p.get("pos") or "?", 0) + 1
+      box.appendChild(cols);
 
-    os.makedirs("data", exist_ok=True)
-    with open("data/analyzer.json", "w") as f:
-        json.dump({
-            "generated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
-            "season": season, "next_draft": next_draft,
-            "teams": teams, "players": players, "picks": picks, "tendencies": tendencies,
-            "slots": [s for s in (league.get("roster_positions") or []) if s not in ("BN", "IR", "TAXI")],
-            "classes": classes,
-            "valuation": {"depth_weight": valuation.SETTINGS["depth_weight"]},
-            "league_market": league_market(history), "history": compact_trades(history, owner_names),
-            "market": market_overview(history, owner_names, season, teams, movers),
-        }, f)
-    grades = trade_grades(history, owner_names, teams)
-    with open("data/trade_grades.json", "w") as f:
-        json.dump({"generated": datetime.now(timezone.utc).isoformat(timespec="minutes"), "grades": grades}, f)
-    print(f"Analyzer data: {len(teams)} teams, {len(players)} players, {len(picks)} picks; graded {len(grades)} trades")
+      // League trade history: trades that included this player, then similar trades
+      var hist = el("div", "comps");
+      function tradeLine(tr, sd, x) {
+        var other = tr.sides.filter(function (o) { return o !== sd; })[0];
+        var paid = (other ? other.gets : []).map(function (y) { return y.name + (y.was_value ? " (" + fmt(y.was_value) + ")" : ""); }).join(", ");
+        // Current team name, then the name from trade history, then the owner's username
+        var team = (D.teams[sd.owner] || {}).team || sd.team || sd.owner_name || "A former team";
+        var line = el("p");
+        line.appendChild(document.createTextNode(tr.season + ": " + team + " got " + x.name +
+          (x.was_value ? " (" + fmt(x.was_value) + " then)" : "") + " for " + (paid || "nothing") + ". "));
+        if (tr.id) {
+          var a = el("a", "", "Full trade →");
+          a.href = "transactions.html#trade-" + encodeURIComponent(tr.id);
+          line.appendChild(a);
+        }
+        return line;
+      }
+
+      // Same player: match by Sleeper ID, or by name for older saved data
+      function isHim(x) { return x.id ? x.id === id : (x.pos === p.pos && x.name === p.name); }
+      function hasHim(tr) { return tr.sides.some(function (sd) { return sd.gets.some(isHim); }); }
+
+      hist.appendChild(el("h3", "", "Trades including " + p.name));
+      var involving = [];
+      (D.history || []).forEach(function (tr) {
+        tr.sides.forEach(function (sd) {
+          sd.gets.forEach(function (x) { if (isHim(x)) involving.push({ tr: tr, sd: sd, x: x }); });
+        });
+      });
+      if (!involving.length) hist.appendChild(el("p", "muted", "He hasn't been traded in this league."));
+      involving.forEach(function (f) { hist.appendChild(tradeLine(f.tr, f.sd, f.x)); });
+
+      hist.appendChild(el("h3", "", "Similar trades"));
+      var similar = [];
+      (D.history || []).forEach(function (tr) {
+        if (hasHim(tr)) return;   // trades with him are already listed above
+        tr.sides.forEach(function (sd) {
+          sd.gets.forEach(function (x) {
+            if (x.pos !== p.pos || !x.was_value) return;
+            if (Math.abs(x.was_value - p.value) > p.value * 0.35) return;
+            similar.push({ tr: tr, sd: sd, x: x, diff: Math.abs(x.was_value - p.value) });
+          });
+        });
+      });
+      similar.sort(function (a, b) { return a.diff - b.diff; });
+      if (!similar.length) hist.appendChild(el("p", "muted", "No other past league trades for a " + p.pos + " at this value yet."));
+      similar.slice(0, 5).forEach(function (f) { hist.appendChild(tradeLine(f.tr, f.sd, f.x)); });
+      hist.appendChild(el("p", "muted", "Values in parentheses are market values at the time of each trade."));
+      box.appendChild(hist);
+    }
+
+    // ---------- Trade finder ----------
+    function setupFinder() {
+      var teamSel = document.getElementById("finder-team");
+      var modeSel = document.getElementById("finder-mode");
+      var playerSel = document.getElementById("finder-player");
+      var blank = el("option", "", "Your team"); blank.value = ""; teamSel.appendChild(blank);
+      Object.keys(D.teams).sort(function (x, y) { return D.teams[x].team.localeCompare(D.teams[y].team); }).forEach(function (uid) {
+        var o = el("option", "", D.teams[uid].team); o.value = uid; teamSel.appendChild(o);
+      });
+
+      function fillPlayers() {
+        playerSel.innerHTML = "";
+        var me = teamSel.value;
+        var b = el("option", "", modeSel.value === "sell" ? "Player to sell" : "Player to buy"); b.value = "";
+        playerSel.appendChild(b);
+        if (!me) return;
+        Object.keys(D.players).filter(function (id) {
+          return modeSel.value === "sell" ? D.players[id].owner === me : D.players[id].owner !== me;
+        }).sort(function (x, y) { return marketValue(y) - marketValue(x); }).forEach(function (id) {
+          var p = D.players[id];
+          var o = el("option", "", p.name + " · " + p.pos + (modeSel.value === "buy" ? " · " + D.teams[p.owner].team : ""));
+          o.value = id;
+          playerSel.appendChild(o);
+        });
+      }
+      teamSel.onchange = fillPlayers;
+      modeSel.onchange = fillPlayers;
+      document.getElementById("finder-go").onclick = function () { findTrades(teamSel.value, modeSel.value, playerSel.value); };
+    }
+
+    // Packages of 1 or 2 assets from one team, from its most valuable 25
+    function packagesFrom(uid, exclude) {
+      var assets = Object.keys(D.players).filter(function (id) { return D.players[id].owner === uid && id !== exclude; })
+        .concat(D.picks.filter(function (pk) { return pk.owner === uid && pk.value > 0; }).map(function (pk) { return pk.id; }))
+        .sort(function (x, y) { return marketValue(y) - marketValue(x); }).slice(0, 25);
+      var out = assets.map(function (id) { return [id]; });
+      for (var i = 0; i < assets.length; i++) for (var j = i + 1; j < assets.length; j++) out.push([assets[i], assets[j]]);
+      return out;
+    }
+
+    function findTrades(me, mode, pid) {
+      var box = document.getElementById("finder");
+      box.innerHTML = "";
+      if (!me || !pid) { box.appendChild(el("p", "empty", "Pick your team and a player first.")); return; }
+      var target = marketValue(pid);
+      var results = [];
+      var partners = mode === "sell" ? Object.keys(D.teams).filter(function (u) { return u !== me; }) : [D.players[pid].owner];
+
+      partners.forEach(function (other) {
+        // Selling: the other team sends a package. Buying: you send a package.
+        var pool = mode === "sell" ? packagesFrom(other) : packagesFrom(me, pid);
+        pool.forEach(function (pkg) {
+          var mkt = combine(pkg.map(marketValue));
+          if (mkt < target * 0.6 || mkt > target * 1.6) return;   // skip obvious mismatches
+          var ev = mode === "sell" ? evaluate(me, [pid], other, pkg) : evaluate(me, pkg, other, [pid]);
+          var mine = ev.a, theirs = ev.b;
+          // Only trades that make both teams better and stay within one grade of even
+          if (mine.net <= 0 || theirs.net <= 0) return;
+          if (mine.grade === "F" || theirs.grade === "F") return;
+          var score = Math.min(mine.net, theirs.net) - Math.abs(mine.net - theirs.net) * 0.25;
+          results.push({ other: other, pkg: pkg, ev: ev, score: score });
+        });
+      });
+
+      results.sort(function (x, y) { return y.score - x.score; });
+      // Keep variety: at most 2 offers per team
+      var perTeam = {}, picks = [];
+      results.forEach(function (r) {
+        perTeam[r.other] = (perTeam[r.other] || 0) + 1;
+        if (perTeam[r.other] <= 2 && picks.length < 8) picks.push(r);
+      });
+
+      if (!picks.length) {
+        box.appendChild(el("p", "empty", "No trades found where both teams come out fair or better. Try another player."));
+        return;
+      }
+      picks.forEach(function (r) {
+        var card = el("div", "offer");
+        var top = el("div", "offer-top");
+        var grades = el("div", "offer-grades");
+        grades.appendChild(el("span", "mini g-" + r.ev.a.grade, r.ev.a.grade));
+        grades.appendChild(el("span", "", D.teams[me].team));
+        grades.appendChild(el("span", "mini g-" + r.ev.b.grade, r.ev.b.grade));
+        grades.appendChild(el("span", "", D.teams[r.other].team));
+        top.appendChild(grades);
+        var load = el("button", "load-btn", "Load in builder");
+        load.type = "button";
+        load.onclick = function () { loadTrade(me, mode === "sell" ? [pid] : r.pkg, r.other, mode === "sell" ? r.pkg : [pid]); };
+        top.appendChild(load);
+        card.appendChild(top);
+        var gives = mode === "sell" ? [pid] : r.pkg, gets = mode === "sell" ? r.pkg : [pid];
+        card.appendChild(el("p", "", D.teams[me].team + " sends: " + gives.map(assetName).join(", ")));
+        card.appendChild(el("p", "", D.teams[r.other].team + " sends: " + gets.map(assetName).join(", ")));
+        card.appendChild(el("p", "muted", "Market value " + fmt(r.ev.a.gaveMkt) + " for " + fmt(r.ev.a.gotMkt) +
+          ". " + D.teams[r.other].team + " is a " + D.teams[r.other].window.toLowerCase() + "."));
+        box.appendChild(card);
+      });
+    }
+
+    function loadTrade(a, aGives, b, bGives) {
+      teamOf.a = a; teamOf.b = b;
+      picked.a = {}; picked.b = {};
+      aGives.forEach(function (id) { picked.a[id] = true; });
+      bGives.forEach(function (id) { picked.b[id] = true; });
+      drawSide("a"); drawSide("b"); grade();
+      document.getElementById("side-a").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
 
 
-if __name__ == "__main__":
-    main()
+    // ---------- Market overview (rebuilt automatically from trade history) ----------
+    function drawOverview() {
+      var box = document.getElementById("overview");
+      var m = D.market;
+      box.innerHTML = "";
+      if (!m) { box.appendChild(el("p", "empty", "The market overview fills in after the next data update.")); return; }
+
+      var fp = m.first_price.this_season;
+      var grid = el("div", "market-grid");
+      [[String(m.counts.this_season), m.season + " trades (" + m.counts.last_season_same_point + " at this point last year)"],
+       [String(m.counts.last_30_days), "Trades in the last 30 days"],
+       [String(m.counts.all_time), "Trades all-time"],
+       [fp.avg ? fmt(fp.avg) : "-", "Avg 1st round pick traded this season"]].forEach(function (s) {
+        var c = el("div", "stat");
+        c.appendChild(el("div", "big", s[0]));
+        c.appendChild(el("div", "label", s[1]));
+        grid.appendChild(c);
+      });
+      box.appendChild(grid);
+
+      if (m.notes.length) {
+        var ul = el("ul", "ov-notes");
+        m.notes.forEach(function (n) { ul.appendChild(el("li", "", n)); });
+        box.appendChild(ul);
+      } else {
+        box.appendChild(el("p", "muted", "Not enough trades yet to spot clear patterns."));
+      }
+
+      var cols = el("div", "market-cols");
+
+      // Prices by asset type: all-time vs last 12 months
+      var colP = el("div"); colP.appendChild(el("h3", "", "League prices vs. market"));
+      var wrap = el("div", "table-wrap");
+      var t = el("table", "ov-table");
+      var head = el("tr");
+      ["Asset", "All-time", "Last 12 months", "Trend"].forEach(function (h) { head.appendChild(el("th", "", h)); });
+      t.appendChild(head);
+      function pctOf(f) { return f ? (f.factor >= 1 ? "+" : "") + Math.round((f.factor - 1) * 100) + "% (" + f.trades + ")" : "-"; }
+      m.premiums.forEach(function (pr) {
+        var tr = el("tr");
+        tr.appendChild(el("td", "", { "1st": "1st round picks", "2nd": "2nd round picks", "3rd+": "3rd+ round picks" }[pr.cat] || pr.cat));
+        tr.appendChild(el("td", "", pctOf(pr.all_time)));
+        tr.appendChild(el("td", "", pctOf(pr.recent)));
+        var trend = el("td", "", "-");
+        if (pr.recent && pr.all_time) {
+          var d = pr.recent.factor - pr.all_time.factor;
+          if (d >= 0.03) { trend.textContent = "▲ Rising"; trend.className = "up"; }
+          else if (d <= -0.03) { trend.textContent = "▼ Falling"; trend.className = "down"; }
+          else trend.textContent = "Steady";
+        }
+        tr.appendChild(trend);
+        t.appendChild(tr);
+      });
+      if (!m.premiums.length) {
+        var tr0 = el("tr"); var td0 = el("td", "muted", "No priced trades yet."); td0.colSpan = 4; tr0.appendChild(td0); t.appendChild(tr0);
+      }
+      wrap.appendChild(t);
+      colP.appendChild(wrap);
+      colP.appendChild(el("p", "muted", "How much more (+) or less (−) than market value this league pays. Trade counts in parentheses."));
+      cols.appendChild(colP);
+
+      // Biggest deals
+      var colB = el("div"); colB.appendChild(el("h3", "", "Biggest deals, last 12 months"));
+      var ulB = el("ul");
+      m.biggest.forEach(function (b) {
+        var li = el("li");
+        var a = el("a", "", b.teams.join(" ↔ "));
+        a.href = "transactions.html#trade-" + encodeURIComponent(b.id);
+        li.appendChild(a);
+        li.appendChild(el("span", "", fmt(b.value) + " total"));
+        ulB.appendChild(li);
+      });
+      if (!m.biggest.length) ulB.appendChild(el("li", "muted", "None yet."));
+      colB.appendChild(ulB);
+
+      colB.appendChild(el("h3", "", "Most active this season"));
+      var ulA = el("ul");
+      m.active.forEach(function (a) {
+        var li = el("li"); li.appendChild(el("span", "", a.team)); li.appendChild(el("span", "", a.trades + " trade" + (a.trades === 1 ? "" : "s"))); ulA.appendChild(li);
+      });
+      if (!m.active.length) ulA.appendChild(el("li", "muted", "No trades this season yet."));
+      colB.appendChild(ulA);
+      cols.appendChild(colB);
+
+      // Value movers
+      var colM = el("div"); colM.appendChild(el("h3", "", "Risers, last 4 weeks"));
+      var ulR = el("ul");
+      ((m.movers || {}).risers || []).slice(0, 5).forEach(function (r) {
+        var li = el("li"); li.appendChild(el("span", "", r.name + " (" + r.pos + ")"));
+        var sp = el("span", "up", "+" + fmt(r.change)); li.appendChild(sp); ulR.appendChild(li);
+      });
+      if (!((m.movers || {}).risers || []).length) ulR.appendChild(el("li", "muted", "No data yet."));
+      colM.appendChild(ulR);
+      colM.appendChild(el("h3", "", "Fallers, last 4 weeks"));
+      var ulF = el("ul");
+      ((m.movers || {}).fallers || []).slice(0, 5).forEach(function (r) {
+        var li = el("li"); li.appendChild(el("span", "", r.name + " (" + r.pos + ")"));
+        var sp = el("span", "down", fmt(r.change)); li.appendChild(sp); ulF.appendChild(li);
+      });
+      if (!((m.movers || {}).fallers || []).length) ulF.appendChild(el("li", "muted", "No data yet."));
+      colM.appendChild(ulF);
+      cols.appendChild(colM);
+
+      box.appendChild(cols);
+      box.appendChild(el("p", "muted", "This section rebuilds itself from league trade history and current values every time the data updates."));
+    }
+
+    fetch("data/analyzer.json", { cache: "no-cache" })
+      .then(function (res) {
+        if (!res.ok) throw new Error("The analyzer data hasn't been built yet. Run the Update player data workflow once.");
+        return res.json();
+      })
+      .then(function (json) {
+        D = json;
+        D.pickById = {};
+        D.picks.forEach(function (pk) { D.pickById[pk.id] = pk; });
+        window.addEventListener("error", function (e) {
+          document.getElementById("status").hidden = false;
+          document.getElementById("status").textContent = "Something went wrong: " + e.message;
+        });
+        drawSide("a");
+        drawSide("b");
+        setupMarket();
+        setupFinder();
+        drawOverview();
+        document.getElementById("updated").textContent = "Values updated " + new Date(D.generated).toLocaleString() + ".";
+        document.getElementById("status").hidden = true;
+        document.getElementById("app").hidden = false;
+      })
+      .catch(function (err) { document.getElementById("status").textContent = err.message; });
+  </script>
+</body>
+</html>
