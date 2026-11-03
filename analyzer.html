@@ -112,7 +112,7 @@
           <p class="muted">Value is split into win-now and long-term based on age and position. Contenders weigh win-now value more, and rebuilders weigh long-term value more, so the same trade can grade differently for each team.</p>
           <p class="muted">Values are also adjusted by league history: past trades show whether this league pays more or less than market for each position and pick round, and that's blended in, more strongly the more trades there are to learn from.</p>
           <p class="muted">Most important, every trade is judged by what it does to each team. The analyzer builds each team's best starting lineup before and after the trade. A player only adds full win-now value if he'd start for that team; bench players count a little as depth. That's why trading from a surplus to fill a hole can be a good deal for both sides.</p>
-          <p class="muted">The grade is how much better or worse each team gets, compared to the value that changed hands: A is a steal or a strong deal for both teams, C is fair, and F is a massive overpay or undersell.</p>
+          <p class="muted">Each team's change in value is measured in points. The grade comes from how far apart the two teams' gains are: 2,000 or more apart is an A for the winner and an F for the loser, 1,000 or more is a B and a D, and anything closer is a C for both.</p>
         </details>
       </div>
       <div class="bar"><h2>Market Evaluation</h2></div>
@@ -149,7 +149,7 @@
   <script>
     // Defaults, used if analyzer-settings.js is missing or leaves something out
     var DEFAULTS = {
-      grades: { A: 15, B: 5, C: -5, D: -15 }, winWin: 8, studPower: 1.25, leagueWeight: 1,
+      gradeGaps: { big: 2000, small: 1000 }, studPower: 1.25, leagueWeight: 1,
       production: [{ upTo: 5, change: 0.10 }, { upTo: 12, change: 0.05 }, { upTo: 24, change: 0 }, { upTo: 36, change: -0.05 }, { upTo: 999, change: -0.10 }],
       injury: { Out: -0.08, IR: -0.08, PUP: -0.08, Sus: -0.05, Doubtful: -0.04 },
       ages: { QB: { peak: 26, cliff: 34 }, RB: { peak: 23, cliff: 28 }, WR: { peak: 24, cliff: 30 }, TE: { peak: 25, cliff: 31 } },
@@ -229,13 +229,14 @@
       return Math.pow(sum, 1 / p);
     }
 
-    function letter(gain) {
-      var g = gain * 100;
-      if (g >= S.grades.A) return "A";
-      if (g >= S.grades.B) return "B";
-      if (g >= S.grades.C) return "C";
-      if (g >= S.grades.D) return "D";
-      return "F";
+    // Grades for both teams from how far apart their gains are, in value points:
+    // 2,000+ apart = A and F, 1,000+ = B and D, closer = C and C
+    function pairGrades(netA, netB) {
+      var gaps = S.gradeGaps || { big: 2000, small: 1000 };
+      var gap = netA - netB;
+      if (Math.abs(gap) >= gaps.big) return gap > 0 ? ["A", "F"] : ["F", "A"];
+      if (Math.abs(gap) >= gaps.small) return gap > 0 ? ["B", "D"] : ["D", "B"];
+      return ["C", "C"];
     }
     function gainOf(got, gave) { return gave > 0 ? (got - gave) / gave : (got > 0 ? 1 : 0); }
 
@@ -362,13 +363,14 @@
         var impact = gets.filter(function (id) { return D.players[id]; }).map(function (id) {
           return { id: id, slot: after.placed[id] || null };
         });
-        var gain = (after.score - before.score) / moved;
-        return { me: me, gets: gets, gives: gives, fitGain: gain, mktGain: gainOf(gotMkt, gaveMkt),
+        var net = after.score - before.score;
+        return { me: me, gets: gets, gives: gives, net: net, mktGain: gainOf(gotMkt, gaveMkt),
                  gotMkt: gotMkt, gaveMkt: gaveMkt, nowNet: nowIn - nowOut, futNet: futIn - futOut, impact: impact };
       }
       var va = view(a, bGives, aGives), vb = view(b, aGives, bGives);
-      va.grade = letter(va.fitGain); vb.grade = letter(vb.fitGain);
-      var winWin = va.grade === "A" && vb.grade === "A";
+      var g = pairGrades(va.net, vb.net);
+      va.grade = g[0]; vb.grade = g[1];
+      var winWin = va.net > 0 && vb.net > 0;     // both teams get better
       return { a: va, b: vb, winWin: winWin };
     }
 
@@ -391,13 +393,14 @@
         top.appendChild(el("div", "grade g-" + v.grade, v.grade));
         var head = el("div");
         head.appendChild(el("h3", "", t.team));
-        var words = { A: winWin ? "Strong deal for both teams" : "Steal", B: "Good deal", C: "Fair deal", D: "Overpay", F: "Massive overpay" };
-        head.appendChild(el("p", "summary", words[v.grade] + " for a " + t.window.toLowerCase()));
+        var words = { A: "Won the trade big", B: "Won the trade", C: "Even trade", D: "Lost the trade", F: "Lost the trade big" };
+        head.appendChild(el("p", "summary", words[v.grade] + " · " + t.window));
         top.appendChild(head);
         card.appendChild(top);
 
         var ul = el("ul");
-        ul.appendChild(el("li", "", "Market value: gives " + fmt(v.gaveMkt) + ", gets " + fmt(v.gotMkt) + " (" + pct(v.mktGain) + ")."));
+        ul.appendChild(el("li", "", "Team value: " + (v.net >= 0 ? "+" : "") + fmt(v.net) + (winWin ? ". Both teams get better from this trade." : ".")));
+        ul.appendChild(el("li", "", "Market value: gives " + fmt(v.gaveMkt) + ", gets " + fmt(v.gotMkt) + "."));
         ul.appendChild(el("li", "", "Win now: " + (v.nowNet >= 0 ? "+" : "") + fmt(v.nowNet) + " · Long term: " + (v.futNet >= 0 ? "+" : "") + fmt(v.futNet) + "."));
         if (t.window === "Contender" && v.nowNet > 0) ul.appendChild(el("li", "", "Adds win-now value, which fits a contender."));
         if (t.window === "Contender" && v.nowNet < 0) ul.appendChild(el("li", "", "Gives up win-now value while contending."));
@@ -676,9 +679,10 @@
           if (mkt < target * 0.6 || mkt > target * 1.6) return;   // skip obvious mismatches
           var ev = mode === "sell" ? evaluate(me, [pid], other, pkg) : evaluate(me, pkg, other, [pid]);
           var mine = ev.a, theirs = ev.b;
-          if (mine.grade === "D" || mine.grade === "F" || theirs.grade === "D" || theirs.grade === "F") return;
-          // Best trades help both sides; ties go to the closest market match
-          var score = Math.min(mine.fitGain, theirs.fitGain) - Math.abs(mine.mktGain) * 0.1;
+          // Only trades that make both teams better and stay within one grade of even
+          if (mine.net <= 0 || theirs.net <= 0) return;
+          if (mine.grade === "F" || theirs.grade === "F") return;
+          var score = Math.min(mine.net, theirs.net) - Math.abs(mine.net - theirs.net) * 0.25;
           results.push({ other: other, pkg: pkg, ev: ev, score: score });
         });
       });
