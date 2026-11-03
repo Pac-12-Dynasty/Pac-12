@@ -16,8 +16,10 @@ SETTINGS = {
     "hunt_games": 1.5,
     # Bench players count this much of their win-now value (depth and injury insurance)
     "depth_weight": 0.25,
-    # Grades come from the difference between what each team gained, in value points:
-    # 2,000+ apart = A for the winner and F for the loser; 1,000+ = B and D; closer = C and C
+    # Each team's grade score mostly comes from how much better its own team got ("own"),
+    # with a small share from how it did against the other team ("gap"). Both in value points.
+    "blend": {"own": 0.75, "gap": 0.25},
+    # Score of at least "big" = A (or F at -big); at least "small" = B (or D); in between = C
     "grade_gaps": {"big": 2000, "small": 1000},
 }
 
@@ -114,15 +116,25 @@ def team_score(players, pick_futures, slots, window):
     return w_now * (lineup_now + depth) + w_fut * future, placed
 
 
-def pair_grades(net_a, net_b):
-    """Letter grades for both teams from how far apart their gains are."""
-    gap = net_a - net_b
+def team_grade(net_me, net_other):
+    """A team's grade: mostly its own improvement, a little of how it did against the other side."""
+    b = SETTINGS["blend"]
+    score = b["own"] * net_me + b["gap"] * (net_me - net_other)
     big, small = SETTINGS["grade_gaps"]["big"], SETTINGS["grade_gaps"]["small"]
-    if abs(gap) >= big:
-        return ("A", "F") if gap > 0 else ("F", "A")
-    if abs(gap) >= small:
-        return ("B", "D") if gap > 0 else ("D", "B")
-    return ("C", "C")
+    if score >= big:
+        return "A", round(score)
+    if score >= small:
+        return "B", round(score)
+    if score > -small:
+        return "C", round(score)
+    if score > -big:
+        return "D", round(score)
+    return "F", round(score)
+
+
+def pair_grades(net_a, net_b):
+    """Grades for both teams in a trade."""
+    return team_grade(net_a, net_b)[0], team_grade(net_b, net_a)[0]
 
 
 def evaluate_side(roster, picks, gives, gets, slots, window):
