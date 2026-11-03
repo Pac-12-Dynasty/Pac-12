@@ -1,11 +1,8 @@
 // Trade Analyzer settings. Change these numbers to tune how trades are graded.
 window.ANALYZER_SETTINGS = {
-  // Grade cutoffs, by how much value a team gains (in percent, after team fit).
-  // At least A -> A, at least B -> B, at least C -> C (fair), at least D -> D, below D -> F
-  grades: { A: 15, B: 5, C: -5, D: -15 },
-
-  // If BOTH teams gain at least this much after team fit, both get an A (a strong deal for both)
-  winWin: 8,
+  // Grades come from how far apart the two teams' gains are, in value points.
+  // At least "big" apart: A for the winner, F for the loser. At least "small": B and D. Closer: C and C.
+  gradeGaps: { big: 2000, small: 1000 },
 
   // How much to trust this league's trade history (1 = fully, 0 = ignore it and use market values only)
   leagueWeight: 1,
