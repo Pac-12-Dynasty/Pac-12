@@ -14,8 +14,8 @@
  "10219": {
   "age": 27,
   "birth_date": "1999-09-26",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hand",
   "name": "Chris Rodriguez Jr.",
   "pos": "RB",
   "pos_rank": "RB52",
@@ -674,8 +674,8 @@
  "12490": {
   "age": 23,
   "birth_date": "2003-02-14",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Bhayshul Tuten",
   "pos": "RB",
   "pos_rank": "RB20",
@@ -2390,8 +2390,8 @@
  "5947": {
   "age": 29,
   "birth_date": "1996-11-09",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hamstring",
   "name": "Jakobi Meyers",
   "pos": "WR",
   "pos_rank": "WR51",
@@ -2414,8 +2414,8 @@
  "5995": {
   "age": 28,
   "birth_date": "1997-11-14",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Groin",
   "name": "Justice Hill",
   "pos": "RB",
   "pos_rank": "RB85",
