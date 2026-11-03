@@ -12,8 +12,9 @@ SETTINGS = {
     "window": {"Contender": (1.15, 0.9), "Middle": (1.0, 1.0), "Rebuilder": (0.85, 1.15)},
     # Bench players count this much of their win-now value (depth and injury insurance)
     "depth_weight": 0.25,
-    # Grade cutoffs: percent gain in team value, relative to the value moved in the trade
-    "grades": {"A": 15, "B": 5, "C": -5, "D": -15},
+    # Grades come from the difference between what each team gained, in value points:
+    # 2,000+ apart = A for the winner and F for the loser; 1,000+ = B and D; closer = C and C
+    "grade_gaps": {"big": 2000, "small": 1000},
 }
 
 LOTTERY_BALLS = {12: 35, 11: 27, 10: 20, 9: 10, 8: 6, 7: 3}
@@ -95,11 +96,15 @@ def team_score(players, pick_futures, slots, window):
     return w_now * (lineup_now + depth) + w_fut * future, placed
 
 
-def letter(gain_pct):
-    for g in ("A", "B", "C", "D"):
-        if gain_pct >= SETTINGS["grades"][g]:
-            return g
-    return "F"
+def pair_grades(net_a, net_b):
+    """Letter grades for both teams from how far apart their gains are."""
+    gap = net_a - net_b
+    big, small = SETTINGS["grade_gaps"]["big"], SETTINGS["grade_gaps"]["small"]
+    if abs(gap) >= big:
+        return ("A", "F") if gap > 0 else ("F", "A")
+    if abs(gap) >= small:
+        return ("B", "D") if gap > 0 else ("D", "B")
+    return ("C", "C")
 
 
 def evaluate_side(roster, picks, gives, gets, slots, window):
@@ -110,12 +115,11 @@ def evaluate_side(roster, picks, gives, gets, slots, window):
     after_players = [p for p in roster if p["id"] not in give_ids] + [a for a in gets if a.get("pos")]
     after_picks = [p for p in picks if p["id"] not in give_ids] + [a for a in gets if not a.get("pos")]
     after, placed = team_score(after_players, [p["fut"] for p in after_picks], slots, window)
-    moved = max(sum(a["market"] for a in gives), sum(a["market"] for a in gets), 1)
-    gain = (after - before) / moved * 100
+    net = after - before
     impact = []
     for a in gets:
         if a.get("pos"):
             slot = placed.get(a["id"])
             impact.append({"id": a["id"], "starts": bool(slot), "slot": slot})
-    return {"gain": round(gain), "grade": letter(gain), "impact": impact,
+    return {"net": round(net), "impact": impact,
             "market_given": round(sum(a["market"] for a in gives)), "market_got": round(sum(a["market"] for a in gets))}
