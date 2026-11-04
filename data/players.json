@@ -14,8 +14,8 @@
  "10219": {
   "age": 27,
   "birth_date": "1999-09-26",
-  "injury": "Questionable",
-  "injury_part": "Hand",
+  "injury": "",
+  "injury_part": "",
   "name": "Chris Rodriguez Jr.",
   "pos": "RB",
   "pos_rank": "RB52",
@@ -38,8 +38,8 @@
  "10229": {
   "age": 26,
   "birth_date": "2000-04-22",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hamstring",
   "name": "Rashee Rice",
   "pos": "WR",
   "pos_rank": "WR26",
@@ -118,6 +118,18 @@
   "rank": null,
   "team": "DET",
   "value": null
+ },
+ "11557": {
+  "age": 26,
+  "birth_date": "2000-03-06",
+  "injury": "",
+  "injury_part": "",
+  "name": "Joe Milton",
+  "pos": "QB",
+  "pos_rank": "QB59",
+  "rank": 322,
+  "team": "PHI",
+  "value": 7
  },
  "11559": {
   "age": 26,
@@ -266,8 +278,8 @@
  "11597": {
   "age": 25,
   "birth_date": "2001-02-26",
-  "injury": "Questionable",
-  "injury_part": "Neck",
+  "injury": "",
+  "injury_part": "",
   "name": "Theo Johnson",
   "pos": "TE",
   "pos_rank": "TE38",
@@ -503,18 +515,6 @@
   "team": "LV",
   "value": 42
  },
- "11729": {
-  "age": 25,
-  "birth_date": "2001-07-30",
-  "injury": "",
-  "injury_part": "",
-  "name": "Sione Vaki",
-  "pos": "RB",
-  "pos_rank": "RB94",
-  "rank": 349,
-  "team": "DET",
-  "value": 4
- },
  "11783": {
   "age": 27,
   "birth_date": "1999-10-27",
@@ -746,8 +746,8 @@
  "12498": {
   "age": 22,
   "birth_date": "2004-05-08",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Back",
   "name": "Mason Taylor",
   "pos": "TE",
   "pos_rank": "TE29",
@@ -1526,8 +1526,8 @@
  "13346": {
   "age": 22,
   "birth_date": "2003-12-06",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Calf",
   "name": "Denzel Boston",
   "pos": "WR",
   "pos_rank": "WR30",
@@ -1586,7 +1586,7 @@
  "13380": {
   "age": 23,
   "birth_date": "2003-07-25",
-  "injury": "Questionable",
+  "injury": "Doubtful",
   "injury_part": "Quadriceps",
   "name": "Brenen Thompson",
   "pos": "WR",
@@ -1634,8 +1634,8 @@
  "13405": {
   "age": 23,
   "birth_date": "2003-01-08",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Quadriceps",
   "name": "Kaytron Allen",
   "pos": "RB",
   "pos_rank": "RB63",
@@ -1766,8 +1766,8 @@
  "1466": {
   "age": 37,
   "birth_date": "1989-10-05",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Travis Kelce",
   "pos": "TE",
   "pos_rank": "TE20",
@@ -1931,6 +1931,18 @@
   "team": "",
   "value": 192
  },
+ "3451": {
+  "age": 32,
+  "birth_date": "1994-01-29",
+  "injury": "",
+  "injury_part": "",
+  "name": "Ka'imi Fairbairn",
+  "pos": "K",
+  "pos_rank": "",
+  "rank": null,
+  "team": "HOU",
+  "value": null
+ },
  "3634": {
   "age": 32,
   "birth_date": "1994-08-08",
@@ -1946,26 +1958,14 @@
  "4017": {
   "age": 31,
   "birth_date": "1995-09-14",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Concussion",
   "name": "Deshaun Watson",
   "pos": "QB",
   "pos_rank": "QB35",
   "rank": 218,
   "team": "CLE",
   "value": 64
- },
- "4033": {
-  "age": 30,
-  "birth_date": "1996-07-10",
-  "injury": "IR",
-  "injury_part": "Lower Leg",
-  "name": "David Njoku",
-  "pos": "TE",
-  "pos_rank": "TE36",
-  "rank": 225,
-  "team": "LAC",
-  "value": 49
  },
  "4034": {
   "age": 30,
@@ -1982,8 +1982,8 @@
  "4035": {
   "age": 31,
   "birth_date": "1995-07-25",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Back",
   "name": "Alvin Kamara",
   "pos": "RB",
   "pos_rank": "RB58",
@@ -2066,8 +2066,8 @@
  "4195": {
   "age": 31,
   "birth_date": "1995-01-21",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Jake Elliott",
   "pos": "K",
   "pos_rank": "",
@@ -2138,8 +2138,8 @@
  "4866": {
   "age": 29,
   "birth_date": "1997-02-09",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hamstring",
   "name": "Saquon Barkley",
   "pos": "RB",
   "pos_rank": "RB15",
@@ -2174,8 +2174,8 @@
  "4943": {
   "age": 29,
   "birth_date": "1997-06-05",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Quadriceps",
   "name": "Sam Darnold",
   "pos": "QB",
   "pos_rank": "QB21",
@@ -2327,6 +2327,18 @@
   "team": "GB",
   "value": 870
  },
+ "5854": {
+  "age": 29,
+  "birth_date": "1996-11-10",
+  "injury": "Questionable",
+  "injury_part": "Elbow",
+  "name": "Drew Lock",
+  "pos": "QB",
+  "pos_rank": "QB46",
+  "rank": 277,
+  "team": "SEA",
+  "value": 15
+ },
  "5859": {
   "age": 29,
   "birth_date": "1997-06-30",
@@ -2354,7 +2366,7 @@
  "5892": {
   "age": 29,
   "birth_date": "1997-06-07",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Groin",
   "name": "David Montgomery",
   "pos": "RB",
@@ -2378,8 +2390,8 @@
  "5947": {
   "age": 29,
   "birth_date": "1996-11-09",
-  "injury": "Questionable",
-  "injury_part": "Hamstring",
+  "injury": "",
+  "injury_part": "",
   "name": "Jakobi Meyers",
   "pos": "WR",
   "pos_rank": "WR51",
@@ -2410,18 +2422,6 @@
   "rank": 325,
   "team": "BAL",
   "value": 6
- },
- "6011": {
-  "age": 30,
-  "birth_date": "1996-05-16",
-  "injury": "",
-  "injury_part": "",
-  "name": "Gardner Minshew II",
-  "pos": "QB",
-  "pos_rank": "QB67",
-  "rank": 380,
-  "team": "ARI",
-  "value": 3
  },
  "6083": {
   "age": 32,
@@ -2542,6 +2542,18 @@
   "rank": 48,
   "team": "CIN",
   "value": 3471
+ },
+ "6803": {
+  "age": 28,
+  "birth_date": "1998-03-17",
+  "injury": "DNR",
+  "injury_part": "Knee - ACL + MCL",
+  "name": "Brandon Aiyuk",
+  "pos": "WR",
+  "pos_rank": "WR73",
+  "rank": 173,
+  "team": "SF",
+  "value": 198
  },
  "6804": {
   "age": 28,
@@ -2702,8 +2714,8 @@
  "7547": {
   "age": 27,
   "birth_date": "1999-10-24",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ribs",
   "name": "Amon-Ra St. Brown",
   "pos": "WR",
   "pos_rank": "WR3",
@@ -2722,6 +2734,18 @@
   "rank": 73,
   "team": "ATL",
   "value": 2065
+ },
+ "7561": {
+  "age": 28,
+  "birth_date": "1998-05-02",
+  "injury": "",
+  "injury_part": "",
+  "name": "Elijah Mitchell",
+  "pos": "RB",
+  "pos_rank": "",
+  "rank": null,
+  "team": "PHI",
+  "value": null
  },
  "7564": {
   "age": 26,
@@ -2891,18 +2915,6 @@
   "team": "NE",
   "value": 472
  },
- "8122": {
-  "age": 25,
-  "birth_date": "2001-04-11",
-  "injury": "Questionable",
-  "injury_part": "Concussion",
-  "name": "Zonovan Knight",
-  "pos": "RB",
-  "pos_rank": "RB105",
-  "rank": 406,
-  "team": "ARI",
-  "value": 3
- },
  "8126": {
   "age": 25,
   "birth_date": "2001-01-05",
@@ -2978,8 +2990,8 @@
  "8137": {
   "age": 25,
   "birth_date": "2001-03-04",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hamstring",
   "name": "George Pickens",
   "pos": "WR",
   "pos_rank": "WR16",
@@ -3026,8 +3038,8 @@
  "8146": {
   "age": 26,
   "birth_date": "2000-07-22",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Concussion",
   "name": "Garrett Wilson",
   "pos": "WR",
   "pos_rank": "WR11",
@@ -3286,18 +3298,6 @@
   "rank": 172,
   "team": "IND",
   "value": 198
- },
- "9230": {
-  "age": 26,
-  "birth_date": "2000-04-27",
-  "injury": "",
-  "injury_part": "",
-  "name": "Tanner McKee",
-  "pos": "QB",
-  "pos_rank": "QB58",
-  "rank": 321,
-  "team": "PHI",
-  "value": 7
  },
  "9479": {
   "age": 25,
@@ -3575,6 +3575,18 @@
   "team": "BAL",
   "value": null
  },
+ "BUF": {
+  "age": null,
+  "birth_date": "",
+  "injury": "",
+  "injury_part": "",
+  "name": "Buffalo Bills",
+  "pos": "DEF",
+  "pos_rank": "",
+  "rank": null,
+  "team": "BUF",
+  "value": null
+ },
  "CHI": {
   "age": null,
   "birth_date": "",
@@ -3731,16 +3743,16 @@
   "team": "MIN",
   "value": null
  },
- "NE": {
+ "NYG": {
   "age": null,
   "birth_date": "",
   "injury": "",
   "injury_part": "",
-  "name": "New England Patriots",
+  "name": "New York Giants",
   "pos": "DEF",
   "pos_rank": "",
   "rank": null,
-  "team": "NE",
+  "team": "NYG",
   "value": null
  },
  "PHI": {
@@ -3789,30 +3801,6 @@
   "pos_rank": "",
   "rank": null,
   "team": "SF",
-  "value": null
- },
- "TB": {
-  "age": null,
-  "birth_date": "",
-  "injury": "",
-  "injury_part": "",
-  "name": "Tampa Bay Buccaneers",
-  "pos": "DEF",
-  "pos_rank": "",
-  "rank": null,
-  "team": "TB",
-  "value": null
- },
- "WAS": {
-  "age": null,
-  "birth_date": "",
-  "injury": "",
-  "injury_part": "",
-  "name": "Washington Commanders",
-  "pos": "DEF",
-  "pos_rank": "",
-  "rank": null,
-  "team": "WAS",
   "value": null
  }
 }
