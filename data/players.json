@@ -266,7 +266,7 @@
  "11597": {
   "age": 25,
   "birth_date": "2001-02-26",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Neck",
   "name": "Theo Johnson",
   "pos": "TE",
@@ -503,6 +503,18 @@
   "team": "LV",
   "value": 42
  },
+ "11729": {
+  "age": 25,
+  "birth_date": "2001-07-30",
+  "injury": "",
+  "injury_part": "",
+  "name": "Sione Vaki",
+  "pos": "RB",
+  "pos_rank": "RB94",
+  "rank": 349,
+  "team": "DET",
+  "value": 4
+ },
  "11783": {
   "age": 27,
   "birth_date": "1999-10-27",
@@ -590,8 +602,8 @@
  "12474": {
   "age": 25,
   "birth_date": "2000-12-29",
-  "injury": "Questionable",
-  "injury_part": "Leg",
+  "injury": "",
+  "injury_part": "",
   "name": "Woody Marks",
   "pos": "RB",
   "pos_rank": "RB38",
@@ -854,7 +866,7 @@
  "12514": {
   "age": 24,
   "birth_date": "2002-10-14",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Foot",
   "name": "Emeka Egbuka",
   "pos": "WR",
@@ -950,7 +962,7 @@
  "12529": {
   "age": 24,
   "birth_date": "2002-10-22",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Illness",
   "name": "TreVeyon Henderson",
   "pos": "RB",
@@ -986,8 +998,8 @@
  "12534": {
   "age": 24,
   "birth_date": "2002-06-06",
-  "injury": "Out",
-  "injury_part": "Thumb",
+  "injury": "Questionable",
+  "injury_part": "Toe",
   "name": "Kyle Monangai",
   "pos": "RB",
   "pos_rank": "RB27",
@@ -1106,8 +1118,8 @@
  "13268": {
   "age": 23,
   "birth_date": "2003-05-28",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Elijah Sarratt",
   "pos": "WR",
   "pos_rank": "WR94",
@@ -1142,8 +1154,8 @@
  "13272": {
   "age": 23,
   "birth_date": "2002-11-19",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Carson Beck",
   "pos": "QB",
   "pos_rank": "QB40",
@@ -1178,8 +1190,8 @@
  "13275": {
   "age": 23,
   "birth_date": "2002-12-21",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Ty Simpson",
   "pos": "QB",
   "pos_rank": "QB29",
@@ -1526,8 +1538,8 @@
  "13347": {
   "age": 23,
   "birth_date": "2003-10-09",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Demond Claiborne",
   "pos": "RB",
   "pos_rank": "RB69",
@@ -1574,7 +1586,7 @@
  "13380": {
   "age": 23,
   "birth_date": "2003-07-25",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Quadriceps",
   "name": "Brenen Thompson",
   "pos": "WR",
@@ -1586,8 +1598,8 @@
  "13402": {
   "age": 24,
   "birth_date": "2002-07-05",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Skyler Bell",
   "pos": "WR",
   "pos_rank": "WR93",
@@ -1610,8 +1622,8 @@
  "13404": {
   "age": 24,
   "birth_date": "2002-02-07",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Garrett Nussmeier",
   "pos": "QB",
   "pos_rank": "QB62",
@@ -1802,7 +1814,7 @@
  "2216": {
   "age": 33,
   "birth_date": "1993-08-21",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Achilles",
   "name": "Mike Evans",
   "pos": "WR",
@@ -1874,7 +1886,7 @@
  "3214": {
   "age": 31,
   "birth_date": "1994-12-07",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Foot",
   "name": "Hunter Henry",
   "pos": "TE",
@@ -1882,18 +1894,6 @@
   "rank": 177,
   "team": "NE",
   "value": 180
- },
- "3257": {
-  "age": 33,
-  "birth_date": "1992-12-11",
-  "injury": "",
-  "injury_part": "",
-  "name": "Jacoby Brissett",
-  "pos": "QB",
-  "pos_rank": "QB31",
-  "rank": 208,
-  "team": "ARI",
-  "value": 76
  },
  "3271": {
   "age": 33,
@@ -2330,7 +2330,7 @@
  "5859": {
   "age": 29,
   "birth_date": "1997-06-30",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Ankle",
   "name": "A.J. Brown",
   "pos": "WR",
@@ -2339,22 +2339,10 @@
   "team": "NE",
   "value": 4453
  },
- "5870": {
-  "age": 29,
-  "birth_date": "1997-05-27",
-  "injury": "",
-  "injury_part": "",
-  "name": "Daniel Jones",
-  "pos": "QB",
-  "pos_rank": "QB27",
-  "rank": 157,
-  "team": "IND",
-  "value": 265
- },
  "5872": {
   "age": 30,
   "birth_date": "1996-01-15",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Hamstring",
   "name": "Deebo Samuel Sr.",
   "pos": "WR",
@@ -2366,7 +2354,7 @@
  "5892": {
   "age": 29,
   "birth_date": "1997-06-07",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Groin",
   "name": "David Montgomery",
   "pos": "RB",
@@ -2414,14 +2402,26 @@
  "5995": {
   "age": 28,
   "birth_date": "1997-11-14",
-  "injury": "Questionable",
-  "injury_part": "Groin",
+  "injury": "",
+  "injury_part": "",
   "name": "Justice Hill",
   "pos": "RB",
   "pos_rank": "RB85",
   "rank": 325,
   "team": "BAL",
   "value": 6
+ },
+ "6011": {
+  "age": 30,
+  "birth_date": "1996-05-16",
+  "injury": "",
+  "injury_part": "",
+  "name": "Gardner Minshew II",
+  "pos": "QB",
+  "pos_rank": "QB67",
+  "rank": 380,
+  "team": "ARI",
+  "value": 3
  },
  "6083": {
   "age": 32,
@@ -2666,7 +2666,7 @@
  "7525": {
   "age": 27,
   "birth_date": "1998-11-14",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Hamstring",
   "name": "DeVonta Smith",
   "pos": "WR",
@@ -2702,8 +2702,8 @@
  "7547": {
   "age": 27,
   "birth_date": "1999-10-24",
-  "injury": "Questionable",
-  "injury_part": "Undisclosed",
+  "injury": "",
+  "injury_part": "",
   "name": "Amon-Ra St. Brown",
   "pos": "WR",
   "pos_rank": "WR3",
@@ -2846,7 +2846,7 @@
  "8110": {
   "age": 27,
   "birth_date": "1999-01-18",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Ankle",
   "name": "Jake Ferguson",
   "pos": "TE",
@@ -2870,8 +2870,8 @@
  "8112": {
   "age": 25,
   "birth_date": "2001-07-24",
-  "injury": "Questionable",
-  "injury_part": "Head",
+  "injury": "",
+  "injury_part": "",
   "name": "Drake London",
   "pos": "WR",
   "pos_rank": "WR8",
@@ -2894,7 +2894,7 @@
  "8122": {
   "age": 25,
   "birth_date": "2001-04-11",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Concussion",
   "name": "Zonovan Knight",
   "pos": "RB",
@@ -2990,8 +2990,8 @@
  "8138": {
   "age": 27,
   "birth_date": "1999-09-25",
-  "injury": "Questionable",
-  "injury_part": "Undisclosed",
+  "injury": "",
+  "injury_part": "",
   "name": "James Cook III",
   "pos": "RB",
   "pos_rank": "RB6",
@@ -3074,7 +3074,7 @@
  "8154": {
   "age": 27,
   "birth_date": "1999-03-22",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Hamstring",
   "name": "Brian Robinson Jr.",
   "pos": "RB",
@@ -3086,7 +3086,7 @@
  "8155": {
   "age": 25,
   "birth_date": "2001-05-31",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Quadriceps",
   "name": "Breece Hall",
   "pos": "RB",
@@ -3206,7 +3206,7 @@
  "8676": {
   "age": 28,
   "birth_date": "1998-08-31",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Knee",
   "name": "Rashid Shaheed",
   "pos": "WR",
@@ -3350,7 +3350,7 @@
  "9486": {
   "age": 25,
   "birth_date": "2001-06-16",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Ankle",
   "name": "Dontayvion Wicks",
   "pos": "WR",
