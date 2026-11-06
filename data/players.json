@@ -686,8 +686,8 @@
  "12490": {
   "age": 23,
   "birth_date": "2003-02-14",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Bhayshul Tuten",
   "pos": "RB",
   "pos_rank": "RB20",
@@ -1118,8 +1118,8 @@
  "13268": {
   "age": 23,
   "birth_date": "2003-05-28",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Elijah Sarratt",
   "pos": "WR",
   "pos_rank": "WR94",
