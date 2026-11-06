@@ -50,8 +50,8 @@
  "10232": {
   "age": 26,
   "birth_date": "2000-02-23",
-  "injury": "Questionable",
-  "injury_part": "Ribs",
+  "injury": "",
+  "injury_part": "",
   "name": "Michael Wilson",
   "pos": "WR",
   "pos_rank": "WR35",
@@ -62,8 +62,8 @@
  "10236": {
   "age": 27,
   "birth_date": "1999-10-18",
-  "injury": "Questionable",
-  "injury_part": "Chest",
+  "injury": "",
+  "injury_part": "",
   "name": "Dalton Kincaid",
   "pos": "TE",
   "pos_rank": "TE7",
@@ -422,8 +422,8 @@
  "11632": {
   "age": 23,
   "birth_date": "2003-07-28",
-  "injury": "Questionable",
-  "injury_part": "Undisclosed",
+  "injury": "",
+  "injury_part": "",
   "name": "Malik Nabers",
   "pos": "WR",
   "pos_rank": "WR7",
@@ -614,7 +614,7 @@
  "12481": {
   "age": 24,
   "birth_date": "2002-02-05",
-  "injury": "Questionable",
+  "injury": "Doubtful",
   "injury_part": "Hamstring",
   "name": "Cam Skattebo",
   "pos": "RB",
@@ -794,8 +794,8 @@
  "12506": {
   "age": 22,
   "birth_date": "2004-07-20",
-  "injury": "Questionable",
-  "injury_part": "Groin",
+  "injury": "",
+  "injury_part": "",
   "name": "Harold Fannin Jr.",
   "pos": "TE",
   "pos_rank": "TE8",
@@ -866,8 +866,8 @@
  "12514": {
   "age": 24,
   "birth_date": "2002-10-14",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Foot",
   "name": "Emeka Egbuka",
   "pos": "WR",
   "pos_rank": "WR14",
@@ -962,7 +962,7 @@
  "12529": {
   "age": 24,
   "birth_date": "2002-10-22",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Illness",
   "name": "TreVeyon Henderson",
   "pos": "RB",
@@ -1538,8 +1538,8 @@
  "13346": {
   "age": 22,
   "birth_date": "2003-12-06",
-  "injury": "Questionable",
-  "injury_part": "Calf",
+  "injury": "",
+  "injury_part": "",
   "name": "Denzel Boston",
   "pos": "WR",
   "pos_rank": "WR31",
@@ -1823,6 +1823,18 @@
   "team": "PIT",
   "value": null
  },
+ "2020": {
+  "age": 34,
+  "birth_date": "1991-11-12",
+  "injury": "",
+  "injury_part": "",
+  "name": "Cairo Santos",
+  "pos": "K",
+  "pos_rank": "",
+  "rank": null,
+  "team": "CHI",
+  "value": null
+ },
  "2133": {
   "age": 33,
   "birth_date": "1992-12-24",
@@ -1838,7 +1850,7 @@
  "2216": {
   "age": 33,
   "birth_date": "1993-08-21",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Achilles",
   "name": "Mike Evans",
   "pos": "WR",
@@ -1994,8 +2006,8 @@
  "4034": {
   "age": 30,
   "birth_date": "1996-06-07",
-  "injury": "Questionable",
-  "injury_part": "Calf",
+  "injury": "",
+  "injury_part": "",
   "name": "Christian McCaffrey",
   "pos": "RB",
   "pos_rank": "RB10",
@@ -2006,8 +2018,8 @@
  "4035": {
   "age": 31,
   "birth_date": "1995-07-25",
-  "injury": "Questionable",
-  "injury_part": "Back",
+  "injury": "",
+  "injury_part": "",
   "name": "Alvin Kamara",
   "pos": "RB",
   "pos_rank": "RB58",
@@ -2090,8 +2102,8 @@
  "4195": {
   "age": 31,
   "birth_date": "1995-01-21",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Jake Elliott",
   "pos": "K",
   "pos_rank": "",
@@ -2150,8 +2162,8 @@
  "4866": {
   "age": 29,
   "birth_date": "1997-02-09",
-  "injury": "Questionable",
-  "injury_part": "Hamstring",
+  "injury": "",
+  "injury_part": "",
   "name": "Saquon Barkley",
   "pos": "RB",
   "pos_rank": "RB17",
@@ -2339,23 +2351,11 @@
   "team": "GB",
   "value": 766
  },
- "5854": {
-  "age": 29,
-  "birth_date": "1996-11-10",
-  "injury": "Questionable",
-  "injury_part": "Elbow",
-  "name": "Drew Lock",
-  "pos": "QB",
-  "pos_rank": "QB41",
-  "rank": 248,
-  "team": "SEA",
-  "value": 30
- },
  "5859": {
   "age": 29,
   "birth_date": "1997-06-30",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "Out",
+  "injury_part": "Knee",
   "name": "A.J. Brown",
   "pos": "WR",
   "pos_rank": "WR23",
@@ -2366,7 +2366,7 @@
  "5872": {
   "age": 30,
   "birth_date": "1996-01-15",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Hamstring",
   "name": "Deebo Samuel Sr.",
   "pos": "WR",
@@ -2690,7 +2690,7 @@
  "7525": {
   "age": 27,
   "birth_date": "1998-11-14",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Hamstring",
   "name": "DeVonta Smith",
   "pos": "WR",
@@ -3050,7 +3050,7 @@
  "8146": {
   "age": 26,
   "birth_date": "2000-07-22",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Concussion",
   "name": "Garrett Wilson",
   "pos": "WR",
@@ -3098,7 +3098,7 @@
  "8154": {
   "age": 27,
   "birth_date": "1999-03-22",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Hamstring",
   "name": "Brian Robinson Jr.",
   "pos": "RB",
@@ -3134,8 +3134,8 @@
  "8167": {
   "age": 27,
   "birth_date": "1999-05-12",
-  "injury": "Questionable",
-  "injury_part": "Undisclosed",
+  "injury": "",
+  "injury_part": "",
   "name": "Christian Watson",
   "pos": "WR",
   "pos_rank": "WR20",
@@ -3230,7 +3230,7 @@
  "8676": {
   "age": 28,
   "birth_date": "1998-08-31",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Knee",
   "name": "Rashid Shaheed",
   "pos": "WR",
@@ -3362,7 +3362,7 @@
  "9486": {
   "age": 25,
   "birth_date": "2001-06-16",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Ankle",
   "name": "Dontayvion Wicks",
   "pos": "WR",
