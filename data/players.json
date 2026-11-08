@@ -626,7 +626,7 @@
  "12481": {
   "age": 24,
   "birth_date": "2002-02-05",
-  "injury": "Doubtful",
+  "injury": "Out",
   "injury_part": "Hamstring",
   "name": "Cam Skattebo",
   "pos": "RB",
@@ -710,8 +710,8 @@
  "12492": {
   "age": 23,
   "birth_date": "2002-12-10",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Pat Bryant",
   "pos": "WR",
   "pos_rank": "WR74",
@@ -1190,8 +1190,8 @@
  "13275": {
   "age": 23,
   "birth_date": "2002-12-21",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Ty Simpson",
   "pos": "QB",
   "pos_rank": "QB29",
@@ -1238,8 +1238,8 @@
  "13281": {
   "age": 22,
   "birth_date": "2004-08-12",
-  "injury": "Questionable",
-  "injury_part": "Hamstring",
+  "injury": "",
+  "injury_part": "",
   "name": "Jordyn Tyson",
   "pos": "WR",
   "pos_rank": "WR29",
@@ -1646,8 +1646,8 @@
  "13404": {
   "age": 24,
   "birth_date": "2002-02-07",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Garrett Nussmeier",
   "pos": "QB",
   "pos_rank": "QB62",
@@ -1658,8 +1658,8 @@
  "13405": {
   "age": 23,
   "birth_date": "2003-01-08",
-  "injury": "Questionable",
-  "injury_part": "Quadriceps",
+  "injury": "",
+  "injury_part": "",
   "name": "Kaytron Allen",
   "pos": "RB",
   "pos_rank": "RB64",
@@ -1994,7 +1994,7 @@
  "4017": {
   "age": 31,
   "birth_date": "1995-09-14",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Concussion",
   "name": "Deshaun Watson",
   "pos": "QB",
@@ -2714,8 +2714,8 @@
  "7547": {
   "age": 27,
   "birth_date": "1999-10-24",
-  "injury": "Questionable",
-  "injury_part": "Ribs",
+  "injury": "",
+  "injury_part": "",
   "name": "Amon-Ra St. Brown",
   "pos": "WR",
   "pos_rank": "WR3",
@@ -2870,8 +2870,8 @@
  "8110": {
   "age": 27,
   "birth_date": "1999-01-18",
-  "injury": "Questionable",
-  "injury_part": "Ankle",
+  "injury": "",
+  "injury_part": "",
   "name": "Jake Ferguson",
   "pos": "TE",
   "pos_rank": "TE19",
@@ -2990,7 +2990,7 @@
  "8137": {
   "age": 25,
   "birth_date": "2001-03-04",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Hamstring",
   "name": "George Pickens",
   "pos": "WR",
@@ -3536,7 +3536,7 @@
   "pos": "RB",
   "pos_rank": "RB69",
   "rank": 262,
-  "team": "NO",
+  "team": "",
   "value": 23
  },
  "9758": {
