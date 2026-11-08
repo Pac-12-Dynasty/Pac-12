@@ -635,18 +635,6 @@
   "team": "NYG",
   "value": 1554
  },
- "12482": {
-  "age": 24,
-  "birth_date": "2001-11-22",
-  "injury": "",
-  "injury_part": "",
-  "name": "Savion Williams",
-  "pos": "WR",
-  "pos_rank": "WR119",
-  "rank": 292,
-  "team": "GB",
-  "value": 11
- },
  "12484": {
   "age": 23,
   "birth_date": "2002-12-15",
@@ -3717,6 +3705,18 @@
   "pos_rank": "",
   "rank": null,
   "team": "KC",
+  "value": null
+ },
+ "LAC": {
+  "age": null,
+  "birth_date": "",
+  "injury": "",
+  "injury_part": "",
+  "name": "Los Angeles Chargers",
+  "pos": "DEF",
+  "pos_rank": "",
+  "rank": null,
+  "team": "LAC",
   "value": null
  },
  "LAR": {
