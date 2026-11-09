@@ -902,8 +902,8 @@
  "12519": {
   "age": 22,
   "birth_date": "2003-12-12",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Undisclosed",
   "name": "Luther Burden III",
   "pos": "WR",
   "pos_rank": "WR15",
@@ -2522,8 +2522,8 @@
  "6797": {
   "age": 28,
   "birth_date": "1998-03-10",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Finger",
   "name": "Justin Herbert",
   "pos": "QB",
   "pos_rank": "QB16",
