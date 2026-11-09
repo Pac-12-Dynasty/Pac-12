@@ -50,8 +50,8 @@
  "10232": {
   "age": 26,
   "birth_date": "2000-02-23",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Neck",
   "name": "Michael Wilson",
   "pos": "WR",
   "pos_rank": "WR35",
@@ -1550,7 +1550,7 @@
  "13347": {
   "age": 23,
   "birth_date": "2003-10-09",
-  "injury": "Out",
+  "injury": "IR",
   "injury_part": "Knee",
   "name": "Demond Claiborne",
   "pos": "RB",
@@ -1894,6 +1894,18 @@
   "rank": null,
   "team": "SEA",
   "value": null
+ },
+ "3161": {
+  "age": 33,
+  "birth_date": "1992-12-30",
+  "injury": "",
+  "injury_part": "",
+  "name": "Carson Wentz",
+  "pos": "QB",
+  "pos_rank": "QB51",
+  "rank": 279,
+  "team": "MIN",
+  "value": 15
  },
  "3163": {
   "age": 32,
@@ -2330,8 +2342,8 @@
  "5850": {
   "age": 28,
   "birth_date": "1998-02-11",
-  "injury": "Questionable",
-  "injury_part": "Hand",
+  "injury": "Out",
+  "injury_part": "Finger",
   "name": "Josh Jacobs",
   "pos": "RB",
   "pos_rank": "RB30",
@@ -2870,7 +2882,7 @@
  "8110": {
   "age": 27,
   "birth_date": "1999-01-18",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Knee",
   "name": "Jake Ferguson",
   "pos": "TE",
@@ -3110,8 +3122,8 @@
  "8161": {
   "age": 27,
   "birth_date": "1999-05-25",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Groin",
   "name": "Malik Willis",
   "pos": "QB",
   "pos_rank": "QB26",
@@ -3170,8 +3182,8 @@
  "8210": {
   "age": 27,
   "birth_date": "1999-09-08",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hip",
   "name": "Chig Okonkwo",
   "pos": "TE",
   "pos_rank": "TE18",
@@ -3527,18 +3539,6 @@
   "team": "MIN",
   "value": 1276
  },
- "9757": {
-  "age": 24,
-  "birth_date": "2002-06-11",
-  "injury": "",
-  "injury_part": "",
-  "name": "Kendre Miller",
-  "pos": "RB",
-  "pos_rank": "RB69",
-  "rank": 262,
-  "team": "",
-  "value": 23
- },
  "9758": {
   "age": 25,
   "birth_date": "2001-10-03",
@@ -3705,18 +3705,6 @@
   "pos_rank": "",
   "rank": null,
   "team": "KC",
-  "value": null
- },
- "LAC": {
-  "age": null,
-  "birth_date": "",
-  "injury": "",
-  "injury_part": "",
-  "name": "Los Angeles Chargers",
-  "pos": "DEF",
-  "pos_rank": "",
-  "rank": null,
-  "team": "LAC",
   "value": null
  },
  "LAR": {
