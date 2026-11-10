@@ -3,21 +3,21 @@ Goed's Plan,Olave’s Medical Team,12.5,9,2-7-0,2,15.0,5.0,10.0,0.667,1,1
 Joe Buck Yourself,Why So Serious?,10.0,6,1-5-0,2,12.0,4.0,8.0,0.667,1,1
 Lamar Jackson Fan Club,Why So Serious?,9.5,7,4-3-0,2,13.0,10.0,3.0,0.462,1,2
 Olave’s Medical Team,Why So Serious?,8.5,7,2-5-0,1,9.0,4.0,5.0,0.889,2,3
+Baby Back Gibbs,Bucky Irving Fan Club,8.0,7,4-3-0,1,8.0,4.0,4.0,1.0,1,2
 Bijan’s minions ,Goed's Plan,8.0,7,4-3-0,1,8.0,4.0,4.0,1.0,1,2
 Bucky Irving Fan Club,Lamar Jackson Fan Club,8.0,8,4-4-0,0,8.0,4.0,4.0,1.0,1,2
+J. Love’s number 1 Fan,Why So Serious?,7.0,8,3-5-0,0,8.0,3.0,5.0,0.75,1,4
 Joe Buck Yourself,Skatteboner,7.0,8,5-3-0,0,8.0,5.0,3.0,0.75,2,1
-Baby Back Gibbs,Bucky Irving Fan Club,6.5,6,4-2-0,1,7.0,4.0,3.0,0.857,2,3
-Bucky Irving Fan Club,J. Love’s number 1 Fan,6.5,7,4-3-0,0,7.0,4.0,3.0,0.857,2,1
-Fannin the Flames,Why So Serious?,6.5,5,3-2-0,1,7.0,3.0,4.0,0.857,2,4
-J. Love’s number 1 Fan,Joe Buck Yourself,6.5,7,3-4-0,0,7.0,3.0,4.0,0.857,2,3
+Bucky Irving Fan Club,J. Love’s number 1 Fan,6.5,7,4-3-0,0,7.0,4.0,3.0,0.857,3,2
+Fannin the Flames,Why So Serious?,6.5,5,3-2-0,1,7.0,3.0,4.0,0.857,2,5
+J. Love’s number 1 Fan,Joe Buck Yourself,6.5,7,3-4-0,0,7.0,3.0,4.0,0.857,3,3
 Baby Back Gibbs,Joe Buck Yourself,6.5,5,4-1-0,1,7.0,4.0,3.0,0.857,3,4
-Baby Back Gibbs,Fannin the Flames,6.5,7,3-4-0,0,7.0,3.0,4.0,0.857,1,1
+Baby Back Gibbs,Fannin the Flames,6.5,7,3-4-0,0,7.0,3.0,4.0,0.857,2,1
 Fannin the Flames,Olave’s Medical Team,6.0,5,2-3-0,1,6.0,3.0,3.0,1.0,3,3
-J. Love’s number 1 Fan,Why So Serious?,5.5,7,2-5-0,0,7.0,2.0,5.0,0.571,3,5
-Goed's Plan,Skatteboner,5.5,7,2-5-0,0,7.0,2.0,5.0,0.571,3,2
+Lamar Jackson Fan Club,Skatteboner,5.5,7,5-2-0,0,7.0,5.0,2.0,0.571,3,2
+Goed's Plan,Skatteboner,5.5,7,2-5-0,0,7.0,2.0,5.0,0.571,3,3
 Bijan’s minions ,Time to tank,5.0,6,2-4-0,0,6.0,2.0,4.0,0.667,2,1
 Fannin the Flames,Joe Buck Yourself,5.0,6,2-4-0,0,6.0,2.0,4.0,0.667,4,5
-Lamar Jackson Fan Club,Skatteboner,5.0,6,4-2-0,0,6.0,4.0,2.0,0.667,3,3
 Bijan’s minions ,Skatteboner,5.0,6,2-4-0,0,6.0,2.0,4.0,0.667,3,4
 Bucky Irving Fan Club,Goed's Plan,5.0,6,2-4-0,0,6.0,2.0,4.0,0.667,4,4
 Bijan’s minions ,Joe Buck Yourself,5.0,5,2-3-0,1,6.0,2.0,4.0,0.667,4,6
@@ -46,24 +46,24 @@ Fannin the Flames,Lamar Jackson Fan Club,3.5,5,4-1-0,0,5.0,4.0,1.0,0.4,9,7
 Baby Back Gibbs,J. Love’s number 1 Fan,3.5,5,4-1-0,0,5.0,4.0,1.0,0.4,8,8
 Bucky Irving Fan Club,Why So Serious?,3.5,5,0-5-0,1,7.0,0.0,7.0,0.0,8,8
 Bijan’s minions ,J. Love’s number 1 Fan,3.5,5,4-1-0,0,5.0,4.0,1.0,0.4,8,9
-Bijan’s minions ,Olave’s Medical Team,3.0,4,1-3-0,0,4.0,1.0,3.0,0.5,9,8
+Bijan’s minions ,Fannin the Flames,3.5,5,4-1-0,0,5.0,4.0,1.0,0.4,9,10
+Bijan’s minions ,Olave’s Medical Team,3.0,4,1-3-0,0,4.0,1.0,3.0,0.5,10,8
 Baby Back Gibbs,Time to tank,3.0,4,3-1-0,0,4.0,3.0,1.0,0.5,9,8
 Lamar Jackson Fan Club,Olave’s Medical Team,3.0,4,3-1-0,0,4.0,3.0,1.0,0.5,8,9
 Baby Back Gibbs,Skatteboner,3.0,4,3-1-0,0,4.0,3.0,1.0,0.5,10,9
-Fannin the Flames,Goed's Plan,3.0,4,3-1-0,0,4.0,3.0,1.0,0.5,10,9
-Bijan’s minions ,Fannin the Flames,3.0,4,3-1-0,0,4.0,3.0,1.0,0.5,10,11
+Fannin the Flames,Goed's Plan,3.0,4,3-1-0,0,4.0,3.0,1.0,0.5,11,9
 Bucky Irving Fan Club,Olave’s Medical Team,3.0,4,1-3-0,0,4.0,1.0,3.0,0.5,9,10
 Goed's Plan,Time to tank,2.5,3,2-1-0,0,3.0,2.0,1.0,0.667,10,9
 Bijan’s minions ,Why So Serious?,2.5,3,1-2-0,0,3.0,1.0,2.0,0.667,11,9
 Goed's Plan,Joe Buck Yourself,2.5,3,2-1-0,0,3.0,2.0,1.0,0.667,11,8
 Bucky Irving Fan Club,Skatteboner,2.5,3,2-1-0,0,3.0,2.0,1.0,0.667,10,10
 J. Love’s number 1 Fan,Lamar Jackson Fan Club,2.5,3,2-1-0,0,3.0,2.0,1.0,0.667,10,9
+Joe Buck Yourself,Olave’s Medical Team,2.0,4,0-4-0,0,4.0,0.0,4.0,0.0,9,11
 Baby Back Gibbs,Lamar Jackson Fan Club,2.0,4,4-0-0,0,4.0,4.0,0.0,0.0,11,10
-Bucky Irving Fan Club,Joe Buck Yourself,2.0,4,0-4-0,0,4.0,0.0,4.0,0.0,11,9
+Bucky Irving Fan Club,Joe Buck Yourself,2.0,4,0-4-0,0,4.0,0.0,4.0,0.0,11,10
 Skatteboner,Why So Serious?,2.0,4,0-4-0,0,4.0,0.0,4.0,0.0,11,10
-Joe Buck Yourself,Lamar Jackson Fan Club,1.5,3,0-3-0,0,3.0,0.0,3.0,0.0,10,11
+Joe Buck Yourself,Lamar Jackson Fan Club,1.5,3,0-3-0,0,3.0,0.0,3.0,0.0,11,11
 Time to tank,Why So Serious?,1.5,3,0-3-0,0,3.0,0.0,3.0,0.0,10,11
-Joe Buck Yourself,Olave’s Medical Team,1.5,3,0-3-0,0,3.0,0.0,3.0,0.0,11,11
 J. Love’s number 1 Fan,Time to tank,1.5,3,0-3-0,0,3.0,0.0,3.0,0.0,11,11
 Mia KALIFa ,Skatteboner,0.5,1,1-0-0,0,1.0,1.0,0.0,0.0,1,12
 J. Love’s number 1 Fan,Mia KALIFa ,0.5,1,0-1-0,0,1.0,0.0,1.0,0.0,12,2
@@ -73,3 +73,4 @@ Bijan’s minions ,Mia KALIFa ,0.5,1,0-1-0,0,1.0,0.0,1.0,0.0,12,5
 Mia KALIFa ,Olave’s Medical Team,0.5,1,0-1-0,0,1.0,0.0,1.0,0.0,6,12
 Mia KALIFa ,Why So Serious?,0.5,1,0-1-0,0,1.0,0.0,1.0,0.0,7,12
 Lamar Jackson Fan Club,Mia KALIFa ,0.5,1,0-1-0,0,1.0,0.0,1.0,0.0,12,8
+Goed's Plan,Mia KALIFa ,0.5,1,0-1-0,0,1.0,0.0,1.0,0.0,12,9
