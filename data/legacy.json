@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T10:43+00:00",
+ "generated": "2026-11-10T23:26+00:00",
  "seasons": [
   2023,
   2024,
@@ -508,14 +508,13 @@
    "seasons": [
     2023,
     2024,
-    2025,
-    2026
+    2025
    ],
-   "w": 19,
-   "l": 29,
+   "w": 17,
+   "l": 22,
    "t": 0,
-   "pf": 5703.64,
-   "pa": 5992.02,
+   "pf": 4692.16,
+   "pa": 4888.58,
    "pw": 3,
    "pl": 1,
    "playoffs": 1,
@@ -549,15 +548,6 @@
      "t": 0,
      "pf": 1499.7,
      "pa": 1612.58,
-     "finish": ""
-    },
-    {
-     "season": 2026,
-     "w": 2,
-     "l": 7,
-     "t": 0,
-     "pf": 1011.48,
-     "pa": 1103.44,
      "finish": ""
     }
    ]
@@ -752,6 +742,37 @@
     }
    ]
   },
+  "1132133082238169088": {
+   "id": "1132133082238169088",
+   "name": "DylanDeitrick",
+   "team": "DylanDeitrick",
+   "seasons": [
+    2026
+   ],
+   "w": 2,
+   "l": 7,
+   "t": 0,
+   "pf": 1011.48,
+   "pa": 1103.44,
+   "pw": 0,
+   "pl": 0,
+   "playoffs": 0,
+   "titles": 0,
+   "runner_up": 0,
+   "third": 0,
+   "first_overall": [],
+   "by_season": [
+    {
+     "season": 2026,
+     "w": 2,
+     "l": 7,
+     "t": 0,
+     "pf": 1011.48,
+     "pa": 1103.44,
+     "finish": ""
+    }
+   ]
+  },
   "1416188424762720256": {
    "id": "1416188424762720256",
    "name": "NestaV024",
@@ -840,8 +861,8 @@
   "995982448825720832": [
    {
     "opponent": "731283214563422208",
-    "score": 8.0,
-    "wins": 4,
+    "score": 6.5,
+    "wins": 3,
     "losses": 3,
     "ties": 0
    },
@@ -904,8 +925,8 @@
   "909255939126161408": [
    {
     "opponent": "731283214563422208",
-    "score": 12.5,
-    "wins": 7,
+    "score": 12.0,
+    "wins": 6,
     "losses": 2,
     "ties": 0
    },
@@ -936,16 +957,16 @@
   "731283214563422208": [
    {
     "opponent": "909255939126161408",
-    "score": 12.5,
+    "score": 12.0,
     "wins": 2,
-    "losses": 7,
+    "losses": 6,
     "ties": 0
    },
    {
     "opponent": "995982448825720832",
-    "score": 8.0,
+    "score": 6.5,
     "wins": 3,
-    "losses": 4,
+    "losses": 3,
     "ties": 0
    }
   ],
@@ -994,6 +1015,22 @@
     "score": 8.0,
     "wins": 3,
     "losses": 4,
+    "ties": 0
+   }
+  ],
+  "1132133082238169088": [
+   {
+    "opponent": "915765963616985088",
+    "score": 0.5,
+    "wins": 0,
+    "losses": 1,
+    "ties": 0
+   },
+   {
+    "opponent": "995982448825720832",
+    "score": 0.5,
+    "wins": 0,
+    "losses": 1,
     "ties": 0
    }
   ],
@@ -1168,31 +1205,31 @@
   {
    "owner": "731283214563422208",
    "opponent": "909255939126161408",
-   "games": 9,
+   "games": 8,
    "wins": 2,
-   "losses": 7,
+   "losses": 6,
    "ties": 0,
    "playoff_meetings": 2,
-   "weighted_games": 15.0,
+   "weighted_games": 14.0,
    "weighted_wins": 5.0,
-   "weighted_losses": 10.0,
-   "balance": 0.667,
-   "score": 12.5,
+   "weighted_losses": 9.0,
+   "balance": 0.714,
+   "score": 12.0,
    "rank": 1
   },
   {
    "owner": "909255939126161408",
    "opponent": "731283214563422208",
-   "games": 9,
-   "wins": 7,
+   "games": 8,
+   "wins": 6,
    "losses": 2,
    "ties": 0,
    "playoff_meetings": 2,
-   "weighted_games": 15.0,
-   "weighted_wins": 10.0,
+   "weighted_games": 14.0,
+   "weighted_wins": 9.0,
    "weighted_losses": 5.0,
-   "balance": 0.667,
-   "score": 12.5,
+   "balance": 0.714,
+   "score": 12.0,
    "rank": 1
   },
   {
@@ -1228,31 +1265,31 @@
   {
    "owner": "731283214563422208",
    "opponent": "995982448825720832",
-   "games": 7,
+   "games": 6,
    "wins": 3,
-   "losses": 4,
+   "losses": 3,
    "ties": 0,
    "playoff_meetings": 1,
-   "weighted_games": 8.0,
+   "weighted_games": 7.0,
    "weighted_wins": 4.0,
-   "weighted_losses": 4.0,
-   "balance": 1.0,
-   "score": 8.0,
+   "weighted_losses": 3.0,
+   "balance": 0.857,
+   "score": 6.5,
    "rank": 2
   },
   {
    "owner": "995982448825720832",
    "opponent": "731283214563422208",
-   "games": 7,
-   "wins": 4,
+   "games": 6,
+   "wins": 3,
    "losses": 3,
    "ties": 0,
    "playoff_meetings": 1,
-   "weighted_games": 8.0,
-   "weighted_wins": 4.0,
+   "weighted_games": 7.0,
+   "weighted_wins": 3.0,
    "weighted_losses": 4.0,
-   "balance": 1.0,
-   "score": 8.0,
+   "balance": 0.857,
+   "score": 6.5,
    "rank": 1
   },
   {
@@ -1388,7 +1425,7 @@
    "weighted_losses": 1.0,
    "balance": 0.4,
    "score": 3.5,
-   "rank": 8
+   "rank": 7
   },
   {
    "owner": "861421486488031232",
@@ -1418,7 +1455,7 @@
    "weighted_losses": 0.0,
    "balance": 0.0,
    "score": 3.5,
-   "rank": 8
+   "rank": 7
   },
   {
    "owner": "861422415547318272",
@@ -1538,7 +1575,7 @@
    "weighted_losses": 1.0,
    "balance": 0.667,
    "score": 2.5,
-   "rank": 10
+   "rank": 7
   },
   {
    "owner": "853109226401288192",
@@ -1583,7 +1620,7 @@
    "weighted_losses": 1.0,
    "balance": 0.5,
    "score": 3.0,
-   "rank": 9
+   "rank": 8
   },
   {
    "owner": "745458998371008512",
@@ -1628,7 +1665,7 @@
    "weighted_losses": 2.0,
    "balance": 0.8,
    "score": 4.5,
-   "rank": 5
+   "rank": 4
   },
   {
    "owner": "995982448825720832",
@@ -1708,32 +1745,32 @@
   {
    "owner": "731283214563422208",
    "opponent": "915765963616985088",
-   "games": 5,
+   "games": 4,
    "wins": 2,
-   "losses": 3,
+   "losses": 2,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 5.0,
+   "weighted_games": 4.0,
    "weighted_wins": 2.0,
-   "weighted_losses": 3.0,
-   "balance": 0.8,
-   "score": 4.5,
+   "weighted_losses": 2.0,
+   "balance": 1.0,
+   "score": 4.0,
    "rank": 5
   },
   {
    "owner": "915765963616985088",
    "opponent": "731283214563422208",
-   "games": 5,
-   "wins": 3,
+   "games": 4,
+   "wins": 2,
    "losses": 2,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 5.0,
-   "weighted_wins": 3.0,
+   "weighted_games": 4.0,
+   "weighted_wins": 2.0,
    "weighted_losses": 2.0,
-   "balance": 0.8,
-   "score": 4.5,
-   "rank": 4
+   "balance": 1.0,
+   "score": 4.0,
+   "rank": 5
   },
   {
    "owner": "861417814836256768",
@@ -1828,31 +1865,31 @@
   {
    "owner": "731283214563422208",
    "opponent": "908808510823997440",
-   "games": 7,
+   "games": 6,
    "wins": 2,
-   "losses": 5,
+   "losses": 4,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 7.0,
+   "weighted_games": 6.0,
    "weighted_wins": 2.0,
-   "weighted_losses": 5.0,
-   "balance": 0.571,
-   "score": 5.5,
+   "weighted_losses": 4.0,
+   "balance": 0.667,
+   "score": 5.0,
    "rank": 3
   },
   {
    "owner": "908808510823997440",
    "opponent": "731283214563422208",
-   "games": 7,
-   "wins": 5,
+   "games": 6,
+   "wins": 4,
    "losses": 2,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 7.0,
-   "weighted_wins": 5.0,
+   "weighted_games": 6.0,
+   "weighted_wins": 4.0,
    "weighted_losses": 2.0,
-   "balance": 0.571,
-   "score": 5.5,
+   "balance": 0.667,
+   "score": 5.0,
    "rank": 3
   },
   {
@@ -1913,7 +1950,7 @@
    "weighted_losses": 3.0,
    "balance": 0.8,
    "score": 4.5,
-   "rank": 6
+   "rank": 5
   },
   {
    "owner": "861417814836256768",
@@ -1928,7 +1965,7 @@
    "weighted_losses": 1.0,
    "balance": 0.5,
    "score": 3.0,
-   "rank": 10
+   "rank": 9
   },
   {
    "owner": "908808510823997440",
@@ -2038,31 +2075,31 @@
   {
    "owner": "731283214563422208",
    "opponent": "733192747346997248",
-   "games": 4,
+   "games": 3,
    "wins": 1,
-   "losses": 3,
+   "losses": 2,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 4.0,
+   "weighted_games": 3.0,
    "weighted_wins": 1.0,
-   "weighted_losses": 3.0,
-   "balance": 0.5,
-   "score": 3.0,
-   "rank": 9
+   "weighted_losses": 2.0,
+   "balance": 0.667,
+   "score": 2.5,
+   "rank": 8
   },
   {
    "owner": "733192747346997248",
    "opponent": "731283214563422208",
-   "games": 4,
-   "wins": 3,
+   "games": 3,
+   "wins": 2,
    "losses": 1,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 4.0,
-   "weighted_wins": 3.0,
+   "weighted_games": 3.0,
+   "weighted_wins": 2.0,
    "weighted_losses": 1.0,
-   "balance": 0.5,
-   "score": 3.0,
+   "balance": 0.667,
+   "score": 2.5,
    "rank": 11
   },
   {
@@ -2138,7 +2175,7 @@
    "weighted_losses": 1.0,
    "balance": 0.667,
    "score": 2.5,
-   "rank": 9
+   "rank": 8
   },
   {
    "owner": "995982448825720832",
@@ -2168,7 +2205,7 @@
    "weighted_losses": 1.0,
    "balance": 0.667,
    "score": 2.5,
-   "rank": 11
+   "rank": 9
   },
   {
    "owner": "858765508143628288",
@@ -2393,7 +2430,7 @@
    "weighted_losses": 2.0,
    "balance": 0.8,
    "score": 4.5,
-   "rank": 7
+   "rank": 6
   },
   {
    "owner": "853109226401288192",
@@ -2488,32 +2525,32 @@
   {
    "owner": "731283214563422208",
    "opponent": "745458998371008512",
-   "games": 4,
-   "wins": 2,
+   "games": 3,
+   "wins": 1,
    "losses": 2,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 4.0,
-   "weighted_wins": 2.0,
+   "weighted_games": 3.0,
+   "weighted_wins": 1.0,
    "weighted_losses": 2.0,
-   "balance": 1.0,
-   "score": 4.0,
-   "rank": 7
+   "balance": 0.667,
+   "score": 2.5,
+   "rank": 10
   },
   {
    "owner": "745458998371008512",
    "opponent": "731283214563422208",
-   "games": 4,
+   "games": 3,
    "wins": 2,
-   "losses": 2,
+   "losses": 1,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 4.0,
+   "weighted_games": 3.0,
    "weighted_wins": 2.0,
-   "weighted_losses": 2.0,
-   "balance": 1.0,
-   "score": 4.0,
-   "rank": 7
+   "weighted_losses": 1.0,
+   "balance": 0.667,
+   "score": 2.5,
+   "rank": 9
   },
   {
    "owner": "908808510823997440",
@@ -2633,7 +2670,7 @@
    "weighted_losses": 1.0,
    "balance": 0.286,
    "score": 4.5,
-   "rank": 5
+   "rank": 4
   },
   {
    "owner": "861417814836256768",
@@ -2788,62 +2825,62 @@
   {
    "owner": "731283214563422208",
    "opponent": "861422415547318272",
-   "games": 6,
-   "wins": 4,
+   "games": 5,
+   "wins": 3,
    "losses": 2,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 6.0,
-   "weighted_wins": 4.0,
+   "weighted_games": 5.0,
+   "weighted_wins": 3.0,
    "weighted_losses": 2.0,
-   "balance": 0.667,
-   "score": 5.0,
+   "balance": 0.8,
+   "score": 4.5,
    "rank": 4
   },
   {
    "owner": "861422415547318272",
    "opponent": "731283214563422208",
-   "games": 6,
+   "games": 5,
    "wins": 2,
-   "losses": 4,
+   "losses": 3,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 6.0,
+   "weighted_games": 5.0,
    "weighted_wins": 2.0,
-   "weighted_losses": 4.0,
-   "balance": 0.667,
-   "score": 5.0,
-   "rank": 4
+   "weighted_losses": 3.0,
+   "balance": 0.8,
+   "score": 4.5,
+   "rank": 7
   },
   {
    "owner": "731283214563422208",
    "opponent": "861417814836256768",
-   "games": 4,
+   "games": 3,
    "wins": 2,
-   "losses": 2,
+   "losses": 1,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 4.0,
+   "weighted_games": 3.0,
    "weighted_wins": 2.0,
-   "weighted_losses": 2.0,
-   "balance": 1.0,
-   "score": 4.0,
-   "rank": 8
+   "weighted_losses": 1.0,
+   "balance": 0.667,
+   "score": 2.5,
+   "rank": 11
   },
   {
    "owner": "861417814836256768",
    "opponent": "731283214563422208",
-   "games": 4,
-   "wins": 2,
+   "games": 3,
+   "wins": 1,
    "losses": 2,
    "ties": 0,
    "playoff_meetings": 0,
-   "weighted_games": 4.0,
-   "weighted_wins": 2.0,
+   "weighted_games": 3.0,
+   "weighted_wins": 1.0,
    "weighted_losses": 2.0,
-   "balance": 1.0,
-   "score": 4.0,
-   "rank": 7
+   "balance": 0.667,
+   "score": 2.5,
+   "rank": 10
   },
   {
    "owner": "745458998371008512",
@@ -3026,6 +3063,66 @@
    "rank": 12
   },
   {
+   "owner": "1132133082238169088",
+   "opponent": "915765963616985088",
+   "games": 1,
+   "wins": 0,
+   "losses": 1,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 0.0,
+   "weighted_losses": 1.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 1
+  },
+  {
+   "owner": "915765963616985088",
+   "opponent": "1132133082238169088",
+   "games": 1,
+   "wins": 1,
+   "losses": 0,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 1.0,
+   "weighted_losses": 0.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 12
+  },
+  {
+   "owner": "1132133082238169088",
+   "opponent": "995982448825720832",
+   "games": 1,
+   "wins": 0,
+   "losses": 1,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 0.0,
+   "weighted_losses": 1.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 2
+  },
+  {
+   "owner": "995982448825720832",
+   "opponent": "1132133082238169088",
+   "games": 1,
+   "wins": 1,
+   "losses": 0,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 1.0,
+   "weighted_losses": 0.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 12
+  },
+  {
    "owner": "1416188424762720256",
    "opponent": "861421486488031232",
    "games": 1,
@@ -3051,6 +3148,36 @@
    "weighted_games": 1.0,
    "weighted_wins": 0.0,
    "weighted_losses": 1.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 12
+  },
+  {
+   "owner": "1132133082238169088",
+   "opponent": "861417814836256768",
+   "games": 1,
+   "wins": 0,
+   "losses": 1,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 0.0,
+   "weighted_losses": 1.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 3
+  },
+  {
+   "owner": "861417814836256768",
+   "opponent": "1132133082238169088",
+   "games": 1,
+   "wins": 1,
+   "losses": 0,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 1.0,
+   "weighted_losses": 0.0,
    "balance": 0.0,
    "score": 0.5,
    "rank": 12
@@ -3113,6 +3240,36 @@
    "weighted_losses": 0.0,
    "balance": 0.0,
    "score": 0.5,
+   "rank": 13
+  },
+  {
+   "owner": "1132133082238169088",
+   "opponent": "745458998371008512",
+   "games": 1,
+   "wins": 1,
+   "losses": 0,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 1.0,
+   "weighted_losses": 0.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 4
+  },
+  {
+   "owner": "745458998371008512",
+   "opponent": "1132133082238169088",
+   "games": 1,
+   "wins": 0,
+   "losses": 1,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 0.0,
+   "weighted_losses": 1.0,
+   "balance": 0.0,
+   "score": 0.5,
    "rank": 12
   },
   {
@@ -3141,6 +3298,36 @@
    "weighted_games": 1.0,
    "weighted_wins": 0.0,
    "weighted_losses": 1.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 13
+  },
+  {
+   "owner": "1132133082238169088",
+   "opponent": "909255939126161408",
+   "games": 1,
+   "wins": 0,
+   "losses": 1,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 0.0,
+   "weighted_losses": 1.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 5
+  },
+  {
+   "owner": "909255939126161408",
+   "opponent": "1132133082238169088",
+   "games": 1,
+   "wins": 1,
+   "losses": 0,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 1.0,
+   "weighted_losses": 0.0,
    "balance": 0.0,
    "score": 0.5,
    "rank": 12
@@ -3173,6 +3360,36 @@
    "weighted_losses": 0.0,
    "balance": 0.0,
    "score": 0.5,
+   "rank": 13
+  },
+  {
+   "owner": "1132133082238169088",
+   "opponent": "861422415547318272",
+   "games": 1,
+   "wins": 1,
+   "losses": 0,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 1.0,
+   "weighted_losses": 0.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 6
+  },
+  {
+   "owner": "861422415547318272",
+   "opponent": "1132133082238169088",
+   "games": 1,
+   "wins": 0,
+   "losses": 1,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 0.0,
+   "weighted_losses": 1.0,
+   "balance": 0.0,
+   "score": 0.5,
    "rank": 12
   },
   {
@@ -3203,7 +3420,67 @@
    "weighted_losses": 0.0,
    "balance": 0.0,
    "score": 0.5,
+   "rank": 13
+  },
+  {
+   "owner": "1132133082238169088",
+   "opponent": "733192747346997248",
+   "games": 1,
+   "wins": 0,
+   "losses": 1,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 0.0,
+   "weighted_losses": 1.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 7
+  },
+  {
+   "owner": "733192747346997248",
+   "opponent": "1132133082238169088",
+   "games": 1,
+   "wins": 1,
+   "losses": 0,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 1.0,
+   "weighted_losses": 0.0,
+   "balance": 0.0,
+   "score": 0.5,
    "rank": 12
+  },
+  {
+   "owner": "1132133082238169088",
+   "opponent": "908808510823997440",
+   "games": 1,
+   "wins": 0,
+   "losses": 1,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 0.0,
+   "weighted_losses": 1.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 8
+  },
+  {
+   "owner": "908808510823997440",
+   "opponent": "1132133082238169088",
+   "games": 1,
+   "wins": 1,
+   "losses": 0,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 1.0,
+   "weighted_losses": 0.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 13
   },
   {
    "owner": "1416188424762720256",
@@ -3233,25 +3510,10 @@
    "weighted_losses": 1.0,
    "balance": 0.0,
    "score": 0.5,
-   "rank": 12
+   "rank": 13
   },
   {
-   "owner": "1416188424762720256",
-   "opponent": "731283214563422208",
-   "games": 1,
-   "wins": 1,
-   "losses": 0,
-   "ties": 0,
-   "playoff_meetings": 0,
-   "weighted_games": 1.0,
-   "weighted_wins": 1.0,
-   "weighted_losses": 0.0,
-   "balance": 0.0,
-   "score": 0.5,
-   "rank": 9
-  },
-  {
-   "owner": "731283214563422208",
+   "owner": "1132133082238169088",
    "opponent": "1416188424762720256",
    "games": 1,
    "wins": 0,
@@ -3263,7 +3525,22 @@
    "weighted_losses": 1.0,
    "balance": 0.0,
    "score": 0.5,
-   "rank": 12
+   "rank": 9
+  },
+  {
+   "owner": "1416188424762720256",
+   "opponent": "1132133082238169088",
+   "games": 1,
+   "wins": 1,
+   "losses": 0,
+   "ties": 0,
+   "playoff_meetings": 0,
+   "weighted_games": 1.0,
+   "weighted_wins": 1.0,
+   "weighted_losses": 0.0,
+   "balance": 0.0,
+   "score": 0.5,
+   "rank": 9
   }
  ],
  "drafts": [
@@ -9853,37 +10130,23 @@
     {
      "player": "Jalen Hurts",
      "pos": "QB",
-     "points": 1045.48,
-     "games": 50,
+     "points": 965.46,
+     "games": 45,
      "seasons": [
       2023,
       2024,
-      2025,
-      2026
+      2025
      ]
     },
     {
      "player": "Drake London",
      "pos": "WR",
-     "points": 631.6,
-     "games": 44,
+     "points": 510.0,
+     "games": 35,
      "seasons": [
       2023,
       2024,
-      2025,
-      2026
-     ]
-    },
-    {
-     "player": "Dallas Goedert",
-     "pos": "TE",
-     "points": 438.1,
-     "games": 40,
-     "seasons": [
-      2023,
-      2024,
-      2025,
-      2026
+      2025
      ]
     },
     {
@@ -9898,14 +10161,14 @@
      ]
     },
     {
-     "player": "Javonte Williams",
-     "pos": "RB",
-     "points": 423.2,
-     "games": 29,
+     "player": "Dallas Goedert",
+     "pos": "TE",
+     "points": 373.9,
+     "games": 34,
      "seasons": [
+      2023,
       2024,
-      2025,
-      2026
+      2025
      ]
     },
     {
@@ -9929,6 +10192,16 @@
      ]
     },
     {
+     "player": "Javonte Williams",
+     "pos": "RB",
+     "points": 263.6,
+     "games": 20,
+     "seasons": [
+      2024,
+      2025
+     ]
+    },
+    {
      "player": "Justin Tucker",
      "pos": "K",
      "points": 257.0,
@@ -9936,16 +10209,6 @@
      "seasons": [
       2023,
       2024
-     ]
-    },
-    {
-     "player": "RJ Harvey",
-     "pos": "RB",
-     "points": 247.7,
-     "games": 22,
-     "seasons": [
-      2025,
-      2026
      ]
     },
     {
@@ -9962,33 +10225,12 @@
     {
      "player": "Buffalo Bills",
      "pos": "DEF",
-     "points": 228.0,
-     "games": 22,
+     "points": 214.0,
+     "games": 19,
      "seasons": [
       2023,
       2024,
-      2025,
-      2026
-     ]
-    },
-    {
-     "player": "Quinshon Judkins",
-     "pos": "RB",
-     "points": 225.9,
-     "games": 19,
-     "seasons": [
-      2025,
-      2026
-     ]
-    },
-    {
-     "player": "Will Reichard",
-     "pos": "K",
-     "points": 215.0,
-     "games": 22,
-     "seasons": [
-      2025,
-      2026
+      2025
      ]
     },
     {
@@ -10022,6 +10264,15 @@
      ]
     },
     {
+     "player": "RJ Harvey",
+     "pos": "RB",
+     "points": 180.3,
+     "games": 15,
+     "seasons": [
+      2025
+     ]
+    },
+    {
      "player": "Troy Franklin",
      "pos": "WR",
      "points": 162.4,
@@ -10031,15 +10282,32 @@
      ]
     },
     {
+     "player": "Will Reichard",
+     "pos": "K",
+     "points": 138.0,
+     "games": 15,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Quinshon Judkins",
+     "pos": "RB",
+     "points": 133.8,
+     "games": 11,
+     "seasons": [
+      2025
+     ]
+    },
+    {
      "player": "Cole Kmet",
      "pos": "TE",
-     "points": 93.5,
-     "games": 16,
+     "points": 91.2,
+     "games": 15,
      "seasons": [
       2023,
       2024,
-      2025,
-      2026
+      2025
      ]
     },
     {
@@ -10051,34 +10319,6 @@
       2023,
       2024,
       2025
-     ]
-    },
-    {
-     "player": "Carnell Tate",
-     "pos": "WR",
-     "points": 77.3,
-     "games": 7,
-     "seasons": [
-      2026
-     ]
-    },
-    {
-     "player": "Ryan Flournoy",
-     "pos": "WR",
-     "points": 72.8,
-     "games": 8,
-     "seasons": [
-      2026
-     ]
-    },
-    {
-     "player": "Tyler Shough",
-     "pos": "QB",
-     "points": 69.72,
-     "games": 4,
-     "seasons": [
-      2025,
-      2026
      ]
     },
     {
@@ -10101,12 +10341,40 @@
      ]
     },
     {
-     "player": "Mike Gesicki",
-     "pos": "TE",
-     "points": 53.8,
+     "player": "San Francisco 49ers",
+     "pos": "DEF",
+     "points": 41.0,
      "games": 5,
      "seasons": [
-      2026
+      2025
+     ]
+    },
+    {
+     "player": "Joshua Palmer",
+     "pos": "WR",
+     "points": 36.6,
+     "games": 4,
+     "seasons": [
+      2023,
+      2024
+     ]
+    },
+    {
+     "player": "Dallas Cowboys",
+     "pos": "DEF",
+     "points": 36.0,
+     "games": 2,
+     "seasons": [
+      2024
+     ]
+    },
+    {
+     "player": "Mack Hollins",
+     "pos": "WR",
+     "points": 35.2,
+     "games": 5,
+     "seasons": [
+      2025
      ]
     }
    ],
@@ -10114,23 +10382,12 @@
     {
      "player": "Jalen Hurts",
      "pos": "QB",
-     "points": 1045.48,
-     "games": 50,
+     "points": 965.46,
+     "games": 45,
      "seasons": [
       2023,
       2024,
-      2025,
-      2026
-     ]
-    },
-    {
-     "player": "Tyler Shough",
-     "pos": "QB",
-     "points": 69.72,
-     "games": 4,
-     "seasons": [
-      2025,
-      2026
+      2025
      ]
     },
     {
@@ -10143,21 +10400,21 @@
      ]
     },
     {
+     "player": "Tyler Shough",
+     "pos": "QB",
+     "points": 9.24,
+     "games": 1,
+     "seasons": [
+      2025
+     ]
+    },
+    {
      "player": "Deshaun Watson",
      "pos": "QB",
      "points": 8.4,
      "games": 1,
      "seasons": [
       2024
-     ]
-    },
-    {
-     "player": "Tanner McKee",
-     "pos": "QB",
-     "points": 6.98,
-     "games": 1,
-     "seasons": [
-      2026
      ]
     }
    ],
@@ -10174,17 +10431,6 @@
      ]
     },
     {
-     "player": "Javonte Williams",
-     "pos": "RB",
-     "points": 423.2,
-     "games": 29,
-     "seasons": [
-      2024,
-      2025,
-      2026
-     ]
-    },
-    {
      "player": "Derrick Henry",
      "pos": "RB",
      "points": 282.96,
@@ -10195,23 +10441,13 @@
      ]
     },
     {
-     "player": "RJ Harvey",
+     "player": "Javonte Williams",
      "pos": "RB",
-     "points": 247.7,
-     "games": 22,
+     "points": 263.6,
+     "games": 20,
      "seasons": [
-      2025,
-      2026
-     ]
-    },
-    {
-     "player": "Quinshon Judkins",
-     "pos": "RB",
-     "points": 225.9,
-     "games": 19,
-     "seasons": [
-      2025,
-      2026
+      2024,
+      2025
      ]
     },
     {
@@ -10222,6 +10458,24 @@
      "seasons": [
       2023,
       2024
+     ]
+    },
+    {
+     "player": "RJ Harvey",
+     "pos": "RB",
+     "points": 180.3,
+     "games": 15,
+     "seasons": [
+      2025
+     ]
+    },
+    {
+     "player": "Quinshon Judkins",
+     "pos": "RB",
+     "points": 133.8,
+     "games": 11,
+     "seasons": [
+      2025
      ]
     },
     {
@@ -10259,28 +10513,18 @@
      "seasons": [
       2024
      ]
-    },
-    {
-     "player": "Michael Carter",
-     "pos": "RB",
-     "points": 0.0,
-     "games": 1,
-     "seasons": [
-      2026
-     ]
     }
    ],
    "WR": [
     {
      "player": "Drake London",
      "pos": "WR",
-     "points": 631.6,
-     "games": 44,
+     "points": 510.0,
+     "games": 35,
      "seasons": [
       2023,
       2024,
-      2025,
-      2026
+      2025
      ]
     },
     {
@@ -10331,24 +10575,6 @@
      "games": 14,
      "seasons": [
       2025
-     ]
-    },
-    {
-     "player": "Carnell Tate",
-     "pos": "WR",
-     "points": 77.3,
-     "games": 7,
-     "seasons": [
-      2026
-     ]
-    },
-    {
-     "player": "Ryan Flournoy",
-     "pos": "WR",
-     "points": 72.8,
-     "games": 8,
-     "seasons": [
-      2026
      ]
     },
     {
@@ -10399,15 +10625,6 @@
      ]
     },
     {
-     "player": "Antonio Williams",
-     "pos": "WR",
-     "points": 5.5,
-     "games": 1,
-     "seasons": [
-      2026
-     ]
-    },
-    {
      "player": "Devaughn Vele",
      "pos": "WR",
      "points": 2.6,
@@ -10421,34 +10638,23 @@
     {
      "player": "Dallas Goedert",
      "pos": "TE",
-     "points": 438.1,
-     "games": 40,
+     "points": 373.9,
+     "games": 34,
      "seasons": [
       2023,
       2024,
-      2025,
-      2026
+      2025
      ]
     },
     {
      "player": "Cole Kmet",
      "pos": "TE",
-     "points": 93.5,
-     "games": 16,
+     "points": 91.2,
+     "games": 15,
      "seasons": [
       2023,
       2024,
-      2025,
-      2026
-     ]
-    },
-    {
-     "player": "Mike Gesicki",
-     "pos": "TE",
-     "points": 53.8,
-     "games": 5,
-     "seasons": [
-      2026
+      2025
      ]
     },
     {
@@ -10468,15 +10674,6 @@
      "seasons": [
       2023
      ]
-    },
-    {
-     "player": "Tyler Higbee",
-     "pos": "TE",
-     "points": 3.4,
-     "games": 1,
-     "seasons": [
-      2026
-     ]
     }
    ],
    "K": [
@@ -10493,20 +10690,10 @@
     {
      "player": "Will Reichard",
      "pos": "K",
-     "points": 215.0,
-     "games": 22,
+     "points": 138.0,
+     "games": 15,
      "seasons": [
-      2025,
-      2026
-     ]
-    },
-    {
-     "player": "Trey Smack",
-     "pos": "K",
-     "points": 16.0,
-     "games": 2,
-     "seasons": [
-      2026
+      2025
      ]
     },
     {
@@ -10541,13 +10728,12 @@
     {
      "player": "Buffalo Bills",
      "pos": "DEF",
-     "points": 228.0,
-     "games": 22,
+     "points": 214.0,
+     "games": 19,
      "seasons": [
       2023,
       2024,
-      2025,
-      2026
+      2025
      ]
     },
     {
@@ -10564,11 +10750,10 @@
     {
      "player": "San Francisco 49ers",
      "pos": "DEF",
-     "points": 51.0,
-     "games": 7,
+     "points": 41.0,
+     "games": 5,
      "seasons": [
-      2025,
-      2026
+      2025
      ]
     },
     {
@@ -10608,15 +10793,6 @@
      ]
     },
     {
-     "player": "Cincinnati Bengals",
-     "pos": "DEF",
-     "points": 21.0,
-     "games": 3,
-     "seasons": [
-      2026
-     ]
-    },
-    {
      "player": "Washington Commanders",
      "pos": "DEF",
      "points": 18.0,
@@ -10633,15 +10809,6 @@
      "games": 1,
      "seasons": [
       2024
-     ]
-    },
-    {
-     "player": "Cleveland Browns",
-     "pos": "DEF",
-     "points": 6.0,
-     "games": 1,
-     "seasons": [
-      2026
      ]
     }
    ]
@@ -13064,6 +13231,400 @@
     }
    ]
   },
+  "1132133082238169088": {
+   "overall": [
+    {
+     "player": "Javonte Williams",
+     "pos": "RB",
+     "points": 159.6,
+     "games": 9,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Drake London",
+     "pos": "WR",
+     "points": 121.6,
+     "games": 9,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Quinshon Judkins",
+     "pos": "RB",
+     "points": 92.1,
+     "games": 8,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Jalen Hurts",
+     "pos": "QB",
+     "points": 80.02,
+     "games": 5,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Carnell Tate",
+     "pos": "WR",
+     "points": 77.3,
+     "games": 7,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Will Reichard",
+     "pos": "K",
+     "points": 77.0,
+     "games": 7,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Ryan Flournoy",
+     "pos": "WR",
+     "points": 72.8,
+     "games": 8,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "RJ Harvey",
+     "pos": "RB",
+     "points": 67.4,
+     "games": 7,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Dallas Goedert",
+     "pos": "TE",
+     "points": 64.2,
+     "games": 6,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Tyler Shough",
+     "pos": "QB",
+     "points": 60.48,
+     "games": 3,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Mike Gesicki",
+     "pos": "TE",
+     "points": 53.8,
+     "games": 5,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Cincinnati Bengals",
+     "pos": "DEF",
+     "points": 21.0,
+     "games": 3,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Trey Smack",
+     "pos": "K",
+     "points": 16.0,
+     "games": 2,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Buffalo Bills",
+     "pos": "DEF",
+     "points": 14.0,
+     "games": 3,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "San Francisco 49ers",
+     "pos": "DEF",
+     "points": 10.0,
+     "games": 2,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Tanner McKee",
+     "pos": "QB",
+     "points": 6.98,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Cleveland Browns",
+     "pos": "DEF",
+     "points": 6.0,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Antonio Williams",
+     "pos": "WR",
+     "points": 5.5,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Tyler Higbee",
+     "pos": "TE",
+     "points": 3.4,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Cole Kmet",
+     "pos": "TE",
+     "points": 2.3,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Michael Carter",
+     "pos": "RB",
+     "points": 0.0,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "QB": [
+    {
+     "player": "Jalen Hurts",
+     "pos": "QB",
+     "points": 80.02,
+     "games": 5,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Tyler Shough",
+     "pos": "QB",
+     "points": 60.48,
+     "games": 3,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Tanner McKee",
+     "pos": "QB",
+     "points": 6.98,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "RB": [
+    {
+     "player": "Javonte Williams",
+     "pos": "RB",
+     "points": 159.6,
+     "games": 9,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Quinshon Judkins",
+     "pos": "RB",
+     "points": 92.1,
+     "games": 8,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "RJ Harvey",
+     "pos": "RB",
+     "points": 67.4,
+     "games": 7,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Michael Carter",
+     "pos": "RB",
+     "points": 0.0,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "WR": [
+    {
+     "player": "Drake London",
+     "pos": "WR",
+     "points": 121.6,
+     "games": 9,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Carnell Tate",
+     "pos": "WR",
+     "points": 77.3,
+     "games": 7,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Ryan Flournoy",
+     "pos": "WR",
+     "points": 72.8,
+     "games": 8,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Antonio Williams",
+     "pos": "WR",
+     "points": 5.5,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "TE": [
+    {
+     "player": "Dallas Goedert",
+     "pos": "TE",
+     "points": 64.2,
+     "games": 6,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Mike Gesicki",
+     "pos": "TE",
+     "points": 53.8,
+     "games": 5,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Tyler Higbee",
+     "pos": "TE",
+     "points": 3.4,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Cole Kmet",
+     "pos": "TE",
+     "points": 2.3,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "K": [
+    {
+     "player": "Will Reichard",
+     "pos": "K",
+     "points": 77.0,
+     "games": 7,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Trey Smack",
+     "pos": "K",
+     "points": 16.0,
+     "games": 2,
+     "seasons": [
+      2026
+     ]
+    }
+   ],
+   "DEF": [
+    {
+     "player": "Cincinnati Bengals",
+     "pos": "DEF",
+     "points": 21.0,
+     "games": 3,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Buffalo Bills",
+     "pos": "DEF",
+     "points": 14.0,
+     "games": 3,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "San Francisco 49ers",
+     "pos": "DEF",
+     "points": 10.0,
+     "games": 2,
+     "seasons": [
+      2026
+     ]
+    },
+    {
+     "player": "Cleveland Browns",
+     "pos": "DEF",
+     "points": 6.0,
+     "games": 1,
+     "seasons": [
+      2026
+     ]
+    }
+   ]
+  },
   "1416188424762720256": {
    "overall": [
     {
@@ -13486,6 +14047,7 @@
      2026
     ],
     "owners": [
+     "1132133082238169088",
      "731283214563422208"
     ]
    },
@@ -13861,6 +14423,7 @@
      2026
     ],
     "owners": [
+     "1132133082238169088",
      "731283214563422208"
     ]
    },
@@ -14392,6 +14955,7 @@
      2026
     ],
     "owners": [
+     "1132133082238169088",
      "731283214563422208"
     ]
    },
@@ -14660,6 +15224,7 @@
      2026
     ],
     "owners": [
+     "1132133082238169088",
      "731283214563422208",
      "745458998371008512",
      "861422415547318272",

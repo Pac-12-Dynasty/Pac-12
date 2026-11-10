@@ -50,7 +50,7 @@
  "10232": {
   "age": 26,
   "birth_date": "2000-02-23",
-  "injury": "Out",
+  "injury": "IR",
   "injury_part": "Neck",
   "name": "Michael Wilson",
   "pos": "WR",
@@ -524,7 +524,7 @@
   "pos": "QB",
   "pos_rank": "QB34",
   "rank": 218,
-  "team": "LV",
+  "team": "MIN",
   "value": 64
  },
  "11783": {
@@ -1808,7 +1808,7 @@
   "pos": "WR",
   "pos_rank": "WR102",
   "rank": 238,
-  "team": "IND",
+  "team": "SF",
   "value": 41
  },
  "1945": {
@@ -3122,7 +3122,7 @@
  "8161": {
   "age": 27,
   "birth_date": "1999-05-25",
-  "injury": "Questionable",
+  "injury": "IR",
   "injury_part": "Groin",
   "name": "Malik Willis",
   "pos": "QB",
@@ -3416,7 +3416,7 @@
   "pos": "WR",
   "pos_rank": "WR43",
   "rank": 99,
-  "team": "IND",
+  "team": "KC",
   "value": 983
  },
  "9501": {
