@@ -1622,8 +1622,8 @@
  "13402": {
   "age": 24,
   "birth_date": "2002-07-05",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Out",
+  "injury_part": "Coach's Decision",
   "name": "Skyler Bell",
   "pos": "WR",
   "pos_rank": "WR99",
