@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T10:46+00:00",
+ "generated": "2026-11-11T23:42+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
@@ -60,6 +60,119 @@
   }
  },
  "trades": [
+  {
+   "grades": {
+    "version": 5,
+    "teams": {
+     "745458998371008512": {
+      "net": 1358,
+      "impact": [
+       {
+        "name": "Jordyn Tyson",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 825,
+      "market_got": 2719,
+      "window": "Contender",
+      "unvalued": [],
+      "grade": "B",
+      "score": 1830,
+      "gap": 3244
+     },
+     "1416188424762720256": {
+      "net": -1886,
+      "impact": [
+       {
+        "name": "Khalil Shakir",
+        "starts": true,
+        "slot": "WR"
+       }
+      ],
+      "market_given": 2719,
+      "market_got": 825,
+      "window": "Middle",
+      "unvalued": [],
+      "grade": "F",
+      "score": -2226,
+      "gap": -3244
+     }
+    },
+    "pick_values": {
+     "2027-3-915765963616985088": 26,
+     "2027-4-861422415547318272": 11,
+     "2027-2-745458998371008512": 207
+    }
+   },
+   "id": "1426361867567108096",
+   "season": 2026,
+   "week": 10,
+   "date": "2026-11-11T21:59+00:00",
+   "sides": [
+    {
+     "owner": "745458998371008512",
+     "players": [
+      {
+       "id": "13281",
+       "name": "Jordyn Tyson",
+       "pos": "WR",
+       "was_pos_rank": "WR162",
+       "was_rank": 402,
+       "was_basis": "2026 Wk 1-9",
+       "now_pos_rank": "WR162",
+       "now_rank": 402,
+       "now_basis": "2026 so far",
+       "was_value": 2693
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 3,
+       "original_owner": "915765963616985088",
+       "was_value": 26,
+       "value_basis": "original_owner"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "1416188424762720256",
+     "players": [
+      {
+       "id": "8134",
+       "name": "Khalil Shakir",
+       "pos": "WR",
+       "was_pos_rank": "WR39",
+       "was_rank": 110,
+       "was_basis": "2026 Wk 1-9",
+       "now_pos_rank": "WR39",
+       "now_rank": 110,
+       "now_basis": "2026 so far",
+       "was_value": 607
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 4,
+       "original_owner": "861422415547318272",
+       "was_value": 11,
+       "value_basis": "original_owner"
+      },
+      {
+       "season": 2027,
+       "round": 2,
+       "original_owner": "745458998371008512",
+       "was_value": 207,
+       "value_basis": "original_owner"
+      }
+     ],
+     "faab": 0
+    }
+   ]
+  },
   {
    "grades": {
     "version": 5,

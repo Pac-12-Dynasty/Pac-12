@@ -14,8 +14,8 @@
  "10219": {
   "age": 27,
   "birth_date": "1999-09-26",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hand",
   "name": "Chris Rodriguez Jr.",
   "pos": "RB",
   "pos_rank": "RB52",
@@ -62,8 +62,8 @@
  "10236": {
   "age": 27,
   "birth_date": "1999-10-18",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Dalton Kincaid",
   "pos": "TE",
   "pos_rank": "TE7",
@@ -230,8 +230,8 @@
  "11581": {
   "age": 25,
   "birth_date": "2001-01-05",
-  "injury": "Questionable",
-  "injury_part": "Knee",
+  "injury": "",
+  "injury_part": "",
   "name": "MarShawn Lloyd",
   "pos": "RB",
   "pos_rank": "RB61",
@@ -350,8 +350,8 @@
  "11624": {
   "age": 23,
   "birth_date": "2003-04-27",
-  "injury": "Questionable",
-  "injury_part": "Hamstring",
+  "injury": "",
+  "injury_part": "",
   "name": "Xavier Worthy",
   "pos": "WR",
   "pos_rank": "WR51",
@@ -398,8 +398,8 @@
  "11628": {
   "age": 24,
   "birth_date": "2002-08-11",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hamstring",
   "name": "Marvin Harrison Jr.",
   "pos": "WR",
   "pos_rank": "WR38",
@@ -602,8 +602,8 @@
  "12474": {
   "age": 25,
   "birth_date": "2000-12-29",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Knee",
   "name": "Woody Marks",
   "pos": "RB",
   "pos_rank": "RB41",
@@ -674,8 +674,8 @@
  "12490": {
   "age": 23,
   "birth_date": "2003-02-14",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Bhayshul Tuten",
   "pos": "RB",
   "pos_rank": "RB13",
@@ -794,8 +794,8 @@
  "12506": {
   "age": 22,
   "birth_date": "2004-07-20",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Groin",
   "name": "Harold Fannin Jr.",
   "pos": "TE",
   "pos_rank": "TE8",
@@ -962,7 +962,7 @@
  "12529": {
   "age": 24,
   "birth_date": "2002-10-22",
-  "injury": "Questionable",
+  "injury": "Out",
   "injury_part": "Illness",
   "name": "TreVeyon Henderson",
   "pos": "RB",
@@ -1202,8 +1202,8 @@
  "13276": {
   "age": 22,
   "birth_date": "2003-12-14",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Omar Cooper Jr.",
   "pos": "WR",
   "pos_rank": "WR41",
@@ -1430,8 +1430,8 @@
  "13311": {
   "age": 22,
   "birth_date": "2004-06-07",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Knee",
   "name": "Chris Bell",
   "pos": "WR",
   "pos_rank": "WR55",
@@ -1538,8 +1538,8 @@
  "13346": {
   "age": 22,
   "birth_date": "2003-12-06",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Toe",
   "name": "Denzel Boston",
   "pos": "WR",
   "pos_rank": "WR31",
@@ -1778,8 +1778,8 @@
  "13545": {
   "age": 23,
   "birth_date": "2003-06-12",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Calf",
   "name": "Trey Smack",
   "pos": "K",
   "pos_rank": "",
@@ -1898,8 +1898,8 @@
  "3163": {
   "age": 32,
   "birth_date": "1994-10-14",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Chest",
   "name": "Jared Goff",
   "pos": "QB",
   "pos_rank": "QB14",
@@ -1922,8 +1922,8 @@
  "3214": {
   "age": 31,
   "birth_date": "1994-12-07",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Foot",
   "name": "Hunter Henry",
   "pos": "TE",
   "pos_rank": "TE25",
@@ -1943,6 +1943,18 @@
   "team": "LAR",
   "value": 5
  },
+ "3286": {
+  "age": 32,
+  "birth_date": "1994-09-21",
+  "injury": "",
+  "injury_part": "",
+  "name": "Demarcus Robinson",
+  "pos": "WR",
+  "pos_rank": "WR167",
+  "rank": 443,
+  "team": "SF",
+  "value": 2
+ },
  "3294": {
   "age": 33,
   "birth_date": "1993-07-29",
@@ -1958,7 +1970,7 @@
  "3321": {
   "age": 31,
   "birth_date": "1994-03-01",
-  "injury": "Questionable",
+  "injury": "",
   "injury_part": "Knee - ACL",
   "name": "Tyreek Hill",
   "pos": "WR",
@@ -1994,8 +2006,8 @@
  "4017": {
   "age": 31,
   "birth_date": "1995-09-14",
-  "injury": "Questionable",
-  "injury_part": "Concussion",
+  "injury": "",
+  "injury_part": "",
   "name": "Deshaun Watson",
   "pos": "QB",
   "pos_rank": "QB38",
@@ -2018,8 +2030,8 @@
  "4035": {
   "age": 31,
   "birth_date": "1995-07-25",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Back",
   "name": "Alvin Kamara",
   "pos": "RB",
   "pos_rank": "RB58",
@@ -2054,8 +2066,8 @@
  "4046": {
   "age": 31,
   "birth_date": "1995-09-17",
-  "injury": "Questionable",
-  "injury_part": "Elbow",
+  "injury": "",
+  "injury_part": "",
   "name": "Patrick Mahomes",
   "pos": "QB",
   "pos_rank": "QB4",
@@ -2134,18 +2146,6 @@
   "rank": 91,
   "team": "SF",
   "value": 1306
- },
- "4227": {
-  "age": 31,
-  "birth_date": "1995-07-14",
-  "injury": "",
-  "injury_part": "",
-  "name": "Harrison Butker",
-  "pos": "K",
-  "pos_rank": "",
-  "rank": null,
-  "team": "KC",
-  "value": null
  },
  "4866": {
   "age": 29,
@@ -2294,8 +2294,8 @@
  "5844": {
   "age": 29,
   "birth_date": "1997-07-03",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Wrist",
   "name": "T.J. Hockenson",
   "pos": "TE",
   "pos_rank": "TE21",
@@ -2390,8 +2390,8 @@
  "5947": {
   "age": 30,
   "birth_date": "1996-11-09",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ankle",
   "name": "Jakobi Meyers",
   "pos": "WR",
   "pos_rank": "WR50",
@@ -2714,8 +2714,8 @@
  "7547": {
   "age": 27,
   "birth_date": "1999-10-24",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Ribs",
   "name": "Amon-Ra St. Brown",
   "pos": "WR",
   "pos_rank": "WR3",
@@ -2746,6 +2746,18 @@
   "rank": 455,
   "team": "PHI",
   "value": 2
+ },
+ "7562": {
+  "age": 27,
+  "birth_date": "1999-10-07",
+  "injury": "",
+  "injury_part": "",
+  "name": "Tutu Atwell",
+  "pos": "WR",
+  "pos_rank": "WR136",
+  "rank": 337,
+  "team": "LAR",
+  "value": 7
  },
  "7564": {
   "age": 26,
@@ -2914,6 +2926,18 @@
   "rank": 121,
   "team": "NE",
   "value": 535
+ },
+ "8122": {
+  "age": 25,
+  "birth_date": "2001-04-11",
+  "injury": "Questionable",
+  "injury_part": "Concussion",
+  "name": "Zonovan Knight",
+  "pos": "RB",
+  "pos_rank": "RB102",
+  "rank": 371,
+  "team": "ARI",
+  "value": 4
  },
  "8126": {
   "age": 25,
@@ -3347,18 +3371,6 @@
   "team": "GB",
   "value": 3036
  },
- "9486": {
-  "age": 25,
-  "birth_date": "2001-06-16",
-  "injury": "Out",
-  "injury_part": "Ankle",
-  "name": "Dontayvion Wicks",
-  "pos": "WR",
-  "pos_rank": "WR83",
-  "rank": 197,
-  "team": "PHI",
-  "value": 118
- },
  "9487": {
   "age": 24,
   "birth_date": "2002-03-21",
@@ -3386,7 +3398,7 @@
  "9493": {
   "age": 25,
   "birth_date": "2001-05-29",
-  "injury": "Doubtful",
+  "injury": "Out",
   "injury_part": "Knee - MCL",
   "name": "Puka Nacua",
   "pos": "WR",
@@ -3422,8 +3434,8 @@
  "9502": {
   "age": 27,
   "birth_date": "1999-10-29",
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Hand",
   "name": "Tank Dell",
   "pos": "WR",
   "pos_rank": "WR63",
@@ -3635,18 +3647,6 @@
   "team": "DET",
   "value": null
  },
- "GB": {
-  "age": null,
-  "birth_date": "",
-  "injury": "",
-  "injury_part": "",
-  "name": "Green Bay Packers",
-  "pos": "DEF",
-  "pos_rank": "",
-  "rank": null,
-  "team": "GB",
-  "value": null
- },
  "HOU": {
   "age": null,
   "birth_date": "",
@@ -3707,16 +3707,16 @@
   "team": "LAR",
   "value": null
  },
- "LV": {
+ "MIA": {
   "age": null,
   "birth_date": "",
   "injury": "",
   "injury_part": "",
-  "name": "Las Vegas Raiders",
+  "name": "Miami Dolphins",
   "pos": "DEF",
   "pos_rank": "",
   "rank": null,
-  "team": "LV",
+  "team": "MIA",
   "value": null
  },
  "MIN": {
@@ -3741,18 +3741,6 @@
   "pos_rank": "",
   "rank": null,
   "team": "NYG",
-  "value": null
- },
- "PHI": {
-  "age": null,
-  "birth_date": "",
-  "injury": "",
-  "injury_part": "",
-  "name": "Philadelphia Eagles",
-  "pos": "DEF",
-  "pos_rank": "",
-  "rank": null,
-  "team": "PHI",
   "value": null
  },
  "PIT": {
