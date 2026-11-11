@@ -182,8 +182,8 @@
  "11565": {
   "age": 23,
   "birth_date": "2003-01-20",
-  "injury": "Questionable",
-  "injury_part": "Undisclosed",
+  "injury": "",
+  "injury_part": "",
   "name": "J.J. McCarthy",
   "pos": "QB",
   "pos_rank": "QB31",
@@ -230,7 +230,7 @@
  "11581": {
   "age": 25,
   "birth_date": "2001-01-05",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Knee",
   "name": "MarShawn Lloyd",
   "pos": "RB",
@@ -350,7 +350,7 @@
  "11624": {
   "age": 23,
   "birth_date": "2003-04-27",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Hamstring",
   "name": "Xavier Worthy",
   "pos": "WR",
@@ -406,18 +406,6 @@
   "rank": 86,
   "team": "HOU",
   "value": 1435
- },
- "11630": {
-  "age": 25,
-  "birth_date": "2001-06-19",
-  "injury": "IR",
-  "injury_part": "Finger",
-  "name": "Roman Wilson",
-  "pos": "WR",
-  "pos_rank": "",
-  "rank": null,
-  "team": "PIT",
-  "value": null
  },
  "11631": {
   "age": 24,
@@ -626,8 +614,8 @@
  "12481": {
   "age": 24,
   "birth_date": "2002-02-05",
-  "injury": "Out",
-  "injury_part": "Hamstring",
+  "injury": "",
+  "injury_part": "",
   "name": "Cam Skattebo",
   "pos": "RB",
   "pos_rank": "RB25",
@@ -790,6 +778,18 @@
   "rank": 191,
   "team": "TEN",
   "value": 133
+ },
+ "12504": {
+  "age": 23,
+  "birth_date": "2003-08-14",
+  "injury": "",
+  "injury_part": "",
+  "name": "Kaleb Johnson",
+  "pos": "RB",
+  "pos_rank": "RB62",
+  "rank": 237,
+  "team": "GB",
+  "value": 42
  },
  "12506": {
   "age": 22,
@@ -962,7 +962,7 @@
  "12529": {
   "age": 24,
   "birth_date": "2002-10-22",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Illness",
   "name": "TreVeyon Henderson",
   "pos": "RB",
@@ -1055,18 +1055,6 @@
   "team": "NO",
   "value": 907
  },
- "12547": {
-  "age": 23,
-  "birth_date": "2002-11-13",
-  "injury": "",
-  "injury_part": "",
-  "name": "Kyle Williams",
-  "pos": "WR",
-  "pos_rank": "WR88",
-  "rank": 209,
-  "team": "NE",
-  "value": 74
- },
  "12641": {
   "age": 24,
   "birth_date": "2002-05-01",
@@ -1103,6 +1091,18 @@
   "team": "BAL",
   "value": null
  },
+ "12718": {
+  "age": 24,
+  "birth_date": "2002-10-24",
+  "injury": "",
+  "injury_part": "",
+  "name": "Konata Mumpfield",
+  "pos": "WR",
+  "pos_rank": "WR104",
+  "rank": 241,
+  "team": "LAR",
+  "value": 38
+ },
  "13150": {
   "age": 24,
   "birth_date": "2001-11-22",
@@ -1118,8 +1118,8 @@
  "13268": {
   "age": 23,
   "birth_date": "2003-05-28",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Elijah Sarratt",
   "pos": "WR",
   "pos_rank": "WR92",
@@ -1190,8 +1190,8 @@
  "13275": {
   "age": 23,
   "birth_date": "2002-12-21",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Ty Simpson",
   "pos": "QB",
   "pos_rank": "QB29",
@@ -1226,7 +1226,7 @@
  "13279": {
   "age": 21,
   "birth_date": "2005-01-19",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Shoulder",
   "name": "Carnell Tate",
   "pos": "WR",
@@ -1310,8 +1310,8 @@
  "13289": {
   "age": 22,
   "birth_date": "2004-03-08",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Drew Allar",
   "pos": "QB",
   "pos_rank": "QB57",
@@ -1370,8 +1370,8 @@
  "13298": {
   "age": 22,
   "birth_date": "2004-09-23",
-  "injury": "Questionable",
-  "injury_part": "Leg",
+  "injury": "",
+  "injury_part": "",
   "name": "KC Concepcion Jr.",
   "pos": "WR",
   "pos_rank": "WR30",
@@ -1466,7 +1466,7 @@
  "13320": {
   "age": 22,
   "birth_date": "2004-03-29",
-  "injury": "Out",
+  "injury": "Doubtful",
   "injury_part": "Hamstring",
   "name": "Zachariah Branch",
   "pos": "WR",
@@ -1610,7 +1610,7 @@
  "13380": {
   "age": 23,
   "birth_date": "2003-07-25",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Quadriceps",
   "name": "Brenen Thompson",
   "pos": "WR",
@@ -1622,8 +1622,8 @@
  "13402": {
   "age": 24,
   "birth_date": "2002-07-05",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Skyler Bell",
   "pos": "WR",
   "pos_rank": "WR99",
@@ -1646,8 +1646,8 @@
  "13404": {
   "age": 24,
   "birth_date": "2002-02-07",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Garrett Nussmeier",
   "pos": "QB",
   "pos_rank": "QB62",
@@ -1754,8 +1754,8 @@
  "13423": {
   "age": 23,
   "birth_date": "2003-06-28",
-  "injury": "Out",
-  "injury_part": "Coach's Decision",
+  "injury": "",
+  "injury_part": "",
   "name": "Eli Heidenreich",
   "pos": "RB",
   "pos_rank": "RB97",
@@ -1774,6 +1774,18 @@
   "rank": 250,
   "team": "IND",
   "value": 28
+ },
+ "13545": {
+  "age": 23,
+  "birth_date": "2003-06-12",
+  "injury": "",
+  "injury_part": "",
+  "name": "Trey Smack",
+  "pos": "K",
+  "pos_rank": "",
+  "rank": null,
+  "team": "GB",
+  "value": null
  },
  "13968": {
   "age": 22,
@@ -1823,18 +1835,6 @@
   "team": "PIT",
   "value": null
  },
- "2020": {
-  "age": 34,
-  "birth_date": "1991-11-12",
-  "injury": "",
-  "injury_part": "",
-  "name": "Cairo Santos",
-  "pos": "K",
-  "pos_rank": "",
-  "rank": null,
-  "team": "CHI",
-  "value": null
- },
  "2133": {
   "age": 33,
   "birth_date": "1992-12-24",
@@ -1850,7 +1850,7 @@
  "2216": {
   "age": 33,
   "birth_date": "1993-08-21",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Achilles",
   "name": "Mike Evans",
   "pos": "WR",
@@ -1894,18 +1894,6 @@
   "rank": null,
   "team": "SEA",
   "value": null
- },
- "3161": {
-  "age": 33,
-  "birth_date": "1992-12-30",
-  "injury": "",
-  "injury_part": "",
-  "name": "Carson Wentz",
-  "pos": "QB",
-  "pos_rank": "QB51",
-  "rank": 279,
-  "team": "MIN",
-  "value": 15
  },
  "3163": {
   "age": 32,
@@ -2006,7 +1994,7 @@
  "4017": {
   "age": 31,
   "birth_date": "1995-09-14",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Concussion",
   "name": "Deshaun Watson",
   "pos": "QB",
@@ -2330,7 +2318,7 @@
  "5849": {
   "age": 29,
   "birth_date": "1997-08-07",
-  "injury": "Out",
+  "injury": "Doubtful",
   "injury_part": "Hamstring",
   "name": "Kyler Murray",
   "pos": "QB",
@@ -2354,7 +2342,7 @@
  "5859": {
   "age": 29,
   "birth_date": "1997-06-30",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Knee",
   "name": "A.J. Brown",
   "pos": "WR",
@@ -2366,7 +2354,7 @@
  "5872": {
   "age": 30,
   "birth_date": "1996-01-15",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Hamstring",
   "name": "Deebo Samuel Sr.",
   "pos": "WR",
@@ -2378,7 +2366,7 @@
  "5892": {
   "age": 29,
   "birth_date": "1997-06-07",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Groin",
   "name": "David Montgomery",
   "pos": "RB",
@@ -2666,7 +2654,7 @@
  "7049": {
   "age": 29,
   "birth_date": "1997-07-10",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Calf",
   "name": "Jauan Jennings",
   "pos": "WR",
@@ -2858,7 +2846,7 @@
  "7611": {
   "age": 28,
   "birth_date": "1998-02-23",
-  "injury": "Out",
+  "injury": "Doubtful",
   "injury_part": "Knee",
   "name": "Rhamondre Stevenson",
   "pos": "RB",
@@ -3002,7 +2990,7 @@
  "8137": {
   "age": 25,
   "birth_date": "2001-03-04",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Hamstring",
   "name": "George Pickens",
   "pos": "WR",
@@ -3050,7 +3038,7 @@
  "8146": {
   "age": 26,
   "birth_date": "2000-07-22",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Concussion",
   "name": "Garrett Wilson",
   "pos": "WR",
@@ -3182,8 +3170,8 @@
  "8210": {
   "age": 27,
   "birth_date": "1999-09-08",
-  "injury": "Questionable",
-  "injury_part": "Hip",
+  "injury": "",
+  "injury_part": "",
   "name": "Chig Okonkwo",
   "pos": "TE",
   "pos_rank": "TE18",
@@ -3230,7 +3218,7 @@
  "8676": {
   "age": 28,
   "birth_date": "1998-08-31",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Knee",
   "name": "Rashid Shaheed",
   "pos": "WR",
@@ -3398,8 +3386,8 @@
  "9493": {
   "age": 25,
   "birth_date": "2001-05-29",
-  "injury": "Questionable",
-  "injury_part": "Knee",
+  "injury": "Doubtful",
+  "injury_part": "Knee - MCL",
   "name": "Puka Nacua",
   "pos": "WR",
   "pos_rank": "WR4",
@@ -3458,7 +3446,7 @@
  "9508": {
   "age": 25,
   "birth_date": "2001-06-15",
-  "injury": "Out",
+  "injury": "Questionable",
   "injury_part": "Knee",
   "name": "Tyjae Spears",
   "pos": "RB",
@@ -3575,18 +3563,6 @@
   "team": "BAL",
   "value": null
  },
- "BUF": {
-  "age": null,
-  "birth_date": "",
-  "injury": "",
-  "injury_part": "",
-  "name": "Buffalo Bills",
-  "pos": "DEF",
-  "pos_rank": "",
-  "rank": null,
-  "team": "BUF",
-  "value": null
- },
  "CHI": {
   "age": null,
   "birth_date": "",
@@ -3657,6 +3633,18 @@
   "pos_rank": "",
   "rank": null,
   "team": "DET",
+  "value": null
+ },
+ "GB": {
+  "age": null,
+  "birth_date": "",
+  "injury": "",
+  "injury_part": "",
+  "name": "Green Bay Packers",
+  "pos": "DEF",
+  "pos_rank": "",
+  "rank": null,
+  "team": "GB",
   "value": null
  },
  "HOU": {
@@ -3801,6 +3789,18 @@
   "pos_rank": "",
   "rank": null,
   "team": "SF",
+  "value": null
+ },
+ "TB": {
+  "age": null,
+  "birth_date": "",
+  "injury": "",
+  "injury_part": "",
+  "name": "Tampa Bay Buccaneers",
+  "pos": "DEF",
+  "pos_rank": "",
+  "rank": null,
+  "team": "TB",
   "value": null
  }
 }
