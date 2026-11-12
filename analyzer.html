@@ -108,7 +108,7 @@
         <div id="result"><p class="empty">Pick two teams and check what each side sends to see the grades.</p></div>
         <details class="how">
           <summary>How grades work</summary>
-          <p class="muted">Each player starts from his DynastyProcess dynasty value, adjusted for how he's scoring in this league this season and any injury. Draft picks use DynastyProcess pick values, with next year's picks projected from the original team's current standing. Playoff teams pick 7 through 12 in reverse order of the standings. The six non-playoff teams go through the draft lottery, so their picks are valued as the average of every pick they could land, weighted by their lottery odds.</p>
+          <p class="muted">Each player starts from the site's blended value: DynastyProcess expert rankings, FantasyCalc values from real trades, and this league's own trade history, put on one shared scale. Then his value is, adjusted for how he's scoring in this league this season and any injury. Draft picks use DynastyProcess pick values, with next year's picks projected from the original team's current standing. Playoff teams pick 7 through 12 in reverse order of the standings. The six non-playoff teams go through the draft lottery, so their picks are valued as the average of every pick they could land, weighted by their lottery odds.</p>
           <p class="muted">Value is split into win-now and long-term based on age and position. Contenders weigh win-now value more, and rebuilders weigh long-term value more, so the same trade can grade differently for each team.</p>
           <p class="muted">Values are also adjusted by league history: past trades show whether this league pays more or less than market for each position and pick round, and that's blended in, more strongly the more trades there are to learn from.</p>
           <p class="muted">Most important, every trade is judged by what it does to each team. The analyzer builds each team's best starting lineup before and after the trade. A player only adds full win-now value if he'd start for that team; bench players count a little as depth. That's why trading from a surplus to fill a hole can be a good deal for both sides.</p>
@@ -149,7 +149,7 @@
   <script>
     // Defaults, used if analyzer-settings.js is missing or leaves something out
     var DEFAULTS = {
-      blend: { own: 0.75, gap: 0.25 }, gradeGaps: { big: 2000, small: 1000 }, studPower: 1.25, leagueWeight: 1,
+      blend: { own: 0.75, gap: 0.25 }, gradeGaps: { big: 2000, small: 1000 }, studPower: 1.25, leagueWeight: 0,
       production: [{ upTo: 5, change: 0.10 }, { upTo: 12, change: 0.05 }, { upTo: 24, change: 0 }, { upTo: 36, change: -0.05 }, { upTo: 999, change: -0.10 }],
       injury: { Out: -0.08, IR: -0.08, PUP: -0.08, Sus: -0.05, Doubtful: -0.04 },
       ages: { QB: { peak: 26, cliff: 34 }, RB: { peak: 23, cliff: 28 }, WR: { peak: 24, cliff: 30 }, TE: { peak: 25, cliff: 31 } },
