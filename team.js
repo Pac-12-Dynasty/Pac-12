@@ -481,7 +481,7 @@
     // Ranking source disclaimer
     var note = document.createElement("p");
     note.className = "status";
-    note.innerHTML = 'Player ranks are 1QB dynasty rankings from <a href="https://github.com/dynastyprocess/data" target="_blank" rel="noopener">DynastyProcess</a>, based on FantasyPros dynasty expert consensus and updated weekly. Kickers and defenses are not ranked. Ranks are for reference only and are not official league values.';
+    note.innerHTML = 'Player ranks blend <a href="https://github.com/dynastyprocess/data" target="_blank" rel="noopener">DynastyProcess</a> expert rankings, <a href="https://fantasycalc.com" target="_blank" rel="noopener">FantasyCalc</a> trade values, and this league\'s own trade history, updated daily. Ranks are for reference only and are not official league values.';
     document.querySelector("main").appendChild(note);
 
     statusEl.textContent = "Live from Sleeper. Last loaded " + new Date().toLocaleString() + ".";
