@@ -100,7 +100,8 @@
           losses: s.losses || 0,
           ties: s.ties || 0,
           pf: points(s.fpts, s.fpts_decimal),
-          pa: points(s.fpts_against, s.fpts_against_decimal)
+          pa: points(s.fpts_against, s.fpts_against_decimal),
+          roster: r.roster_id
         };
       });
 
@@ -121,7 +122,7 @@
           "<td>" + t.pf.toFixed(2) + "</td>" +
           "<td>" + t.pa.toFixed(2) + "</td>";
         var link = tr.cells[1].firstChild;
-        link.href = pageFor(t.name);
+        link.href = "team.html?roster=" + t.roster;
         link.textContent = t.name;
         tr.dataset.rank = String(i + 1);
         body.appendChild(tr);
