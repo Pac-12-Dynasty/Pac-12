@@ -330,15 +330,28 @@
              (points(sb.fpts, sb.fpts_decimal) - points(sa.fpts, sa.fpts_decimal));
     });
 
+    // Which team: team.html?roster=3 or ?owner=<Sleeper user id> (never breaks when a team is
+    // renamed), otherwise the page's filename matched to the current team name
+    var params = new URLSearchParams(location.search);
+    var byRoster = params.get("roster"), byOwner = params.get("owner");
     var target = pageSlug(), roster = null, user = null;
+    function loose(s) { return String(s || "").replace(/[^a-z0-9]/g, ""); }
     rosters.forEach(function (r) {
       var u = userById[r.owner_id];
-      if (slug(teamName(u, r)) === target) { roster = r; user = u; }
+      if (byRoster && String(r.roster_id) === byRoster) { roster = r; user = u; }
+      else if (byOwner && r.owner_id === byOwner) { roster = r; user = u; }
+      else if (!byRoster && !byOwner && !roster && (slug(teamName(u, r)) === target || loose(slug(teamName(u, r))) === loose(target))) {
+        roster = r; user = u;
+      }
     });
 
     if (!roster) {
-      statusEl.textContent = "Couldn't match this page to a Sleeper team. The filename must match the team name in Sleeper (for example, " +
-        rosters.map(function (r) { return slug(teamName(userById[r.owner_id], r)) + ".html"; }).slice(0, 3).join(", ") + ").";
+      statusEl.innerHTML = "";
+      statusEl.appendChild(document.createTextNode("Couldn't find this team. It may have been renamed in Sleeper. "));
+      var back = document.createElement("a");
+      back.href = "teams.html";
+      back.textContent = "Pick it from the Teams page.";
+      statusEl.appendChild(back);
       return;
     }
 
