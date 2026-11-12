@@ -364,6 +364,23 @@ class TradeContext:
         return {rid: (i + 1, rec[rid][0] / max(rec[rid][0] + rec[rid][1], 1), rec[rid][2], rec[rid][0], rec[rid][0] + rec[rid][1])
                 for i, rid in enumerate(order)}
 
+    def draft_results(self):
+        """(season, round, original owner's user id) -> the player drafted with that pick."""
+        out = {}
+        for yr, league in self.by_season.items():
+            lid = league["league_id"]
+            rosters = self._get(("r", lid), f"{API}/league/{lid}/rosters", []) or []
+            owner_of = {r["roster_id"]: r.get("owner_id") for r in rosters}
+            for d in self._get(("d", lid), f"{API}/league/{lid}/drafts", []) or []:
+                info = self._get(("draft", d["draft_id"]), f"{API}/draft/{d['draft_id']}", {}) or {}
+                slot_roster = {int(k): v for k, v in (info.get("slot_to_roster_id") or {}).items()}
+                season = int(info.get("season") or d.get("season") or yr)
+                for p in self._get(("dp", d["draft_id"]), f"{API}/draft/{d['draft_id']}/picks", []) or []:
+                    rid = slot_roster.get(p.get("draft_slot"))
+                    if rid and p.get("player_id"):
+                        out[(season, p.get("round"), owner_of.get(rid))] = p["player_id"]
+        return out
+
     def draft_start(self, lid):
         drafts = self._get(("d", lid), f"{API}/league/{lid}/drafts", []) or []
         times = [d.get("start_time") for d in drafts if d.get("start_time")]
@@ -635,6 +652,59 @@ def main():
                 })
 
     trades.sort(key=lambda t: t["date"] or "", reverse=True)
+
+    # ---------- Hindsight: every trade judged with today's values ----------
+    try:
+        with open("data/values.json") as f:
+            today = json.load(f)
+        today_players = today.get("players") or {}
+    except Exception:
+        today, today_players = {}, {}
+    try:
+        with open("data/analyzer.json") as f:
+            today_picks = {(p["season"], p["round"], p["original_owner"]): p["value"] for p in json.load(f).get("picks", [])}
+    except Exception:
+        today_picks = {}
+    generic_pick = {}
+    for row in today.get("picks") or []:
+        if row[0] == "generic":
+            generic_pick[(row[1], row[2])] = row[3]
+        elif row[0] == "tier" and row[2] == "Mid":
+            generic_pick.setdefault((row[1], row[3]), row[4])
+    try:
+        drafted = ctx.draft_results()
+    except Exception as err:
+        print(f"Draft results unavailable: {err}")
+        drafted = {}
+    as_of = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    def now_value(pid):
+        return (today_players.get(pid) or {}).get("value") or 0
+
+    for tr in trades:
+        if len(tr["sides"]) != 2:
+            continue
+        got = {}
+        for sd in tr["sides"]:
+            items = []
+            for p in sd["players"]:
+                items.append({"label": f"{p['name']} ({p['pos']})" if p.get("pos") else p["name"], "value": now_value(p["id"])})
+            for pk in sd["picks"]:
+                pid = drafted.get((pk["season"], pk["round"], pk["original_owner"]))
+                base = f"{pk['season']} Round {pk['round']}"
+                if pid:
+                    who = (every.get(pid) or {}).get("name") or pid
+                    items.append({"label": f"{base} (became {who})", "value": now_value(pid)})
+                else:
+                    v = today_picks.get((pk["season"], pk["round"], pk["original_owner"])) or generic_pick.get((pk["season"], pk["round"])) or 0
+                    items.append({"label": f"{base} (not drafted yet)", "value": v})
+            got[sd["owner"]] = {"items": items, "got_now": round(sum(i["value"] for i in items))}
+        (ua, a), (ub, b) = got.items()
+        for me, other in ((a, b), (b, a)):
+            net = me["got_now"] - other["got_now"]
+            me["gave_now"] = other["got_now"]
+            me["grade"] = valuation.team_grade(net, -net)[0]
+        tr["hindsight"] = {"as_of": as_of, "teams": got}
 
     # Biggest dynasty value risers and fallers among rostered players, last 4 weeks
     movers = {"days": 28, "risers": [], "fallers": []}
