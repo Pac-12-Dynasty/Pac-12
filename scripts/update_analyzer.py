@@ -225,7 +225,14 @@ def trade_grades(history, owner_names, teams):
                            "impact": g.get("impact", []), "gave": g.get("market_given", so["gave"]),
                            "got": g.get("market_got", so["got"])})
             unvalued = sorted({n for g in situational.values() for n in g.get("unvalued", []) if n})
-        stories.append({"trade_id": tr.get("id"), "date": tr.get("date"), "season": tr.get("season"),
+        hind = (tr.get("hindsight") or {}).get("teams") or {}
+        for so in side_out:
+            h = hind.get(so["owner"])
+            if h:
+                so["hindsight"] = {"grade": h.get("grade"), "got_now": h.get("got_now"), "gave_now": h.get("gave_now"),
+                                   "items": h.get("items", [])}
+        stories.append({"hindsight_as_of": (tr.get("hindsight") or {}).get("as_of"),
+                        "trade_id": tr.get("id"), "date": tr.get("date"), "season": tr.get("season"),
                         "week": tr.get("week"), "graded": graded, "unvalued": unvalued, "sides": side_out,
                         "method": "team" if situational else "value"})
     stories.sort(key=lambda s: s["date"] or "", reverse=True)
