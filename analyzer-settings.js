@@ -6,8 +6,9 @@ window.ANALYZER_SETTINGS = {
   // Score of at least "big" = A (at most -big = F); at least "small" = B (at most -small = D); otherwise C
   gradeGaps: { big: 2000, small: 1000 },
 
-  // How much to trust this league's trade history (1 = fully, 0 = ignore it and use market values only)
-  leagueWeight: 1,
+  // Extra weight on this league's trade history. League history is already 20% of the blended
+  // values (scripts/update_values.py), so this stays 0 unless you want it to count even more.
+  leagueWeight: 0,
 
   // "Stud tax": higher means one great player beats several good ones by more.
   // 1 = straight sum. 1.25 means two equal players are worth about 1.74 of one.
