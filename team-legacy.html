@@ -173,7 +173,7 @@
       document.title = me.team + " Legacy | Pac 12 Dynasty";
       document.getElementById("title").textContent = me.team;
       document.getElementById("subtitle").textContent = "Owner: " + me.name + " · " + me.seasons.length + " season" + (me.seasons.length === 1 ? "" : "s") + " in the league";
-      document.getElementById("team-link").href = slug(me.team) + ".html";
+      document.getElementById("team-link").href = "team.html?owner=" + encodeURIComponent(uid);
       document.getElementById("team-link").textContent = "← " + me.team + " team page";
 
       // Stat tiles
