@@ -39,8 +39,29 @@ def get(url):
 DP_REPO = "dynastyprocess/data"
 
 
+def load_curve():
+    """The shared value scale from update_values.py (value by rank)."""
+    try:
+        with open("data/values.json") as f:
+            return json.load(f).get("curve") or []
+    except Exception:
+        return []
+
+
+def curve_at(curve, rank):
+    if not curve:
+        return None
+    if rank <= 1:
+        return curve[0]
+    i = int(rank) - 1
+    if i + 1 < len(curve):
+        return curve[i] + (curve[i + 1] - curve[i]) * (rank - int(rank))
+    return max(0.0, curve[-1] * (len(curve) / rank) ** 2)
+
+
 class PastValues:
     def __init__(self):
+        self.curve = load_curve()
         self.commits = None
         self.snapshots = {}
         self.id_map = {}
@@ -82,7 +103,14 @@ class PastValues:
                 pass
         curve.sort()
 
+        # Same scale as today's blended values: each player's rank that week -> shared curve value
+        if self.curve:
+            for rank, sid in enumerate(sorted(players, key=lambda k: -players[k]), start=1):
+                players[sid] = curve_at(self.curve, rank)
+
         def value_at(ecr):
+            if self.curve:
+                return curve_at(self.curve, ecr)
             if not curve:
                 return 0
             for (e1, v1), (e2, v2) in zip(curve, curve[1:]):
@@ -280,7 +308,7 @@ class SleeperRanks:
         return self.ranked[key]
 
 
-GRADE_VERSION = 5
+GRADE_VERSION = 6
 
 
 class TradeContext:
@@ -471,7 +499,7 @@ def main():
                     for p in sd.get("players", []):
                         if p.get("was_basis"):
                             known[(t["id"], p["id"])] = (p.get("was_pos_rank"), p.get("was_rank"), p["was_basis"])
-                        if p.get("was_value") is not None:
+                        if p.get("was_value") is not None and p.get("value_scale") == "shared":
                             known_val[(t["id"], p["id"])] = p["was_value"]
                     for pk in sd.get("picks", []):
                         if pk.get("was_value") is not None and pk.get("value_basis") == "original_owner":
@@ -572,6 +600,7 @@ def main():
                         "was_pos_rank": was_pos, "was_rank": was_ovr, "was_basis": basis,
                         "now_pos_rank": now_pos, "now_rank": now_ovr, "now_basis": now_basis,
                         "was_value": known_val[(tid, pid)] if (tid, pid) in known_val else (past.player(date_iso, pid) if date_iso else None),
+                        "value_scale": "shared" if past.curve else "dp",
                     })
                 for pk in t.get("draft_picks") or []:
                     orig = roster_owner.get(pk.get("roster_id"))
