@@ -181,7 +181,10 @@
             });
             var became = [];
             g.sides.forEach(function (sd) {
-              sd.hindsight.items.forEach(function (it) { if (/became/.test(it.label)) became.push(it.label.replace(/[()]/g, "")); });
+              // Only call out picks that turned into a player worth over 1,000 today
+              sd.hindsight.items.forEach(function (it) {
+                if (/became/.test(it.label) && it.value > 1000) became.push(it.label.replace(/[()]/g, "") + " (" + fmtNum(it.value) + " today)");
+              });
             });
             if (became.length) lines.push("Picks: " + became.join("; ") + ".");
           }
