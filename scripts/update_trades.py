@@ -681,30 +681,37 @@ def main():
     def now_value(pid):
         return (today_players.get(pid) or {}).get("value") or 0
 
+    year_ago = (datetime.now(timezone.utc) - __import__("datetime").timedelta(days=365)).isoformat()
     for tr in trades:
-        if len(tr["sides"]) != 2:
+        # Hindsight only for trades at least a year old, so there's time to see how they played out
+        if len(tr["sides"]) != 2 or not tr.get("date") or tr["date"] > year_ago:
             continue
-        got = {}
-        for sd in tr["sides"]:
-            items = []
-            for p in sd["players"]:
-                items.append({"label": f"{p['name']} ({p['pos']})" if p.get("pos") else p["name"], "value": now_value(p["id"])})
-            for pk in sd["picks"]:
-                pid = drafted.get((pk["season"], pk["round"], pk["original_owner"]))
-                base = f"{pk['season']} Round {pk['round']}"
-                if pid:
-                    who = (every.get(pid) or {}).get("name") or pid
-                    items.append({"label": f"{base} (became {who})", "value": now_value(pid)})
-                else:
-                    v = today_picks.get((pk["season"], pk["round"], pk["original_owner"])) or generic_pick.get((pk["season"], pk["round"])) or 0
-                    items.append({"label": f"{base} (not drafted yet)", "value": v})
-            got[sd["owner"]] = {"items": items, "got_now": round(sum(i["value"] for i in items))}
-        (ua, a), (ub, b) = got.items()
-        for me, other in ((a, b), (b, a)):
-            net = me["got_now"] - other["got_now"]
-            me["gave_now"] = other["got_now"]
-            me["grade"] = valuation.team_grade(net, -net)[0]
-        tr["hindsight"] = {"as_of": as_of, "teams": got}
+        if len({sd["owner"] for sd in tr["sides"]}) != 2:
+            continue
+        try:
+            got = {}
+            for sd in tr["sides"]:
+                items = []
+                for p in sd["players"]:
+                    items.append({"label": f"{p['name']} ({p['pos']})" if p.get("pos") else p["name"], "value": now_value(p["id"])})
+                for pk in sd["picks"]:
+                    pid = drafted.get((pk["season"], pk["round"], pk["original_owner"]))
+                    base = f"{pk['season']} Round {pk['round']}"
+                    if pid:
+                        who = (every.get(pid) or {}).get("name") or pid
+                        items.append({"label": f"{base} (became {who})", "value": now_value(pid)})
+                    else:
+                        v = today_picks.get((pk["season"], pk["round"], pk["original_owner"])) or generic_pick.get((pk["season"], pk["round"])) or 0
+                        items.append({"label": f"{base} (not drafted yet)", "value": v})
+                got[sd["owner"]] = {"items": items, "got_now": round(sum(i["value"] for i in items))}
+            (ua, a), (ub, b) = got.items()
+            for me, other in ((a, b), (b, a)):
+                net = me["got_now"] - other["got_now"]
+                me["gave_now"] = other["got_now"]
+                me["grade"] = valuation.team_grade(net, -net)[0]
+            tr["hindsight"] = {"as_of": as_of, "teams": got}
+        except Exception as err:
+            print(f"Couldn't figure hindsight for trade {tr.get('id')}: {err}")
 
     # Biggest dynasty value risers and fallers among rostered players, last 4 weeks
     movers = {"days": 28, "risers": [], "fallers": []}
@@ -730,7 +737,8 @@ def main():
     with open("data/transactions.json", "w") as f:
         json.dump({"generated": datetime.now(timezone.utc).isoformat(timespec="minutes"),
                    "owners": owners, "moves": moves}, f)
-    print(f"Saved {len(trades)} trades and {len(moves)} other transactions across {len(seasons)} season(s)")
+    print(f"Saved {len(trades)} trades ({sum(1 for t in trades if t.get('hindsight'))} with hindsight) and "
+          f"{len(moves)} other transactions across {len(seasons)} season(s)")
 
 
 if __name__ == "__main__":
