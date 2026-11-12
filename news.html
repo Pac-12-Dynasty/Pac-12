@@ -156,8 +156,9 @@
     function buildGradeStories(list) {
       gradeStories = list.map(function (g) {
         var a = g.sides[0], b = g.sides[1];
+        var hind = a.hindsight && b.hindsight ? " · Hindsight: " + a.hindsight.grade + ", " + b.hindsight.grade : "";
         var title = g.graded
-          ? "Trade grades: " + a.team + " (" + a.grade + "), " + b.team + " (" + b.grade + ")"
+          ? "Trade grades: " + a.team + " (" + a.grade + "), " + b.team + " (" + b.grade + ")" + hind
           : "Trade: " + a.team + " and " + b.team + " (not graded)";
         var lines = [];
         g.sides.forEach(function (sd) { lines.push(sd.team + " receives: " + (sd.gets.length ? sd.gets.join(", ") : "nothing")); });
@@ -172,6 +173,18 @@
             lines.push(line);
           });
           if (g.unvalued.length) lines.push("", "No market value at the time, so counted as 0: " + g.unvalued.join(", ") + ".");
+          if (g.sides.every(function (sd) { return sd.hindsight; })) {
+            lines.push("", "Hindsight, with today's values:");
+            g.sides.forEach(function (sd) {
+              var h = sd.hindsight;
+              lines.push(sd.team + ": " + h.grade + ". What they got is worth " + fmtNum(h.got_now) + " today, and what they gave is worth " + fmtNum(h.gave_now) + ".");
+            });
+            var became = [];
+            g.sides.forEach(function (sd) {
+              sd.hindsight.items.forEach(function (it) { if (/became/.test(it.label)) became.push(it.label.replace(/[()]/g, "")); });
+            });
+            if (became.length) lines.push("Picks: " + became.join("; ") + ".");
+          }
         } else {
           lines.push("Not graded: one side has no market value from the time of the trade" +
             (g.unvalued.length ? " (" + g.unvalued.join(", ") + ")" : "") + ".");
