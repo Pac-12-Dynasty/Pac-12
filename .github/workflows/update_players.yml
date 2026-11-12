@@ -19,11 +19,14 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: python3 scripts/update_players.py
+      - run: python3 scripts/update_values.py
       - run: python3 scripts/update_stats.py
       - run: python3 scripts/update_legacy.py
       - run: python3 scripts/update_trades.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: python3 scripts/update_analyzer.py
       - name: Save changes
         run: |
