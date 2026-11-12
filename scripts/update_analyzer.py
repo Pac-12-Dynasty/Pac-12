@@ -377,6 +377,21 @@ def main():
             tiered.setdefault(int(parts[0]), {})[(parts[1], int(parts[2][0]))] = v
         else:                                            # "2028 1st"
             generic.setdefault(int(parts[0]), {})[int(parts[1][0])] = v
+    # Blended pick values (DynastyProcess + FantasyCalc + league trades) replace the above when available
+    try:
+        with open("data/values.json") as f:
+            blended = json.load(f).get("picks") or []
+        if blended:
+            slotted, tiered, generic = {}, {}, {}
+            for row in blended:
+                if row[0] == "slot":
+                    slotted[(row[1], row[2])] = row[3]
+                elif row[0] == "tier":
+                    tiered.setdefault(row[1], {})[(row[2], row[3])] = row[4]
+                elif row[0] == "generic":
+                    generic.setdefault(row[1], {})[row[2]] = row[3]
+    except Exception:
+        pass
     tier_year = min(tiered) if tiered else None
     generic_years = sorted(generic)
 
