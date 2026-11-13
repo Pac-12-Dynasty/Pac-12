@@ -681,6 +681,17 @@ def main():
     def now_value(pid):
         return (today_players.get(pid) or {}).get("value") or 0
 
+    # Picks that have been used: who was drafted with them, and where he ranks now
+    for tr in trades:
+        for sd in tr["sides"]:
+            for pk in sd["picks"]:
+                pid = drafted.get((pk["season"], pk["round"], pk["original_owner"]))
+                if pid:
+                    info = every.get(pid) or roster_info.get(pid) or {}
+                    np_, no_ = now_ranks.get(pid, (None, None))
+                    pk["drafted"] = {"id": pid, "name": info.get("name") or pid, "pos": info.get("pos") or "",
+                                     "now_pos_rank": np_, "now_rank": no_, "value_now": now_value(pid)}
+
     year_ago = (datetime.now(timezone.utc) - __import__("datetime").timedelta(days=365)).isoformat()
     for tr in trades:
         # Hindsight only for trades at least a year old, so there's time to see how they played out
@@ -693,16 +704,19 @@ def main():
             for sd in tr["sides"]:
                 items = []
                 for p in sd["players"]:
-                    items.append({"label": f"{p['name']} ({p['pos']})" if p.get("pos") else p["name"], "value": now_value(p["id"])})
+                    items.append({"kind": "player", "label": f"{p['name']} ({p['pos']})" if p.get("pos") else p["name"],
+                                  "value": now_value(p["id"])})
                 for pk in sd["picks"]:
                     pid = drafted.get((pk["season"], pk["round"], pk["original_owner"]))
                     base = f"{pk['season']} Round {pk['round']}"
+                    orig = owners.get(pk["original_owner"], {}).get("team")
                     if pid:
-                        who = (every.get(pid) or {}).get("name") or pid
-                        items.append({"label": f"{base} (became {who})", "value": now_value(pid)})
+                        info = every.get(pid) or {}
+                        items.append({"kind": "pick", "label": base, "from": orig,
+                                      "player": info.get("name") or pid, "pos": info.get("pos") or "", "value": now_value(pid)})
                     else:
                         v = today_picks.get((pk["season"], pk["round"], pk["original_owner"])) or generic_pick.get((pk["season"], pk["round"])) or 0
-                        items.append({"label": f"{base} (not drafted yet)", "value": v})
+                        items.append({"kind": "pick", "label": base, "from": orig, "player": None, "value": v})
                 got[sd["owner"]] = {"items": items, "got_now": round(sum(i["value"] for i in items))}
             (ua, a), (ub, b) = got.items()
             for me, other in ((a, b), (b, a)):
