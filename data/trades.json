@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T00:46+00:00",
+ "generated": "2026-11-13T01:12+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
@@ -1333,7 +1333,7 @@
        }
       ],
       "got_now": 4196,
-      "gave_now": 3503,
+      "gave_now": 3497,
       "grade": "C"
      },
      "915765963616985088": {
@@ -1344,10 +1344,10 @@
        },
        {
         "label": "2028 Round 2 (not drafted yet)",
-        "value": 1415
+        "value": 1409
        }
       ],
-      "got_now": 3503,
+      "got_now": 3497,
       "gave_now": 4196,
       "grade": "C"
      }
@@ -1631,10 +1631,10 @@
        },
        {
         "label": "2027 Round 1 (not drafted yet)",
-        "value": 2522
+        "value": 2501
        }
       ],
-      "got_now": 3701,
+      "got_now": 3680,
       "gave_now": 9886,
       "grade": "F"
      },
@@ -1650,7 +1650,7 @@
        }
       ],
       "got_now": 9886,
-      "gave_now": 3701,
+      "gave_now": 3680,
       "grade": "A"
      }
     }
@@ -2012,7 +2012,7 @@
        }
       ],
       "got_now": 14415,
-      "gave_now": 11161,
+      "gave_now": 11159,
       "grade": "A"
      },
      "853109226401288192": {
@@ -2039,14 +2039,14 @@
        },
        {
         "label": "2027 Round 3 (not drafted yet)",
-        "value": 424
+        "value": 422
        },
        {
         "label": "2028 Round 2 (not drafted yet)",
         "value": 1199
        }
       ],
-      "got_now": 11161,
+      "got_now": 11159,
       "gave_now": 14415,
       "grade": "F"
      }

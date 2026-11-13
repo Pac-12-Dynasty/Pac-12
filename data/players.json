@@ -149,7 +149,7 @@
   "name": "Joe Milton",
   "pos": "QB",
   "pos_rank": "QB41",
-  "rank": 260,
+  "rank": 259,
   "team": "PHI",
   "value": 362
  },
@@ -583,7 +583,7 @@
   "name": "Tyrone Tracy Jr.",
   "pos": "RB",
   "pos_rank": "RB62",
-  "rank": 215,
+  "rank": 214,
   "team": "NYG",
   "value": 730
  },
@@ -1156,8 +1156,8 @@
   "injury_part": "Groin",
   "name": "Jacory Croskey-Merritt",
   "pos": "RB",
-  "pos_rank": "RB44",
-  "rank": 138,
+  "pos_rank": "RB43",
+  "rank": 137,
   "team": "WAS",
   "value": 1324
  },
@@ -1185,7 +1185,7 @@
   "name": "Isaac TeSlaa",
   "pos": "WR",
   "pos_rank": "WR87",
-  "rank": 214,
+  "rank": 215,
   "team": "DET",
   "value": 730
  },
@@ -1254,8 +1254,8 @@
   "injury_part": "",
   "name": "KeAndre Lambert-Smith",
   "pos": "WR",
-  "pos_rank": "WR156",
-  "rank": 401,
+  "pos_rank": "WR157",
+  "rank": 402,
   "team": "LAC",
   "value": 39
  },
@@ -1367,7 +1367,7 @@
   "name": "Josh Cuevas",
   "pos": "TE",
   "pos_rank": "TE50",
-  "rank": 334,
+  "rank": 335,
   "team": "BAL",
   "value": 145
  },
@@ -1465,7 +1465,7 @@
   "name": "Jack Endries",
   "pos": "TE",
   "pos_rank": "TE63",
-  "rank": 392,
+  "rank": 393,
   "team": "CIN",
   "value": 52
  },
@@ -1815,7 +1815,7 @@
   "name": "Demond Claiborne",
   "pos": "RB",
   "pos_rank": "RB73",
-  "rank": 259,
+  "rank": 260,
   "team": "MIN",
   "value": 362
  },
@@ -1829,7 +1829,7 @@
   "name": "J'Mari Taylor",
   "pos": "RB",
   "pos_rank": "RB107",
-  "rank": 375,
+  "rank": 376,
   "team": "JAX",
   "value": 78
  },
@@ -1898,8 +1898,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB122",
-  "rank": 443,
+  "pos_rank": "RB120",
+  "rank": 435,
   "team": "ATL",
   "value": 2
  },
@@ -1912,8 +1912,8 @@
   "injury_part": "",
   "name": "Garrett Nussmeier",
   "pos": "QB",
-  "pos_rank": "QB65",
-  "rank": 385,
+  "pos_rank": "QB66",
+  "rank": 386,
   "team": "KC",
   "value": 62
  },
@@ -2039,7 +2039,7 @@
   "name": "Eli Heidenreich",
   "pos": "RB",
   "pos_rank": "RB106",
-  "rank": 374,
+  "rank": 373,
   "team": "PIT",
   "value": 83
  },
@@ -2150,8 +2150,8 @@
   "injury_part": "Hamstring",
   "name": "Davante Adams",
   "pos": "WR",
-  "pos_rank": "WR41",
-  "rank": 100,
+  "pos_rank": "WR42",
+  "rank": 101,
   "team": "LAR",
   "value": 1845
  },
@@ -2164,8 +2164,8 @@
   "injury_part": "Achilles",
   "name": "Mike Evans",
   "pos": "WR",
-  "pos_rank": "WR42",
-  "rank": 101,
+  "pos_rank": "WR41",
+  "rank": 100,
   "team": "SF",
   "value": 1845
  },
@@ -2263,7 +2263,7 @@
   "name": "Tyler Higbee",
   "pos": "TE",
   "pos_rank": "TE40",
-  "rank": 265,
+  "rank": 266,
   "team": "LAR",
   "value": 344
  },
@@ -2277,7 +2277,7 @@
   "name": "Demarcus Robinson",
   "pos": "WR",
   "pos_rank": "WR143",
-  "rank": 354,
+  "rank": 353,
   "team": "SF",
   "value": 113
  },
@@ -2305,7 +2305,7 @@
   "name": "Tyreek Hill",
   "pos": "WR",
   "pos_rank": "WR86",
-  "rank": 211,
+  "rank": 212,
   "team": "",
   "value": 741
  },
@@ -2431,7 +2431,7 @@
   "name": "James Conner",
   "pos": "RB",
   "pos_rank": "RB75",
-  "rank": 272,
+  "rank": 271,
   "team": "ARI",
   "value": 316
  },
@@ -3201,7 +3201,7 @@
   "name": "Elijah Mitchell",
   "pos": "RB",
   "pos_rank": "RB111",
-  "rank": 394,
+  "rank": 395,
   "team": "PHI",
   "value": 50
  },
@@ -3326,8 +3326,8 @@
   "injury_part": "",
   "name": "Michael Carter",
   "pos": "RB",
-  "pos_rank": "RB165",
-  "rank": 569,
+  "pos_rank": "RB172",
+  "rank": 594,
   "team": "TEN",
   "value": 1
  },
@@ -3508,8 +3508,8 @@
   "injury_part": "",
   "name": "Rachaad White",
   "pos": "RB",
-  "pos_rank": "RB43",
-  "rank": 137,
+  "pos_rank": "RB44",
+  "rank": 138,
   "team": "WAS",
   "value": 1324
  },
@@ -3831,7 +3831,7 @@
   "name": "Tank Bigsby",
   "pos": "RB",
   "pos_rank": "RB61",
-  "rank": 212,
+  "rank": 211,
   "team": "PHI",
   "value": 741
  },
