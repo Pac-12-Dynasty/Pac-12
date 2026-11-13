@@ -125,7 +125,12 @@
         s.picks.slice().sort(function (a, b) { return (a.season - b.season) || (a.round - b.round); }).forEach(function (pk) {
           var li = el("li");
           li.appendChild(el("span", "", pk.season + " " + ordinal(pk.round) + " Round Pick"));
-          li.appendChild(el("span", "tag", pk.original_owner ? "(" + (pk.original_owner === s.owner ? "own pick back" : team(pk.original_owner)) + ")" : ""));
+          var orig = pk.original_owner ? "(" + (pk.original_owner === s.owner ? "own pick back" : team(pk.original_owner)) + ")" : "";
+          var d = pk.drafted;
+          li.appendChild(el("span", "tag", d
+            ? orig + " → Became " + d.name + (d.pos ? " (" + d.pos + ")" : "") +
+              (d.now_pos_rank ? " · Now " + d.now_pos_rank + (d.now_rank ? " · #" + d.now_rank : "") : "")
+            : orig));
           ul.appendChild(li);
         });
         if (s.faab) { var li = el("li"); li.appendChild(el("span", "", "$" + s.faab + " FAAB")); ul.appendChild(li); }
