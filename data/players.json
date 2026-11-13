@@ -442,8 +442,8 @@
   "injury_part": "Knee",
   "name": "Xavier Legette",
   "pos": "WR",
-  "pos_rank": "WR129",
-  "rank": 313,
+  "pos_rank": "WR130",
+  "rank": 314,
   "team": "CAR",
   "value": 195
  },
@@ -848,8 +848,8 @@
   "injury_part": "",
   "name": "Tory Horton",
   "pos": "WR",
-  "pos_rank": "WR100",
-  "rank": 245,
+  "pos_rank": "WR101",
+  "rank": 246,
   "team": "SEA",
   "value": 472
  },
@@ -1367,7 +1367,7 @@
   "name": "Josh Cuevas",
   "pos": "TE",
   "pos_rank": "TE50",
-  "rank": 335,
+  "rank": 334,
   "team": "BAL",
   "value": 145
  },
@@ -1465,7 +1465,7 @@
   "name": "Jack Endries",
   "pos": "TE",
   "pos_rank": "TE63",
-  "rank": 393,
+  "rank": 392,
   "team": "CIN",
   "value": 52
  },
@@ -1829,7 +1829,7 @@
   "name": "J'Mari Taylor",
   "pos": "RB",
   "pos_rank": "RB107",
-  "rank": 376,
+  "rank": 375,
   "team": "JAX",
   "value": 78
  },
@@ -1898,8 +1898,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB120",
-  "rank": 435,
+  "pos_rank": "RB123",
+  "rank": 452,
   "team": "ATL",
   "value": 2
  },
@@ -1912,8 +1912,8 @@
   "injury_part": "",
   "name": "Garrett Nussmeier",
   "pos": "QB",
-  "pos_rank": "QB66",
-  "rank": 386,
+  "pos_rank": "QB65",
+  "rank": 385,
   "team": "KC",
   "value": 62
  },
@@ -2263,7 +2263,7 @@
   "name": "Tyler Higbee",
   "pos": "TE",
   "pos_rank": "TE40",
-  "rank": 266,
+  "rank": 265,
   "team": "LAR",
   "value": 344
  },
@@ -2277,7 +2277,7 @@
   "name": "Demarcus Robinson",
   "pos": "WR",
   "pos_rank": "WR143",
-  "rank": 353,
+  "rank": 354,
   "team": "SF",
   "value": 113
  },
@@ -2305,7 +2305,7 @@
   "name": "Tyreek Hill",
   "pos": "WR",
   "pos_rank": "WR86",
-  "rank": 212,
+  "rank": 211,
   "team": "",
   "value": 741
  },
@@ -2431,7 +2431,7 @@
   "name": "James Conner",
   "pos": "RB",
   "pos_rank": "RB75",
-  "rank": 271,
+  "rank": 272,
   "team": "ARI",
   "value": 316
  },
@@ -2543,7 +2543,7 @@
   "name": "Baker Mayfield",
   "pos": "QB",
   "pos_rank": "QB22",
-  "rank": 147,
+  "rank": 146,
   "team": "TB",
   "value": 1276
  },
@@ -2808,8 +2808,8 @@
   "injury_part": "Finger",
   "name": "Tony Pollard",
   "pos": "RB",
-  "pos_rank": "RB31",
-  "rank": 107,
+  "pos_rank": "RB32",
+  "rank": 108,
   "team": "TEN",
   "value": 1730
  },
@@ -3093,20 +3093,6 @@
   "team": "BUF",
   "value": null
  },
- "7049": {
-  "age": 29,
-  "birth_date": "1997-07-10",
-  "dp_value": 537,
-  "fc_value": 281,
-  "injury": "Questionable",
-  "injury_part": "Calf",
-  "name": "Jauan Jennings",
-  "pos": "WR",
-  "pos_rank": "WR105",
-  "rank": 251,
-  "team": "MIN",
-  "value": 399
- },
  "7523": {
   "age": 27,
   "birth_date": "1999-10-06",
@@ -3215,7 +3201,7 @@
   "name": "Tutu Atwell",
   "pos": "WR",
   "pos_rank": "WR133",
-  "rank": 321,
+  "rank": 322,
   "team": "LAR",
   "value": 182
  },
@@ -3326,8 +3312,8 @@
   "injury_part": "",
   "name": "Michael Carter",
   "pos": "RB",
-  "pos_rank": "RB172",
-  "rank": 594,
+  "pos_rank": "RB155",
+  "rank": 532,
   "team": "TEN",
   "value": 1
  },
@@ -3728,12 +3714,12 @@
   "birth_date": "1999-09-08",
   "dp_value": 1397,
   "fc_value": 1127,
-  "injury": "",
-  "injury_part": "",
+  "injury": "Questionable",
+  "injury_part": "Back",
   "name": "Chig Okonkwo",
   "pos": "TE",
   "pos_rank": "TE20",
-  "rank": 146,
+  "rank": 147,
   "team": "WAS",
   "value": 1276
  },
@@ -3831,7 +3817,7 @@
   "name": "Tank Bigsby",
   "pos": "RB",
   "pos_rank": "RB61",
-  "rank": 211,
+  "rank": 212,
   "team": "PHI",
   "value": 741
  },
@@ -4083,7 +4069,7 @@
   "name": "Aaron Rodgers",
   "pos": "QB",
   "pos_rank": "QB35",
-  "rank": 217,
+  "rank": 218,
   "team": "PIT",
   "value": 715
  },
@@ -4096,8 +4082,8 @@
   "injury_part": "",
   "name": "Zach Charbonnet",
   "pos": "RB",
-  "pos_rank": "RB32",
-  "rank": 108,
+  "pos_rank": "RB31",
+  "rank": 107,
   "team": "SEA",
   "value": 1730
  },

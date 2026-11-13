@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T01:12+00:00",
+ "generated": "2026-11-13T03:13+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
@@ -60,6 +60,104 @@
   }
  },
  "trades": [
+  {
+   "grades": {
+    "version": 6,
+    "teams": {
+     "1132133082238169088": {
+      "net": -1880,
+      "impact": [
+       {
+        "name": "Rhamondre Stevenson",
+        "starts": true,
+        "slot": "RB"
+       }
+      ],
+      "market_given": 4143,
+      "market_got": 2887,
+      "window": "Rebuilder",
+      "unvalued": [],
+      "grade": "F",
+      "score": -2127,
+      "gap": -2867
+     },
+     "861422415547318272": {
+      "net": 987,
+      "impact": [
+       {
+        "name": "Carnell Tate",
+        "starts": false,
+        "slot": null
+       }
+      ],
+      "market_given": 2887,
+      "market_got": 4143,
+      "window": "Contender",
+      "unvalued": [],
+      "grade": "B",
+      "score": 1457,
+      "gap": 2867
+     }
+    },
+    "pick_values": {
+     "2027-2-995982448825720832": 1398
+    }
+   },
+   "id": "1426772999213703168",
+   "season": 2026,
+   "week": 10,
+   "date": "2026-11-13T02:50+00:00",
+   "sides": [
+    {
+     "owner": "1132133082238169088",
+     "players": [
+      {
+       "id": "7611",
+       "name": "Rhamondre Stevenson",
+       "pos": "RB",
+       "was_pos_rank": "RB17",
+       "was_rank": 56,
+       "was_basis": "2026 Wk 1-9",
+       "now_pos_rank": "RB17",
+       "now_rank": 55,
+       "now_basis": "2026 so far",
+       "was_value": 1489,
+       "value_scale": "shared"
+      }
+     ],
+     "picks": [
+      {
+       "season": 2027,
+       "round": 2,
+       "original_owner": "995982448825720832",
+       "was_value": 1398,
+       "value_basis": "original_owner"
+      }
+     ],
+     "faab": 0
+    },
+    {
+     "owner": "861422415547318272",
+     "players": [
+      {
+       "id": "13279",
+       "name": "Carnell Tate",
+       "pos": "WR",
+       "was_pos_rank": "WR37",
+       "was_rank": 107,
+       "was_basis": "2026 Wk 1-9",
+       "now_pos_rank": "WR37",
+       "now_rank": 107,
+       "now_basis": "2026 so far",
+       "was_value": 4143,
+       "value_scale": "shared"
+      }
+     ],
+     "picks": [],
+     "faab": 0
+    }
+   ]
+  },
   {
    "grades": {
     "version": 6,
@@ -1144,10 +1242,12 @@
      "745458998371008512": {
       "items": [
        {
+        "kind": "player",
         "label": "Stefon Diggs (WR)",
         "value": 1278
        },
        {
+        "kind": "player",
         "label": "Rhamondre Stevenson (RB)",
         "value": 1678
        }
@@ -1159,15 +1259,20 @@
      "861421486488031232": {
       "items": [
        {
+        "kind": "player",
         "label": "Tony Pollard (RB)",
         "value": 1730
        },
        {
+        "kind": "player",
         "label": "Kayshon Boutte (WR)",
         "value": 894
        },
        {
-        "label": "2026 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 2",
+        "from": "Why So Serious?",
+        "player": null,
         "value": 0
        }
       ],
@@ -1316,19 +1421,27 @@
      "909255939126161408": {
       "items": [
        {
+        "kind": "player",
         "label": "Jaydon Blue (RB)",
         "value": 189
        },
        {
+        "kind": "player",
         "label": "Terry McLaurin (WR)",
         "value": 1418
        },
        {
-        "label": "2027 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2027 Round 1",
+        "from": "Time to tank",
+        "player": null,
         "value": 2589
        },
        {
-        "label": "2026 Round 4 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 4",
+        "from": "Goed's Plan",
+        "player": null,
         "value": 0
        }
       ],
@@ -1339,11 +1452,15 @@
      "915765963616985088": {
       "items": [
        {
+        "kind": "player",
         "label": "Josh Jacobs (RB)",
         "value": 2088
        },
        {
-        "label": "2028 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2028 Round 2",
+        "from": "Olave\u2019s Medical Team",
+        "player": null,
         "value": 1409
        }
       ],
@@ -1475,10 +1592,12 @@
      "858765508143628288": {
       "items": [
        {
+        "kind": "player",
         "label": "Jonnu Smith (TE)",
         "value": 85
        },
        {
+        "kind": "player",
         "label": "Nico Collins (WR)",
         "value": 4022
        }
@@ -1490,11 +1609,15 @@
      "861422415547318272": {
       "items": [
        {
+        "kind": "player",
         "label": "Luther Burden III (WR)",
         "value": 4137
        },
        {
-        "label": "2026 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 1",
+        "from": "Bucky Irving Fan Club",
+        "player": null,
         "value": 0
        }
       ],
@@ -1626,11 +1749,15 @@
      "861417814836256768": {
       "items": [
        {
+        "kind": "player",
         "label": "Deebo Samuel Sr. (WR)",
         "value": 1179
        },
        {
-        "label": "2027 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2027 Round 1",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 2501
        }
       ],
@@ -1641,10 +1768,12 @@
      "858765508143628288": {
       "items": [
        {
+        "kind": "player",
         "label": "Jameson Williams (WR)",
         "value": 2704
        },
        {
+        "kind": "player",
         "label": "Kenneth Walker III (RB)",
         "value": 7182
        }
@@ -1759,11 +1888,15 @@
      "908808510823997440": {
       "items": [
        {
+        "kind": "player",
         "label": "Ladd McConkey (WR)",
         "value": 2665
        },
        {
-        "label": "2026 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 2",
+        "from": "Bucky Irving Fan Club",
+        "player": null,
         "value": 0
        }
       ],
@@ -1774,6 +1907,7 @@
      "861422415547318272": {
       "items": [
        {
+        "kind": "player",
         "label": "Rashee Rice (WR)",
         "value": 2674
        }
@@ -1991,23 +2125,34 @@
      "915765963616985088": {
       "items": [
        {
+        "kind": "player",
         "label": "Emeka Egbuka (WR)",
         "value": 3456
        },
        {
+        "kind": "player",
         "label": "James Cook III (RB)",
         "value": 5783
        },
        {
-        "label": "2027 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2027 Round 1",
+        "from": "Time to tank",
+        "player": null,
         "value": 2589
        },
        {
-        "label": "2027 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2027 Round 2",
+        "from": "Time to tank",
+        "player": null,
         "value": 1368
        },
        {
-        "label": "2028 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2028 Round 2",
+        "from": "Time to tank",
+        "player": null,
         "value": 1219
        }
       ],
@@ -2018,31 +2163,46 @@
      "853109226401288192": {
       "items": [
        {
+        "kind": "player",
         "label": "Jared Goff (QB)",
         "value": 1928
        },
        {
+        "kind": "player",
         "label": "T.J. Hockenson (TE)",
         "value": 1419
        },
        {
+        "kind": "player",
         "label": "Justin Jefferson (WR)",
         "value": 6191
        },
        {
-        "label": "2026 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 1",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2026 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 3",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2027 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2027 Round 3",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 422
        },
        {
-        "label": "2028 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2028 Round 2",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 1199
        }
       ],
@@ -2133,7 +2293,10 @@
      "909255939126161408": {
       "items": [
        {
-        "label": "2026 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 3",
+        "from": "J. Love\u2019s number 1 Fan",
+        "player": null,
         "value": 0
        }
       ],
@@ -2144,11 +2307,17 @@
      "861421486488031232": {
       "items": [
        {
-        "label": "2025 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 3",
+        "from": "Bucky Irving Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2025 Round 4 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 4",
+        "from": "Olave\u2019s Medical Team",
+        "player": null,
         "value": 0
        }
       ],
@@ -2242,7 +2411,10 @@
      "915765963616985088": {
       "items": [
        {
-        "label": "2025 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 2",
+        "from": "Time to tank",
+        "player": null,
         "value": 0
        }
       ],
@@ -2253,6 +2425,7 @@
      "853109226401288192": {
       "items": [
        {
+        "kind": "player",
         "label": "J.J. McCarthy (QB)",
         "value": 949
        }
@@ -2355,11 +2528,17 @@
      "861417814836256768": {
       "items": [
        {
-        "label": "2025 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 2",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2026 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 3",
+        "from": "Goed's Plan",
+        "player": null,
         "value": 0
        }
       ],
@@ -2370,6 +2549,7 @@
      "858765508143628288": {
       "items": [
        {
+        "kind": "player",
         "label": "Najee Harris (RB)",
         "value": 227
        }
@@ -2472,6 +2652,7 @@
      "858765508143628288": {
       "items": [
        {
+        "kind": "player",
         "label": "DK Metcalf (WR)",
         "value": 1936
        }
@@ -2483,11 +2664,17 @@
      "861422415547318272": {
       "items": [
        {
-        "label": "2025 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 1",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2026 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 2",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 0
        }
       ],
@@ -2590,7 +2777,10 @@
      "745458998371008512": {
       "items": [
        {
-        "label": "2025 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 1",
+        "from": "Baby Back Gibbs",
+        "player": null,
         "value": 0
        }
       ],
@@ -2601,11 +2791,15 @@
      "861422415547318272": {
       "items": [
        {
+        "kind": "player",
         "label": "Sam Darnold (QB)",
         "value": 1278
        },
        {
-        "label": "2025 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 1",
+        "from": "Why So Serious?",
+        "player": null,
         "value": 0
        }
       ],
@@ -2716,15 +2910,22 @@
      "858765508143628288": {
       "items": [
        {
+        "kind": "player",
         "label": "Cooper Kupp (WR)",
         "value": 353
        },
        {
-        "label": "2025 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 2",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2026 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 3",
+        "from": "Goed's Plan",
+        "player": null,
         "value": 0
        }
       ],
@@ -2735,7 +2936,10 @@
      "731283214563422208": {
       "items": [
        {
-        "label": "2025 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 1",
+        "from": "Fannin the Flames",
+        "player": null,
         "value": 0
        }
       ],
@@ -2862,19 +3066,29 @@
      "858765508143628288": {
       "items": [
        {
+        "kind": "player",
         "label": "Romeo Doubs (WR)",
         "value": 1172
        },
        {
-        "label": "2025 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 1",
+        "from": "Bucky Irving Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2026 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 1",
+        "from": "Bucky Irving Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2025 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 1",
+        "from": "Fannin the Flames",
+        "player": null,
         "value": 0
        }
       ],
@@ -2885,11 +3099,17 @@
      "861422415547318272": {
       "items": [
        {
-        "label": "2025 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 1",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2025 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 2",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 0
        }
       ],
@@ -3039,6 +3259,7 @@
      "858765508143628288": {
       "items": [
        {
+        "kind": "player",
         "label": "David Montgomery (RB)",
         "value": 1496
        }
@@ -3050,19 +3271,25 @@
      "861421486488031232": {
       "items": [
        {
+        "kind": "player",
         "label": "Nick Chubb (RB)",
         "value": 0
        },
        {
+        "kind": "player",
         "label": "Mike Gesicki (TE)",
         "value": 733
        },
        {
+        "kind": "player",
         "label": "Diontae Johnson (WR)",
         "value": 1
        },
        {
-        "label": "2026 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 1",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 0
        }
       ],
@@ -3193,11 +3420,15 @@
      "731283214563422208": {
       "items": [
        {
+        "kind": "player",
         "label": "Javonte Williams (RB)",
         "value": 3466
        },
        {
-        "label": "2025 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 3",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 0
        }
       ],
@@ -3208,15 +3439,22 @@
      "915765963616985088": {
       "items": [
        {
+        "kind": "player",
         "label": "Jared Goff (QB)",
         "value": 1928
        },
        {
-        "label": "2025 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 3",
+        "from": "Goed's Plan",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2026 Round 4 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 4",
+        "from": "Goed's Plan",
+        "player": null,
         "value": 0
        }
       ],
@@ -3330,6 +3568,7 @@
      "861417814836256768": {
       "items": [
        {
+        "kind": "player",
         "label": "Marvin Harrison Jr. (WR)",
         "value": 1829
        }
@@ -3341,11 +3580,15 @@
      "861422415547318272": {
       "items": [
        {
+        "kind": "player",
         "label": "Jonathon Brooks (RB)",
         "value": 1484
        },
        {
-        "label": "2025 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 1",
+        "from": "Baby Back Gibbs",
+        "player": null,
         "value": 0
        }
       ],
@@ -3439,7 +3682,10 @@
      "909255939126161408": {
       "items": [
        {
-        "label": "2025 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 3",
+        "from": "Bucky Irving Fan Club",
+        "player": null,
         "value": 0
        }
       ],
@@ -3450,6 +3696,7 @@
      "861422415547318272": {
       "items": [
        {
+        "kind": "player",
         "label": "Zack Moss (RB)",
         "value": 1
        }
@@ -3554,6 +3801,7 @@
      "909255939126161408": {
       "items": [
        {
+        "kind": "player",
         "label": "Chris Olave (WR)",
         "value": 4664
        }
@@ -3565,6 +3813,7 @@
      "915765963616985088": {
       "items": [
        {
+        "kind": "player",
         "label": "Brian Robinson Jr. (RB)",
         "value": 875
        }
@@ -3693,15 +3942,24 @@
      "731283214563422208": {
       "items": [
        {
-        "label": "2025 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 2",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2025 Round 4 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 4",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2026 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2026 Round 2",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 0
        }
       ],
@@ -3712,10 +3970,12 @@
      "915765963616985088": {
       "items": [
        {
+        "kind": "player",
         "label": "Derrick Henry (RB)",
         "value": 2635
        },
        {
+        "kind": "player",
         "label": "Terry McLaurin (WR)",
         "value": 1418
        }
@@ -3820,6 +4080,7 @@
      "853109226401288192": {
       "items": [
        {
+        "kind": "player",
         "label": "Joe Burrow (QB)",
         "value": 3715
        }
@@ -3831,6 +4092,7 @@
      "861422415547318272": {
       "items": [
        {
+        "kind": "player",
         "label": "Jayden Daniels (QB)",
         "value": 3013
        }
@@ -3954,11 +4216,15 @@
      "733192747346997248": {
       "items": [
        {
+        "kind": "player",
         "label": "Christian McCaffrey (RB)",
         "value": 4255
        },
        {
-        "label": "2025 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 2",
+        "from": "Bucky Irving Fan Club",
+        "player": null,
         "value": 0
        }
       ],
@@ -3969,11 +4235,15 @@
      "861422415547318272": {
       "items": [
        {
+        "kind": "player",
         "label": "Ja'Marr Chase (WR)",
         "value": 9075
        },
        {
-        "label": "2025 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 1",
+        "from": "Fannin the Flames",
+        "player": null,
         "value": 0
        }
       ],
@@ -4080,19 +4350,31 @@
      "858765508143628288": {
       "items": [
        {
-        "label": "2024 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 3",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2025 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 1",
+        "from": "Lamar Jackson Fan Club",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2024 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 2",
+        "from": "Why So Serious?",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2024 Round 4 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 4",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 0
        }
       ],
@@ -4103,7 +4385,10 @@
      "915765963616985088": {
       "items": [
        {
-        "label": "2024 Round 1 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 1",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 0
        }
       ],
@@ -4213,6 +4498,7 @@
      "858765508143628288": {
       "items": [
        {
+        "kind": "player",
         "label": "Raheem Mostert (RB)",
         "value": 2
        }
@@ -4224,15 +4510,24 @@
      "915765963616985088": {
       "items": [
        {
-        "label": "2024 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 2",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2024 Round 4 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 4",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2025 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 3",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 0
        }
       ],
@@ -4346,11 +4641,15 @@
      "908808510823997440": {
       "items": [
        {
+        "kind": "player",
         "label": "Dameon Pierce (RB)",
         "value": 121
        },
        {
-        "label": "2024 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 3",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 0
        }
       ],
@@ -4361,6 +4660,7 @@
      "909255939126161408": {
       "items": [
        {
+        "kind": "player",
         "label": "Brock Purdy (QB)",
         "value": 2992
        }
@@ -4492,11 +4792,15 @@
      "861417814836256768": {
       "items": [
        {
+        "kind": "player",
         "label": "Adam Thielen (WR)",
         "value": 0
        },
        {
-        "label": "2024 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 2",
+        "from": "Skatteboner",
+        "player": null,
         "value": 0
        }
       ],
@@ -4507,15 +4811,22 @@
      "908808510823997440": {
       "items": [
        {
+        "kind": "player",
         "label": "Jordan Love (QB)",
         "value": 2532
        },
        {
-        "label": "2024 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 3",
+        "from": "Baby Back Gibbs",
+        "player": null,
         "value": 0
        },
        {
-        "label": "2025 Round 4 (not drafted yet)",
+        "kind": "pick",
+        "label": "2025 Round 4",
+        "from": "Baby Back Gibbs",
+        "player": null,
         "value": 0
        }
       ],
@@ -4629,6 +4940,7 @@
      "861417814836256768": {
       "items": [
        {
+        "kind": "player",
         "label": "Brandin Cooks (WR)",
         "value": 1
        }
@@ -4640,11 +4952,15 @@
      "915765963616985088": {
       "items": [
        {
+        "kind": "player",
         "label": "Kayshon Boutte (WR)",
         "value": 894
        },
        {
-        "label": "2024 Round 4 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 4",
+        "from": "Baby Back Gibbs",
+        "player": null,
         "value": 0
        }
       ],
@@ -4758,6 +5074,7 @@
      "745458998371008512": {
       "items": [
        {
+        "kind": "player",
         "label": "Joe Mixon (RB)",
         "value": 2
        }
@@ -4769,11 +5086,15 @@
      "915765963616985088": {
       "items": [
        {
+        "kind": "player",
         "label": "Gus Edwards (RB)",
         "value": 1
        },
        {
-        "label": "2024 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 2",
+        "from": "Why So Serious?",
+        "player": null,
         "value": 0
        }
       ],
@@ -4887,11 +5208,15 @@
      "745458998371008512": {
       "items": [
        {
+        "kind": "player",
         "label": "Gabe Davis (WR)",
         "value": 0
        },
        {
-        "label": "2024 Round 2 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 2",
+        "from": "Olave\u2019s Medical Team",
+        "player": null,
         "value": 0
        }
       ],
@@ -4902,6 +5227,7 @@
      "909255939126161408": {
       "items": [
        {
+        "kind": "player",
         "label": "Zack Moss (RB)",
         "value": 1
        }
@@ -5024,10 +5350,12 @@
      "861417814836256768": {
       "items": [
        {
+        "kind": "player",
         "label": "Najee Harris (RB)",
         "value": 227
        },
        {
+        "kind": "player",
         "label": "C.J. Stroud (QB)",
         "value": 2452
        }
@@ -5039,6 +5367,7 @@
      "853109226401288192": {
       "items": [
        {
+        "kind": "player",
         "label": "Jerome Ford (RB)",
         "value": 182
        }
@@ -5171,10 +5500,12 @@
      "858765508143628288": {
       "items": [
        {
+        "kind": "player",
         "label": "Diontae Johnson (WR)",
         "value": 1
        },
        {
+        "kind": "player",
         "label": "Tyler Allgeier (RB)",
         "value": 1294
        }
@@ -5186,11 +5517,15 @@
      "909255939126161408": {
       "items": [
        {
+        "kind": "player",
         "label": "Brian Robinson Jr. (RB)",
         "value": 875
        },
        {
-        "label": "2024 Round 3 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 3",
+        "from": "Joe Buck Yourself",
+        "player": null,
         "value": 0
        }
       ],
@@ -5322,6 +5657,7 @@
      "745458998371008512": {
       "items": [
        {
+        "kind": "player",
         "label": "A.J. Brown (WR)",
         "value": 2795
        }
@@ -5333,15 +5669,20 @@
      "861421486488031232": {
       "items": [
        {
+        "kind": "player",
         "label": "Michael Pittman Jr. (WR)",
         "value": 1447
        },
        {
+        "kind": "player",
         "label": "Elijah Moore (WR)",
         "value": 1
        },
        {
-        "label": "2024 Round 4 (not drafted yet)",
+        "kind": "pick",
+        "label": "2024 Round 4",
+        "from": "Why So Serious?",
+        "player": null,
         "value": 0
        }
       ],
