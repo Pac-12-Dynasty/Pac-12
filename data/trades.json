@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T09:54+00:00",
+ "generated": "2026-11-13T10:46+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
@@ -147,7 +147,7 @@
        "was_rank": 107,
        "was_basis": "2026 Wk 1-9",
        "now_pos_rank": "WR37",
-       "now_rank": 107,
+       "now_rank": 108,
        "now_basis": "2026 so far",
        "was_value": 4143,
        "value_scale": "shared"
@@ -219,7 +219,7 @@
        "was_rank": 402,
        "was_basis": "2026 Wk 1-9",
        "now_pos_rank": "WR162",
-       "now_rank": 402,
+       "now_rank": 403,
        "now_basis": "2026 so far",
        "was_value": 2678,
        "value_scale": "shared"
@@ -247,7 +247,7 @@
        "was_rank": 110,
        "was_basis": "2026 Wk 1-9",
        "now_pos_rank": "WR39",
-       "now_rank": 110,
+       "now_rank": 111,
        "now_basis": "2026 so far",
        "was_value": 1551,
        "value_scale": "shared"
@@ -333,7 +333,7 @@
        "was_rank": 164,
        "was_basis": "2026 Wk 1-7",
        "now_pos_rank": "RB40",
-       "now_rank": 165,
+       "now_rank": 166,
        "now_basis": "2026 so far",
        "was_value": 4742,
        "value_scale": "shared"
@@ -352,8 +352,8 @@
        "was_pos_rank": "TE2",
        "was_rank": 35,
        "was_basis": "2026 Wk 1-7",
-       "now_pos_rank": "TE3",
-       "now_rank": 44,
+       "now_pos_rank": "TE2",
+       "now_rank": 25,
        "now_basis": "2026 so far",
        "was_value": 2459,
        "value_scale": "shared"
@@ -444,8 +444,8 @@
        "was_pos_rank": "WR71",
        "was_rank": 178,
        "was_basis": "2026 Wk 1-7",
-       "now_pos_rank": "WR51",
-       "now_rank": 135,
+       "now_pos_rank": "WR52",
+       "now_rank": 136,
        "now_basis": "2026 so far",
        "was_value": 2902,
        "value_scale": "shared"
@@ -458,7 +458,7 @@
        "was_rank": 212,
        "was_basis": "2026 Wk 1-7",
        "now_pos_rank": "RB54",
-       "now_rank": 215,
+       "now_rank": 216,
        "now_basis": "2026 so far",
        "was_value": 809,
        "value_scale": "shared"
@@ -565,7 +565,7 @@
        "was_rank": 102,
        "was_basis": "2026 Wk 1-4",
        "now_pos_rank": "QB25",
-       "now_rank": 76,
+       "now_rank": 78,
        "now_basis": "2026 so far",
        "was_value": 1346,
        "value_scale": "shared"
@@ -657,7 +657,7 @@
        "was_rank": 34,
        "was_basis": "2025 finish",
        "now_pos_rank": "RB49",
-       "now_rank": 197,
+       "now_rank": 198,
        "now_basis": "2026 so far",
        "was_value": 1712,
        "value_scale": "shared"
@@ -743,7 +743,7 @@
        "was_rank": 193,
        "was_basis": "2025 finish",
        "now_pos_rank": "RB15",
-       "now_rank": 46,
+       "now_rank": 47,
        "now_basis": "2026 so far",
        "was_value": 2115,
        "value_scale": "shared"
@@ -756,7 +756,7 @@
        "was_rank": 553,
        "was_basis": "2025 finish",
        "now_pos_rank": "WR192",
-       "now_rank": 490,
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 952,
        "value_scale": "shared"
@@ -784,7 +784,7 @@
        "was_rank": 553,
        "was_basis": "2025 finish",
        "now_pos_rank": "WR102",
-       "now_rank": 250,
+       "now_rank": 251,
        "now_basis": "2026 so far",
        "was_value": 1294,
        "value_scale": "shared"
@@ -797,7 +797,7 @@
        "was_rank": 553,
        "was_basis": "2025 finish",
        "now_pos_rank": "RB54",
-       "now_rank": 215,
+       "now_rank": 216,
        "now_basis": "2026 so far",
        "was_value": 475,
        "value_scale": "shared"
@@ -894,7 +894,7 @@
        "was_rank": 553,
        "was_basis": "2025 finish",
        "now_pos_rank": "RB94",
-       "now_rank": 354,
+       "now_rank": 355,
        "now_basis": "2026 so far",
        "was_value": 1631,
        "value_scale": "shared"
@@ -906,8 +906,8 @@
        "was_pos_rank": "WR48",
        "was_rank": 131,
        "was_basis": "2025 finish",
-       "now_pos_rank": "WR10",
-       "now_rank": 40,
+       "now_pos_rank": "WR11",
+       "now_rank": 42,
        "now_basis": "2026 so far",
        "was_value": 3417,
        "value_scale": "shared"
@@ -942,7 +942,7 @@
        "was_rank": 121,
        "was_basis": "2025 finish",
        "now_pos_rank": "RB30",
-       "now_rank": 129,
+       "now_rank": 130,
        "now_basis": "2026 so far",
        "was_value": 5311,
        "value_scale": "shared"
@@ -1171,8 +1171,8 @@
        "was_pos_rank": "WR22",
        "was_rank": 67,
        "was_basis": "2025 Wk 1-9",
-       "now_pos_rank": "WR26",
-       "now_rank": 81,
+       "now_pos_rank": "WR17",
+       "now_rank": 58,
        "now_basis": "2026 so far",
        "was_value": 1860,
        "value_scale": "shared"
@@ -1205,7 +1205,7 @@
        "was_rank": 98,
        "was_basis": "2025 Wk 1-9",
        "now_pos_rank": "RB16",
-       "now_rank": 52,
+       "now_rank": 53,
        "now_basis": "2026 so far",
        "was_value": 1733,
        "value_scale": "shared"
@@ -1217,8 +1217,8 @@
        "was_pos_rank": "WR34",
        "was_rank": 89,
        "was_basis": "2025 Wk 1-9",
-       "now_pos_rank": "WR54",
-       "now_rank": 139,
+       "now_pos_rank": "WR56",
+       "now_rank": 141,
        "now_basis": "2026 so far",
        "was_value": 1209,
        "value_scale": "shared"
@@ -1349,7 +1349,7 @@
        "was_rank": 350,
        "was_basis": "2025 Wk 1-8",
        "now_pos_rank": "RB116",
-       "now_rank": 453,
+       "now_rank": 454,
        "now_basis": "2026 so far",
        "was_value": 790,
        "value_scale": "shared"
@@ -1362,7 +1362,7 @@
        "was_rank": 190,
        "was_basis": "2025 Wk 1-8",
        "now_pos_rank": "WR76",
-       "now_rank": 186,
+       "now_rank": 188,
        "now_basis": "2026 so far",
        "was_value": 2422,
        "value_scale": "shared"
@@ -1397,7 +1397,7 @@
        "was_rank": 22,
        "was_basis": "2025 Wk 1-8",
        "now_pos_rank": "RB49",
-       "now_rank": 197,
+       "now_rank": 198,
        "now_basis": "2026 so far",
        "was_value": 3575,
        "value_scale": "shared"
@@ -1446,7 +1446,7 @@
        }
       ],
       "got_now": 4176,
-      "gave_now": 3532,
+      "gave_now": 3541,
       "grade": "C"
      },
      "915765963616985088": {
@@ -1461,10 +1461,10 @@
         "label": "2028 Round 2",
         "from": "Olave\u2019s Medical Team",
         "player": null,
-        "value": 1409
+        "value": 1418
        }
       ],
-      "got_now": 3532,
+      "got_now": 3541,
       "gave_now": 4176,
       "grade": "C"
      }
@@ -1534,8 +1534,8 @@
        "was_pos_rank": "TE28",
        "was_rank": 163,
        "was_basis": "2025 Wk 1-7",
-       "now_pos_rank": "TE62",
-       "now_rank": 312,
+       "now_pos_rank": "TE63",
+       "now_rank": 313,
        "now_basis": "2026 so far",
        "was_value": 1048,
        "value_scale": "shared"
@@ -1547,8 +1547,8 @@
        "was_pos_rank": "WR33",
        "was_rank": 86,
        "was_basis": "2025 Wk 1-7",
-       "now_pos_rank": "WR25",
-       "now_rank": 78,
+       "now_pos_rank": "WR26",
+       "now_rank": 80,
        "now_basis": "2026 so far",
        "was_value": 5026,
        "value_scale": "shared"
@@ -1567,8 +1567,8 @@
        "was_pos_rank": "WR76",
        "was_rank": 186,
        "was_basis": "2025 Wk 1-7",
-       "now_pos_rank": "WR10",
-       "now_rank": 40,
+       "now_pos_rank": "WR11",
+       "now_rank": 42,
        "now_basis": "2026 so far",
        "was_value": 2133,
        "value_scale": "shared"
@@ -1691,8 +1691,8 @@
        "was_pos_rank": "WR17",
        "was_rank": 54,
        "was_basis": "2025 Wk 1-7",
-       "now_pos_rank": "WR57",
-       "now_rank": 148,
+       "now_pos_rank": "WR59",
+       "now_rank": 150,
        "now_basis": "2026 so far",
        "was_value": 1745,
        "value_scale": "shared"
@@ -1719,8 +1719,8 @@
        "was_pos_rank": "WR43",
        "was_rank": 124,
        "was_basis": "2025 Wk 1-7",
-       "now_pos_rank": "WR19",
-       "now_rank": 61,
+       "now_pos_rank": "WR20",
+       "now_rank": 62,
        "now_basis": "2026 so far",
        "was_value": 2485,
        "value_scale": "shared"
@@ -1758,10 +1758,10 @@
         "label": "2027 Round 1",
         "from": "Joe Buck Yourself",
         "player": null,
-        "value": 2501
+        "value": 2456
        }
       ],
-      "got_now": 3695,
+      "got_now": 3650,
       "gave_now": 9828,
       "grade": "F"
      },
@@ -1779,7 +1779,7 @@
        }
       ],
       "got_now": 9828,
-      "gave_now": 3695,
+      "gave_now": 3650,
       "grade": "A"
      }
     }
@@ -1843,8 +1843,8 @@
        "was_pos_rank": "WR51",
        "was_rank": 135,
        "was_basis": "2025 Wk 1-4",
-       "now_pos_rank": "WR69",
-       "now_rank": 174,
+       "now_pos_rank": "WR70",
+       "now_rank": 175,
        "now_basis": "2026 so far",
        "was_value": 3969,
        "value_scale": "shared"
@@ -1871,8 +1871,8 @@
        "was_pos_rank": "WR156",
        "was_rank": 387,
        "was_basis": "2025 Wk 1-4",
-       "now_pos_rank": "WR51",
-       "now_rank": 135,
+       "now_pos_rank": "WR52",
+       "now_rank": 136,
        "now_basis": "2026 so far",
        "was_value": 4229,
        "value_scale": "shared"
@@ -1999,7 +1999,7 @@
        "was_rank": 32,
        "was_basis": "2025 Wk 1-2",
        "now_pos_rank": "WR35",
-       "now_rank": 105,
+       "now_rank": 106,
        "now_basis": "2026 so far",
        "was_value": 4105,
        "value_scale": "shared"
@@ -2012,7 +2012,7 @@
        "was_rank": 7,
        "was_basis": "2025 Wk 1-2",
        "now_pos_rank": "RB10",
-       "now_rank": 27,
+       "now_rank": 28,
        "now_basis": "2026 so far",
        "was_value": 3235,
        "value_scale": "shared"
@@ -2054,7 +2054,7 @@
        "was_rank": 13,
        "was_basis": "2025 Wk 1-2",
        "now_pos_rank": "QB9",
-       "now_rank": 28,
+       "now_rank": 29,
        "now_basis": "2026 so far",
        "was_value": 1733,
        "value_scale": "shared"
@@ -2067,7 +2067,7 @@
        "was_rank": 228,
        "was_basis": "2025 Wk 1-2",
        "now_pos_rank": "TE9",
-       "now_rank": 87,
+       "now_rank": 88,
        "now_basis": "2026 so far",
        "was_value": 2485,
        "value_scale": "shared"
@@ -2079,8 +2079,8 @@
        "was_pos_rank": "WR25",
        "was_rank": 72,
        "was_basis": "2025 Wk 1-2",
-       "now_pos_rank": "WR24",
-       "now_rank": 73,
+       "now_pos_rank": "WR25",
+       "now_rank": 75,
        "now_basis": "2026 so far",
        "was_value": 10021,
        "value_scale": "shared"
@@ -2157,7 +2157,7 @@
        }
       ],
       "got_now": 14247,
-      "gave_now": 11272,
+      "gave_now": 11343,
       "grade": "A"
      },
      "853109226401288192": {
@@ -2196,17 +2196,17 @@
         "label": "2027 Round 3",
         "from": "Lamar Jackson Fan Club",
         "player": null,
-        "value": 422
+        "value": 474
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
         "from": "Lamar Jackson Fan Club",
         "player": null,
-        "value": 1199
+        "value": 1218
        }
       ],
-      "got_now": 11272,
+      "got_now": 11343,
       "gave_now": 14247,
       "grade": "F"
      }
@@ -2394,8 +2394,8 @@
        "was_pos_rank": "QB74",
        "was_rank": 540,
        "was_basis": "2024 finish",
-       "now_pos_rank": "QB37",
-       "now_rank": 227,
+       "now_pos_rank": "QB33",
+       "now_rank": 177,
        "now_basis": "2026 so far",
        "was_value": 1631,
        "value_scale": "shared"
@@ -2512,7 +2512,7 @@
        "was_rank": 69,
        "was_basis": "2024 finish",
        "now_pos_rank": "RB88",
-       "now_rank": 340,
+       "now_rank": 341,
        "now_basis": "2026 so far",
        "was_value": 1504,
        "value_scale": "shared"
@@ -2615,7 +2615,7 @@
        "was_rank": 81,
        "was_basis": "2024 finish",
        "now_pos_rank": "WR36",
-       "now_rank": 106,
+       "now_rank": 107,
        "now_basis": "2026 so far",
        "was_value": 2855,
        "value_scale": "shared"
@@ -2753,7 +2753,7 @@
        "was_rank": 16,
        "was_basis": "2024 finish",
        "now_pos_rank": "QB25",
-       "now_rank": 76,
+       "now_rank": 78,
        "now_basis": "2026 so far",
        "was_value": 1246,
        "value_scale": "shared"
@@ -2864,8 +2864,8 @@
        "was_pos_rank": "WR38",
        "was_rank": 96,
        "was_basis": "2024 finish",
-       "now_pos_rank": "WR62",
-       "now_rank": 157,
+       "now_pos_rank": "WR63",
+       "now_rank": 158,
        "now_basis": "2026 so far",
        "was_value": 1397,
        "value_scale": "shared"
@@ -3006,8 +3006,8 @@
        "was_pos_rank": "WR56",
        "was_rank": 132,
        "was_basis": "2024 finish",
-       "now_pos_rank": "WR60",
-       "now_rank": 155,
+       "now_pos_rank": "WR61",
+       "now_rank": 156,
        "now_basis": "2026 so far",
        "was_value": 1307,
        "value_scale": "shared"
@@ -3189,7 +3189,7 @@
        "was_rank": 48,
        "was_basis": "2024 Wk 1-9",
        "now_pos_rank": "RB45",
-       "now_rank": 188,
+       "now_rank": 190,
        "now_basis": "2026 so far",
        "was_value": 2784,
        "value_scale": "shared"
@@ -3208,8 +3208,8 @@
        "was_pos_rank": "RB75",
        "was_rank": 286,
        "was_basis": "2024 Wk 1-9",
-       "now_pos_rank": "RB131",
-       "now_rank": 490,
+       "now_pos_rank": "RB132",
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 1368,
        "value_scale": "shared"
@@ -3222,7 +3222,7 @@
        "was_rank": 130,
        "was_basis": "2024 Wk 1-9",
        "now_pos_rank": "TE14",
-       "now_rank": 98,
+       "now_rank": 99,
        "now_basis": "2026 so far",
        "was_value": 649,
        "value_scale": "shared"
@@ -3235,7 +3235,7 @@
        "was_rank": 101,
        "was_basis": "2024 Wk 1-9",
        "now_pos_rank": "WR192",
-       "now_rank": 490,
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 2342,
        "value_scale": "shared"
@@ -3389,7 +3389,7 @@
        "was_rank": 36,
        "was_basis": "2024 Wk 1-9",
        "now_pos_rank": "QB9",
-       "now_rank": 28,
+       "now_rank": 29,
        "now_basis": "2026 so far",
        "was_value": 1737,
        "value_scale": "shared"
@@ -3524,7 +3524,7 @@
        "was_rank": 85,
        "was_basis": "2024 Wk 1-7",
        "now_pos_rank": "WR89",
-       "now_rank": 217,
+       "now_rank": 218,
        "now_basis": "2026 so far",
        "was_value": 7038,
        "value_scale": "shared"
@@ -3544,7 +3544,7 @@
        "was_rank": 442,
        "was_basis": "2024 Wk 1-7",
        "now_pos_rank": "RB94",
-       "now_rank": 354,
+       "now_rank": 355,
        "now_basis": "2026 so far",
        "was_value": 3232,
        "value_scale": "shared"
@@ -3665,8 +3665,8 @@
        "was_pos_rank": "RB20",
        "was_rank": 63,
        "was_basis": "2024 Wk 1-5",
-       "now_pos_rank": "RB131",
-       "now_rank": 490,
+       "now_pos_rank": "RB132",
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 1293,
        "value_scale": "shared"
@@ -3765,7 +3765,7 @@
        "was_rank": 85,
        "was_basis": "2024 Wk 1-5",
        "now_pos_rank": "WR9",
-       "now_rank": 37,
+       "now_rank": 38,
        "now_basis": "2026 so far",
        "was_value": 4689,
        "value_scale": "shared"
@@ -3913,7 +3913,7 @@
        "was_rank": 59,
        "was_basis": "2024 Wk 1-2",
        "now_pos_rank": "RB12",
-       "now_rank": 35,
+       "now_rank": 36,
        "now_basis": "2026 so far",
        "was_value": 2452,
        "value_scale": "shared"
@@ -3926,7 +3926,7 @@
        "was_rank": 155,
        "was_basis": "2024 Wk 1-2",
        "now_pos_rank": "WR76",
-       "now_rank": 186,
+       "now_rank": 188,
        "now_basis": "2026 so far",
        "was_value": 2133,
        "value_scale": "shared"
@@ -4063,8 +4063,8 @@
        "was_pos_rank": "QB4",
        "was_rank": 12,
        "was_basis": "2024 Wk 1-2",
-       "now_pos_rank": "QB19",
-       "now_rank": 53,
+       "now_pos_rank": "QB15",
+       "now_rank": 43,
        "now_basis": "2026 so far",
        "was_value": 2156,
        "value_scale": "shared"
@@ -4453,8 +4453,8 @@
        "was_pos_rank": "RB3",
        "was_rank": 9,
        "was_basis": "2023 Wk 1-8",
-       "now_pos_rank": "RB131",
-       "now_rank": 490,
+       "now_pos_rank": "RB132",
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 1702,
        "value_scale": "shared"
@@ -4596,8 +4596,8 @@
        "was_pos_rank": "RB31",
        "was_rank": 132,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "RB65",
-       "now_rank": 246,
+       "now_pos_rank": "RB66",
+       "now_rank": 247,
        "now_basis": "2026 so far",
        "was_value": 2830,
        "value_scale": "shared"
@@ -4733,7 +4733,7 @@
        "was_rank": 16,
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "WR192",
-       "now_rank": 490,
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 1129,
        "value_scale": "shared"
@@ -4896,7 +4896,7 @@
        "was_rank": 199,
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "WR119",
-       "now_rank": 302,
+       "now_rank": 303,
        "now_basis": "2026 so far",
        "was_value": 1270,
        "value_scale": "shared"
@@ -4915,8 +4915,8 @@
        "was_pos_rank": "WR169",
        "was_rank": 435,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "WR54",
-       "now_rank": 139,
+       "now_pos_rank": "WR56",
+       "now_rank": 141,
        "now_basis": "2026 so far",
        "was_value": 649,
        "value_scale": "shared"
@@ -5029,8 +5029,8 @@
        "was_pos_rank": "RB23",
        "was_rank": 99,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "RB131",
-       "now_rank": 490,
+       "now_pos_rank": "RB132",
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 2485,
        "value_scale": "shared"
@@ -5049,8 +5049,8 @@
        "was_pos_rank": "RB26",
        "was_rank": 111,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "RB131",
-       "now_rank": 490,
+       "now_pos_rank": "RB132",
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 1087,
        "value_scale": "shared"
@@ -5164,7 +5164,7 @@
        "was_rank": 79,
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "WR192",
-       "now_rank": 490,
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 1919,
        "value_scale": "shared"
@@ -5191,8 +5191,8 @@
        "was_pos_rank": "RB5",
        "was_rank": 26,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "RB131",
-       "now_rank": 490,
+       "now_pos_rank": "RB132",
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 941,
        "value_scale": "shared"
@@ -5301,7 +5301,7 @@
        "was_rank": 141,
        "was_basis": "2023 Wk 1-7",
        "now_pos_rank": "RB88",
-       "now_rank": 340,
+       "now_rank": 341,
        "now_basis": "2026 so far",
        "was_value": 2211,
        "value_scale": "shared"
@@ -5333,8 +5333,8 @@
        "was_pos_rank": "RB18",
        "was_rank": 70,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "RB131",
-       "now_rank": 490,
+       "now_pos_rank": "RB132",
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 1736,
        "value_scale": "shared"
@@ -5443,7 +5443,7 @@
        "was_rank": 257,
        "was_basis": "2023 Wk 1-3",
        "now_pos_rank": "WR192",
-       "now_rank": 490,
+       "now_rank": 491,
        "now_basis": "2026 so far",
        "was_value": 2415,
        "value_scale": "shared"
@@ -5455,8 +5455,8 @@
        "was_pos_rank": "RB22",
        "was_rank": 94,
        "was_basis": "2023 Wk 1-3",
-       "now_pos_rank": "RB22",
-       "now_rank": 79,
+       "now_pos_rank": "RB23",
+       "now_rank": 81,
        "now_basis": "2026 so far",
        "was_value": 1417,
        "value_scale": "shared"
@@ -5620,7 +5620,7 @@
        "was_rank": 14,
        "was_basis": "2023 Wk 1-1",
        "now_pos_rank": "WR122",
-       "now_rank": 309,
+       "now_rank": 310,
        "now_basis": "2026 so far",
        "was_value": 2775,
        "value_scale": "shared"
@@ -5633,7 +5633,7 @@
        "was_rank": 101,
        "was_basis": "2023 Wk 1-1",
        "now_pos_rank": "WR157",
-       "now_rank": 388,
+       "now_rank": 389,
        "now_basis": "2026 so far",
        "was_value": 1930,
        "value_scale": "shared"

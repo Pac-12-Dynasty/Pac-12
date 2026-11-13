@@ -36,8 +36,8 @@
   "injury_part": "Neck",
   "name": "Jayden Reed",
   "pos": "WR",
-  "pos_rank": "WR62",
-  "rank": 148,
+  "pos_rank": "WR61",
+  "rank": 147,
   "team": "GB",
   "value": 1260
  },
@@ -190,8 +190,8 @@
   "injury_part": "",
   "name": "Bo Nix",
   "pos": "QB",
-  "pos_rank": "QB16",
-  "rank": 95,
+  "pos_rank": "QB17",
+  "rank": 96,
   "team": "DEN",
   "value": 1902
  },
@@ -345,7 +345,7 @@
   "name": "Theo Johnson",
   "pos": "TE",
   "pos_rank": "TE44",
-  "rank": 297,
+  "rank": 296,
   "team": "NYG",
   "value": 254
  },
@@ -414,8 +414,8 @@
   "injury_part": "",
   "name": "Xavier Worthy",
   "pos": "WR",
-  "pos_rank": "WR50",
-  "rank": 122,
+  "pos_rank": "WR51",
+  "rank": 123,
   "team": "KC",
   "value": 1471
  },
@@ -876,8 +876,8 @@
   "injury_part": "",
   "name": "Elic Ayomanor",
   "pos": "WR",
-  "pos_rank": "WR92",
-  "rank": 226,
+  "pos_rank": "WR93",
+  "rank": 227,
   "team": "TEN",
   "value": 637
  },
@@ -1282,8 +1282,8 @@
   "injury_part": "",
   "name": "Konata Mumpfield",
   "pos": "WR",
-  "pos_rank": "WR93",
-  "rank": 227,
+  "pos_rank": "WR92",
+  "rank": 226,
   "team": "LAR",
   "value": 637
  },
@@ -1338,8 +1338,8 @@
   "injury_part": "",
   "name": "CJ Daniels",
   "pos": "WR",
-  "pos_rank": "WR108",
-  "rank": 258,
+  "pos_rank": "WR107",
+  "rank": 257,
   "team": "LAR",
   "value": 421
  },
@@ -1465,7 +1465,7 @@
   "name": "Jack Endries",
   "pos": "TE",
   "pos_rank": "TE67",
-  "rank": 421,
+  "rank": 422,
   "team": "CIN",
   "value": 10
  },
@@ -1661,7 +1661,7 @@
   "name": "Mike Washington Jr.",
   "pos": "RB",
   "pos_rank": "RB41",
-  "rank": 134,
+  "rank": 135,
   "team": "LV",
   "value": 1341
  },
@@ -1675,7 +1675,7 @@
   "name": "Chris Bell",
   "pos": "WR",
   "pos_rank": "WR58",
-  "rank": 135,
+  "rank": 134,
   "team": "MIA",
   "value": 1341
  },
@@ -1786,8 +1786,8 @@
   "injury_part": "",
   "name": "Jonah Coleman",
   "pos": "RB",
-  "pos_rank": "RB22",
-  "rank": 68,
+  "pos_rank": "RB21",
+  "rank": 67,
   "team": "DEN",
   "value": 2556
  },
@@ -1898,8 +1898,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB121",
-  "rank": 432,
+  "pos_rank": "RB124",
+  "rank": 437,
   "team": "ATL",
   "value": 4
  },
@@ -1982,8 +1982,8 @@
   "injury_part": "",
   "name": "Roman Hemby",
   "pos": "RB",
-  "pos_rank": "RB125",
-  "rank": 437,
+  "pos_rank": "RB126",
+  "rank": 440,
   "team": "LV",
   "value": 4
  },
@@ -2178,8 +2178,8 @@
   "injury_part": "",
   "name": "Stefon Diggs",
   "pos": "WR",
-  "pos_rank": "WR61",
-  "rank": 146,
+  "pos_rank": "WR62",
+  "rank": 148,
   "team": "WAS",
   "value": 1260
  },
@@ -2220,8 +2220,8 @@
   "injury_part": "",
   "name": "Jared Goff",
   "pos": "QB",
-  "pos_rank": "QB17",
-  "rank": 96,
+  "pos_rank": "QB16",
+  "rank": 95,
   "team": "DET",
   "value": 1902
  },
@@ -2234,8 +2234,8 @@
   "injury_part": "",
   "name": "Derrick Henry",
   "pos": "RB",
-  "pos_rank": "RB21",
-  "rank": 67,
+  "pos_rank": "RB22",
+  "rank": 68,
   "team": "BAL",
   "value": 2556
  },
@@ -2277,7 +2277,7 @@
   "name": "Demarcus Robinson",
   "pos": "WR",
   "pos_rank": "WR142",
-  "rank": 349,
+  "rank": 350,
   "team": "SF",
   "value": 110
  },
@@ -2431,7 +2431,7 @@
   "name": "James Conner",
   "pos": "RB",
   "pos_rank": "RB77",
-  "rank": 276,
+  "rank": 275,
   "team": "ARI",
   "value": 318
  },
@@ -2543,7 +2543,7 @@
   "name": "Baker Mayfield",
   "pos": "QB",
   "pos_rank": "QB23",
-  "rank": 160,
+  "rank": 159,
   "team": "TB",
   "value": 1217
  },
@@ -2557,7 +2557,7 @@
   "name": "Sam Darnold",
   "pos": "QB",
   "pos_rank": "QB21",
-  "rank": 154,
+  "rank": 155,
   "team": "SEA",
   "value": 1233
  },
@@ -3032,8 +3032,8 @@
   "injury_part": "Foot",
   "name": "Michael Pittman Jr.",
   "pos": "WR",
-  "pos_rank": "WR51",
-  "rank": 123,
+  "pos_rank": "WR50",
+  "rank": 122,
   "team": "PIT",
   "value": 1471
  },
@@ -3187,7 +3187,7 @@
   "name": "Elijah Mitchell",
   "pos": "RB",
   "pos_rank": "RB99",
-  "rank": 353,
+  "rank": 352,
   "team": "PHI",
   "value": 108
  },
@@ -3229,7 +3229,7 @@
   "name": "Kenny Gainwell",
   "pos": "RB",
   "pos_rank": "RB49",
-  "rank": 159,
+  "rank": 160,
   "team": "TB",
   "value": 1217
  },
@@ -3312,8 +3312,8 @@
   "injury_part": "",
   "name": "Michael Carter",
   "pos": "RB",
-  "pos_rank": "RB135",
-  "rank": 465,
+  "pos_rank": "RB129",
+  "rank": 447,
   "team": "TEN",
   "value": 3
  },
@@ -3761,7 +3761,7 @@
   "name": "Jordan Mason",
   "pos": "RB",
   "pos_rank": "RB47",
-  "rank": 147,
+  "rank": 146,
   "team": "MIN",
   "value": 1260
  },
@@ -3971,7 +3971,7 @@
   "name": "Josh Downs",
   "pos": "WR",
   "pos_rank": "WR42",
-  "rank": 104,
+  "rank": 103,
   "team": "KC",
   "value": 1833
  },
@@ -4083,7 +4083,7 @@
   "name": "Zach Charbonnet",
   "pos": "RB",
   "pos_rank": "RB31",
-  "rank": 103,
+  "rank": 104,
   "team": "SEA",
   "value": 1833
  },
