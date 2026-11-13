@@ -70,6 +70,48 @@ def league_market(history):
     return out
 
 
+SUPABASE_URL = "https://pbshfpmkmdxyewzmgluv.supabase.co"
+SUPABASE_KEY = "sb_publishable_rpVEqpRnWux9GGx2kKfkNA_4A1xPygw"   # public by design
+
+
+def analyzer_interest(teams):
+    """What the league is looking at: hypothetical trades built in the Analyzer, last 4 weeks."""
+    from datetime import timedelta
+    since = (datetime.now(timezone.utc) - timedelta(days=28)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    req = urllib.request.Request(
+        f"{SUPABASE_URL}/rest/v1/analyzer_trades?select=*&created_at=gte.{since}&order=created_at.desc&limit=5000",
+        headers={"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}", "User-Agent": "pac12-dynasty-site"})
+    with urllib.request.urlopen(req, timeout=60) as res:
+        rows = json.loads(res.read().decode("utf-8"))
+    week_ago = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
+    assets, pairs = {}, {}
+    ideas_7d = 0
+    for r in rows:
+        recent = (r.get("created_at") or "") >= week_ago
+        ideas_7d += 1 if recent else 0
+        for x in (r.get("a_gives") or []) + (r.get("b_gives") or []):
+            a = assets.setdefault(x.get("id"), {"name": x.get("name"), "pos": x.get("pos") or ("PICK" if x.get("kind") == "pick" else ""),
+                                               "ideas": 0, "people": set(), "before": 0})
+            if recent:
+                a["ideas"] += 1
+                a["people"].add(r.get("session"))
+            else:
+                a["before"] += 1
+        if recent:
+            key = tuple(sorted([r.get("team_a") or "", r.get("team_b") or ""]))
+            pairs[key] = pairs.get(key, 0) + 1
+    out = []
+    for aid, a in assets.items():
+        out.append({"id": aid, "name": a["name"], "pos": a["pos"], "ideas": a["ideas"],
+                    "people": len(a["people"]), "before": round(a["before"] / 3, 1)})
+    top = sorted([a for a in out if a["ideas"]], key=lambda a: (-a["people"], -a["ideas"]))[:10]
+    rising = sorted([a for a in out if a["ideas"] >= 3 and a["ideas"] >= 2 * max(a["before"], 1)],
+                    key=lambda a: -(a["ideas"] - a["before"]))[:8]
+    name = lambda uid: (teams.get(uid) or {}).get("team") or "A former team"
+    pair_list = [{"teams": [name(k[0]), name(k[1])], "ideas": v} for k, v in sorted(pairs.items(), key=lambda kv: -kv[1])[:8]]
+    return {"ideas_7d": ideas_7d, "ideas_28d": len(rows), "top_assets": top, "rising": rising, "pairs": pair_list}
+
+
 def market_overview(history, owner_names, season, teams, movers):
     """Patterns and trends in the league's trade market, rebuilt on every run."""
     now = datetime.now(timezone.utc)
@@ -167,7 +209,18 @@ def market_overview(history, owner_names, season, teams, movers):
         m = movers["fallers"][0]
         notes.append(f"Biggest faller over the last 4 weeks: {m['name']} ({m['change']:,}).")
 
+    try:
+        interest = analyzer_interest(teams)
+        if interest["rising"]:
+            r = interest["rising"][0]
+            notes.append(f"Rising interest: {r['name']} showed up in {r['ideas']} trade ideas in the Analyzer this week, "
+                         f"up from about {r['before']} a week before.")
+    except Exception as err:
+        print(f"Analyzer trade cache unavailable: {err}")
+        interest = None
+
     return {
+        "interest": interest,
         "season": season,
         "counts": {"this_season": len(this_season), "last_season_same_point": len(last_pace),
                    "last_season": len(last_season), "last_30_days": len(last_30), "all_time": len(history)},
