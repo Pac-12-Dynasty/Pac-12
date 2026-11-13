@@ -377,6 +377,43 @@
       return { a: va, b: vb, winWin: winWin };
     }
 
+
+    // ---------- Trade cache: hypothetical trades are saved anonymously ----------
+    // Nothing about who built the trade is saved. A random code per browser tab only lets the
+    // league count how many different people looked at a player, not who they were.
+    var saveTimer = null, lastSaved = "", nextSource = "builder";
+    var session = (function () {
+      try {
+        var k = sessionStorage.getItem("pac12-analyzer-session");
+        if (!k) { k = Math.random().toString(36).slice(2, 12); sessionStorage.setItem("pac12-analyzer-session", k); }
+        return k;
+      } catch (e) { return Math.random().toString(36).slice(2, 12); }
+    })();
+
+    function describeAsset(id) {
+      if (D.players[id]) return { id: id, kind: "player", name: D.players[id].name, pos: D.players[id].pos };
+      var pk = D.pickById[id];
+      return { id: id, kind: "pick", name: pk ? pk.label : id, season: pk ? pk.season : null, round: pk ? pk.round : null };
+    }
+
+    function queueSave(a, aGives, b, bGives, ev) {
+      clearTimeout(saveTimer);
+      // Wait until the trade has stopped changing for a few seconds, so half-built trades aren't saved
+      saveTimer = setTimeout(function () {
+        var sig = [a, aGives.slice().sort().join(","), b, bGives.slice().sort().join(",")].join("|");
+        var sb = window.pac12 && window.pac12.sb;
+        if (!sb || sig === lastSaved || !aGives.length || !bGives.length) return;
+        lastSaved = sig;
+        sb.from("analyzer_trades").insert({
+          team_a: a, team_b: b,
+          a_gives: aGives.map(describeAsset), b_gives: bGives.map(describeAsset),
+          grade_a: ev.a.grade, grade_b: ev.b.grade,
+          source: nextSource, session: session
+        }).then(function (r) { if (r.error) console.warn("Trade cache:", r.error.message); });
+        nextSource = "builder";
+      }, 4000);
+    }
+
     function grade() {
       var out = document.getElementById("result");
       out.innerHTML = "";
@@ -387,6 +424,7 @@
       if (!aGives.length && !bGives.length) { out.appendChild(el("p", "empty", "Check what each team sends to see the grades.")); return; }
 
       var ev = evaluate(a, aGives, b, bGives), va = ev.a, vb = ev.b, winWin = ev.winWin;
+      queueSave(a, aGives, b, bGives, ev);
 
       var wrap = el("div", "result");
       [va, vb].forEach(function (v) {
@@ -726,6 +764,7 @@
     }
 
     function loadTrade(a, aGives, b, bGives) {
+      nextSource = "finder";
       teamOf.a = a; teamOf.b = b;
       picked.a = {}; picked.b = {};
       aGives.forEach(function (id) { picked.a[id] = true; });
@@ -839,7 +878,39 @@
       cols.appendChild(colM);
 
       box.appendChild(cols);
-      box.appendChild(el("p", "muted", "This section rebuilds itself from league trade history and current values every time the data updates."));
+
+      // Interest from hypothetical trades built in the Analyzer
+      var it = m.interest;
+      if (it && it.ideas_7d) {
+        var cols2 = el("div", "market-cols");
+        var colI = el("div"); colI.appendChild(el("h3", "", "Most analyzed this week"));
+        var ulI = el("ul");
+        it.top_assets.slice(0, 6).forEach(function (x) {
+          var li = el("li"); li.appendChild(el("span", "", x.name + (x.pos ? " (" + x.pos + ")" : "")));
+          li.appendChild(el("span", "", x.people + (x.people === 1 ? " person" : " people") + " · " + x.ideas + " idea" + (x.ideas === 1 ? "" : "s"))); ulI.appendChild(li);
+        });
+        colI.appendChild(ulI); cols2.appendChild(colI);
+
+        var colR = el("div"); colR.appendChild(el("h3", "", "Rising interest"));
+        var ulR2 = el("ul");
+        (it.rising || []).slice(0, 5).forEach(function (x) {
+          var li = el("li"); li.appendChild(el("span", "", x.name + (x.pos ? " (" + x.pos + ")" : "")));
+          li.appendChild(el("span", "up", x.ideas + " this week vs. " + x.before + " per week before")); ulR2.appendChild(li);
+        });
+        if (!(it.rising || []).length) ulR2.appendChild(el("li", "muted", "Nothing unusual this week."));
+        colR.appendChild(ulR2); cols2.appendChild(colR);
+
+        var colP2 = el("div"); colP2.appendChild(el("h3", "", "Most explored matchups"));
+        var ulP2 = el("ul");
+        (it.pairs || []).slice(0, 5).forEach(function (x) {
+          var li = el("li"); li.appendChild(el("span", "", x.teams.join(" ↔ ")));
+          li.appendChild(el("span", "", x.ideas + " idea" + (x.ideas === 1 ? "" : "s"))); ulP2.appendChild(li);
+        });
+        colP2.appendChild(ulP2); cols2.appendChild(colP2);
+        box.appendChild(cols2);
+        box.appendChild(el("p", "muted", it.ideas_7d + " trade ideas built in the Analyzer this week, saved anonymously. Interest shows who people are looking at, and doesn't change player values."));
+      }
+      box.appendChild(el("p", "muted", "This section rebuilds itself from league trade history, current values, and Analyzer activity every time the data updates."));
     }
 
     fetch("data/analyzer.json", { cache: "no-cache" })
