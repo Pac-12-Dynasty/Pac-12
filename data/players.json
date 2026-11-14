@@ -681,7 +681,7 @@
   "name": "Jordan James",
   "pos": "RB",
   "pos_rank": "RB95",
-  "rank": 341,
+  "rank": 340,
   "team": "SF",
   "value": 119
  },
@@ -835,7 +835,7 @@
   "name": "Ollie Gordon II",
   "pos": "RB",
   "pos_rank": "RB35",
-  "rank": 114,
+  "rank": 115,
   "team": "MIA",
   "value": 1593
  },
@@ -1240,8 +1240,8 @@
   "injury_part": "Ankle",
   "name": "Jaylin Lane",
   "pos": "WR",
-  "pos_rank": "WR152",
-  "rank": 387,
+  "pos_rank": "WR153",
+  "rank": 389,
   "team": "WAS",
   "value": 53
  },
@@ -1633,7 +1633,7 @@
   "name": "Adam Randall",
   "pos": "RB",
   "pos_rank": "RB74",
-  "rank": 261,
+  "rank": 262,
   "team": "BAL",
   "value": 363
  },
@@ -1898,8 +1898,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB136",
-  "rank": 487,
+  "pos_rank": "RB123",
+  "rank": 437,
   "team": "ATL",
   "value": 1
  },
@@ -1913,7 +1913,7 @@
   "name": "Garrett Nussmeier",
   "pos": "QB",
   "pos_rank": "QB66",
-  "rank": 399,
+  "rank": 400,
   "team": "KC",
   "value": 35
  },
@@ -1982,8 +1982,8 @@
   "injury_part": "",
   "name": "Roman Hemby",
   "pos": "RB",
-  "pos_rank": "RB135",
-  "rank": 486,
+  "pos_rank": "RB149",
+  "rank": 540,
   "team": "LV",
   "value": 1
  },
@@ -2038,8 +2038,8 @@
   "injury_part": "",
   "name": "Eli Heidenreich",
   "pos": "RB",
-  "pos_rank": "RB103",
-  "rank": 362,
+  "pos_rank": "RB104",
+  "rank": 363,
   "team": "PIT",
   "value": 83
  },
@@ -2814,7 +2814,7 @@
   "value": 1687
  },
  "5995": {
-  "age": 28,
+  "age": 29,
   "birth_date": "1997-11-14",
   "dp_value": 108,
   "fc_value": 540,
@@ -3108,7 +3108,7 @@
   "value": 2949
  },
  "7525": {
-  "age": 27,
+  "age": 28,
   "birth_date": "1998-11-14",
   "dp_value": 3926,
   "fc_value": 2640,
@@ -3187,7 +3187,7 @@
   "name": "Elijah Mitchell",
   "pos": "RB",
   "pos_rank": "RB100",
-  "rank": 357,
+  "rank": 356,
   "team": "PHI",
   "value": 94
  },
@@ -3312,8 +3312,8 @@
   "injury_part": "",
   "name": "Michael Carter",
   "pos": "RB",
-  "pos_rank": "RB130",
-  "rank": 454,
+  "pos_rank": "RB137",
+  "rank": 491,
   "team": "TEN",
   "value": 1
  },
@@ -3425,7 +3425,7 @@
   "name": "Wan'Dale Robinson",
   "pos": "WR",
   "pos_rank": "WR48",
-  "rank": 115,
+  "rank": 114,
   "team": "TEN",
   "value": 1593
  },
@@ -3817,7 +3817,7 @@
   "name": "Tank Bigsby",
   "pos": "RB",
   "pos_rank": "RB61",
-  "rank": 213,
+  "rank": 214,
   "team": "PHI",
   "value": 729
  },
