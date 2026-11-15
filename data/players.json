@@ -401,7 +401,7 @@
   "name": "Rome Odunze",
   "pos": "WR",
   "pos_rank": "WR28",
-  "rank": 63,
+  "rank": 62,
   "team": "CHI",
   "value": 2682
  },
@@ -681,7 +681,7 @@
   "name": "Jordan James",
   "pos": "RB",
   "pos_rank": "RB97",
-  "rank": 347,
+  "rank": 348,
   "team": "SF",
   "value": 113
  },
@@ -877,7 +877,7 @@
   "name": "Elic Ayomanor",
   "pos": "WR",
   "pos_rank": "WR89",
-  "rank": 218,
+  "rank": 217,
   "team": "TEN",
   "value": 715
  },
@@ -1003,7 +1003,7 @@
   "name": "Quinshon Judkins",
   "pos": "RB",
   "pos_rank": "RB19",
-  "rank": 62,
+  "rank": 63,
   "team": "CLE",
   "value": 2682
  },
@@ -1199,7 +1199,7 @@
   "name": "Jaylin Noel",
   "pos": "WR",
   "pos_rank": "WR76",
-  "rank": 180,
+  "rank": 181,
   "team": "HOU",
   "value": 1040
  },
@@ -1465,7 +1465,7 @@
   "name": "Jack Endries",
   "pos": "TE",
   "pos_rank": "TE63",
-  "rank": 389,
+  "rank": 388,
   "team": "CIN",
   "value": 43
  },
@@ -1479,7 +1479,7 @@
   "name": "Malachi Fields",
   "pos": "WR",
   "pos_rank": "WR69",
-  "rank": 162,
+  "rank": 161,
   "team": "NYG",
   "value": 1210
  },
@@ -1562,8 +1562,8 @@
   "injury_part": "",
   "name": "Makai Lemon",
   "pos": "WR",
-  "pos_rank": "WR31",
-  "rank": 73,
+  "pos_rank": "WR32",
+  "rank": 74,
   "team": "PHI",
   "value": 2489
  },
@@ -1870,8 +1870,8 @@
   "injury_part": "Hamstring",
   "name": "Brenen Thompson",
   "pos": "WR",
-  "pos_rank": "WR142",
-  "rank": 354,
+  "pos_rank": "WR141",
+  "rank": 353,
   "team": "LAC",
   "value": 101
  },
@@ -1898,8 +1898,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB126",
-  "rank": 440,
+  "pos_rank": "RB124",
+  "rank": 436,
   "team": "ATL",
   "value": 8
  },
@@ -1912,8 +1912,8 @@
   "injury_part": "",
   "name": "Garrett Nussmeier",
   "pos": "QB",
-  "pos_rank": "QB67",
-  "rank": 402,
+  "pos_rank": "QB68",
+  "rank": 403,
   "team": "KC",
   "value": 31
  },
@@ -1983,7 +1983,7 @@
   "name": "Roman Hemby",
   "pos": "RB",
   "pos_rank": "RB122",
-  "rank": 434,
+  "rank": 431,
   "team": "LV",
   "value": 8
  },
@@ -2038,8 +2038,8 @@
   "injury_part": "",
   "name": "Eli Heidenreich",
   "pos": "RB",
-  "pos_rank": "RB103",
-  "rank": 365,
+  "pos_rank": "RB104",
+  "rank": 366,
   "team": "PIT",
   "value": 81
  },
@@ -2543,7 +2543,7 @@
   "name": "Baker Mayfield",
   "pos": "QB",
   "pos_rank": "QB23",
-  "rank": 161,
+  "rank": 162,
   "team": "TB",
   "value": 1210
  },
@@ -2599,7 +2599,7 @@
   "name": "Mike Gesicki",
   "pos": "TE",
   "pos_rank": "TE33",
-  "rank": 217,
+  "rank": 218,
   "team": "CIN",
   "value": 715
  },
@@ -2627,7 +2627,7 @@
   "name": "Mark Andrews",
   "pos": "TE",
   "pos_rank": "TE27",
-  "rank": 181,
+  "rank": 180,
   "team": "BAL",
   "value": 1040
  },
@@ -3130,8 +3130,8 @@
   "injury_part": "Head",
   "name": "Jaylen Waddle",
   "pos": "WR",
-  "pos_rank": "WR32",
-  "rank": 74,
+  "pos_rank": "WR31",
+  "rank": 73,
   "team": "DEN",
   "value": 2489
  },
@@ -3312,8 +3312,8 @@
   "injury_part": "",
   "name": "Michael Carter",
   "pos": "RB",
-  "pos_rank": "RB135",
-  "rank": 473,
+  "pos_rank": "RB131",
+  "rank": 457,
   "team": "TEN",
   "value": 7
  },
@@ -3690,8 +3690,8 @@
   "injury_part": "Ankle",
   "name": "Tyquan Thornton",
   "pos": "WR",
-  "pos_rank": "WR119",
-  "rank": 289,
+  "pos_rank": "WR120",
+  "rank": 290,
   "team": "KC",
   "value": 282
  },
