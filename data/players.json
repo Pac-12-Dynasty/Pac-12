@@ -428,8 +428,8 @@
   "injury_part": "Knee",
   "name": "Adonai Mitchell",
   "pos": "WR",
-  "pos_rank": "WR55",
-  "rank": 131,
+  "pos_rank": "WR56",
+  "rank": 132,
   "team": "NYJ",
   "value": 1380
  },
@@ -443,7 +443,7 @@
   "name": "Xavier Legette",
   "pos": "WR",
   "pos_rank": "WR130",
-  "rank": 312,
+  "rank": 311,
   "team": "CAR",
   "value": 189
  },
@@ -975,7 +975,7 @@
   "name": "Tre' Harris",
   "pos": "WR",
   "pos_rank": "WR71",
-  "rank": 171,
+  "rank": 172,
   "team": "LAC",
   "value": 1105
  },
@@ -1073,7 +1073,7 @@
   "name": "Cam Ward",
   "pos": "QB",
   "pos_rank": "QB21",
-  "rank": 144,
+  "rank": 143,
   "team": "TEN",
   "value": 1297
  },
@@ -1255,7 +1255,7 @@
   "name": "KeAndre Lambert-Smith",
   "pos": "WR",
   "pos_rank": "WR156",
-  "rank": 398,
+  "rank": 399,
   "team": "LAC",
   "value": 44
  },
@@ -1297,7 +1297,7 @@
   "name": "Lan Larison",
   "pos": "RB",
   "pos_rank": "RB107",
-  "rank": 371,
+  "rank": 370,
   "team": "NE",
   "value": 80
  },
@@ -1324,8 +1324,8 @@
   "injury_part": "",
   "name": "Elijah Sarratt",
   "pos": "WR",
-  "pos_rank": "WR100",
-  "rank": 241,
+  "pos_rank": "WR99",
+  "rank": 240,
   "team": "BAL",
   "value": 542
  },
@@ -1409,7 +1409,7 @@
   "name": "Ty Simpson",
   "pos": "QB",
   "pos_rank": "QB26",
-  "rank": 172,
+  "rank": 171,
   "team": "LAR",
   "value": 1105
  },
@@ -1660,8 +1660,8 @@
   "injury_part": "",
   "name": "Cade Klubnik",
   "pos": "QB",
-  "pos_rank": "QB51",
-  "rank": 314,
+  "pos_rank": "QB52",
+  "rank": 315,
   "team": "NYJ",
   "value": 182
  },
@@ -1829,7 +1829,7 @@
   "name": "Demond Claiborne",
   "pos": "RB",
   "pos_rank": "RB69",
-  "rank": 253,
+  "rank": 252,
   "team": "MIN",
   "value": 406
  },
@@ -1884,8 +1884,8 @@
   "injury_part": "Hamstring",
   "name": "Brenen Thompson",
   "pos": "WR",
-  "pos_rank": "WR150",
-  "rank": 382,
+  "pos_rank": "WR149",
+  "rank": 381,
   "team": "LAC",
   "value": 68
  },
@@ -1912,8 +1912,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB119",
-  "rank": 431,
+  "pos_rank": "RB125",
+  "rank": 444,
   "team": "ATL",
   "value": 3
  },
@@ -1996,8 +1996,8 @@
   "injury_part": "",
   "name": "Roman Hemby",
   "pos": "RB",
-  "pos_rank": "RB117",
-  "rank": 429,
+  "pos_rank": "RB127",
+  "rank": 449,
   "team": "LV",
   "value": 3
  },
@@ -2052,8 +2052,8 @@
   "injury_part": "",
   "name": "Eli Heidenreich",
   "pos": "RB",
-  "pos_rank": "RB102",
-  "rank": 360,
+  "pos_rank": "RB101",
+  "rank": 358,
   "team": "PIT",
   "value": 94
  },
@@ -3761,7 +3761,7 @@
   "name": "Jordan Mason",
   "pos": "RB",
   "pos_rank": "RB46",
-  "rank": 143,
+  "rank": 144,
   "team": "MIN",
   "value": 1297
  },
@@ -3998,8 +3998,8 @@
   "injury_part": "",
   "name": "Tank Dell",
   "pos": "WR",
-  "pos_rank": "WR56",
-  "rank": 132,
+  "pos_rank": "WR55",
+  "rank": 131,
   "team": "HOU",
   "value": 1380
  },

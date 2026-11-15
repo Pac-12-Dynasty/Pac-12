@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T16:26+00:00",
+ "generated": "2026-11-15T16:42+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
@@ -2032,10 +2032,10 @@
         "label": "2027 Round 1",
         "from": "Joe Buck Yourself",
         "player": null,
-        "value": 2504
+        "value": 2505
        }
       ],
-      "got_now": 3691,
+      "got_now": 3692,
       "gave_now": 9512,
       "grade": "F"
      },
@@ -2053,7 +2053,7 @@
        }
       ],
       "got_now": 9512,
-      "gave_now": 3691,
+      "gave_now": 3692,
       "grade": "A"
      }
     }
@@ -2431,7 +2431,7 @@
        }
       ],
       "got_now": 14159,
-      "gave_now": 11277,
+      "gave_now": 11276,
       "grade": "A"
      },
      "853109226401288192": {
@@ -2470,7 +2470,7 @@
         "label": "2027 Round 3",
         "from": "Lamar Jackson Fan Club",
         "player": null,
-        "value": 453
+        "value": 452
        },
        {
         "kind": "pick",
@@ -2480,7 +2480,7 @@
         "value": 1230
        }
       ],
-      "got_now": 11277,
+      "got_now": 11276,
       "gave_now": 14159,
       "grade": "F"
      }
