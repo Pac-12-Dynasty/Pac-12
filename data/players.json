@@ -23,7 +23,7 @@
   "name": "Chris Rodriguez Jr.",
   "pos": "RB",
   "pos_rank": "RB50",
-  "rank": 169,
+  "rank": 168,
   "team": "JAX",
   "value": 1112
  },
@@ -386,8 +386,8 @@
   "injury_part": "",
   "name": "Malik Washington",
   "pos": "WR",
-  "pos_rank": "WR71",
-  "rank": 171,
+  "pos_rank": "WR72",
+  "rank": 172,
   "team": "MIA",
   "value": 1106
  },
@@ -456,8 +456,8 @@
   "injury_part": "",
   "name": "Troy Franklin",
   "pos": "WR",
-  "pos_rank": "WR99",
-  "rank": 239,
+  "pos_rank": "WR100",
+  "rank": 240,
   "team": "DEN",
   "value": 546
  },
@@ -610,8 +610,8 @@
   "injury_part": "",
   "name": "Ryan Flournoy",
   "pos": "WR",
-  "pos_rank": "WR72",
-  "rank": 172,
+  "pos_rank": "WR71",
+  "rank": 171,
   "team": "DAL",
   "value": 1106
  },
@@ -680,8 +680,8 @@
   "injury_part": "",
   "name": "Jordan James",
   "pos": "RB",
-  "pos_rank": "RB96",
-  "rank": 341,
+  "pos_rank": "RB97",
+  "rank": 342,
   "team": "SF",
   "value": 121
  },
@@ -779,7 +779,7 @@
   "name": "RJ Harvey",
   "pos": "RB",
   "pos_rank": "RB37",
-  "rank": 118,
+  "rank": 117,
   "team": "DEN",
   "value": 1574
  },
@@ -989,7 +989,7 @@
   "name": "Jalen Milroe",
   "pos": "QB",
   "pos_rank": "QB50",
-  "rank": 305,
+  "rank": 307,
   "team": "SEA",
   "value": 221
  },
@@ -1212,8 +1212,8 @@
   "injury_part": "",
   "name": "Chimere Dike",
   "pos": "WR",
-  "pos_rank": "WR100",
-  "rank": 240,
+  "pos_rank": "WR99",
+  "rank": 239,
   "team": "TEN",
   "value": 546
  },
@@ -1240,8 +1240,8 @@
   "injury_part": "Ankle",
   "name": "Jaylin Lane",
   "pos": "WR",
-  "pos_rank": "WR155",
-  "rank": 398,
+  "pos_rank": "WR154",
+  "rank": 397,
   "team": "WAS",
   "value": 43
  },
@@ -1254,8 +1254,8 @@
   "injury_part": "",
   "name": "KeAndre Lambert-Smith",
   "pos": "WR",
-  "pos_rank": "WR152",
-  "rank": 380,
+  "pos_rank": "WR153",
+  "rank": 383,
   "team": "LAC",
   "value": 55
  },
@@ -1311,7 +1311,7 @@
   "name": "Darius Cooper",
   "pos": "WR",
   "pos_rank": "WR115",
-  "rank": 274,
+  "rank": 273,
   "team": "PHI",
   "value": 348
  },
@@ -1381,7 +1381,7 @@
   "name": "Josh Cuevas",
   "pos": "TE",
   "pos_rank": "TE47",
-  "rank": 304,
+  "rank": 305,
   "team": "BAL",
   "value": 221
  },
@@ -1450,8 +1450,8 @@
   "injury_part": "Shoulder",
   "name": "Carnell Tate",
   "pos": "WR",
-  "pos_rank": "WR18",
-  "rank": 35,
+  "pos_rank": "WR19",
+  "rank": 36,
   "team": "TEN",
   "value": 3661
  },
@@ -1478,8 +1478,8 @@
   "injury_part": "",
   "name": "Jack Endries",
   "pos": "TE",
-  "pos_rank": "TE60",
-  "rank": 385,
+  "pos_rank": "TE61",
+  "rank": 386,
   "team": "CIN",
   "value": 54
  },
@@ -1549,7 +1549,7 @@
   "name": "Drew Allar",
   "pos": "QB",
   "pos_rank": "QB43",
-  "rank": 277,
+  "rank": 278,
   "team": "PIT",
   "value": 331
  },
@@ -1661,7 +1661,7 @@
   "name": "Cade Klubnik",
   "pos": "QB",
   "pos_rank": "QB48",
-  "rank": 302,
+  "rank": 301,
   "team": "NYJ",
   "value": 234
  },
@@ -1842,8 +1842,8 @@
   "injury_part": "",
   "name": "J'Mari Taylor",
   "pos": "RB",
-  "pos_rank": "RB107",
-  "rank": 375,
+  "pos_rank": "RB106",
+  "rank": 374,
   "team": "JAX",
   "value": 63
  },
@@ -1912,8 +1912,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB123",
-  "rank": 440,
+  "pos_rank": "RB125",
+  "rank": 439,
   "team": "ATL",
   "value": 8
  },
@@ -1927,7 +1927,7 @@
   "name": "Garrett Nussmeier",
   "pos": "QB",
   "pos_rank": "QB67",
-  "rank": 404,
+  "rank": 405,
   "team": "KC",
   "value": 36
  },
@@ -1996,8 +1996,8 @@
   "injury_part": "",
   "name": "Roman Hemby",
   "pos": "RB",
-  "pos_rank": "RB126",
-  "rank": 445,
+  "pos_rank": "RB124",
+  "rank": 438,
   "team": "LV",
   "value": 8
  },
@@ -2053,7 +2053,7 @@
   "name": "Eli Heidenreich",
   "pos": "RB",
   "pos_rank": "RB98",
-  "rank": 348,
+  "rank": 347,
   "team": "PIT",
   "value": 107
  },
@@ -2290,8 +2290,8 @@
   "injury_part": "",
   "name": "Demarcus Robinson",
   "pos": "WR",
-  "pos_rank": "WR147",
-  "rank": 365,
+  "pos_rank": "WR146",
+  "rank": 364,
   "team": "SF",
   "value": 86
  },
@@ -3075,7 +3075,7 @@
   "name": "Juwan Johnson",
   "pos": "TE",
   "pos_rank": "TE23",
-  "rank": 168,
+  "rank": 169,
   "team": "NO",
   "value": 1112
  },
@@ -3425,7 +3425,7 @@
   "name": "Wan'Dale Robinson",
   "pos": "WR",
   "pos_rank": "WR48",
-  "rank": 117,
+  "rank": 118,
   "team": "TEN",
   "value": 1574
  },
@@ -3508,8 +3508,8 @@
   "injury_part": "",
   "name": "George Pickens",
   "pos": "WR",
-  "pos_rank": "WR19",
-  "rank": 36,
+  "pos_rank": "WR18",
+  "rank": 35,
   "team": "DAL",
   "value": 3661
  },
