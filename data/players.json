@@ -9,7 +9,7 @@
   "name": "Tre Tucker",
   "pos": "WR",
   "pos_rank": "WR69",
-  "rank": 159,
+  "rank": 161,
   "team": "LV",
   "value": 1199
  },
@@ -695,7 +695,7 @@
   "name": "Dylan Sampson",
   "pos": "RB",
   "pos_rank": "RB49",
-  "rank": 160,
+  "rank": 159,
   "team": "CLE",
   "value": 1199
  },
@@ -863,7 +863,7 @@
   "name": "Mason Taylor",
   "pos": "TE",
   "pos_rank": "TE31",
-  "rank": 209,
+  "rank": 208,
   "team": "NYJ",
   "value": 787
  },
@@ -877,7 +877,7 @@
   "name": "Elic Ayomanor",
   "pos": "WR",
   "pos_rank": "WR87",
-  "rank": 208,
+  "rank": 209,
   "team": "TEN",
   "value": 787
  },
@@ -1297,7 +1297,7 @@
   "name": "Lan Larison",
   "pos": "RB",
   "pos_rank": "RB104",
-  "rank": 365,
+  "rank": 367,
   "team": "NE",
   "value": 71
  },
@@ -1549,7 +1549,7 @@
   "name": "Drew Allar",
   "pos": "QB",
   "pos_rank": "QB43",
-  "rank": 283,
+  "rank": 282,
   "team": "PIT",
   "value": 309
  },
@@ -1661,7 +1661,7 @@
   "name": "Cade Klubnik",
   "pos": "QB",
   "pos_rank": "QB46",
-  "rank": 295,
+  "rank": 296,
   "team": "NYJ",
   "value": 255
  },
@@ -1885,7 +1885,7 @@
   "name": "Brenen Thompson",
   "pos": "WR",
   "pos_rank": "WR139",
-  "rank": 348,
+  "rank": 349,
   "team": "LAC",
   "value": 102
  },
@@ -1912,8 +1912,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB154",
-  "rank": 558,
+  "pos_rank": "RB125",
+  "rank": 452,
   "team": "ATL",
   "value": 1
  },
@@ -1926,8 +1926,8 @@
   "injury_part": "Coach's Decision",
   "name": "Garrett Nussmeier",
   "pos": "QB",
-  "pos_rank": "QB67",
-  "rank": 405,
+  "pos_rank": "QB68",
+  "rank": 406,
   "team": "KC",
   "value": 25
  },
@@ -1996,8 +1996,8 @@
   "injury_part": "",
   "name": "Roman Hemby",
   "pos": "RB",
-  "pos_rank": "RB141",
-  "rank": 506,
+  "pos_rank": "RB131",
+  "rank": 475,
   "team": "LV",
   "value": 1
  },
@@ -2039,7 +2039,7 @@
   "name": "Eli Raridon",
   "pos": "TE",
   "pos_rank": "TE20",
-  "rank": 157,
+  "rank": 156,
   "team": "NE",
   "value": 1210
  },
@@ -2053,7 +2053,7 @@
   "name": "Eli Heidenreich",
   "pos": "RB",
   "pos_rank": "RB102",
-  "rank": 358,
+  "rank": 357,
   "team": "PIT",
   "value": 81
  },
@@ -2277,7 +2277,7 @@
   "name": "Tyler Higbee",
   "pos": "TE",
   "pos_rank": "TE44",
-  "rank": 282,
+  "rank": 283,
   "team": "LAR",
   "value": 309
  },
@@ -2291,7 +2291,7 @@
   "name": "Demarcus Robinson",
   "pos": "WR",
   "pos_rank": "WR142",
-  "rank": 357,
+  "rank": 358,
   "team": "SF",
   "value": 81
  },
@@ -2557,7 +2557,7 @@
   "name": "Baker Mayfield",
   "pos": "QB",
   "pos_rank": "QB22",
-  "rank": 161,
+  "rank": 160,
   "team": "TB",
   "value": 1199
  },
@@ -3243,7 +3243,7 @@
   "name": "Kenny Gainwell",
   "pos": "RB",
   "pos_rank": "RB48",
-  "rank": 156,
+  "rank": 157,
   "team": "TB",
   "value": 1210
  },
@@ -3690,8 +3690,8 @@
   "injury_part": "Ankle",
   "name": "Tyquan Thornton",
   "pos": "WR",
-  "pos_rank": "WR119",
-  "rank": 281,
+  "pos_rank": "WR117",
+  "rank": 279,
   "team": "KC",
   "value": 313
  },
