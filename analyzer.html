@@ -6,33 +6,33 @@
   <title>Trade Analyzer | Pac 12 Dynasty</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    :root { --red: #c8102e; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; }
-    main.analyzer { max-width: 1140px; }
+    :root { --red: #E65BC4; --ink: #050505; --muted: #5f574d; --line: #d4cbbd; --gold: #E65BC4; --paper: #ECE6DC; --paper-2: #E3DBCE; --display: "Big Shoulders Display", "Arial Narrow", sans-serif; }
+    main.analyzer { max-width: 1160px; }
     .muted { color: var(--muted); font-size: 0.9rem; }
-    .bar { background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 8px 8px 0 0; border-bottom: 4px solid var(--red); }
-    .bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
-    .panel { background: #fff; padding: 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 1.5rem; }
+    .bar { background: var(--ink); color: var(--paper); padding: 0.6rem 1rem; border-radius: 0; border-bottom: 4px solid var(--red); }
+    .bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; }
+    .panel { background: var(--paper); padding: 1.25rem; border-radius: 0; box-shadow: none; margin-bottom: 1.5rem; }
 
     .sides { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
     @media (max-width: 760px) { .sides { grid-template-columns: 1fr; } }
-    .side select { width: 100%; font: inherit; font-weight: 700; padding: 0.5rem; border-radius: 6px; border: 1px solid #c5ccd6; margin-bottom: 0.4rem; }
-    .side .window { font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); margin-bottom: 0.6rem; }
-    .side h3 { margin: 0.75rem 0 0.35rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); }
+    .side select { width: 100%; font: inherit; font-weight: 700; padding: 0.5rem; border-radius: 6px; border: 1px solid #b9ae9c; margin-bottom: 0.4rem; }
+    .side .window { font-size: 0.8rem; font-weight: 800; color: var(--ink); margin-bottom: 0.6rem; }
+    .side h3 { margin: 0.75rem 0 0.35rem; font-size: 0.85rem; color: var(--ink); }
     .assets { max-height: 340px; overflow-y: auto; border: 1px solid var(--line); border-radius: 6px; }
     .asset { display: flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--line); cursor: pointer; font-size: 0.92rem; }
     .asset:last-child { border-bottom: none; }
-    .asset:hover { background: #fff8e1; }
+    .asset:hover { background: rgba(230,91,196,0.12); }
     .asset input { width: 18px; height: 18px; flex: none; }
     .asset .name { flex: 1; }
     .asset .sub { color: var(--muted); font-size: 0.8rem; }
     .asset .val { font-weight: 700; white-space: nowrap; }
-    .asset.on { background: #fdf3d3; }
+    .asset.on { background: rgba(230,91,196,0.2); }
 
     .result { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
     @media (max-width: 760px) { .result { grid-template-columns: 1fr; } }
     .verdict { border: 1px solid var(--line); border-radius: 8px; padding: 1rem; }
     .verdict .top { display: flex; align-items: center; gap: 1rem; }
-    .grade { width: 72px; height: 72px; flex: none; border-radius: 12px; display: grid; place-items: center; font-size: 2.4rem; font-weight: 900; color: #fff; }
+    .grade { width: 72px; height: 72px; flex: none; border-radius: 12px; display: grid; place-items: center; font-size: 2.4rem; font-weight: 900; color: var(--paper); }
     .g-A { background: #0f6e56; } .g-B { background: #4c9a6a; } .g-C { background: #8a8f98; } .g-D { background: #d97706; } .g-F { background: #b42318; }
     .verdict h3 { margin: 0; font-size: 1.1rem; color: var(--ink); }
     .verdict .summary { margin: 0.2rem 0 0; font-weight: 700; }
@@ -41,24 +41,24 @@
     .empty { color: var(--muted); padding: 1rem 0; }
     details.how { margin-top: 1rem; }
 
-    .wide-select, .finder-controls select { font: inherit; padding: 0.5rem; border-radius: 6px; border: 1px solid #c5ccd6; }
+    .wide-select, .finder-controls select { font: inherit; padding: 0.5rem; border-radius: 6px; border: 1px solid #b9ae9c; }
     .wide-select { width: 100%; max-width: 480px; margin-bottom: 1rem; }
     .search-wrap { position: relative; max-width: 480px; }
-    .matches { position: absolute; top: calc(100% - 0.9rem); left: 0; right: 0; background: #fff; border: 1px solid #c5ccd6; border-radius: 6px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); z-index: 5; max-height: 320px; overflow-y: auto; }
+    .matches { position: absolute; top: calc(100% - 0.9rem); left: 0; right: 0; background: var(--paper); border: 1px solid #b9ae9c; border-radius: 6px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); z-index: 5; max-height: 320px; overflow-y: auto; }
     .matches button { display: flex; justify-content: space-between; gap: 0.5rem; width: 100%; text-align: left; font: inherit; background: none; border: none; border-bottom: 1px solid var(--line); padding: 0.5rem 0.7rem; cursor: pointer; }
-    .matches button:hover, .matches button.active { background: #fff8e1; }
+    .matches button:hover, .matches button.active { background: rgba(230,91,196,0.12); }
     .matches button span:last-child { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
     .finder-controls { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
     .finder-controls select { flex: 1 1 180px; }
-    .finder-controls button, .load-btn { font: inherit; font-weight: 800; padding: 0.5rem 1rem; border: none; border-radius: 6px; background: var(--red); color: #fff; cursor: pointer; }
+    .finder-controls button, .load-btn { font: inherit; font-weight: 800; padding: 0.5rem 1rem; border: none; border-radius: 6px; background: var(--red); color: var(--ink); cursor: pointer; }
     .load-btn { padding: 0.35rem 0.8rem; font-size: 0.85rem; background: var(--ink); }
 
     .market-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; margin-bottom: 1rem; }
     .stat { border: 1px solid var(--line); border-top: 4px solid var(--ink); border-radius: 8px; padding: 0.7rem; text-align: center; }
     .stat .big { font-size: 1.35rem; font-weight: 900; color: var(--ink); }
-    .stat .label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+    .stat .label { font-size: 0.72rem; font-weight: 800; color: var(--muted); }
     .market-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
-    .market-cols h3 { margin: 0 0 0.4rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); }
+    .market-cols h3 { margin: 0 0 0.4rem; font-size: 0.85rem; color: var(--ink); }
     .market-cols ul { list-style: none; margin: 0; padding: 0; }
     .market-cols li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.35rem 0; border-top: 1px solid var(--line); font-size: 0.92rem; }
     .market-cols li span:last-child { color: var(--muted); white-space: nowrap; }
@@ -66,17 +66,22 @@
     .offer { border: 1px solid var(--line); border-left: 5px solid var(--red); border-radius: 8px; padding: 0.8rem 1rem; margin-bottom: 0.75rem; }
     .offer-top { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; }
     .offer-grades { display: flex; gap: 0.5rem; align-items: center; font-weight: 700; font-size: 0.9rem; }
-    .mini { width: 34px; height: 34px; border-radius: 8px; display: grid; place-items: center; font-weight: 900; color: #fff; }
+    .mini { width: 34px; height: 34px; border-radius: 8px; display: grid; place-items: center; font-weight: 900; color: var(--paper); }
     .offer p { margin: 0.4rem 0 0; font-size: 0.92rem; }
     .ov-notes { margin: 0 0 1.25rem; padding-left: 1.1rem; }
     .ov-notes li { margin: 0.35rem 0; }
     .ov-table th, .ov-table td { white-space: nowrap; }
     .up { color: #0f6e56; font-weight: 800; } .down { color: #b42318; font-weight: 800; }
     .comps { margin-top: 1rem; }
-    .comps h3 { margin: 0 0 0.4rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--red); }
+    .comps h3 { margin: 0 0 0.4rem; font-size: 0.85rem; color: var(--ink); }
     .comps p { margin: 0.3rem 0; font-size: 0.92rem; }
     details.how summary { cursor: pointer; font-weight: 700; }
-  </style>
+  
+    /* Section bars: black with a pink line, titles in the display font */
+    .bar h2, .news-bar h2, .section-bar h2 { font-family: var(--display); font-size: 1.45rem; font-weight: 800; color: var(--paper); }
+    .panel, .section-body, .feed, .news-layout { border: 1px solid var(--line); border-top: 0; }
+    .sidebar h2 { font-family: var(--display); font-size: 1.3rem; font-weight: 800; }
+</style>
 </head>
 <body>
   <header>
@@ -107,7 +112,7 @@
       <div class="panel">
         <div id="result"><p class="empty">Pick two teams and check what each side sends to see the grades.</p></div>
         <details class="how">
-          <summary>How grades work</summary>
+          <summary>How Grades Work</summary>
           <p class="muted">Each player starts from the site's blended value: DynastyProcess expert rankings, FantasyCalc values from real trades, and this league's own trade history, put on one shared scale. Then his value is, adjusted for how he's scoring in this league this season and any injury. Draft picks use DynastyProcess pick values, with next year's picks projected from the original team's current standing. Playoff teams pick 7 through 12 in reverse order of the standings. The six non-playoff teams go through the draft lottery, so their picks are valued as the average of every pick they could land, weighted by their lottery odds.</p>
           <p class="muted">Value is split into win-now and long-term based on age and position. Contenders weigh win-now value more, and rebuilders weigh long-term value more, so the same trade can grade differently for each team.</p>
           <p class="muted">Values are also adjusted by league history: past trades show whether this league pays more or less than market for each position and pick round, and that's blended in, more strongly the more trades there are to learn from.</p>
@@ -283,7 +288,7 @@
       if (!uid) { box.appendChild(el("p", "empty", "Pick a team to see its players and picks.")); return; }
       var t = D.teams[uid];
       box.appendChild(el("div", "window", t.window + " · " + t.record + " · #" + t.standing + " in standings"));
-      box.appendChild(el("h3", "", "Sends players"));
+      box.appendChild(el("h3", "", "Sends Players"));
       var list = el("div", "assets");
       Object.keys(D.players).filter(function (id) { return D.players[id].owner === uid; })
         .sort(function (x, y) { return marketValue(y) - marketValue(x); })
@@ -293,7 +298,7 @@
           list.appendChild(assetRow(side, id, p.name, bits.join(" · "), marketValue(id)));
         });
       box.appendChild(list);
-      box.appendChild(el("h3", "", "Sends picks"));
+      box.appendChild(el("h3", "", "Sends Picks"));
       var plist = el("div", "assets");
       D.picks.filter(function (pk) { return pk.owner === uid; })
         .sort(function (x, y) { return (x.season - y.season) || (x.round - y.round) || (y.value - x.value); })
@@ -572,7 +577,7 @@
       var cols = el("div", "market-cols");
 
       // What he's worth in picks
-      var colA = el("div"); colA.appendChild(el("h3", "", "Worth about"));
+      var colA = el("div"); colA.appendChild(el("h3", "", "Worth About"));
       var ulA = el("ul");
       var seen = {};
       D.picks.slice().sort(function (x, y) { return Math.abs(x.value - v) - Math.abs(y.value - v); })
@@ -584,7 +589,7 @@
       cols.appendChild(colA);
 
       // Similar value players on other teams
-      var colB = el("div"); colB.appendChild(el("h3", "", "Similar value"));
+      var colB = el("div"); colB.appendChild(el("h3", "", "Similar Value"));
       var ulB = el("ul");
       Object.keys(D.players).filter(function (o) { return o !== id && D.players[o].owner !== p.owner; })
         .sort(function (x, y) { return Math.abs(marketValue(x) - v) - Math.abs(marketValue(y) - v); })
@@ -598,7 +603,7 @@
       cols.appendChild(colB);
 
       // Which teams value him most, given their window
-      var colC = el("div"); colC.appendChild(el("h3", "", "Values him most"));
+      var colC = el("div"); colC.appendChild(el("h3", "", "Values Him Most"));
       var ulC = el("ul");
       Object.keys(D.teams).filter(function (uid) { return uid !== p.owner; })
         .sort(function (x, y) { return fitValue(id, y) - fitValue(id, x); })
@@ -635,7 +640,7 @@
       function isHim(x) { return x.id ? x.id === id : (x.pos === p.pos && x.name === p.name); }
       function hasHim(tr) { return tr.sides.some(function (sd) { return sd.gets.some(isHim); }); }
 
-      hist.appendChild(el("h3", "", "Trades including " + p.name));
+      hist.appendChild(el("h3", "", "Trades Including " + p.name));
       var involving = [];
       (D.history || []).forEach(function (tr) {
         tr.sides.forEach(function (sd) {
@@ -645,7 +650,7 @@
       if (!involving.length) hist.appendChild(el("p", "muted", "He hasn't been traded in this league."));
       involving.forEach(function (f) { hist.appendChild(tradeLine(f.tr, f.sd, f.x)); });
 
-      hist.appendChild(el("h3", "", "Similar trades"));
+      hist.appendChild(el("h3", "", "Similar Trades"));
       var similar = [];
       (D.history || []).forEach(function (tr) {
         if (hasHim(tr)) return;   // trades with him are already listed above
@@ -805,7 +810,7 @@
       var cols = el("div", "market-cols");
 
       // Prices by asset type: all-time vs last 12 months
-      var colP = el("div"); colP.appendChild(el("h3", "", "League prices vs. market"));
+      var colP = el("div"); colP.appendChild(el("h3", "", "League Prices vs. Market"));
       var wrap = el("div", "table-wrap");
       var t = el("table", "ov-table");
       var head = el("tr");
@@ -836,7 +841,7 @@
       cols.appendChild(colP);
 
       // Biggest deals
-      var colB = el("div"); colB.appendChild(el("h3", "", "Biggest deals, last 12 months"));
+      var colB = el("div"); colB.appendChild(el("h3", "", "Biggest Deals, Last 12 Months"));
       var ulB = el("ul");
       m.biggest.forEach(function (b) {
         var li = el("li");
@@ -849,7 +854,7 @@
       if (!m.biggest.length) ulB.appendChild(el("li", "muted", "None yet."));
       colB.appendChild(ulB);
 
-      colB.appendChild(el("h3", "", "Most active this season"));
+      colB.appendChild(el("h3", "", "Most Active This Season"));
       var ulA = el("ul");
       m.active.forEach(function (a) {
         var li = el("li"); li.appendChild(el("span", "", a.team)); li.appendChild(el("span", "", a.trades + " trade" + (a.trades === 1 ? "" : "s"))); ulA.appendChild(li);
@@ -859,7 +864,7 @@
       cols.appendChild(colB);
 
       // Value movers
-      var colM = el("div"); colM.appendChild(el("h3", "", "Risers, last 4 weeks"));
+      var colM = el("div"); colM.appendChild(el("h3", "", "Risers, Last 4 Weeks"));
       var ulR = el("ul");
       ((m.movers || {}).risers || []).slice(0, 5).forEach(function (r) {
         var li = el("li"); li.appendChild(el("span", "", r.name + " (" + r.pos + ")"));
@@ -867,7 +872,7 @@
       });
       if (!((m.movers || {}).risers || []).length) ulR.appendChild(el("li", "muted", "No data yet."));
       colM.appendChild(ulR);
-      colM.appendChild(el("h3", "", "Fallers, last 4 weeks"));
+      colM.appendChild(el("h3", "", "Fallers, Last 4 Weeks"));
       var ulF = el("ul");
       ((m.movers || {}).fallers || []).slice(0, 5).forEach(function (r) {
         var li = el("li"); li.appendChild(el("span", "", r.name + " (" + r.pos + ")"));
@@ -883,7 +888,7 @@
       var it = m.interest;
       if (it && it.ideas_7d) {
         var cols2 = el("div", "market-cols");
-        var colI = el("div"); colI.appendChild(el("h3", "", "Most analyzed this week"));
+        var colI = el("div"); colI.appendChild(el("h3", "", "Most Analyzed This Week"));
         var ulI = el("ul");
         it.top_assets.slice(0, 6).forEach(function (x) {
           var li = el("li"); li.appendChild(el("span", "", x.name + (x.pos ? " (" + x.pos + ")" : "")));
@@ -891,7 +896,7 @@
         });
         colI.appendChild(ulI); cols2.appendChild(colI);
 
-        var colR = el("div"); colR.appendChild(el("h3", "", "Rising interest"));
+        var colR = el("div"); colR.appendChild(el("h3", "", "Rising Interest"));
         var ulR2 = el("ul");
         (it.rising || []).slice(0, 5).forEach(function (x) {
           var li = el("li"); li.appendChild(el("span", "", x.name + (x.pos ? " (" + x.pos + ")" : "")));
@@ -900,7 +905,7 @@
         if (!(it.rising || []).length) ulR2.appendChild(el("li", "muted", "Nothing unusual this week."));
         colR.appendChild(ulR2); cols2.appendChild(colR);
 
-        var colP2 = el("div"); colP2.appendChild(el("h3", "", "Most explored matchups"));
+        var colP2 = el("div"); colP2.appendChild(el("h3", "", "Most Explored Matchups"));
         var ulP2 = el("ul");
         (it.pairs || []).slice(0, 5).forEach(function (x) {
           var li = el("li"); li.appendChild(el("span", "", x.teams.join(" ↔ ")));
