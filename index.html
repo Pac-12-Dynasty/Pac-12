@@ -26,13 +26,14 @@
 
     /* Header: styled here so it doesn't depend on style.css (auth.js adds the login button) */
     nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0.2rem; background: var(--navy); padding: 0.4rem max(1rem, calc((100% - 1160px) / 2)); border-bottom: 3px solid var(--gold); }
-    nav a { color: var(--paper); text-decoration: none; font-weight: 600; padding: 0.5rem 0.9rem; border-radius: 6px; }
+    nav a { color: var(--paper); text-decoration: none; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 6px; }
     nav a:hover { background: var(--gold); color: var(--navy); }
     nav a.brand { font-family: var(--display); font-weight: 900; font-size: 1.35rem; color: var(--gold); margin-right: auto; padding-left: 0; }
     nav a.brand:hover { background: none; color: var(--paper); }
     nav .home-link, nav .menu-toggle { display: none; }
-    nav .nav-auth { display: inline-flex; align-items: center; gap: 0.5rem; margin-left: 0.5rem; }
-    nav .nav-auth button { background: none; border: 1px solid rgba(236,230,220,0.4); color: var(--paper); font: inherit; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer; }
+    nav .nav-auth { display: inline-flex; align-items: center; gap: 0.15rem; margin-left: 0.6rem; padding-left: 0.6rem; border-left: 1px solid rgba(236,230,220,0.25); }
+    nav .nav-auth a { padding: 0.5rem 0.6rem; }
+    nav .nav-auth button { background: none; border: 1px solid rgba(236,230,220,0.4); color: var(--paper); font: inherit; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 6px; cursor: pointer; margin-left: 0.3rem; }
     nav .nav-auth button:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
     :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 
@@ -388,45 +389,5 @@
       setTimeout(function () { if (sources < 2 && !(window.pac12 && window.pac12.sb)) drawFeed(); }, 4000);
     }
   </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pac 12 Dynasty</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Pac 12 Dynasty Fantasy Football League</h1>
-    <p>The official webpage of the league</p>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="teams.html">Teams</a>
-    <a href="standings.html">Standings</a>
-  </nav>
-  <main>
-    <div class="card">
-      <h2>About the League</h2>
-      <p>This page is built on the pre-existing Pac 12 Dynasty League.</p>
-    </div>
-    <div class="card">
-      <h2>League Legacy</h2>
-      <p>Every champion, all-time records, rivalries, and draft history since the league began.</p>
-      <p><a href="legacy.html">View the league legacy</a></p>
-    </div>
-    <div class="card">
-      <h2>What's Coming</h2>
-      <p>See what's planned for the site, from accounts and trade rumors to legacy stats.</p>
-      <p><a href="roadmap.html">View the roadmap</a></p>
-    </div>
-  </main>
-  <footer>
-    Most posts are written by leaguemates and reflect the opinions of each author.
-  </footer>
-  <script src="auth.js"></script>
 </body>
 </html>
