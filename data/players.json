@@ -820,8 +820,8 @@
   "injury_part": "",
   "name": "Pat Bryant",
   "pos": "WR",
-  "pos_rank": "WR65",
-  "rank": 150,
+  "pos_rank": "WR66",
+  "rank": 151,
   "team": "DEN",
   "value": 1253
  },
@@ -1254,8 +1254,8 @@
   "injury_part": "",
   "name": "KeAndre Lambert-Smith",
   "pos": "WR",
-  "pos_rank": "WR156",
-  "rank": 394,
+  "pos_rank": "WR155",
+  "rank": 393,
   "team": "LAC",
   "value": 54
  },
@@ -1871,7 +1871,7 @@
   "name": "Brenen Thompson",
   "pos": "WR",
   "pos_rank": "WR140",
-  "rank": 348,
+  "rank": 347,
   "team": "LAC",
   "value": 113
  },
@@ -1898,8 +1898,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB121",
-  "rank": 435,
+  "pos_rank": "RB127",
+  "rank": 447,
   "team": "ATL",
   "value": 3
  },
@@ -1955,7 +1955,7 @@
   "name": "Cyrus Allen",
   "pos": "WR",
   "pos_rank": "WR88",
-  "rank": 212,
+  "rank": 213,
   "team": "KC",
   "value": 749
  },
@@ -1982,8 +1982,8 @@
   "injury_part": "",
   "name": "Roman Hemby",
   "pos": "RB",
-  "pos_rank": "RB122",
-  "rank": 436,
+  "pos_rank": "RB126",
+  "rank": 444,
   "team": "LV",
   "value": 3
  },
@@ -2389,7 +2389,7 @@
   "name": "Cooper Kupp",
   "pos": "WR",
   "pos_rank": "WR113",
-  "rank": 269,
+  "rank": 270,
   "team": "SEA",
   "value": 346
  },
@@ -2752,8 +2752,8 @@
   "injury_part": "",
   "name": "Deebo Samuel Sr.",
   "pos": "WR",
-  "pos_rank": "WR66",
-  "rank": 151,
+  "pos_rank": "WR65",
+  "rank": 150,
   "team": "SF",
   "value": 1253
  },
@@ -3831,7 +3831,7 @@
   "name": "Anthony Richardson Sr.",
   "pos": "QB",
   "pos_rank": "QB33",
-  "rank": 213,
+  "rank": 212,
   "team": "IND",
   "value": 749
  },
