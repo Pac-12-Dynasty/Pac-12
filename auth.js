@@ -129,7 +129,7 @@
   // It is built right away so it doesn't wait for logins to load.
   var HEADER_CSS = [
     ':root{--p12-black:#050505;--p12-paper:#ECE6DC;--p12-pink:#E65BC4;}',
-    'nav.site-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:.2rem;margin:0;background:var(--p12-black);padding:.4rem max(1rem,calc((100% - 1160px)/2));border-bottom:3px solid var(--p12-pink);font-family:"Barlow",system-ui,sans-serif;font-size:17px;line-height:1.55;}',
+    'nav.site-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:.2rem;margin:0;background:var(--p12-black);padding:.4rem max(1rem,calc((100% - 1160px)/2 + 1rem));border-bottom:3px solid var(--p12-pink);font-family:"Barlow",system-ui,sans-serif;font-size:17px;line-height:1.55;}',
     'nav.site-nav a{color:var(--p12-paper);text-decoration:none;font-weight:600;padding:.5rem .75rem;border-radius:6px;}',
     'nav.site-nav a:hover{background:var(--p12-pink);color:var(--p12-black);}',
     'nav.site-nav a[aria-current="page"]{box-shadow:inset 0 -3px 0 var(--p12-pink);border-radius:0;}',
@@ -154,7 +154,7 @@
     'nav.site-nav.open .nav-auth{display:flex;}',
     '}',
     /* Older pages still have a title band in a <header> tag: match the black band on the new pages */
-    'body>header{background:var(--p12-black);color:var(--p12-paper);text-align:left;padding:2rem max(1rem,calc((100% - 1160px)/2)) 2.2rem;}',
+    'body>header{background:var(--p12-black);color:var(--p12-paper);text-align:left;padding:2rem max(1rem,calc((100% - 1160px)/2 + 1rem)) 2.2rem;}',
     'body>header h1{font-family:"Big Shoulders Display","Arial Narrow",sans-serif;font-weight:900;font-size:clamp(2.4rem,7vw,4.4rem);line-height:.95;margin:0;color:var(--p12-paper);}',
     'body>header p{color:#cfc7bb;margin:.6rem 0 0;font-family:"Barlow",system-ui,sans-serif;font-weight:600;}',
     'body>header a{color:var(--p12-paper);}'
