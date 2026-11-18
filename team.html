@@ -24,31 +24,7 @@
     html { background: var(--paper); }
     body { margin: 0; line-height: 1.55; background: var(--paper); color: var(--ink); font-family: var(--text); font-size: 17px; }
 
-    /* Header: same as the home page */
-    nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0.2rem; background: var(--navy); padding: 0.4rem max(1rem, calc((100% - 1160px) / 2)); border-bottom: 3px solid var(--gold); }
-    nav a { color: var(--paper); text-decoration: none; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 6px; }
-    nav a:hover { background: var(--gold); color: var(--navy); }
-    nav a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--gold); border-radius: 0; }
-    nav a.brand { font-family: var(--display); font-weight: 900; font-size: 1.35rem; color: var(--gold); margin-right: auto; padding-left: 0; box-shadow: none; }
-    nav a.brand:hover { background: none; color: var(--paper); }
-    nav .home-link, nav .menu-toggle { display: none; }
-    nav .nav-auth { display: inline-flex; align-items: center; gap: 0.15rem; margin-left: 0.6rem; padding-left: 0.6rem; border-left: 1px solid rgba(236,230,220,0.25); }
-    nav .nav-auth a { padding: 0.5rem 0.6rem; }
-    nav .nav-auth button { background: none; border: 1px solid rgba(236,230,220,0.4); color: var(--paper); font: inherit; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 6px; cursor: pointer; margin-left: 0.3rem; }
-    nav .nav-auth button:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
-    :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
-    @media (max-width: 700px) {
-      nav { padding: 0.35rem 1rem; gap: 0; }
-      nav a.brand { display: none; }
-      nav .menu-toggle { display: flex; width: 100%; align-items: center; justify-content: space-between; background: none; border: 0; color: var(--gold);
-        font-family: var(--display); font-weight: 900; font-size: 1.45rem; padding: 0.35rem 0; cursor: pointer; }
-      nav .menu-toggle span { font-size: 1rem; transition: transform 0.2s; }
-      nav.open .menu-toggle span { transform: rotate(180deg); }
-      nav > a, nav .nav-auth { display: none; }
-      nav.open > a:not(.brand), nav.open .nav-auth { display: block; width: 100%; padding: 0.7rem 0.1rem; border-top: 1px solid rgba(236,230,220,0.14); border-radius: 0; margin: 0; box-shadow: none; }
-      nav.open > a:not(.brand):hover { background: none; color: var(--gold); }
-      nav.open .nav-auth { display: flex; }
-    }
+    /* The header (nav) is built and styled by auth.js so it matches on every page */
 
     .wrap { max-width: 1160px; margin: 0 auto; padding: 0 1rem; }
 
@@ -220,17 +196,6 @@
   <footer>Pac 12 Dynasty Fantasy Football League</footer>
 
   <script src="auth.js"></script>
-  <script>
-    // Phone menu: tap the pink name to open or close
-    (function () {
-      var nav = document.getElementById("site-nav");
-      var btn = nav.querySelector(".menu-toggle");
-      function set(open) { nav.classList.toggle("open", open); btn.setAttribute("aria-expanded", open ? "true" : "false"); }
-      btn.addEventListener("click", function () { set(!nav.classList.contains("open")); });
-      nav.addEventListener("click", function (e) { if (e.target.tagName === "A") set(false); });
-      document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
-    })();
-  </script>
   <script src="team.js"></script>
 </body>
 </html>
