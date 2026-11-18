@@ -6,17 +6,17 @@
   <title>Legacy | Pac 12 Dynasty</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    :root { --red: #c8102e; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; --gold: #eebf3a; }
-    main.legacy { max-width: 1140px; }
-    .section-bar { background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 8px 8px 0 0; border-bottom: 4px solid var(--red); }
-    .section-bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
-    .section-body { background: #fff; padding: 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 1.5rem; }
+    :root { --red: #E65BC4; --ink: #050505; --muted: #5f574d; --line: #d4cbbd; --gold: #E65BC4; --paper: #ECE6DC; --paper-2: #E3DBCE; --display: "Big Shoulders Display", "Arial Narrow", sans-serif; }
+    main.legacy { max-width: 1160px; }
+    .section-bar { background: var(--ink); color: var(--paper); padding: 0.6rem 1rem; border-radius: 0; border-bottom: 4px solid var(--red); }
+    .section-bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; }
+    .section-body { background: var(--paper); padding: 1.25rem; border-radius: 0; box-shadow: none; margin-bottom: 1.5rem; }
     .muted { color: var(--muted); font-size: 0.9rem; }
 
     /* Champions wall */
     .trophies { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
     .trophy { border: 1px solid var(--line); border-top: 5px solid var(--gold); border-radius: 8px; padding: 1rem; text-align: center; }
-    .trophy .yr { font-size: 0.8rem; font-weight: 800; letter-spacing: 0.08em; color: var(--red); }
+    .trophy .yr { font-size: 0.8rem; font-weight: 800; color: var(--ink); }
     .trophy .champ { font-size: 1.3rem; font-weight: 900; color: var(--ink); margin: 0.25rem 0; }
     .trophy .icon { font-size: 2rem; }
 
@@ -25,55 +25,60 @@
     .rival-card { border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem 1rem; }
     .rival-card h3 { margin: 0 0 0.5rem; font-size: 1rem; color: var(--ink); }
     .rival-row { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.35rem 0; border-top: 1px solid var(--line); font-size: 0.92rem; }
-    .rival-row .tag { color: var(--red); font-weight: 800; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.35rem; }
+    .rival-row .tag { color: var(--ink); font-weight: 800; font-size: 0.72rem; margin-right: 0.35rem; }
 
     /* Tables */
     table.sortable th { cursor: pointer; user-select: none; white-space: nowrap; }
     table.sortable th[data-dir="asc"]::after { content: " ▲"; font-size: 0.75em; }
     table.sortable th[data-dir="desc"]::after { content: " ▼"; font-size: 0.75em; }
     .toolbar { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; }
-    .toolbar select { font: inherit; padding: 0.35rem 0.5rem; border-radius: 6px; border: 1px solid #c5ccd6; }
-    .download { display: inline-block; background: var(--red); color: #fff !important; text-decoration: none !important; font-weight: 800; padding: 0.4rem 0.9rem; border-radius: 6px; }
+    .toolbar select { font: inherit; padding: 0.35rem 0.5rem; border-radius: 6px; border: 1px solid #b9ae9c; }
+    .download { display: inline-block; background: var(--red); color: var(--ink) !important; text-decoration: none !important; font-weight: 800; padding: 0.4rem 0.9rem; border-radius: 6px; }
     details.formula { margin-top: 0.75rem; }
     details.formula summary { cursor: pointer; font-weight: 700; }
 
     /* Records */
     .records { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
-    .record { border-left: 5px solid var(--red); background: #f9fafb; padding: 0.8rem 1rem; border-radius: 6px; }
-    .record .label { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .record { border-left: 5px solid var(--red); background: var(--paper-2); padding: 0.8rem 1rem; border-radius: 6px; }
+    .record .label { font-size: 0.75rem; font-weight: 800; color: var(--muted); }
     .record .big { font-size: 1.5rem; font-weight: 900; color: var(--ink); }
 
     details.fold { margin-bottom: 1.5rem; }
     details.fold > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
     details.fold > summary::-webkit-details-marker { display: none; }
-    details.fold > summary::after { content: "Show ▾"; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.05em; color: #d1d5db; }
+    details.fold > summary::after { content: "Show ▾"; font-size: 0.8rem; font-weight: 800; color: #cfc7bb; }
     details.fold[open] > summary::after { content: "Hide ▴"; }
     details.fold:not([open]) > summary { border-radius: 8px; }
     details.fold > .section-body { margin-bottom: 0; }
 
     /* Points leaders */
     .leader-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.75rem; }
-    .leader-card { border: 1px solid #e5e7eb; border-top: 4px solid #111827; border-radius: 8px; padding: 0.75rem; }
-    .leader-card.overall { border-top-color: #eebf3a; grid-column: span 2; }
-    .leader-label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #c8102e; }
-    .leader-name { font-size: 1.1rem; font-weight: 900; color: #111827; line-height: 1.2; margin-top: 0.2rem; }
+    .leader-card { border: 1px solid var(--line); border-top: 4px solid var(--ink); border-radius: 8px; padding: 0.75rem; }
+    .leader-card.overall { border-top-color: var(--ink); grid-column: span 2; }
+    .leader-label { font-size: 0.72rem; font-weight: 800; color: var(--ink); }
+    .leader-name { font-size: 1.1rem; font-weight: 900; color: var(--ink); line-height: 1.2; margin-top: 0.2rem; }
     .leader-card.overall .leader-name { font-size: 1.4rem; }
     .leader-points { font-weight: 700; }
     .leader-fold { margin-top: 1rem; }
     .leader-fold > summary { cursor: pointer; font-weight: 800; }
     .leader-tabs { display: flex; flex-wrap: wrap; gap: 0.25rem; margin: 0.75rem 0; }
-    .leader-tabs button { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 0.3rem 0.7rem; border-radius: 4px; border: 1px solid #c5ccd6; background: #fff; cursor: pointer; }
-    .leader-tabs button.active { background: #c8102e; border-color: #c8102e; color: #fff; }
+    .leader-tabs button { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 0.3rem 0.7rem; border-radius: 4px; border: 1px solid #b9ae9c; background: var(--paper); cursor: pointer; }
+    .leader-tabs button.active { background: var(--red); border-color: var(--ink); color: var(--ink); }
     @media (max-width: 500px) { .leader-card.overall { grid-column: auto; } }
     .fl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
-    .fl-card { border: 1px solid #e5e7eb; border-top: 4px solid #c8102e; border-radius: 8px; padding: 0.9rem 1rem; }
+    .fl-card { border: 1px solid var(--line); border-top: 4px solid var(--red); border-radius: 8px; padding: 0.9rem 1rem; }
     .fl-card h3 { margin: 0 0 0.4rem; font-size: 1rem; }
-    .fl-top { font-size: 1.15rem; font-weight: 900; color: #111827; }
+    .fl-top { font-size: 1.15rem; font-weight: 900; color: var(--ink); }
     .fl-list { list-style: none; margin: 0.5rem 0 0; padding: 0; font-size: 0.9rem; }
-    .fl-list li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.25rem 0; border-top: 1px solid #e5e7eb; }
-    .fl-pos { font-weight: 800; color: #c8102e; min-width: 2.6rem; }
+    .fl-list li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.25rem 0; border-top: 1px solid var(--line); }
+    .fl-pos { font-weight: 800; color: var(--ink); min-width: 2.6rem; }
     .draft-year { margin: 1rem 0 0.4rem; font-size: 1rem; color: var(--ink); }
-  </style>
+  
+    /* Section bars: black with a pink line, titles in the display font */
+    .bar h2, .news-bar h2, .section-bar h2 { font-family: var(--display); font-size: 1.45rem; font-weight: 800; color: var(--paper); }
+    .panel, .section-body, .feed, .news-layout { border: 1px solid var(--line); border-top: 0; }
+    .sidebar h2 { font-family: var(--display); font-size: 1.3rem; font-weight: 800; }
+</style>
 </head>
 <body>
   <header>
@@ -110,7 +115,7 @@
         </div>
         <div class="table-wrap"><table class="sortable" id="rivalry-table"></table></div>
         <details class="formula">
-          <summary>How rivalry scores work</summary>
+          <summary>How Rivalry Scores Work</summary>
           <p>Every head-to-head game counts. Regular season games count 1. Playoff games count more each round: round 1 counts 2, round 2 counts 3, and so on up to the title game.</p>
           <p>Balance measures how even the series is, using the same weights: 1 means dead even, 0 means one owner won every time.</p>
           <p><strong>Rivalry score = weighted games × (0.5 + 0.5 × balance).</strong> Each owner's top 2 scores are their rivals, with ties going to whoever they've played more.</p>
@@ -226,7 +231,7 @@
       data.champions.forEach(function (c) {
         var t = el("div", "trophy");
         t.appendChild(el("div", "icon", "🏆"));
-        t.appendChild(el("div", "yr", c.season + " CHAMPION"));
+        t.appendChild(el("div", "yr", c.season + " Champion"));
         var champ = el("div", "champ"); champ.appendChild(teamLink(c.champion)); t.appendChild(champ);
         t.appendChild(el("div", "muted", owner(c.champion).name));
         var ru = el("div", "muted", "Runner-up: "); ru.appendChild(teamLink(c.runner_up)); t.appendChild(ru);
@@ -373,7 +378,7 @@
       var box = document.getElementById("drafts");
       if (!data.drafts.length) { box.appendChild(el("p", "muted", "No drafts recorded yet.")); return; }
       data.drafts.forEach(function (d) {
-        box.appendChild(el("h3", "draft-year", d.season + " " + d.type + " Draft"));
+        box.appendChild(el("h3", "draft-year", d.season + " " + String(d.type || "").replace(/^./, function (ch) { return ch.toUpperCase(); }) + " Draft"));
         var t = el("table");
         var wrap = el("div", "table-wrap"); wrap.appendChild(t); box.appendChild(wrap);
         var head = el("tr");
