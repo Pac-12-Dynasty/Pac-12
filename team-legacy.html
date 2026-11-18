@@ -6,27 +6,27 @@
   <title>Team Legacy | Pac 12 Dynasty</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    :root { --red: #c8102e; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; --gold: #eebf3a; }
-    main.legacy { max-width: 1140px; }
-    .section-bar { background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 8px 8px 0 0; border-bottom: 4px solid var(--red); }
-    .section-bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
-    .section-body { background: #fff; padding: 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); margin-bottom: 1.5rem; }
+    :root { --red: #E65BC4; --ink: #050505; --muted: #5f574d; --line: #d4cbbd; --gold: #E65BC4; --paper: #ECE6DC; --paper-2: #E3DBCE; --display: "Big Shoulders Display", "Arial Narrow", sans-serif; }
+    main.legacy { max-width: 1160px; }
+    .section-bar { background: var(--ink); color: var(--paper); padding: 0.6rem 1rem; border-radius: 0; border-bottom: 4px solid var(--red); }
+    .section-bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; }
+    .section-body { background: var(--paper); padding: 1.25rem; border-radius: 0; box-shadow: none; margin-bottom: 1.5rem; }
     .muted { color: var(--muted); font-size: 0.9rem; }
     .crumbs { margin-bottom: 1rem; font-weight: 700; }
 
     .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
-    .tile { background: #fff; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); padding: 1rem; border-top: 5px solid var(--ink); text-align: center; }
+    .tile { background: var(--paper); border-radius: 8px; box-shadow: none; padding: 1rem; border-top: 5px solid var(--ink); text-align: center; }
     .tile.gold { border-top-color: var(--gold); }
-    .tile.red { border-top-color: var(--red); }
+    .tile.red { border-top-color: var(--ink); }
     .tile .big { font-size: 2rem; font-weight: 900; color: var(--ink); line-height: 1.1; }
-    .tile .label { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 0.25rem; }
+    .tile .label { font-size: 0.75rem; font-weight: 800; color: var(--muted); margin-top: 0.25rem; }
 
     .case { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
-    .case h3 { margin: 0 0 0.5rem; font-size: 0.85rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); }
+    .case h3 { margin: 0 0 0.5rem; font-size: 0.85rem; font-weight: 900; color: var(--ink); }
     .case ul { margin: 0; padding-left: 1.1rem; }
 
     .rival { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.5rem 0; border-top: 1px solid var(--line); }
-    .rival .tag { color: var(--red); font-weight: 800; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-right: 0.35rem; }
+    .rival .tag { color: var(--ink); font-weight: 800; font-size: 0.72rem; margin-right: 0.35rem; }
 
     table.sortable th { cursor: pointer; user-select: none; white-space: nowrap; }
     table.sortable th[data-dir="asc"]::after { content: " ▲"; font-size: 0.75em; }
@@ -34,28 +34,33 @@
     details.fold { margin-bottom: 1.5rem; }
     details.fold > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; }
     details.fold > summary::-webkit-details-marker { display: none; }
-    details.fold > summary::after { content: "Show ▾"; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.05em; color: #d1d5db; }
+    details.fold > summary::after { content: "Show ▾"; font-size: 0.8rem; font-weight: 800; color: #cfc7bb; }
     details.fold[open] > summary::after { content: "Hide ▴"; }
     details.fold:not([open]) > summary { border-radius: 8px; }
     details.fold > .section-body { margin-bottom: 0; }
     /* Points leaders */
     .leader-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.75rem; }
-    .leader-card { border: 1px solid #e5e7eb; border-top: 4px solid #111827; border-radius: 8px; padding: 0.75rem; }
-    .leader-card.overall { border-top-color: #eebf3a; grid-column: span 2; }
-    .leader-label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #c8102e; }
-    .leader-name { font-size: 1.1rem; font-weight: 900; color: #111827; line-height: 1.2; margin-top: 0.2rem; }
+    .leader-card { border: 1px solid var(--line); border-top: 4px solid var(--ink); border-radius: 8px; padding: 0.75rem; }
+    .leader-card.overall { border-top-color: var(--ink); grid-column: span 2; }
+    .leader-label { font-size: 0.72rem; font-weight: 800; color: var(--ink); }
+    .leader-name { font-size: 1.1rem; font-weight: 900; color: var(--ink); line-height: 1.2; margin-top: 0.2rem; }
     .leader-card.overall .leader-name { font-size: 1.4rem; }
     .leader-points { font-weight: 700; }
     .leader-fold { margin-top: 1rem; }
     .leader-fold > summary { cursor: pointer; font-weight: 800; }
     .leader-tabs { display: flex; flex-wrap: wrap; gap: 0.25rem; margin: 0.75rem 0; }
-    .leader-tabs button { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 0.3rem 0.7rem; border-radius: 4px; border: 1px solid #c5ccd6; background: #fff; cursor: pointer; }
-    .leader-tabs button.active { background: #c8102e; border-color: #c8102e; color: #fff; }
+    .leader-tabs button { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 0.3rem 0.7rem; border-radius: 4px; border: 1px solid #b9ae9c; background: var(--paper); cursor: pointer; }
+    .leader-tabs button.active { background: var(--red); border-color: var(--ink); color: var(--ink); }
     @media (max-width: 500px) { .leader-card.overall { grid-column: auto; } }
-    .finish-Champion { font-weight: 800; color: #854d0e; }
-    .finish-Runner-up { font-weight: 700; color: #13315c; }
-    .finish-3rd { font-weight: 700; color: #7c4a1e; }
-  </style>
+    .finish-Champion { font-weight: 800; color: #6b4a07; }
+    .finish-Runner-up { font-weight: 700; color: #1c1a18; }
+    .finish-3rd { font-weight: 700; color: #6b3d1e; }
+  
+    /* Section bars: black with a pink line, titles in the display font */
+    .bar h2, .news-bar h2, .section-bar h2 { font-family: var(--display); font-size: 1.45rem; font-weight: 800; color: var(--paper); }
+    .panel, .section-body, .feed, .news-layout { border: 1px solid var(--line); border-top: 0; }
+    .sidebar h2 { font-family: var(--display); font-size: 1.3rem; font-weight: 800; }
+</style>
 </head>
 <body>
   <header>
