@@ -25,14 +25,15 @@
 
     /* Header: same as the home page, styled here so it doesn't depend on style.css */
     nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0.2rem; background: var(--navy); padding: 0.4rem max(1rem, calc((100% - 1160px) / 2)); border-bottom: 3px solid var(--gold); }
-    nav a { color: var(--paper); text-decoration: none; font-weight: 600; padding: 0.5rem 0.9rem; border-radius: 6px; }
+    nav a { color: var(--paper); text-decoration: none; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 6px; }
     nav a:hover { background: var(--gold); color: var(--navy); }
     nav a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--gold); border-radius: 0; }
     nav a.brand { font-family: var(--display); font-weight: 900; font-size: 1.35rem; color: var(--gold); margin-right: auto; padding-left: 0; box-shadow: none; }
     nav a.brand:hover { background: none; color: var(--paper); }
     nav .home-link, nav .menu-toggle { display: none; }
-    nav .nav-auth { display: inline-flex; align-items: center; gap: 0.5rem; margin-left: 0.5rem; }
-    nav .nav-auth button { background: none; border: 1px solid rgba(236,230,220,0.4); color: var(--paper); font: inherit; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer; }
+    nav .nav-auth { display: inline-flex; align-items: center; gap: 0.15rem; margin-left: 0.6rem; padding-left: 0.6rem; border-left: 1px solid rgba(236,230,220,0.25); }
+    nav .nav-auth a { padding: 0.5rem 0.6rem; }
+    nav .nav-auth button { background: none; border: 1px solid rgba(236,230,220,0.4); color: var(--paper); font: inherit; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 6px; cursor: pointer; margin-left: 0.3rem; }
     nav .nav-auth button:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
     :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
     @media (max-width: 700px) {
@@ -196,70 +197,6 @@
       document.getElementById("key").hidden = !played;
     }).catch(function (err) {
       document.getElementById("status").textContent = "Teams didn't load from Sleeper. Refresh in a minute. (" + err.message + ")";
-    });
-  </script>
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Teams | Pac 12 Dynasty</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Teams</h1>
-    <p>Every franchise in the league</p>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="teams.html">Teams</a>
-    <a href="standings.html">Standings</a>
-  </nav>
-  <main>
-    <div class="card">
-      <h2>League Teams</h2>
-      <p id="status" class="status">Loading teams from Sleeper...</p>
-      <ul id="teams"></ul>
-    </div>
-  </main>
-  <footer>Pac 12 Dynasty Fantasy Football League</footer>
-  <script src="auth.js"></script>
-  <script>
-    // Team names and owners come live from Sleeper, so renames show up right away.
-    // Each link uses the team's Sleeper roster number, so it keeps working after a rename.
-    var API = "https://api.sleeper.app/v1";
-    var findLeague = window.pac12 && window.pac12.leagueId ? window.pac12.leagueId() : Promise.resolve("1315706586127171584");
-    function getJSON(url) {
-      return fetch(url).then(function (res) { if (!res.ok) throw new Error("Sleeper returned " + res.status); return res.json(); });
-    }
-    findLeague.then(function (id) {
-      return Promise.all([getJSON(API + "/league/" + id + "/rosters"), getJSON(API + "/league/" + id + "/users")]);
-    }).then(function (res) {
-      var users = {};
-      res[1].forEach(function (u) { users[u.user_id] = u; });
-      var list = res[0].map(function (r) {
-        var u = users[r.owner_id] || {};
-        return {
-          roster: r.roster_id,
-          team: ((u.metadata && u.metadata.team_name) || u.display_name || "Team " + r.roster_id).trim(),
-          owner: u.display_name || "No owner"
-        };
-      }).sort(function (a, b) { return a.owner.toLowerCase().localeCompare(b.owner.toLowerCase()); });
-      var ul = document.getElementById("teams");
-      list.forEach(function (t) {
-        var li = document.createElement("li");
-        var a = document.createElement("a");
-        a.href = "team.html?roster=" + t.roster;
-        a.textContent = t.team;
-        li.appendChild(a);
-        li.appendChild(document.createTextNode(" (" + t.owner + ")"));
-        ul.appendChild(li);
-      });
-      document.getElementById("status").hidden = true;
-    }).catch(function (err) {
-      document.getElementById("status").textContent = "Couldn't load teams from Sleeper right now. Try refreshing in a minute. (" + err.message + ")";
     });
   </script>
 </body>
