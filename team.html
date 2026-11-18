@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Teams | Pac 12 Dynasty</title>
+  <title>Team | Pac 12 Dynasty</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <style>
     :root {
       --navy: #050505;   /* secondary */
       --deep: #1c1a18;   /* raised secondary */
       --gold: #E65BC4;   /* accent */
-      --paper: #ECE6DC;  /* primary */
+      --paper: #ECE6DC;  /* primary (off-white) */
+      --paper-2: #E3DBCE; /* slightly darker off-white for striped rows */
       --ink: #050505;
       --muted: #5f574d;
       --line: #d4cbbd;
@@ -21,18 +21,20 @@
       --text: "Barlow", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
+    html { background: var(--paper); }
     body { margin: 0; line-height: 1.55; background: var(--paper); color: var(--ink); font-family: var(--text); font-size: 17px; }
 
-    /* Header: same as the home page, styled here so it doesn't depend on style.css */
+    /* Header: same as the home page */
     nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0.2rem; background: var(--navy); padding: 0.4rem max(1rem, calc((100% - 1160px) / 2)); border-bottom: 3px solid var(--gold); }
-    nav a { color: var(--paper); text-decoration: none; font-weight: 600; padding: 0.5rem 0.9rem; border-radius: 6px; }
+    nav a { color: var(--paper); text-decoration: none; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 6px; }
     nav a:hover { background: var(--gold); color: var(--navy); }
     nav a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--gold); border-radius: 0; }
     nav a.brand { font-family: var(--display); font-weight: 900; font-size: 1.35rem; color: var(--gold); margin-right: auto; padding-left: 0; box-shadow: none; }
     nav a.brand:hover { background: none; color: var(--paper); }
     nav .home-link, nav .menu-toggle { display: none; }
-    nav .nav-auth { display: inline-flex; align-items: center; gap: 0.5rem; margin-left: 0.5rem; }
-    nav .nav-auth button { background: none; border: 1px solid rgba(236,230,220,0.4); color: var(--paper); font: inherit; font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 6px; cursor: pointer; }
+    nav .nav-auth { display: inline-flex; align-items: center; gap: 0.15rem; margin-left: 0.6rem; padding-left: 0.6rem; border-left: 1px solid rgba(236,230,220,0.25); }
+    nav .nav-auth a { padding: 0.5rem 0.6rem; }
+    nav .nav-auth button { background: none; border: 1px solid rgba(236,230,220,0.4); color: var(--paper); font: inherit; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 6px; cursor: pointer; margin-left: 0.3rem; }
     nav .nav-auth button:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
     :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
     @media (max-width: 700px) {
@@ -50,35 +52,85 @@
 
     .wrap { max-width: 1160px; margin: 0 auto; padding: 0 1rem; }
 
-    /* Page title band */
-    .band { background: var(--navy); color: var(--paper); padding: 2.2rem 0 2.4rem; }
-    .band h1 { font-family: var(--display); font-weight: 900; font-size: clamp(3rem, 8vw, 5.2rem); line-height: 0.9; margin: 0; }
-    .band p { color: #cfc7bb; margin: 0.8rem 0 0; max-width: 52ch; }
+    /* Title band: team name, owner, and this season's numbers */
+    .band { background: var(--navy); color: var(--paper); padding: 2rem 0 0; }
+    .band .back { color: #cfc7bb; font-size: 0.95rem; text-decoration: none; }
+    .band .back:hover { color: var(--gold); }
+    .band h1 { font-family: var(--display); font-weight: 900; font-size: clamp(2.6rem, 7.5vw, 5rem); line-height: 0.92; margin: 0.6rem 0 0; overflow-wrap: anywhere; }
+    .band #team-owner { color: #cfc7bb; margin: 0.6rem 0 0; font-weight: 600; }
+    .band .table-wrap { margin-top: 1.8rem; border-top: 1px solid rgba(236,230,220,0.18); }
+    .strip { border-collapse: collapse; width: auto; }
+    .strip th, .strip td { padding-right: 2.5rem !important; }
+    .strip th, .strip td { background: none; border: 0; text-align: left; padding: 0 1.5rem 0 0; }
+    .strip th { color: #cfc7bb; font-weight: 600; font-size: 0.85rem; padding-top: 0.9rem; }
+    .strip td { font-family: var(--display); font-weight: 800; font-size: 2rem; line-height: 1.1; padding-bottom: 1.1rem; font-variant-numeric: tabular-nums; color: var(--paper); width: auto; }
+    .strip td:first-child { color: var(--gold); }
 
-    /* The team list */
-    .teams { list-style: none; margin: 2.2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.5rem; border-top: 2px solid var(--ink); }
-    .team { border-bottom: 1px solid var(--line); padding: 1rem 0 1.05rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.2rem 1rem; align-items: baseline; }
-    .team h2 { margin: 0; font-family: var(--display); font-weight: 800; font-size: 1.75rem; line-height: 1.05; }
-    .team h2 a { color: var(--ink); text-decoration: none; }
-    .team h2 a:hover { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 3px; text-underline-offset: 4px; }
-    .team .owner { color: var(--muted); font-weight: 600; font-size: 1.05rem; margin-left: 0.15rem; font-family: var(--text); }
-    .team .stand { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-    .team .stand strong { display: block; font-family: var(--display); font-weight: 800; font-size: 1.5rem; line-height: 1; }
-    .team .stand span { color: var(--muted); font-size: 0.9rem; }
-    .team .stand.in strong::before { content: ""; display: inline-block; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--gold); margin-right: 0.4rem; vertical-align: 0.25em; }
-    .team .links { grid-column: 1 / -1; display: flex; gap: 1.2rem; font-size: 0.95rem; }
-    .team .links a { color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 3px; }
-    .team .links a:hover { color: var(--muted); }
-    .key { color: var(--muted); font-size: 0.9rem; margin: 1rem 0 0; }
-    .key i { display: inline-block; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--gold); margin-right: 0.35rem; }
-    .status { color: var(--muted); margin: 2rem 0 0; }
+    /* Two columns: roster on the left, legacy and picks on the right */
+    main.wrap { margin-top: 2rem; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 2.5rem; align-items: start; }
+    .roster, .side { min-width: 0; }
+    .side { display: grid; gap: 2rem; }
+    .honors { list-style: none; margin: 0.6rem 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+    .honors li { padding: 0.3rem 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 0.5rem; }
+    .honors li b { font-family: var(--display); font-weight: 800; font-size: 1.15rem; line-height: 1.2; }
+    .card { background: none; padding: 0; margin: 0 0 2.2rem; }
+    .side .card { margin: 0; }
+    .card h2 { font-family: var(--display); font-weight: 800; font-size: 1.7rem; line-height: 1; margin: 0 0 0.7rem; padding-bottom: 0.45rem; border-bottom: 2px solid var(--ink); }
+    .card p { margin: 0.45rem 0; }
+    .hint { color: var(--muted); font-size: 0.92rem; margin: -0.2rem 0 0.6rem; }
+    .status { color: var(--muted); font-size: 0.92rem; }
+    #status { margin: 0 0 1.2rem; }
 
-    footer { max-width: 1160px; margin: 2.5rem auto 0; text-align: left; padding: 1.5rem 1rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+    main a, main a:visited { color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    main a:hover { color: var(--muted); }
 
-    @media (max-width: 760px) {
-      .teams { grid-template-columns: 1fr; }
-      .team h2 { font-size: 1.55rem; }
-      .team .owner { display: block; margin: 0.15rem 0 0; font-size: 0.98rem; }
+    /* Roster tables */
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+    th, td { padding: 0.5rem 0.6rem; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+    th { background: none; color: var(--muted); font-size: 0.85rem; font-weight: 700; border-bottom: 1px solid var(--ink); }
+    .card tbody tr:nth-child(even) td { background: var(--paper-2); }
+    .card tbody td:first-child { font-family: var(--display); font-weight: 800; font-size: 1.05rem; color: var(--muted); width: 3.5rem; }
+    tr.player[data-pid] { cursor: pointer; }
+    tr.player[data-pid] td:nth-child(2) { font-weight: 600; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+    tr.player[data-pid]:hover td { background: rgba(230,91,196,0.14); }
+    tr.player[data-pid]:hover td:nth-child(2) { text-decoration-color: var(--gold); }
+    tr.player:not([data-pid]) td:nth-child(2) { color: var(--muted); font-style: italic; }
+
+    /* Injury badges, by severity */
+    .inj { display: inline-block; margin-left: 0.4rem; padding: 0 0.35rem; border-radius: 4px; font-size: 0.72em; font-weight: 700; font-style: normal; vertical-align: 0.1em; }
+    .inj.low  { background: #f3e3a6; color: #6b4a07; }
+    .inj.mid  { background: #f4cfae; color: #8a3408; }
+    .inj.high { background: #ebbcb5; color: #8f1d12; }
+    .inj.info { background: var(--line); color: var(--muted); }
+
+    /* Draft picks */
+    .pick-list { list-style: none; margin: 0; padding: 0; }
+    .pick-list li { padding: 0.4rem 0; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+
+    /* Player card */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(5,5,5,0.6); display: flex; align-items: flex-start; justify-content: center; padding: 4vh 1rem; z-index: 50; overflow-y: auto; }
+    .modal { position: relative; background: var(--paper); border-top: 4px solid var(--gold); border-radius: 4px; width: 100%; max-width: 780px; padding: 1.5rem; box-shadow: 0 12px 34px rgba(0,0,0,0.35); }
+    .modal h2 { font-family: var(--display); font-weight: 900; font-size: 2.2rem; line-height: 1; margin: 0 2rem 0.3rem 0; }
+    .modal-close { position: absolute; top: 0.6rem; right: 0.9rem; background: none; border: none; font-size: 1.9rem; line-height: 1; cursor: pointer; color: var(--muted); }
+    .modal-close:hover { color: var(--gold); }
+    .modal-tabs { display: flex; gap: 0.35rem; margin: 1rem 0 0.75rem; border-bottom: 1px solid var(--ink); }
+    .modal-tabs button { font: inherit; font-weight: 700; background: none; border: none; border-bottom: 3px solid transparent; margin-bottom: -1px; padding: 0.45rem 0.8rem; cursor: pointer; color: var(--muted); }
+    .modal-tabs button.active { color: var(--ink); border-bottom-color: var(--gold); }
+    .modal tr:nth-child(even) td { background: var(--paper-2); }
+    .modal td:first-child { font-family: var(--text); font-weight: 600; font-size: inherit; color: var(--ink); width: auto; }
+
+    footer { max-width: 1160px; margin: 1.5rem auto 0; padding: 1.5rem 1rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+      .side { gap: 0; }
+      .side .card { margin: 0 0 2.2rem; }
+    }
+    @media (max-width: 560px) {
+      .strip td { font-size: 1.5rem; }
+      .strip th, .strip td { padding-right: 0.9rem !important; }
     }
   </style>
 </head>
@@ -97,22 +149,79 @@
 
   <section class="band">
     <div class="wrap">
-      <h1>Teams</h1>
-      <p>All twelve franchises, listed by owner. Open a team for its roster, draft picks, and game logs, or its legacy for titles, rivals, and history.</p>
+      <a class="back" href="teams.html">&larr; All teams</a>
+      <h1 id="team-name">Loading team...</h1>
+      <p id="team-owner">Owner:</p>
+      <div class="table-wrap">
+        <table class="strip">
+          <tr><th>Standing</th><th>Record</th><th>Points for</th><th>Points against</th></tr>
+          <tr id="stats-row"><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+        </table>
+      </div>
     </div>
   </section>
 
-  <main class="wrap" style="max-width: 1160px; margin: 0 auto;">
-    <p id="status" class="status">Loading teams from Sleeper...</p>
-    <ul class="teams" id="teams" hidden></ul>
-    <p class="key" id="key" hidden><i></i>In a playoff spot right now</p>
+  <main class="wrap">
+    <p id="status" class="status">Loading from Sleeper...</p>
+
+    <div class="layout">
+      <div class="roster">
+        <div class="card" id="starters-card">
+          <h2>Starters</h2>
+          <p class="hint">Click a player to see his game log and season stats.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Slot</th><th>Player</th><th>Pos</th><th>NFL Team</th><th>Age</th></tr></thead>
+              <tbody id="starters"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Bench</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Slot</th><th>Player</th><th>Pos</th><th>NFL Team</th><th>Age</th></tr></thead>
+              <tbody id="bench"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Injured Reserve</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Slot</th><th>Player</th><th>Pos</th><th>NFL Team</th><th>Age</th></tr></thead>
+              <tbody id="ir"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Taxi Squad</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Slot</th><th>Player</th><th>Pos</th><th>NFL Team</th><th>Age</th></tr></thead>
+              <tbody id="taxi"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <aside class="side" id="side">
+        <div class="card" id="notes-card">
+          <h2>Team Notes</h2>
+          <p class="status">Team notes are coming in the offseason.</p>
+        </div>
+      </aside>
+    </div>
   </main>
 
-  <footer>Most posts are written by leaguemates and reflect the opinions of each author.</footer>
+  <footer>Pac 12 Dynasty Fantasy Football League</footer>
 
   <script src="auth.js"></script>
   <script>
-    // Phone menu: tap the gold name to open or close
+    // Phone menu: tap the pink name to open or close
     (function () {
       var nav = document.getElementById("site-nav");
       var btn = nav.querySelector(".menu-toggle");
@@ -121,82 +230,7 @@
       nav.addEventListener("click", function (e) { if (e.target.tagName === "A") set(false); });
       document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
     })();
-
-    // Team names, owners, and records come live from Sleeper, so renames show up right away.
-    // Team links use the Sleeper roster number, so they keep working after a rename.
-    var API = "https://api.sleeper.app/v1";
-    var findLeague = window.pac12 && window.pac12.leagueId ? window.pac12.leagueId() : Promise.resolve("1315706586127171584");
-
-    function el(tag, cls, text) {
-      var n = document.createElement(tag);
-      if (cls) n.className = cls;
-      if (text != null) n.textContent = text;
-      return n;
-    }
-    function getJSON(url) {
-      return fetch(url).then(function (r) { if (!r.ok) throw new Error("Sleeper returned " + r.status); return r.json(); });
-    }
-    function ordinal(n) {
-      var s = ["th", "st", "nd", "rd"], v = n % 100;
-      return n + (s[(v - 20) % 10] || s[v] || s[0]);
-    }
-
-    findLeague.then(function (id) {
-      return Promise.all([getJSON(API + "/league/" + id), getJSON(API + "/league/" + id + "/rosters"), getJSON(API + "/league/" + id + "/users")]);
-    }).then(function (res) {
-      var league = res[0], users = {};
-      res[2].forEach(function (u) { users[u.user_id] = u; });
-      var playoffTeams = (league.settings || {}).playoff_teams || 6;
-
-      var list = res[1].map(function (r) {
-        var u = users[r.owner_id] || {}, s = r.settings || {};
-        var w = s.wins || 0, l = s.losses || 0, t = s.ties || 0, g = w + l + t;
-        return {
-          roster: r.roster_id, ownerId: r.owner_id,
-          team: ((u.metadata && u.metadata.team_name) || u.display_name || "Team " + r.roster_id).trim(),
-          owner: u.display_name || "No owner",
-          w: w, l: l, t: t, games: g,
-          pct: g ? (w + t / 2) / g : 0, pf: (s.fpts || 0) + (s.fpts_decimal || 0) / 100
-        };
-      });
-
-      // Standing, by record then points scored
-      list.slice().sort(function (a, b) { return (b.pct - a.pct) || (b.pf - a.pf); })
-        .forEach(function (x, i) { x.standing = i + 1; });
-      var played = list.some(function (x) { return x.games; });
-
-      var ul = document.getElementById("teams");
-      list.sort(function (a, b) { return a.owner.toLowerCase().localeCompare(b.owner.toLowerCase()); }).forEach(function (x) {
-        var li = el("li", "team");
-
-        var name = el("h2");
-        var a = el("a", "", x.team); a.href = "team.html?roster=" + x.roster;
-        name.appendChild(a);
-        name.appendChild(el("span", "owner", "(" + x.owner + ")"));
-        li.appendChild(name);
-
-        var stand = el("div", "stand" + (played && x.standing <= playoffTeams ? " in" : ""));
-        stand.appendChild(el("strong", "", x.w + "-" + x.l + (x.t ? "-" + x.t : "")));
-        stand.appendChild(el("span", "", played ? ordinal(x.standing) + " in the standings" : "No games yet"));
-        li.appendChild(stand);
-
-        var links = el("div", "links");
-        var tp = el("a", "", "Team page"); tp.href = "team.html?roster=" + x.roster;
-        links.appendChild(tp);
-        if (x.ownerId) {
-          var lg = el("a", "", "Legacy"); lg.href = "team-legacy.html?owner=" + encodeURIComponent(x.ownerId);
-          links.appendChild(lg);
-        }
-        li.appendChild(links);
-        ul.appendChild(li);
-      });
-
-      document.getElementById("status").hidden = true;
-      ul.hidden = false;
-      document.getElementById("key").hidden = !played;
-    }).catch(function (err) {
-      document.getElementById("status").textContent = "Teams didn't load from Sleeper. Refresh in a minute. (" + err.message + ")";
-    });
   </script>
+  <script src="team.js"></script>
 </body>
 </html>
