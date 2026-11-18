@@ -7,11 +7,13 @@
   <link rel="stylesheet" href="style.css">
   <style>
     th[data-type] { cursor: pointer; user-select: none; white-space: nowrap; }
-    th[data-type]:hover { background: #13315c; }
+    th[data-type]:hover { background: #1c1a18; }
     th[data-dir="asc"]::after { content: " ▲"; font-size: 0.75em; }
     th[data-dir="desc"]::after { content: " ▼"; font-size: 0.75em; }
-    .status { color: #6b7785; font-size: 0.9rem; }
-  </style>
+    .status { color: var(--muted); font-size: 0.9rem; }
+  
+    th[data-type]:hover { background: var(--paper-2); color: var(--ink); }
+</style>
 </head>
 <body>
   <header>
