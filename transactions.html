@@ -6,27 +6,27 @@
   <title>Transactions | Pac 12 Dynasty</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    :root { --red: #c8102e; --ink: #111827; --muted: #6b7280; --line: #e5e7eb; }
+    :root { --red: #E65BC4; --ink: #050505; --muted: #5f574d; --line: #d4cbbd; --gold: #E65BC4; --paper: #ECE6DC; --paper-2: #E3DBCE; --display: "Big Shoulders Display", "Arial Narrow", sans-serif; }
     main.tx { max-width: 1000px; }
-    .bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; background: var(--ink); color: #fff; padding: 0.6rem 1rem; border-radius: 8px 8px 0 0; border-bottom: 4px solid var(--red); }
-    .bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase; }
+    .bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; background: var(--ink); color: var(--paper); padding: 0.6rem 1rem; border-radius: 0; border-bottom: 4px solid var(--red); }
+    .bar h2 { margin: 0; font-size: 1.05rem; font-weight: 900; }
     .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .filters select { font: inherit; font-size: 0.9rem; padding: 0.3rem 0.5rem; border-radius: 6px; border: none; }
     .types { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1rem; }
-    .types button { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: 999px; border: 1px solid #c5ccd6; background: #fff; cursor: pointer; }
-    .types button.active { background: var(--red); border-color: var(--red); color: #fff; }
-    .feed { background: #fff; padding: 1rem 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    .types button { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 0.35rem 0.8rem; border-radius: 999px; border: 1px solid #b9ae9c; background: var(--paper); cursor: pointer; }
+    .types button.active { background: var(--red); border-color: var(--ink); color: var(--ink); }
+    .feed { background: var(--paper); padding: 1rem 1.25rem; border-radius: 0; box-shadow: none; }
     .muted { color: var(--muted); font-size: 0.9rem; }
 
     .trade, .move { border: 1px solid var(--line); border-radius: 8px; padding: 0.8rem 1rem; margin-bottom: 0.75rem; }
     .trade { border-left: 5px solid var(--red); }
-    .move { border-left: 5px solid #13315c; }
+    .move { border-left: 5px solid #1c1a18; }
     .move.waiver { border-left-color: #b54708; }
-    .move.commissioner { border-left-color: #6b7280; }
-    .head { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); margin-bottom: 0.5rem; }
-    .move .head { color: #13315c; }
+    .move.commissioner { border-left-color: var(--muted); }
+    .head { font-size: 0.78rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; }
+    .move .head { color: #1c1a18; }
     .move.waiver .head { color: #b54708; }
-    .move.commissioner .head { color: #6b7280; }
+    .move.commissioner .head { color: var(--muted); }
     .sides { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
     .side h3 { margin: 0 0 0.4rem; font-size: 1rem; color: var(--ink); }
     .side h3 span { color: var(--muted); font-weight: 600; font-size: 0.85rem; }
@@ -36,9 +36,14 @@
     .move p { margin: 0.2rem 0; }
     .add { color: #0f6e56; font-weight: 800; }
     .drop { color: #b42318; font-weight: 800; }
-    .highlight { box-shadow: 0 0 0 3px #eebf3a; }
-    .more { display: block; margin: 0.5rem auto 0; font: inherit; font-weight: 800; padding: 0.5rem 1.2rem; border-radius: 6px; border: none; background: var(--ink); color: #fff; cursor: pointer; }
-  </style>
+    .highlight { box-shadow: 0 0 0 3px var(--red); }
+    .more { display: block; margin: 0.5rem auto 0; font: inherit; font-weight: 800; padding: 0.5rem 1.2rem; border-radius: 6px; border: none; background: var(--ink); color: var(--paper); cursor: pointer; }
+  
+    /* Section bars: black with a pink line, titles in the display font */
+    .bar h2, .news-bar h2, .section-bar h2 { font-family: var(--display); font-size: 1.45rem; font-weight: 800; color: var(--paper); }
+    .panel, .section-body, .feed, .news-layout { border: 1px solid var(--line); border-top: 0; }
+    .sidebar h2 { font-family: var(--display); font-size: 1.3rem; font-weight: 800; }
+</style>
 </head>
 <body>
   <header>
