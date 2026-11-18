@@ -2,6 +2,10 @@
 // Loads Supabase, shows "Log in" or the owner's name and "Log out" in the nav,
 // and only shows parts marked data-members-only to approved league members.
 (function () {
+  // If a page loads this file twice, only run it once (otherwise the login area shows up twice)
+  if (window.__pac12AuthLoaded) return;
+  window.__pac12AuthLoaded = true;
+
   var SUPABASE_URL = "https://pbshfpmkmdxyewzmgluv.supabase.co";
   var SUPABASE_KEY = "sb_publishable_rpVEqpRnWux9GGx2kKfkNA_4A1xPygw";
   var LIB = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js";
@@ -120,24 +124,28 @@
     window.dispatchEvent(new CustomEvent("pac12-profile", { detail: { profile: profile, member: member } }));
   }
 
+  // Header tabs on every page, added right away so they don't wait for logins to load
+  (function addTabs() {
+    var nav = document.querySelector("nav");
+    if (!nav) return;
+    [["news.html", "News"], ["transactions.html", "Transactions"], ["analyzer.html", "Analyzer"], ["legacy.html", "Legacy"]].forEach(function (link) {
+      if (nav.querySelector('a[href="' + link[0] + '"]')) return;
+      var a = document.createElement("a");
+      a.href = link[0];
+      a.textContent = link[1];
+      nav.appendChild(a);
+    });
+  })();
+
   loadLib(function () {
     var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
     window.pac12.sb = sb;
     window.dispatchEvent(new Event("pac12-auth-ready"));
 
     var nav = document.querySelector("nav");
-    var slot = document.createElement("span");
+    var slot = (nav && nav.querySelector(".nav-auth")) || document.createElement("span");
     slot.className = "nav-auth";
-    if (nav) {
-      nav.appendChild(slot);
-      [["news.html", "News"], ["transactions.html", "Transactions"], ["analyzer.html", "Analyzer"], ["legacy.html", "Legacy"]].forEach(function (link) {
-        if (nav.querySelector('a[href="' + link[0] + '"]')) return;
-        var a = document.createElement("a");
-        a.href = link[0];
-        a.textContent = link[1];
-        nav.insertBefore(a, slot);
-      });
-    }
+    if (nav && !slot.parentNode) nav.appendChild(slot);
 
     var renderCount = 0;
 
@@ -166,7 +174,9 @@
         .then(function (res) {
           if (thisRender !== renderCount) return; // a newer login state already redrew the nav
           var p = res.data || {};
-          who.textContent = (p.display_name || session.user.email) + (p.is_admin ? " (admin)" : "");
+          var full = p.display_name || session.user.email.split("@")[0];
+          who.textContent = full.split(" ")[0];
+          who.title = (p.display_name || session.user.email) + (p.is_admin ? " (admin)" : "");
           if (p.is_admin) {
             var admin = document.createElement("a");
             admin.href = "admin.html";
