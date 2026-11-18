@@ -7,42 +7,38 @@
   <link rel="stylesheet" href="style.css">
   <style>
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #f4f5f7; color: #1f2933; line-height: 1.5; }
-    header { background: #0b2545; color: #fff; text-align: center; padding: 2.5rem 1rem; }
-    header h1 { margin: 0; font-size: 2.2rem; }
-    header p { margin: 0.5rem 0 0; color: #c9d6e3; }
-    nav { background: #13315c; display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem; padding: 0.5rem; }
-    nav a { color: #fff; text-decoration: none; font-weight: 600; padding: 0.5rem 1rem; border-radius: 6px; }
-    nav a:hover { background: #eebf3a; color: #0b2545; }
-    main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
-    footer { text-align: center; padding: 1.5rem; color: #6b7785; font-size: 0.9rem; }
+    html { background: #ECE6DC; }
+    body { margin: 0; font-family: "Barlow", system-ui, sans-serif; font-size: 17px; background: #ECE6DC; color: #050505; line-height: 1.5; }
+    h1, h2, h3 { font-family: "Big Shoulders Display", "Arial Narrow", sans-serif; font-weight: 800; line-height: 1.1; }
+    main { max-width: 1160px; margin: 2rem auto; padding: 0 1rem; }
+    footer { max-width: 1160px; margin: 1.5rem auto 0; padding: 1.5rem 1rem 2.5rem; border-top: 1px solid #d4cbbd; color: #5f574d; font-size: 0.9rem; }
 
-    .legend { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; font-size: 0.9rem; color: #52606d; }
+    .legend { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; font-size: 0.9rem; color: #5f574d; }
     .legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
     .swatch { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
 
     .start { max-width: 320px; margin: 0 auto; }
     .tracks { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 1.25rem; }
-    .track { background: #fff; border-radius: 12px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
-    .track h2 { margin: 0 0 0.25rem; font-size: 1rem; color: #0b2545; }
-    .track .sub { margin: 0 0 1rem; font-size: 0.85rem; color: #6b7785; }
+    .track { background: none; border-top: 2px solid #050505; padding: 0.9rem 0 0; }
+    .track h2 { margin: 0 0 0.25rem; font-size: 1.5rem; color: #050505; }
+    .track .sub { margin: 0 0 1rem; font-size: 0.85rem; color: #5f574d; }
 
     .node { border-radius: 10px; padding: 0.75rem 0.9rem; border: 1px solid; }
     .node .top { display: flex; align-items: center; gap: 0.5rem; }
     .num { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-size: 0.8rem; font-weight: 700; }
-    .node h3 { margin: 0; font-size: 0.98rem; }
+    .node h3 { margin: 0; font-family: "Barlow", system-ui, sans-serif; font-weight: 700; font-size: 1rem; }
     .node p { margin: 0.35rem 0 0; font-size: 0.85rem; }
     .needs { margin-top: 0.5rem; display: flex; flex-wrap: wrap; gap: 0.3rem; }
-    .chip { font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 999px; background: rgba(11,37,69,0.08); color: #13315c; }
+    .chip { font-size: 0.75rem; padding: 0.1rem 0.5rem; border-radius: 999px; background: rgba(5,5,5,0.07); color: #050505; }
 
-    .done { background: #eef0f3; border-color: #c5ccd6; color: #323f4b; }
-    .done .num { background: #c5ccd6; color: #1f2933; }
-    .planned { background: #e7f4f0; border-color: #6cc4a8; color: #0b4f3c; }
-    .planned .num { background: #0f6e56; color: #fff; }
-    .blank { background: #fff; border: 1.5px dashed #b0b8c4; color: #7b8794; }
-    .blank .num { background: #e4e7eb; color: #7b8794; }
+    .done { background: #E3DBCE; border-color: #d4cbbd; color: #3d3731; }
+    .done .num { background: #050505; color: #ECE6DC; }
+    .planned { background: rgba(230,91,196,0.1); border-color: #E65BC4; color: #050505; }
+    .planned .num { background: #E65BC4; color: #050505; }
+    .blank { background: none; border: 1.5px dashed #b9ae9c; color: #5f574d; }
+    .blank .num { background: #E3DBCE; color: #5f574d; }
 
-    .arrow { text-align: center; color: #9aa5b1; font-size: 1.1rem; line-height: 1; margin: 0.35rem 0; }
+    .arrow { text-align: center; color: #b9ae9c; font-size: 1.1rem; line-height: 1; margin: 0.35rem 0; }
   </style>
 </head>
 <body>
@@ -57,9 +53,9 @@
   </nav>
   <main>
     <div class="legend">
-      <span><i class="swatch" style="background:#c5ccd6"></i>Done</span>
-      <span><i class="swatch" style="background:#0f6e56"></i>Planned</span>
-      <span><i class="swatch" style="border:1.5px dashed #b0b8c4"></i>Open slot</span>
+      <span><i class="swatch" style="background:#050505"></i>Done</span>
+      <span><i class="swatch" style="background:#E65BC4"></i>Planned</span>
+      <span><i class="swatch" style="border:1.5px dashed #b9ae9c"></i>Open slot</span>
       <span>Numbers show priority order</span>
     </div>
 
@@ -73,36 +69,39 @@
     // ===== Edit the roadmap here =====
     // status: "done", "planned", or "blank"
     // needs: numbers of items that have to be finished first
-    var START = { title: "Site live today", note: "Standings, teams, and players from Sleeper", status: "done" };
+    var START = { title: "Site Live Today", note: "Standings, teams, and players from Sleeper", status: "done" };
 
     var TRACKS = [
       { name: "Accounts", sub: "Logins and owner features", items: [
-        { num: 1, title: "Admin and user accounts", note: "Logins, powered by Supabase", status: "done", needs: [] },
-        { num: 2, title: "Trade rumors and league news", note: "Rumors and news on the News page", status: "done", needs: [1] },
-        { num: 6, title: "Notes on team pages", note: "Owners edit their own team", status: "planned", needs: [1] },
-        { num: 3, title: "AI trade value agent", note: "Learns from past trades and owners", status: "planned", needs: [1, 4] },
-        { num: 16, title: "Team value in trade grades", note: "Credit trades that make a team better overall", status: "planned", needs: [3] }
+        { num: 1, title: "Admin and User Accounts", note: "Logins, powered by Supabase", status: "done", needs: [] },
+        { num: 2, title: "Trade Rumors and League News", note: "Rumors and news on the News page", status: "done", needs: [1] },
+        { num: 6, title: "Notes on Team Pages", note: "Owners edit their own team", status: "planned", needs: [1] },
+        { num: 3, title: "Trade Analyzer", note: "Grades trades, finds deals, reads the market", status: "done", needs: [1, 4] },
+        { num: 16, title: "Team Value in Trade Grades", note: "Credit trades that make a team better overall", status: "done", needs: [3] },
+        { num: 18, title: "Hindsight Trade Grades", note: "Past trades judged with today's values", status: "done", needs: [3] }
       ]},
-      { name: "Sleeper data", sub: "Pulled straight from the league", items: [
-        { num: 4, title: "Draft picks on team pages", note: "Owned and traded picks", status: "done", needs: [] },
-        { num: 7, title: "Legacy stats page", note: "Win %, rivals, titles, top picks", status: "done", needs: [] },
-        { num: 9, title: "Player fantasy rank", note: "Dynasty ranks on team pages", status: "done", needs: [] },
-        { num: 15, title: "Trade history", note: "Every league trade with was and now ranks", status: "done", needs: [] }
+      { name: "Sleeper Data", sub: "Pulled straight from the league", items: [
+        { num: 4, title: "Draft Picks on Team Pages", note: "Owned and traded picks", status: "done", needs: [] },
+        { num: 7, title: "Legacy Stats Page", note: "Win %, rivals, titles, top picks", status: "done", needs: [] },
+        { num: 9, title: "Player Fantasy Rank", note: "Dynasty ranks on team pages", status: "done", needs: [] },
+        { num: 15, title: "Trade History", note: "Every league trade with was and now ranks", status: "done", needs: [] },
+        { num: 19, title: "Transactions Page", note: "Trades, waivers, and free agent moves", status: "done", needs: [15] }
       ]},
       { name: "Design", sub: "Look and feel", items: [
-        { num: 5, title: "Site redesign", note: "Cleaner, more visual layout", status: "planned", needs: [] },
-        { num: 8, title: "Landing page redesign", note: "Home page as the league hub", status: "planned", needs: [5] },
-        { num: 14, title: "Legacy page redesign", note: "Fresh look for league history", status: "planned", needs: [7] }
+        { num: 5, title: "Site Redesign", note: "Cleaner, more visual layout", status: "planned", needs: [] },
+        { num: 8, title: "Landing Page Redesign", note: "Home page as the league hub", status: "planned", needs: [5] },
+        { num: 14, title: "Legacy Page Redesign", note: "Fresh look for league history", status: "planned", needs: [7] }
       ]},
-      { name: "Player details", sub: "Deeper info on every player", items: [
-        { num: 10, title: "Game logs", note: "Week by week stats from Sleeper", status: "done", needs: [] },
+      { name: "Player Details", sub: "Deeper info on every player", items: [
+        { num: 10, title: "Game Logs", note: "Week by week stats from Sleeper", status: "done", needs: [] },
         { num: 11, title: "Injuries", note: "Badges colored by severity", status: "done", needs: [] },
-        { num: 12, title: "Player history stats", note: "Past seasons at a glance", status: "done", needs: [] }
+        { num: 12, title: "Player History Stats", note: "Past seasons at a glance", status: "done", needs: [] },
+        { num: 17, title: "Blended Player Values", note: "DynastyProcess, FantasyCalc, and league trades", status: "done", needs: [9] }
       ]},
       { name: "Later", sub: "Open slots for future ideas", items: [
-        { num: 17, title: "Open slot", note: "To be added", status: "blank", needs: [] },
-        { num: 18, title: "Open slot", note: "To be added", status: "blank", needs: [] },
-        { num: 19, title: "Open slot", note: "To be added", status: "blank", needs: [] }
+        { num: 20, title: "Open Slot", note: "To be added", status: "blank", needs: [] },
+        { num: 21, title: "Open Slot", note: "To be added", status: "blank", needs: [] },
+        { num: 22, title: "Open Slot", note: "To be added", status: "blank", needs: [] }
       ]}
     ];
     // ===== End of roadmap =====
