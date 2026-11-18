@@ -124,17 +124,125 @@
     window.dispatchEvent(new CustomEvent("pac12-profile", { detail: { profile: profile, member: member } }));
   }
 
-  // Header tabs on every page, added right away so they don't wait for logins to load
-  (function addTabs() {
-    var nav = document.querySelector("nav");
-    if (!nav) return;
-    [["news.html", "News"], ["transactions.html", "Transactions"], ["analyzer.html", "Analyzer"], ["legacy.html", "Legacy"]].forEach(function (link) {
-      if (nav.querySelector('a[href="' + link[0] + '"]')) return;
+  // ---- Site header ----
+  // Every page gets the same header from here, so it only has to be changed in one place.
+  // It is built right away so it doesn't wait for logins to load.
+  var HEADER_CSS = [
+    ':root{--p12-black:#050505;--p12-paper:#ECE6DC;--p12-pink:#E65BC4;}',
+    'nav.site-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:.2rem;margin:0;background:var(--p12-black);padding:.4rem max(1rem,calc((100% - 1160px)/2));border-bottom:3px solid var(--p12-pink);font-family:"Barlow",system-ui,sans-serif;font-size:17px;line-height:1.55;}',
+    'nav.site-nav a{color:var(--p12-paper);text-decoration:none;font-weight:600;padding:.5rem .75rem;border-radius:6px;}',
+    'nav.site-nav a:hover{background:var(--p12-pink);color:var(--p12-black);}',
+    'nav.site-nav a[aria-current="page"]{box-shadow:inset 0 -3px 0 var(--p12-pink);border-radius:0;}',
+    'nav.site-nav a.brand{font-family:"Big Shoulders Display","Arial Narrow",sans-serif;font-weight:900;font-size:1.35rem;color:var(--p12-pink);margin-right:auto;padding-left:0;box-shadow:none;}',
+    'nav.site-nav a.brand:hover{background:none;color:var(--p12-paper);}',
+    'nav.site-nav .home-link,nav.site-nav .menu-toggle{display:none;}',
+    'nav.site-nav .nav-auth{display:inline-flex;align-items:center;gap:.15rem;margin-left:.6rem;padding-left:.6rem;border-left:1px solid rgba(236,230,220,.25);color:var(--p12-paper);}',
+    'nav.site-nav .nav-auth a{padding:.5rem .6rem;}',
+    'nav.site-nav .nav-auth button{background:none;border:1px solid rgba(236,230,220,.4);color:var(--p12-paper);font:inherit;font-weight:600;padding:.3rem .7rem;border-radius:6px;cursor:pointer;margin-left:.3rem;}',
+    'nav.site-nav .nav-auth button:hover{background:var(--p12-pink);color:var(--p12-black);border-color:var(--p12-pink);}',
+    'nav.site-nav :focus-visible{outline:3px solid var(--p12-pink);outline-offset:2px;}',
+    '@media (max-width:700px){',
+    'nav.site-nav{padding:.35rem 1rem;gap:0;}',
+    'nav.site-nav a.brand{display:none;}',
+    'nav.site-nav .menu-toggle{display:flex;width:100%;align-items:center;justify-content:space-between;background:none;border:0;color:var(--p12-pink);font-family:"Big Shoulders Display","Arial Narrow",sans-serif;font-weight:900;font-size:1.45rem;padding:.35rem 0;cursor:pointer;}',
+    'nav.site-nav .menu-toggle span{font-size:1rem;transition:transform .2s;}',
+    'nav.site-nav.open .menu-toggle span{transform:rotate(180deg);}',
+    'nav.site-nav>a,nav.site-nav .nav-auth{display:none;}',
+    'nav.site-nav.open>a:not(.brand),nav.site-nav.open .nav-auth{display:block;width:100%;padding:.7rem .1rem;border-top:1px solid rgba(236,230,220,.14);border-left:0;border-radius:0;margin:0;box-shadow:none;}',
+    'nav.site-nav.open>a:not(.brand):hover{background:none;color:var(--p12-pink);}',
+    'nav.site-nav.open>a[aria-current="page"]{color:var(--p12-pink);}',
+    'nav.site-nav.open .nav-auth{display:flex;}',
+    '}',
+    /* Older pages still have a title band in a <header> tag: match the black band on the new pages */
+    'body>header{background:var(--p12-black);color:var(--p12-paper);text-align:left;padding:2rem max(1rem,calc((100% - 1160px)/2)) 2.2rem;}',
+    'body>header h1{font-family:"Big Shoulders Display","Arial Narrow",sans-serif;font-weight:900;font-size:clamp(2.4rem,7vw,4.4rem);line-height:.95;margin:0;color:var(--p12-paper);}',
+    'body>header p{color:#cfc7bb;margin:.6rem 0 0;font-family:"Barlow",system-ui,sans-serif;font-weight:600;}',
+    'body>header a{color:var(--p12-paper);}'
+  ].join("\n");
+
+  var TABS = [
+    ["teams.html", "Teams"], ["standings.html", "Standings"], ["news.html", "News"],
+    ["transactions.html", "Transactions"], ["analyzer.html", "Analyzer"], ["legacy.html", "Legacy"]
+  ];
+
+  // Which tab to underline for the page you're on
+  function currentTab() {
+    var file = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+    if (file === "trades.html") return "transactions.html";
+    if (file === "team-legacy.html") return "legacy.html";
+    if (file === "team.html" || file === "teams.html") return "teams.html";
+    for (var i = 0; i < TABS.length; i++) if (TABS[i][0] === file) return file;
+    // The old one-file-per-team pages (olaves-medical-team.html and so on)
+    if (document.getElementById("team-name")) return "teams.html";
+    return "";
+  }
+
+  (function buildHeader() {
+    if (!document.getElementById("pac12-fonts")) {
+      var f = document.createElement("link");
+      f.id = "pac12-fonts";
+      f.rel = "stylesheet";
+      f.href = "https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Barlow:wght@400;500;600;700&display=swap";
+      document.head.appendChild(f);
+    }
+    if (!document.getElementById("pac12-header-css")) {
+      var st = document.createElement("style");
+      st.id = "pac12-header-css";
+      st.textContent = HEADER_CSS;
+      document.head.appendChild(st);
+    }
+
+    var navs = document.querySelectorAll("nav");
+    if (!navs.length) return;
+    // If old code got left at the bottom of a file, there will be a second header. Remove it.
+    for (var i = 1; i < navs.length; i++) {
+      console.warn("Pac 12: this page has more than one header. The file probably still has old code pasted under the new code.");
+      navs[i].remove();
+    }
+
+    var nav = navs[0];
+    // Older pages put the title above the nav. The header always goes at the very top.
+    if (nav.parentNode === document.body && document.body.firstElementChild !== nav) {
+      document.body.insertBefore(nav, document.body.firstChild);
+    }
+    nav.id = "site-nav";
+    nav.className = "site-nav";
+    nav.innerHTML = "";
+    var cur = currentTab();
+
+    var brand = document.createElement("a");
+    brand.href = "index.html";
+    brand.className = "brand";
+    brand.textContent = "Pac 12 Dynasty";
+    nav.appendChild(brand);
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "menu-toggle";
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-controls", "site-nav");
+    btn.innerHTML = 'Pac 12 Dynasty <span aria-hidden="true">&#9662;</span>';
+    nav.appendChild(btn);
+
+    var home = document.createElement("a");
+    home.href = "index.html";
+    home.className = "home-link";
+    home.textContent = "Home";
+    nav.appendChild(home);
+
+    TABS.forEach(function (t) {
       var a = document.createElement("a");
-      a.href = link[0];
-      a.textContent = link[1];
+      a.href = t[0];
+      a.textContent = t[1];
+      if (t[0] === cur) a.setAttribute("aria-current", "page");
       nav.appendChild(a);
     });
+
+    // Phone menu: tap the pink name to open or close
+    function set(open) { nav.classList.toggle("open", open); btn.setAttribute("aria-expanded", open ? "true" : "false"); }
+    btn.addEventListener("click", function () { set(!nav.classList.contains("open")); });
+    nav.addEventListener("click", function (e) { if (e.target.tagName === "A") set(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
   })();
 
   loadLib(function () {
