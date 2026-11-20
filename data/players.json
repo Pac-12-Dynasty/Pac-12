@@ -163,7 +163,7 @@
   "name": "Joe Milton",
   "pos": "QB",
   "pos_rank": "QB41",
-  "rank": 258,
+  "rank": 257,
   "team": "PHI",
   "value": 383
  },
@@ -527,7 +527,7 @@
   "name": "Keon Coleman",
   "pos": "WR",
   "pos_rank": "WR77",
-  "rank": 183,
+  "rank": 184,
   "team": "BUF",
   "value": 1010
  },
@@ -1212,8 +1212,8 @@
   "injury_part": "",
   "name": "Chimere Dike",
   "pos": "WR",
-  "pos_rank": "WR87",
-  "rank": 211,
+  "pos_rank": "WR88",
+  "rank": 212,
   "team": "TEN",
   "value": 745
  },
@@ -1367,7 +1367,7 @@
   "name": "Josh Cuevas",
   "pos": "TE",
   "pos_rank": "TE51",
-  "rank": 327,
+  "rank": 326,
   "team": "BAL",
   "value": 169
  },
@@ -1521,7 +1521,7 @@
   "name": "Nicholas Singleton",
   "pos": "RB",
   "pos_rank": "RB53",
-  "rank": 184,
+  "rank": 183,
   "team": "TEN",
   "value": 1010
  },
@@ -1702,8 +1702,8 @@
   "injury_part": "Hamstring",
   "name": "Zachariah Branch",
   "pos": "WR",
-  "pos_rank": "WR88",
-  "rank": 212,
+  "pos_rank": "WR87",
+  "rank": 211,
   "team": "ATL",
   "value": 745
  },
@@ -1745,7 +1745,7 @@
   "name": "Deion Burks",
   "pos": "WR",
   "pos_rank": "WR127",
-  "rank": 312,
+  "rank": 310,
   "team": "IND",
   "value": 202
  },
@@ -1885,7 +1885,7 @@
   "name": "Jam Miller",
   "pos": "RB",
   "pos_rank": "RB127",
-  "rank": 448,
+  "rank": 450,
   "team": "ATL",
   "value": 6
  },
@@ -1927,7 +1927,7 @@
   "name": "Zavion Thomas",
   "pos": "WR",
   "pos_rank": "WR125",
-  "rank": 307,
+  "rank": 306,
   "team": "CHI",
   "value": 206
  },
@@ -1969,7 +1969,7 @@
   "name": "Roman Hemby",
   "pos": "RB",
   "pos_rank": "RB115",
-  "rank": 407,
+  "rank": 405,
   "team": "LV",
   "value": 33
  },
@@ -2025,7 +2025,7 @@
   "name": "Eli Heidenreich",
   "pos": "RB",
   "pos_rank": "RB96",
-  "rank": 345,
+  "rank": 344,
   "team": "PIT",
   "value": 135
  },
@@ -2249,7 +2249,7 @@
   "name": "Demarcus Robinson",
   "pos": "WR",
   "pos_rank": "WR147",
-  "rank": 375,
+  "rank": 374,
   "team": "SF",
   "value": 76
  },
@@ -2361,7 +2361,7 @@
   "name": "Chris Godwin Jr.",
   "pos": "WR",
   "pos_rank": "WR68",
-  "rank": 158,
+  "rank": 157,
   "team": "TB",
   "value": 1183
  },
@@ -2445,7 +2445,7 @@
   "name": "Aaron Jones Sr.",
   "pos": "RB",
   "pos_rank": "RB50",
-  "rank": 167,
+  "rank": 165,
   "team": "MIN",
   "value": 1160
  },
@@ -2543,7 +2543,7 @@
   "name": "Sam Darnold",
   "pos": "QB",
   "pos_rank": "QB23",
-  "rank": 165,
+  "rank": 167,
   "team": "SEA",
   "value": 1160
  },
@@ -3425,7 +3425,7 @@
   "name": "Tyler Allgeier",
   "pos": "RB",
   "pos_rank": "RB47",
-  "rank": 157,
+  "rank": 158,
   "team": "ARI",
   "value": 1183
  },
@@ -3648,8 +3648,8 @@
   "injury_part": "Ankle",
   "name": "Tyquan Thornton",
   "pos": "WR",
-  "pos_rank": "WR119",
-  "rank": 282,
+  "pos_rank": "WR118",
+  "rank": 281,
   "team": "KC",
   "value": 278
  },
