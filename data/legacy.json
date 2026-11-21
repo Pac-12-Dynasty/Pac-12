@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T16:41+00:00",
+ "generated": "2026-11-21T17:00+00:00",
  "seasons": [
   2023,
   2024,
@@ -3849,7 +3849,7 @@
      "owner": "853109226401288192",
      "player": "Jayden Daniels",
      "pos": "QB",
-     "rank": 50,
+     "rank": 51,
      "pos_rank": "QB7"
     },
     {
@@ -3881,8 +3881,8 @@
      "owner": "861421486488031232",
      "player": "Xavier Worthy",
      "pos": "WR",
-     "rank": 124,
-     "pos_rank": "WR51"
+     "rank": 125,
+     "pos_rank": "WR52"
     },
     {
      "pick": 10,

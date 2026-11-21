@@ -65,7 +65,7 @@
   "name": "Rashee Rice",
   "pos": "WR",
   "pos_rank": "WR24",
-  "rank": 51,
+  "rank": 50,
   "team": "KC",
   "value": 3007
  },
@@ -247,7 +247,7 @@
   "name": "Jayden Daniels",
   "pos": "QB",
   "pos_rank": "QB7",
-  "rank": 50,
+  "rank": 51,
   "team": "WAS",
   "value": 3007
  },
@@ -414,8 +414,8 @@
   "injury_part": "",
   "name": "Xavier Worthy",
   "pos": "WR",
-  "pos_rank": "WR51",
-  "rank": 124,
+  "pos_rank": "WR52",
+  "rank": 125,
   "team": "KC",
   "value": 1459
  },
@@ -709,7 +709,7 @@
   "name": "Woody Marks",
   "pos": "RB",
   "pos_rank": "RB44",
-  "rank": 143,
+  "rank": 144,
   "team": "HOU",
   "value": 1308
  },
@@ -736,8 +736,8 @@
   "injury_part": "Knee - ACL",
   "name": "Jayden Higgins",
   "pos": "WR",
-  "pos_rank": "WR52",
-  "rank": 125,
+  "pos_rank": "WR51",
+  "rank": 124,
   "team": "HOU",
   "value": 1459
  },
@@ -1241,7 +1241,7 @@
   "name": "KeAndre Lambert-Smith",
   "pos": "WR",
   "pos_rank": "WR160",
-  "rank": 401,
+  "rank": 402,
   "team": "LAC",
   "value": 39
  },
@@ -1339,7 +1339,7 @@
   "name": "CJ Daniels",
   "pos": "WR",
   "pos_rank": "WR108",
-  "rank": 267,
+  "rank": 266,
   "team": "LAR",
   "value": 341
  },
@@ -1381,7 +1381,7 @@
   "name": "Germie Bernard",
   "pos": "WR",
   "pos_rank": "WR48",
-  "rank": 114,
+  "rank": 115,
   "team": "PIT",
   "value": 1582
  },
@@ -1745,7 +1745,7 @@
   "name": "Deion Burks",
   "pos": "WR",
   "pos_rank": "WR127",
-  "rank": 307,
+  "rank": 306,
   "team": "IND",
   "value": 200
  },
@@ -1856,8 +1856,8 @@
   "injury_part": "Hamstring",
   "name": "Brenen Thompson",
   "pos": "WR",
-  "pos_rank": "WR144",
-  "rank": 362,
+  "pos_rank": "WR143",
+  "rank": 361,
   "team": "LAC",
   "value": 102
  },
@@ -1884,8 +1884,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB143",
-  "rank": 514,
+  "pos_rank": "RB121",
+  "rank": 441,
   "team": "ATL",
   "value": 1
  },
@@ -2024,8 +2024,8 @@
   "injury_part": "",
   "name": "Eli Heidenreich",
   "pos": "RB",
-  "pos_rank": "RB94",
-  "rank": 338,
+  "pos_rank": "RB93",
+  "rank": 337,
   "team": "PIT",
   "value": 139
  },
@@ -2248,8 +2248,8 @@
   "injury_part": "",
   "name": "Demarcus Robinson",
   "pos": "WR",
-  "pos_rank": "WR146",
-  "rank": 375,
+  "pos_rank": "WR147",
+  "rank": 376,
   "team": "SF",
   "value": 81
  },
@@ -2374,8 +2374,8 @@
   "injury_part": "",
   "name": "Cooper Kupp",
   "pos": "WR",
-  "pos_rank": "WR109",
-  "rank": 268,
+  "pos_rank": "WR110",
+  "rank": 269,
   "team": "SEA",
   "value": 339
  },
@@ -2599,7 +2599,7 @@
   "name": "Dalton Schultz",
   "pos": "TE",
   "pos_rank": "TE30",
-  "rank": 200,
+  "rank": 201,
   "team": "HOU",
   "value": 847
  },
@@ -2837,7 +2837,7 @@
   "name": "Devin Singletary",
   "pos": "RB",
   "pos_rank": "RB81",
-  "rank": 299,
+  "rank": 300,
   "team": "NYG",
   "value": 223
  },
@@ -3803,7 +3803,7 @@
   "name": "Bryce Young",
   "pos": "QB",
   "pos_rank": "QB20",
-  "rank": 115,
+  "rank": 114,
   "team": "CAR",
   "value": 1582
  },
@@ -3943,7 +3943,7 @@
   "name": "DeMario Douglas",
   "pos": "WR",
   "pos_rank": "WR82",
-  "rank": 201,
+  "rank": 200,
   "team": "NE",
   "value": 847
  },
@@ -4055,7 +4055,7 @@
   "name": "Quentin Johnston",
   "pos": "WR",
   "pos_rank": "WR60",
-  "rank": 144,
+  "rank": 143,
   "team": "LAC",
   "value": 1308
  },
