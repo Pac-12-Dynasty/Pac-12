@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T05:30+00:00",
+ "generated": "2026-11-21T16:41+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
@@ -1518,16 +1518,16 @@
        {
         "kind": "player",
         "label": "Stefon Diggs (WR)",
-        "value": 1361
+        "value": 1348
        },
        {
         "kind": "player",
         "label": "Rhamondre Stevenson (RB)",
-        "value": 1580
+        "value": 1586
        }
       ],
-      "got_now": 2941,
-      "gave_now": 2490,
+      "got_now": 2934,
+      "gave_now": 2557,
       "grade": "C"
      },
      "861421486488031232": {
@@ -1535,12 +1535,12 @@
        {
         "kind": "player",
         "label": "Tony Pollard (RB)",
-        "value": 1814
+        "value": 1817
        },
        {
         "kind": "player",
         "label": "Kayshon Boutte (WR)",
-        "value": 676
+        "value": 740
        },
        {
         "kind": "pick",
@@ -1550,8 +1550,8 @@
         "value": 0
        }
       ],
-      "got_now": 2490,
-      "gave_now": 2941,
+      "got_now": 2557,
+      "gave_now": 2934,
       "grade": "C"
      }
     }
@@ -1697,19 +1697,19 @@
        {
         "kind": "player",
         "label": "Jaydon Blue (RB)",
-        "value": 172
+        "value": 188
        },
        {
         "kind": "player",
         "label": "Terry McLaurin (WR)",
-        "value": 1451
+        "value": 1430
        },
        {
         "kind": "pick",
         "label": "2027 Round 1",
         "from": "Time to tank",
         "player": null,
-        "value": 2577
+        "value": 2569
        },
        {
         "kind": "pick",
@@ -1719,8 +1719,8 @@
         "value": 0
        }
       ],
-      "got_now": 4200,
-      "gave_now": 3537,
+      "got_now": 4187,
+      "gave_now": 3581,
       "grade": "C"
      },
      "915765963616985088": {
@@ -1728,18 +1728,18 @@
        {
         "kind": "player",
         "label": "Josh Jacobs (RB)",
-        "value": 2132
+        "value": 2163
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
         "from": "Olave\u2019s Medical Team",
         "player": null,
-        "value": 1405
+        "value": 1418
        }
       ],
-      "got_now": 3537,
-      "gave_now": 4200,
+      "got_now": 3581,
+      "gave_now": 4187,
       "grade": "C"
      }
     }
@@ -1868,16 +1868,16 @@
        {
         "kind": "player",
         "label": "Jonnu Smith (TE)",
-        "value": 4
+        "value": 1
        },
        {
         "kind": "player",
         "label": "Nico Collins (WR)",
-        "value": 4236
+        "value": 4128
        }
       ],
-      "got_now": 4240,
-      "gave_now": 4367,
+      "got_now": 4129,
+      "gave_now": 4211,
       "grade": "C"
      },
      "861422415547318272": {
@@ -1885,7 +1885,7 @@
        {
         "kind": "player",
         "label": "Luther Burden III (WR)",
-        "value": 4367
+        "value": 4211
        },
        {
         "kind": "pick",
@@ -1895,8 +1895,8 @@
         "value": 0
        }
       ],
-      "got_now": 4367,
-      "gave_now": 4240,
+      "got_now": 4211,
+      "gave_now": 4129,
       "grade": "C"
      }
     }
@@ -2025,18 +2025,18 @@
        {
         "kind": "player",
         "label": "Deebo Samuel Sr. (WR)",
-        "value": 1242
+        "value": 1277
        },
        {
         "kind": "pick",
         "label": "2027 Round 1",
         "from": "Joe Buck Yourself",
         "player": null,
-        "value": 2036
+        "value": 2059
        }
       ],
-      "got_now": 3278,
-      "gave_now": 9239,
+      "got_now": 3336,
+      "gave_now": 9238,
       "grade": "F"
      },
      "858765508143628288": {
@@ -2044,16 +2044,16 @@
        {
         "kind": "player",
         "label": "Jameson Williams (WR)",
-        "value": 2526
+        "value": 2517
        },
        {
         "kind": "player",
         "label": "Kenneth Walker III (RB)",
-        "value": 6713
+        "value": 6721
        }
       ],
-      "got_now": 9239,
-      "gave_now": 3278,
+      "got_now": 9238,
+      "gave_now": 3336,
       "grade": "A"
      }
     }
@@ -2164,7 +2164,7 @@
        {
         "kind": "player",
         "label": "Ladd McConkey (WR)",
-        "value": 2644
+        "value": 2681
        },
        {
         "kind": "pick",
@@ -2174,8 +2174,8 @@
         "value": 0
        }
       ],
-      "got_now": 2644,
-      "gave_now": 3027,
+      "got_now": 2681,
+      "gave_now": 3007,
       "grade": "C"
      },
      "861422415547318272": {
@@ -2183,11 +2183,11 @@
        {
         "kind": "player",
         "label": "Rashee Rice (WR)",
-        "value": 3027
+        "value": 3007
        }
       ],
-      "got_now": 3027,
-      "gave_now": 2644,
+      "got_now": 3007,
+      "gave_now": 2681,
       "grade": "C"
      }
     }
@@ -2401,37 +2401,37 @@
        {
         "kind": "player",
         "label": "Emeka Egbuka (WR)",
-        "value": 3378
+        "value": 3332
        },
        {
         "kind": "player",
         "label": "James Cook III (RB)",
-        "value": 5747
+        "value": 5729
        },
        {
         "kind": "pick",
         "label": "2027 Round 1",
         "from": "Time to tank",
         "player": null,
-        "value": 2577
+        "value": 2569
        },
        {
         "kind": "pick",
         "label": "2027 Round 2",
         "from": "Time to tank",
         "player": null,
-        "value": 1369
+        "value": 1373
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
         "from": "Time to tank",
         "player": null,
-        "value": 1236
+        "value": 1243
        }
       ],
-      "got_now": 14307,
-      "gave_now": 11232,
+      "got_now": 14246,
+      "gave_now": 11096,
       "grade": "A"
      },
      "853109226401288192": {
@@ -2439,17 +2439,17 @@
        {
         "kind": "player",
         "label": "Jared Goff (QB)",
-        "value": 1809
+        "value": 1854
        },
        {
         "kind": "player",
         "label": "T.J. Hockenson (TE)",
-        "value": 1363
+        "value": 1362
        },
        {
         "kind": "player",
         "label": "Justin Jefferson (WR)",
-        "value": 6371
+        "value": 6187
        },
        {
         "kind": "pick",
@@ -2470,18 +2470,18 @@
         "label": "2027 Round 3",
         "from": "Lamar Jackson Fan Club",
         "player": null,
-        "value": 473
+        "value": 471
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
         "from": "Lamar Jackson Fan Club",
         "player": null,
-        "value": 1216
+        "value": 1222
        }
       ],
-      "got_now": 11232,
-      "gave_now": 14307,
+      "got_now": 11096,
+      "gave_now": 14246,
       "grade": "F"
      }
     }
@@ -2693,7 +2693,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 1088,
+      "gave_now": 1085,
       "grade": "D"
      },
      "853109226401288192": {
@@ -2701,10 +2701,10 @@
        {
         "kind": "player",
         "label": "J.J. McCarthy (QB)",
-        "value": 1088
+        "value": 1085
        }
       ],
-      "got_now": 1088,
+      "got_now": 1085,
       "gave_now": 0,
       "grade": "B"
      }
@@ -2817,7 +2817,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 126,
+      "gave_now": 107,
       "grade": "C"
      },
      "858765508143628288": {
@@ -2825,10 +2825,10 @@
        {
         "kind": "player",
         "label": "Najee Harris (RB)",
-        "value": 126
+        "value": 107
        }
       ],
-      "got_now": 126,
+      "got_now": 107,
       "gave_now": 0,
       "grade": "C"
      }
@@ -2928,10 +2928,10 @@
        {
         "kind": "player",
         "label": "DK Metcalf (WR)",
-        "value": 1913
+        "value": 1911
        }
       ],
-      "got_now": 1913,
+      "got_now": 1911,
       "gave_now": 0,
       "grade": "A"
      },
@@ -2953,7 +2953,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 1913,
+      "gave_now": 1911,
       "grade": "F"
      }
     }
@@ -3059,7 +3059,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 1163,
+      "gave_now": 1162,
       "grade": "D"
      },
      "861422415547318272": {
@@ -3067,7 +3067,7 @@
        {
         "kind": "player",
         "label": "Sam Darnold (QB)",
-        "value": 1163
+        "value": 1162
        },
        {
         "kind": "pick",
@@ -3077,7 +3077,7 @@
         "value": 0
        }
       ],
-      "got_now": 1163,
+      "got_now": 1162,
       "gave_now": 0,
       "grade": "B"
      }
@@ -3186,7 +3186,7 @@
        {
         "kind": "player",
         "label": "Cooper Kupp (WR)",
-        "value": 387
+        "value": 339
        },
        {
         "kind": "pick",
@@ -3203,7 +3203,7 @@
         "value": 0
        }
       ],
-      "got_now": 387,
+      "got_now": 339,
       "gave_now": 0,
       "grade": "C"
      },
@@ -3218,7 +3218,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 387,
+      "gave_now": 339,
       "grade": "C"
      }
     }
@@ -3342,7 +3342,7 @@
        {
         "kind": "player",
         "label": "Romeo Doubs (WR)",
-        "value": 1084
+        "value": 1128
        },
        {
         "kind": "pick",
@@ -3366,7 +3366,7 @@
         "value": 0
        }
       ],
-      "got_now": 1084,
+      "got_now": 1128,
       "gave_now": 0,
       "grade": "B"
      },
@@ -3388,7 +3388,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 1084,
+      "gave_now": 1128,
       "grade": "D"
      }
     }
@@ -3535,11 +3535,11 @@
        {
         "kind": "player",
         "label": "David Montgomery (RB)",
-        "value": 1610
+        "value": 1596
        }
       ],
-      "got_now": 1610,
-      "gave_now": 694,
+      "got_now": 1596,
+      "gave_now": 690,
       "grade": "B"
      },
      "861421486488031232": {
@@ -3552,12 +3552,12 @@
        {
         "kind": "player",
         "label": "Mike Gesicki (TE)",
-        "value": 692
+        "value": 690
        },
        {
         "kind": "player",
         "label": "Diontae Johnson (WR)",
-        "value": 2
+        "value": 0
        },
        {
         "kind": "pick",
@@ -3567,8 +3567,8 @@
         "value": 0
        }
       ],
-      "got_now": 694,
-      "gave_now": 1610,
+      "got_now": 690,
+      "gave_now": 1596,
       "grade": "D"
      }
     }
@@ -3696,7 +3696,7 @@
        {
         "kind": "player",
         "label": "Javonte Williams (RB)",
-        "value": 3178
+        "value": 3184
        },
        {
         "kind": "pick",
@@ -3706,8 +3706,8 @@
         "value": 0
        }
       ],
-      "got_now": 3178,
-      "gave_now": 1809,
+      "got_now": 3184,
+      "gave_now": 1854,
       "grade": "B"
      },
      "915765963616985088": {
@@ -3715,7 +3715,7 @@
        {
         "kind": "player",
         "label": "Jared Goff (QB)",
-        "value": 1809
+        "value": 1854
        },
        {
         "kind": "pick",
@@ -3732,8 +3732,8 @@
         "value": 0
        }
       ],
-      "got_now": 1809,
-      "gave_now": 3178,
+      "got_now": 1854,
+      "gave_now": 3184,
       "grade": "D"
      }
     }
@@ -3844,11 +3844,11 @@
        {
         "kind": "player",
         "label": "Marvin Harrison Jr. (WR)",
-        "value": 1781
+        "value": 1780
        }
       ],
-      "got_now": 1781,
-      "gave_now": 1520,
+      "got_now": 1780,
+      "gave_now": 1560,
       "grade": "C"
      },
      "861422415547318272": {
@@ -3856,7 +3856,7 @@
        {
         "kind": "player",
         "label": "Jonathon Brooks (RB)",
-        "value": 1520
+        "value": 1560
        },
        {
         "kind": "pick",
@@ -3866,8 +3866,8 @@
         "value": 0
        }
       ],
-      "got_now": 1520,
-      "gave_now": 1781,
+      "got_now": 1560,
+      "gave_now": 1780,
       "grade": "C"
      }
     }
@@ -3964,7 +3964,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 3,
+      "gave_now": 1,
       "grade": "C"
      },
      "861422415547318272": {
@@ -3972,10 +3972,10 @@
        {
         "kind": "player",
         "label": "Zack Moss (RB)",
-        "value": 3
+        "value": 1
        }
       ],
-      "got_now": 3,
+      "got_now": 1,
       "gave_now": 0,
       "grade": "C"
      }
@@ -4077,11 +4077,11 @@
        {
         "kind": "player",
         "label": "Chris Olave (WR)",
-        "value": 4446
+        "value": 4308
        }
       ],
-      "got_now": 4446,
-      "gave_now": 867,
+      "got_now": 4308,
+      "gave_now": 845,
       "grade": "A"
      },
      "915765963616985088": {
@@ -4089,11 +4089,11 @@
        {
         "kind": "player",
         "label": "Brian Robinson Jr. (RB)",
-        "value": 867
+        "value": 845
        }
       ],
-      "got_now": 867,
-      "gave_now": 4446,
+      "got_now": 845,
+      "gave_now": 4308,
       "grade": "F"
      }
     }
@@ -4238,7 +4238,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 3732,
+      "gave_now": 3749,
       "grade": "F"
      },
      "915765963616985088": {
@@ -4246,15 +4246,15 @@
        {
         "kind": "player",
         "label": "Derrick Henry (RB)",
-        "value": 2281
+        "value": 2319
        },
        {
         "kind": "player",
         "label": "Terry McLaurin (WR)",
-        "value": 1451
+        "value": 1430
        }
       ],
-      "got_now": 3732,
+      "got_now": 3749,
       "gave_now": 0,
       "grade": "A"
      }
@@ -4356,11 +4356,11 @@
        {
         "kind": "player",
         "label": "Joe Burrow (QB)",
-        "value": 3951
+        "value": 3953
        }
       ],
-      "got_now": 3951,
-      "gave_now": 3045,
+      "got_now": 3953,
+      "gave_now": 3007,
       "grade": "B"
      },
      "861422415547318272": {
@@ -4368,11 +4368,11 @@
        {
         "kind": "player",
         "label": "Jayden Daniels (QB)",
-        "value": 3045
+        "value": 3007
        }
       ],
-      "got_now": 3045,
-      "gave_now": 3951,
+      "got_now": 3007,
+      "gave_now": 3953,
       "grade": "D"
      }
     }
@@ -4492,7 +4492,7 @@
        {
         "kind": "player",
         "label": "Christian McCaffrey (RB)",
-        "value": 4725
+        "value": 4690
        },
        {
         "kind": "pick",
@@ -4502,8 +4502,8 @@
         "value": 0
        }
       ],
-      "got_now": 4725,
-      "gave_now": 9584,
+      "got_now": 4690,
+      "gave_now": 9616,
       "grade": "F"
      },
      "861422415547318272": {
@@ -4511,7 +4511,7 @@
        {
         "kind": "player",
         "label": "Ja'Marr Chase (WR)",
-        "value": 9584
+        "value": 9616
        },
        {
         "kind": "pick",
@@ -4521,8 +4521,8 @@
         "value": 0
        }
       ],
-      "got_now": 9584,
-      "gave_now": 4725,
+      "got_now": 9616,
+      "gave_now": 4690,
       "grade": "A"
      }
     }
@@ -4774,10 +4774,10 @@
        {
         "kind": "player",
         "label": "Raheem Mostert (RB)",
-        "value": 3
+        "value": 1
        }
       ],
-      "got_now": 3,
+      "got_now": 1,
       "gave_now": 0,
       "grade": "C"
      },
@@ -4806,7 +4806,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 3,
+      "gave_now": 1,
       "grade": "C"
      }
     }
@@ -4917,7 +4917,7 @@
        {
         "kind": "player",
         "label": "Dameon Pierce (RB)",
-        "value": 23
+        "value": 19
        },
        {
         "kind": "pick",
@@ -4927,8 +4927,8 @@
         "value": 0
        }
       ],
-      "got_now": 23,
-      "gave_now": 2945,
+      "got_now": 19,
+      "gave_now": 2996,
       "grade": "F"
      },
      "909255939126161408": {
@@ -4936,11 +4936,11 @@
        {
         "kind": "player",
         "label": "Brock Purdy (QB)",
-        "value": 2945
+        "value": 2996
        }
       ],
-      "got_now": 2945,
-      "gave_now": 23,
+      "got_now": 2996,
+      "gave_now": 19,
       "grade": "A"
      }
     }
@@ -5079,7 +5079,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 2474,
+      "gave_now": 2504,
       "grade": "F"
      },
      "908808510823997440": {
@@ -5087,7 +5087,7 @@
        {
         "kind": "player",
         "label": "Jordan Love (QB)",
-        "value": 2474
+        "value": 2504
        },
        {
         "kind": "pick",
@@ -5104,7 +5104,7 @@
         "value": 0
        }
       ],
-      "got_now": 2474,
+      "got_now": 2504,
       "gave_now": 0,
       "grade": "A"
      }
@@ -5216,11 +5216,11 @@
        {
         "kind": "player",
         "label": "Brandin Cooks (WR)",
-        "value": 2
+        "value": 1
        }
       ],
-      "got_now": 2,
-      "gave_now": 676,
+      "got_now": 1,
+      "gave_now": 740,
       "grade": "C"
      },
      "915765963616985088": {
@@ -5228,7 +5228,7 @@
        {
         "kind": "player",
         "label": "Kayshon Boutte (WR)",
-        "value": 676
+        "value": 740
        },
        {
         "kind": "pick",
@@ -5238,8 +5238,8 @@
         "value": 0
        }
       ],
-      "got_now": 676,
-      "gave_now": 2,
+      "got_now": 740,
+      "gave_now": 1,
       "grade": "C"
      }
     }
@@ -5350,11 +5350,11 @@
        {
         "kind": "player",
         "label": "Joe Mixon (RB)",
-        "value": 4
+        "value": 1
        }
       ],
-      "got_now": 4,
-      "gave_now": 2,
+      "got_now": 1,
+      "gave_now": 0,
       "grade": "C"
      },
      "915765963616985088": {
@@ -5362,7 +5362,7 @@
        {
         "kind": "player",
         "label": "Gus Edwards (RB)",
-        "value": 2
+        "value": 0
        },
        {
         "kind": "pick",
@@ -5372,8 +5372,8 @@
         "value": 0
        }
       ],
-      "got_now": 2,
-      "gave_now": 4,
+      "got_now": 0,
+      "gave_now": 1,
       "grade": "C"
      }
     }
@@ -5484,7 +5484,7 @@
        {
         "kind": "player",
         "label": "Gabe Davis (WR)",
-        "value": 2
+        "value": 0
        },
        {
         "kind": "pick",
@@ -5494,8 +5494,8 @@
         "value": 0
        }
       ],
-      "got_now": 2,
-      "gave_now": 3,
+      "got_now": 0,
+      "gave_now": 1,
       "grade": "C"
      },
      "909255939126161408": {
@@ -5503,11 +5503,11 @@
        {
         "kind": "player",
         "label": "Zack Moss (RB)",
-        "value": 3
+        "value": 1
        }
       ],
-      "got_now": 3,
-      "gave_now": 2,
+      "got_now": 1,
+      "gave_now": 0,
       "grade": "C"
      }
     }
@@ -5626,16 +5626,16 @@
        {
         "kind": "player",
         "label": "Najee Harris (RB)",
-        "value": 126
+        "value": 107
        },
        {
         "kind": "player",
         "label": "C.J. Stroud (QB)",
-        "value": 2344
+        "value": 2354
        }
       ],
-      "got_now": 2470,
-      "gave_now": 200,
+      "got_now": 2461,
+      "gave_now": 174,
       "grade": "A"
      },
      "853109226401288192": {
@@ -5643,11 +5643,11 @@
        {
         "kind": "player",
         "label": "Jerome Ford (RB)",
-        "value": 200
+        "value": 174
        }
       ],
-      "got_now": 200,
-      "gave_now": 2470,
+      "got_now": 174,
+      "gave_now": 2461,
       "grade": "F"
      }
     }
@@ -5776,16 +5776,16 @@
        {
         "kind": "player",
         "label": "Diontae Johnson (WR)",
-        "value": 2
+        "value": 0
        },
        {
         "kind": "player",
         "label": "Tyler Allgeier (RB)",
-        "value": 1164
+        "value": 1165
        }
       ],
-      "got_now": 1166,
-      "gave_now": 867,
+      "got_now": 1165,
+      "gave_now": 845,
       "grade": "C"
      },
      "909255939126161408": {
@@ -5793,7 +5793,7 @@
        {
         "kind": "player",
         "label": "Brian Robinson Jr. (RB)",
-        "value": 867
+        "value": 845
        },
        {
         "kind": "pick",
@@ -5803,8 +5803,8 @@
         "value": 0
        }
       ],
-      "got_now": 867,
-      "gave_now": 1166,
+      "got_now": 845,
+      "gave_now": 1165,
       "grade": "C"
      }
     }
@@ -5933,24 +5933,24 @@
        {
         "kind": "player",
         "label": "A.J. Brown (WR)",
-        "value": 2495
+        "value": 2467
        }
       ],
-      "got_now": 2495,
-      "gave_now": 1644,
-      "grade": "B"
+      "got_now": 2467,
+      "gave_now": 1693,
+      "grade": "C"
      },
      "861421486488031232": {
       "items": [
        {
         "kind": "player",
         "label": "Michael Pittman Jr. (WR)",
-        "value": 1641
+        "value": 1692
        },
        {
         "kind": "player",
         "label": "Elijah Moore (WR)",
-        "value": 3
+        "value": 1
        },
        {
         "kind": "pick",
@@ -5960,9 +5960,9 @@
         "value": 0
        }
       ],
-      "got_now": 1644,
-      "gave_now": 2495,
-      "grade": "D"
+      "got_now": 1693,
+      "gave_now": 2467,
+      "grade": "C"
      }
     }
    }
@@ -5975,57 +5975,57 @@
     "id": "12501",
     "name": "Matthew Golden",
     "pos": "WR",
-    "value": 4234,
-    "change": 1847
+    "value": 4222,
+    "change": 1832
    },
    {
     "id": "11584",
     "name": "Bucky Irving",
     "pos": "RB",
-    "value": 4122,
-    "change": 1474
+    "value": 4175,
+    "change": 1509
    },
    {
     "id": "11604",
     "name": "Brock Bowers",
     "pos": "TE",
-    "value": 5790,
-    "change": 1384
-   },
-   {
-    "id": "13345",
-    "name": "Jonah Coleman",
-    "pos": "RB",
-    "value": 2862,
-    "change": 1384
+    "value": 5763,
+    "change": 1371
    },
    {
     "id": "12490",
     "name": "Bhayshul Tuten",
     "pos": "RB",
-    "value": 3751,
-    "change": 1362
+    "value": 3744,
+    "change": 1341
+   },
+   {
+    "id": "13345",
+    "name": "Jonah Coleman",
+    "pos": "RB",
+    "value": 2874,
+    "change": 1340
    },
    {
     "id": "7594",
     "name": "Chuba Hubbard",
     "pos": "RB",
-    "value": 2877,
-    "change": 987
-   },
-   {
-    "id": "12519",
-    "name": "Luther Burden III",
-    "pos": "WR",
-    "value": 4367,
-    "change": 853
+    "value": 2841,
+    "change": 961
    },
    {
     "id": "8130",
     "name": "Trey McBride",
     "pos": "TE",
-    "value": 5099,
-    "change": 839
+    "value": 5130,
+    "change": 871
+   },
+   {
+    "id": "6786",
+    "name": "CeeDee Lamb",
+    "pos": "WR",
+    "value": 7746,
+    "change": 841
    }
   ],
   "fallers": [
@@ -6033,57 +6033,57 @@
     "id": "7564",
     "name": "Ja'Marr Chase",
     "pos": "WR",
-    "value": 9584,
-    "change": -1842
+    "value": 9616,
+    "change": -1927
    },
    {
     "id": "5859",
     "name": "A.J. Brown",
     "pos": "WR",
-    "value": 2495,
-    "change": -1405
+    "value": 2467,
+    "change": -1442
    },
    {
     "id": "7526",
     "name": "Jaylen Waddle",
     "pos": "WR",
-    "value": 2417,
-    "change": -1385
+    "value": 2431,
+    "change": -1327
    },
    {
     "id": "12527",
     "name": "Ashton Jeanty",
     "pos": "RB",
-    "value": 5353,
-    "change": -1304
+    "value": 5283,
+    "change": -1309
    },
    {
     "id": "11635",
     "name": "Ladd McConkey",
     "pos": "WR",
-    "value": 2644,
-    "change": -1295
+    "value": 2681,
+    "change": -1235
    },
    {
     "id": "6904",
     "name": "Jalen Hurts",
     "pos": "QB",
-    "value": 1987,
-    "change": -1109
+    "value": 2038,
+    "change": -1104
    },
    {
     "id": "4881",
     "name": "Lamar Jackson",
     "pos": "QB",
-    "value": 3190,
-    "change": -1043
+    "value": 3176,
+    "change": -1029
    },
    {
-    "id": "7525",
-    "name": "DeVonta Smith",
+    "id": "12514",
+    "name": "Emeka Egbuka",
     "pos": "WR",
-    "value": 3206,
-    "change": -956
+    "value": 3332,
+    "change": -1014
    }
   ]
  }
