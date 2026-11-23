@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T05:38+00:00",
+ "generated": "2026-11-23T21:03+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "861417814836256768": {
@@ -132,8 +132,8 @@
        "was_pos_rank": "RB38",
        "was_rank": 152,
        "was_basis": "2026 Wk 1-9",
-       "now_pos_rank": "RB41",
-       "now_rank": 163,
+       "now_pos_rank": "RB36",
+       "now_rank": 148,
        "now_basis": "2026 so far",
        "was_value": 2588,
        "value_scale": "shared"
@@ -145,8 +145,8 @@
        "was_pos_rank": "WR24",
        "was_rank": 73,
        "was_basis": "2026 Wk 1-9",
-       "now_pos_rank": "WR21",
-       "now_rank": 66,
+       "now_pos_rank": "WR20",
+       "now_rank": 63,
        "now_basis": "2026 so far",
        "was_value": 6838,
        "value_scale": "shared"
@@ -173,8 +173,8 @@
        "was_pos_rank": "RB23",
        "was_rank": 92,
        "was_basis": "2026 Wk 1-9",
-       "now_pos_rank": "RB24",
-       "now_rank": 84,
+       "now_pos_rank": "RB23",
+       "now_rank": 78,
        "now_basis": "2026 so far",
        "was_value": 1013,
        "value_scale": "shared"
@@ -186,8 +186,8 @@
        "was_pos_rank": "WR20",
        "was_rank": 64,
        "was_basis": "2026 Wk 1-9",
-       "now_pos_rank": "WR9",
-       "now_rank": 40,
+       "now_pos_rank": "WR8",
+       "now_rank": 31,
        "now_basis": "2026 so far",
        "was_value": 4008,
        "value_scale": "shared"
@@ -286,8 +286,8 @@
        "was_pos_rank": "RB5",
        "was_rank": 21,
        "was_basis": "2026 Wk 1-9",
-       "now_pos_rank": "RB8",
-       "now_rank": 28,
+       "now_pos_rank": "RB6",
+       "now_rank": 18,
        "now_basis": "2026 so far",
        "was_value": 2686,
        "value_scale": "shared"
@@ -314,8 +314,8 @@
        "was_pos_rank": "WR55",
        "was_rank": 142,
        "was_basis": "2026 Wk 1-9",
-       "now_pos_rank": "WR61",
-       "now_rank": 155,
+       "now_pos_rank": "WR65",
+       "now_rank": 162,
        "now_basis": "2026 so far",
        "was_value": 2025,
        "value_scale": "shared"
@@ -392,8 +392,8 @@
        "was_pos_rank": "RB17",
        "was_rank": 56,
        "was_basis": "2026 Wk 1-9",
-       "now_pos_rank": "RB19",
-       "now_rank": 64,
+       "now_pos_rank": "RB21",
+       "now_rank": 72,
        "now_basis": "2026 so far",
        "was_value": 1489,
        "value_scale": "shared"
@@ -420,8 +420,8 @@
        "was_pos_rank": "WR37",
        "was_rank": 107,
        "was_basis": "2026 Wk 1-9",
-       "now_pos_rank": "WR46",
-       "now_rank": 125,
+       "now_pos_rank": "WR42",
+       "now_rank": 109,
        "now_basis": "2026 so far",
        "was_value": 4143,
        "value_scale": "shared"
@@ -492,8 +492,8 @@
        "was_pos_rank": "WR162",
        "was_rank": 402,
        "was_basis": "2026 Wk 1-9",
-       "now_pos_rank": "WR110",
-       "now_rank": 280,
+       "now_pos_rank": "WR113",
+       "now_rank": 279,
        "now_basis": "2026 so far",
        "was_value": 2678,
        "value_scale": "shared"
@@ -520,8 +520,8 @@
        "was_pos_rank": "WR39",
        "was_rank": 110,
        "was_basis": "2026 Wk 1-9",
-       "now_pos_rank": "WR39",
-       "now_rank": 108,
+       "now_pos_rank": "WR32",
+       "now_rank": 90,
        "now_basis": "2026 so far",
        "was_value": 1551,
        "value_scale": "shared"
@@ -606,8 +606,8 @@
        "was_pos_rank": "RB39",
        "was_rank": 164,
        "was_basis": "2026 Wk 1-7",
-       "now_pos_rank": "RB33",
-       "now_rank": 141,
+       "now_pos_rank": "RB30",
+       "now_rank": 114,
        "now_basis": "2026 so far",
        "was_value": 4742,
        "value_scale": "shared"
@@ -627,7 +627,7 @@
        "was_rank": 35,
        "was_basis": "2026 Wk 1-7",
        "now_pos_rank": "TE2",
-       "now_rank": 33,
+       "now_rank": 39,
        "now_basis": "2026 so far",
        "was_value": 2459,
        "value_scale": "shared"
@@ -719,7 +719,7 @@
        "was_rank": 178,
        "was_basis": "2026 Wk 1-7",
        "now_pos_rank": "WR43",
-       "now_rank": 119,
+       "now_rank": 111,
        "now_basis": "2026 so far",
        "was_value": 2902,
        "value_scale": "shared"
@@ -731,8 +731,8 @@
        "was_pos_rank": "RB53",
        "was_rank": 212,
        "was_basis": "2026 Wk 1-7",
-       "now_pos_rank": "RB46",
-       "now_rank": 182,
+       "now_pos_rank": "RB45",
+       "now_rank": 181,
        "now_basis": "2026 so far",
        "was_value": 809,
        "value_scale": "shared"
@@ -767,7 +767,7 @@
        "was_rank": 15,
        "was_basis": "2026 Wk 1-7",
        "now_pos_rank": "TE1",
-       "now_rank": 24,
+       "now_rank": 22,
        "now_basis": "2026 so far",
        "was_value": 4410,
        "value_scale": "shared"
@@ -839,7 +839,7 @@
        "was_rank": 102,
        "was_basis": "2026 Wk 1-4",
        "now_pos_rank": "QB26",
-       "now_rank": 90,
+       "now_rank": 107,
        "now_basis": "2026 so far",
        "was_value": 1346,
        "value_scale": "shared"
@@ -930,8 +930,8 @@
        "was_pos_rank": "RB13",
        "was_rank": 34,
        "was_basis": "2025 finish",
-       "now_pos_rank": "RB52",
-       "now_rank": 211,
+       "now_pos_rank": "RB55",
+       "now_rank": 219,
        "now_basis": "2026 so far",
        "was_value": 1712,
        "value_scale": "shared"
@@ -1016,8 +1016,8 @@
        "was_pos_rank": "RB53",
        "was_rank": 193,
        "was_basis": "2025 finish",
-       "now_pos_rank": "RB15",
-       "now_rank": 41,
+       "now_pos_rank": "RB14",
+       "now_rank": 42,
        "now_basis": "2026 so far",
        "was_value": 2115,
        "value_scale": "shared"
@@ -1029,8 +1029,8 @@
        "was_pos_rank": "WR220",
        "was_rank": 553,
        "was_basis": "2025 finish",
-       "now_pos_rank": "WR198",
-       "now_rank": 505,
+       "now_pos_rank": "WR202",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 952,
        "value_scale": "shared"
@@ -1057,8 +1057,8 @@
        "was_pos_rank": "WR220",
        "was_rank": 553,
        "was_basis": "2025 finish",
-       "now_pos_rank": "WR105",
-       "now_rank": 258,
+       "now_pos_rank": "WR106",
+       "now_rank": 259,
        "now_basis": "2026 so far",
        "was_value": 1294,
        "value_scale": "shared"
@@ -1070,8 +1070,8 @@
        "was_pos_rank": "RB138",
        "was_rank": 553,
        "was_basis": "2025 finish",
-       "now_pos_rank": "RB46",
-       "now_rank": 182,
+       "now_pos_rank": "RB45",
+       "now_rank": 181,
        "now_basis": "2026 so far",
        "was_value": 475,
        "value_scale": "shared"
@@ -1083,8 +1083,8 @@
        "was_pos_rank": "RB25",
        "was_rank": 85,
        "was_basis": "2025 finish",
-       "now_pos_rank": "RB19",
-       "now_rank": 64,
+       "now_pos_rank": "RB21",
+       "now_rank": 72,
        "now_basis": "2026 so far",
        "was_value": 1417,
        "value_scale": "shared"
@@ -1167,8 +1167,8 @@
        "was_pos_rank": "RB138",
        "was_rank": 553,
        "was_basis": "2025 finish",
-       "now_pos_rank": "RB98",
-       "now_rank": 374,
+       "now_pos_rank": "RB99",
+       "now_rank": 382,
        "now_basis": "2026 so far",
        "was_value": 1631,
        "value_scale": "shared"
@@ -1181,7 +1181,7 @@
        "was_rank": 131,
        "was_basis": "2025 finish",
        "now_pos_rank": "WR15",
-       "now_rank": 50,
+       "now_rank": 53,
        "now_basis": "2026 so far",
        "was_value": 3417,
        "value_scale": "shared"
@@ -1216,7 +1216,7 @@
        "was_rank": 121,
        "was_basis": "2025 finish",
        "now_pos_rank": "RB28",
-       "now_rank": 104,
+       "now_rank": 98,
        "now_basis": "2026 so far",
        "was_value": 5311,
        "value_scale": "shared"
@@ -1445,8 +1445,8 @@
        "was_pos_rank": "WR22",
        "was_rank": 67,
        "was_basis": "2025 Wk 1-9",
-       "now_pos_rank": "WR23",
-       "now_rank": 69,
+       "now_pos_rank": "WR24",
+       "now_rank": 74,
        "now_basis": "2026 so far",
        "was_value": 1860,
        "value_scale": "shared"
@@ -1458,8 +1458,8 @@
        "was_pos_rank": "RB33",
        "was_rank": 121,
        "was_basis": "2025 Wk 1-9",
-       "now_pos_rank": "RB19",
-       "now_rank": 64,
+       "now_pos_rank": "RB21",
+       "now_rank": 72,
        "now_basis": "2026 so far",
        "was_value": 1368,
        "value_scale": "shared"
@@ -1479,7 +1479,7 @@
        "was_rank": 98,
        "was_basis": "2025 Wk 1-9",
        "now_pos_rank": "RB16",
-       "now_rank": 43,
+       "now_rank": 46,
        "now_basis": "2026 so far",
        "was_value": 1733,
        "value_scale": "shared"
@@ -1491,8 +1491,8 @@
        "was_pos_rank": "WR34",
        "was_rank": 89,
        "was_basis": "2025 Wk 1-9",
-       "now_pos_rank": "WR47",
-       "now_rank": 127,
+       "now_pos_rank": "WR54",
+       "now_rank": 140,
        "now_basis": "2026 so far",
        "was_value": 1209,
        "value_scale": "shared"
@@ -1518,16 +1518,16 @@
        {
         "kind": "player",
         "label": "Stefon Diggs (WR)",
-        "value": 1413
+        "value": 1551
        },
        {
         "kind": "player",
         "label": "Rhamondre Stevenson (RB)",
-        "value": 1639
+        "value": 1754
        }
       ],
-      "got_now": 3052,
-      "gave_now": 2517,
+      "got_now": 3305,
+      "gave_now": 3008,
       "grade": "C"
      },
      "861421486488031232": {
@@ -1535,12 +1535,12 @@
        {
         "kind": "player",
         "label": "Tony Pollard (RB)",
-        "value": 1840
+        "value": 2317
        },
        {
         "kind": "player",
         "label": "Kayshon Boutte (WR)",
-        "value": 677
+        "value": 691
        },
        {
         "kind": "pick",
@@ -1550,8 +1550,8 @@
         "value": 0
        }
       ],
-      "got_now": 2517,
-      "gave_now": 3052,
+      "got_now": 3008,
+      "gave_now": 3305,
       "grade": "C"
      }
     }
@@ -1622,8 +1622,8 @@
        "was_pos_rank": "RB87",
        "was_rank": 350,
        "was_basis": "2025 Wk 1-8",
-       "now_pos_rank": "RB120",
-       "now_rank": 465,
+       "now_pos_rank": "RB684",
+       "now_rank": 3036,
        "now_basis": "2026 so far",
        "was_value": 790,
        "value_scale": "shared"
@@ -1635,8 +1635,8 @@
        "was_pos_rank": "WR77",
        "was_rank": 190,
        "was_basis": "2025 Wk 1-8",
-       "now_pos_rank": "WR83",
-       "now_rank": 201,
+       "now_pos_rank": "WR88",
+       "now_rank": 210,
        "now_basis": "2026 so far",
        "was_value": 2422,
        "value_scale": "shared"
@@ -1670,8 +1670,8 @@
        "was_pos_rank": "RB8",
        "was_rank": 22,
        "was_basis": "2025 Wk 1-8",
-       "now_pos_rank": "RB52",
-       "now_rank": 211,
+       "now_pos_rank": "RB55",
+       "now_rank": 219,
        "now_basis": "2026 so far",
        "was_value": 3575,
        "value_scale": "shared"
@@ -1697,19 +1697,19 @@
        {
         "kind": "player",
         "label": "Jaydon Blue (RB)",
-        "value": 185
+        "value": 92
        },
        {
         "kind": "player",
         "label": "Terry McLaurin (WR)",
-        "value": 1557
+        "value": 1181
        },
        {
         "kind": "pick",
         "label": "2027 Round 1",
         "from": "Time to tank",
         "player": null,
-        "value": 2661
+        "value": 2746
        },
        {
         "kind": "pick",
@@ -1719,8 +1719,8 @@
         "value": 0
        }
       ],
-      "got_now": 4403,
-      "gave_now": 3733,
+      "got_now": 4019,
+      "gave_now": 3941,
       "grade": "C"
      },
      "915765963616985088": {
@@ -1728,18 +1728,18 @@
        {
         "kind": "player",
         "label": "Josh Jacobs (RB)",
-        "value": 2256
+        "value": 2459
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
         "from": "Olave\u2019s Medical Team",
         "player": null,
-        "value": 1477
+        "value": 1482
        }
       ],
-      "got_now": 3733,
-      "gave_now": 4403,
+      "got_now": 3941,
+      "gave_now": 4019,
       "grade": "C"
      }
     }
@@ -1808,8 +1808,8 @@
        "was_pos_rank": "TE28",
        "was_rank": 163,
        "was_basis": "2025 Wk 1-7",
-       "now_pos_rank": "TE64",
-       "now_rank": 321,
+       "now_pos_rank": "TE67",
+       "now_rank": 333,
        "now_basis": "2026 so far",
        "was_value": 1048,
        "value_scale": "shared"
@@ -1821,8 +1821,8 @@
        "was_pos_rank": "WR33",
        "was_rank": 86,
        "was_basis": "2025 Wk 1-7",
-       "now_pos_rank": "WR17",
-       "now_rank": 54,
+       "now_pos_rank": "WR19",
+       "now_rank": 60,
        "now_basis": "2026 so far",
        "was_value": 5026,
        "value_scale": "shared"
@@ -1842,7 +1842,7 @@
        "was_rank": 186,
        "was_basis": "2025 Wk 1-7",
        "now_pos_rank": "WR15",
-       "now_rank": 50,
+       "now_rank": 53,
        "now_basis": "2026 so far",
        "was_value": 2133,
        "value_scale": "shared"
@@ -1868,16 +1868,16 @@
        {
         "kind": "player",
         "label": "Jonnu Smith (TE)",
-        "value": 8
+        "value": 0
        },
        {
         "kind": "player",
         "label": "Nico Collins (WR)",
-        "value": 4229
+        "value": 3753
        }
       ],
-      "got_now": 4237,
-      "gave_now": 4430,
+      "got_now": 3753,
+      "gave_now": 4417,
       "grade": "C"
      },
      "861422415547318272": {
@@ -1885,7 +1885,7 @@
        {
         "kind": "player",
         "label": "Luther Burden III (WR)",
-        "value": 4430
+        "value": 4417
        },
        {
         "kind": "pick",
@@ -1895,8 +1895,8 @@
         "value": 0
        }
       ],
-      "got_now": 4430,
-      "gave_now": 4237,
+      "got_now": 4417,
+      "gave_now": 3753,
       "grade": "C"
      }
     }
@@ -1965,8 +1965,8 @@
        "was_pos_rank": "WR17",
        "was_rank": 54,
        "was_basis": "2025 Wk 1-7",
-       "now_pos_rank": "WR36",
-       "now_rank": 101,
+       "now_pos_rank": "WR40",
+       "now_rank": 104,
        "now_basis": "2026 so far",
        "was_value": 1745,
        "value_scale": "shared"
@@ -1993,8 +1993,8 @@
        "was_pos_rank": "WR43",
        "was_rank": 124,
        "was_basis": "2025 Wk 1-7",
-       "now_pos_rank": "WR20",
-       "now_rank": 65,
+       "now_pos_rank": "WR18",
+       "now_rank": 59,
        "now_basis": "2026 so far",
        "was_value": 2485,
        "value_scale": "shared"
@@ -2006,8 +2006,8 @@
        "was_pos_rank": "RB24",
        "was_rank": 90,
        "was_basis": "2025 Wk 1-7",
-       "now_pos_rank": "RB4",
-       "now_rank": 11,
+       "now_pos_rank": "RB5",
+       "now_rank": 14,
        "now_basis": "2026 so far",
        "was_value": 2784,
        "value_scale": "shared"
@@ -2025,18 +2025,18 @@
        {
         "kind": "player",
         "label": "Deebo Samuel Sr. (WR)",
-        "value": 1214
+        "value": 1311
        },
        {
         "kind": "pick",
         "label": "2027 Round 1",
         "from": "Joe Buck Yourself",
         "player": null,
-        "value": 2173
+        "value": 2168
        }
       ],
-      "got_now": 3387,
-      "gave_now": 9217,
+      "got_now": 3479,
+      "gave_now": 9336,
       "grade": "F"
      },
      "858765508143628288": {
@@ -2044,16 +2044,16 @@
        {
         "kind": "player",
         "label": "Jameson Williams (WR)",
-        "value": 2576
+        "value": 2475
        },
        {
         "kind": "player",
         "label": "Kenneth Walker III (RB)",
-        "value": 6641
+        "value": 6861
        }
       ],
-      "got_now": 9217,
-      "gave_now": 3387,
+      "got_now": 9336,
+      "gave_now": 3479,
       "grade": "A"
      }
     }
@@ -2117,8 +2117,8 @@
        "was_pos_rank": "WR51",
        "was_rank": 135,
        "was_basis": "2025 Wk 1-4",
-       "now_pos_rank": "WR75",
-       "now_rank": 186,
+       "now_pos_rank": "WR58",
+       "now_rank": 147,
        "now_basis": "2026 so far",
        "was_value": 3969,
        "value_scale": "shared"
@@ -2146,7 +2146,7 @@
        "was_rank": 387,
        "was_basis": "2025 Wk 1-4",
        "now_pos_rank": "WR43",
-       "now_rank": 119,
+       "now_rank": 111,
        "now_basis": "2026 so far",
        "was_value": 4229,
        "value_scale": "shared"
@@ -2164,7 +2164,7 @@
        {
         "kind": "player",
         "label": "Ladd McConkey (WR)",
-        "value": 2762
+        "value": 2373
        },
        {
         "kind": "pick",
@@ -2174,8 +2174,8 @@
         "value": 0
        }
       ],
-      "got_now": 2762,
-      "gave_now": 3093,
+      "got_now": 2373,
+      "gave_now": 2699,
       "grade": "C"
      },
      "861422415547318272": {
@@ -2183,11 +2183,11 @@
        {
         "kind": "player",
         "label": "Rashee Rice (WR)",
-        "value": 3093
+        "value": 2699
        }
       ],
-      "got_now": 3093,
-      "gave_now": 2762,
+      "got_now": 2699,
+      "gave_now": 2373,
       "grade": "C"
      }
     }
@@ -2273,7 +2273,7 @@
        "was_rank": 32,
        "was_basis": "2025 Wk 1-2",
        "now_pos_rank": "WR45",
-       "now_rank": 123,
+       "now_rank": 122,
        "now_basis": "2026 so far",
        "was_value": 4105,
        "value_scale": "shared"
@@ -2286,7 +2286,7 @@
        "was_rank": 7,
        "was_basis": "2025 Wk 1-2",
        "now_pos_rank": "RB7",
-       "now_rank": 26,
+       "now_rank": 20,
        "now_basis": "2026 so far",
        "was_value": 3235,
        "value_scale": "shared"
@@ -2327,8 +2327,8 @@
        "was_pos_rank": "QB6",
        "was_rank": 13,
        "was_basis": "2025 Wk 1-2",
-       "now_pos_rank": "QB11",
-       "now_rank": 27,
+       "now_pos_rank": "QB9",
+       "now_rank": 19,
        "now_basis": "2026 so far",
        "was_value": 1733,
        "value_scale": "shared"
@@ -2340,8 +2340,8 @@
        "was_pos_rank": "TE43",
        "was_rank": 228,
        "was_basis": "2025 Wk 1-2",
-       "now_pos_rank": "TE12",
-       "now_rank": 103,
+       "now_pos_rank": "TE9",
+       "now_rank": 94,
        "now_basis": "2026 so far",
        "was_value": 2485,
        "value_scale": "shared"
@@ -2353,8 +2353,8 @@
        "was_pos_rank": "WR25",
        "was_rank": 72,
        "was_basis": "2025 Wk 1-2",
-       "now_pos_rank": "WR21",
-       "now_rank": 66,
+       "now_pos_rank": "WR20",
+       "now_rank": 63,
        "now_basis": "2026 so far",
        "was_value": 10021,
        "value_scale": "shared"
@@ -2401,37 +2401,37 @@
        {
         "kind": "player",
         "label": "Emeka Egbuka (WR)",
-        "value": 3508
+        "value": 2756
        },
        {
         "kind": "player",
         "label": "James Cook III (RB)",
-        "value": 5754
+        "value": 6113
        },
        {
         "kind": "pick",
         "label": "2027 Round 1",
         "from": "Time to tank",
         "player": null,
-        "value": 2661
+        "value": 2746
        },
        {
         "kind": "pick",
         "label": "2027 Round 2",
         "from": "Time to tank",
         "player": null,
-        "value": 1427
+        "value": 1636
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
         "from": "Time to tank",
         "player": null,
-        "value": 1278
+        "value": 1401
        }
       ],
-      "got_now": 14628,
-      "gave_now": 11320,
+      "got_now": 14652,
+      "gave_now": 11435,
       "grade": "A"
      },
      "853109226401288192": {
@@ -2439,17 +2439,17 @@
        {
         "kind": "player",
         "label": "Jared Goff (QB)",
-        "value": 1893
+        "value": 1860
        },
        {
         "kind": "player",
         "label": "T.J. Hockenson (TE)",
-        "value": 1402
+        "value": 1590
        },
        {
         "kind": "player",
         "label": "Justin Jefferson (WR)",
-        "value": 6292
+        "value": 6237
        },
        {
         "kind": "pick",
@@ -2470,18 +2470,18 @@
         "label": "2027 Round 3",
         "from": "Lamar Jackson Fan Club",
         "player": null,
-        "value": 474
+        "value": 483
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
         "from": "Lamar Jackson Fan Club",
         "player": null,
-        "value": 1259
+        "value": 1265
        }
       ],
-      "got_now": 11320,
-      "gave_now": 14628,
+      "got_now": 11435,
+      "gave_now": 14652,
       "grade": "F"
      }
     }
@@ -2668,8 +2668,8 @@
        "was_pos_rank": "QB74",
        "was_rank": 540,
        "was_basis": "2024 finish",
-       "now_pos_rank": "QB34",
-       "now_rank": 188,
+       "now_pos_rank": "QB33",
+       "now_rank": 160,
        "now_basis": "2026 so far",
        "was_value": 1631,
        "value_scale": "shared"
@@ -2693,7 +2693,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 1122,
+      "gave_now": 1101,
       "grade": "D"
      },
      "853109226401288192": {
@@ -2701,10 +2701,10 @@
        {
         "kind": "player",
         "label": "J.J. McCarthy (QB)",
-        "value": 1122
+        "value": 1101
        }
       ],
-      "got_now": 1122,
+      "got_now": 1101,
       "gave_now": 0,
       "grade": "B"
      }
@@ -2785,8 +2785,8 @@
        "was_pos_rank": "RB20",
        "was_rank": 69,
        "was_basis": "2024 finish",
-       "now_pos_rank": "RB93",
-       "now_rank": 358,
+       "now_pos_rank": "RB96",
+       "now_rank": 370,
        "now_basis": "2026 so far",
        "was_value": 1504,
        "value_scale": "shared"
@@ -2817,7 +2817,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 108,
+      "gave_now": 96,
       "grade": "C"
      },
      "858765508143628288": {
@@ -2825,10 +2825,10 @@
        {
         "kind": "player",
         "label": "Najee Harris (RB)",
-        "value": 108
+        "value": 96
        }
       ],
-      "got_now": 108,
+      "got_now": 96,
       "gave_now": 0,
       "grade": "C"
      }
@@ -2888,8 +2888,8 @@
        "was_pos_rank": "WR32",
        "was_rank": 81,
        "was_basis": "2024 finish",
-       "now_pos_rank": "WR29",
-       "now_rank": 86,
+       "now_pos_rank": "WR38",
+       "now_rank": 101,
        "now_basis": "2026 so far",
        "was_value": 2855,
        "value_scale": "shared"
@@ -2928,12 +2928,12 @@
        {
         "kind": "player",
         "label": "DK Metcalf (WR)",
-        "value": 1962
+        "value": 1448
        }
       ],
-      "got_now": 1962,
+      "got_now": 1448,
       "gave_now": 0,
-      "grade": "A"
+      "grade": "B"
      },
      "861422415547318272": {
       "items": [
@@ -2953,8 +2953,8 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 1962,
-      "grade": "F"
+      "gave_now": 1448,
+      "grade": "D"
      }
     }
    }
@@ -3027,7 +3027,7 @@
        "was_rank": 16,
        "was_basis": "2024 finish",
        "now_pos_rank": "QB26",
-       "now_rank": 90,
+       "now_rank": 107,
        "now_basis": "2026 so far",
        "was_value": 1246,
        "value_scale": "shared"
@@ -3059,7 +3059,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 1200,
+      "gave_now": 1113,
       "grade": "D"
      },
      "861422415547318272": {
@@ -3067,7 +3067,7 @@
        {
         "kind": "player",
         "label": "Sam Darnold (QB)",
-        "value": 1200
+        "value": 1113
        },
        {
         "kind": "pick",
@@ -3077,7 +3077,7 @@
         "value": 0
        }
       ],
-      "got_now": 1200,
+      "got_now": 1113,
       "gave_now": 0,
       "grade": "B"
      }
@@ -3138,8 +3138,8 @@
        "was_pos_rank": "WR38",
        "was_rank": 96,
        "was_basis": "2024 finish",
-       "now_pos_rank": "WR55",
-       "now_rank": 143,
+       "now_pos_rank": "WR59",
+       "now_rank": 153,
        "now_basis": "2026 so far",
        "was_value": 1397,
        "value_scale": "shared"
@@ -3186,7 +3186,7 @@
        {
         "kind": "player",
         "label": "Cooper Kupp (WR)",
-        "value": 421
+        "value": 409
        },
        {
         "kind": "pick",
@@ -3203,7 +3203,7 @@
         "value": 0
        }
       ],
-      "got_now": 421,
+      "got_now": 409,
       "gave_now": 0,
       "grade": "C"
      },
@@ -3218,7 +3218,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 421,
+      "gave_now": 409,
       "grade": "C"
      }
     }
@@ -3280,8 +3280,8 @@
        "was_pos_rank": "WR56",
        "was_rank": 132,
        "was_basis": "2024 finish",
-       "now_pos_rank": "WR65",
-       "now_rank": 166,
+       "now_pos_rank": "WR70",
+       "now_rank": 175,
        "now_basis": "2026 so far",
        "was_value": 1307,
        "value_scale": "shared"
@@ -3342,7 +3342,7 @@
        {
         "kind": "player",
         "label": "Romeo Doubs (WR)",
-        "value": 1189
+        "value": 1165
        },
        {
         "kind": "pick",
@@ -3366,7 +3366,7 @@
         "value": 0
        }
       ],
-      "got_now": 1189,
+      "got_now": 1165,
       "gave_now": 0,
       "grade": "B"
      },
@@ -3388,7 +3388,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 1189,
+      "gave_now": 1165,
       "grade": "D"
      }
     }
@@ -3462,8 +3462,8 @@
        "was_pos_rank": "RB16",
        "was_rank": 48,
        "was_basis": "2024 Wk 1-9",
-       "now_pos_rank": "RB38",
-       "now_rank": 159,
+       "now_pos_rank": "RB40",
+       "now_rank": 169,
        "now_basis": "2026 so far",
        "was_value": 2784,
        "value_scale": "shared"
@@ -3482,8 +3482,8 @@
        "was_pos_rank": "RB75",
        "was_rank": 286,
        "was_basis": "2024 Wk 1-9",
-       "now_pos_rank": "RB136",
-       "now_rank": 505,
+       "now_pos_rank": "RB137",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 1368,
        "value_scale": "shared"
@@ -3495,8 +3495,8 @@
        "was_pos_rank": "TE13",
        "was_rank": 130,
        "was_basis": "2024 Wk 1-9",
-       "now_pos_rank": "TE17",
-       "now_rank": 111,
+       "now_pos_rank": "TE19",
+       "now_rank": 121,
        "now_basis": "2026 so far",
        "was_value": 649,
        "value_scale": "shared"
@@ -3508,8 +3508,8 @@
        "was_pos_rank": "WR35",
        "was_rank": 101,
        "was_basis": "2024 Wk 1-9",
-       "now_pos_rank": "WR198",
-       "now_rank": 505,
+       "now_pos_rank": "WR202",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 2342,
        "value_scale": "shared"
@@ -3535,11 +3535,11 @@
        {
         "kind": "player",
         "label": "David Montgomery (RB)",
-        "value": 1601
+        "value": 1876
        }
       ],
-      "got_now": 1601,
-      "gave_now": 681,
+      "got_now": 1876,
+      "gave_now": 978,
       "grade": "B"
      },
      "861421486488031232": {
@@ -3552,12 +3552,12 @@
        {
         "kind": "player",
         "label": "Mike Gesicki (TE)",
-        "value": 677
+        "value": 978
        },
        {
         "kind": "player",
         "label": "Diontae Johnson (WR)",
-        "value": 4
+        "value": 0
        },
        {
         "kind": "pick",
@@ -3567,8 +3567,8 @@
         "value": 0
        }
       ],
-      "got_now": 681,
-      "gave_now": 1601,
+      "got_now": 978,
+      "gave_now": 1876,
       "grade": "D"
      }
     }
@@ -3634,8 +3634,8 @@
        "was_pos_rank": "RB29",
        "was_rank": 83,
        "was_basis": "2024 Wk 1-9",
-       "now_pos_rank": "RB8",
-       "now_rank": 28,
+       "now_pos_rank": "RB6",
+       "now_rank": 18,
        "now_basis": "2026 so far",
        "was_value": 1909,
        "value_scale": "shared"
@@ -3662,8 +3662,8 @@
        "was_pos_rank": "QB15",
        "was_rank": 36,
        "was_basis": "2024 Wk 1-9",
-       "now_pos_rank": "QB11",
-       "now_rank": 27,
+       "now_pos_rank": "QB9",
+       "now_rank": 19,
        "now_basis": "2026 so far",
        "was_value": 1737,
        "value_scale": "shared"
@@ -3696,7 +3696,7 @@
        {
         "kind": "player",
         "label": "Javonte Williams (RB)",
-        "value": 3234
+        "value": 3796
        },
        {
         "kind": "pick",
@@ -3706,16 +3706,16 @@
         "value": 0
        }
       ],
-      "got_now": 3234,
-      "gave_now": 1893,
-      "grade": "B"
+      "got_now": 3796,
+      "gave_now": 1860,
+      "grade": "A"
      },
      "915765963616985088": {
       "items": [
        {
         "kind": "player",
         "label": "Jared Goff (QB)",
-        "value": 1893
+        "value": 1860
        },
        {
         "kind": "pick",
@@ -3732,9 +3732,9 @@
         "value": 0
        }
       ],
-      "got_now": 1893,
-      "gave_now": 3234,
-      "grade": "D"
+      "got_now": 1860,
+      "gave_now": 3796,
+      "grade": "F"
      }
     }
    }
@@ -3797,8 +3797,8 @@
        "was_pos_rank": "WR31",
        "was_rank": 85,
        "was_basis": "2024 Wk 1-7",
-       "now_pos_rank": "WR94",
-       "now_rank": 231,
+       "now_pos_rank": "WR98",
+       "now_rank": 240,
        "now_basis": "2026 so far",
        "was_value": 7038,
        "value_scale": "shared"
@@ -3817,8 +3817,8 @@
        "was_pos_rank": "RB113",
        "was_rank": 442,
        "was_basis": "2024 Wk 1-7",
-       "now_pos_rank": "RB98",
-       "now_rank": 374,
+       "now_pos_rank": "RB99",
+       "now_rank": 382,
        "now_basis": "2026 so far",
        "was_value": 3232,
        "value_scale": "shared"
@@ -3844,11 +3844,11 @@
        {
         "kind": "player",
         "label": "Marvin Harrison Jr. (WR)",
-        "value": 1888
+        "value": 1678
        }
       ],
-      "got_now": 1888,
-      "gave_now": 1573,
+      "got_now": 1678,
+      "gave_now": 1434,
       "grade": "C"
      },
      "861422415547318272": {
@@ -3856,7 +3856,7 @@
        {
         "kind": "player",
         "label": "Jonathon Brooks (RB)",
-        "value": 1573
+        "value": 1434
        },
        {
         "kind": "pick",
@@ -3866,8 +3866,8 @@
         "value": 0
        }
       ],
-      "got_now": 1573,
-      "gave_now": 1888,
+      "got_now": 1434,
+      "gave_now": 1678,
       "grade": "C"
      }
     }
@@ -3939,8 +3939,8 @@
        "was_pos_rank": "RB20",
        "was_rank": 63,
        "was_basis": "2024 Wk 1-5",
-       "now_pos_rank": "RB136",
-       "now_rank": 505,
+       "now_pos_rank": "RB137",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 1293,
        "value_scale": "shared"
@@ -3964,7 +3964,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 6,
+      "gave_now": 0,
       "grade": "C"
      },
      "861422415547318272": {
@@ -3972,10 +3972,10 @@
        {
         "kind": "player",
         "label": "Zack Moss (RB)",
-        "value": 6
+        "value": 0
        }
       ],
-      "got_now": 6,
+      "got_now": 0,
       "gave_now": 0,
       "grade": "C"
      }
@@ -4039,7 +4039,7 @@
        "was_rank": 85,
        "was_basis": "2024 Wk 1-5",
        "now_pos_rank": "WR10",
-       "now_rank": 42,
+       "now_rank": 35,
        "now_basis": "2026 so far",
        "was_value": 4689,
        "value_scale": "shared"
@@ -4058,8 +4058,8 @@
        "was_pos_rank": "RB9",
        "was_rank": 33,
        "was_basis": "2024 Wk 1-5",
-       "now_pos_rank": "RB45",
-       "now_rank": 177,
+       "now_pos_rank": "RB49",
+       "now_rank": 191,
        "now_basis": "2026 so far",
        "was_value": 2459,
        "value_scale": "shared"
@@ -4077,11 +4077,11 @@
        {
         "kind": "player",
         "label": "Chris Olave (WR)",
-        "value": 4430
+        "value": 4044
        }
       ],
-      "got_now": 4430,
-      "gave_now": 806,
+      "got_now": 4044,
+      "gave_now": 654,
       "grade": "A"
      },
      "915765963616985088": {
@@ -4089,11 +4089,11 @@
        {
         "kind": "player",
         "label": "Brian Robinson Jr. (RB)",
-        "value": 806
+        "value": 654
        }
       ],
-      "got_now": 806,
-      "gave_now": 4430,
+      "got_now": 654,
+      "gave_now": 4044,
       "grade": "F"
      }
     }
@@ -4186,8 +4186,8 @@
        "was_pos_rank": "RB20",
        "was_rank": 59,
        "was_basis": "2024 Wk 1-2",
-       "now_pos_rank": "RB10",
-       "now_rank": 31,
+       "now_pos_rank": "RB8",
+       "now_rank": 25,
        "now_basis": "2026 so far",
        "was_value": 2452,
        "value_scale": "shared"
@@ -4199,8 +4199,8 @@
        "was_pos_rank": "WR65",
        "was_rank": 155,
        "was_basis": "2024 Wk 1-2",
-       "now_pos_rank": "WR83",
-       "now_rank": 201,
+       "now_pos_rank": "WR88",
+       "now_rank": 210,
        "now_basis": "2026 so far",
        "was_value": 2133,
        "value_scale": "shared"
@@ -4238,7 +4238,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 3925,
+      "gave_now": 3884,
       "grade": "F"
      },
      "915765963616985088": {
@@ -4246,15 +4246,15 @@
        {
         "kind": "player",
         "label": "Derrick Henry (RB)",
-        "value": 2368
+        "value": 2703
        },
        {
         "kind": "player",
         "label": "Terry McLaurin (WR)",
-        "value": 1557
+        "value": 1181
        }
       ],
-      "got_now": 3925,
+      "got_now": 3884,
       "gave_now": 0,
       "grade": "A"
      }
@@ -4317,8 +4317,8 @@
        "was_pos_rank": "QB14",
        "was_rank": 68,
        "was_basis": "2024 Wk 1-2",
-       "now_pos_rank": "QB1",
-       "now_rank": 3,
+       "now_pos_rank": "QB3",
+       "now_rank": 6,
        "now_basis": "2026 so far",
        "was_value": 3235,
        "value_scale": "shared"
@@ -4337,8 +4337,8 @@
        "was_pos_rank": "QB4",
        "was_rank": 12,
        "was_basis": "2024 Wk 1-2",
-       "now_pos_rank": "QB17",
-       "now_rank": 51,
+       "now_pos_rank": "QB21",
+       "now_rank": 58,
        "now_basis": "2026 so far",
        "was_value": 2156,
        "value_scale": "shared"
@@ -4356,11 +4356,11 @@
        {
         "kind": "player",
         "label": "Joe Burrow (QB)",
-        "value": 4078
+        "value": 4216
        }
       ],
-      "got_now": 4078,
-      "gave_now": 3124,
+      "got_now": 4216,
+      "gave_now": 2819,
       "grade": "B"
      },
      "861422415547318272": {
@@ -4368,11 +4368,11 @@
        {
         "kind": "player",
         "label": "Jayden Daniels (QB)",
-        "value": 3124
+        "value": 2819
        }
       ],
-      "got_now": 3124,
-      "gave_now": 4078,
+      "got_now": 2819,
+      "gave_now": 4216,
       "grade": "D"
      }
     }
@@ -4438,7 +4438,7 @@
        "was_rank": 3,
        "was_basis": "2023 finish",
        "now_pos_rank": "RB2",
-       "now_rank": 6,
+       "now_rank": 7,
        "now_basis": "2026 so far",
        "was_value": 6606,
        "value_scale": "shared"
@@ -4465,8 +4465,8 @@
        "was_pos_rank": "WR11",
        "was_rank": 28,
        "was_basis": "2023 finish",
-       "now_pos_rank": "WR3",
-       "now_rank": 13,
+       "now_pos_rank": "WR4",
+       "now_rank": 17,
        "now_basis": "2026 so far",
        "was_value": 11122,
        "value_scale": "shared"
@@ -4492,7 +4492,7 @@
        {
         "kind": "player",
         "label": "Christian McCaffrey (RB)",
-        "value": 4760
+        "value": 5704
        },
        {
         "kind": "pick",
@@ -4502,8 +4502,8 @@
         "value": 0
        }
       ],
-      "got_now": 4760,
-      "gave_now": 9541,
+      "got_now": 5704,
+      "gave_now": 8726,
       "grade": "F"
      },
      "861422415547318272": {
@@ -4511,7 +4511,7 @@
        {
         "kind": "player",
         "label": "Ja'Marr Chase (WR)",
-        "value": 9541
+        "value": 8726
        },
        {
         "kind": "pick",
@@ -4521,8 +4521,8 @@
         "value": 0
        }
       ],
-      "got_now": 9541,
-      "gave_now": 4760,
+      "got_now": 8726,
+      "gave_now": 5704,
       "grade": "A"
      }
     }
@@ -4727,8 +4727,8 @@
        "was_pos_rank": "RB3",
        "was_rank": 9,
        "was_basis": "2023 Wk 1-8",
-       "now_pos_rank": "RB136",
-       "now_rank": 505,
+       "now_pos_rank": "RB137",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 1702,
        "value_scale": "shared"
@@ -4774,10 +4774,10 @@
        {
         "kind": "player",
         "label": "Raheem Mostert (RB)",
-        "value": 7
+        "value": 0
        }
       ],
-      "got_now": 7,
+      "got_now": 0,
       "gave_now": 0,
       "grade": "C"
      },
@@ -4806,7 +4806,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 7,
+      "gave_now": 0,
       "grade": "C"
      }
     }
@@ -4870,8 +4870,8 @@
        "was_pos_rank": "RB31",
        "was_rank": 132,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "RB69",
-       "now_rank": 254,
+       "now_pos_rank": "RB70",
+       "now_rank": 264,
        "now_basis": "2026 so far",
        "was_value": 2830,
        "value_scale": "shared"
@@ -4917,7 +4917,7 @@
        {
         "kind": "player",
         "label": "Dameon Pierce (RB)",
-        "value": 22
+        "value": 0
        },
        {
         "kind": "pick",
@@ -4927,8 +4927,8 @@
         "value": 0
        }
       ],
-      "got_now": 22,
-      "gave_now": 3043,
+      "got_now": 0,
+      "gave_now": 3294,
       "grade": "F"
      },
      "909255939126161408": {
@@ -4936,11 +4936,11 @@
        {
         "kind": "player",
         "label": "Brock Purdy (QB)",
-        "value": 3043
+        "value": 3294
        }
       ],
-      "got_now": 3043,
-      "gave_now": 22,
+      "got_now": 3294,
+      "gave_now": 0,
       "grade": "A"
      }
     }
@@ -5006,8 +5006,8 @@
        "was_pos_rank": "WR7",
        "was_rank": 16,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "WR198",
-       "now_rank": 505,
+       "now_pos_rank": "WR202",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 1129,
        "value_scale": "shared"
@@ -5034,8 +5034,8 @@
        "was_pos_rank": "QB14",
        "was_rank": 32,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "QB6",
-       "now_rank": 12,
+       "now_pos_rank": "QB7",
+       "now_rank": 15,
        "now_basis": "2026 so far",
        "was_value": 1427,
        "value_scale": "shared"
@@ -5079,7 +5079,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 2594,
+      "gave_now": 2680,
       "grade": "F"
      },
      "908808510823997440": {
@@ -5087,7 +5087,7 @@
        {
         "kind": "player",
         "label": "Jordan Love (QB)",
-        "value": 2594
+        "value": 2680
        },
        {
         "kind": "pick",
@@ -5104,7 +5104,7 @@
         "value": 0
        }
       ],
-      "got_now": 2594,
+      "got_now": 2680,
       "gave_now": 0,
       "grade": "A"
      }
@@ -5169,8 +5169,8 @@
        "was_pos_rank": "WR81",
        "was_rank": 199,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "WR124",
-       "now_rank": 311,
+       "now_pos_rank": "WR130",
+       "now_rank": 321,
        "now_basis": "2026 so far",
        "was_value": 1270,
        "value_scale": "shared"
@@ -5189,8 +5189,8 @@
        "was_pos_rank": "WR169",
        "was_rank": 435,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "WR47",
-       "now_rank": 127,
+       "now_pos_rank": "WR54",
+       "now_rank": 140,
        "now_basis": "2026 so far",
        "was_value": 649,
        "value_scale": "shared"
@@ -5216,11 +5216,11 @@
        {
         "kind": "player",
         "label": "Brandin Cooks (WR)",
-        "value": 5
+        "value": 0
        }
       ],
-      "got_now": 5,
-      "gave_now": 677,
+      "got_now": 0,
+      "gave_now": 691,
       "grade": "C"
      },
      "915765963616985088": {
@@ -5228,7 +5228,7 @@
        {
         "kind": "player",
         "label": "Kayshon Boutte (WR)",
-        "value": 677
+        "value": 691
        },
        {
         "kind": "pick",
@@ -5238,8 +5238,8 @@
         "value": 0
        }
       ],
-      "got_now": 677,
-      "gave_now": 5,
+      "got_now": 691,
+      "gave_now": 0,
       "grade": "C"
      }
     }
@@ -5303,8 +5303,8 @@
        "was_pos_rank": "RB23",
        "was_rank": 99,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "RB136",
-       "now_rank": 505,
+       "now_pos_rank": "RB137",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 2485,
        "value_scale": "shared"
@@ -5323,8 +5323,8 @@
        "was_pos_rank": "RB26",
        "was_rank": 111,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "RB136",
-       "now_rank": 505,
+       "now_pos_rank": "RB137",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 1087,
        "value_scale": "shared"
@@ -5350,11 +5350,11 @@
        {
         "kind": "player",
         "label": "Joe Mixon (RB)",
-        "value": 9
+        "value": 0
        }
       ],
-      "got_now": 9,
-      "gave_now": 4,
+      "got_now": 0,
+      "gave_now": 0,
       "grade": "C"
      },
      "915765963616985088": {
@@ -5362,7 +5362,7 @@
        {
         "kind": "player",
         "label": "Gus Edwards (RB)",
-        "value": 4
+        "value": 0
        },
        {
         "kind": "pick",
@@ -5372,8 +5372,8 @@
         "value": 0
        }
       ],
-      "got_now": 4,
-      "gave_now": 9,
+      "got_now": 0,
+      "gave_now": 0,
       "grade": "C"
      }
     }
@@ -5437,8 +5437,8 @@
        "was_pos_rank": "WR33",
        "was_rank": 79,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "WR198",
-       "now_rank": 505,
+       "now_pos_rank": "WR202",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 1919,
        "value_scale": "shared"
@@ -5465,8 +5465,8 @@
        "was_pos_rank": "RB5",
        "was_rank": 26,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "RB136",
-       "now_rank": 505,
+       "now_pos_rank": "RB137",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 941,
        "value_scale": "shared"
@@ -5484,7 +5484,7 @@
        {
         "kind": "player",
         "label": "Gabe Davis (WR)",
-        "value": 4
+        "value": 0
        },
        {
         "kind": "pick",
@@ -5494,8 +5494,8 @@
         "value": 0
        }
       ],
-      "got_now": 4,
-      "gave_now": 6,
+      "got_now": 0,
+      "gave_now": 0,
       "grade": "C"
      },
      "909255939126161408": {
@@ -5503,11 +5503,11 @@
        {
         "kind": "player",
         "label": "Zack Moss (RB)",
-        "value": 6
+        "value": 0
        }
       ],
-      "got_now": 6,
-      "gave_now": 4,
+      "got_now": 0,
+      "gave_now": 0,
       "grade": "C"
      }
     }
@@ -5574,8 +5574,8 @@
        "was_pos_rank": "RB36",
        "was_rank": 141,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "RB93",
-       "now_rank": 358,
+       "now_pos_rank": "RB96",
+       "now_rank": 370,
        "now_basis": "2026 so far",
        "was_value": 2211,
        "value_scale": "shared"
@@ -5587,8 +5587,8 @@
        "was_pos_rank": "QB15",
        "was_rank": 39,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "QB3",
-       "now_rank": 7,
+       "now_pos_rank": "QB5",
+       "now_rank": 10,
        "now_basis": "2026 so far",
        "was_value": 2415,
        "value_scale": "shared"
@@ -5607,8 +5607,8 @@
        "was_pos_rank": "RB18",
        "was_rank": 70,
        "was_basis": "2023 Wk 1-7",
-       "now_pos_rank": "RB136",
-       "now_rank": 505,
+       "now_pos_rank": "RB137",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 1736,
        "value_scale": "shared"
@@ -5626,16 +5626,16 @@
        {
         "kind": "player",
         "label": "Najee Harris (RB)",
-        "value": 108
+        "value": 96
        },
        {
         "kind": "player",
         "label": "C.J. Stroud (QB)",
-        "value": 2530
+        "value": 2642
        }
       ],
-      "got_now": 2638,
-      "gave_now": 185,
+      "got_now": 2738,
+      "gave_now": 0,
       "grade": "A"
      },
      "853109226401288192": {
@@ -5643,11 +5643,11 @@
        {
         "kind": "player",
         "label": "Jerome Ford (RB)",
-        "value": 185
+        "value": 0
        }
       ],
-      "got_now": 185,
-      "gave_now": 2638,
+      "got_now": 0,
+      "gave_now": 2738,
       "grade": "F"
      }
     }
@@ -5716,8 +5716,8 @@
        "was_pos_rank": "WR110",
        "was_rank": 257,
        "was_basis": "2023 Wk 1-3",
-       "now_pos_rank": "WR198",
-       "now_rank": 505,
+       "now_pos_rank": "WR202",
+       "now_rank": 512,
        "now_basis": "2026 so far",
        "was_value": 2415,
        "value_scale": "shared"
@@ -5729,8 +5729,8 @@
        "was_pos_rank": "RB22",
        "was_rank": 94,
        "was_basis": "2023 Wk 1-3",
-       "now_pos_rank": "RB26",
-       "now_rank": 92,
+       "now_pos_rank": "RB29",
+       "now_rank": 103,
        "now_basis": "2026 so far",
        "was_value": 1417,
        "value_scale": "shared"
@@ -5749,8 +5749,8 @@
        "was_pos_rank": "RB8",
        "was_rank": 38,
        "was_basis": "2023 Wk 1-3",
-       "now_pos_rank": "RB45",
-       "now_rank": 177,
+       "now_pos_rank": "RB49",
+       "now_rank": 191,
        "now_basis": "2026 so far",
        "was_value": 2121,
        "value_scale": "shared"
@@ -5776,16 +5776,16 @@
        {
         "kind": "player",
         "label": "Diontae Johnson (WR)",
-        "value": 4
+        "value": 0
        },
        {
         "kind": "player",
         "label": "Tyler Allgeier (RB)",
-        "value": 1190
+        "value": 1225
        }
       ],
-      "got_now": 1194,
-      "gave_now": 806,
+      "got_now": 1225,
+      "gave_now": 654,
       "grade": "C"
      },
      "909255939126161408": {
@@ -5793,7 +5793,7 @@
        {
         "kind": "player",
         "label": "Brian Robinson Jr. (RB)",
-        "value": 806
+        "value": 654
        },
        {
         "kind": "pick",
@@ -5803,8 +5803,8 @@
         "value": 0
        }
       ],
-      "got_now": 806,
-      "gave_now": 1194,
+      "got_now": 654,
+      "gave_now": 1225,
       "grade": "C"
      }
     }
@@ -5873,8 +5873,8 @@
        "was_pos_rank": "WR21",
        "was_rank": 49,
        "was_basis": "2023 Wk 1-1",
-       "now_pos_rank": "WR112",
-       "now_rank": 282,
+       "now_pos_rank": "WR118",
+       "now_rank": 291,
        "now_basis": "2026 so far",
        "was_value": 7381,
        "value_scale": "shared"
@@ -5893,8 +5893,8 @@
        "was_pos_rank": "WR8",
        "was_rank": 14,
        "was_basis": "2023 Wk 1-1",
-       "now_pos_rank": "WR127",
-       "now_rank": 318,
+       "now_pos_rank": "WR134",
+       "now_rank": 329,
        "now_basis": "2026 so far",
        "was_value": 2775,
        "value_scale": "shared"
@@ -5906,8 +5906,8 @@
        "was_pos_rank": "WR43",
        "was_rank": 101,
        "was_basis": "2023 Wk 1-1",
-       "now_pos_rank": "WR167",
-       "now_rank": 416,
+       "now_pos_rank": "WR171",
+       "now_rank": 426,
        "now_basis": "2026 so far",
        "was_value": 1930,
        "value_scale": "shared"
@@ -5933,24 +5933,24 @@
        {
         "kind": "player",
         "label": "A.J. Brown (WR)",
-        "value": 2550
+        "value": 1763
        }
       ],
-      "got_now": 2550,
-      "gave_now": 1603,
-      "grade": "B"
+      "got_now": 1763,
+      "gave_now": 1130,
+      "grade": "C"
      },
      "861421486488031232": {
       "items": [
        {
         "kind": "player",
         "label": "Michael Pittman Jr. (WR)",
-        "value": 1597
+        "value": 1130
        },
        {
         "kind": "player",
         "label": "Elijah Moore (WR)",
-        "value": 6
+        "value": 0
        },
        {
         "kind": "pick",
@@ -5960,9 +5960,9 @@
         "value": 0
        }
       ],
-      "got_now": 1603,
-      "gave_now": 2550,
-      "grade": "D"
+      "got_now": 1130,
+      "gave_now": 1763,
+      "grade": "C"
      }
     }
    }
@@ -5972,60 +5972,60 @@
   "days": 28,
   "risers": [
    {
-    "id": "12501",
-    "name": "Matthew Golden",
-    "pos": "WR",
-    "value": 4319,
-    "change": 1860
+    "id": "9221",
+    "name": "Jahmyr Gibbs",
+    "pos": "RB",
+    "value": 11771,
+    "change": 2653
    },
    {
     "id": "13345",
     "name": "Jonah Coleman",
     "pos": "RB",
-    "value": 3131,
-    "change": 1604
-   },
-   {
-    "id": "11584",
-    "name": "Bucky Irving",
-    "pos": "RB",
-    "value": 4273,
-    "change": 1514
+    "value": 4190,
+    "change": 2632
    },
    {
     "id": "11604",
     "name": "Brock Bowers",
     "pos": "TE",
-    "value": 5860,
-    "change": 1406
+    "value": 6766,
+    "change": 2306
+   },
+   {
+    "id": "12501",
+    "name": "Matthew Golden",
+    "pos": "WR",
+    "value": 4693,
+    "change": 2286
+   },
+   {
+    "id": "11584",
+    "name": "Bucky Irving",
+    "pos": "RB",
+    "value": 5003,
+    "change": 2208
    },
    {
     "id": "12490",
     "name": "Bhayshul Tuten",
     "pos": "RB",
-    "value": 3691,
-    "change": 1218
-   },
-   {
-    "id": "6786",
-    "name": "CeeDee Lamb",
-    "pos": "WR",
-    "value": 7772,
-    "change": 942
+    "value": 4329,
+    "change": 1916
    },
    {
     "id": "7594",
     "name": "Chuba Hubbard",
     "pos": "RB",
-    "value": 2818,
-    "change": 880
+    "value": 3773,
+    "change": 1861
    },
    {
-    "id": "12495",
-    "name": "Ollie Gordon II",
+    "id": "4034",
+    "name": "Christian McCaffrey",
     "pos": "RB",
-    "value": 1627,
-    "change": 854
+    "value": 5704,
+    "change": 1745
    }
   ],
   "fallers": [
@@ -6033,57 +6033,57 @@
     "id": "7564",
     "name": "Ja'Marr Chase",
     "pos": "WR",
-    "value": 9541,
-    "change": -2068
+    "value": 8726,
+    "change": -2826
    },
    {
     "id": "5859",
     "name": "A.J. Brown",
     "pos": "WR",
-    "value": 2550,
-    "change": -1400
-   },
-   {
-    "id": "7526",
-    "name": "Jaylen Waddle",
-    "pos": "WR",
-    "value": 2482,
-    "change": -1305
+    "value": 1763,
+    "change": -2159
    },
    {
     "id": "12527",
     "name": "Ashton Jeanty",
     "pos": "RB",
-    "value": 5206,
-    "change": -1258
+    "value": 4617,
+    "change": -1900
    },
    {
-    "id": "11635",
-    "name": "Ladd McConkey",
+    "id": "7526",
+    "name": "Jaylen Waddle",
     "pos": "WR",
-    "value": 2762,
-    "change": -1254
+    "value": 1883,
+    "change": -1842
    },
    {
     "id": "4881",
     "name": "Lamar Jackson",
     "pos": "QB",
-    "value": 3181,
-    "change": -1164
-   },
-   {
-    "id": "6904",
-    "name": "Jalen Hurts",
-    "pos": "QB",
-    "value": 2096,
-    "change": -997
+    "value": 2639,
+    "change": -1684
    },
    {
     "id": "12514",
     "name": "Emeka Egbuka",
     "pos": "WR",
-    "value": 3508,
-    "change": -909
+    "value": 2756,
+    "change": -1629
+   },
+   {
+    "id": "11635",
+    "name": "Ladd McConkey",
+    "pos": "WR",
+    "value": 2373,
+    "change": -1585
+   },
+   {
+    "id": "6904",
+    "name": "Jalen Hurts",
+    "pos": "QB",
+    "value": 1600,
+    "change": -1575
    }
   ]
  }
