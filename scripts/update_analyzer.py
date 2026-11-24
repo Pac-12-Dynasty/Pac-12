@@ -459,21 +459,22 @@ def main():
     def pts(w, d):
         return (w or 0) + (d or 0) / 100
 
+    # Teams are keyed by franchise (the Sleeper roster slot, "1"-"12"), which stays put when owners change
     teams = {}
     for r in rosters:
-        uid = r.get("owner_id")
-        if not uid:
-            continue
+        owner_uid = r.get("owner_id")
+        uid = str(r["roster_id"])
         s = r.get("settings") or {}
         g = (s.get("wins") or 0) + (s.get("losses") or 0) + (s.get("ties") or 0)
-        u = users.get(uid, {})
+        u = users.get(owner_uid, {}) if owner_uid else {}
         starters = [p for p in (r.get("starters") or []) if p and p != "0"]
         ages = [age_from(pinfo.get(p, {}).get("birth_date")) for p in starters]
         ages = [a for a in ages if a]
         teams[uid] = {
             "roster_id": r["roster_id"],
-            "team": (u.get("metadata") or {}).get("team_name") or u.get("display_name") or "Unknown",
-            "owner": u.get("display_name") or "Unknown",
+            "team": (u.get("metadata") or {}).get("team_name") or u.get("display_name") or "Team " + uid,
+            "owner": u.get("display_name") or "No owner",
+            "user_id": owner_uid,
             "record": f"{s.get('wins') or 0}-{s.get('losses') or 0}" + (f"-{s['ties']}" if s.get("ties") else ""),
             "win_pct": ((s.get("wins") or 0) + (s.get("ties") or 0) / 2) / g if g else 0.5,
             "pf": round(pts(s.get("fpts"), s.get("fpts_decimal")), 2),
@@ -507,14 +508,13 @@ def main():
             prev_order = sorted(prev, key=lambda r: (
                 -(((r.get("settings") or {}).get("wins") or 0) / max(((r.get("settings") or {}).get("wins") or 0) + ((r.get("settings") or {}).get("losses") or 0), 1)),
                 -(((r.get("settings") or {}).get("fpts") or 0))))
-            prev_final = {r.get("owner_id"): i + 1 for i, r in enumerate(prev_order)}
+            prev_final = {str(r["roster_id"]): i + 1 for i, r in enumerate(prev_order)}
         except Exception:
             prev_final = {}
     wins_of = {}
     for r in rosters:
         st = r.get("settings") or {}
-        if r.get("owner_id"):
-            wins_of[r["owner_id"]] = (st.get("wins") or 0) + (st.get("ties") or 0) / 2
+        wins_of[str(r["roster_id"])] = (st.get("wins") or 0) + (st.get("ties") or 0) / 2
     cutoff_uid = order[min(playoff_teams, len(order)) - 1] if order else None
     for uid in order:
         t = teams[uid]
