@@ -114,7 +114,9 @@
   <script src="auth.js"></script>
   <script src="leaders.js"></script>
   <script>
-    var data, me, uid = new URLSearchParams(location.search).get("owner");
+    var params = new URLSearchParams(location.search);
+    // Teams are franchises 1-12. Older links use ?owner=<Sleeper user id>, which still work.
+    var data, me, uid = params.get("franchise") || params.get("owner");
 
     function el(tag, cls, text) {
       var node = document.createElement(tag);
@@ -128,7 +130,7 @@
     function owner(id) { return (data.owners || {})[id] || { team: "Unknown", name: "" }; }
     function legacyLink(id) {
       var a = el("a", "", owner(id).team || owner(id).name);
-      a.href = "team-legacy.html?owner=" + encodeURIComponent(id);
+      a.href = "team-legacy.html?franchise=" + encodeURIComponent(id);
       return a;
     }
     function record(w, l, t) { return w + "-" + l + (t ? "-" + t : ""); }
@@ -178,7 +180,13 @@
       document.title = me.team + " Legacy | Pac 12 Dynasty";
       document.getElementById("title").textContent = me.team;
       document.getElementById("subtitle").textContent = "Owner: " + me.name + " · " + me.seasons.length + " season" + (me.seasons.length === 1 ? "" : "s") + " in the league";
-      document.getElementById("team-link").href = "team.html?owner=" + encodeURIComponent(uid);
+      var past = (me.owners || []).slice(0, -1);
+      if (past.length) {
+        document.getElementById("subtitle").textContent += " · Previous owners: " + past.map(function (o) {
+          return o.name + " (" + (o.from === o.to ? o.from : o.from + "–" + o.to) + ")";
+        }).join(", ");
+      }
+      document.getElementById("team-link").href = "team.html?roster=" + encodeURIComponent(uid);
       document.getElementById("team-link").textContent = "← " + me.team + " team page";
 
       // Stat tiles
@@ -248,6 +256,8 @@
       // Season by season
       table(document.getElementById("seasons"), [
         { label: "Season", value: function (s) { return s.season; }, num: true },
+        { label: "Team Name", value: function (s) { return s.team || me.team; } },
+        { label: "Owner", value: function (s) { return s.owner || me.name; } },
         { label: "Record", value: function (s) { return pct(s.w, s.l, s.t); }, show: function (s) { return record(s.w, s.l, s.t); }, num: true },
         { label: "P/F", value: function (s) { return s.pf; }, show: function (s) { return s.pf.toFixed(2); }, num: true },
         { label: "P/A", value: function (s) { return s.pa; }, show: function (s) { return s.pa.toFixed(2); }, num: true },
@@ -304,6 +314,16 @@
       })
       .then(function (json) {
         data = json;
+        if (!(data.owners || {})[uid]) {
+          // An old ?owner= link: find the franchise this person owns (or last owned)
+          var best = null;
+          Object.keys(data.owners || {}).forEach(function (fid) {
+            (data.owners[fid].owners || []).forEach(function (o) {
+              if (o.user_id === uid && (!best || o.to > best.to)) best = { fid: fid, to: o.to };
+            });
+          });
+          if (best) uid = best.fid;
+        }
         me = (data.owners || {})[uid];
         if (!me) throw new Error("Couldn't find that team. Open it from a team page or the Legacy page.");
         render();
