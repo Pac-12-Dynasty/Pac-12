@@ -151,10 +151,8 @@
         var links = el("div", "links");
         var tp = el("a", "", "Team page"); tp.href = "team.html?roster=" + x.roster;
         links.appendChild(tp);
-        if (x.ownerId) {
-          var lg = el("a", "", "Legacy"); lg.href = "team-legacy.html?owner=" + encodeURIComponent(x.ownerId);
-          links.appendChild(lg);
-        }
+        var lg = el("a", "", "Legacy"); lg.href = "team-legacy.html?franchise=" + x.roster;
+        links.appendChild(lg);
         li.appendChild(links);
         ul.appendChild(li);
       });
