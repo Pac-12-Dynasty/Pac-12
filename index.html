@@ -69,6 +69,37 @@
       @keyframes drop { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
     }
 
+    /* Playoff bracket (shown from the first playoff week until April) */
+    /* The bracket needs room: the title sits above it and the bracket runs full width */
+    .hero.bracket-mode .wrap { grid-template-columns: minmax(0, 1fr); gap: 1.8rem; }
+    .hero.bracket-mode .title { display: grid; grid-template-columns: auto 1fr; gap: 0 3rem; align-items: end; }
+    .hero.bracket-mode .title h1 { grid-row: span 3; }
+    .hero.bracket-mode .champ { margin-top: 1rem; }
+    @media (max-width: 760px) { .hero.bracket-mode .title { display: block; } }
+    .bk-scroll { overflow-x: auto; padding: 0.2rem 1.1rem 0.2rem; }
+    .bk { position: relative; min-width: 680px; }
+    .bk-hint { display: none; color: #a8a095; font-size: 0.82rem; margin: 0 1.1rem 0.4rem; }
+    @media (max-width: 760px) { .bk-hint { display: block; } }
+    .bk .ln { position: absolute; height: 24px; display: flex; align-items: flex-end; gap: 0.35rem; padding: 0 0.5rem 3px 0.3rem;
+      border-bottom: 2px solid var(--gold); font-size: 0.9rem; line-height: 1.1; box-sizing: border-box; }
+    .bk .sd { font-family: var(--display); font-weight: 800; color: var(--gold); flex: none; }
+    .bk .nm { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
+    .bk .nm a { color: var(--paper); text-decoration: none; }
+    .bk .nm a:hover { color: var(--gold); text-decoration: underline; }
+    .bk .sc { flex: none; font-variant-numeric: tabular-nums; color: #cfc7bb; font-size: 0.85rem; }
+    .bk .ph { color: #6f685f; font-size: 0.82rem; }
+    .bk .ln.out .nm a, .bk .ln.out .sc { color: #8c847a; }
+    .bk .cn { position: absolute; width: 0; border-right: 2px solid var(--gold); }
+    .bk .ln.win { border-bottom-width: 4px; font-size: 1rem; }
+    .bk .ln.win .nm a { color: var(--gold); font-family: var(--display); font-weight: 800; font-size: 1.15rem; }
+    .bk .tag { position: absolute; padding-left: 0.3rem; color: #a8a095; font-size: 0.78rem; font-weight: 700; }
+    .bk .third-title { color: #a8a095; }
+    @media (prefers-reduced-motion: no-preference) {
+      .bk .ln, .bk .cn { animation: fadein 0.5s ease-out both; }
+      .bk .ln.win { animation-delay: 0.25s; }
+      @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+    }
+
     /* ---------- Below the hero ---------- */
     .lower { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 2.5rem; padding-top: 2.5rem; padding-bottom: 1rem; }
     .lower h2 { font-family: var(--display); font-weight: 800; font-size: 1.9rem; margin: 0 0 0.6rem; color: var(--ink); line-height: 1; }
@@ -200,21 +231,11 @@
       return isNaN(d) ? "" : d.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
     }
 
-    // ---------- The playoff race, live from Sleeper ----------
-    var findLeague = window.pac12 && window.pac12.leagueId ? window.pac12.leagueId() : Promise.resolve(BASE_LEAGUE_ID);
-    findLeague.then(function (id) {
-      return Promise.all([
-        getJSON(API + "/league/" + id),
-        getJSON(API + "/league/" + id + "/rosters"),
-        getJSON(API + "/league/" + id + "/users"),
-        getJSON(API + "/state/nfl").catch(function () { return null; })
-      ]);
-    }).then(function (res) {
-      var league = res[0], rosters = res[1], users = {}, state = res[3];
-      res[2].forEach(function (u) { users[u.user_id] = u; });
-      var playoffTeams = (league.settings || {}).playoff_teams || 6;
-
-      var teams = rosters.map(function (r) {
+    // ---------- The hero board, live from Sleeper ----------
+    // Regular season: the playoff race. From the first playoff week until April 1
+    // (when the draft lottery odds are set), the playoff bracket takes its place.
+    function standings(rosters, users) {
+      return rosters.map(function (r) {
         var s = r.settings || {}, u = users[r.owner_id] || {};
         var w = s.wins || 0, l = s.losses || 0, t = s.ties || 0, g = w + l + t;
         return {
@@ -223,6 +244,49 @@
           w: w, l: l, t: t, pct: g ? (w + t / 2) / g : 0, pf: pts(s.fpts, s.fpts_decimal)
         };
       }).sort(function (a, b) { return (b.pct - a.pct) || (b.pf - a.pf); });
+    }
+    function loadLeague(id) {
+      return Promise.all([
+        getJSON(API + "/league/" + id),
+        getJSON(API + "/league/" + id + "/rosters"),
+        getJSON(API + "/league/" + id + "/users")
+      ]).then(function (res) {
+        var users = {};
+        res[2].forEach(function (u) { users[u.user_id] = u; });
+        return { league: res[0], rosters: res[1], users: users };
+      });
+    }
+    function beforeApril(season) {
+      // Lottery odds are set in April of the year after the season
+      return new Date() < new Date(Number(season) + 1, 3, 1);
+    }
+
+    var findLeague = window.pac12 && window.pac12.leagueId ? window.pac12.leagueId() : Promise.resolve(BASE_LEAGUE_ID);
+    Promise.all([findLeague, getJSON(API + "/state/nfl").catch(function () { return null; })]).then(function (res) {
+      var state = res[1];
+      return loadLeague(res[0]).then(function (cur) {
+        var lg = cur.league, start = (lg.settings || {}).playoff_week_start || 15;
+        var inPlayoffs = lg.status === "post_season" || lg.status === "complete" ||
+          (lg.status === "in_season" && state && String(state.season) === String(lg.season) && Number(state.week) >= start);
+        if (inPlayoffs && beforeApril(lg.season)) return renderBracket(cur, state);
+        // The league renews before April: keep showing last season's bracket until then
+        if ((lg.status === "pre_draft" || lg.status === "drafting") && lg.previous_league_id && beforeApril(Number(lg.season) - 1)) {
+          return loadLeague(lg.previous_league_id).then(function (prev) {
+            if (prev.league.status === "complete") return renderBracket(prev, state);
+            renderRace(cur, state);
+          });
+        }
+        renderRace(cur, state);
+      });
+    }).catch(function (err) {
+      document.getElementById("board-status").textContent = "Standings didn't load from Sleeper. Refresh in a minute, or open the Standings page.";
+      console.warn(err);
+    });
+
+    function renderRace(cur, state) {
+      var league = cur.league, rosters = cur.rosters, users = cur.users;
+      var playoffTeams = (league.settings || {}).playoff_teams || 6;
+      var teams = standings(rosters, users);
 
       var played = teams.reduce(function (m, x) { return Math.max(m, x.w + x.l + x.t); }, 0);
       var cut = teams[Math.min(playoffTeams, teams.length) - 1];
@@ -268,10 +332,146 @@
       } else {
         document.getElementById("week").textContent = league.season + " season";
       }
-    }).catch(function (err) {
-      document.getElementById("board-status").textContent = "Standings didn't load from Sleeper. Refresh in a minute, or open the Standings page.";
-      console.warn(err);
-    });
+    }
+
+    function renderBracket(cur, state) {
+      var league = cur.league, start = (league.settings || {}).playoff_week_start || 15;
+      var seeds = {}, names = {};
+      standings(cur.rosters, cur.users).forEach(function (x, i) { seeds[x.roster] = i + 1; names[x.roster] = x.name; });
+
+      return getJSON(API + "/league/" + league.league_id + "/winners_bracket").then(function (games) {
+        var rounds = games.reduce(function (m, g) { return Math.max(m, g.r || 1); }, 1);
+        // Points for each playoff week that has started
+        var lastWeek = league.status === "complete" ? start + rounds - 1
+          : (state && String(state.season) === String(league.season) ? Math.min(Number(state.week), start + rounds - 1) : start - 1);
+        var weeks = [];
+        for (var wk = start; wk <= lastWeek; wk++) weeks.push(wk);
+        return Promise.all(weeks.map(function (wk) {
+          return getJSON(API + "/league/" + league.league_id + "/matchups/" + wk).catch(function () { return []; });
+        })).then(function (lists) {
+          var score = {};
+          lists.forEach(function (list, i) {
+            list.forEach(function (m) { score[weeks[i] + ":" + m.roster_id] = m.points; });
+          });
+          drawBracket(league, games, rounds, start, seeds, names, score);
+        });
+      });
+    }
+
+    function drawBracket(league, games, rounds, start, seeds, names, score) {
+      var board = document.querySelector(".board");
+      board.querySelector("h2").textContent = "The Playoff Bracket";
+      document.querySelector(".hero").classList.add("bracket-mode");
+      document.getElementById("board-status").hidden = true;
+      document.getElementById("board").remove();
+
+      var byMatch = {};
+      games.forEach(function (g) { byMatch[g.m] = g; });
+      var final = games.filter(function (g) { return g.p === 1; })[0];
+      var third = games.filter(function (g) { return g.p === 3; })[0];
+      var champ = final && final.w;
+
+      // A classic bracket: every team gets a line, lines join, and the winner moves right.
+      var ROW = 46, wrap = el("div", "bk-scroll"), bk = el("div", "bk");
+      wrap.appendChild(bk);
+      board.insertBefore(el("p", "bk-hint", "Swipe sideways to see the whole bracket."), board.querySelector("h2").nextSibling);
+      board.insertBefore(wrap, document.getElementById("board-note"));
+      var cols = rounds + 1;
+      function colX(c) { return (c / cols) * 100; }   // percent of the width
+      var colW = 100 / cols;
+
+      function line(col, y, rid, g, opts) {
+        opts = opts || {};
+        var d = el("div", "ln" + (opts.cls ? " " + opts.cls : ""));
+        d.style.left = colX(col) + "%";
+        d.style.width = colW + "%";
+        d.style.top = (y - 24) + "px";
+        if (rid != null && names[rid]) {
+          d.appendChild(el("span", "sd", String(seeds[rid] || "")));
+          var nm = el("span", "nm"); var a = el("a", "", names[rid]); a.href = "team.html?roster=" + rid; a.title = names[rid];
+          nm.appendChild(a); d.appendChild(nm);
+          if (g) {
+            var p = score[(start + (g.r || 1) - 1) + ":" + rid];
+            if (p != null && p > 0) d.appendChild(el("span", "sc", Number(p).toFixed(1)));
+            if (g.l === rid) d.classList.add("out");
+          }
+        } else if (opts.placeholder) {
+          d.appendChild(el("span", "ph", opts.placeholder));
+        }
+        bk.appendChild(d);
+      }
+      function joiner(col, y1, y2) {
+        var c = el("div", "cn");
+        c.style.left = "calc(" + colX(col) + "% - 2px)";
+        c.style.top = y1 + "px";
+        c.style.height = (y2 - y1) + "px";
+        bk.appendChild(c);
+      }
+
+      // Lay out a game: returns the y of its winner line. Leaves take the next free row.
+      var row = 0;
+      function place(g, feederFirst) {
+        var slots = [1, 2].map(function (i) {
+          var src = g["t" + i + "_from"];
+          return { rid: g["t" + i], feeder: src && src.w ? byMatch[src.w] : null };
+        });
+        if (feederFirst) slots.sort(function (x, y) { return (y.feeder ? 1 : 0) - (x.feeder ? 1 : 0); });
+        else slots.sort(function (x, y) { return (x.feeder ? 1 : 0) - (y.feeder ? 1 : 0); });
+        var ys = slots.map(function (sl) {
+          var y = sl.feeder ? place(sl.feeder, feederFirst) : (row++ * ROW + ROW);
+          line((g.r || 1) - 1, y, sl.rid, g);
+          return y;
+        });
+        joiner(g.r || 1, Math.min(ys[0], ys[1]), Math.max(ys[0], ys[1]));
+        return (ys[0] + ys[1]) / 2;
+      }
+
+      if (final) {
+        // Top half: byes above the play-in game. Bottom half: the play-in game above the bye.
+        var fy = [1, 2].map(function (i, k) {
+          var src = final["t" + i + "_from"], g = src && src.w ? byMatch[src.w] : null;
+          var y = g ? place(g, k === 1) : (row++ * ROW + ROW);
+          line(rounds - 1, y, final["t" + i], final);
+          return y;
+        });
+        joiner(rounds, Math.min(fy[0], fy[1]), Math.max(fy[0], fy[1]));
+        var cy = (fy[0] + fy[1]) / 2;
+        line(rounds, cy, champ, null, { cls: "win", placeholder: "Champion" });
+        if (champ) {
+          var tag = el("div", "tag", "Champion");
+          tag.style.left = colX(rounds) + "%"; tag.style.width = colW + "%"; tag.style.top = (cy + 4) + "px";
+          bk.appendChild(tag);
+        }
+      }
+      var height = row * ROW + ROW * 0.6;
+
+      // 3rd place game, tucked under the right side
+      if (third) {
+        var top = height + 30;
+        var title = el("div", "tag third-title", "3rd place game");
+        title.style.left = colX(rounds - 1) + "%"; title.style.top = (top - 30) + "px";
+        bk.appendChild(title);
+        var ty = [top + 10, top + 10 + ROW];
+        [1, 2].forEach(function (i, k) {
+          var src = third["t" + i + "_from"], g = src && byMatch[src.l || src.w];
+          var ph = g && seeds[g.t1] && seeds[g.t2] ? "Loser of " + seeds[g.t1] + " vs " + seeds[g.t2] : "";
+          line(rounds - 1, ty[k], third["t" + i], third, { placeholder: ph });
+        });
+        joiner(rounds, ty[0], ty[1]);
+        line(rounds, (ty[0] + ty[1]) / 2, third.w, null, { cls: "bronze", placeholder: "3rd place" });
+        height = ty[1] + ROW * 0.5;
+      }
+      bk.style.height = height + "px";
+
+      var note = document.getElementById("board-note");
+      note.textContent = "Teams that missed the playoffs go into the draft lottery. The bracket stays up until the lottery odds are set in April.";
+      note.hidden = false;
+
+      document.getElementById("week").textContent = league.season + " Playoffs";
+      document.getElementById("week-note").textContent = champ
+        ? (names[champ] || "The champion") + " won the " + league.season + " title."
+        : "The playoffs are underway.";
+    }
 
     // ---------- Reigning champion and trade market notes ----------
     getJSON("data/legacy.json").then(function (lg) {
