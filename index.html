@@ -278,7 +278,7 @@
       var c = (lg.champions || [])[0];
       if (!c || !lg.owners[c.champion]) return;
       var a = el("a", "", lg.owners[c.champion].team);
-      a.href = "team-legacy.html?owner=" + encodeURIComponent(c.champion);
+      a.href = "team-legacy.html?franchise=" + encodeURIComponent(c.champion);
       document.getElementById("champ-what").textContent = c.season + " champion";
       document.getElementById("champ-who").appendChild(a);
       document.getElementById("champ").hidden = false;
