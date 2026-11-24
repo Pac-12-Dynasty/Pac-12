@@ -180,7 +180,7 @@
     function teamLink(uid) {
       var o = owner(uid);
       var a = el("a", "", o.team || o.name);
-      a.href = "team-legacy.html?owner=" + encodeURIComponent(uid);
+      a.href = "team-legacy.html?franchise=" + encodeURIComponent(uid);
       return a;
     }
 
@@ -243,11 +243,18 @@
         b.style.animationDelay = (i * 0.12) + "s";
         b.appendChild(el("div", "yr", String(c.season)));
         b.appendChild(el("div", "lbl", "League Champion"));
-        var champ = el("div", "champ"); champ.appendChild(teamLink(c.champion)); b.appendChild(champ);
-        b.appendChild(el("div", "own", owner(c.champion).name));
+        // Banners keep the team and owner names from the season they won
+        var then = c.names || {};
+        function thenLink(fid) {
+          var a = teamLink(fid);
+          if (then[fid] && then[fid].team) a.textContent = then[fid].team;
+          return a;
+        }
+        var champ = el("div", "champ"); champ.appendChild(thenLink(c.champion)); b.appendChild(champ);
+        b.appendChild(el("div", "own", (then[c.champion] && then[c.champion].owner) || owner(c.champion).name));
         var more = el("div", "more");
-        more.appendChild(document.createTextNode("Runner-up: ")); more.appendChild(teamLink(c.runner_up));
-        if (c.third) { more.appendChild(el("br")); more.appendChild(document.createTextNode("3rd place: ")); more.appendChild(teamLink(c.third)); }
+        more.appendChild(document.createTextNode("Runner-up: ")); more.appendChild(thenLink(c.runner_up));
+        if (c.third) { more.appendChild(el("br")); more.appendChild(document.createTextNode("3rd place: ")); more.appendChild(thenLink(c.third)); }
         b.appendChild(more);
         box.appendChild(b);
       });
@@ -269,7 +276,7 @@
       var rows = Object.keys(data.owners).map(function (k) { return data.owners[k]; });
       table(document.getElementById("alltime"), [
         { label: "Team", value: function (o) { return o.team; }, show: function (o) { return teamLink(o.id); } },
-        { label: "Owner", value: function (o) { return o.name; } },
+        { label: "Owner", value: function (o) { return o.name; }, show: function (o) { var h = o.owners || []; return h.length > 1 ? o.name + " (since " + h[h.length - 1].from + ")" : o.name; } },
         { label: "Seasons", value: function (o) { return o.seasons.length; }, num: true },
         { label: "Record", value: function (o) { return pct(o.w, o.l, o.t); }, show: function (o) { return record(o.w, o.l, o.t); }, num: true },
         { label: "Win %", value: function (o) { return pct(o.w, o.l, o.t); }, show: function (o) { return (pct(o.w, o.l, o.t) * 100).toFixed(1) + "%"; }, num: true },
@@ -393,7 +400,7 @@
         });
         card.appendChild(ul);
         var more = el("a", "", "Full franchise leaderboard →");
-        more.href = "team-legacy.html?owner=" + encodeURIComponent(id);
+        more.href = "team-legacy.html?franchise=" + encodeURIComponent(id);
         var pmore = el("p"); pmore.appendChild(more); card.appendChild(pmore);
         box.appendChild(card);
       });
