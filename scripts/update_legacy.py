@@ -1,7 +1,9 @@
 # Builds the league's all-time history from Sleeper and saves:
 #   data/legacy.json     - everything the Legacy page and team pages show
 #   data/rivalries.csv   - the full rivalry spreadsheet for every owner
-# Stats follow the owner (Sleeper user), not the team name.
+# Stats follow the franchise: the league has 12 permanent teams (Sleeper roster slots 1-12).
+# Owners and team names can change; the franchise keeps its history. Each franchise also
+# keeps a list of everyone who has owned it.
 import csv
 import json
 import os
@@ -77,14 +79,16 @@ def build():
     slot_seen = {}       # player -> {slot: count}, a backup way to know a player's position
     league_pts = {}      # player -> {"points", "games", "seasons", "owners"}
 
-    owners = {}          # user_id -> name info and totals
+    owners = {}          # franchise id ("1"-"12", the Sleeper roster slot) -> name info and totals
+    owner_years = {}     # franchise id -> [(season, user_id, display name)]
+    names_in = {}        # season -> franchise id -> {"team", "owner"} as they were that season
     pair = {}            # (a, b) with a < b -> head-to-head numbers
     champions, drafts, games_log = [], [], []
     season_playoffs = {}
 
     def owner(uid):
         return owners.setdefault(uid, {
-            "id": uid, "name": None, "team": None, "seasons": [],
+            "id": uid, "name": None, "team": None, "seasons": [], "owners": [],
             "w": 0, "l": 0, "t": 0, "pf": 0.0, "pa": 0.0,
             "pw": 0, "pl": 0, "playoffs": 0, "titles": 0, "runner_up": 0, "third": 0,
             "first_overall": [], "by_season": [],
@@ -96,15 +100,23 @@ def build():
         playoff_start = settings.get("playoff_week_start") or 15
         rosters = get(f"{API}/league/{lid}/rosters")
         users = {u["user_id"]: u for u in get(f"{API}/league/{lid}/users")}
-        roster_owner = {r["roster_id"]: r.get("owner_id") for r in rosters if r.get("owner_id")}
-
-        for uid in roster_owner.values():
-            o = owner(uid)
-            u = users.get(uid, {})
-            o["name"] = u.get("display_name") or o["name"] or "Unknown"
-            o["team"] = (u.get("metadata") or {}).get("team_name") or o["name"]
+        # Every roster slot is a franchise. The slot number stays the same when the league
+        # renews, even if a new owner takes the team over.
+        roster_owner = {r["roster_id"]: str(r["roster_id"]) for r in rosters}
+        user_franchise = {}
+        for r in rosters:
+            fid, uid = str(r["roster_id"]), r.get("owner_id")
+            o = owner(fid)
             if yr not in o["seasons"]:
                 o["seasons"].append(yr)
+            if not uid:
+                continue  # an open team keeps its last name until someone takes it over
+            user_franchise[uid] = fid
+            u = users.get(uid, {})
+            o["name"] = u.get("display_name") or "Unknown"
+            o["team"] = (u.get("metadata") or {}).get("team_name") or o["name"]
+            owner_years.setdefault(fid, []).append((yr, uid, o["name"]))
+            names_in.setdefault(yr, {})[fid] = {"team": o["team"], "owner": o["name"]}
 
         # Playoff bracket: which games were playoff games, and in which round
         try:
@@ -130,11 +142,14 @@ def build():
             if place == 3 and isinstance(t1, int) and isinstance(t2, int):
                 third_pairs.add(frozenset((t1, t2)))
         if title_game:
+            then = names_in.get(yr, {})
+            champ, ru = roster_owner.get(title_game["w"]), roster_owner.get(title_game["l"])
+            third = roster_owner.get(third_game["w"]) if third_game else None
             champions.append({
                 "season": yr,
-                "champion": roster_owner.get(title_game["w"]),
-                "runner_up": roster_owner.get(title_game["l"]),
-                "third": roster_owner.get(third_game["w"]) if third_game else None,
+                "champion": champ, "runner_up": ru, "third": third,
+                # Team and owner names as they were that season
+                "names": {k: then[k] for k in (champ, ru, third) if k in then},
             })
         playoff_owners = set()
         for rid in in_playoffs:
@@ -236,10 +251,14 @@ def build():
             rounds = (d.get("settings") or {}).get("rounds") or 0
             kind = "Startup" if rounds > 8 else "Rookie"
             firsts = []
+            def pick_franchise(p):
+                if p.get("roster_id") is not None:
+                    return str(p["roster_id"])
+                return user_franchise.get(p.get("picked_by"))
             for p in picks:
-                if p.get("pick_no") == 1 and p.get("picked_by"):
+                if p.get("pick_no") == 1 and pick_franchise(p):
                     meta = p.get("metadata") or {}
-                    owner(p["picked_by"])["first_overall"].append({
+                    owner(pick_franchise(p))["first_overall"].append({
                         "season": int(d.get("season") or yr), "type": kind,
                         "player": (meta.get("first_name", "") + " " + meta.get("last_name", "")).strip(),
                     })
@@ -250,7 +269,7 @@ def build():
                 info = player_info.get(str(p.get("player_id")), {})
                 firsts.append({
                     "pick": p.get("pick_no"),
-                    "owner": p.get("picked_by"),
+                    "owner": pick_franchise(p),
                     "player": (meta.get("first_name", "") + " " + meta.get("last_name", "")).strip() or info.get("name"),
                     "pos": meta.get("position") or info.get("pos"),
                     "rank": info.get("rank"),
@@ -316,7 +335,9 @@ def build():
                   "Runner-up" if c.get("runner_up") == uid else
                   "3rd place" if c.get("third") == uid else
                   "Playoffs" if uid in season_playoffs.get(yr, set()) else "")
-        owner(uid)["by_season"].append({"season": yr, "w": s["w"], "l": s["l"], "t": s["t"],
+        then = names_in.get(yr, {}).get(uid, {})
+        owner(uid)["by_season"].append({"season": yr, "team": then.get("team"), "owner": then.get("owner"),
+                                        "w": s["w"], "l": s["l"], "t": s["t"],
                                         "pf": round(s["pf"], 2), "pa": round(s.get("pa", 0), 2), "finish": finish})
     if season_rows:
         def pct(s):
@@ -328,6 +349,14 @@ def build():
 
     for uid, o in owners.items():
         o["pf"], o["pa"] = round(o["pf"], 2), round(o["pa"], 2)
+        o["seasons"].sort()
+        # Ownership history, oldest first: [{"name", "user_id", "from", "to"}]
+        for yr, user_id, nm in sorted(owner_years.get(uid, [])):
+            last = o["owners"][-1] if o["owners"] else None
+            if last and last["user_id"] == user_id:
+                last["to"], last["name"] = yr, nm
+            else:
+                o["owners"].append({"name": nm, "user_id": user_id, "from": yr, "to": yr})
     for c in champions:
         if c["champion"] in owners:
             owners[c["champion"]]["titles"] += 1
@@ -401,7 +430,7 @@ def build():
                         r["weighted_wins"], r["weighted_losses"], r["balance"],
                         r["rank"], rank_of.get((r["opponent"], r["owner"]), "")])
 
-    print(f"Legacy: {len(seasons)} season(s), {len(owners)} owners, {len(games_log)} games, {len(champions)} champion(s)")
+    print(f"Legacy: {len(seasons)} season(s), {len(owners)} franchises, {len(games_log)} games, {len(champions)} champion(s)")
 
 
 if __name__ == "__main__":
