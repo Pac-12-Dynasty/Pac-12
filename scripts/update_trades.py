@@ -308,7 +308,7 @@ class SleeperRanks:
         return self.ranked[key]
 
 
-GRADE_VERSION = 6
+GRADE_VERSION = 7  # 7: teams are franchises (roster slots 1-12), not owners
 
 
 class TradeContext:
@@ -365,12 +365,11 @@ class TradeContext:
                 for i, rid in enumerate(order)}
 
     def draft_results(self):
-        """(season, round, original owner's user id) -> the player drafted with that pick."""
+        """(season, round, original franchise id) -> the player drafted with that pick."""
         out = {}
         for yr, league in self.by_season.items():
             lid = league["league_id"]
             rosters = self._get(("r", lid), f"{API}/league/{lid}/rosters", []) or []
-            owner_of = {r["roster_id"]: r.get("owner_id") for r in rosters}
             for d in self._get(("d", lid), f"{API}/league/{lid}/drafts", []) or []:
                 info = self._get(("draft", d["draft_id"]), f"{API}/draft/{d['draft_id']}", {}) or {}
                 slot_roster = {int(k): v for k, v in (info.get("slot_to_roster_id") or {}).items()}
@@ -378,7 +377,7 @@ class TradeContext:
                 for p in self._get(("dp", d["draft_id"]), f"{API}/draft/{d['draft_id']}/picks", []) or []:
                     rid = slot_roster.get(p.get("draft_slot"))
                     if rid and p.get("player_id"):
-                        out[(season, p.get("round"), owner_of.get(rid))] = p["player_id"]
+                        out[(season, p.get("round"), str(rid))] = p["player_id"]
         return out
 
     def draft_start(self, lid):
@@ -544,12 +543,17 @@ def main():
         lid, yr = league["league_id"], int(league["season"])
         scoring = league.get("scoring_settings") or now_scoring
         users = {u["user_id"]: u for u in get(f"{API}/league/{lid}/users")}
-        roster_owner = {r["roster_id"]: r.get("owner_id") for r in get(f"{API}/league/{lid}/rosters")}
-        for uid in roster_owner.values():
+        # Teams are the league's 12 franchises (Sleeper roster slots), which keep their number
+        # when owners change. Names come from each franchise's latest owner.
+        league_rosters = get(f"{API}/league/{lid}/rosters")
+        roster_owner = {r["roster_id"]: str(r["roster_id"]) for r in league_rosters}
+        for r in league_rosters:
+            fid, uid = str(r["roster_id"]), r.get("owner_id")
             if not uid:
+                owners.setdefault(fid, {"name": "No owner", "team": "Team " + fid})
                 continue
             u = users.get(uid, {})
-            owners[uid] = {"name": u.get("display_name") or "Unknown",
+            owners[fid] = {"name": u.get("display_name") or "Unknown",
                            "team": (u.get("metadata") or {}).get("team_name") or u.get("display_name") or "Unknown"}
 
         seen = set()
