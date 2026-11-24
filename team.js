@@ -371,7 +371,7 @@
     statsRow.appendChild(cell(points(s.fpts_against, s.fpts_against_decimal).toFixed(2)));
 
     // Legacy card: all-time record, titles, and top 2 rivals (follows the owner)
-    var hist = legacy && legacy.owners && roster.owner_id ? legacy.owners[roster.owner_id] : null;
+    var hist = legacy && legacy.owners ? legacy.owners[String(roster.roster_id)] : null;
     if (hist) {
       var lc = document.createElement("div");
       lc.className = "card";
@@ -396,7 +396,7 @@
         honors.appendChild(li);
       });
       lc.appendChild(honors);
-      var rv = (legacy.rivals || {})[roster.owner_id] || [];
+      var rv = (legacy.rivals || {})[String(roster.roster_id)] || [];
       rv.forEach(function (r, i) {
         var opp = legacy.owners[r.opponent] || {};
         var line = document.createElement("p");
@@ -404,7 +404,7 @@
         strong.textContent = "Rival " + (i + 1) + ": ";
         line.appendChild(strong);
         var link = document.createElement("a");
-        link.href = "team-legacy.html?owner=" + encodeURIComponent(r.opponent);
+        link.href = "team-legacy.html?franchise=" + encodeURIComponent(r.opponent);
         link.textContent = opp.team || "Unknown";
         line.appendChild(link);
         line.appendChild(document.createTextNode(" (" + r.wins + "-" + r.losses + (r.ties ? "-" + r.ties : "") + ", score " + r.score.toFixed(2) + ")"));
@@ -412,7 +412,7 @@
       });
       var more = document.createElement("p");
       var ml = document.createElement("a");
-      ml.href = "team-legacy.html?owner=" + encodeURIComponent(roster.owner_id);
+      ml.href = "team-legacy.html?franchise=" + roster.roster_id;
       ml.textContent = "Full legacy";
       more.appendChild(ml);
       lc.appendChild(more);
