@@ -1,71 +1,63 @@
 {
- "generated": "2026-11-24T17:30+00:00",
+ "generated": "2026-11-24T20:03+00:00",
  "now_basis": "2026 so far",
  "owners": {
-  "861417814836256768": {
+  "1": {
    "name": "Souders32",
    "team": "Baby Back Gibbs"
   },
-  "745458998371008512": {
+  "2": {
    "name": "bstaker",
    "team": "Why So Serious?"
   },
-  "995982448825720832": {
+  "3": {
    "name": "blum15",
    "team": "Bijan\u2019s minions "
   },
-  "858765508143628288": {
+  "4": {
    "name": "BrockWelsh",
    "team": "Joe Buck Yourself"
   },
-  "733192747346997248": {
+  "5": {
    "name": "zsouders",
    "team": "Fannin the Flames"
   },
-  "908808510823997440": {
+  "6": {
    "name": "jtroup7",
    "team": "Skatteboner"
   },
-  "909255939126161408": {
+  "7": {
    "name": "Soudersisaac",
    "team": "Olave\u2019s Medical Team"
   },
-  "861421486488031232": {
+  "8": {
    "name": "hoagieman50",
    "team": "J. Love\u2019s number 1 Fan"
   },
-  "731283214563422208": {
-   "name": "GRWisniewski",
-   "team": "Goed's Plan"
-  },
-  "915765963616985088": {
-   "name": "SweetSyrup69",
-   "team": "Lamar Jackson Fan Club"
-  },
-  "853109226401288192": {
-   "name": "j1do",
-   "team": "Time to tank"
-  },
-  "861422415547318272": {
-   "name": "BBBrandyn",
-   "team": "Bucky Irving Fan Club"
-  },
-  "1132133082238169088": {
+  "9": {
    "name": "DylanDeitrick",
    "team": "My team Shoughs"
   },
-  "1416188424762720256": {
+  "10": {
+   "name": "SweetSyrup69",
+   "team": "Lamar Jackson Fan Club"
+  },
+  "11": {
    "name": "NestaV024",
    "team": "Mia KALIFa "
+  },
+  "12": {
+   "name": "BBBrandyn",
+   "team": "Bucky Irving Fan Club"
   }
  },
  "trades": [
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "858765508143628288": {
-      "net": -71,
+     "4": {
+      "net": -272,
       "impact": [
        {
         "name": "Saquon Barkley",
@@ -78,16 +70,16 @@
         "slot": "WR"
        }
       ],
-      "market_given": 11466,
-      "market_got": 9964,
+      "market_given": 11506,
+      "market_got": 9766,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": -505,
-      "gap": -1806
+      "score": -766,
+      "gap": -2247
      },
-     "1416188424762720256": {
-      "net": 1735,
+     "11": {
+      "net": 1975,
       "impact": [
        {
         "name": "Aaron Jones Sr.",
@@ -100,21 +92,21 @@
         "slot": "WR"
        }
       ],
-      "market_given": 9964,
-      "market_got": 11466,
+      "market_given": 9766,
+      "market_got": 11506,
       "window": "Middle",
       "unvalued": [],
-      "grade": "B",
-      "score": 1753,
-      "gap": 1806
+      "grade": "A",
+      "score": 2043,
+      "gap": 2247
      }
     },
     "pick_values": {
-     "2028-3-915765963616985088": 538,
-     "2028-1-858765508143628288": 2269,
-     "2028-2-858765508143628288": 1141,
-     "2029-1-858765508143628288": 2766,
-     "2029-4-858765508143628288": 269
+     "2028-3-10": 496,
+     "2028-1-4": 2291,
+     "2028-2-4": 1152,
+     "2029-1-4": 2774,
+     "2029-4-4": 256
     }
    },
    "id": "1427531426437283840",
@@ -123,7 +115,7 @@
    "date": "2026-11-15T03:19+00:00",
    "sides": [
     {
-     "owner": "858765508143628288",
+     "owner": "4",
      "players": [
       {
        "id": "4866",
@@ -156,15 +148,15 @@
       {
        "season": 2028,
        "round": 3,
-       "original_owner": "915765963616985088",
-       "was_value": 538,
+       "original_owner": "10",
+       "was_value": 496,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "1416188424762720256",
+     "owner": "11",
      "players": [
       {
        "id": "4199",
@@ -197,29 +189,29 @@
       {
        "season": 2028,
        "round": 1,
-       "original_owner": "858765508143628288",
-       "was_value": 2269,
+       "original_owner": "4",
+       "was_value": 2291,
        "value_basis": "original_owner"
       },
       {
        "season": 2028,
        "round": 2,
-       "original_owner": "858765508143628288",
-       "was_value": 1141,
+       "original_owner": "4",
+       "was_value": 1152,
        "value_basis": "original_owner"
       },
       {
        "season": 2029,
        "round": 1,
-       "original_owner": "858765508143628288",
-       "was_value": 2766,
+       "original_owner": "4",
+       "was_value": 2774,
        "value_basis": "original_owner"
       },
       {
        "season": 2029,
        "round": 4,
-       "original_owner": "858765508143628288",
-       "was_value": 269,
+       "original_owner": "4",
+       "was_value": 256,
        "value_basis": "original_owner"
       }
      ],
@@ -229,10 +221,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "861417814836256768": {
-      "net": 454,
+     "1": {
+      "net": 469,
       "impact": [
        {
         "name": "Javonte Williams",
@@ -240,16 +232,16 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 3166,
-      "market_got": 3544,
+      "market_given": 3198,
+      "market_got": 3567,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 314,
-      "gap": -106
+      "score": 321,
+      "gap": -122
      },
-     "1132133082238169088": {
-      "net": 560,
+     "9": {
+      "net": 591,
       "impact": [
        {
         "name": "Omar Cooper Jr.",
@@ -257,18 +249,18 @@
         "slot": null
        }
       ],
-      "market_given": 3544,
-      "market_got": 3166,
+      "market_given": 3567,
+      "market_got": 3198,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "C",
-      "score": 446,
-      "gap": 106
+      "score": 474,
+      "gap": 122
      }
     },
     "pick_values": {
-     "2028-2-861417814836256768": 1141,
-     "2027-3-1132133082238169088": 858
+     "2028-2-1": 1152,
+     "2027-3-9": 829
     }
    },
    "id": "1427510182480461824",
@@ -277,7 +269,7 @@
    "date": "2026-11-15T01:56+00:00",
    "sides": [
     {
-     "owner": "861417814836256768",
+     "owner": "1",
      "players": [
       {
        "id": "7588",
@@ -297,15 +289,15 @@
       {
        "season": 2027,
        "round": 3,
-       "original_owner": "1132133082238169088",
-       "was_value": 858,
+       "original_owner": "9",
+       "was_value": 829,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "1132133082238169088",
+     "owner": "9",
      "players": [
       {
        "id": "13276",
@@ -325,8 +317,8 @@
       {
        "season": 2028,
        "round": 2,
-       "original_owner": "861417814836256768",
-       "was_value": 1141,
+       "original_owner": "1",
+       "was_value": 1152,
        "value_basis": "original_owner"
       }
      ],
@@ -336,10 +328,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "1132133082238169088": {
-      "net": -1880,
+     "9": {
+      "net": -1932,
       "impact": [
        {
         "name": "Rhamondre Stevenson",
@@ -347,16 +339,16 @@
         "slot": "RB"
        }
       ],
-      "market_given": 4143,
-      "market_got": 2887,
+      "market_given": 4205,
+      "market_got": 2914,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "F",
-      "score": -2127,
-      "gap": -2867
+      "score": -2172,
+      "gap": -2891
      },
-     "861422415547318272": {
-      "net": 987,
+     "12": {
+      "net": 959,
       "impact": [
        {
         "name": "Carnell Tate",
@@ -364,17 +356,17 @@
         "slot": null
        }
       ],
-      "market_given": 2887,
-      "market_got": 4143,
+      "market_given": 2914,
+      "market_got": 4205,
       "window": "Contender",
       "unvalued": [],
       "grade": "B",
-      "score": 1457,
-      "gap": 2867
+      "score": 1442,
+      "gap": 2891
      }
     },
     "pick_values": {
-     "2027-2-995982448825720832": 1398
+     "2027-2-3": 1394
     }
    },
    "id": "1426772999213703168",
@@ -383,7 +375,7 @@
    "date": "2026-11-13T02:50+00:00",
    "sides": [
     {
-     "owner": "1132133082238169088",
+     "owner": "9",
      "players": [
       {
        "id": "7611",
@@ -403,15 +395,15 @@
       {
        "season": 2027,
        "round": 2,
-       "original_owner": "995982448825720832",
-       "was_value": 1398,
+       "original_owner": "3",
+       "was_value": 1394,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "13279",
@@ -434,10 +426,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "745458998371008512": {
-      "net": 377,
+     "2": {
+      "net": 311,
       "impact": [
        {
         "name": "Jordyn Tyson",
@@ -445,16 +437,16 @@
         "slot": null
        }
       ],
-      "market_given": 2921,
-      "market_got": 3099,
+      "market_given": 3023,
+      "market_got": 3082,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 480,
-      "gap": 787
+      "score": 390,
+      "gap": 626
      },
-     "1416188424762720256": {
-      "net": -410,
+     "11": {
+      "net": -315,
       "impact": [
        {
         "name": "Khalil Shakir",
@@ -462,19 +454,19 @@
         "slot": "WR"
        }
       ],
-      "market_given": 3099,
-      "market_got": 2921,
+      "market_given": 3082,
+      "market_got": 3023,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": -504,
-      "gap": -787
+      "score": -393,
+      "gap": -626
      }
     },
     "pick_values": {
-     "2027-3-915765963616985088": 421,
-     "2027-4-861422415547318272": 215,
-     "2027-2-745458998371008512": 1155
+     "2027-3-10": 358,
+     "2027-4-12": 220,
+     "2027-2-2": 1157
     }
    },
    "id": "1426361867567108096",
@@ -483,7 +475,7 @@
    "date": "2026-11-11T21:59+00:00",
    "sides": [
     {
-     "owner": "745458998371008512",
+     "owner": "2",
      "players": [
       {
        "id": "13281",
@@ -503,15 +495,15 @@
       {
        "season": 2027,
        "round": 3,
-       "original_owner": "915765963616985088",
-       "was_value": 421,
+       "original_owner": "10",
+       "was_value": 358,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "1416188424762720256",
+     "owner": "11",
      "players": [
       {
        "id": "8134",
@@ -531,15 +523,15 @@
       {
        "season": 2027,
        "round": 4,
-       "original_owner": "861422415547318272",
-       "was_value": 215,
+       "original_owner": "12",
+       "was_value": 220,
        "value_basis": "original_owner"
       },
       {
        "season": 2027,
        "round": 2,
-       "original_owner": "745458998371008512",
-       "was_value": 1155,
+       "original_owner": "2",
+       "was_value": 1157,
        "value_basis": "original_owner"
       }
      ],
@@ -549,10 +541,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "861417814836256768": {
-      "net": 1197,
+     "1": {
+      "net": 1237,
       "impact": [
        {
         "name": "Breece Hall",
@@ -560,16 +552,16 @@
         "slot": "RB"
        }
       ],
-      "market_given": 3853,
-      "market_got": 4742,
+      "market_given": 3922,
+      "market_got": 4870,
       "window": "Contender",
       "unvalued": [],
       "grade": "B",
-      "score": 1134,
-      "gap": 945
+      "score": 1181,
+      "gap": 1013
      },
-     "995982448825720832": {
-      "net": 252,
+     "3": {
+      "net": 224,
       "impact": [
        {
         "name": "Isaiah Likely",
@@ -577,18 +569,18 @@
         "slot": null
        }
       ],
-      "market_given": 4742,
-      "market_got": 3853,
+      "market_given": 4870,
+      "market_got": 3922,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "C",
-      "score": -47,
-      "gap": -945
+      "score": -85,
+      "gap": -1013
      }
     },
     "pick_values": {
-     "2027-2-861417814836256768": 916,
-     "2028-3-861417814836256768": 478
+     "2027-2-1": 962,
+     "2028-3-1": 431
     }
    },
    "id": "1421675777753149440",
@@ -597,7 +589,7 @@
    "date": "2026-10-30T01:48+00:00",
    "sides": [
     {
-     "owner": "861417814836256768",
+     "owner": "1",
      "players": [
       {
        "id": "8155",
@@ -617,7 +609,7 @@
      "faab": 0
     },
     {
-     "owner": "995982448825720832",
+     "owner": "3",
      "players": [
       {
        "id": "8131",
@@ -637,15 +629,15 @@
       {
        "season": 2027,
        "round": 2,
-       "original_owner": "861417814836256768",
-       "was_value": 916,
+       "original_owner": "1",
+       "was_value": 962,
        "value_basis": "original_owner"
       },
       {
        "season": 2028,
        "round": 3,
-       "original_owner": "861417814836256768",
-       "was_value": 478,
+       "original_owner": "1",
+       "was_value": 431,
        "value_basis": "original_owner"
       }
      ],
@@ -655,15 +647,15 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "995982448825720832": {
-      "net": 2210,
+     "3": {
+      "net": 2410,
       "impact": [
        {
         "name": "Rashee Rice",
-        "starts": false,
-        "slot": null
+        "starts": true,
+        "slot": "FLEX"
        },
        {
         "name": "Kaelon Black",
@@ -671,16 +663,16 @@
         "slot": null
        }
       ],
-      "market_given": 5741,
-      "market_got": 8443,
+      "market_given": 5582,
+      "market_got": 8572,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "A",
-      "score": 2802,
-      "gap": 4578
+      "score": 3077,
+      "gap": 5079
      },
-     "861422415547318272": {
-      "net": -2368,
+     "12": {
+      "net": -2669,
       "impact": [
        {
         "name": "Trey McBride",
@@ -688,19 +680,19 @@
         "slot": "TE"
        }
       ],
-      "market_given": 8443,
-      "market_got": 5741,
+      "market_given": 8572,
+      "market_got": 5582,
       "window": "Middle",
       "unvalued": [],
       "grade": "F",
-      "score": -2920,
-      "gap": -4578
+      "score": -3272,
+      "gap": -5079
      }
     },
     "pick_values": {
-     "2027-3-861422415547318272": 651,
-     "2027-2-995982448825720832": 1331,
-     "2027-1-861421486488031232": 4081
+     "2027-3-12": 641,
+     "2027-2-3": 1316,
+     "2027-1-8": 4055
     }
    },
    "id": "1421585121974161408",
@@ -709,7 +701,7 @@
    "date": "2026-10-29T18:01+00:00",
    "sides": [
     {
-     "owner": "995982448825720832",
+     "owner": "3",
      "players": [
       {
        "id": "10229",
@@ -742,22 +734,22 @@
       {
        "season": 2027,
        "round": 3,
-       "original_owner": "861422415547318272",
-       "was_value": 651,
+       "original_owner": "12",
+       "was_value": 641,
        "value_basis": "original_owner"
       },
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "861421486488031232",
-       "was_value": 4081,
+       "original_owner": "8",
+       "was_value": 4055,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "8130",
@@ -777,8 +769,8 @@
       {
        "season": 2027,
        "round": 2,
-       "original_owner": "995982448825720832",
-       "was_value": 1331,
+       "original_owner": "3",
+       "was_value": 1316,
        "value_basis": "original_owner"
       }
      ],
@@ -788,10 +780,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "861417814836256768": {
-      "net": 490,
+     "1": {
+      "net": 465,
       "impact": [
        {
         "name": "Sam Darnold",
@@ -799,28 +791,28 @@
         "slot": "QB"
        }
       ],
-      "market_given": 216,
-      "market_got": 1346,
+      "market_given": 221,
+      "market_got": 1328,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 636,
-      "gap": 1074
+      "score": 607,
+      "gap": 1033
      },
-     "861422415547318272": {
-      "net": -584,
+     "12": {
+      "net": -568,
       "impact": [],
-      "market_given": 1346,
-      "market_got": 216,
+      "market_given": 1328,
+      "market_got": 221,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": -706,
-      "gap": -1074
+      "score": -684,
+      "gap": -1033
      }
     },
     "pick_values": {
-     "2027-4-861417814836256768": 216
+     "2027-4-1": 221
     }
    },
    "id": "1415894610848366592",
@@ -829,7 +821,7 @@
    "date": "2026-10-14T11:59+00:00",
    "sides": [
     {
-     "owner": "861417814836256768",
+     "owner": "1",
      "players": [
       {
        "id": "4943",
@@ -849,14 +841,14 @@
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [],
      "picks": [
       {
        "season": 2027,
        "round": 4,
-       "original_owner": "861417814836256768",
-       "was_value": 216,
+       "original_owner": "1",
+       "was_value": 221,
        "value_basis": "original_owner"
       }
      ],
@@ -866,39 +858,39 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "915765963616985088": {
-      "net": 175,
+     "10": {
+      "net": 150,
       "impact": [],
-      "market_given": 1712,
-      "market_got": 1115,
+      "market_given": 1724,
+      "market_got": 1091,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": 349,
-      "gap": 870
+      "score": 318,
+      "gap": 822
      },
-     "861422415547318272": {
-      "net": -695,
+     "12": {
+      "net": -672,
       "impact": [
        {
         "name": "Josh Jacobs",
         "starts": true,
-        "slot": "FLEX"
+        "slot": "RB"
        }
       ],
-      "market_given": 1115,
-      "market_got": 1712,
+      "market_given": 1091,
+      "market_got": 1724,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "C",
-      "score": -739,
-      "gap": -870
+      "score": -710,
+      "gap": -822
      }
     },
     "pick_values": {
-     "2028-2-861422415547318272": 1115
+     "2028-2-12": 1091
     }
    },
    "id": "1401711528289300480",
@@ -907,21 +899,21 @@
    "date": "2026-09-06T06:12+00:00",
    "sides": [
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [],
      "picks": [
       {
        "season": 2028,
        "round": 2,
-       "original_owner": "861422415547318272",
-       "was_value": 1115,
+       "original_owner": "12",
+       "was_value": 1091,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "5850",
@@ -944,10 +936,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "745458998371008512": {
-      "net": -46,
+     "2": {
+      "net": 67,
       "impact": [
        {
         "name": "Bhayshul Tuten",
@@ -960,16 +952,16 @@
         "slot": null
        }
       ],
-      "market_given": 3716,
-      "market_got": 3267,
+      "market_given": 3596,
+      "market_got": 3325,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 1,
-      "gap": 142
+      "score": 154,
+      "gap": 417
      },
-     "861422415547318272": {
-      "net": -188,
+     "12": {
+      "net": -350,
       "impact": [
        {
         "name": "Chris Bell",
@@ -987,18 +979,18 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 3267,
-      "market_got": 3716,
+      "market_given": 3325,
+      "market_got": 3596,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "C",
-      "score": -176,
-      "gap": -142
+      "score": -367,
+      "gap": -417
      }
     },
     "pick_values": {
-     "2027-4-861422415547318272": 200,
-     "2027-3-745458998371008512": 530
+     "2027-4-12": 204,
+     "2027-3-2": 505
     }
    },
    "id": "1397859421522010112",
@@ -1007,7 +999,7 @@
    "date": "2026-08-26T06:22+00:00",
    "sides": [
     {
-     "owner": "745458998371008512",
+     "owner": "2",
      "players": [
       {
        "id": "12490",
@@ -1040,15 +1032,15 @@
       {
        "season": 2027,
        "round": 4,
-       "original_owner": "861422415547318272",
-       "was_value": 200,
+       "original_owner": "12",
+       "was_value": 204,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "13311",
@@ -1094,8 +1086,8 @@
       {
        "season": 2027,
        "round": 3,
-       "original_owner": "745458998371008512",
-       "was_value": 530,
+       "original_owner": "2",
+       "was_value": 505,
        "value_basis": "original_owner"
       }
      ],
@@ -1105,10 +1097,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "861421486488031232": {
-      "net": 4226,
+     "8": {
+      "net": 4393,
       "impact": [
        {
         "name": "Jonathon Brooks",
@@ -1121,16 +1113,16 @@
         "slot": null
        }
       ],
-      "market_given": 5311,
-      "market_got": 8718,
+      "market_given": 5441,
+      "market_got": 9001,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "A",
-      "score": 5288,
-      "gap": 8474
+      "score": 5498,
+      "gap": 8812
      },
-     "861422415547318272": {
-      "net": -4248,
+     "12": {
+      "net": -4419,
       "impact": [
        {
         "name": "Omarion Hampton",
@@ -1138,18 +1130,18 @@
         "slot": "RB"
        }
       ],
-      "market_given": 8718,
-      "market_got": 5311,
+      "market_given": 9001,
+      "market_got": 5441,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "F",
-      "score": -5304,
-      "gap": -8474
+      "score": -5517,
+      "gap": -8812
      }
     },
     "pick_values": {
-     "2027-1-861422415547318272": 2522,
-     "2027-2-861422415547318272": 1148
+     "2027-1-12": 2590,
+     "2027-2-12": 1151
     }
    },
    "id": "1368784978531319808",
@@ -1158,7 +1150,7 @@
    "date": "2026-06-07T06:11+00:00",
    "sides": [
     {
-     "owner": "861421486488031232",
+     "owner": "8",
      "players": [
       {
        "id": "11583",
@@ -1191,22 +1183,22 @@
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "861422415547318272",
-       "was_value": 2522,
+       "original_owner": "12",
+       "was_value": 2590,
        "value_basis": "original_owner"
       },
       {
        "season": 2027,
        "round": 2,
-       "original_owner": "861422415547318272",
-       "was_value": 1148,
+       "original_owner": "12",
+       "was_value": 1151,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "12507",
@@ -1229,35 +1221,35 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "915765963616985088": {
-      "net": -114,
+     "10": {
+      "net": -87,
       "impact": [],
-      "market_given": 746,
-      "market_got": 632,
+      "market_given": 696,
+      "market_got": 609,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": -142,
-      "gap": -228
+      "score": -109,
+      "gap": -174
      },
-     "1416188424762720256": {
-      "net": 114,
+     "11": {
+      "net": 87,
       "impact": [],
-      "market_given": 632,
-      "market_got": 746,
+      "market_given": 609,
+      "market_got": 696,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": 142,
-      "gap": 228
+      "score": 109,
+      "gap": 174
      }
     },
     "pick_values": {
-     "2026-3-915765963616985088": 632,
-     "2026-4-915765963616985088": 267,
-     "2028-3-915765963616985088": 479
+     "2026-3-10": 609,
+     "2026-4-10": 260,
+     "2028-3-10": 436
     }
    },
    "id": "1357902485271908352",
@@ -1266,35 +1258,35 @@
    "date": "2026-05-06T23:59+00:00",
    "sides": [
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [],
      "picks": [
       {
        "season": 2026,
        "round": 3,
-       "original_owner": "915765963616985088",
-       "was_value": 632,
+       "original_owner": "10",
+       "was_value": 609,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "1416188424762720256",
+     "owner": "11",
      "players": [],
      "picks": [
       {
        "season": 2026,
        "round": 4,
-       "original_owner": "915765963616985088",
-       "was_value": 267,
+       "original_owner": "10",
+       "was_value": 260,
        "value_basis": "original_owner"
       },
       {
        "season": 2028,
        "round": 3,
-       "original_owner": "915765963616985088",
-       "was_value": 479,
+       "original_owner": "10",
+       "was_value": 436,
        "value_basis": "original_owner"
       }
      ],
@@ -1304,35 +1296,35 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "861421486488031232": {
-      "net": -990,
+     "8": {
+      "net": -1060,
       "impact": [],
-      "market_given": 3725,
-      "market_got": 2864,
+      "market_given": 3811,
+      "market_got": 2889,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "D",
-      "score": -1238,
-      "gap": -1980
+      "score": -1325,
+      "gap": -2120
      },
-     "861422415547318272": {
-      "net": 990,
+     "12": {
+      "net": 1060,
       "impact": [],
-      "market_given": 2864,
-      "market_got": 3725,
+      "market_given": 2889,
+      "market_got": 3811,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "B",
-      "score": 1238,
-      "gap": 1980
+      "score": 1325,
+      "gap": 2120
      }
     },
     "pick_values": {
-     "2026-1-861422415547318272": 2864,
-     "2026-2-745458998371008512": 1227,
-     "2027-1-861421486488031232": 2498
+     "2026-1-12": 2889,
+     "2026-2-2": 1231,
+     "2027-1-8": 2580
     }
    },
    "id": "1355624406012932096",
@@ -1341,35 +1333,35 @@
    "date": "2026-05-02T00:30+00:00",
    "sides": [
     {
-     "owner": "861421486488031232",
+     "owner": "8",
      "players": [],
      "picks": [
       {
        "season": 2026,
        "round": 1,
-       "original_owner": "861422415547318272",
-       "was_value": 2864,
+       "original_owner": "12",
+       "was_value": 2889,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [],
      "picks": [
       {
        "season": 2026,
        "round": 2,
-       "original_owner": "745458998371008512",
-       "was_value": 1227,
+       "original_owner": "2",
+       "was_value": 1231,
        "value_basis": "original_owner"
       },
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "861421486488031232",
-       "was_value": 2498,
+       "original_owner": "8",
+       "was_value": 2580,
        "value_basis": "original_owner"
       }
      ],
@@ -1379,10 +1371,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "745458998371008512": {
-      "net": -989,
+     "2": {
+      "net": -1057,
       "impact": [
        {
         "name": "Stefon Diggs",
@@ -1395,16 +1387,16 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 4092,
-      "market_got": 3228,
+      "market_given": 4091,
+      "market_got": 3189,
       "window": "Contender",
       "unvalued": [],
       "grade": "D",
-      "score": -1492,
-      "gap": -3001
+      "score": -1566,
+      "gap": -3091
      },
-     "861421486488031232": {
-      "net": 2012,
+     "8": {
+      "net": 2034,
       "impact": [
        {
         "name": "Tony Pollard",
@@ -1417,17 +1409,17 @@
         "slot": null
        }
       ],
-      "market_given": 3228,
-      "market_got": 4092,
+      "market_given": 3189,
+      "market_got": 4091,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "A",
-      "score": 2259,
-      "gap": 3001
+      "score": 2298,
+      "gap": 3091
      }
     },
     "pick_values": {
-     "2026-2-745458998371008512": 1150
+     "2026-2-2": 1156
     }
    },
    "id": "1292293262471626752",
@@ -1436,7 +1428,7 @@
    "date": "2025-11-06T22:51+00:00",
    "sides": [
     {
-     "owner": "745458998371008512",
+     "owner": "2",
      "players": [
       {
        "id": "2449",
@@ -1469,7 +1461,7 @@
      "faab": 0
     },
     {
-     "owner": "861421486488031232",
+     "owner": "8",
      "players": [
       {
        "id": "5967",
@@ -1502,8 +1494,8 @@
       {
        "season": 2026,
        "round": 2,
-       "original_owner": "745458998371008512",
-       "was_value": 1150,
+       "original_owner": "2",
+       "was_value": 1156,
        "value_basis": "original_owner"
       }
      ],
@@ -1513,34 +1505,34 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "745458998371008512": {
+     "2": {
       "items": [
        {
         "kind": "player",
         "label": "Stefon Diggs (WR)",
-        "value": 1323
+        "value": 1340
        },
        {
         "kind": "player",
         "label": "Rhamondre Stevenson (RB)",
-        "value": 1624
+        "value": 1657
        }
       ],
-      "got_now": 2947,
-      "gave_now": 2572,
+      "got_now": 2997,
+      "gave_now": 2573,
       "grade": "C"
      },
-     "861421486488031232": {
+     "8": {
       "items": [
        {
         "kind": "player",
         "label": "Tony Pollard (RB)",
-        "value": 1799
+        "value": 1824
        },
        {
         "kind": "player",
         "label": "Kayshon Boutte (WR)",
-        "value": 773
+        "value": 749
        },
        {
         "kind": "pick",
@@ -1550,8 +1542,8 @@
         "value": 0
        }
       ],
-      "got_now": 2572,
-      "gave_now": 2947,
+      "got_now": 2573,
+      "gave_now": 2997,
       "grade": "C"
      }
     }
@@ -1559,10 +1551,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "909255939126161408": {
-      "net": -93,
+     "7": {
+      "net": -178,
       "impact": [
        {
         "name": "Jaydon Blue",
@@ -1575,16 +1567,16 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 4829,
-      "market_got": 5812,
+      "market_given": 4981,
+      "market_got": 5902,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 34,
-      "gap": 416
+      "score": -69,
+      "gap": 258
      },
-     "915765963616985088": {
-      "net": -509,
+     "10": {
+      "net": -436,
       "impact": [
        {
         "name": "Josh Jacobs",
@@ -1592,19 +1584,19 @@
         "slot": "RB"
        }
       ],
-      "market_given": 5812,
-      "market_got": 4829,
+      "market_given": 5902,
+      "market_got": 4981,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": -486,
-      "gap": -416
+      "score": -392,
+      "gap": -258
      }
     },
     "pick_values": {
-     "2027-1-853109226401288192": 2315,
-     "2028-2-909255939126161408": 1254,
-     "2026-4-731283214563422208": 285
+     "2027-1-11": 2337,
+     "2028-2-7": 1255,
+     "2026-4-9": 291
     }
    },
    "id": "1291599455543361536",
@@ -1613,7 +1605,7 @@
    "date": "2025-11-05T01:16+00:00",
    "sides": [
     {
-     "owner": "909255939126161408",
+     "owner": "7",
      "players": [
       {
        "id": "12457",
@@ -1646,22 +1638,22 @@
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "853109226401288192",
-       "was_value": 2315,
+       "original_owner": "11",
+       "was_value": 2337,
        "value_basis": "original_owner"
       },
       {
        "season": 2026,
        "round": 4,
-       "original_owner": "731283214563422208",
-       "was_value": 285,
+       "original_owner": "9",
+       "was_value": 291,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [
       {
        "id": "5850",
@@ -1681,8 +1673,8 @@
       {
        "season": 2028,
        "round": 2,
-       "original_owner": "909255939126161408",
-       "was_value": 1254,
+       "original_owner": "7",
+       "was_value": 1255,
        "value_basis": "original_owner"
       }
      ],
@@ -1692,65 +1684,65 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "909255939126161408": {
+     "7": {
       "items": [
        {
         "kind": "player",
         "label": "Jaydon Blue (RB)",
-        "value": 251
+        "value": 256
        },
        {
         "kind": "player",
         "label": "Terry McLaurin (WR)",
-        "value": 1484
+        "value": 1505
        },
        {
         "kind": "pick",
         "label": "2027 Round 1",
-        "from": "Time to tank",
+        "from": "Mia KALIFa ",
         "player": null,
-        "value": 2642
+        "value": 2620
        },
        {
         "kind": "pick",
         "label": "2026 Round 4",
-        "from": "Goed's Plan",
+        "from": "My team Shoughs",
         "player": null,
         "value": 0
        }
       ],
-      "got_now": 4377,
-      "gave_now": 3616,
-      "grade": "C"
+      "got_now": 4381,
+      "gave_now": 3426,
+      "grade": "B"
      },
-     "915765963616985088": {
+     "10": {
       "items": [
        {
         "kind": "player",
         "label": "Josh Jacobs (RB)",
-        "value": 2179
+        "value": 2157
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
         "from": "Olave\u2019s Medical Team",
         "player": null,
-        "value": 1437
+        "value": 1269
        }
       ],
-      "got_now": 3616,
-      "gave_now": 4377,
-      "grade": "C"
+      "got_now": 3426,
+      "gave_now": 4381,
+      "grade": "D"
      }
     }
    }
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "858765508143628288": {
-      "net": -1593,
+     "4": {
+      "net": -1603,
       "impact": [
        {
         "name": "Jonnu Smith",
@@ -1763,16 +1755,16 @@
         "slot": "WR"
        }
       ],
-      "market_given": 6314,
-      "market_got": 6074,
+      "market_given": 6344,
+      "market_got": 6218,
       "window": "Middle",
       "unvalued": [],
       "grade": "D",
-      "score": -1947,
-      "gap": -3009
+      "score": -1929,
+      "gap": -2907
      },
-     "861422415547318272": {
-      "net": 1416,
+     "12": {
+      "net": 1304,
       "impact": [
        {
         "name": "Luther Burden III",
@@ -1780,17 +1772,17 @@
         "slot": null
        }
       ],
-      "market_given": 6074,
-      "market_got": 6314,
+      "market_given": 6218,
+      "market_got": 6344,
       "window": "Middle",
       "unvalued": [],
       "grade": "B",
-      "score": 1814,
-      "gap": 3009
+      "score": 1705,
+      "gap": 2907
      }
     },
     "pick_values": {
-     "2026-1-861422415547318272": 4181
+     "2026-1-12": 4163
     }
    },
    "id": "1288177836510699520",
@@ -1799,7 +1791,7 @@
    "date": "2025-10-26T14:33+00:00",
    "sides": [
     {
-     "owner": "858765508143628288",
+     "owner": "4",
      "players": [
       {
        "id": "4144",
@@ -1832,7 +1824,7 @@
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "12519",
@@ -1852,8 +1844,8 @@
       {
        "season": 2026,
        "round": 1,
-       "original_owner": "861422415547318272",
-       "was_value": 4181,
+       "original_owner": "12",
+       "was_value": 4163,
        "value_basis": "original_owner"
       }
      ],
@@ -1863,29 +1855,29 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "858765508143628288": {
+     "4": {
       "items": [
        {
         "kind": "player",
         "label": "Jonnu Smith (TE)",
-        "value": 32
+        "value": 28
        },
        {
         "kind": "player",
         "label": "Nico Collins (WR)",
-        "value": 4143
+        "value": 4115
        }
       ],
-      "got_now": 4175,
-      "gave_now": 4113,
+      "got_now": 4143,
+      "gave_now": 4139,
       "grade": "C"
      },
-     "861422415547318272": {
+     "12": {
       "items": [
        {
         "kind": "player",
         "label": "Luther Burden III (WR)",
-        "value": 4113
+        "value": 4139
        },
        {
         "kind": "pick",
@@ -1895,8 +1887,8 @@
         "value": 0
        }
       ],
-      "got_now": 4113,
-      "gave_now": 4175,
+      "got_now": 4139,
+      "gave_now": 4143,
       "grade": "C"
      }
     }
@@ -1904,10 +1896,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "861417814836256768": {
-      "net": -273,
+     "1": {
+      "net": -248,
       "impact": [
        {
         "name": "Deebo Samuel Sr.",
@@ -1915,16 +1907,16 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 5269,
-      "market_got": 4098,
+      "market_given": 5319,
+      "market_got": 4148,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": -374,
-      "gap": -678
+      "score": -356,
+      "gap": -682
      },
-     "858765508143628288": {
-      "net": 405,
+     "4": {
+      "net": 434,
       "impact": [
        {
         "name": "Jameson Williams",
@@ -1937,17 +1929,17 @@
         "slot": "RB"
        }
       ],
-      "market_given": 4098,
-      "market_got": 5269,
+      "market_given": 4148,
+      "market_got": 5319,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": 473,
-      "gap": 678
+      "score": 496,
+      "gap": 682
      }
     },
     "pick_values": {
-     "2027-1-858765508143628288": 2353
+     "2027-1-4": 2382
     }
    },
    "id": "1287126986719784960",
@@ -1956,7 +1948,7 @@
    "date": "2025-10-25T06:24+00:00",
    "sides": [
     {
-     "owner": "861417814836256768",
+     "owner": "1",
      "players": [
       {
        "id": "5872",
@@ -1976,15 +1968,15 @@
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "858765508143628288",
-       "was_value": 2353,
+       "original_owner": "4",
+       "was_value": 2382,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "858765508143628288",
+     "owner": "4",
      "players": [
       {
        "id": "8148",
@@ -2020,40 +2012,40 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "861417814836256768": {
+     "1": {
       "items": [
        {
         "kind": "player",
         "label": "Deebo Samuel Sr. (WR)",
-        "value": 1196
+        "value": 1205
        },
        {
         "kind": "pick",
         "label": "2027 Round 1",
         "from": "Joe Buck Yourself",
         "player": null,
-        "value": 2148
+        "value": 2620
        }
       ],
-      "got_now": 3344,
-      "gave_now": 9119,
+      "got_now": 3825,
+      "gave_now": 9101,
       "grade": "F"
      },
-     "858765508143628288": {
+     "4": {
       "items": [
        {
         "kind": "player",
         "label": "Jameson Williams (WR)",
-        "value": 2588
+        "value": 2569
        },
        {
         "kind": "player",
         "label": "Kenneth Walker III (RB)",
-        "value": 6531
+        "value": 6532
        }
       ],
-      "got_now": 9119,
-      "gave_now": 3344,
+      "got_now": 9101,
+      "gave_now": 3825,
       "grade": "A"
      }
     }
@@ -2061,10 +2053,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "908808510823997440": {
-      "net": 1332,
+     "6": {
+      "net": 1410,
       "impact": [
        {
         "name": "Ladd McConkey",
@@ -2072,16 +2064,16 @@
         "slot": null
        }
       ],
-      "market_given": 4229,
-      "market_got": 5381,
+      "market_given": 4226,
+      "market_got": 5455,
       "window": "Middle",
       "unvalued": [],
       "grade": "B",
-      "score": 1638,
-      "gap": 2556
+      "score": 1735,
+      "gap": 2709
      },
-     "861422415547318272": {
-      "net": -1224,
+     "12": {
+      "net": -1299,
       "impact": [
        {
         "name": "Rashee Rice",
@@ -2089,17 +2081,17 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 5381,
-      "market_got": 4229,
+      "market_given": 5455,
+      "market_got": 4226,
       "window": "Middle",
       "unvalued": [],
       "grade": "D",
-      "score": -1557,
-      "gap": -2556
+      "score": -1652,
+      "gap": -2709
      }
     },
     "pick_values": {
-     "2026-2-861422415547318272": 1412
+     "2026-2-12": 1416
     }
    },
    "id": "1280461308679958528",
@@ -2108,7 +2100,7 @@
    "date": "2025-10-05T13:55+00:00",
    "sides": [
     {
-     "owner": "908808510823997440",
+     "owner": "6",
      "players": [
       {
        "id": "11635",
@@ -2128,15 +2120,15 @@
       {
        "season": 2026,
        "round": 2,
-       "original_owner": "861422415547318272",
-       "was_value": 1412,
+       "original_owner": "12",
+       "was_value": 1416,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "10229",
@@ -2159,12 +2151,12 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "908808510823997440": {
+     "6": {
       "items": [
        {
         "kind": "player",
         "label": "Ladd McConkey (WR)",
-        "value": 2857
+        "value": 2784
        },
        {
         "kind": "pick",
@@ -2174,20 +2166,20 @@
         "value": 0
        }
       ],
-      "got_now": 2857,
-      "gave_now": 2999,
+      "got_now": 2784,
+      "gave_now": 3000,
       "grade": "C"
      },
-     "861422415547318272": {
+     "12": {
       "items": [
        {
         "kind": "player",
         "label": "Rashee Rice (WR)",
-        "value": 2999
+        "value": 3000
        }
       ],
-      "got_now": 2999,
-      "gave_now": 2857,
+      "got_now": 3000,
+      "gave_now": 2784,
       "grade": "C"
      }
     }
@@ -2195,10 +2187,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "915765963616985088": {
-      "net": -5451,
+     "10": {
+      "net": -5795,
       "impact": [
        {
         "name": "Emeka Egbuka",
@@ -2211,16 +2203,16 @@
         "slot": "RB"
        }
       ],
-      "market_given": 19304,
-      "market_got": 12243,
+      "market_given": 19914,
+      "market_got": 12533,
       "window": "Contender",
       "unvalued": [],
       "grade": "F",
-      "score": -6814,
-      "gap": -10905
+      "score": -7228,
+      "gap": -11529
      },
-     "853109226401288192": {
-      "net": 5454,
+     "11": {
+      "net": 5734,
       "impact": [
        {
         "name": "Jared Goff",
@@ -2238,23 +2230,23 @@
         "slot": "WR"
        }
       ],
-      "market_given": 12243,
-      "market_got": 19304,
+      "market_given": 12533,
+      "market_got": 19914,
       "window": "Contender",
       "unvalued": [],
       "grade": "A",
-      "score": 6817,
-      "gap": 10905
+      "score": 7183,
+      "gap": 11529
      }
     },
     "pick_values": {
-     "2026-1-915765963616985088": 2475,
-     "2026-3-915765963616985088": 676,
-     "2027-3-915765963616985088": 608,
-     "2028-2-915765963616985088": 1306,
-     "2027-1-853109226401288192": 2405,
-     "2027-2-853109226401288192": 1192,
-     "2028-2-853109226401288192": 1306
+     "2026-1-10": 2540,
+     "2026-3-10": 666,
+     "2027-3-10": 593,
+     "2028-2-10": 1307,
+     "2027-1-11": 2474,
+     "2027-2-11": 1195,
+     "2028-2-11": 1307
     }
    },
    "id": "1274207814302072832",
@@ -2263,7 +2255,7 @@
    "date": "2025-09-19T06:23+00:00",
    "sides": [
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [
       {
        "id": "12514",
@@ -2296,29 +2288,29 @@
       {
        "season": 2027,
        "round": 1,
-       "original_owner": "853109226401288192",
-       "was_value": 2405,
+       "original_owner": "11",
+       "was_value": 2474,
        "value_basis": "original_owner"
       },
       {
        "season": 2027,
        "round": 2,
-       "original_owner": "853109226401288192",
-       "was_value": 1192,
+       "original_owner": "11",
+       "was_value": 1195,
        "value_basis": "original_owner"
       },
       {
        "season": 2028,
        "round": 2,
-       "original_owner": "853109226401288192",
-       "was_value": 1306,
+       "original_owner": "11",
+       "was_value": 1307,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "853109226401288192",
+     "owner": "11",
      "players": [
       {
        "id": "3163",
@@ -2364,29 +2356,29 @@
       {
        "season": 2026,
        "round": 1,
-       "original_owner": "915765963616985088",
-       "was_value": 2475,
+       "original_owner": "10",
+       "was_value": 2540,
        "value_basis": "original_owner"
       },
       {
        "season": 2026,
        "round": 3,
-       "original_owner": "915765963616985088",
-       "was_value": 676,
+       "original_owner": "10",
+       "was_value": 666,
        "value_basis": "original_owner"
       },
       {
        "season": 2027,
        "round": 3,
-       "original_owner": "915765963616985088",
-       "was_value": 608,
+       "original_owner": "10",
+       "was_value": 593,
        "value_basis": "original_owner"
       },
       {
        "season": 2028,
        "round": 2,
-       "original_owner": "915765963616985088",
-       "was_value": 1306,
+       "original_owner": "10",
+       "was_value": 1307,
        "value_basis": "original_owner"
       }
      ],
@@ -2396,60 +2388,60 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "915765963616985088": {
+     "10": {
       "items": [
        {
         "kind": "player",
         "label": "Emeka Egbuka (WR)",
-        "value": 3391
+        "value": 3397
        },
        {
         "kind": "player",
         "label": "James Cook III (RB)",
-        "value": 5666
+        "value": 5646
        },
        {
         "kind": "pick",
         "label": "2027 Round 1",
-        "from": "Time to tank",
+        "from": "Mia KALIFa ",
         "player": null,
-        "value": 2642
+        "value": 2620
        },
        {
         "kind": "pick",
         "label": "2027 Round 2",
-        "from": "Time to tank",
+        "from": "Mia KALIFa ",
         "player": null,
-        "value": 1385
+        "value": 1389
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
-        "from": "Time to tank",
+        "from": "Mia KALIFa ",
         "player": null,
-        "value": 1263
+        "value": 1269
        }
       ],
-      "got_now": 14347,
-      "gave_now": 11317,
+      "got_now": 14321,
+      "gave_now": 11715,
       "grade": "A"
      },
-     "853109226401288192": {
+     "11": {
       "items": [
        {
         "kind": "player",
         "label": "Jared Goff (QB)",
-        "value": 1861
+        "value": 1879
        },
        {
         "kind": "player",
         "label": "T.J. Hockenson (TE)",
-        "value": 1437
+        "value": 1441
        },
        {
         "kind": "player",
         "label": "Justin Jefferson (WR)",
-        "value": 6290
+        "value": 6292
        },
        {
         "kind": "pick",
@@ -2470,18 +2462,18 @@
         "label": "2027 Round 3",
         "from": "Lamar Jackson Fan Club",
         "player": null,
-        "value": 487
+        "value": 834
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
         "from": "Lamar Jackson Fan Club",
         "player": null,
-        "value": 1242
+        "value": 1269
        }
       ],
-      "got_now": 11317,
-      "gave_now": 14347,
+      "got_now": 11715,
+      "gave_now": 14321,
       "grade": "F"
      }
     }
@@ -2489,35 +2481,35 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "909255939126161408": {
-      "net": -317,
+     "7": {
+      "net": -316,
       "impact": [],
-      "market_given": 838,
-      "market_got": 521,
+      "market_given": 813,
+      "market_got": 497,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": -408,
-      "gap": -682
+      "score": -407,
+      "gap": -679
      },
-     "861421486488031232": {
-      "net": 365,
+     "8": {
+      "net": 363,
       "impact": [],
-      "market_given": 521,
-      "market_got": 838,
+      "market_given": 497,
+      "market_got": 813,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "C",
-      "score": 444,
-      "gap": 682
+      "score": 442,
+      "gap": 679
      }
     },
     "pick_values": {
-     "2025-3-861422415547318272": 596,
-     "2025-4-909255939126161408": 242,
-     "2026-3-861421486488031232": 521
+     "2025-3-12": 573,
+     "2025-4-7": 240,
+     "2026-3-8": 497
     }
    },
    "id": "1228055514659692544",
@@ -2526,35 +2518,35 @@
    "date": "2025-05-13T16:52+00:00",
    "sides": [
     {
-     "owner": "909255939126161408",
+     "owner": "7",
      "players": [],
      "picks": [
       {
        "season": 2026,
        "round": 3,
-       "original_owner": "861421486488031232",
-       "was_value": 521,
+       "original_owner": "8",
+       "was_value": 497,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861421486488031232",
+     "owner": "8",
      "players": [],
      "picks": [
       {
        "season": 2025,
        "round": 3,
-       "original_owner": "861422415547318272",
-       "was_value": 596,
+       "original_owner": "12",
+       "was_value": 573,
        "value_basis": "original_owner"
       },
       {
        "season": 2025,
        "round": 4,
-       "original_owner": "909255939126161408",
-       "was_value": 242,
+       "original_owner": "7",
+       "was_value": 240,
        "value_basis": "original_owner"
       }
      ],
@@ -2564,7 +2556,7 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "909255939126161408": {
+     "7": {
       "items": [
        {
         "kind": "pick",
@@ -2578,7 +2570,7 @@
       "gave_now": 0,
       "grade": "C"
      },
-     "861421486488031232": {
+     "8": {
       "items": [
        {
         "kind": "pick",
@@ -2604,21 +2596,21 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "915765963616985088": {
-      "net": -138,
+     "10": {
+      "net": -159,
       "impact": [],
-      "market_given": 1631,
-      "market_got": 1203,
+      "market_given": 1668,
+      "market_got": 1206,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": -172,
-      "gap": -276
+      "score": -199,
+      "gap": -318
      },
-     "853109226401288192": {
-      "net": 138,
+     "11": {
+      "net": 159,
       "impact": [
        {
         "name": "J.J. McCarthy",
@@ -2626,17 +2618,17 @@
         "slot": null
        }
       ],
-      "market_given": 1203,
-      "market_got": 1631,
+      "market_given": 1206,
+      "market_got": 1668,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 172,
-      "gap": 276
+      "score": 199,
+      "gap": 318
      }
     },
     "pick_values": {
-     "2025-2-853109226401288192": 1203
+     "2025-2-11": 1206
     }
    },
    "id": "1227843994239651840",
@@ -2645,21 +2637,21 @@
    "date": "2025-05-13T13:06+00:00",
    "sides": [
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [],
      "picks": [
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "853109226401288192",
-       "was_value": 1203,
+       "original_owner": "11",
+       "was_value": 1206,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "853109226401288192",
+     "owner": "11",
      "players": [
       {
        "id": "11565",
@@ -2682,29 +2674,29 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "915765963616985088": {
+     "10": {
       "items": [
        {
         "kind": "pick",
         "label": "2025 Round 2",
-        "from": "Time to tank",
+        "from": "Mia KALIFa ",
         "player": null,
         "value": 0
        }
       ],
       "got_now": 0,
-      "gave_now": 1123,
+      "gave_now": 1119,
       "grade": "D"
      },
-     "853109226401288192": {
+     "11": {
       "items": [
        {
         "kind": "player",
         "label": "J.J. McCarthy (QB)",
-        "value": 1123
+        "value": 1119
        }
       ],
-      "got_now": 1123,
+      "got_now": 1119,
       "gave_now": 0,
       "grade": "B"
      }
@@ -2713,21 +2705,21 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "861417814836256768": {
-      "net": 649,
+     "1": {
+      "net": 537,
       "impact": [],
-      "market_given": 1504,
-      "market_got": 1724,
+      "market_given": 1612,
+      "market_got": 1703,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 994,
-      "gap": 2030
+      "score": 859,
+      "gap": 1826
      },
-     "858765508143628288": {
-      "net": -1381,
+     "4": {
+      "net": -1289,
       "impact": [
        {
         "name": "Najee Harris",
@@ -2735,18 +2727,18 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 1724,
-      "market_got": 1504,
+      "market_given": 1703,
+      "market_got": 1612,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "D",
-      "score": -1543,
-      "gap": -2030
+      "score": -1423,
+      "gap": -1826
      }
     },
     "pick_values": {
-     "2025-2-915765963616985088": 1203,
-     "2026-3-731283214563422208": 521
+     "2025-2-10": 1206,
+     "2026-3-9": 497
     }
    },
    "id": "1227646077285453824",
@@ -2755,28 +2747,28 @@
    "date": "2025-05-12T13:24+00:00",
    "sides": [
     {
-     "owner": "861417814836256768",
+     "owner": "1",
      "players": [],
      "picks": [
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "915765963616985088",
-       "was_value": 1203,
+       "original_owner": "10",
+       "was_value": 1206,
        "value_basis": "original_owner"
       },
       {
        "season": 2026,
        "round": 3,
-       "original_owner": "731283214563422208",
-       "was_value": 521,
+       "original_owner": "9",
+       "was_value": 497,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "858765508143628288",
+     "owner": "4",
      "players": [
       {
        "id": "7528",
@@ -2799,7 +2791,7 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "861417814836256768": {
+     "1": {
       "items": [
        {
         "kind": "pick",
@@ -2811,24 +2803,24 @@
        {
         "kind": "pick",
         "label": "2026 Round 3",
-        "from": "Goed's Plan",
+        "from": "My team Shoughs",
         "player": null,
         "value": 0
        }
       ],
       "got_now": 0,
-      "gave_now": 91,
+      "gave_now": 90,
       "grade": "C"
      },
-     "858765508143628288": {
+     "4": {
       "items": [
        {
         "kind": "player",
         "label": "Najee Harris (RB)",
-        "value": 91
+        "value": 90
        }
       ],
-      "got_now": 91,
+      "got_now": 90,
       "gave_now": 0,
       "grade": "C"
      }
@@ -2837,10 +2829,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "858765508143628288": {
-      "net": -2811,
+     "4": {
+      "net": -2831,
       "impact": [
        {
         "name": "DK Metcalf",
@@ -2848,29 +2840,29 @@
         "slot": "WR"
        }
       ],
-      "market_given": 3967,
-      "market_got": 2855,
+      "market_given": 4002,
+      "market_got": 2887,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "F",
-      "score": -3144,
-      "gap": -4144
+      "score": -3162,
+      "gap": -4157
      },
-     "861422415547318272": {
-      "net": 1333,
+     "12": {
+      "net": 1326,
       "impact": [],
-      "market_given": 2855,
-      "market_got": 3967,
+      "market_given": 2887,
+      "market_got": 4002,
       "window": "Contender",
       "unvalued": [],
       "grade": "A",
-      "score": 2036,
-      "gap": 4144
+      "score": 2034,
+      "gap": 4157
      }
     },
     "pick_values": {
-     "2025-1-915765963616985088": 2844,
-     "2026-2-858765508143628288": 1123
+     "2025-1-10": 2867,
+     "2026-2-4": 1135
     }
    },
    "id": "1227614298889535488",
@@ -2879,7 +2871,7 @@
    "date": "2025-05-12T11:18+00:00",
    "sides": [
     {
-     "owner": "858765508143628288",
+     "owner": "4",
      "players": [
       {
        "id": "5846",
@@ -2899,21 +2891,21 @@
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [],
      "picks": [
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "915765963616985088",
-       "was_value": 2844,
+       "original_owner": "10",
+       "was_value": 2867,
        "value_basis": "original_owner"
       },
       {
        "season": 2026,
        "round": 2,
-       "original_owner": "858765508143628288",
-       "was_value": 1123,
+       "original_owner": "4",
+       "was_value": 1135,
        "value_basis": "original_owner"
       }
      ],
@@ -2923,19 +2915,19 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "858765508143628288": {
+     "4": {
       "items": [
        {
         "kind": "player",
         "label": "DK Metcalf (WR)",
-        "value": 1904
+        "value": 1923
        }
       ],
-      "got_now": 1904,
+      "got_now": 1923,
       "gave_now": 0,
       "grade": "A"
      },
-     "861422415547318272": {
+     "12": {
       "items": [
        {
         "kind": "pick",
@@ -2953,7 +2945,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 1904,
+      "gave_now": 1923,
       "grade": "F"
      }
     }
@@ -2961,21 +2953,21 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "745458998371008512": {
-      "net": -567,
+     "2": {
+      "net": -550,
       "impact": [],
-      "market_given": 4090,
-      "market_got": 2844,
+      "market_given": 4079,
+      "market_got": 2867,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": -746,
-      "gap": -1281
+      "score": -724,
+      "gap": -1245
      },
-     "861422415547318272": {
-      "net": 714,
+     "12": {
+      "net": 695,
       "impact": [
        {
         "name": "Sam Darnold",
@@ -2983,18 +2975,18 @@
         "slot": null
        }
       ],
-      "market_given": 2844,
-      "market_got": 4090,
+      "market_given": 2867,
+      "market_got": 4079,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 856,
-      "gap": 1281
+      "score": 832,
+      "gap": 1245
      }
     },
     "pick_values": {
-     "2025-1-861417814836256768": 2844,
-     "2025-1-745458998371008512": 2844
+     "2025-1-1": 2867,
+     "2025-1-2": 2867
     }
    },
    "id": "1227403840911855616",
@@ -3003,21 +2995,21 @@
    "date": "2025-05-11T21:23+00:00",
    "sides": [
     {
-     "owner": "745458998371008512",
+     "owner": "2",
      "players": [],
      "picks": [
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "861417814836256768",
-       "was_value": 2844,
+       "original_owner": "1",
+       "was_value": 2867,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "4943",
@@ -3037,8 +3029,8 @@
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "745458998371008512",
-       "was_value": 2844,
+       "original_owner": "2",
+       "was_value": 2867,
        "value_basis": "original_owner"
       }
      ],
@@ -3048,7 +3040,7 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "745458998371008512": {
+     "2": {
       "items": [
        {
         "kind": "pick",
@@ -3059,15 +3051,15 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 1189,
+      "gave_now": 1193,
       "grade": "D"
      },
-     "861422415547318272": {
+     "12": {
       "items": [
        {
         "kind": "player",
         "label": "Sam Darnold (QB)",
-        "value": 1189
+        "value": 1193
        },
        {
         "kind": "pick",
@@ -3077,7 +3069,7 @@
         "value": 0
        }
       ],
-      "got_now": 1189,
+      "got_now": 1193,
       "gave_now": 0,
       "grade": "B"
      }
@@ -3086,10 +3078,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "858765508143628288": {
-      "net": -955,
+     "4": {
+      "net": -1007,
       "impact": [
        {
         "name": "Cooper Kupp",
@@ -3097,30 +3089,30 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 2844,
-      "market_got": 3121,
+      "market_given": 2867,
+      "market_got": 3105,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "D",
-      "score": -1012,
-      "gap": -1185
+      "score": -1071,
+      "gap": -1262
      },
-     "731283214563422208": {
-      "net": 230,
+     "9": {
+      "net": 255,
       "impact": [],
-      "market_given": 3121,
-      "market_got": 2844,
+      "market_given": 3105,
+      "market_got": 2867,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": 469,
-      "gap": 1185
+      "score": 507,
+      "gap": 1262
      }
     },
     "pick_values": {
-     "2025-2-915765963616985088": 1203,
-     "2025-1-733192747346997248": 2844,
-     "2026-3-731283214563422208": 521
+     "2025-2-10": 1206,
+     "2025-1-5": 2867,
+     "2026-3-9": 497
     }
    },
    "id": "1227350927816536064",
@@ -3129,7 +3121,7 @@
    "date": "2025-05-11T17:50+00:00",
    "sides": [
     {
-     "owner": "858765508143628288",
+     "owner": "4",
      "players": [
       {
        "id": "4039",
@@ -3149,29 +3141,29 @@
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "915765963616985088",
-       "was_value": 1203,
+       "original_owner": "10",
+       "was_value": 1206,
        "value_basis": "original_owner"
       },
       {
        "season": 2026,
        "round": 3,
-       "original_owner": "731283214563422208",
-       "was_value": 521,
+       "original_owner": "9",
+       "was_value": 497,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "731283214563422208",
+     "owner": "9",
      "players": [],
      "picks": [
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "733192747346997248",
-       "was_value": 2844,
+       "original_owner": "5",
+       "was_value": 2867,
        "value_basis": "original_owner"
       }
      ],
@@ -3181,12 +3173,12 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "858765508143628288": {
+     "4": {
       "items": [
        {
         "kind": "player",
         "label": "Cooper Kupp (WR)",
-        "value": 334
+        "value": 355
        },
        {
         "kind": "pick",
@@ -3198,16 +3190,16 @@
        {
         "kind": "pick",
         "label": "2026 Round 3",
-        "from": "Goed's Plan",
+        "from": "My team Shoughs",
         "player": null,
         "value": 0
        }
       ],
-      "got_now": 334,
+      "got_now": 355,
       "gave_now": 0,
       "grade": "C"
      },
-     "731283214563422208": {
+     "9": {
       "items": [
        {
         "kind": "pick",
@@ -3218,7 +3210,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 334,
+      "gave_now": 355,
       "grade": "C"
      }
     }
@@ -3226,10 +3218,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "858765508143628288": {
-      "net": 3259,
+     "4": {
+      "net": 3375,
       "impact": [
        {
         "name": "Romeo Doubs",
@@ -3237,32 +3229,32 @@
         "slot": null
        }
       ],
-      "market_given": 5418,
-      "market_got": 8716,
+      "market_given": 5443,
+      "market_got": 8825,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "A",
-      "score": 3790,
-      "gap": 5385
+      "score": 3925,
+      "gap": 5576
      },
-     "861422415547318272": {
-      "net": -2126,
+     "12": {
+      "net": -2201,
       "impact": [],
-      "market_given": 8716,
-      "market_got": 5418,
+      "market_given": 8825,
+      "market_got": 5443,
       "window": "Contender",
       "unvalued": [],
       "grade": "F",
-      "score": -2941,
-      "gap": -5385
+      "score": -3045,
+      "gap": -5576
      }
     },
     "pick_values": {
-     "2025-1-861422415547318272": 2400,
-     "2026-1-861422415547318272": 2448,
-     "2025-1-858765508143628288": 3983,
-     "2025-2-858765508143628288": 1435,
-     "2025-1-733192747346997248": 2561
+     "2025-1-12": 2444,
+     "2026-1-12": 2518,
+     "2025-1-4": 3974,
+     "2025-2-4": 1469,
+     "2025-1-5": 2603
     }
    },
    "id": "1223048379370582016",
@@ -3271,7 +3263,7 @@
    "date": "2025-05-01T06:13+00:00",
    "sides": [
     {
-     "owner": "858765508143628288",
+     "owner": "4",
      "players": [
       {
        "id": "8121",
@@ -3291,43 +3283,43 @@
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "861422415547318272",
-       "was_value": 2400,
+       "original_owner": "12",
+       "was_value": 2444,
        "value_basis": "original_owner"
       },
       {
        "season": 2026,
        "round": 1,
-       "original_owner": "861422415547318272",
-       "was_value": 2448,
+       "original_owner": "12",
+       "was_value": 2518,
        "value_basis": "original_owner"
       },
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "733192747346997248",
-       "was_value": 2561,
+       "original_owner": "5",
+       "was_value": 2603,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [],
      "picks": [
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "858765508143628288",
-       "was_value": 3983,
+       "original_owner": "4",
+       "was_value": 3974,
        "value_basis": "original_owner"
       },
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "858765508143628288",
-       "was_value": 1435,
+       "original_owner": "4",
+       "was_value": 1469,
        "value_basis": "original_owner"
       }
      ],
@@ -3337,12 +3329,12 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "858765508143628288": {
+     "4": {
       "items": [
        {
         "kind": "player",
         "label": "Romeo Doubs (WR)",
-        "value": 1167
+        "value": 1120
        },
        {
         "kind": "pick",
@@ -3366,11 +3358,11 @@
         "value": 0
        }
       ],
-      "got_now": 1167,
+      "got_now": 1120,
       "gave_now": 0,
       "grade": "B"
      },
-     "861422415547318272": {
+     "12": {
       "items": [
        {
         "kind": "pick",
@@ -3388,7 +3380,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 1167,
+      "gave_now": 1120,
       "grade": "D"
      }
     }
@@ -3396,10 +3388,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "858765508143628288": {
-      "net": -2857,
+     "4": {
+      "net": -2866,
       "impact": [
        {
         "name": "David Montgomery",
@@ -3407,16 +3399,16 @@
         "slot": "RB"
        }
       ],
-      "market_given": 6735,
-      "market_got": 2784,
+      "market_given": 6759,
+      "market_got": 2769,
       "window": "Middle",
       "unvalued": [],
       "grade": "F",
-      "score": -3605,
-      "gap": -5848
+      "score": -3623,
+      "gap": -5895
      },
-     "861421486488031232": {
-      "net": 2991,
+     "8": {
+      "net": 3029,
       "impact": [
        {
         "name": "Nick Chubb",
@@ -3434,17 +3426,17 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 2784,
-      "market_got": 6735,
+      "market_given": 2769,
+      "market_got": 6759,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "A",
-      "score": 3705,
-      "gap": 5848
+      "score": 3746,
+      "gap": 5895
      }
     },
     "pick_values": {
-     "2026-1-858765508143628288": 2376
+     "2026-1-4": 2384
     }
    },
    "id": "1160310178739314688",
@@ -3453,7 +3445,7 @@
    "date": "2024-11-09T07:17+00:00",
    "sides": [
     {
-     "owner": "858765508143628288",
+     "owner": "4",
      "players": [
       {
        "id": "5892",
@@ -3473,7 +3465,7 @@
      "faab": 0
     },
     {
-     "owner": "861421486488031232",
+     "owner": "8",
      "players": [
       {
        "id": "4988",
@@ -3519,8 +3511,8 @@
       {
        "season": 2026,
        "round": 1,
-       "original_owner": "858765508143628288",
-       "was_value": 2376,
+       "original_owner": "4",
+       "was_value": 2384,
        "value_basis": "original_owner"
       }
      ],
@@ -3530,19 +3522,19 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "858765508143628288": {
+     "4": {
       "items": [
        {
         "kind": "player",
         "label": "David Montgomery (RB)",
-        "value": 1578
+        "value": 1579
        }
       ],
-      "got_now": 1578,
-      "gave_now": 676,
+      "got_now": 1579,
+      "gave_now": 670,
       "grade": "B"
      },
-     "861421486488031232": {
+     "8": {
       "items": [
        {
         "kind": "player",
@@ -3552,12 +3544,12 @@
        {
         "kind": "player",
         "label": "Mike Gesicki (TE)",
-        "value": 671
+        "value": 666
        },
        {
         "kind": "player",
         "label": "Diontae Johnson (WR)",
-        "value": 5
+        "value": 4
        },
        {
         "kind": "pick",
@@ -3567,8 +3559,8 @@
         "value": 0
        }
       ],
-      "got_now": 676,
-      "gave_now": 1578,
+      "got_now": 670,
+      "gave_now": 1579,
       "grade": "D"
      }
     }
@@ -3576,10 +3568,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "731283214563422208": {
-      "net": -94,
+     "9": {
+      "net": -231,
       "impact": [
        {
         "name": "Javonte Williams",
@@ -3587,16 +3579,16 @@
         "slot": "RB"
        }
       ],
-      "market_given": 2630,
-      "market_got": 2348,
+      "market_given": 2667,
+      "market_got": 2249,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": -138,
-      "gap": -270
+      "score": -295,
+      "gap": -488
      },
-     "915765963616985088": {
-      "net": 176,
+     "10": {
+      "net": 257,
       "impact": [
        {
         "name": "Jared Goff",
@@ -3604,19 +3596,19 @@
         "slot": null
        }
       ],
-      "market_given": 2348,
-      "market_got": 2630,
+      "market_given": 2249,
+      "market_got": 2667,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 200,
-      "gap": 270
+      "score": 315,
+      "gap": 488
      }
     },
     "pick_values": {
-     "2025-3-915765963616985088": 439,
-     "2025-3-731283214563422208": 711,
-     "2026-4-731283214563422208": 182
+     "2025-3-10": 389,
+     "2025-3-9": 709,
+     "2026-4-9": 196
     }
    },
    "id": "1159972044063371264",
@@ -3625,7 +3617,7 @@
    "date": "2024-11-08T07:17+00:00",
    "sides": [
     {
-     "owner": "731283214563422208",
+     "owner": "9",
      "players": [
       {
        "id": "7588",
@@ -3645,15 +3637,15 @@
       {
        "season": 2025,
        "round": 3,
-       "original_owner": "915765963616985088",
-       "was_value": 439,
+       "original_owner": "10",
+       "was_value": 389,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [
       {
        "id": "3163",
@@ -3673,15 +3665,15 @@
       {
        "season": 2025,
        "round": 3,
-       "original_owner": "731283214563422208",
-       "was_value": 711,
+       "original_owner": "9",
+       "was_value": 709,
        "value_basis": "original_owner"
       },
       {
        "season": 2026,
        "round": 4,
-       "original_owner": "731283214563422208",
-       "was_value": 182,
+       "original_owner": "9",
+       "was_value": 196,
        "value_basis": "original_owner"
       }
      ],
@@ -3691,12 +3683,12 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "731283214563422208": {
+     "9": {
       "items": [
        {
         "kind": "player",
         "label": "Javonte Williams (RB)",
-        "value": 3212
+        "value": 3174
        },
        {
         "kind": "pick",
@@ -3706,34 +3698,34 @@
         "value": 0
        }
       ],
-      "got_now": 3212,
-      "gave_now": 1861,
+      "got_now": 3174,
+      "gave_now": 1879,
       "grade": "B"
      },
-     "915765963616985088": {
+     "10": {
       "items": [
        {
         "kind": "player",
         "label": "Jared Goff (QB)",
-        "value": 1861
+        "value": 1879
        },
        {
         "kind": "pick",
         "label": "2025 Round 3",
-        "from": "Goed's Plan",
+        "from": "My team Shoughs",
         "player": null,
         "value": 0
        },
        {
         "kind": "pick",
         "label": "2026 Round 4",
-        "from": "Goed's Plan",
+        "from": "My team Shoughs",
         "player": null,
         "value": 0
        }
       ],
-      "got_now": 1861,
-      "gave_now": 3212,
+      "got_now": 1879,
+      "gave_now": 3174,
       "grade": "D"
      }
     }
@@ -3741,10 +3733,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "861417814836256768": {
-      "net": 978,
+     "1": {
+      "net": 680,
       "impact": [
        {
         "name": "Marvin Harrison Jr.",
@@ -3752,16 +3744,16 @@
         "slot": null
        }
       ],
-      "market_given": 5228,
-      "market_got": 7038,
+      "market_given": 5361,
+      "market_got": 6731,
       "window": "Contender",
       "unvalued": [],
-      "grade": "B",
-      "score": 1293,
-      "gap": 2238
+      "grade": "C",
+      "score": 896,
+      "gap": 1542
      },
-     "861422415547318272": {
-      "net": -1260,
+     "12": {
+      "net": -862,
       "impact": [
        {
         "name": "Jonathon Brooks",
@@ -3769,17 +3761,17 @@
         "slot": null
        }
       ],
-      "market_given": 7038,
-      "market_got": 5228,
+      "market_given": 6731,
+      "market_got": 5361,
       "window": "Middle",
       "unvalued": [],
       "grade": "D",
-      "score": -1504,
-      "gap": -2238
+      "score": -1032,
+      "gap": -1542
      }
     },
     "pick_values": {
-     "2025-1-861417814836256768": 1996
+     "2025-1-1": 2027
     }
    },
    "id": "1154952866424045568",
@@ -3788,7 +3780,7 @@
    "date": "2024-10-25T06:17+00:00",
    "sides": [
     {
-     "owner": "861417814836256768",
+     "owner": "1",
      "players": [
       {
        "id": "11628",
@@ -3808,7 +3800,7 @@
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "11583",
@@ -3828,8 +3820,8 @@
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "861417814836256768",
-       "was_value": 1996,
+       "original_owner": "1",
+       "was_value": 2027,
        "value_basis": "original_owner"
       }
      ],
@@ -3839,24 +3831,24 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "861417814836256768": {
+     "1": {
       "items": [
        {
         "kind": "player",
         "label": "Marvin Harrison Jr. (WR)",
-        "value": 1822
+        "value": 1813
        }
       ],
-      "got_now": 1822,
-      "gave_now": 1582,
+      "got_now": 1813,
+      "gave_now": 1561,
       "grade": "C"
      },
-     "861422415547318272": {
+     "12": {
       "items": [
        {
         "kind": "player",
         "label": "Jonathon Brooks (RB)",
-        "value": 1582
+        "value": 1561
        },
        {
         "kind": "pick",
@@ -3866,8 +3858,8 @@
         "value": 0
        }
       ],
-      "got_now": 1582,
-      "gave_now": 1822,
+      "got_now": 1561,
+      "gave_now": 1813,
       "grade": "C"
      }
     }
@@ -3875,21 +3867,21 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "909255939126161408": {
-      "net": 109,
+     "7": {
+      "net": 87,
       "impact": [],
-      "market_given": 1293,
-      "market_got": 572,
+      "market_given": 1240,
+      "market_got": 529,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": -38,
-      "gap": -478
+      "score": -60,
+      "gap": -501
      },
-     "861422415547318272": {
-      "net": 587,
+     "12": {
+      "net": 588,
       "impact": [
        {
         "name": "Zack Moss",
@@ -3897,17 +3889,17 @@
         "slot": "RB"
        }
       ],
-      "market_given": 572,
-      "market_got": 1293,
+      "market_given": 529,
+      "market_got": 1240,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 560,
-      "gap": 478
+      "score": 566,
+      "gap": 501
      }
     },
     "pick_values": {
-     "2025-3-861422415547318272": 572
+     "2025-3-12": 529
     }
    },
    "id": "1150145586017120256",
@@ -3916,21 +3908,21 @@
    "date": "2024-10-12T06:17+00:00",
    "sides": [
     {
-     "owner": "909255939126161408",
+     "owner": "7",
      "players": [],
      "picks": [
       {
        "season": 2025,
        "round": 3,
-       "original_owner": "861422415547318272",
-       "was_value": 572,
+       "original_owner": "12",
+       "was_value": 529,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "6845",
@@ -3953,7 +3945,7 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "909255939126161408": {
+     "7": {
       "items": [
        {
         "kind": "pick",
@@ -3964,18 +3956,18 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 7,
+      "gave_now": 6,
       "grade": "C"
      },
-     "861422415547318272": {
+     "12": {
       "items": [
        {
         "kind": "player",
         "label": "Zack Moss (RB)",
-        "value": 7
+        "value": 6
        }
       ],
-      "got_now": 7,
+      "got_now": 6,
       "gave_now": 0,
       "grade": "C"
      }
@@ -3984,10 +3976,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "909255939126161408": {
-      "net": 2096,
+     "7": {
+      "net": 1840,
       "impact": [
        {
         "name": "Chris Olave",
@@ -3995,16 +3987,16 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 2459,
-      "market_got": 4689,
+      "market_given": 2529,
+      "market_got": 4502,
       "window": "Middle",
       "unvalued": [],
       "grade": "A",
-      "score": 2470,
-      "gap": 3590
+      "score": 2156,
+      "gap": 3106
      },
-     "915765963616985088": {
-      "net": -1494,
+     "10": {
+      "net": -1266,
       "impact": [
        {
         "name": "Brian Robinson Jr.",
@@ -4012,13 +4004,13 @@
         "slot": "RB"
        }
       ],
-      "market_given": 4689,
-      "market_got": 2459,
+      "market_given": 4502,
+      "market_got": 2529,
       "window": "Contender",
       "unvalued": [],
-      "grade": "F",
-      "score": -2018,
-      "gap": -3590
+      "grade": "D",
+      "score": -1726,
+      "gap": -3106
      }
     },
     "pick_values": {}
@@ -4029,7 +4021,7 @@
    "date": "2024-10-12T06:17+00:00",
    "sides": [
     {
-     "owner": "909255939126161408",
+     "owner": "7",
      "players": [
       {
        "id": "8144",
@@ -4049,7 +4041,7 @@
      "faab": 0
     },
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [
       {
        "id": "8154",
@@ -4072,28 +4064,28 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "909255939126161408": {
+     "7": {
       "items": [
        {
         "kind": "player",
         "label": "Chris Olave (WR)",
-        "value": 4384
+        "value": 4429
        }
       ],
-      "got_now": 4384,
-      "gave_now": 829,
+      "got_now": 4429,
+      "gave_now": 780,
       "grade": "A"
      },
-     "915765963616985088": {
+     "10": {
       "items": [
        {
         "kind": "player",
         "label": "Brian Robinson Jr. (RB)",
-        "value": 829
+        "value": 780
        }
       ],
-      "got_now": 829,
-      "gave_now": 4384,
+      "got_now": 780,
+      "gave_now": 4429,
       "grade": "F"
      }
     }
@@ -4101,21 +4093,21 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "731283214563422208": {
-      "net": -1691,
+     "9": {
+      "net": -1828,
       "impact": [],
-      "market_given": 4585,
-      "market_got": 2481,
+      "market_given": 4703,
+      "market_got": 2521,
       "window": "Contender",
       "unvalued": [],
       "grade": "D",
-      "score": -1442,
-      "gap": -696
+      "score": -1580,
+      "gap": -836
      },
-     "915765963616985088": {
-      "net": -995,
+     "10": {
+      "net": -992,
       "impact": [
        {
         "name": "Derrick Henry",
@@ -4128,19 +4120,19 @@
         "slot": "WR"
        }
       ],
-      "market_given": 2481,
-      "market_got": 4585,
+      "market_given": 2521,
+      "market_got": 4703,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "C",
-      "score": -572,
-      "gap": 696
+      "score": -535,
+      "gap": 836
      }
     },
     "pick_values": {
-     "2025-2-915765963616985088": 1129,
-     "2025-4-915765963616985088": 221,
-     "2026-2-915765963616985088": 1131
+     "2025-2-10": 1146,
+     "2025-4-10": 222,
+     "2026-2-10": 1153
     }
    },
    "id": "1144401645145817088",
@@ -4149,35 +4141,35 @@
    "date": "2024-09-26T06:17+00:00",
    "sides": [
     {
-     "owner": "731283214563422208",
+     "owner": "9",
      "players": [],
      "picks": [
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "915765963616985088",
-       "was_value": 1129,
+       "original_owner": "10",
+       "was_value": 1146,
        "value_basis": "original_owner"
       },
       {
        "season": 2025,
        "round": 4,
-       "original_owner": "915765963616985088",
-       "was_value": 221,
+       "original_owner": "10",
+       "was_value": 222,
        "value_basis": "original_owner"
       },
       {
        "season": 2026,
        "round": 2,
-       "original_owner": "915765963616985088",
-       "was_value": 1131,
+       "original_owner": "10",
+       "was_value": 1153,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [
       {
        "id": "3198",
@@ -4213,7 +4205,7 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "731283214563422208": {
+     "9": {
       "items": [
        {
         "kind": "pick",
@@ -4238,23 +4230,23 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 3922,
+      "gave_now": 3990,
       "grade": "F"
      },
-     "915765963616985088": {
+     "10": {
       "items": [
        {
         "kind": "player",
         "label": "Derrick Henry (RB)",
-        "value": 2438
+        "value": 2485
        },
        {
         "kind": "player",
         "label": "Terry McLaurin (WR)",
-        "value": 1484
+        "value": 1505
        }
       ],
-      "got_now": 3922,
+      "got_now": 3990,
       "gave_now": 0,
       "grade": "A"
      }
@@ -4263,10 +4255,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "853109226401288192": {
-      "net": 962,
+     "11": {
+      "net": 998,
       "impact": [
        {
         "name": "Joe Burrow",
@@ -4274,16 +4266,16 @@
         "slot": "QB"
        }
       ],
-      "market_given": 2156,
-      "market_got": 3235,
+      "market_given": 2232,
+      "market_got": 3352,
       "window": "Middle",
       "unvalued": [],
       "grade": "B",
-      "score": 1096,
-      "gap": 1497
+      "score": 1140,
+      "gap": 1566
      },
-     "861422415547318272": {
-      "net": -535,
+     "12": {
+      "net": -568,
       "impact": [
        {
         "name": "Jayden Daniels",
@@ -4291,13 +4283,13 @@
         "slot": null
        }
       ],
-      "market_given": 3235,
-      "market_got": 2156,
+      "market_given": 3352,
+      "market_got": 2232,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "C",
-      "score": -776,
-      "gap": -1497
+      "score": -818,
+      "gap": -1566
      }
     },
     "pick_values": {}
@@ -4308,7 +4300,7 @@
    "date": "2024-09-21T06:17+00:00",
    "sides": [
     {
-     "owner": "853109226401288192",
+     "owner": "11",
      "players": [
       {
        "id": "6770",
@@ -4328,7 +4320,7 @@
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "11566",
@@ -4351,28 +4343,28 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "853109226401288192": {
+     "11": {
       "items": [
        {
         "kind": "player",
         "label": "Joe Burrow (QB)",
-        "value": 4073
+        "value": 4077
        }
       ],
-      "got_now": 4073,
-      "gave_now": 3048,
+      "got_now": 4077,
+      "gave_now": 3059,
       "grade": "B"
      },
-     "861422415547318272": {
+     "12": {
       "items": [
        {
         "kind": "player",
         "label": "Jayden Daniels (QB)",
-        "value": 3048
+        "value": 3059
        }
       ],
-      "got_now": 3048,
-      "gave_now": 4073,
+      "got_now": 3059,
+      "gave_now": 4077,
       "grade": "D"
      }
     }
@@ -4380,10 +4372,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "733192747346997248": {
-      "net": -5521,
+     "5": {
+      "net": -6215,
       "impact": [
        {
         "name": "Christian McCaffrey",
@@ -4391,16 +4383,16 @@
         "slot": "RB"
        }
       ],
-      "market_given": 13699,
-      "market_got": 7766,
+      "market_given": 14007,
+      "market_got": 7415,
       "window": "Middle",
       "unvalued": [],
       "grade": "F",
-      "score": -7522,
-      "gap": -13523
+      "score": -8350,
+      "gap": -14757
      },
-     "861422415547318272": {
-      "net": 8002,
+     "12": {
+      "net": 8542,
       "impact": [
        {
         "name": "Ja'Marr Chase",
@@ -4408,18 +4400,18 @@
         "slot": "WR"
        }
       ],
-      "market_given": 7766,
-      "market_got": 13699,
+      "market_given": 7415,
+      "market_got": 14007,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "A",
-      "score": 9382,
-      "gap": 13523
+      "score": 10096,
+      "gap": 14757
      }
     },
     "pick_values": {
-     "2025-2-861422415547318272": 1160,
-     "2025-1-733192747346997248": 2577
+     "2025-2-12": 1162,
+     "2025-1-5": 2630
     }
    },
    "id": "1128796858282872832",
@@ -4428,7 +4420,7 @@
    "date": "2024-08-14T06:14+00:00",
    "sides": [
     {
-     "owner": "733192747346997248",
+     "owner": "5",
      "players": [
       {
        "id": "4034",
@@ -4448,15 +4440,15 @@
       {
        "season": 2025,
        "round": 2,
-       "original_owner": "861422415547318272",
-       "was_value": 1160,
+       "original_owner": "12",
+       "was_value": 1162,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "861422415547318272",
+     "owner": "12",
      "players": [
       {
        "id": "7564",
@@ -4476,8 +4468,8 @@
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "733192747346997248",
-       "was_value": 2577,
+       "original_owner": "5",
+       "was_value": 2630,
        "value_basis": "original_owner"
       }
      ],
@@ -4487,12 +4479,12 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "733192747346997248": {
+     "5": {
       "items": [
        {
         "kind": "player",
         "label": "Christian McCaffrey (RB)",
-        "value": 4770
+        "value": 4794
        },
        {
         "kind": "pick",
@@ -4502,16 +4494,16 @@
         "value": 0
        }
       ],
-      "got_now": 4770,
-      "gave_now": 9663,
+      "got_now": 4794,
+      "gave_now": 9611,
       "grade": "F"
      },
-     "861422415547318272": {
+     "12": {
       "items": [
        {
         "kind": "player",
         "label": "Ja'Marr Chase (WR)",
-        "value": 9663
+        "value": 9611
        },
        {
         "kind": "pick",
@@ -4521,8 +4513,8 @@
         "value": 0
        }
       ],
-      "got_now": 9663,
-      "gave_now": 4770,
+      "got_now": 9611,
+      "gave_now": 4794,
       "grade": "A"
      }
     }
@@ -4530,37 +4522,37 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "858765508143628288": {
-      "net": 4984,
+     "4": {
+      "net": 5007,
       "impact": [],
-      "market_given": 2867,
-      "market_got": 7201,
+      "market_given": 2950,
+      "market_got": 7304,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "A",
-      "score": 6230,
-      "gap": 9968
+      "score": 6259,
+      "gap": 10014
      },
-     "915765963616985088": {
-      "net": -4984,
+     "10": {
+      "net": -5007,
       "impact": [],
-      "market_given": 7201,
-      "market_got": 2867,
+      "market_given": 7304,
+      "market_got": 2950,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "F",
-      "score": -6230,
-      "gap": -9968
+      "score": -6259,
+      "gap": -10014
      }
     },
     "pick_values": {
-     "2024-3-915765963616985088": 1525,
-     "2025-1-915765963616985088": 2658,
-     "2024-2-745458998371008512": 1730,
-     "2024-1-858765508143628288": 2867,
-     "2024-4-858765508143628288": 1288
+     "2024-3-10": 1610,
+     "2025-1-10": 2717,
+     "2024-2-2": 1736,
+     "2024-1-4": 2950,
+     "2024-4-4": 1241
     }
    },
    "id": "1074492167416045568",
@@ -4569,49 +4561,49 @@
    "date": "2024-03-17T06:11+00:00",
    "sides": [
     {
-     "owner": "858765508143628288",
+     "owner": "4",
      "players": [],
      "picks": [
       {
        "season": 2024,
        "round": 3,
-       "original_owner": "915765963616985088",
-       "was_value": 1525,
+       "original_owner": "10",
+       "was_value": 1610,
        "value_basis": "original_owner"
       },
       {
        "season": 2025,
        "round": 1,
-       "original_owner": "915765963616985088",
-       "was_value": 2658,
+       "original_owner": "10",
+       "was_value": 2717,
        "value_basis": "original_owner"
       },
       {
        "season": 2024,
        "round": 2,
-       "original_owner": "745458998371008512",
-       "was_value": 1730,
+       "original_owner": "2",
+       "was_value": 1736,
        "value_basis": "original_owner"
       },
       {
        "season": 2024,
        "round": 4,
-       "original_owner": "858765508143628288",
-       "was_value": 1288,
+       "original_owner": "4",
+       "was_value": 1241,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [],
      "picks": [
       {
        "season": 2024,
        "round": 1,
-       "original_owner": "858765508143628288",
-       "was_value": 2867,
+       "original_owner": "4",
+       "was_value": 2950,
        "value_basis": "original_owner"
       }
      ],
@@ -4621,7 +4613,7 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "858765508143628288": {
+     "4": {
       "items": [
        {
         "kind": "pick",
@@ -4656,7 +4648,7 @@
       "gave_now": 0,
       "grade": "C"
      },
-     "915765963616985088": {
+     "10": {
       "items": [
        {
         "kind": "pick",
@@ -4675,10 +4667,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "858765508143628288": {
-      "net": -1893,
+     "4": {
+      "net": -1868,
       "impact": [
        {
         "name": "Raheem Mostert",
@@ -4686,30 +4678,30 @@
         "slot": "RB"
        }
       ],
-      "market_given": 2317,
+      "market_given": 2291,
       "market_got": 1702,
       "window": "Rebuilder",
       "unvalued": [],
       "grade": "F",
-      "score": -2219,
-      "gap": -3197
+      "score": -2189,
+      "gap": -3151
      },
-     "915765963616985088": {
-      "net": 1304,
+     "10": {
+      "net": 1283,
       "impact": [],
       "market_given": 1702,
-      "market_got": 2317,
+      "market_got": 2291,
       "window": "Middle",
       "unvalued": [],
       "grade": "B",
-      "score": 1777,
-      "gap": 3197
+      "score": 1750,
+      "gap": 3151
      }
     },
     "pick_values": {
-     "2024-2-858765508143628288": 1467,
-     "2024-4-858765508143628288": 331,
-     "2025-3-858765508143628288": 519
+     "2024-2-4": 1509,
+     "2024-4-4": 309,
+     "2025-3-4": 473
     }
    },
    "id": "1025575297443299328",
@@ -4718,7 +4710,7 @@
    "date": "2023-11-03T06:14+00:00",
    "sides": [
     {
-     "owner": "858765508143628288",
+     "owner": "4",
      "players": [
       {
        "id": "2749",
@@ -4738,28 +4730,28 @@
      "faab": 0
     },
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [],
      "picks": [
       {
        "season": 2024,
        "round": 2,
-       "original_owner": "858765508143628288",
-       "was_value": 1467,
+       "original_owner": "4",
+       "was_value": 1509,
        "value_basis": "original_owner"
       },
       {
        "season": 2024,
        "round": 4,
-       "original_owner": "858765508143628288",
-       "was_value": 331,
+       "original_owner": "4",
+       "was_value": 309,
        "value_basis": "original_owner"
       },
       {
        "season": 2025,
        "round": 3,
-       "original_owner": "858765508143628288",
-       "was_value": 519,
+       "original_owner": "4",
+       "was_value": 473,
        "value_basis": "original_owner"
       }
      ],
@@ -4769,19 +4761,19 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "858765508143628288": {
+     "4": {
       "items": [
        {
         "kind": "player",
         "label": "Raheem Mostert (RB)",
-        "value": 7
+        "value": 6
        }
       ],
-      "got_now": 7,
+      "got_now": 6,
       "gave_now": 0,
       "grade": "C"
      },
-     "915765963616985088": {
+     "10": {
       "items": [
        {
         "kind": "pick",
@@ -4806,7 +4798,7 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 7,
+      "gave_now": 6,
       "grade": "C"
      }
     }
@@ -4814,10 +4806,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "908808510823997440": {
-      "net": 927,
+     "6": {
+      "net": 959,
       "impact": [
        {
         "name": "Dameon Pierce",
@@ -4825,16 +4817,16 @@
         "slot": null
        }
       ],
-      "market_given": 1733,
-      "market_got": 3610,
+      "market_given": 1738,
+      "market_got": 3668,
       "window": "Contender",
       "unvalued": [],
       "grade": "B",
-      "score": 1255,
-      "gap": 2240
+      "score": 1295,
+      "gap": 2304
      },
-     "909255939126161408": {
-      "net": -1313,
+     "7": {
+      "net": -1345,
       "impact": [
        {
         "name": "Brock Purdy",
@@ -4842,17 +4834,17 @@
         "slot": null
        }
       ],
-      "market_given": 3610,
-      "market_got": 1733,
+      "market_given": 3668,
+      "market_got": 1738,
       "window": "Middle",
       "unvalued": [],
       "grade": "D",
-      "score": -1545,
-      "gap": -2240
+      "score": -1585,
+      "gap": -2304
      }
     },
     "pick_values": {
-     "2024-3-858765508143628288": 780
+     "2024-3-4": 790
     }
    },
    "id": "1025125379574501376",
@@ -4861,7 +4853,7 @@
    "date": "2023-11-02T06:14+00:00",
    "sides": [
     {
-     "owner": "908808510823997440",
+     "owner": "6",
      "players": [
       {
        "id": "8129",
@@ -4881,15 +4873,15 @@
       {
        "season": 2024,
        "round": 3,
-       "original_owner": "858765508143628288",
-       "was_value": 780,
+       "original_owner": "4",
+       "was_value": 790,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "909255939126161408",
+     "owner": "7",
      "players": [
       {
        "id": "8183",
@@ -4912,12 +4904,12 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "908808510823997440": {
+     "6": {
       "items": [
        {
         "kind": "player",
         "label": "Dameon Pierce (RB)",
-        "value": 21
+        "value": 15
        },
        {
         "kind": "pick",
@@ -4927,20 +4919,20 @@
         "value": 0
        }
       ],
-      "got_now": 21,
-      "gave_now": 2993,
+      "got_now": 15,
+      "gave_now": 3002,
       "grade": "F"
      },
-     "909255939126161408": {
+     "7": {
       "items": [
        {
         "kind": "player",
         "label": "Brock Purdy (QB)",
-        "value": 2993
+        "value": 3002
        }
       ],
-      "got_now": 2993,
-      "gave_now": 21,
+      "got_now": 3002,
+      "gave_now": 15,
       "grade": "A"
      }
     }
@@ -4948,10 +4940,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "861417814836256768": {
-      "net": 220,
+     "1": {
+      "net": 212,
       "impact": [
        {
         "name": "Adam Thielen",
@@ -4959,16 +4951,16 @@
         "slot": "WR"
        }
       ],
-      "market_given": 2120,
-      "market_got": 2325,
+      "market_given": 2140,
+      "market_got": 2341,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 220,
+      "score": 214,
       "gap": 222
      },
-     "908808510823997440": {
-      "net": -2,
+     "6": {
+      "net": -10,
       "impact": [
        {
         "name": "Jordan Love",
@@ -4976,19 +4968,19 @@
         "slot": null
        }
       ],
-      "market_given": 2325,
-      "market_got": 2120,
+      "market_given": 2341,
+      "market_got": 2140,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": -57,
+      "score": -63,
       "gap": -222
      }
     },
     "pick_values": {
-     "2024-3-861417814836256768": 520,
-     "2025-4-861417814836256768": 173,
-     "2024-2-908808510823997440": 1196
+     "2024-3-1": 495,
+     "2025-4-1": 170,
+     "2024-2-6": 1195
     }
    },
    "id": "1025123794039500800",
@@ -4997,7 +4989,7 @@
    "date": "2023-11-02T06:14+00:00",
    "sides": [
     {
-     "owner": "861417814836256768",
+     "owner": "1",
      "players": [
       {
        "id": "1689",
@@ -5017,15 +5009,15 @@
       {
        "season": 2024,
        "round": 2,
-       "original_owner": "908808510823997440",
-       "was_value": 1196,
+       "original_owner": "6",
+       "was_value": 1195,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "908808510823997440",
+     "owner": "6",
      "players": [
       {
        "id": "6804",
@@ -5045,15 +5037,15 @@
       {
        "season": 2024,
        "round": 3,
-       "original_owner": "861417814836256768",
-       "was_value": 520,
+       "original_owner": "1",
+       "was_value": 495,
        "value_basis": "original_owner"
       },
       {
        "season": 2025,
        "round": 4,
-       "original_owner": "861417814836256768",
-       "was_value": 173,
+       "original_owner": "1",
+       "was_value": 170,
        "value_basis": "original_owner"
       }
      ],
@@ -5063,7 +5055,7 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "861417814836256768": {
+     "1": {
       "items": [
        {
         "kind": "player",
@@ -5079,15 +5071,15 @@
        }
       ],
       "got_now": 0,
-      "gave_now": 2595,
+      "gave_now": 2589,
       "grade": "F"
      },
-     "908808510823997440": {
+     "6": {
       "items": [
        {
         "kind": "player",
         "label": "Jordan Love (QB)",
-        "value": 2595
+        "value": 2589
        },
        {
         "kind": "pick",
@@ -5104,7 +5096,7 @@
         "value": 0
        }
       ],
-      "got_now": 2595,
+      "got_now": 2589,
       "gave_now": 0,
       "grade": "A"
      }
@@ -5113,10 +5105,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "861417814836256768": {
-      "net": 196,
+     "1": {
+      "net": 138,
       "impact": [
        {
         "name": "Brandin Cooks",
@@ -5124,16 +5116,16 @@
         "slot": "WR"
        }
       ],
-      "market_given": 837,
-      "market_got": 1270,
+      "market_given": 844,
+      "market_got": 1235,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 98,
-      "gap": -196
+      "score": 20,
+      "gap": -332
      },
-     "915765963616985088": {
-      "net": 392,
+     "10": {
+      "net": 470,
       "impact": [
        {
         "name": "Kayshon Boutte",
@@ -5141,17 +5133,17 @@
         "slot": null
        }
       ],
-      "market_given": 1270,
-      "market_got": 837,
+      "market_given": 1235,
+      "market_got": 844,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": 343,
-      "gap": 196
+      "score": 436,
+      "gap": 332
      }
     },
     "pick_values": {
-     "2024-4-861417814836256768": 188
+     "2024-4-1": 207
     }
    },
    "id": "1024925885927120896",
@@ -5160,7 +5152,7 @@
    "date": "2023-11-01T06:14+00:00",
    "sides": [
     {
-     "owner": "861417814836256768",
+     "owner": "1",
      "players": [
       {
        "id": "2197",
@@ -5180,7 +5172,7 @@
      "faab": 0
     },
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [
       {
        "id": "9504",
@@ -5200,8 +5192,8 @@
       {
        "season": 2024,
        "round": 4,
-       "original_owner": "861417814836256768",
-       "was_value": 188,
+       "original_owner": "1",
+       "was_value": 207,
        "value_basis": "original_owner"
       }
      ],
@@ -5211,24 +5203,24 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "861417814836256768": {
+     "1": {
       "items": [
        {
         "kind": "player",
         "label": "Brandin Cooks (WR)",
-        "value": 6
+        "value": 5
        }
       ],
-      "got_now": 6,
-      "gave_now": 773,
+      "got_now": 5,
+      "gave_now": 749,
       "grade": "C"
      },
-     "915765963616985088": {
+     "10": {
       "items": [
        {
         "kind": "player",
         "label": "Kayshon Boutte (WR)",
-        "value": 773
+        "value": 749
        },
        {
         "kind": "pick",
@@ -5238,8 +5230,8 @@
         "value": 0
        }
       ],
-      "got_now": 773,
-      "gave_now": 6,
+      "got_now": 749,
+      "gave_now": 5,
       "grade": "C"
      }
     }
@@ -5247,10 +5239,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "745458998371008512": {
-      "net": 701,
+     "2": {
+      "net": 774,
       "impact": [
        {
         "name": "Joe Mixon",
@@ -5258,16 +5250,16 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 2023,
-      "market_got": 2485,
+      "market_given": 2041,
+      "market_got": 2550,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 829,
-      "gap": 1212
+      "score": 913,
+      "gap": 1331
      },
-     "915765963616985088": {
-      "net": -511,
+     "10": {
+      "net": -557,
       "impact": [
        {
         "name": "Gus Edwards",
@@ -5275,17 +5267,17 @@
         "slot": "RB"
        }
       ],
-      "market_given": 2485,
-      "market_got": 2023,
+      "market_given": 2550,
+      "market_got": 2041,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": -686,
-      "gap": -1212
+      "score": -750,
+      "gap": -1331
      }
     },
     "pick_values": {
-     "2024-2-745458998371008512": 936
+     "2024-2-2": 966
     }
    },
    "id": "1024920865161183232",
@@ -5294,7 +5286,7 @@
    "date": "2023-11-01T06:14+00:00",
    "sides": [
     {
-     "owner": "745458998371008512",
+     "owner": "2",
      "players": [
       {
        "id": "4018",
@@ -5314,7 +5306,7 @@
      "faab": 0
     },
     {
-     "owner": "915765963616985088",
+     "owner": "10",
      "players": [
       {
        "id": "5248",
@@ -5334,8 +5326,8 @@
       {
        "season": 2024,
        "round": 2,
-       "original_owner": "745458998371008512",
-       "was_value": 936,
+       "original_owner": "2",
+       "was_value": 966,
        "value_basis": "original_owner"
       }
      ],
@@ -5345,24 +5337,24 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "745458998371008512": {
+     "2": {
       "items": [
        {
         "kind": "player",
         "label": "Joe Mixon (RB)",
-        "value": 9
+        "value": 58
        }
       ],
-      "got_now": 9,
-      "gave_now": 5,
+      "got_now": 58,
+      "gave_now": 4,
       "grade": "C"
      },
-     "915765963616985088": {
+     "10": {
       "items": [
        {
         "kind": "player",
         "label": "Gus Edwards (RB)",
-        "value": 5
+        "value": 4
        },
        {
         "kind": "pick",
@@ -5372,8 +5364,8 @@
         "value": 0
        }
       ],
-      "got_now": 5,
-      "gave_now": 9,
+      "got_now": 4,
+      "gave_now": 58,
       "grade": "C"
      }
     }
@@ -5381,10 +5373,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "745458998371008512": {
-      "net": 1720,
+     "2": {
+      "net": 1662,
       "impact": [
        {
         "name": "Gabe Davis",
@@ -5392,16 +5384,16 @@
         "slot": null
        }
       ],
-      "market_given": 941,
-      "market_got": 3209,
+      "market_given": 970,
+      "market_got": 3141,
       "window": "Contender",
       "unvalued": [],
       "grade": "A",
-      "score": 2240,
-      "gap": 3802
+      "score": 2164,
+      "gap": 3672
      },
-     "909255939126161408": {
-      "net": -2082,
+     "7": {
+      "net": -2010,
       "impact": [
        {
         "name": "Zack Moss",
@@ -5409,17 +5401,17 @@
         "slot": null
        }
       ],
-      "market_given": 3209,
-      "market_got": 941,
+      "market_given": 3141,
+      "market_got": 970,
       "window": "Middle",
       "unvalued": [],
       "grade": "F",
-      "score": -2512,
-      "gap": -3802
+      "score": -2426,
+      "gap": -3672
      }
     },
     "pick_values": {
-     "2024-2-909255939126161408": 1290
+     "2024-2-7": 1263
     }
    },
    "id": "1024468870394363904",
@@ -5428,7 +5420,7 @@
    "date": "2023-10-31T06:14+00:00",
    "sides": [
     {
-     "owner": "745458998371008512",
+     "owner": "2",
      "players": [
       {
        "id": "6943",
@@ -5448,15 +5440,15 @@
       {
        "season": 2024,
        "round": 2,
-       "original_owner": "909255939126161408",
-       "was_value": 1290,
+       "original_owner": "7",
+       "was_value": 1263,
        "value_basis": "original_owner"
       }
      ],
      "faab": 0
     },
     {
-     "owner": "909255939126161408",
+     "owner": "7",
      "players": [
       {
        "id": "6845",
@@ -5479,12 +5471,12 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "745458998371008512": {
+     "2": {
       "items": [
        {
         "kind": "player",
         "label": "Gabe Davis (WR)",
-        "value": 5
+        "value": 4
        },
        {
         "kind": "pick",
@@ -5494,20 +5486,20 @@
         "value": 0
        }
       ],
-      "got_now": 5,
-      "gave_now": 7,
+      "got_now": 4,
+      "gave_now": 6,
       "grade": "C"
      },
-     "909255939126161408": {
+     "7": {
       "items": [
        {
         "kind": "player",
         "label": "Zack Moss (RB)",
-        "value": 7
+        "value": 6
        }
       ],
-      "got_now": 7,
-      "gave_now": 5,
+      "got_now": 6,
+      "gave_now": 4,
       "grade": "C"
      }
     }
@@ -5515,10 +5507,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "861417814836256768": {
-      "net": 2085,
+     "1": {
+      "net": 2165,
       "impact": [
        {
         "name": "Najee Harris",
@@ -5531,16 +5523,16 @@
         "slot": null
        }
       ],
-      "market_given": 1736,
-      "market_got": 4626,
+      "market_given": 1755,
+      "market_got": 4758,
       "window": "Contender",
       "unvalued": [],
       "grade": "A",
-      "score": 2700,
-      "gap": 4546
+      "score": 2801,
+      "gap": 4709
      },
-     "853109226401288192": {
-      "net": -2461,
+     "11": {
+      "net": -2544,
       "impact": [
        {
         "name": "Jerome Ford",
@@ -5548,13 +5540,13 @@
         "slot": null
        }
       ],
-      "market_given": 4626,
-      "market_got": 1736,
+      "market_given": 4758,
+      "market_got": 1755,
       "window": "Middle",
       "unvalued": [],
       "grade": "F",
-      "score": -2982,
-      "gap": -4546
+      "score": -3085,
+      "gap": -4709
      }
     },
     "pick_values": {}
@@ -5565,7 +5557,7 @@
    "date": "2023-10-31T06:14+00:00",
    "sides": [
     {
-     "owner": "861417814836256768",
+     "owner": "1",
      "players": [
       {
        "id": "7528",
@@ -5598,7 +5590,7 @@
      "faab": 0
     },
     {
-     "owner": "853109226401288192",
+     "owner": "11",
      "players": [
       {
        "id": "8143",
@@ -5621,33 +5613,33 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "861417814836256768": {
+     "1": {
       "items": [
        {
         "kind": "player",
         "label": "Najee Harris (RB)",
-        "value": 91
+        "value": 90
        },
        {
         "kind": "player",
         "label": "C.J. Stroud (QB)",
-        "value": 2501
+        "value": 2515
        }
       ],
-      "got_now": 2592,
-      "gave_now": 183,
+      "got_now": 2605,
+      "gave_now": 174,
       "grade": "A"
      },
-     "853109226401288192": {
+     "11": {
       "items": [
        {
         "kind": "player",
         "label": "Jerome Ford (RB)",
-        "value": 183
+        "value": 174
        }
       ],
-      "got_now": 183,
-      "gave_now": 2592,
+      "got_now": 174,
+      "gave_now": 2605,
       "grade": "F"
      }
     }
@@ -5655,10 +5647,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "858765508143628288": {
-      "net": 481,
+     "4": {
+      "net": 528,
       "impact": [
        {
         "name": "Diontae Johnson",
@@ -5671,16 +5663,16 @@
         "slot": null
        }
       ],
-      "market_given": 2725,
-      "market_got": 3832,
+      "market_given": 2735,
+      "market_got": 3906,
       "window": "Contender",
       "unvalued": [],
       "grade": "C",
-      "score": 604,
-      "gap": 972
+      "score": 665,
+      "gap": 1075
      },
-     "909255939126161408": {
-      "net": -491,
+     "7": {
+      "net": -547,
       "impact": [
        {
         "name": "Brian Robinson Jr.",
@@ -5688,17 +5680,17 @@
         "slot": "FLEX"
        }
       ],
-      "market_given": 3832,
-      "market_got": 2725,
+      "market_given": 3906,
+      "market_got": 2735,
       "window": "Middle",
       "unvalued": [],
       "grade": "C",
-      "score": -611,
-      "gap": -972
+      "score": -679,
+      "gap": -1075
      }
     },
     "pick_values": {
-     "2024-3-858765508143628288": 604
+     "2024-3-4": 573
     }
    },
    "id": "1012786187687305216",
@@ -5707,7 +5699,7 @@
    "date": "2023-09-29T06:14+00:00",
    "sides": [
     {
-     "owner": "858765508143628288",
+     "owner": "4",
      "players": [
       {
        "id": "5937",
@@ -5740,7 +5732,7 @@
      "faab": 0
     },
     {
-     "owner": "909255939126161408",
+     "owner": "7",
      "players": [
       {
        "id": "8154",
@@ -5760,8 +5752,8 @@
       {
        "season": 2024,
        "round": 3,
-       "original_owner": "858765508143628288",
-       "was_value": 604,
+       "original_owner": "4",
+       "was_value": 573,
        "value_basis": "original_owner"
       }
      ],
@@ -5771,29 +5763,29 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "858765508143628288": {
+     "4": {
       "items": [
        {
         "kind": "player",
         "label": "Diontae Johnson (WR)",
-        "value": 5
+        "value": 4
        },
        {
         "kind": "player",
         "label": "Tyler Allgeier (RB)",
-        "value": 1194
+        "value": 1186
        }
       ],
-      "got_now": 1199,
-      "gave_now": 829,
+      "got_now": 1190,
+      "gave_now": 780,
       "grade": "C"
      },
-     "909255939126161408": {
+     "7": {
       "items": [
        {
         "kind": "player",
         "label": "Brian Robinson Jr. (RB)",
-        "value": 829
+        "value": 780
        },
        {
         "kind": "pick",
@@ -5803,8 +5795,8 @@
         "value": 0
        }
       ],
-      "got_now": 829,
-      "gave_now": 1199,
+      "got_now": 780,
+      "gave_now": 1190,
       "grade": "C"
      }
     }
@@ -5812,10 +5804,10 @@
   },
   {
    "grades": {
-    "version": 6,
+    "version": 7,
     "teams": {
-     "745458998371008512": {
-      "net": 2750,
+     "2": {
+      "net": 2680,
       "impact": [
        {
         "name": "A.J. Brown",
@@ -5823,16 +5815,16 @@
         "slot": "WR"
        }
       ],
-      "market_given": 4950,
-      "market_got": 7381,
+      "market_given": 4965,
+      "market_got": 7320,
       "window": "Middle",
       "unvalued": [],
       "grade": "A",
-      "score": 3438,
-      "gap": 5500
+      "score": 3350,
+      "gap": 5360
      },
-     "861421486488031232": {
-      "net": -2750,
+     "8": {
+      "net": -2680,
       "impact": [
        {
         "name": "Michael Pittman Jr.",
@@ -5845,17 +5837,17 @@
         "slot": null
        }
       ],
-      "market_given": 7381,
-      "market_got": 4950,
+      "market_given": 7320,
+      "market_got": 4965,
       "window": "Middle",
       "unvalued": [],
       "grade": "F",
-      "score": -3438,
-      "gap": -5500
+      "score": -3350,
+      "gap": -5360
      }
     },
     "pick_values": {
-     "2024-4-745458998371008512": 245
+     "2024-4-2": 240
     }
    },
    "id": "1008431299062812672",
@@ -5864,7 +5856,7 @@
    "date": "2023-09-17T06:14+00:00",
    "sides": [
     {
-     "owner": "745458998371008512",
+     "owner": "2",
      "players": [
       {
        "id": "5859",
@@ -5884,7 +5876,7 @@
      "faab": 0
     },
     {
-     "owner": "861421486488031232",
+     "owner": "8",
      "players": [
       {
        "id": "6819",
@@ -5917,8 +5909,8 @@
       {
        "season": 2024,
        "round": 4,
-       "original_owner": "745458998371008512",
-       "was_value": 245,
+       "original_owner": "2",
+       "was_value": 240,
        "value_basis": "original_owner"
       }
      ],
@@ -5928,24 +5920,24 @@
    "hindsight": {
     "as_of": "2026-11-24",
     "teams": {
-     "745458998371008512": {
+     "2": {
       "items": [
        {
         "kind": "player",
         "label": "A.J. Brown (WR)",
-        "value": 2484
+        "value": 2491
        }
       ],
-      "got_now": 2484,
-      "gave_now": 1641,
+      "got_now": 2491,
+      "gave_now": 1656,
       "grade": "B"
      },
-     "861421486488031232": {
+     "8": {
       "items": [
        {
         "kind": "player",
         "label": "Michael Pittman Jr. (WR)",
-        "value": 1635
+        "value": 1650
        },
        {
         "kind": "player",
@@ -5960,8 +5952,8 @@
         "value": 0
        }
       ],
-      "got_now": 1641,
-      "gave_now": 2484,
+      "got_now": 1656,
+      "gave_now": 2491,
       "grade": "D"
      }
     }
@@ -5975,57 +5967,57 @@
     "id": "12501",
     "name": "Matthew Golden",
     "pos": "WR",
-    "value": 4291,
-    "change": 1838
+    "value": 4281,
+    "change": 1808
    },
    {
     "id": "13345",
     "name": "Jonah Coleman",
     "pos": "RB",
-    "value": 3179,
-    "change": 1655
+    "value": 3140,
+    "change": 1620
    },
    {
     "id": "11604",
     "name": "Brock Bowers",
     "pos": "TE",
-    "value": 5839,
-    "change": 1456
+    "value": 5814,
+    "change": 1495
    },
    {
     "id": "11584",
     "name": "Bucky Irving",
     "pos": "RB",
-    "value": 4174,
-    "change": 1444
-   },
-   {
-    "id": "6786",
-    "name": "CeeDee Lamb",
-    "pos": "WR",
-    "value": 7865,
-    "change": 987
+    "value": 4159,
+    "change": 1421
    },
    {
     "id": "12490",
     "name": "Bhayshul Tuten",
     "pos": "RB",
-    "value": 3441,
-    "change": 983
+    "value": 3442,
+    "change": 965
    },
    {
     "id": "7594",
     "name": "Chuba Hubbard",
     "pos": "RB",
-    "value": 2858,
-    "change": 970
+    "value": 2841,
+    "change": 963
    },
    {
-    "id": "12495",
-    "name": "Ollie Gordon II",
+    "id": "6786",
+    "name": "CeeDee Lamb",
+    "pos": "WR",
+    "value": 7870,
+    "change": 925
+   },
+   {
+    "id": "4034",
+    "name": "Christian McCaffrey",
     "pos": "RB",
-    "value": 1579,
-    "change": 779
+    "value": 4794,
+    "change": 848
    }
   ],
   "fallers": [
@@ -6033,57 +6025,57 @@
     "id": "7564",
     "name": "Ja'Marr Chase",
     "pos": "WR",
-    "value": 9663,
-    "change": -1685
+    "value": 9611,
+    "change": -1766
    },
    {
     "id": "5859",
     "name": "A.J. Brown",
     "pos": "WR",
-    "value": 2484,
-    "change": -1430
+    "value": 2491,
+    "change": -1428
    },
    {
     "id": "7526",
     "name": "Jaylen Waddle",
     "pos": "WR",
-    "value": 2459,
-    "change": -1305
-   },
-   {
-    "id": "4881",
-    "name": "Lamar Jackson",
-    "pos": "QB",
-    "value": 3154,
-    "change": -1151
-   },
-   {
-    "id": "6904",
-    "name": "Jalen Hurts",
-    "pos": "QB",
-    "value": 2095,
-    "change": -1071
+    "value": 2449,
+    "change": -1277
    },
    {
     "id": "11635",
     "name": "Ladd McConkey",
     "pos": "WR",
-    "value": 2857,
-    "change": -1066
+    "value": 2784,
+    "change": -1145
    },
    {
-    "id": "12527",
-    "name": "Ashton Jeanty",
-    "pos": "RB",
-    "value": 5286,
-    "change": -1007
+    "id": "4881",
+    "name": "Lamar Jackson",
+    "pos": "QB",
+    "value": 3147,
+    "change": -1110
    },
    {
-    "id": "12514",
-    "name": "Emeka Egbuka",
+    "id": "6904",
+    "name": "Jalen Hurts",
+    "pos": "QB",
+    "value": 2077,
+    "change": -1079
+   },
+   {
+    "id": "8146",
+    "name": "Garrett Wilson",
     "pos": "WR",
-    "value": 3391,
-    "change": -948
+    "value": 3853,
+    "change": -912
+   },
+   {
+    "id": "7525",
+    "name": "DeVonta Smith",
+    "pos": "WR",
+    "value": 3269,
+    "change": -909
    }
   ]
  }
