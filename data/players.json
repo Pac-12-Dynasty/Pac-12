@@ -39,7 +39,7 @@
   "pos_rank": "RB50",
   "rank": 166,
   "team": "JAX",
-  "value": 1161
+  "value": 1160
  },
  "10222": {
   "age": 26,
@@ -193,7 +193,7 @@
   "pos_rank": "QB4",
   "rank": 38,
   "team": "CHI",
-  "value": 3545
+  "value": 3546
  },
  "11563": {
   "age": 26,
@@ -207,7 +207,7 @@
   "pos_rank": "QB14",
   "rank": 91,
   "team": "DEN",
-  "value": 1958
+  "value": 1959
  },
  "11564": {
   "age": 24,
@@ -221,7 +221,7 @@
   "pos_rank": "QB3",
   "rank": 37,
   "team": "NE",
-  "value": 3642
+  "value": 3643
  },
  "11565": {
   "age": 23,
@@ -233,9 +233,9 @@
   "name": "J.J. McCarthy",
   "pos": "QB",
   "pos_rank": "QB25",
-  "rank": 172,
+  "rank": 171,
   "team": "NYG",
-  "value": 1119
+  "value": 1120
  },
  "11566": {
   "age": 25,
@@ -249,7 +249,7 @@
   "pos_rank": "QB7",
   "rank": 51,
   "team": "WAS",
-  "value": 3059
+  "value": 3061
  },
  "11576": {
   "age": 22,
@@ -263,7 +263,7 @@
   "pos_rank": "RB36",
   "rank": 116,
   "team": "NYJ",
-  "value": 1580
+  "value": 1579
  },
  "11579": {
   "age": 23,
@@ -275,7 +275,7 @@
   "name": "Audric Estime",
   "pos": "RB",
   "pos_rank": "RB73",
-  "rank": 263,
+  "rank": 264,
   "team": "NO",
   "value": 345
  },
@@ -305,7 +305,7 @@
   "pos_rank": "RB38",
   "rank": 118,
   "team": "CAR",
-  "value": 1561
+  "value": 1560
  },
  "11584": {
   "age": 24,
@@ -319,7 +319,7 @@
   "pos_rank": "RB11",
   "rank": 25,
   "team": "TB",
-  "value": 4159
+  "value": 4156
  },
  "11586": {
   "age": 25,
@@ -333,7 +333,7 @@
   "pos_rank": "RB27",
   "rank": 82,
   "team": "LAR",
-  "value": 2177
+  "value": 2176
  },
  "11597": {
   "age": 25,
@@ -443,7 +443,7 @@
   "name": "Xavier Legette",
   "pos": "WR",
   "pos_rank": "WR118",
-  "rank": 282,
+  "rank": 281,
   "team": "CAR",
   "value": 256
  },
@@ -457,7 +457,7 @@
   "name": "Troy Franklin",
   "pos": "WR",
   "pos_rank": "WR103",
-  "rank": 241,
+  "rank": 240,
   "team": "DEN",
   "value": 490
  },
@@ -571,7 +571,7 @@
   "pos_rank": "RB63",
   "rank": 223,
   "team": "LAC",
-  "value": 655
+  "value": 654
  },
  "11655": {
   "age": 27,
@@ -597,7 +597,7 @@
   "name": "Kirk Cousins",
   "pos": "QB",
   "pos_rank": "QB30",
-  "rank": 195,
+  "rank": 194,
   "team": "MIN",
   "value": 870
  },
@@ -711,7 +711,7 @@
   "pos_rank": "RB44",
   "rank": 143,
   "team": "HOU",
-  "value": 1324
+  "value": 1323
  },
  "12481": {
   "age": 24,
@@ -723,9 +723,9 @@
   "name": "Cam Skattebo",
   "pos": "RB",
   "pos_rank": "RB22",
-  "rank": 66,
+  "rank": 67,
   "team": "NYG",
-  "value": 2589
+  "value": 2587
  },
  "12484": {
   "age": 23,
@@ -781,7 +781,7 @@
   "pos_rank": "RB39",
   "rank": 120,
   "team": "DEN",
-  "value": 1519
+  "value": 1518
  },
  "12490": {
   "age": 23,
@@ -795,7 +795,7 @@
   "pos_rank": "RB12",
   "rank": 39,
   "team": "JAX",
-  "value": 3442
+  "value": 3440
  },
  "12491": {
   "age": 24,
@@ -949,7 +949,7 @@
   "pos_rank": "RB16",
   "rank": 48,
   "team": "LAC",
-  "value": 3141
+  "value": 3140
  },
  "12508": {
   "age": 23,
@@ -963,7 +963,7 @@
   "pos_rank": "QB15",
   "rank": 94,
   "team": "NYG",
-  "value": 1912
+  "value": 1913
  },
  "12509": {
   "age": 24,
@@ -1005,7 +1005,7 @@
   "pos_rank": "RB18",
   "rank": 59,
   "team": "CLE",
-  "value": 2857
+  "value": 2856
  },
  "12514": {
   "age": 24,
@@ -1117,7 +1117,7 @@
   "pos_rank": "RB6",
   "rank": 14,
   "team": "LV",
-  "value": 5370
+  "value": 5366
  },
  "12529": {
   "age": 24,
@@ -1131,7 +1131,7 @@
   "pos_rank": "RB29",
   "rank": 87,
   "team": "NE",
-  "value": 2115
+  "value": 2114
  },
  "12530": {
   "age": 23,
@@ -1159,7 +1159,7 @@
   "pos_rank": "RB40",
   "rank": 132,
   "team": "WAS",
-  "value": 1401
+  "value": 1400
  },
  "12534": {
   "age": 24,
@@ -1173,7 +1173,7 @@
   "pos_rank": "RB31",
   "rank": 102,
   "team": "CHI",
-  "value": 1830
+  "value": 1829
  },
  "12535": {
   "age": 24,
@@ -1229,7 +1229,7 @@
   "pos_rank": "QB19",
   "rank": 110,
   "team": "NO",
-  "value": 1670
+  "value": 1671
  },
  "12670": {
   "age": 25,
@@ -1240,8 +1240,8 @@
   "injury_part": "Coach's Decision",
   "name": "KeAndre Lambert-Smith",
   "pos": "WR",
-  "pos_rank": "WR162",
-  "rank": 415,
+  "pos_rank": "WR161",
+  "rank": 414,
   "team": "LAC",
   "value": 19
  },
@@ -1327,7 +1327,7 @@
   "pos_rank": "QB17",
   "rank": 96,
   "team": "LV",
-  "value": 1872
+  "value": 1873
  },
  "13270": {
   "age": 24,
@@ -1397,7 +1397,7 @@
   "pos_rank": "QB26",
   "rank": 174,
   "team": "LAR",
-  "value": 1069
+  "value": 1070
  },
  "13276": {
   "age": 22,
@@ -1493,9 +1493,9 @@
   "name": "Jadarian Price",
   "pos": "RB",
   "pos_rank": "RB24",
-  "rank": 72,
+  "rank": 73,
   "team": "SEA",
-  "value": 2459
+  "value": 2457
  },
  "13287": {
   "age": 21,
@@ -1509,7 +1509,7 @@
   "pos_rank": "RB4",
   "rank": 12,
   "team": "ARI",
-  "value": 5682
+  "value": 5678
  },
  "13288": {
   "age": 22,
@@ -1563,7 +1563,7 @@
   "name": "Makai Lemon",
   "pos": "WR",
   "pos_rank": "WR30",
-  "rank": 73,
+  "rank": 72,
   "team": "PHI",
   "value": 2458
  },
@@ -1689,7 +1689,7 @@
   "name": "Oscar Delp",
   "pos": "TE",
   "pos_rank": "TE36",
-  "rank": 240,
+  "rank": 241,
   "team": "NO",
   "value": 490
  },
@@ -1716,8 +1716,8 @@
   "injury_part": "",
   "name": "Matt Hibner",
   "pos": "TE",
-  "pos_rank": "TE51",
-  "rank": 333,
+  "pos_rank": "TE52",
+  "rank": 335,
   "team": "BAL",
   "value": 133
  },
@@ -1761,7 +1761,7 @@
   "pos_rank": "RB30",
   "rank": 90,
   "team": "KC",
-  "value": 1983
+  "value": 1982
  },
  "13345": {
   "age": 23,
@@ -1775,7 +1775,7 @@
   "pos_rank": "RB17",
   "rank": 49,
   "team": "DEN",
-  "value": 3140
+  "value": 3139
  },
  "13346": {
   "age": 22,
@@ -1884,8 +1884,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB130",
-  "rank": 461,
+  "pos_rank": "RB128",
+  "rank": 455,
   "team": "ATL",
   "value": 7
  },
@@ -1955,9 +1955,9 @@
   "name": "Kaelon Black",
   "pos": "RB",
   "pos_rank": "RB42",
-  "rank": 136,
+  "rank": 137,
   "team": "SF",
-  "value": 1355
+  "value": 1354
  },
  "13416": {
   "age": 24,
@@ -1969,7 +1969,7 @@
   "name": "Roman Hemby",
   "pos": "RB",
   "pos_rank": "RB118",
-  "rank": 411,
+  "rank": 412,
   "team": "LV",
   "value": 20
  },
@@ -2039,9 +2039,9 @@
   "name": "Seth McGowan",
   "pos": "RB",
   "pos_rank": "RB53",
-  "rank": 181,
+  "rank": 182,
   "team": "IND",
-  "value": 993
+  "value": 992
  },
  "13968": {
   "age": 22,
@@ -2181,7 +2181,7 @@
   "pos_rank": "QB16",
   "rank": 95,
   "team": "DET",
-  "value": 1879
+  "value": 1880
  },
  "3198": {
   "age": 32,
@@ -2195,7 +2195,7 @@
   "pos_rank": "RB23",
   "rank": 71,
   "team": "BAL",
-  "value": 2485
+  "value": 2483
  },
  "3214": {
   "age": 31,
@@ -2235,7 +2235,7 @@
   "name": "Tyler Higbee",
   "pos": "TE",
   "pos_rank": "TE41",
-  "rank": 264,
+  "rank": 263,
   "team": "LAR",
   "value": 345
  },
@@ -2265,7 +2265,7 @@
   "pos_rank": "QB12",
   "rank": 79,
   "team": "DAL",
-  "value": 2262
+  "value": 2263
  },
  "3321": {
   "age": 31,
@@ -2305,7 +2305,7 @@
   "name": "Kalif Raymond",
   "pos": "WR",
   "pos_rank": "WR134",
-  "rank": 327,
+  "rank": 328,
   "team": "CHI",
   "value": 147
  },
@@ -2335,7 +2335,7 @@
   "pos_rank": "RB7",
   "rank": 18,
   "team": "SF",
-  "value": 4794
+  "value": 4791
  },
  "4035": {
   "age": 31,
@@ -2347,9 +2347,9 @@
   "name": "Alvin Kamara",
   "pos": "RB",
   "pos_rank": "RB57",
-  "rank": 194,
+  "rank": 195,
   "team": "NO",
-  "value": 871
+  "value": 870
  },
  "4037": {
   "age": 30,
@@ -2391,7 +2391,7 @@
   "pos_rank": "QB5",
   "rank": 42,
   "team": "KC",
-  "value": 3328
+  "value": 3330
  },
  "4137": {
   "age": 31,
@@ -2419,7 +2419,7 @@
   "pos_rank": "RB66",
   "rank": 244,
   "team": "CIN",
-  "value": 460
+  "value": 459
  },
  "4195": {
   "age": 31,
@@ -2487,7 +2487,7 @@
   "name": "Austin Ekeler",
   "pos": "RB",
   "pos_rank": "RB79",
-  "rank": 285,
+  "rank": 286,
   "team": "WAS",
   "value": 249
  },
@@ -2503,7 +2503,7 @@
   "pos_rank": "RB21",
   "rank": 65,
   "team": "PHI",
-  "value": 2620
+  "value": 2618
  },
  "4881": {
   "age": 29,
@@ -2517,7 +2517,7 @@
   "pos_rank": "QB6",
   "rank": 47,
   "team": "BAL",
-  "value": 3147
+  "value": 3148
  },
  "4892": {
   "age": 31,
@@ -2531,7 +2531,7 @@
   "pos_rank": "QB22",
   "rank": 152,
   "team": "TB",
-  "value": 1224
+  "value": 1225
  },
  "4943": {
   "age": 29,
@@ -2545,7 +2545,7 @@
   "pos_rank": "QB23",
   "rank": 156,
   "team": "SEA",
-  "value": 1193
+  "value": 1194
  },
  "4983": {
   "age": 29,
@@ -2573,7 +2573,7 @@
   "pos_rank": "QB1",
   "rank": 15,
   "team": "BUF",
-  "value": 5270
+  "value": 5272
  },
  "4993": {
   "age": 31,
@@ -2699,7 +2699,7 @@
   "pos_rank": "QB32",
   "rank": 199,
   "team": "MIN",
-  "value": 849
+  "value": 850
  },
  "5850": {
   "age": 28,
@@ -2713,7 +2713,7 @@
   "pos_rank": "RB28",
   "rank": 83,
   "team": "GB",
-  "value": 2157
+  "value": 2156
  },
  "5859": {
   "age": 29,
@@ -2755,7 +2755,7 @@
   "pos_rank": "RB37",
   "rank": 117,
   "team": "HOU",
-  "value": 1579
+  "value": 1578
  },
  "5927": {
   "age": 31,
@@ -2797,7 +2797,7 @@
   "pos_rank": "RB32",
   "rank": 104,
   "team": "TEN",
-  "value": 1824
+  "value": 1823
  },
  "5995": {
   "age": 29,
@@ -2811,7 +2811,7 @@
   "pos_rank": "RB64",
   "rank": 231,
   "team": "BAL",
-  "value": 580
+  "value": 579
  },
  "6083": {
   "age": 32,
@@ -2881,7 +2881,7 @@
   "pos_rank": "QB2",
   "rank": 29,
   "team": "CIN",
-  "value": 4077
+  "value": 4079
  },
  "6783": {
   "age": 27,
@@ -2923,7 +2923,7 @@
   "pos_rank": "RB20",
   "rank": 61,
   "team": "CHI",
-  "value": 2817
+  "value": 2816
  },
  "6794": {
   "age": 27,
@@ -2991,9 +2991,9 @@
   "name": "Jordan Love",
   "pos": "QB",
   "pos_rank": "QB10",
-  "rank": 67,
+  "rank": 66,
   "team": "GB",
-  "value": 2589
+  "value": 2590
  },
  "6806": {
   "age": 27,
@@ -3007,7 +3007,7 @@
   "pos_rank": "RB52",
   "rank": 176,
   "team": "DEN",
-  "value": 1066
+  "value": 1065
  },
  "6813": {
   "age": 27,
@@ -3021,7 +3021,7 @@
   "pos_rank": "RB8",
   "rank": 19,
   "team": "IND",
-  "value": 4656
+  "value": 4653
  },
  "6819": {
   "age": 29,
@@ -3077,7 +3077,7 @@
   "pos_rank": "RB43",
   "rank": 139,
   "team": "PIT",
-  "value": 1346
+  "value": 1345
  },
  "7523": {
   "age": 27,
@@ -3091,7 +3091,7 @@
   "pos_rank": "QB9",
   "rank": 55,
   "team": "JAX",
-  "value": 2969
+  "value": 2971
  },
  "7525": {
   "age": 28,
@@ -3117,7 +3117,7 @@
   "name": "Jaylen Waddle",
   "pos": "WR",
   "pos_rank": "WR31",
-  "rank": 75,
+  "rank": 74,
   "team": "DEN",
   "value": 2449
  },
@@ -3133,7 +3133,7 @@
   "pos_rank": "RB26",
   "rank": 81,
   "team": "NO",
-  "value": 2229
+  "value": 2227
  },
  "7547": {
   "age": 27,
@@ -3203,7 +3203,7 @@
   "pos_rank": "RB45",
   "rank": 148,
   "team": "TB",
-  "value": 1259
+  "value": 1258
  },
  "7569": {
   "age": 27,
@@ -3245,7 +3245,7 @@
   "pos_rank": "RB15",
   "rank": 46,
   "team": "DAL",
-  "value": 3174
+  "value": 3172
  },
  "7594": {
   "age": 27,
@@ -3259,7 +3259,7 @@
   "pos_rank": "RB19",
   "rank": 60,
   "team": "CAR",
-  "value": 2841
+  "value": 2839
  },
  "7600": {
   "age": 28,
@@ -3271,7 +3271,7 @@
   "name": "Pat Freiermuth",
   "pos": "TE",
   "pos_rank": "TE26",
-  "rank": 182,
+  "rank": 181,
   "team": "PIT",
   "value": 993
  },
@@ -3287,7 +3287,7 @@
   "pos_rank": "RB34",
   "rank": 111,
   "team": "NE",
-  "value": 1657
+  "value": 1656
  },
  "7839": {
   "age": 27,
@@ -3355,7 +3355,7 @@
   "name": "Romeo Doubs",
   "pos": "WR",
   "pos_rank": "WR72",
-  "rank": 171,
+  "rank": 172,
   "team": "NE",
   "value": 1120
  },
@@ -3427,7 +3427,7 @@
   "pos_rank": "RB47",
   "rank": 157,
   "team": "ARI",
-  "value": 1186
+  "value": 1185
  },
  "8134": {
   "age": 26,
@@ -3455,7 +3455,7 @@
   "pos_rank": "RB49",
   "rank": 165,
   "team": "WAS",
-  "value": 1163
+  "value": 1162
  },
  "8137": {
   "age": 25,
@@ -3483,7 +3483,7 @@
   "pos_rank": "RB5",
   "rank": 13,
   "team": "BUF",
-  "value": 5646
+  "value": 5643
  },
  "8142": {
   "age": 26,
@@ -3553,7 +3553,7 @@
   "pos_rank": "RB14",
   "rank": 45,
   "team": "LAR",
-  "value": 3207
+  "value": 3205
  },
  "8151": {
   "age": 26,
@@ -3567,7 +3567,7 @@
   "pos_rank": "RB3",
   "rank": 7,
   "team": "KC",
-  "value": 6532
+  "value": 6528
  },
  "8154": {
   "age": 27,
@@ -3581,7 +3581,7 @@
   "pos_rank": "RB58",
   "rank": 207,
   "team": "ATL",
-  "value": 780
+  "value": 779
  },
  "8155": {
   "age": 25,
@@ -3595,7 +3595,7 @@
   "pos_rank": "RB9",
   "rank": 22,
   "team": "NYJ",
-  "value": 4287
+  "value": 4284
  },
  "8161": {
   "age": 27,
@@ -3609,7 +3609,7 @@
   "pos_rank": "QB28",
   "rank": 180,
   "team": "MIA",
-  "value": 1032
+  "value": 1033
  },
  "8167": {
   "age": 27,
@@ -3637,7 +3637,7 @@
   "pos_rank": "QB8",
   "rank": 52,
   "team": "SF",
-  "value": 3002
+  "value": 3003
  },
  "8188": {
   "age": 26,
@@ -3691,9 +3691,9 @@
   "name": "Jaylen Warren",
   "pos": "RB",
   "pos_rank": "RB25",
-  "rank": 74,
+  "rank": 75,
   "team": "PIT",
-  "value": 2449
+  "value": 2447
  },
  "8259": {
   "age": 26,
@@ -3721,7 +3721,7 @@
   "pos_rank": "RB46",
   "rank": 153,
   "team": "MIN",
-  "value": 1220
+  "value": 1219
  },
  "8676": {
   "age": 28,
@@ -3749,7 +3749,7 @@
   "pos_rank": "RB2",
   "rank": 4,
   "team": "DET",
-  "value": 9455
+  "value": 9449
  },
  "9224": {
   "age": 26,
@@ -3763,7 +3763,7 @@
   "pos_rank": "RB13",
   "rank": 41,
   "team": "CIN",
-  "value": 3390
+  "value": 3388
  },
  "9225": {
   "age": 24,
@@ -3791,7 +3791,7 @@
   "pos_rank": "RB10",
   "rank": 24,
   "team": "MIA",
-  "value": 4200
+  "value": 4197
  },
  "9228": {
   "age": 25,
@@ -3805,7 +3805,7 @@
   "pos_rank": "QB20",
   "rank": 113,
   "team": "CAR",
-  "value": 1621
+  "value": 1622
  },
  "9229": {
   "age": 24,
@@ -3987,7 +3987,7 @@
   "pos_rank": "RB56",
   "rank": 193,
   "team": "TEN",
-  "value": 882
+  "value": 881
  },
  "9509": {
   "age": 24,
@@ -4001,7 +4001,7 @@
   "pos_rank": "RB1",
   "rank": 2,
   "team": "ATL",
-  "value": 9891
+  "value": 9886
  },
  "9511": {
   "age": 24,
@@ -4043,7 +4043,7 @@
   "pos_rank": "RB33",
   "rank": 106,
   "team": "SEA",
-  "value": 1796
+  "value": 1795
  },
  "9754": {
   "age": 25,
@@ -4055,7 +4055,7 @@
   "name": "Quentin Johnston",
   "pos": "WR",
   "pos_rank": "WR57",
-  "rank": 137,
+  "rank": 136,
   "team": "LAC",
   "value": 1354
  },
@@ -4085,7 +4085,7 @@
   "pos_rank": "QB11",
   "rank": 69,
   "team": "HOU",
-  "value": 2515
+  "value": 2516
  },
  "9997": {
   "age": 26,
