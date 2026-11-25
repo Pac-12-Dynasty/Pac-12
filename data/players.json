@@ -36,8 +36,8 @@
   "injury_part": "",
   "name": "Chris Rodriguez Jr.",
   "pos": "RB",
-  "pos_rank": "RB48",
-  "rank": 158,
+  "pos_rank": "RB47",
+  "rank": 157,
   "team": "JAX",
   "value": 1182
  },
@@ -65,7 +65,7 @@
   "name": "Rashee Rice",
   "pos": "WR",
   "pos_rank": "WR24",
-  "rank": 50,
+  "rank": 51,
   "team": "KC",
   "value": 3059
  },
@@ -303,7 +303,7 @@
   "name": "Jonathon Brooks",
   "pos": "RB",
   "pos_rank": "RB37",
-  "rank": 117,
+  "rank": 118,
   "team": "CAR",
   "value": 1551
  },
@@ -946,8 +946,8 @@
   "injury_part": "",
   "name": "Omarion Hampton",
   "pos": "RB",
-  "pos_rank": "RB15",
-  "rank": 46,
+  "pos_rank": "RB14",
+  "rank": 45,
   "team": "LAC",
   "value": 3171
  },
@@ -1045,7 +1045,7 @@
   "name": "Tyler Warren",
   "pos": "TE",
   "pos_rank": "TE4",
-  "rank": 51,
+  "rank": 50,
   "team": "IND",
   "value": 3059
  },
@@ -1241,7 +1241,7 @@
   "name": "KeAndre Lambert-Smith",
   "pos": "WR",
   "pos_rank": "WR160",
-  "rank": 395,
+  "rank": 394,
   "team": "LAC",
   "value": 49
  },
@@ -1338,8 +1338,8 @@
   "injury_part": "",
   "name": "CJ Daniels",
   "pos": "WR",
-  "pos_rank": "WR115",
-  "rank": 273,
+  "pos_rank": "WR116",
+  "rank": 274,
   "team": "LAR",
   "value": 307
  },
@@ -1381,7 +1381,7 @@
   "name": "Germie Bernard",
   "pos": "WR",
   "pos_rank": "WR48",
-  "rank": 118,
+  "rank": 117,
   "team": "PIT",
   "value": 1551
  },
@@ -1717,7 +1717,7 @@
   "name": "Matt Hibner",
   "pos": "TE",
   "pos_rank": "TE46",
-  "rank": 300,
+  "rank": 299,
   "team": "BAL",
   "value": 213
  },
@@ -1884,8 +1884,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB124",
-  "rank": 437,
+  "pos_rank": "RB127",
+  "rank": 449,
   "team": "ATL",
   "value": 6
  },
@@ -2486,8 +2486,8 @@
   "injury_part": "",
   "name": "Austin Ekeler",
   "pos": "RB",
-  "pos_rank": "RB80",
-  "rank": 294,
+  "pos_rank": "RB79",
+  "rank": 293,
   "team": "WAS",
   "value": 228
  },
@@ -3173,7 +3173,7 @@
   "name": "Elijah Mitchell",
   "pos": "RB",
   "pos_rank": "RB107",
-  "rank": 394,
+  "rank": 395,
   "team": "PHI",
   "value": 49
  },
@@ -3242,8 +3242,8 @@
   "injury_part": "",
   "name": "Javonte Williams",
   "pos": "RB",
-  "pos_rank": "RB14",
-  "rank": 45,
+  "pos_rank": "RB15",
+  "rank": 46,
   "team": "DAL",
   "value": 3171
  },
@@ -3368,8 +3368,8 @@
   "injury_part": "",
   "name": "Zonovan Knight",
   "pos": "RB",
-  "pos_rank": "RB79",
-  "rank": 293,
+  "pos_rank": "RB80",
+  "rank": 294,
   "team": "ARI",
   "value": 228
  },
@@ -3579,7 +3579,7 @@
   "name": "Brian Robinson Jr.",
   "pos": "RB",
   "pos_rank": "RB58",
-  "rank": 207,
+  "rank": 206,
   "team": "ATL",
   "value": 798
  },
@@ -3718,8 +3718,8 @@
   "injury_part": "",
   "name": "Jordan Mason",
   "pos": "RB",
-  "pos_rank": "RB47",
-  "rank": 157,
+  "pos_rank": "RB48",
+  "rank": 158,
   "team": "MIN",
   "value": 1182
  },
@@ -3971,7 +3971,7 @@
   "name": "Kayshon Boutte",
   "pos": "WR",
   "pos_rank": "WR87",
-  "rank": 206,
+  "rank": 207,
   "team": "HOU",
   "value": 798
  },
