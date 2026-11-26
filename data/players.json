@@ -274,8 +274,8 @@
   "injury_part": "",
   "name": "Audric Estime",
   "pos": "RB",
-  "pos_rank": "RB77",
-  "rank": 282,
+  "pos_rank": "RB76",
+  "rank": 281,
   "team": "NO",
   "value": 285
  },
@@ -778,8 +778,8 @@
   "injury_part": "Knee",
   "name": "RJ Harvey",
   "pos": "RB",
-  "pos_rank": "RB39",
-  "rank": 121,
+  "pos_rank": "RB38",
+  "rank": 120,
   "team": "DEN",
   "value": 1505
  },
@@ -1171,7 +1171,7 @@
   "name": "Kyle Monangai",
   "pos": "RB",
   "pos_rank": "RB32",
-  "rank": 105,
+  "rank": 106,
   "team": "CHI",
   "value": 1788
  },
@@ -1227,7 +1227,7 @@
   "name": "Tyler Shough",
   "pos": "QB",
   "pos_rank": "QB19",
-  "rank": 110,
+  "rank": 111,
   "team": "NO",
   "value": 1661
  },
@@ -1479,7 +1479,7 @@
   "name": "Malachi Fields",
   "pos": "WR",
   "pos_rank": "WR66",
-  "rank": 156,
+  "rank": 157,
   "team": "NYG",
   "value": 1200
  },
@@ -1885,7 +1885,7 @@
   "name": "Jam Miller",
   "pos": "RB",
   "pos_rank": "RB128",
-  "rank": 455,
+  "rank": 449,
   "team": "ATL",
   "value": 16
  },
@@ -1913,7 +1913,7 @@
   "name": "Kaytron Allen",
   "pos": "RB",
   "pos_rank": "RB69",
-  "rank": 252,
+  "rank": 251,
   "team": "MIA",
   "value": 442
  },
@@ -1969,7 +1969,7 @@
   "name": "Roman Hemby",
   "pos": "RB",
   "pos_rank": "RB114",
-  "rank": 410,
+  "rank": 408,
   "team": "LV",
   "value": 41
  },
@@ -2557,7 +2557,7 @@
   "name": "Sam Darnold",
   "pos": "QB",
   "pos_rank": "QB23",
-  "rank": 157,
+  "rank": 155,
   "team": "SEA",
   "value": 1200
  },
@@ -2766,8 +2766,8 @@
   "injury_part": "",
   "name": "David Montgomery",
   "pos": "RB",
-  "pos_rank": "RB38",
-  "rank": 120,
+  "pos_rank": "RB39",
+  "rank": 121,
   "team": "HOU",
   "value": 1505
  },
@@ -3187,7 +3187,7 @@
   "name": "Elijah Mitchell",
   "pos": "RB",
   "pos_rank": "RB126",
-  "rank": 439,
+  "rank": 444,
   "team": "PHI",
   "value": 17
  },
@@ -3299,7 +3299,7 @@
   "name": "Rhamondre Stevenson",
   "pos": "RB",
   "pos_rank": "RB34",
-  "rank": 111,
+  "rank": 110,
   "team": "NE",
   "value": 1661
  },
@@ -3327,7 +3327,7 @@
   "name": "Jake Ferguson",
   "pos": "TE",
   "pos_rank": "TE22",
-  "rank": 155,
+  "rank": 156,
   "team": "DAL",
   "value": 1200
  },
@@ -3509,7 +3509,7 @@
   "name": "Alec Pierce",
   "pos": "WR",
   "pos_rank": "WR44",
-  "rank": 106,
+  "rank": 105,
   "team": "IND",
   "value": 1788
  },
@@ -4027,7 +4027,7 @@
   "name": "Keaton Mitchell",
   "pos": "RB",
   "pos_rank": "RB56",
-  "rank": 193,
+  "rank": 195,
   "team": "LAC",
   "value": 871
  },
