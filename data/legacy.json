@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T19:20+00:00",
+ "generated": "2026-11-27T04:46+00:00",
  "seasons": [
   2023,
   2024,
@@ -3223,7 +3223,7 @@
      "owner": "6",
      "player": "Jadarian Price",
      "pos": "RB",
-     "rank": 73,
+     "rank": 70,
      "pos_rank": "RB23"
     },
     {
@@ -3247,15 +3247,15 @@
      "owner": "8",
      "player": "Makai Lemon",
      "pos": "WR",
-     "rank": 71,
-     "pos_rank": "WR30"
+     "rank": 73,
+     "pos_rank": "WR31"
     },
     {
      "pick": 6,
      "owner": "11",
      "player": "Fernando Mendoza",
      "pos": "QB",
-     "rank": 95,
+     "rank": 93,
      "pos_rank": "QB15"
     },
     {
@@ -3271,15 +3271,15 @@
      "owner": "3",
      "player": "KC Concepcion",
      "pos": "WR",
-     "rank": 67,
-     "pos_rank": "WR28"
+     "rank": 66,
+     "pos_rank": "WR27"
     },
     {
      "pick": 9,
      "owner": "1",
      "player": "Omar Cooper",
      "pos": "WR",
-     "rank": 88,
+     "rank": 87,
      "pos_rank": "WR34"
     },
     {
@@ -3288,22 +3288,22 @@
      "player": "Denzel Boston",
      "pos": "WR",
      "rank": 72,
-     "pos_rank": "WR31"
+     "pos_rank": "WR30"
     },
     {
      "pick": 11,
      "owner": "2",
      "player": "Chris Bell",
      "pos": "WR",
-     "rank": 137,
-     "pos_rank": "WR57"
+     "rank": 143,
+     "pos_rank": "WR60"
     },
     {
      "pick": 12,
      "owner": "8",
      "player": "Eli Stowers",
      "pos": "TE",
-     "rank": 143,
+     "rank": 142,
      "pos_rank": "TE19"
     }
    ]
@@ -3325,8 +3325,8 @@
      "owner": "8",
      "player": "Omarion Hampton",
      "pos": "RB",
-     "rank": 46,
-     "pos_rank": "RB16"
+     "rank": 44,
+     "pos_rank": "RB15"
     },
     {
      "pick": 3,
@@ -3341,7 +3341,7 @@
      "owner": "7",
      "player": "TreVeyon Henderson",
      "pos": "RB",
-     "rank": 87,
+     "rank": 88,
      "pos_rank": "RB30"
     },
     {
@@ -3349,7 +3349,7 @@
      "owner": "9",
      "player": "Quinshon Judkins",
      "pos": "RB",
-     "rank": 54,
+     "rank": 53,
      "pos_rank": "RB18"
     },
     {
@@ -3357,15 +3357,15 @@
      "owner": "3",
      "player": "Travis Hunter",
      "pos": "WR",
-     "rank": 185,
-     "pos_rank": "WR77"
+     "rank": 188,
+     "pos_rank": "WR78"
     },
     {
      "pick": 7,
      "owner": "2",
      "player": "Tyler Warren",
      "pos": "TE",
-     "rank": 51,
+     "rank": 49,
      "pos_rank": "TE4"
     },
     {
@@ -3373,16 +3373,16 @@
      "owner": "9",
      "player": "RJ Harvey",
      "pos": "RB",
-     "rank": 119,
-     "pos_rank": "RB38"
+     "rank": 118,
+     "pos_rank": "RB37"
     },
     {
      "pick": 9,
      "owner": "11",
      "player": "Emeka Egbuka",
      "pos": "WR",
-     "rank": 40,
-     "pos_rank": "WR21"
+     "rank": 41,
+     "pos_rank": "WR22"
     },
     {
      "pick": 10,
@@ -3397,7 +3397,7 @@
      "owner": "12",
      "player": "Matthew Golden",
      "pos": "WR",
-     "rank": 22,
+     "rank": 23,
      "pos_rank": "WR11"
     },
     {
@@ -3405,8 +3405,8 @@
      "owner": "12",
      "player": "Kaleb Johnson",
      "pos": "RB",
-     "rank": 209,
-     "pos_rank": "RB58"
+     "rank": 216,
+     "pos_rank": "RB59"
     }
    ]
   },
@@ -3419,7 +3419,7 @@
      "owner": "12",
      "player": "Marvin Harrison",
      "pos": "WR",
-     "rank": 107,
+     "rank": 108,
      "pos_rank": "WR45"
     },
     {
@@ -3451,7 +3451,7 @@
      "owner": "11",
      "player": "Jayden Daniels",
      "pos": "QB",
-     "rank": 52,
+     "rank": 51,
      "pos_rank": "QB7"
     },
     {
@@ -3475,8 +3475,8 @@
      "owner": "3",
      "player": "Keon Coleman",
      "pos": "WR",
-     "rank": 187,
-     "pos_rank": "WR78"
+     "rank": 185,
+     "pos_rank": "WR77"
     },
     {
      "pick": 9,
@@ -3491,7 +3491,7 @@
      "owner": "2",
      "player": "Brian Thomas",
      "pos": "WR",
-     "rank": 103,
+     "rank": 102,
      "pos_rank": "WR42"
     },
     {
@@ -3499,8 +3499,8 @@
      "owner": "7",
      "player": "Xavier Legette",
      "pos": "WR",
-     "rank": 275,
-     "pos_rank": "WR116"
+     "rank": 280,
+     "pos_rank": "WR119"
     },
     {
      "pick": 12,
@@ -3601,8 +3601,8 @@
      "owner": "11",
      "player": "Tyreek Hill",
      "pos": "WR",
-     "rank": 222,
-     "pos_rank": "WR94"
+     "rank": 214,
+     "pos_rank": "WR92"
     },
     {
      "pick": 12,
