@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T04:47+00:00",
+ "generated": "2026-11-27T06:35+00:00",
  "now_basis": "2026 so far",
  "owners": {
   "1": {
@@ -1701,7 +1701,7 @@
         "label": "2027 Round 1",
         "from": "Mia KALIFa ",
         "player": null,
-        "value": 2381
+        "value": 2372
        },
        {
         "kind": "pick",
@@ -1711,8 +1711,8 @@
         "value": 0
        }
       ],
-      "got_now": 4109,
-      "gave_now": 3574,
+      "got_now": 4100,
+      "gave_now": 3571,
       "grade": "C"
      },
      "10": {
@@ -1727,11 +1727,11 @@
         "label": "2028 Round 2",
         "from": "Olave\u2019s Medical Team",
         "player": null,
-        "value": 1446
+        "value": 1443
        }
       ],
-      "got_now": 3574,
-      "gave_now": 4109,
+      "got_now": 3571,
+      "gave_now": 4100,
       "grade": "C"
      }
     }
@@ -2024,10 +2024,10 @@
         "label": "2027 Round 1",
         "from": "Joe Buck Yourself",
         "player": null,
-        "value": 2097
+        "value": 2073
        }
       ],
-      "got_now": 3256,
+      "got_now": 3232,
       "gave_now": 9121,
       "grade": "F"
      },
@@ -2045,7 +2045,7 @@
        }
       ],
       "got_now": 9121,
-      "gave_now": 3256,
+      "gave_now": 3232,
       "grade": "A"
      }
     }
@@ -2405,25 +2405,25 @@
         "label": "2027 Round 1",
         "from": "Mia KALIFa ",
         "player": null,
-        "value": 2381
+        "value": 2372
        },
        {
         "kind": "pick",
         "label": "2027 Round 2",
         "from": "Mia KALIFa ",
         "player": null,
-        "value": 1181
+        "value": 1173
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
         "from": "Mia KALIFa ",
         "player": null,
-        "value": 1446
+        "value": 1443
        }
       ],
-      "got_now": 14069,
-      "gave_now": 11057,
+      "got_now": 14049,
+      "gave_now": 11059,
       "grade": "A"
      },
      "11": {
@@ -2462,18 +2462,18 @@
         "label": "2027 Round 3",
         "from": "Lamar Jackson Fan Club",
         "player": null,
-        "value": 464
+        "value": 467
        },
        {
         "kind": "pick",
         "label": "2028 Round 2",
         "from": "Lamar Jackson Fan Club",
         "player": null,
-        "value": 1245
+        "value": 1244
        }
       ],
-      "got_now": 11057,
-      "gave_now": 14069,
+      "got_now": 11059,
+      "gave_now": 14049,
       "grade": "F"
      }
     }
