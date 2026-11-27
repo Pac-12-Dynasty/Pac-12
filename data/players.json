@@ -23,7 +23,7 @@
   "name": "Xavier Hutchinson",
   "pos": "WR",
   "pos_rank": "WR103",
-  "rank": 244,
+  "rank": 243,
   "team": "HOU",
   "value": 522
  },
@@ -442,8 +442,8 @@
   "injury_part": "",
   "name": "Xavier Legette",
   "pos": "WR",
-  "pos_rank": "WR119",
-  "rank": 283,
+  "pos_rank": "WR120",
+  "rank": 284,
   "team": "CAR",
   "value": 263
  },
@@ -890,8 +890,8 @@
   "injury_part": "",
   "name": "Elic Ayomanor",
   "pos": "WR",
-  "pos_rank": "WR80",
-  "rank": 193,
+  "pos_rank": "WR79",
+  "rank": 192,
   "team": "TEN",
   "value": 889
  },
@@ -1017,7 +1017,7 @@
   "name": "Quinshon Judkins",
   "pos": "RB",
   "pos_rank": "RB17",
-  "rank": 51,
+  "rank": 50,
   "team": "CLE",
   "value": 3087
  },
@@ -1255,7 +1255,7 @@
   "name": "KeAndre Lambert-Smith",
   "pos": "WR",
   "pos_rank": "WR161",
-  "rank": 452,
+  "rank": 445,
   "team": "LAC",
   "value": 7
  },
@@ -1633,7 +1633,7 @@
   "name": "Adam Randall",
   "pos": "RB",
   "pos_rank": "RB65",
-  "rank": 243,
+  "rank": 244,
   "team": "BAL",
   "value": 522
  },
@@ -1647,7 +1647,7 @@
   "name": "Cade Klubnik",
   "pos": "QB",
   "pos_rank": "QB51",
-  "rank": 301,
+  "rank": 302,
   "team": "NYJ",
   "value": 221
  },
@@ -1702,8 +1702,8 @@
   "injury_part": "",
   "name": "Oscar Delp",
   "pos": "TE",
-  "pos_rank": "TE35",
-  "rank": 224,
+  "pos_rank": "TE34",
+  "rank": 223,
   "team": "NO",
   "value": 648
  },
@@ -1870,8 +1870,8 @@
   "injury_part": "Hamstring",
   "name": "Brenen Thompson",
   "pos": "WR",
-  "pos_rank": "WR124",
-  "rank": 296,
+  "pos_rank": "WR123",
+  "rank": 295,
   "team": "LAC",
   "value": 237
  },
@@ -1884,8 +1884,8 @@
   "injury_part": "",
   "name": "Josh Cameron",
   "pos": "WR",
-  "pos_rank": "WR108",
-  "rank": 254,
+  "pos_rank": "WR107",
+  "rank": 253,
   "team": "JAX",
   "value": 451
  },
@@ -1913,7 +1913,7 @@
   "name": "Jam Miller",
   "pos": "RB",
   "pos_rank": "RB124",
-  "rank": 434,
+  "rank": 432,
   "team": "ATL",
   "value": 8
  },
@@ -2039,7 +2039,7 @@
   "name": "Eli Raridon",
   "pos": "TE",
   "pos_rank": "TE20",
-  "rank": 146,
+  "rank": 147,
   "team": "NE",
   "value": 1265
  },
@@ -2445,7 +2445,7 @@
   "name": "James Conner",
   "pos": "RB",
   "pos_rank": "RB78",
-  "rank": 300,
+  "rank": 301,
   "team": "ARI",
   "value": 221
  },
@@ -2934,8 +2934,8 @@
   "injury_part": "",
   "name": "CeeDee Lamb",
   "pos": "WR",
-  "pos_rank": "WR4",
-  "rank": 6,
+  "pos_rank": "WR3",
+  "rank": 5,
   "team": "DAL",
   "value": 6933
  },
@@ -3131,7 +3131,7 @@
   "name": "Trevor Lawrence",
   "pos": "QB",
   "pos_rank": "QB8",
-  "rank": 50,
+  "rank": 51,
   "team": "JAX",
   "value": 3087
  },
@@ -3186,8 +3186,8 @@
   "injury_part": "",
   "name": "Amon-Ra St. Brown",
   "pos": "WR",
-  "pos_rank": "WR3",
-  "rank": 5,
+  "pos_rank": "WR4",
+  "rank": 6,
   "team": "DET",
   "value": 6933
  },
@@ -3214,8 +3214,8 @@
   "injury_part": "",
   "name": "Elijah Mitchell",
   "pos": "RB",
-  "pos_rank": "RB136",
-  "rank": 471,
+  "pos_rank": "RB132",
+  "rank": 456,
   "team": "PHI",
   "value": 6
  },
@@ -3243,7 +3243,7 @@
   "name": "Kenny Gainwell",
   "pos": "RB",
   "pos_rank": "RB44",
-  "rank": 147,
+  "rank": 146,
   "team": "TB",
   "value": 1265
  },
@@ -3676,8 +3676,8 @@
   "injury_part": "Ankle",
   "name": "Tyquan Thornton",
   "pos": "WR",
-  "pos_rank": "WR123",
-  "rank": 295,
+  "pos_rank": "WR124",
+  "rank": 296,
   "team": "KC",
   "value": 237
  },
@@ -3984,8 +3984,8 @@
   "injury_part": "Hip",
   "name": "Kayshon Boutte",
   "pos": "WR",
-  "pos_rank": "WR79",
-  "rank": 192,
+  "pos_rank": "WR80",
+  "rank": 193,
   "team": "HOU",
   "value": 889
  },
