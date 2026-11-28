@@ -191,7 +191,7 @@
   "name": "Caleb Williams",
   "pos": "QB",
   "pos_rank": "QB4",
-  "rank": 38,
+  "rank": 37,
   "team": "CHI",
   "value": 3636
  },
@@ -387,7 +387,7 @@
   "name": "Malik Washington",
   "pos": "WR",
   "pos_rank": "WR75",
-  "rank": 175,
+  "rank": 176,
   "team": "MIA",
   "value": 1065
  },
@@ -681,7 +681,7 @@
   "name": "Jordan James",
   "pos": "RB",
   "pos_rank": "RB85",
-  "rank": 322,
+  "rank": 321,
   "team": "SF",
   "value": 161
  },
@@ -862,8 +862,8 @@
   "injury_part": "",
   "name": "Tory Horton",
   "pos": "WR",
-  "pos_rank": "WR98",
-  "rank": 231,
+  "pos_rank": "WR97",
+  "rank": 230,
   "team": "SEA",
   "value": 596
  },
@@ -877,7 +877,7 @@
   "name": "Mason Taylor",
   "pos": "TE",
   "pos_rank": "TE32",
-  "rank": 202,
+  "rank": 203,
   "team": "NYJ",
   "value": 837
  },
@@ -1254,8 +1254,8 @@
   "injury_part": "",
   "name": "KeAndre Lambert-Smith",
   "pos": "WR",
-  "pos_rank": "WR160",
-  "rank": 443,
+  "pos_rank": "WR161",
+  "rank": 441,
   "team": "LAC",
   "value": 2
  },
@@ -1297,7 +1297,7 @@
   "name": "Lan Larison",
   "pos": "RB",
   "pos_rank": "RB103",
-  "rank": 379,
+  "rank": 378,
   "team": "NE",
   "value": 63
  },
@@ -1339,7 +1339,7 @@
   "name": "Elijah Sarratt",
   "pos": "WR",
   "pos_rank": "WR100",
-  "rank": 237,
+  "rank": 236,
   "team": "BAL",
   "value": 550
  },
@@ -1395,7 +1395,7 @@
   "name": "Josh Cuevas",
   "pos": "TE",
   "pos_rank": "TE59",
-  "rank": 358,
+  "rank": 357,
   "team": "BAL",
   "value": 101
  },
@@ -1423,7 +1423,7 @@
   "name": "Ty Simpson",
   "pos": "QB",
   "pos_rank": "QB27",
-  "rank": 176,
+  "rank": 175,
   "team": "LAR",
   "value": 1065
  },
@@ -1493,7 +1493,7 @@
   "name": "Jack Endries",
   "pos": "TE",
   "pos_rank": "TE56",
-  "rank": 352,
+  "rank": 351,
   "team": "CIN",
   "value": 106
  },
@@ -1745,7 +1745,7 @@
   "name": "Matt Hibner",
   "pos": "TE",
   "pos_rank": "TE46",
-  "rank": 298,
+  "rank": 296,
   "team": "BAL",
   "value": 226
  },
@@ -1926,8 +1926,8 @@
   "injury_part": "",
   "name": "Jam Miller",
   "pos": "RB",
-  "pos_rank": "RB125",
-  "rank": 434,
+  "pos_rank": "RB130",
+  "rank": 453,
   "team": "ATL",
   "value": 2
  },
@@ -1983,7 +1983,7 @@
   "name": "Cyrus Allen",
   "pos": "WR",
   "pos_rank": "WR84",
-  "rank": 199,
+  "rank": 200,
   "team": "KC",
   "value": 851
  },
@@ -2011,7 +2011,7 @@
   "name": "Roman Hemby",
   "pos": "RB",
   "pos_rank": "RB108",
-  "rank": 388,
+  "rank": 389,
   "team": "LV",
   "value": 49
  },
@@ -2655,7 +2655,7 @@
   "name": "Dalton Schultz",
   "pos": "TE",
   "pos_rank": "TE31",
-  "rank": 200,
+  "rank": 199,
   "team": "HOU",
   "value": 851
  },
@@ -3215,7 +3215,7 @@
   "name": "Elijah Mitchell",
   "pos": "RB",
   "pos_rank": "RB113",
-  "rank": 399,
+  "rank": 400,
   "team": "PHI",
   "value": 36
  },
@@ -3369,7 +3369,7 @@
   "name": "Cade Otton",
   "pos": "TE",
   "pos_rank": "TE36",
-  "rank": 236,
+  "rank": 237,
   "team": "TB",
   "value": 550
  },
@@ -3649,7 +3649,7 @@
   "name": "Christian Watson",
   "pos": "WR",
   "pos_rank": "WR20",
-  "rank": 37,
+  "rank": 38,
   "team": "GB",
   "value": 3636
  },
@@ -3985,7 +3985,7 @@
   "name": "Kayshon Boutte",
   "pos": "WR",
   "pos_rank": "WR85",
-  "rank": 203,
+  "rank": 202,
   "team": "HOU",
   "value": 837
  },
